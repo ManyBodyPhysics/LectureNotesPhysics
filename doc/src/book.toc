@@ -1,0 +1,87 @@
+\contentsline {chapter}{\numberline {1}Motivation and overarching aims.}{1}{chapter.1}
+\contentsline {section}{Appendix}{2}{section*.4}
+\contentsline {section}{References}{2}{section*.5}
+\contentsline {chapter}{\numberline {2}Quantum chromodynamics, an introduction}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}QCD and Symmetries}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}QCD at high Temperature}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}QCD at high Temperature: Experiment}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}QCD at Finite Density}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}Non-equilibrium QCD}{5}{section.2.5}
+\contentsline {section}{Appendix}{5}{section*.6}
+\contentsline {section}{References}{6}{section*.7}
+\contentsline {chapter}{\numberline {3}Lattice quantum chromodynamics approach to nuclear physics}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}General Introduction}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Continuum quantum chromodynamics: basics}{7}{section.3.2}
+\contentsline {section}{\numberline {3.3}Lattice quantum chromodynamics: basics}{7}{section.3.3}
+\contentsline {section}{\numberline {3.4}Lattice quantum chromodynamics: applications}{7}{section.3.4}
+\contentsline {section}{\numberline {3.5}Hadron interactions: basics}{7}{section.3.5}
+\contentsline {section}{Appendix}{7}{section*.8}
+\contentsline {section}{References}{8}{section*.9}
+\contentsline {chapter}{\numberline {4}Theoretical aspects of few-body systems and effective field theories}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}General Introduction}{9}{section.4.1}
+\contentsline {section}{\numberline {4.2}More stuff}{9}{section.4.2}
+\contentsline {section}{Appendix}{9}{section*.10}
+\contentsline {section}{References}{10}{section*.11}
+\contentsline {chapter}{\numberline {5}Lattice methods and effective field theory}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{11}{section.5.1}
+\contentsline {section}{\numberline {5.2}Basics of lattice effective field theory}{11}{section.5.2}
+\contentsline {section}{\numberline {5.3}Calculating Observables}{11}{section.5.3}
+\contentsline {section}{\numberline {5.4}Systematic errors and improvement}{11}{section.5.4}
+\contentsline {section}{\numberline {5.5}Beyond simple leading order effective field theory}{11}{section.5.5}
+\contentsline {section}{Appendix}{11}{section*.12}
+\contentsline {section}{References}{12}{section*.13}
+\contentsline {chapter}{\numberline {6}Lattice methods and the nuclear few- and many-body problem}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{13}{section.6.1}
+\contentsline {section}{\numberline {6.2}More material}{13}{section.6.2}
+\contentsline {section}{Appendix}{13}{section*.14}
+\contentsline {section}{References}{14}{section*.15}
+\contentsline {chapter}{\numberline {7}From few to many nucleons and methods for nuclear reactions}{15}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Nuclear few- and many-body problem}{15}{section.7.1}
+\contentsline {section}{\numberline {7.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{15}{section.7.2}
+\contentsline {section}{\numberline {7.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{15}{section.7.3}
+\contentsline {section}{\numberline {7.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{15}{section.7.4}
+\contentsline {section}{\numberline {7.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{15}{section.7.5}
+\contentsline {section}{Appendix}{16}{section*.16}
+\contentsline {section}{References}{16}{section*.17}
+\contentsline {chapter}{\numberline {8}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{17}{chapter.8}
+\contentsline {section}{\numberline {8.1}The Nuclear few- and many-body problem}{17}{section.8.1}
+\contentsline {section}{\numberline {8.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{17}{section.8.2}
+\contentsline {section}{\numberline {8.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{17}{section.8.3}
+\contentsline {section}{\numberline {8.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{17}{section.8.4}
+\contentsline {section}{\numberline {8.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{17}{section.8.5}
+\contentsline {section}{Appendix}{18}{section*.18}
+\contentsline {section}{References}{18}{section*.19}
+\contentsline {chapter}{\numberline {9}Wave function based many-body methods}{19}{chapter.9}
+\contentsline {section}{\numberline {9.1}Introduction}{19}{section.9.1}
+\contentsline {section}{\numberline {9.2}Hartree-Fock theory}{19}{section.9.2}
+\contentsline {section}{\numberline {9.3}Full configuration interaction theory}{19}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Slater determinants as basis states}{19}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Full Configuration Interaction Theory}{20}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}Example of a Hamiltonian matrix}{22}{subsection.9.3.3}
+\contentsline {subsection}{\numberline {9.3.4}A non-practical way of solving the eigenvalue problem}{24}{subsection.9.3.4}
+\contentsline {subsection}{\numberline {9.3.5}Summarizing FCI and bringing in approximative methods}{25}{subsection.9.3.5}
+\contentsline {subsection}{\numberline {9.3.6}Building a many-body basis}{26}{subsection.9.3.6}
+\contentsline {subsection}{\numberline {9.3.7}Example case: pairing Hamiltonian, the warm-up project}{28}{subsection.9.3.7}
+\contentsline {section}{\numberline {9.4}Many-body perturbation theory}{29}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Many-body perturbation theory}{29}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Interpreting the correlation energy and the wave operator}{32}{subsection.9.4.2}
+\contentsline {section}{\numberline {9.5}Coupled cluster theory}{34}{section.9.5}
+\contentsline {section}{\numberline {9.6}Introduction}{34}{section.9.6}
+\contentsline {subsection}{\numberline {9.6.1}A non-practical way of solving the eigenvalue problem}{35}{subsection.9.6.1}
+\contentsline {subsection}{\numberline {9.6.2}Summarizing FCI and bringing in approximative methods}{36}{subsection.9.6.2}
+\contentsline {subsection}{\numberline {9.6.3}A quick tour of Coupled Cluster theory}{37}{subsection.9.6.3}
+\contentsline {subsection}{\numberline {9.6.4}The CCD approximation}{39}{subsection.9.6.4}
+\contentsline {paragraph}{Approximations to the full CCD equations.}{40}{section*.20}
+\contentsline {subsection}{\numberline {9.6.5}Formal derivation of the CCSD equations}{41}{subsection.9.6.5}
+\contentsline {section}{\numberline {9.7}Infinite nuclear matter}{41}{section.9.7}
+\contentsline {subsection}{\numberline {9.7.1}Introduction to studies of infinite matter}{41}{subsection.9.7.1}
+\contentsline {subsection}{\numberline {9.7.2}The infinite electron gas}{41}{subsection.9.7.2}
+\contentsline {subsection}{\numberline {9.7.3}The infinite electron gas as a homogenous system}{42}{subsection.9.7.3}
+\contentsline {subsection}{\numberline {9.7.4}Periodic boundary conditions}{43}{subsection.9.7.4}
+\contentsline {subsection}{\numberline {9.7.5}Defining the Hamiltonian operator}{43}{subsection.9.7.5}
+\contentsline {subsection}{\numberline {9.7.6}Single-particle Hartree-Fock energy}{43}{subsection.9.7.6}
+\contentsline {section}{\numberline {9.8}How to build a numerical quantum mechanical project}{44}{section.9.8}
+\contentsline {section}{\numberline {9.9}Summary}{44}{section.9.9}
+\contentsline {chapter}{\numberline {10}Concluding remarks and perspectives}{45}{chapter.10}
+\contentsline {section}{\numberline {10.1}Concluding remarks}{45}{section.10.1}
+\contentsline {section}{\numberline {10.2}Perspectives}{45}{section.10.2}

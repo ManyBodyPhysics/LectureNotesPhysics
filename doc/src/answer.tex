@@ -1,0 +1,106 @@
+%  Add algo for parallel Jacobi, Gauss-Seidel, include discussion of SOR
+% parallel algo for diffusion as well
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+
+We have the equation
+\[
+ \nabla^2 v(x,t) =\frac{\partial v(x,t)}{\partial t},
+\] 
+with initial conditions 
+\[
+v(x,0)= 0 \hspace{0.5cm} 0 < x < 1.
+\]
+The 
+boundary conditions are 
+\[
+v(0,t)= 1 \hspace{0.5cm} t \ge 0,  \hspace{1cm}  v(1,t)= 0 \hspace{0.5cm} t \ge 0,
+\]
+
+The steady state solution to this problem is
+\[
+v_s(x,t) = Ax+b,\]
+and with the  boundary conditions we find that the solutions is
+\[
+v_s(x,t) = 1-x.
+\]
+This means that the solution can be written as
+\[
+v(x,t) = u(x,t) + v_s(x,t),
+\]
+where $u(x,t)=v(x,t)-v_s(x,t)$ is our solution to the the diffusion equation 
+with initial conditions 
+\[
+u(x,0)= x-1 \hspace{0.5cm} 0 < x < 1,
+\]
+and 
+boundary conditions 
+\[
+u(0,t)= 0 \hspace{0.5cm} t \ge 0,  \hspace{1cm}  u(1,t)= 0 \hspace{0.5cm} t \ge 0.
+\]
+We can now solve the equation for $u(x,t)$.
+
+
+
+ We assume that we have solutions of the form (separation of variable)
+\[
+u(x,t)=F(x)G(t).
+\]
+which inserted in the partial differential equation results in
+\[
+\frac{F''}{F}=\frac{G'}{G},
+\]
+where the derivative is with respect to $x$ on the left hand side and with respect to $t$ on right hand side.
+This equation  should hold for all $x$ and $t$. We must require the rhs and lhs to be equal to a constant. 
+We call this constant $-\lambda^2$. This gives us the two differential equations, 
+\[
+F''+\lambda^2F=0;  \hspace{1cm} G'=-\lambda^2G,
+\]
+with general solutions
+\[
+F(x)=A\sin(\lambda x)+B\cos(\lambda x); \hspace{1cm} G(t)=Ce^{-\lambda^2t}.
+\]
+To satisfy the boundary conditions we require $B=0$ and $\lambda=n\pi/L$ and $n=0,\pm 1,\pm 2\dots$. One solution is therefore found to be
+\[
+u(x,t)=A_n\sin(n\pi x/L)e^{-n^2\pi^2 t/L^2}.
+\]
+In our case $L=1$.
+But there are infinitely many  possible $n$ values (infinite number of solutions). Moreover, 
+the diffusion equation is linear and because of this we know that a superposition of solutions 
+will also be a solution of the equation. We may therefore write
+\[
+u(x,t)=\sum_{n=1}^{\infty} A_n \sin(n\pi x/L) e^{-n^2\pi^2 t/L^2}.
+\]
+We have left out $n=0$ since this gives zero and negative values of $n$ since these give a negative sign and can be absorbed in the coefficients $A_n$.
+The coefficients $A_n$ are in turn determined from the initial condition. We require
+\[
+u(x,0)=x-1=\sum_{n=1}^{\infty} A_n \sin(n\pi x/L).
+\]
+The coefficient $A_n$ is the Fourier coefficients for the function $g(x)$. Because of this, $A_n$ is given by (from the theory on Fourier series)
+\[
+A_n=\frac{2}{L}\int_0^L (x-1)\sin(n\pi x/L) \mathrm{d}x.
+\]
+In our case we have $L=1$ and we find that 
+\[
+A_n=\frac{2}{L}\int_0^L (x-1)\sin(n\pi x/L) \mathrm{d}x = -\frac{2}{n\pi},
+\]
+resulting in
+\[
+v(x,t) = 1-x -\frac{2}{\pi}\sum_{n=1}^{\infty} \frac{1}{n} \sin(n\pi x/L) e^{-n^2\pi^2 t/L^2}.
+\]
+
+
+\end{document}
+
+
+
