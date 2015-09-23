@@ -1,4 +1,4 @@
-\documentclass[graybox,envcountchap,sectrefs]{svmono}
+\documentclass[graybox,envcountchap,sectrefs]{svmult}
 
 \usepackage{mathptmx}
 \usepackage{helvet}
@@ -40,26 +40,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\frontmatter
 
-\author{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara Van Kolck, Editors}
+\begin{titlepage}
 \title{An advanced course in computational nuclear physics}
  \subtitle{Bridging the scales from quarks to neutron stars}
-\date{Fall 2015}
+%\date{2016}
+\author{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck, Editors}
+\end{titlepage}
 \maketitle
 
-\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\include{dedic}
 %\include{foreword}
 \include{preface}
-\include{acknow}
+%\include{acknow}
 
 \tableofcontents
 
 %\include{acronym}
 
 
-\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
 \include{introduction}
 \include{chapter1}
 \include{chapter2}
@@ -71,7 +73,6 @@
 \include{chapter8}
 \include{summary}
 \bibliographystyle{spphys}
-%\bibliographystyle{spmpsci}
 % \bibliography{lib}
 \end{document}
 

@@ -1,86 +1,98 @@
-\BOOKMARK [0][-]{chapter.1}{Motivation and overarching aims.}{}% 1
-\BOOKMARK [1][-]{section*.4}{Appendix}{chapter.1}% 2
-\BOOKMARK [1][-]{section*.5}{References}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Quantum chromodynamics, an introduction}{}% 4
-\BOOKMARK [1][-]{section.2.1}{QCD and Symmetries}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{QCD at high Temperature}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.3}{QCD at high Temperature: Experiment}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.4}{QCD at Finite Density}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.5}{Non-equilibrium QCD}{chapter.2}% 9
-\BOOKMARK [1][-]{section*.6}{Appendix}{chapter.2}% 10
-\BOOKMARK [1][-]{section*.7}{References}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Lattice quantum chromodynamics approach to nuclear physics}{}% 12
-\BOOKMARK [1][-]{section.3.1}{General Introduction}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Continuum quantum chromodynamics: basics}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Lattice quantum chromodynamics: basics}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.4}{Lattice quantum chromodynamics: applications}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.5}{Hadron interactions: basics}{chapter.3}% 17
-\BOOKMARK [1][-]{section*.8}{Appendix}{chapter.3}% 18
-\BOOKMARK [1][-]{section*.9}{References}{chapter.3}% 19
-\BOOKMARK [0][-]{chapter.4}{Theoretical aspects of few-body systems and effective field theories}{}% 20
-\BOOKMARK [1][-]{section.4.1}{General Introduction}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.2}{More stuff}{chapter.4}% 22
-\BOOKMARK [1][-]{section*.10}{Appendix}{chapter.4}% 23
-\BOOKMARK [1][-]{section*.11}{References}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Lattice methods and effective field theory}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Basics of lattice effective field theory}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{Calculating Observables}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{Systematic errors and improvement}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.5}{Beyond simple leading order effective field theory}{chapter.5}% 30
-\BOOKMARK [1][-]{section*.12}{Appendix}{chapter.5}% 31
-\BOOKMARK [1][-]{section*.13}{References}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Lattice methods and the nuclear few- and many-body problem}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.2}{More material}{chapter.6}% 35
-\BOOKMARK [1][-]{section*.14}{Appendix}{chapter.6}% 36
-\BOOKMARK [1][-]{section*.15}{References}{chapter.6}% 37
-\BOOKMARK [0][-]{chapter.7}{From few to many nucleons and methods for nuclear reactions}{}% 38
-\BOOKMARK [1][-]{section.7.1}{The Nuclear few- and many-body problem}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.2}{Methods for bound states based on the variational principle I:The No Core Shell Model \(NCSM\)}{chapter.7}% 40
-\BOOKMARK [1][-]{section.7.3}{Methods for bound states based on the variational principle II:The Hyperspherical Harmonics \(HH\) method}{chapter.7}% 41
-\BOOKMARK [1][-]{section.7.4}{Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{chapter.7}% 42
-\BOOKMARK [1][-]{section.7.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{chapter.7}% 43
-\BOOKMARK [1][-]{section*.16}{Appendix}{chapter.7}% 44
-\BOOKMARK [1][-]{section*.17}{References}{chapter.7}% 45
-\BOOKMARK [0][-]{chapter.8}{Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 46
-\BOOKMARK [1][-]{section.8.1}{The Nuclear few- and many-body problem}{chapter.8}% 47
-\BOOKMARK [1][-]{section.8.2}{Methods for bound states based on the variational principle I:The No Core Shell Model \(NCSM\)}{chapter.8}% 48
-\BOOKMARK [1][-]{section.8.3}{Methods for bound states based on the variational principle II:The Hyperspherical Harmonics \(HH\) method}{chapter.8}% 49
-\BOOKMARK [1][-]{section.8.4}{Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{chapter.8}% 50
-\BOOKMARK [1][-]{section.8.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{chapter.8}% 51
-\BOOKMARK [1][-]{section*.18}{Appendix}{chapter.8}% 52
-\BOOKMARK [1][-]{section*.19}{References}{chapter.8}% 53
-\BOOKMARK [0][-]{chapter.9}{Wave function based many-body methods}{}% 54
-\BOOKMARK [1][-]{section.9.1}{Introduction}{chapter.9}% 55
-\BOOKMARK [1][-]{section.9.2}{Hartree-Fock theory}{chapter.9}% 56
-\BOOKMARK [1][-]{section.9.3}{Full configuration interaction theory}{chapter.9}% 57
-\BOOKMARK [2][-]{subsection.9.3.1}{Slater determinants as basis states}{section.9.3}% 58
-\BOOKMARK [2][-]{subsection.9.3.2}{Full Configuration Interaction Theory}{section.9.3}% 59
-\BOOKMARK [2][-]{subsection.9.3.3}{Example of a Hamiltonian matrix}{section.9.3}% 60
-\BOOKMARK [2][-]{subsection.9.3.4}{A non-practical way of solving the eigenvalue problem}{section.9.3}% 61
-\BOOKMARK [2][-]{subsection.9.3.5}{Summarizing FCI and bringing in approximative methods}{section.9.3}% 62
-\BOOKMARK [2][-]{subsection.9.3.6}{Building a many-body basis}{section.9.3}% 63
-\BOOKMARK [2][-]{subsection.9.3.7}{Example case: pairing Hamiltonian, the warm-up project}{section.9.3}% 64
-\BOOKMARK [1][-]{section.9.4}{Many-body perturbation theory}{chapter.9}% 65
-\BOOKMARK [2][-]{subsection.9.4.1}{Many-body perturbation theory}{section.9.4}% 66
-\BOOKMARK [2][-]{subsection.9.4.2}{Interpreting the correlation energy and the wave operator}{section.9.4}% 67
-\BOOKMARK [1][-]{section.9.5}{Coupled cluster theory}{chapter.9}% 68
-\BOOKMARK [1][-]{section.9.6}{Introduction}{chapter.9}% 69
-\BOOKMARK [2][-]{subsection.9.6.1}{A non-practical way of solving the eigenvalue problem}{section.9.6}% 70
-\BOOKMARK [2][-]{subsection.9.6.2}{Summarizing FCI and bringing in approximative methods}{section.9.6}% 71
-\BOOKMARK [2][-]{subsection.9.6.3}{A quick tour of Coupled Cluster theory}{section.9.6}% 72
-\BOOKMARK [2][-]{subsection.9.6.4}{The CCD approximation}{section.9.6}% 73
-\BOOKMARK [2][-]{subsection.9.6.5}{Formal derivation of the CCSD equations}{section.9.6}% 74
-\BOOKMARK [1][-]{section.9.7}{Infinite nuclear matter}{chapter.9}% 75
-\BOOKMARK [2][-]{subsection.9.7.1}{Introduction to studies of infinite matter}{section.9.7}% 76
-\BOOKMARK [2][-]{subsection.9.7.2}{The infinite electron gas}{section.9.7}% 77
-\BOOKMARK [2][-]{subsection.9.7.3}{The infinite electron gas as a homogenous system}{section.9.7}% 78
-\BOOKMARK [2][-]{subsection.9.7.4}{Periodic boundary conditions}{section.9.7}% 79
-\BOOKMARK [2][-]{subsection.9.7.5}{Defining the Hamiltonian operator}{section.9.7}% 80
-\BOOKMARK [2][-]{subsection.9.7.6}{Single-particle Hartree-Fock energy}{section.9.7}% 81
-\BOOKMARK [1][-]{section.9.8}{How to build a numerical quantum mechanical project}{chapter.9}% 82
-\BOOKMARK [1][-]{section.9.9}{Summary}{chapter.9}% 83
-\BOOKMARK [0][-]{chapter.10}{Concluding remarks and perspectives}{}% 84
-\BOOKMARK [1][-]{section.10.1}{Concluding remarks}{chapter.10}% 85
-\BOOKMARK [1][-]{section.10.2}{Perspectives}{chapter.10}% 86
+\BOOKMARK [0][-]{section*.1}{No Title Given}{}% 1
+\BOOKMARK [0][-]{section*.1}{No Author Given}{}% 2
+\BOOKMARK [0][-]{section*.4}{Motivation and overarching aims}{}% 3
+\BOOKMARK [0][-]{section*.4}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 4
+\BOOKMARK [1][-]{section*.5}{Appendix}{section*.4}% 5
+\BOOKMARK [1][-]{section*.6}{References}{section*.4}% 6
+\BOOKMARK [0][-]{section*.7}{Quantum chromodynamics, an introduction}{}% 7
+\BOOKMARK [0][-]{section*.7}{Thomas Schaefer}{}% 8
+\BOOKMARK [1][-]{section.2.1}{QCD and Symmetries}{section*.7}% 9
+\BOOKMARK [1][-]{section.2.2}{QCD at high Temperature}{section*.7}% 10
+\BOOKMARK [1][-]{section.2.3}{QCD at high Temperature: Experiment}{section*.7}% 11
+\BOOKMARK [1][-]{section.2.4}{QCD at Finite Density}{section*.7}% 12
+\BOOKMARK [1][-]{section.2.5}{Non-equilibrium QCD}{section*.7}% 13
+\BOOKMARK [1][-]{section*.8}{Appendix}{section*.7}% 14
+\BOOKMARK [1][-]{section*.9}{References}{section*.7}% 15
+\BOOKMARK [0][-]{section*.10}{Lattice quantum chromodynamics approach to nuclear physics}{}% 16
+\BOOKMARK [0][-]{section*.10}{Tetsuo Hatsuda}{}% 17
+\BOOKMARK [1][-]{section.3.1}{General Introduction}{section*.10}% 18
+\BOOKMARK [1][-]{section.3.2}{Continuum quantum chromodynamics: basics}{section*.10}% 19
+\BOOKMARK [1][-]{section.3.3}{Lattice quantum chromodynamics: basics}{section*.10}% 20
+\BOOKMARK [1][-]{section.3.4}{Lattice quantum chromodynamics: applications}{section*.10}% 21
+\BOOKMARK [1][-]{section.3.5}{Hadron interactions: basics}{section*.10}% 22
+\BOOKMARK [1][-]{section*.11}{Appendix}{section*.10}% 23
+\BOOKMARK [1][-]{section*.12}{References}{section*.10}% 24
+\BOOKMARK [0][-]{section*.13}{Theoretical aspects of few-body systems and effective field theories}{}% 25
+\BOOKMARK [0][-]{section*.13}{Hans-Werner Hammer}{}% 26
+\BOOKMARK [1][-]{section.4.1}{General Introduction}{section*.13}% 27
+\BOOKMARK [1][-]{section.4.2}{More stuff}{section*.13}% 28
+\BOOKMARK [1][-]{section*.14}{Appendix}{section*.13}% 29
+\BOOKMARK [1][-]{section*.15}{References}{section*.13}% 30
+\BOOKMARK [0][-]{section*.16}{Lattice methods and effective field theory}{}% 31
+\BOOKMARK [0][-]{section*.16}{Amy Nicholson}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Introduction}{section*.16}% 33
+\BOOKMARK [1][-]{section.5.2}{Basics of lattice effective field theory}{section*.16}% 34
+\BOOKMARK [1][-]{section.5.3}{Calculating Observables}{section*.16}% 35
+\BOOKMARK [1][-]{section.5.4}{Systematic errors and improvement}{section*.16}% 36
+\BOOKMARK [1][-]{section.5.5}{Beyond simple leading order effective field theory}{section*.16}% 37
+\BOOKMARK [1][-]{section*.17}{Appendix}{section*.16}% 38
+\BOOKMARK [1][-]{section*.18}{References}{section*.16}% 39
+\BOOKMARK [0][-]{section*.19}{Lattice methods and the nuclear few- and many-body problem}{}% 40
+\BOOKMARK [0][-]{section*.19}{Dean Lee}{}% 41
+\BOOKMARK [1][-]{section.6.1}{Introduction}{section*.19}% 42
+\BOOKMARK [1][-]{section.6.2}{More material}{section*.19}% 43
+\BOOKMARK [1][-]{section*.20}{Appendix}{section*.19}% 44
+\BOOKMARK [1][-]{section*.21}{References}{section*.19}% 45
+\BOOKMARK [0][-]{section*.22}{From few to many nucleons and methods for nuclear reactions}{}% 46
+\BOOKMARK [0][-]{section*.22}{Giuseppina Orlandini}{}% 47
+\BOOKMARK [1][-]{section.7.1}{The Nuclear few- and many-body problem}{section*.22}% 48
+\BOOKMARK [1][-]{section.7.2}{Methods for bound states based on the variational principle I:The No Core Shell Model \(NCSM\)}{section*.22}% 49
+\BOOKMARK [1][-]{section.7.3}{Methods for bound states based on the variational principle II:The Hyperspherical Harmonics \(HH\) method}{section*.22}% 50
+\BOOKMARK [1][-]{section.7.4}{Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{section*.22}% 51
+\BOOKMARK [1][-]{section.7.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{section*.22}% 52
+\BOOKMARK [1][-]{section*.23}{Appendix}{section*.22}% 53
+\BOOKMARK [1][-]{section*.24}{References}{section*.22}% 54
+\BOOKMARK [0][-]{section*.25}{Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 55
+\BOOKMARK [0][-]{section*.25}{Francesco Pederiva}{}% 56
+\BOOKMARK [1][-]{section.8.1}{The Nuclear few- and many-body problem}{section*.25}% 57
+\BOOKMARK [1][-]{section.8.2}{Methods for bound states based on the variational principle I:The No Core Shell Model \(NCSM\)}{section*.25}% 58
+\BOOKMARK [1][-]{section.8.3}{Methods for bound states based on the variational principle II:The Hyperspherical Harmonics \(HH\) method}{section*.25}% 59
+\BOOKMARK [1][-]{section.8.4}{Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{section*.25}% 60
+\BOOKMARK [1][-]{section.8.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{section*.25}% 61
+\BOOKMARK [1][-]{section*.26}{Appendix}{section*.25}% 62
+\BOOKMARK [1][-]{section*.27}{References}{section*.25}% 63
+\BOOKMARK [0][-]{section*.28}{Wave function based many-body methods}{}% 64
+\BOOKMARK [0][-]{section*.28}{Morten Hjorth-Jensen, Gaute Hagen, Justin G. Lietz and Samuel Novario}{}% 65
+\BOOKMARK [1][-]{section.9.1}{Introduction}{section*.28}% 66
+\BOOKMARK [1][-]{section.9.2}{Hartree-Fock theory}{section*.28}% 67
+\BOOKMARK [1][-]{section.9.3}{Full configuration interaction theory}{section*.28}% 68
+\BOOKMARK [2][-]{subsection.9.3.1}{Slater determinants as basis states}{section.9.3}% 69
+\BOOKMARK [2][-]{subsection.9.3.2}{Full Configuration Interaction Theory}{section.9.3}% 70
+\BOOKMARK [2][-]{subsection.9.3.3}{Example of a Hamiltonian matrix}{section.9.3}% 71
+\BOOKMARK [2][-]{subsection.9.3.4}{A non-practical way of solving the eigenvalue problem}{section.9.3}% 72
+\BOOKMARK [2][-]{subsection.9.3.5}{Summarizing FCI and bringing in approximative methods}{section.9.3}% 73
+\BOOKMARK [2][-]{subsection.9.3.6}{Building a many-body basis}{section.9.3}% 74
+\BOOKMARK [2][-]{subsection.9.3.7}{Example case: pairing Hamiltonian, the warm-up project}{section.9.3}% 75
+\BOOKMARK [1][-]{section.9.4}{Many-body perturbation theory}{section*.28}% 76
+\BOOKMARK [2][-]{subsection.9.4.1}{Many-body perturbation theory}{section.9.4}% 77
+\BOOKMARK [2][-]{subsection.9.4.2}{Interpreting the correlation energy and the wave operator}{section.9.4}% 78
+\BOOKMARK [1][-]{section.9.5}{Coupled cluster theory}{section*.28}% 79
+\BOOKMARK [1][-]{section.9.6}{Introduction}{section*.28}% 80
+\BOOKMARK [2][-]{subsection.9.6.1}{A non-practical way of solving the eigenvalue problem}{section.9.6}% 81
+\BOOKMARK [2][-]{subsection.9.6.2}{Summarizing FCI and bringing in approximative methods}{section.9.6}% 82
+\BOOKMARK [2][-]{subsection.9.6.3}{A quick tour of Coupled Cluster theory}{section.9.6}% 83
+\BOOKMARK [2][-]{subsection.9.6.4}{The CCD approximation}{section.9.6}% 84
+\BOOKMARK [2][-]{subsection.9.6.5}{Formal derivation of the CCSD equations}{section.9.6}% 85
+\BOOKMARK [1][-]{section.9.7}{Infinite nuclear matter}{section*.28}% 86
+\BOOKMARK [2][-]{subsection.9.7.1}{Introduction to studies of infinite matter}{section.9.7}% 87
+\BOOKMARK [2][-]{subsection.9.7.2}{The infinite electron gas}{section.9.7}% 88
+\BOOKMARK [2][-]{subsection.9.7.3}{The infinite electron gas as a homogenous system}{section.9.7}% 89
+\BOOKMARK [2][-]{subsection.9.7.4}{Periodic boundary conditions}{section.9.7}% 90
+\BOOKMARK [2][-]{subsection.9.7.5}{Defining the Hamiltonian operator}{section.9.7}% 91
+\BOOKMARK [2][-]{subsection.9.7.6}{Single-particle Hartree-Fock energy}{section.9.7}% 92
+\BOOKMARK [1][-]{section.9.8}{How to build a numerical quantum mechanical project}{section*.28}% 93
+\BOOKMARK [1][-]{section.9.9}{Summary}{section*.28}% 94
+\BOOKMARK [0][-]{section*.30}{Concluding remarks and perspectives}{}% 95
+\BOOKMARK [0][-]{section*.30}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 96
+\BOOKMARK [1][-]{section.10.1}{Concluding remarks}{section*.30}% 97
+\BOOKMARK [1][-]{section.10.2}{Perspectives}{section*.30}% 98
