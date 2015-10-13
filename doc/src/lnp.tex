@@ -1,0 +1,111 @@
+\documentclass[graybox,envcountchap,sectrefs]{svmult}
+
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+
+\usepackage{type1cm}         
+\usepackage{exercise}
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage[usenames,dvipsnames,x11names]{xcolor}
+ \usepackage{listings}
+ \usepackage{epic}
+ \usepackage{eepic}
+ \usepackage{a4wide}
+ \usepackage{color}
+ \usepackage{amsmath}
+ \usepackage{amssymb}
+ \usepackage[T1]{fontenc}
+ \usepackage{cite} % [2,3,4] --> [2--4]
+ \usepackage{shadow}
+ \usepackage{hyperref}
+ \usepackage{bezier}
+ \usepackage{pstricks}
+% \usepackage{refcheck}
+\setcounter{tocdepth}{2}
+
+\usepackage{textcomp,type1ec,pdfpages}
+\usepackage{bera}
+
+
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\frontmatter
+
+\begin{titlepage}
+\title{An advanced course in computational nuclear physics}
+ \subtitle{Bridging the scales from quarks to neutron stars}
+%\date{2016}
+\author{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck, Editors}
+\end{titlepage}
+\maketitle
+
+
+%\include{dedic}
+%\include{foreword}
+\include{preface}
+%\include{acknow}
+
+\tableofcontents
+
+%\include{acronym}
+
+
+\mainmatter
+% Introduction by MHJ, MPL and UVK                                                      \
+
+\include{chapter1}
+% Quantum Chromodynamics, T. Schaefer                                                   \
+
+\include{chapter2}
+% Lattice QCD approach to Nuclear Physics, T. Hatsuda                                   \
+
+\include{chapter3}
+% Theoretical aspects of few-body systems and effective field                           \
+
+% theories, Hans-Werner Hammer                                                          \
+
+\include{chapter4}
+% Lattice Methods and effective field theory, Amy Nicholson                             \
+
+\include{chapter5}
+% Lattice methods and the nuclear few- and many-body problem, Dean Lee                  \
+
+\include{chapter6}
+%From few to many nucleons and methods for nuclear reactions, Giuseppina Orlandini      \
+
+\include{chapter7}
+% Variational and diffusion Monte Carlo approaches to the nuclear few-                  \
+
+% and many-body problem, Francesco Pederiva                                             \
+
+\include{chapter8}
+% Wave function based many-body methods, Morten Hjorth-Jensen,                          \
+
+% Gaute Hagen, Justin G.~Lietz and Samuel Novario                                       \
+
+\include{chapter9}
+%  Summary chapter by MHJ, MLP and UVK
+\include{chapter10}
+
+\bibliographystyle{spphys}
+% \bibliography{lib}
+\end{document}
+
+\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
