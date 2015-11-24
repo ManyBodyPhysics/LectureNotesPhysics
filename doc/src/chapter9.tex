@@ -10,6 +10,49 @@
 
 \section{Introduction}
 \section{Hartree-Fock theory}
+
+\section{Nuclear forces}
+\subsection{Two-body matrix elements and partial wave expansion}
+The direct matrix element, with single-particle three-dimensional momenta $\mathbf{k}_i$, spin $\sigma_i$ and isospin $\tau_i$, is defined  as
+\[
+\langle \mathbf{k}_a\sigma_a\tau_a \mathbf{k}_b\sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}_c\sigma_c\tau_c \mathbf{k}_d\sigma_d\tau_d \rangle, 
+\]
+or in a more compact form as $\langle \mathbf{a}\mathbf{b}\vert \hat{v} \vert \mathbf{c}\mathbf{d} \rangle$ where the boldfaced letters $\mathbf{a}$ etc 
+represent the relevant quantum numbers, here momentum, spin and isospin. Introducing 
+the relative momentum 
+\[
+\mathbf{k} = \frac{1}{2}\left(\mathbf{k}_a-\mathbf{k}_b\right), 
+\]
+and the center-of-mas momentum
+\[
+\mathbf{K} = \mathbf{k}_a+\mathbf{k}_b,
+\]
+we have 
+\[
+\langle \mathbf{k}_a\sigma_a\tau_a \mathbf{k}_b\sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}_c\sigma_c\tau_c \mathbf{k}_d\sigma_d\tau_d \rangle=\langle \mathbf{k}\mathbf{K}\sigma_a\tau_a \sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'\sigma_c\tau_c \sigma_d\tau_d \rangle.
+\]
+The nucleon-nucleon interaction conserves the total momentum and is
+charge invariant, implying that the above uncoupled matrix element reads
+\[
+\langle \mathbf{k}\mathbf{K}\sigma_a\tau_a \sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'\sigma_c\tau_c \sigma_d\tau_d \rangle=\delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle \mathbf{k}T_zS_z=(\sigma_a+\sigma_b) \vert \hat{v}\vert \mathbf{k}'T_zS_z'=(\sigma_c+\sigma_d) \rangle,
+\]
+where we have defined the isospin projections $T_z=\tau_a+\tau_b$ and
+$T_z'=\tau_c+\tau_d$.  Defining $\hat{v}=\hat{v}(\mathbf{k},\mathbf{k}' )$, we can rewrite the previous equation in a more compact form as 
+\[
+\delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle \mathbf{k}T_zS_z=(\sigma_a+\sigma_b) \vert \hat{v}\vert \mathbf{k}'T_zS_z'=(\sigma_c+\sigma_d) \rangle=\delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle T_zS_z\vert\hat{v}(\mathbf{k},\mathbf{k}' ) \vert T_zS_z' \rangle.
+\]
+These matrix elements can in turn be rewritten in terms
+of the total two-body quantum numbers for the spin $S$ via
+various recoupling coefficients as
+\[
+\langle \mathbf{k}\mathbf{K}\sigma_a\tau_a \sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'\sigma_c\tau_c \sigma_d\tau_d \rangle=\sum_{SS'TT'}\langle \frac{1}{2}\tau_a\frac{1}{2}\tau_b\vert TT_z\rangle \langle \frac{1}{2}\tau_c\frac{1}{2}\tau_d\vert T'T_z'\rangle\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle \langle \frac{1}{2}\sigma_c\frac{1}{2}\sigma_d\vert S'S_z'\rangle
+\langle \mathbf{k}\mathbf{K}TT_zSS_z=\sigma_a\tau_a+\sigma_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'T'T_z'S'S_z'=\sigma_c+\sigma_d \rangle,
+\]
+ The coefficients $\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle$ are so-called Clebsch-Gordan recoupling coefficients. 
+
+and their respective projections 
+
+
 \section{Full configuration interaction theory}
 \subsection{Slater determinants as basis states}
 
