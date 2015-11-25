@@ -74,37 +74,39 @@
 \authcount {1}
 \contentsline {authorch}{Morten Hjorth-Jensen, Gaute Hagen, Justin G.\nobreakspace {}Lietz and Samuel Novario}{19}{section*.28}
 \contentsline {section}{\numberline {9.1}Introduction}{19}{section.9.1}
-\contentsline {section}{\numberline {9.2}Hartree-Fock theory}{19}{section.9.2}
-\contentsline {section}{\numberline {9.3}Full configuration interaction theory}{19}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}Slater determinants as basis states}{19}{subsection.9.3.1}
-\contentsline {subsection}{\numberline {9.3.2}Full Configuration Interaction Theory}{21}{subsection.9.3.2}
-\contentsline {subsection}{\numberline {9.3.3}Example of a Hamiltonian matrix}{22}{subsection.9.3.3}
-\contentsline {subsection}{\numberline {9.3.4}A non-practical way of solving the eigenvalue problem}{24}{subsection.9.3.4}
-\contentsline {subsection}{\numberline {9.3.5}Summarizing FCI and bringing in approximative methods}{25}{subsection.9.3.5}
-\contentsline {subsection}{\numberline {9.3.6}Building a many-body basis}{26}{subsection.9.3.6}
-\contentsline {subsection}{\numberline {9.3.7}Example case: pairing Hamiltonian, the warm-up project}{29}{subsection.9.3.7}
-\contentsline {section}{\numberline {9.4}Many-body perturbation theory}{30}{section.9.4}
-\contentsline {subsection}{\numberline {9.4.1}Many-body perturbation theory}{30}{subsection.9.4.1}
-\contentsline {subsection}{\numberline {9.4.2}Interpreting the correlation energy and the wave operator}{33}{subsection.9.4.2}
-\contentsline {section}{\numberline {9.5}Coupled cluster theory}{34}{section.9.5}
-\contentsline {section}{\numberline {9.6}Introduction}{34}{section.9.6}
-\contentsline {subsection}{\numberline {9.6.1}A non-practical way of solving the eigenvalue problem}{35}{subsection.9.6.1}
-\contentsline {subsection}{\numberline {9.6.2}Summarizing FCI and bringing in approximative methods}{36}{subsection.9.6.2}
-\contentsline {subsection}{\numberline {9.6.3}A quick tour of Coupled Cluster theory}{37}{subsection.9.6.3}
-\contentsline {subsection}{\numberline {9.6.4}The CCD approximation}{39}{subsection.9.6.4}
-\contentsline {paragraph}{Approximations to the full CCD equations.}{40}{section*.29}
-\contentsline {subsection}{\numberline {9.6.5}Formal derivation of the CCSD equations}{41}{subsection.9.6.5}
-\contentsline {section}{\numberline {9.7}Infinite nuclear matter}{41}{section.9.7}
-\contentsline {subsection}{\numberline {9.7.1}Introduction to studies of infinite matter}{41}{subsection.9.7.1}
-\contentsline {subsection}{\numberline {9.7.2}The infinite electron gas}{42}{subsection.9.7.2}
-\contentsline {subsection}{\numberline {9.7.3}The infinite electron gas as a homogenous system}{43}{subsection.9.7.3}
-\contentsline {subsection}{\numberline {9.7.4}Periodic boundary conditions}{43}{subsection.9.7.4}
-\contentsline {subsection}{\numberline {9.7.5}Defining the Hamiltonian operator}{43}{subsection.9.7.5}
-\contentsline {subsection}{\numberline {9.7.6}Single-particle Hartree-Fock energy}{44}{subsection.9.7.6}
-\contentsline {section}{\numberline {9.8}How to build a numerical quantum mechanical project}{44}{section.9.8}
-\contentsline {section}{\numberline {9.9}Summary}{44}{section.9.9}
-\contentsline {titlech}{\numberline {10}Concluding remarks and perspectives}{45}{section*.30}
+\contentsline {section}{\numberline {9.2}Single-particle basis}{19}{section.9.2}
+\contentsline {section}{\numberline {9.3}Hartree-Fock theory}{19}{section.9.3}
+\contentsline {section}{\numberline {9.4}Two-body matrix elements and partial wave expansion}{19}{section.9.4}
+\contentsline {section}{\numberline {9.5}Full configuration interaction theory}{20}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Slater determinants as basis states}{20}{subsection.9.5.1}
+\contentsline {subsection}{\numberline {9.5.2}Full Configuration Interaction Theory}{22}{subsection.9.5.2}
+\contentsline {subsection}{\numberline {9.5.3}Example of a Hamiltonian matrix}{24}{subsection.9.5.3}
+\contentsline {subsection}{\numberline {9.5.4}A non-practical way of solving the eigenvalue problem}{25}{subsection.9.5.4}
+\contentsline {subsection}{\numberline {9.5.5}Summarizing FCI and bringing in approximative methods}{26}{subsection.9.5.5}
+\contentsline {subsection}{\numberline {9.5.6}Building a many-body basis}{27}{subsection.9.5.6}
+\contentsline {subsection}{\numberline {9.5.7}Example case: pairing Hamiltonian, the warm-up project}{30}{subsection.9.5.7}
+\contentsline {section}{\numberline {9.6}Many-body perturbation theory}{31}{section.9.6}
+\contentsline {subsection}{\numberline {9.6.1}Many-body perturbation theory}{31}{subsection.9.6.1}
+\contentsline {subsection}{\numberline {9.6.2}Interpreting the correlation energy and the wave operator}{34}{subsection.9.6.2}
+\contentsline {section}{\numberline {9.7}Coupled cluster theory}{35}{section.9.7}
+\contentsline {section}{\numberline {9.8}Introduction}{35}{section.9.8}
+\contentsline {subsection}{\numberline {9.8.1}A non-practical way of solving the eigenvalue problem}{36}{subsection.9.8.1}
+\contentsline {subsection}{\numberline {9.8.2}Summarizing FCI and bringing in approximative methods}{37}{subsection.9.8.2}
+\contentsline {subsection}{\numberline {9.8.3}A quick tour of Coupled Cluster theory}{38}{subsection.9.8.3}
+\contentsline {subsection}{\numberline {9.8.4}The CCD approximation}{40}{subsection.9.8.4}
+\contentsline {paragraph}{Approximations to the full CCD equations.}{41}{section*.29}
+\contentsline {subsection}{\numberline {9.8.5}Formal derivation of the CCSD equations}{42}{subsection.9.8.5}
+\contentsline {section}{\numberline {9.9}Infinite nuclear matter}{42}{section.9.9}
+\contentsline {subsection}{\numberline {9.9.1}Introduction to studies of infinite matter}{42}{subsection.9.9.1}
+\contentsline {subsection}{\numberline {9.9.2}The infinite electron gas}{43}{subsection.9.9.2}
+\contentsline {subsection}{\numberline {9.9.3}The infinite electron gas as a homogenous system}{44}{subsection.9.9.3}
+\contentsline {subsection}{\numberline {9.9.4}Periodic boundary conditions}{44}{subsection.9.9.4}
+\contentsline {subsection}{\numberline {9.9.5}Defining the Hamiltonian operator}{44}{subsection.9.9.5}
+\contentsline {subsection}{\numberline {9.9.6}Single-particle Hartree-Fock energy}{45}{subsection.9.9.6}
+\contentsline {section}{\numberline {9.10}How to build a numerical quantum mechanical project}{45}{section.9.10}
+\contentsline {section}{\numberline {9.11}Summary}{45}{section.9.11}
+\contentsline {titlech}{\numberline {10}Concluding remarks and perspectives}{47}{section*.30}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{45}{section*.30}
-\contentsline {section}{\numberline {10.1}Concluding remarks}{45}{section.10.1}
-\contentsline {section}{\numberline {10.2}Perspectives}{45}{section.10.2}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{47}{section*.30}
+\contentsline {section}{\numberline {10.1}Concluding remarks}{47}{section.10.1}
+\contentsline {section}{\numberline {10.2}Perspectives}{47}{section.10.2}

@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 OCT 2015 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 NOV 2015 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lnp.tex
+**lnp
 (./lnp.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
@@ -1900,37 +1900,37 @@ LaTeX Warning: Empty `thebibliography' environment on input line 43.
 ) [18]
 \openout2 = `chapter9.aux'.
 
- (./chapter9.tex
-LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
-(Font)              Font shape `T1/fve/b/sl' tried instead on input line 14.
-LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
-(Font)              scaled to size 10.79993pt on input line 14.
- [19
-
-
-
-
-] [20] [21] [22] [23] [24] [25] [26] [27] [28]
-[29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43])
-[44]
-\openout2 = `chapter10.aux'.
-
- (./chapter10.tex) [45
+ (./chapter9.tex [19
 
 
 
 
 ]
+LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
+(Font)              Font shape `T1/fve/b/sl' tried instead on input line 74.
+LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
+(Font)              scaled to size 10.79993pt on input line 74.
+ [20] [21] [22] [23] [24] [25] [26] [27] [28]
+[29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
+[44]) [45]
+\openout2 = `chapter10.aux'.
+
+ (./chapter10.tex [46
+
+
+
+
+]) [47]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
- (./lnp.aux (./preface.aux) (./chapter1.aux)
-(./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
-(./chapter6.aux) (./chapter7.aux) (./chapter8.aux) (./chapter9.aux)
-(./chapter10.aux))
+ (./lnp.aux (./preface.aux)
+(./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux)
+(./chapter5.aux) (./chapter6.aux) (./chapter7.aux) (./chapter8.aux)
+(./chapter9.aux) (./chapter10.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 15D0F8BD0498F1BC9C328A41DD080C4E;8071.
+(rerunfilecheck)             Checksum: 7B6D47E8B9808CEEAE4CF2BD5A99807A;8244.
 
 
 LaTeX Warning: There were undefined references.
@@ -1938,13 +1938,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 103.
  ) 
 Here is how much of TeX's memory you used:
- 17993 strings out of 493089
- 292631 string characters out of 6134842
- 412192 words of memory out of 5000000
- 20841 multiletter control sequences out of 15000+600000
+ 17999 strings out of 493089
+ 292697 string characters out of 6134842
+ 412194 words of memory out of 5000000
+ 20843 multiletter control sequences out of 15000+600000
  99726 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,14n,40p,904b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,14n,40p,900b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1959,10 +1959,10 @@ blic/bera/fvmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol
 /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (54 pages, 250892 bytes).
+Output written on lnp.pdf (56 pages, 256666 bytes).
 PDF statistics:
- 967 PDF objects out of 1000 (max. 8388607)
- 888 compressed objects within 9 object streams
- 207 named destinations out of 1000 (max. 500000)
- 785 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 988 PDF objects out of 1000 (max. 8388607)
+ 906 compressed objects within 10 object streams
+ 211 named destinations out of 1000 (max. 500000)
+ 801 words of extra memory for PDF output out of 10000 (max. 10000000)
 

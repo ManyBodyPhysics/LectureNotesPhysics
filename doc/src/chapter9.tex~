@@ -9,33 +9,21 @@
 %\maketile
 
 \section{Introduction}
-
-\section{Single-particle basis}
-
 \section{Hartree-Fock theory}
 
-
-\section{Two-body matrix elements and partial wave expansion}
-
-As mentioned in the introduction, we will employ a plane wave basis for our calculationsof infinite matter properties. With a cartesian basis it means that we can calculate directly the various matrix elements, as discussed in the previous subsection. However, a cartesian represents an approximation to the thermodynamical limit. In order to compare the stability of our basis with results from the thermodynamical limit, it is 
-convenient to rewrite the nucleon-nucleon interaction in terms of a partial wave expansion. This will allow us to compute the Hartree-Fock energy of the ground state 
-in the thermodynamical limit (with the caveat that we need to limit the number of partial waves). In order to find the expressions for the Hartree-Fock energy in a partial wave basis, we will find it convenient to rewrite our two-body force in terms of the relative and center-of-mass motion momenta. 
-
-The direct matrix element, with single-particle three-dimensional
-momenta $\mathbf{k}_i$, spin $\sigma_i$ and isospin $\tau_i$, is
-defined as
+\section{Nuclear forces}
+\subsection{Two-body matrix elements and partial wave expansion}
+The direct matrix element, with single-particle three-dimensional momenta $\mathbf{k}_i$, spin $\sigma_i$ and isospin $\tau_i$, is defined  as
 \[
 \langle \mathbf{k}_a\sigma_a\tau_a \mathbf{k}_b\sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}_c\sigma_c\tau_c \mathbf{k}_d\sigma_d\tau_d \rangle, 
 \]
-or in a more compact form as
-$\langle \mathbf{a}\mathbf{b}\vert \hat{v} \vert \mathbf{c}\mathbf{d} \rangle$
-where the boldfaced letters $\mathbf{a}$ etc represent the relevant
-quantum numbers, here momentum, spin and isospin. Introducing the
-relative momentum
+or in a more compact form as $\langle \mathbf{a}\mathbf{b}\vert \hat{v} \vert \mathbf{c}\mathbf{d} \rangle$ where the boldfaced letters $\mathbf{a}$ etc 
+represent the relevant quantum numbers, here momentum, spin and isospin. Introducing 
+the relative momentum 
 \[
 \mathbf{k} = \frac{1}{2}\left(\mathbf{k}_a-\mathbf{k}_b\right), 
 \]
-and the center-of-mass momentum
+and the center-of-mas momentum
 \[
 \mathbf{K} = \mathbf{k}_a+\mathbf{k}_b,
 \]
@@ -54,23 +42,18 @@ $T_z'=\tau_c+\tau_d$.  Defining $\hat{v}=\hat{v}(\mathbf{k},\mathbf{k}' )$, we c
 \delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle \mathbf{k}T_zS_z=(\sigma_a+\sigma_b) \vert \hat{v}\vert \mathbf{k}'T_zS_z'=(\sigma_c+\sigma_d) \rangle=\delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle T_zS_z\vert\hat{v}(\mathbf{k},\mathbf{k}' ) \vert T_zS_z' \rangle.
 \]
 These matrix elements can in turn be rewritten in terms
-of the total two-body quantum numbers for the spin $S$ of two spin-1/2 fermions as
+of the total two-body quantum numbers for the spin $S$ via
+various recoupling coefficients as
 \[
-\langle \mathbf{k}T_zS_z \vert \hat{v}(\mathbf{k},\mathbf{k}' )\vert \mathbf{k}'T_zS_z' \rangle=\sum_{SS'}\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle \langle \frac{1}{2}\sigma_c\frac{1}{2}\sigma_d\vert S'S_z'\rangle \langle \mathbf{k}T_zSS_z\vert \hat{v}(\mathbf{k},\mathbf{k}' )\vert \mathbf{k}T_zS'S_z' \rangle
+\langle \mathbf{k}\mathbf{K}\sigma_a\tau_a \sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'\sigma_c\tau_c \sigma_d\tau_d \rangle=\sum_{SS'TT'}\langle \frac{1}{2}\tau_a\frac{1}{2}\tau_b\vert TT_z\rangle \langle \frac{1}{2}\tau_c\frac{1}{2}\tau_d\vert T'T_z'\rangle\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle \langle \frac{1}{2}\sigma_c\frac{1}{2}\sigma_d\vert S'S_z'\rangle
+\langle \mathbf{k}\mathbf{K}TT_zSS_z=\sigma_a\tau_a+\sigma_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'T'T_z'S'S_z'=\sigma_c+\sigma_d \rangle,
 \]
  The coefficients $\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle$ are so-called Clebsch-Gordan recoupling coefficients. 
-We will assume that our interactions break charge and isospin symmetry. We will refer to
-$T_z=0$ as the $pn$ (proton-neutron) channel, $T_z=-1$ as the $pp$ (proton-proton) channel and $T_z=1$ as the $nn$ (neutron-neutron) channel. 
 
-The nucleon-nucleon force is often derived and analyzed theoretically in terms of a partial wave expansion. A state with linear momentum $\mathbf{k}$ can be written as 
-\[
-\vert \mathbf{k} \rangle = \sum_{l=0}^{\infty}\sum_{l_l=-l}^{L}\imath^lY_{l}^{m_l}(\hat{k}\vert klm_l\rangle.
-\]
-If we wish to include the spin degrees of freedom, as done above, we can recouple
-by adding the material about quantum numbers on the nuclear force.
+and their respective projections 
+
 
 \section{Full configuration interaction theory}
-
 \subsection{Slater determinants as basis states}
 
 The simplest possible choice for many-body wavefunctions are \textbf{product} wavefunctions.
