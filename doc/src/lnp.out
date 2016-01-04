@@ -61,20 +61,20 @@
 \BOOKMARK [1][-]{section.8.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{section*.25}% 61
 \BOOKMARK [1][-]{section*.26}{Appendix}{section*.25}% 62
 \BOOKMARK [1][-]{section*.27}{References}{section*.25}% 63
-\BOOKMARK [0][-]{section*.28}{Wave function based many-body methods}{}% 64
+\BOOKMARK [0][-]{section*.28}{Many-body methods and infinite nuclear matter}{}% 64
 \BOOKMARK [0][-]{section*.28}{Morten Hjorth-Jensen, Gaute Hagen, Justin G. Lietz and Samuel Novario}{}% 65
 \BOOKMARK [1][-]{section.9.1}{Introduction}{section*.28}% 66
-\BOOKMARK [1][-]{section.9.2}{Single-particle basis}{section*.28}% 67
-\BOOKMARK [1][-]{section.9.3}{Hartree-Fock theory}{section*.28}% 68
-\BOOKMARK [1][-]{section.9.4}{Two-body matrix elements and partial wave expansion}{section*.28}% 69
-\BOOKMARK [1][-]{section.9.5}{Full configuration interaction theory}{section*.28}% 70
-\BOOKMARK [2][-]{subsection.9.5.1}{Slater determinants as basis states}{section.9.5}% 71
-\BOOKMARK [2][-]{subsection.9.5.2}{Full Configuration Interaction Theory}{section.9.5}% 72
-\BOOKMARK [2][-]{subsection.9.5.3}{Example of a Hamiltonian matrix}{section.9.5}% 73
-\BOOKMARK [2][-]{subsection.9.5.4}{A non-practical way of solving the eigenvalue problem}{section.9.5}% 74
-\BOOKMARK [2][-]{subsection.9.5.5}{Summarizing FCI and bringing in approximative methods}{section.9.5}% 75
-\BOOKMARK [2][-]{subsection.9.5.6}{Building a many-body basis}{section.9.5}% 76
-\BOOKMARK [2][-]{subsection.9.5.7}{Example case: pairing Hamiltonian, the warm-up project}{section.9.5}% 77
+\BOOKMARK [1][-]{section.9.2}{Brief reminder on second quantization}{section*.28}% 67
+\BOOKMARK [1][-]{section.9.3}{Single-particle basis, Hamiltonians and models for the nuclear force}{section*.28}% 68
+\BOOKMARK [1][-]{section.9.4}{Hartree-Fock theory}{section*.28}% 69
+\BOOKMARK [2][-]{subsection.9.4.1}{Introducing our first ansatz for the ground state}{section.9.4}% 70
+\BOOKMARK [2][-]{subsection.9.4.2}{Slater determinants as basis states}{section.9.4}% 71
+\BOOKMARK [2][-]{subsection.9.4.3}{The Breuckner G-matrix}{section.9.4}% 72
+\BOOKMARK [1][-]{section.9.5}{Full Configuration Interaction Theory}{section*.28}% 73
+\BOOKMARK [2][-]{subsection.9.5.1}{Example of a Hamiltonian matrix}{section.9.5}% 74
+\BOOKMARK [2][-]{subsection.9.5.2}{A non-practical way of solving the eigenvalue problem}{section.9.5}% 75
+\BOOKMARK [2][-]{subsection.9.5.3}{Summarizing FCI and bringing in approximative methods}{section.9.5}% 76
+\BOOKMARK [2][-]{subsection.9.5.4}{Building a many-body basis}{section.9.5}% 77
 \BOOKMARK [1][-]{section.9.6}{Many-body perturbation theory}{section*.28}% 78
 \BOOKMARK [2][-]{subsection.9.6.1}{Many-body perturbation theory}{section.9.6}% 79
 \BOOKMARK [2][-]{subsection.9.6.2}{Interpreting the correlation energy and the wave operator}{section.9.6}% 80
@@ -85,16 +85,9 @@
 \BOOKMARK [2][-]{subsection.9.8.3}{A quick tour of Coupled Cluster theory}{section.9.8}% 85
 \BOOKMARK [2][-]{subsection.9.8.4}{The CCD approximation}{section.9.8}% 86
 \BOOKMARK [2][-]{subsection.9.8.5}{Formal derivation of the CCSD equations}{section.9.8}% 87
-\BOOKMARK [1][-]{section.9.9}{Infinite nuclear matter}{section*.28}% 88
-\BOOKMARK [2][-]{subsection.9.9.1}{Introduction to studies of infinite matter}{section.9.9}% 89
-\BOOKMARK [2][-]{subsection.9.9.2}{The infinite electron gas}{section.9.9}% 90
-\BOOKMARK [2][-]{subsection.9.9.3}{The infinite electron gas as a homogenous system}{section.9.9}% 91
-\BOOKMARK [2][-]{subsection.9.9.4}{Periodic boundary conditions}{section.9.9}% 92
-\BOOKMARK [2][-]{subsection.9.9.5}{Defining the Hamiltonian operator}{section.9.9}% 93
-\BOOKMARK [2][-]{subsection.9.9.6}{Single-particle Hartree-Fock energy}{section.9.9}% 94
-\BOOKMARK [1][-]{section.9.10}{How to build a numerical quantum mechanical project}{section*.28}% 95
-\BOOKMARK [1][-]{section.9.11}{Summary}{section*.28}% 96
-\BOOKMARK [0][-]{section*.30}{Concluding remarks and perspectives}{}% 97
-\BOOKMARK [0][-]{section*.30}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 98
-\BOOKMARK [1][-]{section.10.1}{Concluding remarks}{section*.30}% 99
-\BOOKMARK [1][-]{section.10.2}{Perspectives}{section*.30}% 100
+\BOOKMARK [1][-]{section.9.9}{How to build a numerical quantum mechanical project}{section*.28}% 88
+\BOOKMARK [1][-]{section.9.10}{Summary}{section*.28}% 89
+\BOOKMARK [0][-]{section*.30}{Concluding remarks and perspectives}{}% 90
+\BOOKMARK [0][-]{section*.30}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 91
+\BOOKMARK [1][-]{section.10.1}{Concluding remarks}{section*.30}% 92
+\BOOKMARK [1][-]{section.10.2}{Perspectives}{section*.30}% 93

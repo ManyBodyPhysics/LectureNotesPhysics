@@ -1,4 +1,4 @@
-\title{Wave function based many-body methods}
+\title{Many-body methods and infinite nuclear matter}
 \author{Morten Hjorth-Jensen, Gaute Hagen, Justin G.~Lietz and Samuel Novario}
 \institute{Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}, \and Gaute Hagen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{hageng@ornl.gov}, \and Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu}}
 
@@ -10,16 +10,533 @@
 
 \section{Introduction}
 
-\section{Single-particle basis}
+Studies of infinite nuclear matter play an important role in nuclear
+physics. The aim of this part of the lectures is to provide the
+necessary ingredients for perfoming studies of neutron star matter (or
+matter in $\beta$-equilibrium) and symmetric nuclear matter. We start
+however with the electron gas in two and three dimensions for both
+historical and pedagogical reasons. Since there are several benchmark
+calculations for the electron gas, this small detour will allow us to
+establish the necessary formalism. Thereafter we will study infinite
+nuclear matter
+\begin{itemize}
+\item at the Hartree-Fock with realistic nuclear forces and
 
-\section{Hartree-Fock theory}
+\item using many-body methods like coupled-cluster theory or in-medium SRG as discussed in our previous sections.
+\end{itemize}
+
+Studies of dense baryonic matter are of central importance to our basic understanding 
+of the stability of nuclear matter, spanning from matter at high densities and temperatures
+to matter as found within dense astronomical objects  like neutron stars. 
+
+Neutron star matter
+at densities of  0.1 fm$^{-3}$ and greater, is often assumed to 
+be made of mainly neutrons, protons, electrons and 
+muons in beta equilibrium. However, other baryons like various hyperons may exist, as well as possible mesonic condensates and transitions to quark degrees of freedom at higher densities. 
+Here we focus on specific definitions of various phases and focus 
+on distinct phases of matter such as pure baryonic
+matter and/or quark matter.
+The composition of matter is then 
+determined by the requirements of chemical and electrical equilibrium.
+Furthermore, we will also consider matter at temperatures much lower
+than the typical Fermi energies.
+The equilibrium conditions are governed by the weak processes 
+(normally referred to as the processes
+for $\beta$-equilibrium)
+\begin{equation} 
+      b_1 \rightarrow b_2 + l +\bar{\nu}_l \hspace{1cm} b_2 +l \rightarrow b_1 
++\nu_l,
+      \label{eq:betadecay}
+\end{equation}
+where $b_1$ and $b_2$ refer to e.g.\  the baryons being a neutron and a proton, 
+respectively, 
+$l$ is either an electron or a muon and  $\bar{\nu}_l $
+and $\nu_l$ their respective anti-neutrinos and neutrinos. Muons typically 
+appear at
+a density close to nuclear matter saturation density, the latter being
+\[
+     n_0 \approx 0.16 \pm 0.02 \hspace{1cm} \mathrm{fm}^{-3},
+\]
+with a corresponding binding energy ${\cal E}_0$ 
+for symmetric nuclear matter (SNM) at saturation density of
+\[
+     {\cal E}_0 = B/A=-15.6\pm 0.2 \hspace{1cm} \mathrm{MeV}.
+\]
+In this work the energy per baryon ${\cal E}$ will always be in units of MeV, 
+while
+the energy density $\varepsilon$ will 
+be in units of MeVfm$^{-3}$ and the number density\footnote{We will often 
+loosely just use density in our discussions.}
+$n$ in units of fm$^{-3}$. The pressure $P$ is 
+defined through the relation
+\begin{equation}
+    P=n^2\frac{\partial {\cal E}}{\partial n}=
+      n\frac{\partial \varepsilon}{\partial n}-\varepsilon,
+\end{equation}
+with 
+dimension MeVfm$^{-3}$. 
+Similarly, the chemical potential for particle species $i$
+is given by
+\begin{equation}
+     \mu_i = \left(\frac{\partial \varepsilon}{\partial n_i}\right),
+     \label{eq:chemicalpotdef}
+\end{equation}
+with dimension MeV.
+In calculations of properties of neutron star matter in $\beta$-equilibrium,
+we will need to calculate the energy per baryon ${\cal E}$ for e.g.~several 
+proton fractions $x_p$, which corresponds to
+the ratio of protons as
+compared to the total nucleon number ($Z/A$), 
+ defined as
+\begin{equation}
+    x_p = \frac{n_p}{n},
+\end{equation}
+where $n=n_p+n_n$, the total baryonic density if neutrons and
+protons are the only baryons present. In that case,
+the total Fermi momentum $k_F$ and the Fermi momenta $k_{Fp}$,
+$k_{Fn}$ for protons and neutrons are related to the total nucleon density
+$n$ by
+\begin{align}
+     n = & \frac{2}{3\pi^2} k_F^3 \nonumber \\
+       = & x_p n + (1-x_p) n \nonumber \\
+       = & \frac{1}{3\pi^2} k_{Fp}^3 + \frac{1}{3\pi^2} k_{Fn}^3.
+    \label{eq:densi}
+\end{align}
+The energy per baryon will thus be
+labelled as ${\cal E}(n,x_p)$.
+${\cal E}(n,0)$ will then refer to the energy per baryon for pure neutron
+matter (PNM) while ${\cal E}(n,\frac{1}{2})$ is the corresponding value for 
+SNM. Furthermore, in this work, subscripts $n,p,e,\mu$
+will always refer to neutrons, protons, electrons and muons, respectively.
 
 
-\section{Two-body matrix elements and partial wave expansion}
+Since the mean free path of a neutrino in a neutron star is bigger
+than the typical radius of such a star ($\sim 10$ km), 
+we will throughout assume that neutrinos escape freely from the neutron star,
+see for example  the work of Prakash et al.
+for a discussion
+on trapped neutrinos. Eq. (\ref{eq:betadecay}) yields then the following
+conditions for matter in $\beta$ equilibrium with for example  nucleonic degrees 
+freedom only
+\begin{equation}
+    \mu_n=\mu_p+\mu_e,
+     \label{eq:npebetaequilibrium}
+\end{equation}
+and 
+\begin{equation}
+     n_p = n_e,
+     \label{eq:chargeconserv}
+\end{equation}
+where $\mu_i$ and $n_i$ refer to the chemical potential and number density
+in fm$^{-3}$ of particle species $i$. 
+If muons are present as well,  we need to modify the equation for 
+charge conservation, Eq. (\ref{eq:chargeconserv}), to read 
+\[
+     n_p = n_e+n_{\mu},
+\]
+and require that $\mu_e = \mu_{\mu}$.
+With more particles present, the equations read
+\begin{equation}
+    \sum_i\left(n_{b_i}^+ +n_{l_i}^+\right) =   
+    \sum_i\left(n_{b_i}^- +n_{l_i}^-\right),
+    \label{eq:generalcharge}
+\end{equation}
+and 
+\begin{equation} 
+     \mu_n=b_i\mu_i+q_i\mu_l,
+     \label{eq:generalbeta}
+\end{equation}
+where $b_i$ is the baryon number, $q_i$ the lepton charge and the superscripts 
+$(\pm)$ on 
+number densities $n$ represent particles with positive or negative charge.
+To give an example, it is possible to have baryonic matter with hyperons like
+$\Lambda$ 
+and $\Sigma^{-,0,+}$ and isobars $\Delta^{-,0,+,++}$ as well in addition
+to the nucleonic degrees of freedom.
+In this case the chemical equilibrium condition of Eq. (\ref{eq:generalbeta}  ) 
+becomes,
+excluding muons,
+\begin{align}
+    \mu_{\Sigma^-} = \mu_{\Delta^-} = \mu_n + \mu_e , \nonumber \\ 
+    \mu_{\Lambda} = \mu_{\Sigma^0} = \mu_{\Delta^0} = \mu_n , \nonumber \\
+    \mu_{\Sigma^+} = \mu_{\Delta^+} = \mu_p = \mu_n - \mu_e ,\nonumber \\
+    \mu_{\Delta^{++}} = \mu_n - 2 \mu_e .
+    \label{eq:beta_baryonicmatter}
+\end{align}
+A transition from hadronic to quark matter is expected at high densities. 
+The high-density quark matter phase
+in the interior of neutron stars is also described by
+requiring the system to be locally neutral
+\begin{equation} 
+    \label{eq:quarkneut}
+    (2/3)n_u -(1/3)n_d - (1/3)n_s - n_e = 0,
+\end{equation}
+where $n_{u,d,s,e}$ 
+are the densities of the $u$, $d$ and $s$ quarks and of the
+electrons (eventually muons as well), respectively. 
+Morover, the system must be in $\beta$-equilibrium, i.e.\ 
+the chemical potentials have to satisfy the following equations:
+\begin{equation}
+      \label{eq:ud}
+      \mu_d=\mu_u+\mu_e,
+\end{equation}
+and
+\begin{equation}
+      \label{eq:us}
+      \mu_s=\mu_u+\mu_e .
+\end{equation}
+Equations (\ref{eq:quarkneut})-(\ref{eq:us}) have to be solved 
+self-consistently together with the field equations for quarks 
+at a fixed density $n=n_u+n_d+n_s$.
 
-As mentioned in the introduction, we will employ a plane wave basis for our calculationsof infinite matter properties. With a cartesian basis it means that we can calculate directly the various matrix elements, as discussed in the previous subsection. However, a cartesian represents an approximation to the thermodynamical limit. In order to compare the stability of our basis with results from the thermodynamical limit, it is 
-convenient to rewrite the nucleon-nucleon interaction in terms of a partial wave expansion. This will allow us to compute the Hartree-Fock energy of the ground state 
-in the thermodynamical limit (with the caveat that we need to limit the number of partial waves). In order to find the expressions for the Hartree-Fock energy in a partial wave basis, we will find it convenient to rewrite our two-body force in terms of the relative and center-of-mass motion momenta. 
+An important ingredient in the discussion of the EoS and the criteria for
+matter in $\beta$-equilibrium is the so-called symmetry energy ${\cal S} (n)$, 
+defined as
+the difference in energy for symmetric nuclear matter
+and pure neutron matter 
+\begin{equation}
+      {\cal S} (n) = {\cal E} (n,x_p=0) - {\cal E} (n,x_p=1/2 ).
+      \label{eq:symenergy}
+\end{equation}
+If we expand the energy per baryon in the case of nucleonic degrees of freedom 
+only
+in the proton concentration $x_p$ about the value of the energy 
+for SNM ($x_p=\frac{1}{2}$), we obtain,
+\begin{equation}
+     {\cal E} (n,x_p)={\cal E} (n,x_p=\frac{1}{2})+
+     \frac{1}{2}\frac{d^2 {\cal E}}{dx_p^2} (n)\left(x_p-1/2\right)^2+\dots ,
+     \label{eq:energyexpansion}
+\end{equation}
+where the term $d^2 {\cal E}/dx_p^2$ 
+is to be associated with the symmetry energy ${\cal S} (n)$ in the empirical
+mass formula. If
+we assume that higher order derivatives in the above expansion are small
+(we will see examples of this in the next subsection), then through the 
+conditions
+for $\beta$-equilbrium of Eqs. (\ref{eq:npebetaequilibrium}) and 
+(\ref{eq:chargeconserv})
+and Eq. (\ref{eq:chemicalpotdef}) we can define the proton
+fraction by the symmetry energy as
+\begin{equation}  
+    \hbar c\left(3\pi^2nx_p\right)^{1/3} = 4{\cal S} (n)\left(1-2x_p\right),
+    \label{eq:crudeprotonfraction}
+\end{equation}
+where the electron chemical potential is given
+by $\mu_e = \hbar c k_F$, i.e.\  ultrarelativistic electrons are assumed.
+Thus, the symmetry energy is of paramount importance for studies 
+of neutron star matter in $\beta$-equilibrium.
+One can extract information about the value of the symmetry energy at saturation 
+density
+$n_0$ from systematic studies of the masses of atomic nuclei. However, these 
+results
+are limited to densities around $n_0$ and for proton fractions close to 
+$\frac{1}{2}$.
+Typical values for ${\cal S} (n)$ at $n_0$ are in the range $27-38$ MeV.
+For densities greater than $n_0$ it is more difficult to get a reliable 
+information on the symmetry energy, and thereby the related proton fraction.
+We will shed more light on this topic in the next subsection.
+
+
+Finally, another property of interest in the discussion of the various 
+equations of state  
+is the incompressibility modulus $K$ at non-zero pressure
+\begin{equation}
+    K=9\frac{\partial P}{\partial n}.
+    \label{eq:incompressibility}
+\end{equation}
+The sound speed $v_s$ depends as well on the density
+of the nuclear medium through the relation
+\begin{equation}
+    \left(\frac{v_s}{c}\right)^2=\frac{dP}{d\varepsilon}=
+    \frac{dP}{dn}\frac{dn}{d\varepsilon}=
+    \left(\frac{K}{9(m_nc^2+{\cal E}+P/n)}\right).
+    \label{eq:speedofsound}
+\end{equation}
+It is important to keep track of the dependence on density of $v_s$
+since a superluminal behavior can occur at higher densities for most
+non-relativistic EoS.
+Superluminal behavior would
+not occur with a fully relativistic theory, and it is necessary to
+gauge the magnitude of the effect it introduces at the higher densities.
+This will be discussed at the end of this section.
+The adiabatic constant $\Gamma$ can also be extracted from the EoS
+by 
+\begin{equation}
+    \Gamma = \frac{n}{P}\frac{\partial P}{\partial n}.
+    \label{eq:adiabaticconstant}
+\end{equation}
+
+
+\section{Brief reminder on second quantization}
+
+\[
+  \Phi_{AS}(\alpha_1, \dots, \alpha_A; x_1, \dots x_A)=
+            \frac{1}{\sqrt{A}} \sum_{\hat{P}} (-1)^P \hat{P} \prod_{i=1}^A \psi_{\alpha_i}(x_i),
+\]
+which is equivalent with $|\alpha_1 \dots \alpha_A\rangle= a_{\alpha_1}^{\dagger} \dots a_{\alpha_A}^{\dagger} |0\rangle$. We have also
+    \[
+        a_p^\dagger|0\rangle = |p\rangle, \quad a_p |q\rangle = \delta_{pq}|0\rangle
+    \]
+\[
+  \delta_{pq} = \left\{a_p, a_q^\dagger \right\},
+\]
+and 
+\[
+0 = \left\{a_p^\dagger, a_q \right\} = \left\{a_p, a_q \right\} = \left\{a_p^\dagger, a_q^\dagger \right\}
+\]
+\[
+|\Phi_0\rangle = |\alpha_1 \dots \alpha_A\rangle, \quad \alpha_1, \dots, \alpha_A \leq \alpha_F
+\]
+\[
+\left\{a_p^\dagger, a_q \right\}= \delta_{pq}, p, q \leq \alpha_F 
+\]
+\[
+\left\{a_p, a_q^\dagger \right\} = \delta_{pq}, p, q > \alpha_F
+\]
+with         $i,j,\ldots \leq \alpha_F, \quad a,b,\ldots > \alpha_F, \quad p,q, \ldots - \textrm{any}$
+\[
+        a_i|\Phi_0\rangle = |\Phi_i\rangle, \hspace{0.5cm} a_a^\dagger|\Phi_0\rangle = |\Phi^a\rangle
+\]
+and         
+\[
+a_i^\dagger|\Phi_0\rangle = 0 \hspace{0.5cm}  a_a|\Phi_0\rangle = 0
+\]
+
+
+
+
+The one-body operator is defined as
+\[
+ \hat{F} = \sum_{pq} \langle p|\hat{f}|q\rangle a_p^\dagger a_q
+\]
+while the two-body opreator is defined as
+\[
+\hat{V} = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle_{AS} a_p^\dagger a_q^\dagger a_s a_r
+\]
+where we have defined the antisymmetric matrix elements
+\[
+\langle pq|\hat{v}|rs\rangle_{AS} = \langle pq|\hat{v}|rs\rangle - \langle pq|\hat{v}|sr\rangle.
+\]
+
+We can also define a three-body operator
+\[
+\hat{V}_3 = \frac{1}{36} \sum_{pqrstu} \langle pqr|\hat{v}_3|stu\rangle_{AS} 
+                a_p^\dagger a_q^\dagger a_r^\dagger a_u a_t a_s
+\]
+with the antisymmetrized matrix element
+\begin{align}
+            \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle pqr|\hat{v}_3|stu\rangle + \langle pqr|\hat{v}_3|tus\rangle + \langle pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle - \langle pqr|\hat{v}_3|tsu\rangle - \langle pqr|\hat{v}_3|uts\rangle.
+\end{align}
+
+\[	     
+\hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^{\dagger}_p a_q,
+\]
+\[
+\hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle \left\{a^\dagger_p a_q\right\} +
+             \sum_i \langle i|\hat{h}_0|i\rangle.
+\]
+\[
+  \hat{H}_I = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s  a_r,
+\]
+\[
+\hat{H}_I =\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle \left\{a^\dagger_p a^\dagger_q a_s  a_r\right\}
+            + \sum_{pqi} \langle pi|\hat{v}|qi\rangle \left\{a^\dagger_p a_q\right\} 
+            + \frac{1}{2} \sum_{ij}\langle ij|\hat{v}|ij\rangle.
+\]
+Explain again the meaning of the various symbols.
+
+\[
+\hat{H}_3 = \frac{1}{36} \sum_{\substack{pqr \\ stu}}
+                 \langle pqr|\hat{v}_3|stu\rangle a^\dagger_p a^\dagger_q a^\dagger_r a_u a_t a_s,
+\]
+
+and specify the contributions to the twobody, onebody and the scalar part.
+
+
+
+\section{Single-particle basis, Hamiltonians and models for the nuclear force}
+
+This is a homogeneous system and the one-particle wave functions are given by plane wave functions normalized to a volume $\Omega$ 
+for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
+\[
+\psi_{\mathbf{k}\sigma}(\mathbf{r})= \frac{1}{\sqrt{\Omega}}\exp{(i\mathbf{kr})}\xi_{\sigma}
+\]
+where $\mathbf{k}$ is the wave number and  $\xi_{\sigma}$ is a spin function for either spin up or down
+\[ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+\]
+
+
+
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+\[
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+\]
+We assume first that the electrons interact via a central, symmetric and translationally invariant
+interaction  $V(r_{12})$ with
+$r_{12}=|\mathbf{r}_1-\mathbf{r}_2|$.  The interaction is spin independent.
+
+The total Hamiltonian consists then of kinetic and potential energy
+\[
+\hat{H} = \hat{T}+\hat{V}.
+\]
+The operator for the kinetic energy can be written as
+\[
+\hat{T}=\sum_{\mathbf{k}\sigma}\frac{\hbar^2k^2}{2m}a_{\mathbf{k}\sigma}^{\dagger}a_{\mathbf{k}\sigma}.
+\]
+
+
+The Hamiltonian operator is given by
+\[
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+\]
+
+
+When using periodic boundary conditions, the 
+discrete-momentum single-particle basis functions 
+\[
+\phi_{\mathbf{k}}(\mathbf{r}) =
+e^{i\mathbf{k}\cdot \mathbf{r}}/L^{d/2}
+\]
+are associated with 
+the single-particle energy   
+\begin{align}
+  \varepsilon_{n_{x}, n_{y}} = \frac{\hbar^{2}}{2m} \left( \frac{2\pi }{L}\right)^{2}\left( n_{x}^{2} + n_{y}^{2}\right)
+\end{align}
+for two-dimensional sytems and 
+\begin{align}
+  \varepsilon_{n_{x}, n_{y}, n_{z}} = \frac{\hbar^{2}}{2m}
+  \left( \frac{2\pi }{L}\right)^{2}
+  \left( n_{x}^{2} + n_{y}^{2} + n_{z}^{2}\right)
+\end{align} 
+for three-dimensional systems.
+
+
+We choose  the single-particle basis such that both the occupied and 
+unoccupied single-particle spaces have a closed-shell 
+structure. This means that all single-particle states 
+corresponding to energies below a chosen cutoff are
+included in the basis. We study only the unpolarized spin
+phase, in which all orbitals are occupied with one spin-up 
+and one spin-down electron. 
+
+
+The single-particle kinetic energy defined as
+\[
+\frac{\hbar^2}{2m}\left(k_{n_x}^2+k_{n_y}^2k_{n_z}^2\right),
+\]
+and 
+\[
+k_{n_i}=\frac{2\pi n_i}{L} \hspace{0.1cm} n_i = 0, \pm 1, \pm 2, \dots, 
+\]
+we can set up a similar table and obtain (assuming identical particles one and including spin up and spin down solutions)  for energies less than or equal to $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le 3$
+
+
+\begin{quote}
+\begin{tabular}{ccccc}
+\hline
+\multicolumn{1}{c}{ $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}$ } & \multicolumn{1}{c}{ $n_{x}$ } & \multicolumn{1}{c}{ $n_{y}$ } & \multicolumn{1}{c}{ $n_{z}$ } & \multicolumn{1}{c}{ $N_{\uparrow \downarrow }$ } \\
+\hline
+0                               & 0       & 0       & 0       & 2                          \\
+\hline
+1                               & -1      & 0       & 0       &                            \\
+1                               & 1       & 0       & 0       &                            \\
+1                               & 0       & -1      & 0       &                            \\
+1                               & 0       & 1       & 0       &                            \\
+1                               & 0       & 0       & -1      &                            \\
+1                               & 0       & 0       & 1       & 14                         \\
+\hline
+2                               & -1      & -1      & 0       &                            \\
+2                               & -1      & 1       & 0       &                            \\
+2                               & 1       & -1      & 0       &                            \\
+2                               & 1       & 1       & 0       &                            \\
+2                               & -1      & 0       & -1      &                            \\
+2                               & -1      & 0       & 1       &                            \\
+2                               & 1       & 0       & -1      &                            \\
+2                               & 1       & 0       & 1       &                            \\
+2                               & 0       & -1      & -1      &                            \\
+2                               & 0       & -1      & 1       &                            \\
+2                               & 0       & 1       & -1      &                            \\
+2                               & 0       & 1       & 1       & 38                         \\
+\hline
+3                               & -1      & -1      & -1      &                            \\
+3                               & -1      & -1      & 1       &                            \\
+3                               & -1      & 1       & -1      &                            \\
+3                               & -1      & 1       & 1       &                            \\
+3                               & 1       & -1      & -1      &                            \\
+3                               & 1       & -1      & 1       &                            \\
+3                               & 1       & 1       & -1      &                            \\
+3                               & 1       & 1       & 1       & 54                         \\
+\hline
+\end{tabular}
+\end{quote}
+
+
+Continuing in this way we get for $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}=4$ a
+total of 22 additional states, resulting in $76$ as a new magic
+number. For the lowest six energy values the degeneracy in energy
+gives us $2$, $14$, $38$, $54$, $76$ and $114$ as magic numbers. These
+numbers will then define our Fermi level when we compute the energy in
+a Cartesian basis. When performing calculations based on many-body
+perturbation theory, Coupled cluster theory or other many-body
+methods, we need then to add states above the Fermi level in order to
+sum over single-particle states which are not occupied.
+
+If we wish to study infinite nuclear matter with both protons and
+neutrons, the above magic numbers become $4, 28, 76, 108, 132,
+228, \dots$.
+
+Every number of particles for filled shells defines also the number of
+particles to be used in a given calculation. Use the number of
+particles to define the density of the system
+\[
+\rho = g \frac{k_F^3}{6\pi^2},
+\]
+where you need to define $k_F$ and the degeneracy $g$, which is two
+for one type of spin-$1/2$ particles and four for symmetric nuclear
+matter.
+
+Use the density to find the length $L$ of the box used with periodic
+boundary contributions, that is use the relation
+\[
+  V= L^3= \frac{A}{\rho}.
+\]
+You can use $L$ to define the spacing to set up the spacing between
+varipus $k$-values, that is
+\[
+  \Delta k = \frac{2\pi}{L}.
+\]
+Here, $A$ can be the number of nucleons. If we deal with the electron
+gas only, this needs to be replaced by the number of electrons $N$.
+
+
+
+The total Hamiltonian consists then of kinetic and potential energy
+\[
+\hat{H} = \hat{T}+\hat{V}.
+\]
+The operator for the kinetic energy can be written as
+\[
+\hat{T}=\sum_{\mathbf{k}\sigma}\frac{\hbar^2k^2}{2m}a_{\mathbf{k}\sigma}^{\dagger}a_{\mathbf{k}\sigma}.
+\]
+
+
+
+As mentioned above, we will employ a plane wave basis
+for our calculations of infinite matter properties. With a cartesian
+basis it means that we can calculate directly the various matrix
+elements, as discussed in the previous subsection. However, a
+cartesian basis represents an approximation to the thermodynamical limit. In
+order to compare the stability of our basis with results from the
+thermodynamical limit, it is convenient to rewrite the nucleon-nucleon
+interaction in terms of a partial wave expansion. This will allow us
+to compute the Hartree-Fock energy of the ground state in the
+thermodynamical limit (with the caveat that we need to limit the
+number of partial waves). In order to find the expressions for the
+Hartree-Fock energy in a partial wave basis, we will find it
+convenient to rewrite our two-body force in terms of the relative and
+center-of-mass motion momenta.
 
 The direct matrix element, with single-particle three-dimensional
 momenta $\mathbf{k}_i$, spin $\sigma_i$ and isospin $\tau_i$, is
@@ -49,27 +566,334 @@ charge invariant, implying that the above uncoupled matrix element reads
 \langle \mathbf{k}\mathbf{K}\sigma_a\tau_a \sigma_b\tau_b \vert \hat{v}\vert \mathbf{k}'\mathbf{K}'\sigma_c\tau_c \sigma_d\tau_d \rangle=\delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle \mathbf{k}T_zS_z=(\sigma_a+\sigma_b) \vert \hat{v}\vert \mathbf{k}'T_zS_z'=(\sigma_c+\sigma_d) \rangle,
 \]
 where we have defined the isospin projections $T_z=\tau_a+\tau_b$ and
-$T_z'=\tau_c+\tau_d$.  Defining $\hat{v}=\hat{v}(\mathbf{k},\mathbf{k}' )$, we can rewrite the previous equation in a more compact form as 
+$T_z'=\tau_c+\tau_d$.  Defining
+$\hat{v}=\hat{v}(\mathbf{k},\mathbf{k}' )$, we can rewrite the
+previous equation in a more compact form as
 \[
 \delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle \mathbf{k}T_zS_z=(\sigma_a+\sigma_b) \vert \hat{v}\vert \mathbf{k}'T_zS_z'=(\sigma_c+\sigma_d) \rangle=\delta_{T_z,T_z'}\delta(\mathbf{K}-\mathbf{K}')\langle T_zS_z\vert\hat{v}(\mathbf{k},\mathbf{k}' ) \vert T_zS_z' \rangle.
 \]
-These matrix elements can in turn be rewritten in terms
-of the total two-body quantum numbers for the spin $S$ of two spin-1/2 fermions as
+These matrix elements can in turn be rewritten in terms of the total
+two-body quantum numbers for the spin $S$ of two spin-1/2 fermions as
 \[
 \langle \mathbf{k}T_zS_z \vert \hat{v}(\mathbf{k},\mathbf{k}' )\vert \mathbf{k}'T_zS_z' \rangle=\sum_{SS'}\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle \langle \frac{1}{2}\sigma_c\frac{1}{2}\sigma_d\vert S'S_z'\rangle \langle \mathbf{k}T_zSS_z\vert \hat{v}(\mathbf{k},\mathbf{k}' )\vert \mathbf{k}T_zS'S_z' \rangle
 \]
- The coefficients $\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert SS_z\rangle$ are so-called Clebsch-Gordan recoupling coefficients. 
-We will assume that our interactions break charge and isospin symmetry. We will refer to
-$T_z=0$ as the $pn$ (proton-neutron) channel, $T_z=-1$ as the $pp$ (proton-proton) channel and $T_z=1$ as the $nn$ (neutron-neutron) channel. 
+The coefficients $\langle \frac{1}{2}\sigma_a\frac{1}{2}\sigma_b\vert
+SS_z\rangle$ are so-called Clebsch-Gordan recoupling coefficients.  We
+will assume that our interactions break charge and isospin
+symmetry. We will refer to $T_z=0$ as the $pn$ (proton-neutron)
+channel, $T_z=-1$ as the $pp$ (proton-proton) channel and $T_z=1$ as
+the $nn$ (neutron-neutron) channel.
 
-The nucleon-nucleon force is often derived and analyzed theoretically in terms of a partial wave expansion. A state with linear momentum $\mathbf{k}$ can be written as 
+The nucleon-nucleon force is often derived and analyzed theoretically
+in terms of a partial wave expansion. A state with linear momentum
+$\mathbf{k}$ can be written as
 \[
 \vert \mathbf{k} \rangle = \sum_{l=0}^{\infty}\sum_{l_l=-l}^{L}\imath^lY_{l}^{m_l}(\hat{k}\vert klm_l\rangle.
 \]
-If we wish to include the spin degrees of freedom, as done above, we can recouple
-by adding the material about quantum numbers on the nuclear force.
 
-\section{Full configuration interaction theory}
+In terms of the relative and center-of-mass momenta $\mathbf{k}$ and
+$\mathbf{K}$, the potential in momentum space is related to the nonlocal operator
+$V(\mathbf{r},\mathbf{r}')$ by
+\begin{equation}
+      \langle \mathbf{k'K'}\vert \hat{v} \vert \mathbf{k'K} \rangle=
+       \int d\mathbf{r}d \mathbf{r'}
+        e^{-\imath \mathbf{k'r'}}V(\mathbf{r'},\mathbf{r}) e^{\imath \mathbf{kr}}
+       \delta(\mathbf{K},\mathbf{K'}).
+\end{equation}
+We will assume that the interaction is spherically symmetric and use
+the partial wave expansion of the plane waves in
+terms of spherical harmonics.
+This means that we can separate the radial part of the wave function from its
+angular dependence. The wave function of the relative motion is described
+in terms of plane waves as
+\begin{equation}
+       e^{\imath \mathbf{kr}}  =
+       \langle\mathbf{r}\vert \mathbf{k}\rangle =  4\pi \sum_{lm} \imath ^{l}
+        j_{l} (kr) Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{lm}(\mathbf{\hat{r}}),
+\end{equation}
+where $j_l$ is a spherical Bessel function and $Y_{lm}$ the
+spherical harmonic.
+This partial wave basis is useful for defining the operator for
+the nucleon-nucleon interaction, which
+is symmetric with respect to rotations, parity and
+isospin transformations. These symmetries imply that the interaction is
+diagonal with respect to the quantum numbers of total angular
+momentum $J$, spin $S$ and isospin $T$. Using the above plane wave expansion,
+and coupling to final $J$, $S$ and $T$ we get
+\begin{equation}
+      \langle \mathbf{k'}\vert V \vert \mathbf{k}\rangle
+       = (4\pi)^2 \sum_{JM}\sum_{lm}\sum_{l'm'}
+      \imath ^{l+l'} Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{l'm'}(\mathbf{\hat{k}'})
+      {\cal C}_{m'M_SM}^{l'SJ}{\cal C}_{mM_SM}^{lSJ}
+      \langle k'l'STJM \vert V \vert klSTJM \rangle,
+\label{eq:vpartial}
+\end{equation}
+where we have defined
+\begin{equation}
+    \langle k'l'STJM\vert V \vert klSTJM\rangle =
+    \int   j_{l'}(k'r')\langle l'STJM\vert V(r',r)\vert lSTJM \rangle j_l(kr) {r'}^2 dr' r^2 dr.
+\end{equation}
+We have omitted the momentum of the center-of-mass motion $\mathbf{K}$ and the 
+corresponding orbital momentum $L$, since the interaction is diagonal
+in these variables. The potentials we will employ in this work, like
+those of the Bonn group, are all non-local potentials defined in 
+momentum space, and we will therefore not need the last equation.
+
+
+
+
+\section{Hartree-Fock theory}
+
+Hartree-Fock (HF) theory is an algorithm for finding an approximative expression for the ground state of a given Hamiltonian. The basic ingredients are
+Define a single-particle basis $\{\psi_{\alpha}\}$ so that
+\[ 
+\hat{h}^{\mathrm{HF}}\psi_{\alpha} = \varepsilon_{\alpha}\psi_{\alpha}
+\]
+with the Hartree-Fock Hamiltonian defined as
+\[
+\hat{h}^{\mathrm{HF}}=\hat{t}+\hat{u}_{\mathrm{ext}}+\hat{u}^{\mathrm{HF}}
+\]
+
+The term  $\hat{u}^{\mathrm{HF}}$ is a single-particle potential to be determined by the HF algorithm.
+
+The HF algorithm means to choose $\hat{u}^{\mathrm{HF}}$ in order to have 
+\[ \langle \hat{H} \rangle = E^{\mathrm{HF}}= \langle \Phi_0 | \hat{H}|\Phi_0 \rangle
+\]
+that is to find a local minimum with a Slater determinant $\Phi_0$ being the ansatz for the ground state. 
+The variational principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the exact ground state energy.
+
+We will show that the Hartree-Fock Hamiltonian $\hat{h}^{\mathrm{HF}}$ equals our definition of the operator $\hat{f}$ discussed in connection with the new definition of the normal-ordered Hamiltonian (see later lectures), that is we have, for a specific matrix element
+\[
+\langle p |\hat{h}^{\mathrm{HF}}| q \rangle =\langle p |\hat{f}| q \rangle=\langle p|\hat{t}+\hat{u}_{\mathrm{ext}}|q \rangle +\sum_{i\le F} \langle pi | \hat{V} | qi\rangle_{AS},
+\]
+meaning that
+\[
+\langle p|\hat{u}^{\mathrm{HF}}|q\rangle = \sum_{i\le F} \langle pi | \hat{V} | qi\rangle_{AS}.
+\]
+The so-called Hartree-Fock potential $\hat{u}^{\mathrm{HF}}$ brings an
+explicit medium dependence due to the summation over all
+single-particle states below the Fermi level $F$. It brings also in an
+explicit dependence on the two-body interaction (in nuclear physics we
+can also have complicated three- or higher-body forces). The two-body
+interaction, with its contribution from the other bystanding fermions,
+creates an effective mean field in which a given fermion moves, in
+addition to the external potential $\hat{u}_{\mathrm{ext}}$ which
+confines the motion of the fermion. For systems like nuclei, there is
+no external confining potential. Nuclei are examples of self-bound
+systems, where the binding arises due to the intrinsic nature of the
+strong force. For nuclear systems thus, there would be no external
+one-body potential in the Hartree-Fock Hamiltonian.
+
+
+Another possibility is to expand the single-particle functions in a known basis  and vary the coefficients, 
+that is, the new single-particle wave function is written as a linear expansion
+in terms of a fixed chosen orthogonal basis (for example the well-known harmonic oscillator functions or the hydrogen-like functions etc).
+We define our new Hartree-Fock single-particle basis by performing a unitary transformation 
+on our previous basis (labelled with greek indices) as
+\begin{equation}
+\psi_p^{HF}  = \sum_{\lambda} C_{p\lambda}\phi_{\lambda}. \label{eq:newbasis}
+\end{equation}
+In this case we vary the coefficients $C_{p\lambda}$. If the basis has infinitely many solutions, we need
+to truncate the above sum.  We assume that the basis $\phi_{\lambda}$ is orthogonal. A unitary transformation keeps the orthogonality, as discussed in exercise 1 below.  
+
+
+
+
+It is normal to choose a single-particle basis defined as the eigenfunctions
+of parts of the full Hamiltonian. The typical situation consists of the solutions of the one-body part of the Hamiltonian, that is we have
+\[
+\hat{h}_0\phi_{\lambda}=\epsilon_{\lambda}\phi_{\lambda}.
+\]
+The single-particle wave functions $\phi_{\lambda}({\bf r})$, defined by the quantum numbers $\lambda$ and ${\bf r}$
+are defined as the overlap 
+\[
+   \phi_{\lambda}({\bf r})  = \langle {\bf r} | \lambda \rangle .
+\]
+
+
+
+
+In our discussions hereafter we will use our definitions of single-particle states above and below the Fermi ($F$) level given by the labels
+$ijkl\dots \le F$ for so-called single-hole states and $abcd\dots > F$ for so-called particle states.
+For general single-particle states we employ the labels $pqrs\dots$. 
+
+
+
+
+
+\[
+  E[\Phi] 
+  = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
+  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS},
+\]
+we found the expression for the energy functional in terms of the basis function $\phi_{\lambda}({\bf r})$. We then  varied the above energy functional with respect to the basis functions $|\mu \rangle$. 
+Now we are interested in defining a new basis defined in terms of
+a chosen basis as defined in Eq.~(ref{eq:newbasis}). We can then rewrite the energy functional as
+\begin{equation}
+  E[\Phi^{HF}] 
+  = \sum_{i=1}^A \langle i | h | i \rangle +
+  \frac{1}{2}\sum_{ij=1}^A\langle ij|\hat{v}|ij\rangle_{AS}, \label{FunctionalEPhi2}
+\end{equation}
+where $\Phi^{HF}$ is the new Slater determinant defined by the new basis of Eq.~(ref{eq:newbasis}). 
+
+
+
+
+
+Using Eq.~(\ref{eq:newbasis}) we can rewrite Eq.~(\ref{FunctionalEPhi2}) as 
+\begin{equation}
+  E[\Psi] 
+  = \sum_{i=1}^A \sum_{\alpha\beta} C^*_{i\alpha}C_{i\beta}\langle \alpha | h | \beta \rangle +
+  \frac{1}{2}\sum_{ij=1}^A\sum_{{\alpha\beta\gamma\delta}} C^*_{i\alpha}C^*_{j\beta}C_{i\gamma}C_{j\delta}\langle \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}. \label{FunctionalEPhi3}
+\end{equation}
+
+
+We wish now to minimize the above functional. We introduce again a set of Lagrange multipliers, noting that
+since $\langle i | j \rangle = \delta_{i,j}$ and $\langle \alpha | \beta \rangle = \delta_{\alpha,\beta}$, 
+the coefficients $C_{i\gamma}$ obey the relation
+\[
+ \langle i | j \rangle=\delta_{i,j}=\sum_{\alpha\beta} C^*_{i\alpha}C_{i\beta}\langle \alpha | \beta \rangle=
+\sum_{\alpha} C^*_{i\alpha}C_{i\alpha},
+\]
+which allows us to define a functional to be minimized that reads
+\begin{equation}
+  F[\Phi^{HF}]=E[\Phi^{HF}] - \sum_{i=1}^A\epsilon_i\sum_{\alpha} C^*_{i\alpha}C_{i\alpha}.
+\end{equation}
+
+
+
+
+
+
+
+Minimizing with respect to $C^*_{i\alpha}$, remembering that the
+equations for $C^*_{i\alpha}$ and $C_{i\alpha}$ can be written as two
+independent equations, we obtain
+\[
+\frac{d}{dC^*_{i\alpha}}\left[  E[\Phi^{HF}] - \sum_{j}\epsilon_j\sum_{\alpha} C^*_{j\alpha}C_{j\alpha}\right]=0,
+\]
+which yields for every single-particle state $i$ and index $\alpha$
+(recalling that the coefficients $C_{i\alpha}$ are matrix elements of
+a unitary (or orthogonal for a real symmetric matrix) matrix) the
+following Hartree-Fock equations
+\[
+\sum_{\beta} C_{i\beta}\langle \alpha | h | \beta \rangle+
+\sum_{j=1}^A\sum_{\beta\gamma\delta} C^*_{j\beta}C_{j\delta}C_{i\gamma}\langle \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}=\epsilon_i^{HF}C_{i\alpha}.
+\]
+
+
+We can rewrite this equation as (changing dummy variables)
+\[
+\sum_{\beta} \left\{\langle \alpha | h | \beta \rangle+
+\sum_{j}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}\right\}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}.
+\]
+Note that the sums over greek indices run over the number of basis set
+functions (in principle an infinite number).
+
+
+
+
+
+Defining 
+\[
+h_{\alpha\beta}^{HF}=\langle \alpha | h | \beta \rangle+
+\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS},
+\]
+we can rewrite the new equations as 
+\begin{equation}
+\sum_{\gamma}h_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}. \label{eq:newhf}
+\end{equation}
+The latter is nothing but a standard eigenvalue problem. Compared with
+Eq.~(ref{eq:hartreefockcoordinatespace}), we see that we do not need
+to compute any integrals in an iterative procedure for solving the
+equations.  It suffices to tabulate the matrix elements
+$\langle \alpha | h | \beta \rangle$ and
+$\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}$ once and for
+all. Successive iterations require thus only a look-up in tables over
+one-body and two-body matrix elements. These details will be discussed
+below when we solve the Hartree-Fock equations numerical.
+
+
+Our Hartree-Fock matrix  is thus
+\[
+\hat{h}_{\alpha\beta}^{HF}=\langle \alpha | \hat{h}_0 | \beta \rangle+
+\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
+\]
+The Hartree-Fock equations are solved in an iterative waym starting with a guess for the coefficients $C_{j\gamma}=\delta_{j,\gamma}$ and solving the equations by diagonalization till the new single-particle energies
+$\epsilon_i^{\mathrm{HF}}$ do not change anymore by a prefixed quantity. 
+
+
+
+
+Normally we assume that the single-particle basis $|\beta\rangle$ forms an eigenbasis for the operator
+$\hat{h}_0$, meaning that the Hartree-Fock matrix becomes  
+\[
+\hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
+\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
+\]
+The Hartree-Fock eigenvalue problem
+\[
+\sum_{\beta}\hat{h}_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{\mathrm{HF}}C_{i\alpha},
+\]
+can be written out in a more compact form as
+\[
+\hat{h}^{HF}\hat{C}=\epsilon^{\mathrm{HF}}\hat{C}. 
+\]
+
+
+
+
+The Hartree-Fock equations are, in their simplest form, solved in an iterative way, starting with a guess for the
+coefficients $C_{i\alpha}$. We label the coefficients as $C_{i\alpha}^{(n)}$, where the subscript $n$ stands for iteration $n$.
+To set up the algorithm we can proceed as follows:
+
+We start with a guess $C_{i\alpha}^{(0)}=\delta_{i,\alpha}$. Alternatively, we could have used random starting values as long as the vectors are normalized. Another possibility is to give states below the Fermi level a larger weight.
+The Hartree-Fock matrix simplifies then to (assuming that the coefficients $C_{i\alpha} $  are real)
+\[
+\hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
+\sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(0)}C_{j\delta}^{(0)}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
+\]
+
+
+
+
+Solving the Hartree-Fock eigenvalue problem yields then new eigenvectors $C_{i\alpha}^{(1)}$ and eigenvalues
+$\epsilon_i^{HF(1)}$. 
+With the new eigenvalues we can set up a new Hartree-Fock potential 
+\[
+\sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(1)}C_{j\delta}^{(1)}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
+\]
+The diagonalization with the new Hartree-Fock potential yields new eigenvectors and eigenvalues.
+This process is continued till for example
+\[
+\frac{\sum_{p} |\epsilon_i^{(n)}-\epsilon_i^{(n-1)}|}{m} \le \lambda,  
+\]
+where $\lambda$ is a user prefixed quantity ($\lambda \sim 10^{-8}$ or smaller) and $p$ runs over all calculated single-particle
+energies and $m$ is the number of single-particle states.
+
+
+We can rewrite the ground state energy by adding and subtracting $\hat{u}^{HF}(x_i)$ 
+\[
+  E_0^{HF} =\langle \Phi_0 | \hat{H} | \Phi_0\rangle = 
+\sum_{i\le F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| j\rangle+ \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i |\hat{u}^{HF}| i\rangle,
+\]
+which results in
+\[
+  E_0^{HF}
+  = \sum_{i\le F}^A \varepsilon_i^{HF} + \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i |\hat{u}^{HF}| i\rangle.
+\]
+Our single-particle states $ijk\dots$ are now single-particle states obtained from the solution of the Hartree-Fock equations.
+
+
+
+Using our definition of the Hartree-Fock single-particle energies we obtain then the following expression for the total ground-state energy
+\[
+  E_0^{HF}
+  = \sum_{i\le F}^A \varepsilon_i - \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle ij|\hat{v}|ji\rangle\right].
+\]
+
+
+\subsection{Introducing our first ansatz for the ground state}
 
 \subsection{Slater determinants as basis states}
 
@@ -182,7 +1006,410 @@ each index $i,j,k, \ldots$ must be unique.
 
 
 
-\subsection{Full Configuration Interaction Theory}
+
+\subsection{The Breuckner $G$-matrix}
+
+The Brueckner $G$-matrix has historically been an important ingredient
+in many-body calculations of nuclear systems. In this section, we will
+briefly survey the philosophy behind the $G$-matrix.
+
+Historically, the $G$-matrix was developed in microscopic nuclear
+matter calculations using realistic nucleon-nucleon (NN) interactions.
+It is an ingenuous as well as an interesting method to overcome the
+difficulties caused by the strong, short-range repulsive core contained
+in all modern models for the NN interaction. The $G$-matrix method was
+originally developed by Brueckner, and further
+developed by Goldstone and Bethe, Brandow and Petschek. 
+In the literature it is generally referred to as the
+Brueckner theory or the Brueckner-Bethe-Goldstone theory.
+
+Suppose we want to calculate the nuclear matter ground-state
+energy $E_0$ using the non-relativistic Schr\"{o}dinger equation
+\begin{equation}
+      H\Psi_0(A)=E_0(A)\Psi_0(A),
+\end{equation}
+with $H=T+V$ where $A$ denotes the number of particles, $T$
+is the kinetic energy and $V$ is
+the nucleon-nucleon
+(NN)  potential. Models for the NN interaction are discussed in the chapter on nuclear forces.
+The corresponding unperturbed
+problem is
+\begin{equation}
+      H_0\psi_0(A)=W_0(A)\psi_0(A).
+\end{equation}
+Here $H_0$ is just kinetic energy $T$ and $\psi_0$ is a Slater
+determinant representing the Fermi sea, where all orbits through the
+Fermi momentum $k_F$ are filled. We write
+\begin{equation}
+      E_0=W_0+\Delta E_0,
+\end{equation}
+where $\Delta E_0$ is the ground-state energy shift or correlation energy as it was defined in many-body perturbation theory.
+If we know how to calculate $\Delta E_0$, then we know $E_0$, since
+$W_0$ is easily obtained. In the limit $A\rightarrow \infty$,
+the quantities $E_0$ and $\Delta E_0$ themselves are not well
+defined, but the ratios $E_0/A$ and $\Delta E_0/A$ are. The
+nuclear-matter binding energy per nucleon is commonly denoted
+by $BE/A$, which is just $-E_0/A$. In passing, we note that
+the empirical value for symmetric nuclear matter (proton number
+$Z$=neutron number $N$) is $\approx 16$ MeV.
+There exists a formal theory for the calculation of $\Delta E_0$.
+According to the well-known Goldstone linked-diagram theory, the energy shift $\Delta E_0$ is given exactly by the
+diagrammatic expansion shown in Fig.~\ref{fig:goldstone}. This theory,
+is a linked-cluster perturbation expansion for the ground state
+energy of a many-body system, and applies equally well to both
+nuclear matter and closed-shell nuclei such as the doubly magic
+nucleus $^{40}$Ca. 
+We will not discuss the Goldstone expansion, but rather discuss
+briefly how it is used in calculations.
+
+
+Using the standard diagram rules (see the discussion on
+coupled-cluster theory and many-body perturbation theory), the various
+diagrams contained in the above figure can be readily calculated (in
+an uncoupled scheme)
+\begin{equation}
+   (i)=\frac{(-)^{n_h+n_l}}{2^{n_{ep}}}\sum_{ij\leq k_F}
+       \langle ij\vert\hat{v}\vert ij\rangle_{AS},
+\end{equation}
+with $n_h=n_l=2$ and $n_{ep}=1$. As discussed in connection with the
+diagram rules in the many-body perturbation theory chapter, $n_h$
+denotes the number of hole lines, $n_l$ the number of closed fermion
+loops and $n_{ep}$ is the number of so-called equivalent pairs.  The
+factor $1/2^{n_{ep}}$ is needed since we want to count a pair of
+particles only once. We will carry this factor $1/2$ with us in the
+equations below.  The subscript $AS$ denotes the antisymmetrized and
+normalized matrix element
+\begin{equation}
+     \langle ij\vert\hat{v}\vert ij\rangle_{AS}=\langle ij \vert\hat{v}\vert ij\rangle-
+     \langle ji \vert\hat{v}\vert ij\rangle.
+\end{equation}
+Similarly, diagrams (ii) and (iii) read
+\begin{equation}
+   (ii)=\frac{(-)^{2+2}}{2^2}\sum_{ij\leq k_F}\sum_{ab>k_F}
+   \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS}
+   \langle ab\vert\hat{v}\vert ij\rangle_{AS}}
+   {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b},
+\end{equation}
+and
+\begin{equation}
+   (iii)=\frac{(-)^{2+2}}{2^3}\sum_{k_i,k_j\leq k_F}\sum_{abcdk_F}
+   \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS}
+   \langle ab\vert\hat{v}\vert cd\rangle_{AS}
+   \langle cd\vert\hat{v}\vert ij\rangle_{AS}}
+   {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
+   (\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d)}.
+\end{equation}
+In the above, $\varepsilon$ denotes the sp energies defined by
+$H_0$.
+The steps leading to the above expressions for the various
+diagrams are rather straightforward. Though, if we wish to compute the
+matrix elements for the interaction $v$, a serious problem
+arises. Typically, the matrix elements will contain a term
+(see the next section for the formal details) $V(|{\mathbf r}|)$, which
+represents the interaction potential $V$ between two nucleons, where
+${\mathbf r}$ is the internucleon distance.
+All modern models
+for $V$ have a strong short-range repulsive core. Hence,
+matrix elements involving $V(|{\mathbf r}|)$, will result in large
+(or infinitely large for a potential with a hard core)
+and repulsive contributions to the ground-state energy. Thus, the
+diagrammatic expansion for the ground-state energy in terms of the
+potential $V(|{\mathbf r}|)$ becomes meaningless.
+
+One possible solution to  this problem is provided by the well-known
+Brueckner theory or the Brueckner $G$-matrix, or just the
+$G$-matrix. In fact, the $G$-matrix is an almost indispensable
+tool in almost every microscopic nuclear structure
+calculation. Its main idea may be paraphrased as follows.
+Suppose we want to calculate the function $f(x)=x/(1+x)$. If
+$x$ is small, we may expand the function $f(x)$ as a power series
+$x+x^2+x^3+\dots$ and it may be adequate to just calculate the first
+few terms. In other words, $f(x)$ may be calculated using a low-order
+perturbation method. But if $x$ is large
+(or infinitely large), the above
+power series is obviously meaningless.
+However, the exact function
+$x/(1+x)$ is still well defined in the limit
+of $x$ becoming very large.
+
+These arguments suggest that one should sum up the diagrams
+(i), (ii), (iii) in fig.~\ref{fig:goldstone} and the similar ones
+to all orders, instead of computing them one by one. Denoting this
+all-order sum as $1/2\tilde{G}_{ijij}$, where we have
+introduced the shorthand notation
+$\tilde{G}_{ijij}=\langle k_ik_j\vert \tilde{G}\vert k_ik_j\rangle_{AS}$
+(and similarly for $\tilde{v}$),
+we have that
+\begin{align}
+      \frac{1}{2}\tilde{G}_{ijij}=&\frac{1}{2}\hat{v}_{ijij}
+      +\sum_{ab>k_F}\frac{1}{2}\hat{v}_{ijab}\frac{1}{\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
+      \nonumber \\
+      & \times\left[\frac{1}{2}\hat{v}_{abij}+\sum_{cd>k_F}
+      \frac{1}{2}\hat{v}_{abcd}\frac{1}
+      {\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d}
+      \frac{1}{2}V_{cdij}+\dots  \right].
+\end{align}
+The factor $1/2$ is the same as that discussed above, namely we want 
+to count a pair of particles only once.
+The quantity inside the brackets is just
+$1/2\tilde{G}_{mnij}$ and the above equation can be
+rewritten as an integral equation
+\begin{equation}
+      \tilde{G}_{ijij}=\tilde{V}_{ijij}
+      +\sum_{ab>F}\frac{1}{2}\hat{v}_{ijab}\frac{1}{\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
+      \tilde{G}_{abij}.
+\end{equation}
+Note that $\tilde{G}$ is the antisymmetrized $G$-matrix since
+the potential $\tilde{v}$ is also antisymmetrized. This means that
+$\tilde{G}$ obeys
+\begin{equation}
+  \tilde{G}_{ijij}=-\tilde{G}_{jiij}=-\tilde{G}_{ijji}.
+\end{equation}
+The $\tilde{G}$-matrix  is defined as
+\begin{equation}
+    \tilde{G}_{ijij}=G_{ijij}-G_{jiij},
+\end{equation}
+and the equation for $G$ is
+\begin{equation}
+      G_{ijij}=V_{ijij}
+      +\sum_{ab>k_F}V_{ijab}\frac{1}
+      {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
+      G_{abij},
+      \label{eq:ggeneral}
+\end{equation}
+which is the familiar $G$-matrix equation. The above
+matrix is specifically designed to treat a class of diagrams
+contained in $\Delta E_0$, of which typical contributions
+were shown in fig.~\ref{fig:goldstone}. In fact the sum of the diagrams
+in fig.~\ref{fig:goldstone} is equal to $1/2(G_{ijij}-G_{jiij})$.
+
+Let us now define a more general $G$-matrix as
+\begin{equation}
+      G_{ijij}=V_{ijij}
+      +\sum_{mn>0}V_{ijmn}\frac{Q(mn)}
+      {\omega -\varepsilon_m-\varepsilon_n}
+      G_{mnij},
+      \label{eq:gwithq}
+\end{equation}
+which is an extension of Eq. (\ref{eq:ggeneral}). Note that 
+Eq. (\ref{eq:ggeneral}) has
+$\varepsilon_i+\varepsilon_j$ in the energy denominator, whereas
+in the latter equation we have a general energy variable $\omega$
+in the denominator. Furthermore, in Eq. (\ref{eq:ggeneral})
+we have a restricted
+sum over $mn$, while in Eq. (\ref{eq:gwithq})
+we sum over all $ab$ and we have
+introduced a weighting factor $Q(ab)$. In Eq. (\ref{eq:gwithq}) $Q(ab)$
+corresponds to the choice
+\begin{equation}
+   Q(a , b ) =
+    \left\{\begin{array}{cc}1,&min(a ,b ) > k_F\\
+    0,&\mathrm{else}.\end{array}\right. ,
+\end{equation}
+where $Q(ab)$ is usually referred to as the $G$-matrix Pauli
+exclusion operator. The role of $Q$ is to enforce a selection
+of the intermediate states allowed in the $G$-matrix equation. The above
+$Q$ requires that the intermediate particles $a$ and $b$
+must be both above the Fermi surface defined by $F$. We may enforce
+a different requirement by using a summation over intermediate states
+different from that in Eq. (\ref{eq:gwithq}).
+An example is the Pauli operator
+for the model-space Brueckner-Hartree-Fock method discussed below.
+
+
+Before ending this section, let us rewrite the $G$-matrix equation
+in a more compact form.
+The sp energies $\varepsilon$ and wave functions are defined
+by the unperturbed hamiltonian $H_0$ as
+\begin{equation}
+   H_0\vert \psi_a\psi_b=(\varepsilon_a+\varepsilon_b)
+   \vert \psi_a\psi_b.
+\end{equation}
+The $G$-matrix equation can then be rewritten in the following
+compact form
+\begin{equation}
+   G(\omega )=V+V\frac{\hat{Q}}{\omega -H_0}G(\omega ),
+\end{equation}
+with
+$\hat{Q}=\sum_{ab}\vert \psi_a\psi_b\langle\langle \psi_a\psi_b\vert$.
+In terms of diagrams, $G$ corresponds to an all-order sum of the
+"ladder-type" interactions between two particles with the
+intermediate states restricted by $Q$.
+
+The $G$-matrix equation has a very simple form. But its
+calculation is rather complicated, particularly for finite
+nuclear systems such as the nucleus $^{18}$O. There are a
+number of complexities. To mention a few, the Pauli operator
+$Q$ may not commute with the unperturbed hamiltonian
+$H_0$ and we have to make the replacement
+\[
+\frac{Q}{\omega -H_0}\rightarrow Q\frac{1}{\omega -QH_0Q}Q.
+\]
+The determination of the starting energy $\omega$ is also another
+problem. 
+
+
+In a medium such as nuclear 
+matter we must account
+for the fact that certain states are not available as intermediate
+states in the calculation of the $G$-matrix.
+Following the discussion above
+this is achieved by introducing the medium
+dependent Pauli operator $Q$. Further, the
+energy $\omega$ of the incoming particles, given by a pure kinetic
+term in a scattering problem between two unbound particles (for example two colliding protons), must be modified so as to allow
+for medium corrections.
+How to evaluate the Pauli operator for
+nuclear matter is, however, not straightforward.
+Before discussing how to evaluate the Pauli operator for nuclear matter,
+we note that the $G$-matrix
+is conventionally given in terms of partial waves and
+the coordinates of the relative and center-of-mass motion.
+If we assume that the $G$-matrix is diagonal in $\alpha$ ($\alpha$ is a shorthand
+notation for $J$, $S$, $L$ and $T$), we  write the equation for the $G$-matrix as a 
+coupled-channels equation in the relative and center-of-mass system
+\begin{equation}
+   G_{ll'}^{\alpha}(kk'K\omega )=V_{ll'}^{\alpha}(kk')
+   +\sum_{l''}\int \frac{d^3 q}{(2\pi )^3}V_{ll''}^{\alpha}(kq)
+   \frac{Q(q,K)}{\omega -H_0}
+   G_{l''l'}^{\alpha}(qk'K\omega).
+   \label{eq:gnonrel}
+\end{equation}
+This equation is similar in structure to the scattering
+equations discussed in connection with nuclear forces (see the chapter on models for nuclear forces), except that we now have
+introduced the Pauli operator $Q$ and a medium dependent two-particle
+energy $\omega$. The notations in this equation follow those of the chapter on nuclear forces
+where we discuss the solution of the scattering
+matrix $T$.
+The numerical details on how to solve the above $G$-matrix
+equation through matrix inversion techniques are discussed below
+Note however that the $G$-matrix may not be diagonal in $\alpha$.
+This is due to the fact that the
+Pauli operator $Q$ is not diagonal
+in the above representation in the relative and center-of-mass
+system. The Pauli operator depends on the
+angle between the relative momentum and the center of mass momentum.
+This angle dependence causes $Q$ to couple states with different
+relative angular
+momentua ${\cal J}$, rendering  a partial wave decomposition of the $G$-matrix equation 
+rather difficult.
+The angle dependence of the Pauli operator
+can be eliminated by introducing the angle-average
+Pauli operator, where one replaces the exact Pauli operator $Q$
+by its average $\bar{Q}$ over all angles for fixed relative and center-of-mass
+momenta.
+The choice of Pauli operator is decisive to the determination of the
+sp
+spectrum. Basically, to first order in the reaction matrix $G$,
+there are three commonly used sp spectra, all
+defined by the solution of the following equations
+\begin{equation}
+   \varepsilon_{m} = \varepsilon (k_{m})= t_{m} + u_{m}=\frac{k_{m}^2}{2M_N}+u_{m},
+   \label{eq:spnrel}
+\end{equation}
+and
+\begin{align}
+   u_{m} =& {\displaystyle \sum_{h \leq k_F}}\left\langle m h \right| G(\omega = \varepsilon_{m} + \varepsilon_h )
+   \left| m h \right\rangle_{AS}  \hspace{3mm}k_m \leq k_M,  \\ \\
+   u_m=&0, k_m > k_M.
+   \label{eq:selfcon}
+\end{align}
+For notational economy, we set $|{\bf k}_m|=k_m$.
+Here we employ antisymmetrized matrix elements (AS), and $k_M$ is a cutoff
+on the momentum. Further, $t_m$ is the sp kinetic
+energy and similarly $u_m$
+is the
+sp potential.
+The choice of cutoff $k_M$ is actually what determines the three
+commonly used sp spectra.
+In the conventional BHF approach one employs $k_M = k_F$,
+which leads
+to a Pauli operator $Q_{\mathrm{BHF}}$ (in the laboratory system) given by
+\begin{equation}
+   Q_{\mathrm{BHF}}(k_m , k_n ) =
+    \left\{\begin{array}{cc}1,&min(k_m ,k_n ) > k_F\\
+    0,&\mathrm{else}.\end{array}\right.
+    \label{eq:bhf},
+\end{equation}
+or, since we will define an
+angle-average Pauli operator in the relative and center-of-mass
+system, we have
+\begin{equation}
+     \bar{Q}_{\mathrm{BHF}}(k,K)=\left\{\begin{array}{cc}
+         0,&k\leq \sqrt{k_{F}^{2}-K^2/4}\\
+         1,&k\geq k_F + K/2\\
+	\frac{K^2/4+k^2 -k_{F}^2}{kK}&\mathrm{else},\end{array}\right.
+    \label{eq:qbhf}
+\end{equation}
+with $k_F$ the momentum at the Fermi surface.
+
+The BHF choice sets $u_k = 0$ for $k > k_F$, which leads
+to an unphysical, large gap at the Fermi surface, typically
+of the order of $50-60$ MeV. 
+To overcome the gap
+problem, Mahaux and collaborators 
+introduced a continuous sp spectrum
+for all values of $k$. The divergencies
+which then may occur in Eq. (\ref{eq:gnonrel}) are taken care of by
+introducing
+a principal value integration in Eq. (\ref{eq:gnonrel}),
+to retain only the
+real part contribution to the $G$-matrix.
+
+
+To define the energy denominators we will also make use of the
+angle-average approximation.
+The angle dependence is handled by the
+so-called effective mass approximation. The single-particle energies
+in nuclear matter are assumed to have the simple quadratic form
+\begin{equation}
+   \begin{array}{ccc}
+   \varepsilon (k_m)=&
+   {\displaystyle\frac{\hbar^{2}k_m^2}
+   {2M_{N}^{*}}}+\Delta ,&\hspace{3mm}k_m\leq k_F\\
+   &&\\
+   =&{\displaystyle\frac{\hbar^{2}
+   k_m^2}{2M_{N}}},&\hspace{3mm}k_m> k_F ,\\
+   \end{array}
+   \label{eq:spen}
+\end{equation}
+where $M_{N}^{*}$ is the effective mass of the nucleon and $M_{N}$ is the
+bare nucleon mass. For particle states above the Fermi sea we choose
+a pure kinetic energy term, whereas for hole states,
+the terms $M_{N}^{*}$ and $\Delta$, the latter being 
+an effective single-particle
+potential related to the $G$-matrix, are obtained through the
+self-consistent Brueckner-Hartree-Fock procedure.
+The sp potential is obtained through the same angle-average approximation
+\begin{align}
+  \label{eq:Uav}
+   U(k_m) & =\sum_{l\alpha} (2T+1)(2J+1)
+   \left \{ \frac{8}{\pi}\int_{0}^{(k_F-k_m)/2}
+   k^2dk G_{ll}^{\alpha}(k,\bar{K}_1) \right.  \\
+   &    \left.
+    + \frac{1}{\pi k_m}\int_{(k_F-k_m)/2}^{(k_F+k_m)/2}
+   kdk (k_F ^2-(k_m-2k)^2)
+   G_{ll}^{\alpha}(k,\bar{K}_2)  \right \}  \nonumber,
+\end{align}
+where we have defined
+\begin{equation}
+    \bar{K}_1^2=4(k_m^2+k^2),
+\end{equation}
+and
+\begin{equation}
+    \bar{K}_2^2=4(k_m^2+k^2)-(2k+k_m-k_F)(2k+k_1+k_F).
+\end{equation}
+This
+self-consistency scheme consists in choosing adequate initial values of the
+effective mass and $\Delta$. The obtained $G$-matrix is in turn used to
+obtain new values for $M_{N}^{*}$ and $\Delta$. This procedure
+continues until these parameters vary little.
+
+
+
+
+
+\section{Full Configuration Interaction Theory}
 
 We have defined the ansatz for the ground state as 
 \[
@@ -741,88 +1968,6 @@ which we list with the total $M$:
 \end{tabular}
 \end{quote}
 
-\noindent
-
-
-
-
-\subsection{Example case: pairing Hamiltonian, the warm-up project}
-
-
-We consider a space with $2\Omega$ single-particle states, with each 
-state labeled by 
-$k = 1, 2, 3, \Omega$ and $m = \pm 1/2$. The convention is that 
-the state with $k>0$ has $m = + 1/2$ while $-k$ has $m = -1/2$.
-
-
-The Hamiltonian we consider is 
-\[
-\hat{H} = -\frac{g}{2} \hat{P}_+ \hat{P}_-,
-\]
-where
-\[
-\hat{P}_+ = \sum_{k > 0} \hat{a}^\dagger_k \hat{a}^\dagger_{-{k}}.
-\]
-and $\hat{P}_- = ( \hat{P}_+)^\dagger$.
-
-This problem can be solved using what is called the quasi-spin formalism to obtain the 
-exact results. Thereafter we will try again using the explicit Slater determinant formalism.
-
-
-In the first part project we will consider four doubly degenerate single-particle states, resulting in eight single-particle states as shown here
-
-\begin{quote}
-\begin{tabular}{ccccc}
-\hline
-\multicolumn{1}{c}{ Index } & \multicolumn{1}{c}{ $n$ } & \multicolumn{1}{c}{ $l$ } & \multicolumn{1}{c}{ $s$ } & \multicolumn{1}{c}{ $m_s$ } \\
-\hline
-1     & 0   & 0   & 1/2 & -1/2  \\
-2     & 0   & 0   & 1/2 & 1/2   \\
-3     & 1   & 0   & 1/2 & -1/2  \\
-4     & 1   & 0   & 1/2 & 1/2   \\
-5     & 2   & 0   & 1/2 & -1/2  \\
-6     & 2   & 0   & 1/2 & 1/2   \\
-7     & 3   & 0   & 1/2 & -1/2  \\
-8     & 3   & 0   & 1/2 & 1/2   \\
-\hline
-\end{tabular}
-\end{quote}
-
-\noindent
-
-If we limit ourselves to four fermions only and states with no broken pairs, 
-total $M=0$ states, we end with  sixSlater  determinants
-
-\begin{itemize}
-\item $|           1,           2 ,          3         ,       4  \rangle , $
-
-\item $|            1      ,     2        ,        5         ,       6 \rangle , $
-
-\item $|            1         ,       2     ,           7         ,       8  \rangle , $
-
-\item $|            3        ,        4      ,          5          ,      6  \rangle , $
-
-\item $|            3        ,        4      ,          7         ,       8  \rangle , $
-
-\item $|            5        ,        6     ,           7     ,           8  \rangle $
-\end{itemize}
-
-\noindent
-For our example, the $ 6 \times 6$  Hamiltonian matrix becomes
-\[
-H = \left ( 
-\begin{array}{cccccc}
-2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\
- -g/2 & 4\delta -g & -g/2 & -g/2 & -0 & -g/2 \\
--g/2 & -g/2 & 6\delta -g & 0 & -g/2 & -g/2 \\
- -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\
- -g/2 & 0 & -g/2 & -g/2 & 8\delta-g & -g/2 \\
-0 & -g/2 & -g/2 & -g/2 & -g/2 & 10\delta -g 
-\end{array} \right )
-\]
-(You should check by hand that this is correct.) 
-
-For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
 
 \section{Many-body perturbation theory}
 
@@ -1499,205 +2644,6 @@ This equation is solved the same way as we would do for Eq. (\ref{eq:ccd1}). The
 \subsection{Formal derivation of the CCSD equations}
 
 
-\section{Infinite nuclear matter}
-
-\subsection{Introduction to studies of infinite matter}
-
-
-Studies of infinite nuclear matter play an important role  in nuclear physics. The aim of this part of the lectures is to provide the necessary ingredients for perfoming studies of neutron star matter (or matter in $\beta$-equilibrium) and symmetric nuclear matter. We start however with the electron gas in two and three dimensions for both historical and pedagogical reasons. Since there are several benchmark calculations for the electron gas, this small detour will allow us to establish the necessary formalism. Thereafter we will study infinite nuclear matter 
-\begin{itemize}
-\item at the Hartree-Fock with realistic nuclear forces and
-
-\item using many-body methods like coupled-cluster theory or in-medium SRG as discussed in our previous sections.
-\end{itemize}
-
-\noindent
-\subsection{The infinite electron gas}
-
-The electron gas is perhaps the only realistic model of a 
-system of many interacting particles that allows for a solution
-of the Hartree-Fock equations on a closed form. Furthermore, to first order in the interaction, one can also
-compute on a closed form the total energy and several other properties of a many-particle systems. 
-The model gives a very good approximation to the properties of valence electrons in metals.
-The assumptions are
-
-\begin{itemize}
- \item System of electrons that is not influenced by external forces except by an attraction provided by a uniform background of ions. These ions give rise to a uniform background charge. The ions are stationary.
-
- \item The system as a whole is neutral.
-
- \item We assume we have $N_e$ electrons in a cubic box of length $L$ and volume $\Omega=L^3$. This volume contains also a uniform distribution of positive charge with density $N_ee/\Omega$. 
-\end{itemize}
-
-\noindent
-The homogeneous electron gas is one of the few examples of a system of many
-interacting particles that allows for a solution of the mean-field
-Hartree-Fock equations on a closed form.  To first order in the
-electron-electron interaction, this applies to ground state properties
-like the energy and its pertinent equation of state as well.  The
-homogeneus electron gas is a system of electrons that is not
-influenced by external forces except by an attraction provided by a
-uniform background of ions. These ions give rise to a uniform
-background charge.  The ions are stationary and the system as a whole
-is neutral.
-Irrespective of this simplicity, this system, in both two and
-three-dimensions, has eluded a proper description of correlations in
-terms of various first principle methods, except perhaps for quantum
-Monte Carlo methods. In particular, the diffusion Monte Carlo
-calculations of \href{{http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.45.566}}{Ceperley} 
-and \href{{http://journals.aps.org/prb/abstract/10.1103/PhysRevB.39.5005}}{Ceperley and Tanatar} 
-are presently still considered as the
-best possible benchmarks for the two- and three-dimensional electron
-gas. 
-
-
-
-The electron gas, in 
-two or three dimensions is thus interesting as a test-bed for 
-electron-electron correlations. The three-dimensional 
-electron gas is particularly important as a cornerstone 
-of the local-density approximation in density-functional 
-theory. In the physical world, systems 
-similar to the three-dimensional electron gas can be 
-found in, for example, alkali metals and doped 
-semiconductors. Two-dimensional electron fluids are 
-observed on metal and liquid-helium surfaces, as well as 
-at metal-oxide-semiconductor interfaces. However, the Coulomb 
-interaction has an infinite range, and therefore 
-long-range correlations play an essential role in the
-electron gas. 
-
-
-
-
-At low densities, the electrons become 
-localized and form a lattice. This so-called Wigner 
-crystallization is a direct consequence 
-of the long-ranged repulsive interaction. At higher
-densities, the electron gas is better described as a
-liquid.
-When using, for example, Monte Carlo methods the electron gas must be approximated 
-by a finite system. The long-range Coulomb interaction 
-in the electron gas causes additional finite-size effects  that are not
-present in other infinite systems like nuclear matter or neutron star matter.
-This poses additional challenges to many-body methods when applied 
-to the electron gas.
-
-
-
-
-
-\subsection{The infinite electron gas as a homogenous system}
-
-This is a homogeneous system and the one-particle wave functions are given by plane wave functions normalized to a volume $\Omega$ 
-for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
-\[
-\psi_{\mathbf{k}\sigma}(\mathbf{r})= \frac{1}{\sqrt{\Omega}}\exp{(i\mathbf{kr})}\xi_{\sigma}
-\]
-where $\mathbf{k}$ is the wave number and  $\xi_{\sigma}$ is a spin function for either spin up or down
-\[ 
-\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
-\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
-\]
-
-
-
-
-\subsection{Periodic boundary conditions}
-
-
-We assume that we have periodic boundary conditions which limit the allowed wave numbers to
-\[
-k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
-\]
-We assume first that the electrons interact via a central, symmetric and translationally invariant
-interaction  $V(r_{12})$ with
-$r_{12}=|\mathbf{r}_1-\mathbf{r}_2|$.  The interaction is spin independent.
-
-The total Hamiltonian consists then of kinetic and potential energy
-\[
-\hat{H} = \hat{T}+\hat{V}.
-\]
-The operator for the kinetic energy can be written as
-\[
-\hat{T}=\sum_{\mathbf{k}\sigma}\frac{\hbar^2k^2}{2m}a_{\mathbf{k}\sigma}^{\dagger}a_{\mathbf{k}\sigma}.
-\]
-
-
-
-\subsection{Defining the Hamiltonian operator}
-
-The Hamiltonian operator is given by
-\[
-\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
-\]
-with the electronic part
-\[
-\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |\mathbf{r}_i-\mathbf{r}_j|}}{|\mathbf{r}_i-\mathbf{r}_j|},
-\]
-where we have introduced an explicit convergence factor
-(the limit $\mu\rightarrow 0$ is performed after having calculated the various integrals).
-Correspondingly, we have
-\[
-\hat{H}_{b}=\frac{e^2}{2}\int\int d\mathbf{r}d\mathbf{r}'\frac{n(\mathbf{r})n(\mathbf{r}')e^{-\mu |\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|},
-\]
-which is the energy contribution from the positive background charge with density
-$n(\mathbf{r})=N/\Omega$. Finally,
-\[
-\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d\mathbf{r}\frac{n(\mathbf{r})e^{-\mu |\mathbf{r}-\mathbf{x}_i|}}{|\mathbf{r}-\mathbf{x}_i|},
-\]
-is the interaction between the electrons and the positive background.
-
-
-
-\subsection{Single-particle Hartree-Fock energy}
-
-In the first exercise below we show that the Hartree-Fock energy can be written as 
-\[
-\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}}
-{\Omega^{2}}\sum_{k'\leq
-k_{F}}\int d\mathbf{r}e^{i(\mathbf{k}'-\mathbf{k})\mathbf{r}}\int
-d\mathbf{r'}\frac{e^{i(\mathbf{k}-\mathbf{k}')\mathbf{r}'}}
-{\vert\mathbf{r}-\mathbf{r}'\vert}
-\]
-resulting in
-\[
-\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}
-k_{F}}{2\pi}
-\left[
-2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
-{k-k_{F}}\right\vert
-\right]
-\]
-
-
-
-The previous result can be rewritten in terms of the density
-\[
-n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
-\]
-where $n=N_e/\Omega$, $N_e$ being the number of electrons, and $r_s$ is the radius of a sphere which represents the volum per conducting electron.  
-It can be convenient to use the Bohr radius $a_0=\hbar^2/e^2m_e$.
-For most metals we have a relation $r_s/a_0\sim 2-6$.  The quantity $r_s$ is dimensionless.
-
-
-In the second exercise below  we find that
-the total energy
-$E_0/N_e=\langle\Phi_{0}|\hat{H}|\Phi_{0}\rangle/N_e$ for
-for this system to first order in the interaction is given as 
-\[
-E_0/N_e=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
-\]
-
-
-
-
-
-
-
-
-
-
 
 
 \section{How to build a numerical quantum mechanical project}
@@ -1705,3 +2651,8 @@ E_0/N_e=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
 
 \section{Summary}
  
+
+
+
+
+
