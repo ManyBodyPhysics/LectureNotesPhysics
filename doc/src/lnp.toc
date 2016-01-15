@@ -70,36 +70,35 @@
 \contentsline {section}{\numberline {8.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{17}{section.8.5}
 \contentsline {section}{Appendix}{18}{section*.26}
 \contentsline {section}{References}{18}{section*.27}
-\contentsline {titlech}{\numberline {9}Many-body methods and infinite nuclear matter}{19}{section*.28}
+\contentsline {titlech}{\numberline {9}High-performance computing Many-body methods and infinite nuclear matter}{19}{section*.28}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Gaute Hagen, Justin G.\nobreakspace {}Lietz and Samuel Novario}{19}{section*.28}
+\contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{19}{section*.28}
 \contentsline {section}{\numberline {9.1}Introduction}{19}{section.9.1}
-\contentsline {section}{\numberline {9.2}Brief reminder on second quantization}{22}{section.9.2}
-\contentsline {section}{\numberline {9.3}Single-particle basis, Hamiltonians and models for the nuclear force}{24}{section.9.3}
-\contentsline {section}{\numberline {9.4}Hartree-Fock theory}{27}{section.9.4}
-\contentsline {subsection}{\numberline {9.4.1}Introducing our first ansatz for the ground state}{31}{subsection.9.4.1}
-\contentsline {subsection}{\numberline {9.4.2}Slater determinants as basis states}{31}{subsection.9.4.2}
-\contentsline {subsection}{\numberline {9.4.3}The Breuckner $G$-matrix}{32}{subsection.9.4.3}
-\contentsline {section}{\numberline {9.5}Full Configuration Interaction Theory}{37}{section.9.5}
-\contentsline {subsection}{\numberline {9.5.1}Example of a Hamiltonian matrix}{39}{subsection.9.5.1}
-\contentsline {subsection}{\numberline {9.5.2}A non-practical way of solving the eigenvalue problem}{40}{subsection.9.5.2}
-\contentsline {subsection}{\numberline {9.5.3}Summarizing FCI and bringing in approximative methods}{42}{subsection.9.5.3}
-\contentsline {subsection}{\numberline {9.5.4}Building a many-body basis}{43}{subsection.9.5.4}
-\contentsline {section}{\numberline {9.6}Many-body perturbation theory}{45}{section.9.6}
-\contentsline {subsection}{\numberline {9.6.1}Many-body perturbation theory}{45}{subsection.9.6.1}
-\contentsline {subsection}{\numberline {9.6.2}Interpreting the correlation energy and the wave operator}{48}{subsection.9.6.2}
-\contentsline {section}{\numberline {9.7}Coupled cluster theory}{50}{section.9.7}
-\contentsline {section}{\numberline {9.8}Introduction}{50}{section.9.8}
-\contentsline {subsection}{\numberline {9.8.1}A non-practical way of solving the eigenvalue problem}{50}{subsection.9.8.1}
-\contentsline {subsection}{\numberline {9.8.2}Summarizing FCI and bringing in approximative methods}{52}{subsection.9.8.2}
-\contentsline {subsection}{\numberline {9.8.3}A quick tour of Coupled Cluster theory}{53}{subsection.9.8.3}
-\contentsline {subsection}{\numberline {9.8.4}The CCD approximation}{54}{subsection.9.8.4}
-\contentsline {paragraph}{Approximations to the full CCD equations.}{56}{section*.29}
-\contentsline {subsection}{\numberline {9.8.5}Formal derivation of the CCSD equations}{57}{subsection.9.8.5}
-\contentsline {section}{\numberline {9.9}How to build a numerical quantum mechanical project}{57}{section.9.9}
-\contentsline {section}{\numberline {9.10}Summary}{57}{section.9.10}
-\contentsline {titlech}{\numberline {10}Concluding remarks and perspectives}{59}{section*.30}
+\contentsline {section}{\numberline {9.2}Single-particle basis, Hamiltonians and models for the nuclear force}{21}{section.9.2}
+\contentsline {section}{\numberline {9.3}Hartree-Fock theory}{26}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Introducing our first ansatz for the ground state}{30}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Slater determinants as basis states}{30}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}The Breuckner $G$-matrix}{31}{subsection.9.3.3}
+\contentsline {section}{\numberline {9.4}Full Configuration Interaction Theory}{36}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Example of a Hamiltonian matrix}{38}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}A non-practical way of solving the eigenvalue problem}{39}{subsection.9.4.2}
+\contentsline {subsection}{\numberline {9.4.3}Summarizing FCI and bringing in approximative methods}{41}{subsection.9.4.3}
+\contentsline {subsection}{\numberline {9.4.4}Building a many-body basis}{42}{subsection.9.4.4}
+\contentsline {section}{\numberline {9.5}Many-body perturbation theory}{44}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Many-body perturbation theory}{44}{subsection.9.5.1}
+\contentsline {subsection}{\numberline {9.5.2}Interpreting the correlation energy and the wave operator}{47}{subsection.9.5.2}
+\contentsline {section}{\numberline {9.6}Coupled cluster theory}{49}{section.9.6}
+\contentsline {section}{\numberline {9.7}Introduction}{49}{section.9.7}
+\contentsline {subsection}{\numberline {9.7.1}A non-practical way of solving the eigenvalue problem}{49}{subsection.9.7.1}
+\contentsline {subsection}{\numberline {9.7.2}Summarizing FCI and bringing in approximative methods}{51}{subsection.9.7.2}
+\contentsline {subsection}{\numberline {9.7.3}A quick tour of Coupled Cluster theory}{52}{subsection.9.7.3}
+\contentsline {subsection}{\numberline {9.7.4}The CCD approximation}{53}{subsection.9.7.4}
+\contentsline {paragraph}{Approximations to the full CCD equations.}{55}{section*.29}
+\contentsline {subsection}{\numberline {9.7.5}Formal derivation of the CCSD equations}{56}{subsection.9.7.5}
+\contentsline {section}{\numberline {9.8}How to build a numerical quantum mechanical project}{56}{section.9.8}
+\contentsline {section}{\numberline {9.9}Summary}{56}{section.9.9}
+\contentsline {titlech}{\numberline {10}Concluding remarks and perspectives}{57}{section*.30}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{59}{section*.30}
-\contentsline {section}{\numberline {10.1}Concluding remarks}{59}{section.10.1}
-\contentsline {section}{\numberline {10.2}Perspectives}{59}{section.10.2}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{57}{section*.30}
+\contentsline {section}{\numberline {10.1}Concluding remarks}{57}{section.10.1}
+\contentsline {section}{\numberline {10.2}Perspectives}{57}{section.10.2}

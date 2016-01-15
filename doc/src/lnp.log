@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 NOV 2015 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 JAN 2016 08:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lnp.tex
+**lnp
 (./lnp.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
@@ -1905,75 +1905,73 @@ LaTeX Warning: Empty `thebibliography' environment on input line 43.
 
 
 
-] [20] [21] [22]
+] [20] [21]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 296.
- [23] [24] [25] [26] [27] [28]
-[29]
-Overfull \hbox (85.6646pt too wide) in paragraph at lines 805--815
+(Font)              scaled to size 5.39996pt on input line 204.
+ [22] [23] [24] [25] [26] [27]
+Overfull \hbox (85.6646pt too wide) in paragraph at lines 739--749
 \T1/fve/m/n/10 The lat-ter is noth-ing but a stan-dard eigen-value prob-lem. Co
 m-pared with Eq. (refeq:hartreefockcoordinatespace),
  []
 
-[30]
+[28] [29]
 LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
-(Font)              Font shape `T1/fve/b/sl' tried instead on input line 896.
+(Font)              Font shape `T1/fve/b/sl' tried instead on input line 845.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
-(Font)              scaled to size 10.79993pt on input line 896.
- [31]
+(Font)              scaled to size 10.79993pt on input line 845.
+ [30]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1010.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 965.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1010.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 965.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1010.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 965.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1010.
+(hyperref)                removing `math shift' on input line 965.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1010.
+(hyperref)                removing `math shift' on input line 965.
+
+[31]
+
+LaTeX Warning: Reference `fig:goldstone' on page 32 undefined on input line 101
+2.
 
 [32]
 
-LaTeX Warning: Reference `fig:goldstone' on page 33 undefined on input line 105
-7.
-
-[33]
-
-LaTeX Warning: Reference `fig:goldstone' on page 34 undefined on input line 113
-6.
+LaTeX Warning: Reference `fig:goldstone' on page 33 undefined on input line 109
+1.
 
 
-LaTeX Warning: Reference `fig:goldstone' on page 34 undefined on input line 118
-3.
+LaTeX Warning: Reference `fig:goldstone' on page 33 undefined on input line 113
+8.
 
 
-LaTeX Warning: Reference `fig:goldstone' on page 34 undefined on input line 118
-4.
+LaTeX Warning: Reference `fig:goldstone' on page 33 undefined on input line 113
+9.
 
-[34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]
-[49] [50] [51] [52] [53] [54] [55] [56]) [57]
+[33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
+[48] [49] [50] [51] [52] [53] [54] [55]) [56]
 \openout2 = `chapter10.aux'.
 
- (./chapter10.tex [58
+ (./chapter10.tex) [57
 
 
 
 
-]) [59]
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
-
-(./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
+ (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
 (./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./chapter7.aux)
 (./chapter8.aux) (./chapter9.aux) (./chapter10.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 28FFE739B884AD303237434F6EF0435C;7656.
+(rerunfilecheck)             Checksum: 68615F0FAD8887499B8CF17D05320985;7616.
 
 
 LaTeX Warning: There were undefined references.
@@ -1981,13 +1979,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 103.
  ) 
 Here is how much of TeX's memory you used:
- 18124 strings out of 493089
- 294217 string characters out of 6134842
- 413713 words of memory out of 5000000
- 20896 multiletter control sequences out of 15000+600000
+ 18101 strings out of 493089
+ 293901 string characters out of 6134842
+ 413324 words of memory out of 5000000
+ 20886 multiletter control sequences out of 15000+600000
  114950 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,14n,40p,904b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,14n,40p,1120b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -2003,10 +2001,10 @@ b></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (68 pages, 312424 bytes).
+Output written on lnp.pdf (66 pages, 307718 bytes).
 PDF statistics:
- 1098 PDF objects out of 1200 (max. 8388607)
- 1002 compressed objects within 11 object streams
- 275 named destinations out of 1000 (max. 500000)
- 745 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1070 PDF objects out of 1200 (max. 8388607)
+ 977 compressed objects within 10 object streams
+ 262 named destinations out of 1000 (max. 500000)
+ 737 words of extra memory for PDF output out of 10000 (max. 10000000)
 

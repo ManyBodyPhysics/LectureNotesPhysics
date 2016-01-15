@@ -1,9 +1,13 @@
-\title{Many-body methods and infinite nuclear matter}
-\author{Morten Hjorth-Jensen, Gaute Hagen, Justin G.~Lietz and Samuel Novario}
-\institute{Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}, \and Gaute Hagen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{hageng@ornl.gov}, \and Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu}}
+\title{High-performance computing Many-body methods and infinite nuclear matter}
+\author{Justin G.~Lietz, Samuel Novario, Gustav R.~Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}
+\institute{Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu}, \and Gustav R.~Jansen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{jansen@ornl.gov}, \and Gaute Hagen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{hageng@ornl.gov},  \and Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}}
 
 \maketitle
-\abstract{Here we present and discuss various many-body methods } 
+\abstract{We present a computational approach to infinite nuclear matter employing Hartree-Fock theory, many-body perturbation theory and coupled cluster theory. These lectures are closely linked with those of Francesco Pederiva in this volume and serve as input for the correlation functions employed in Monte Carlo calculations of dense fermionic systems.
+We provide extensive code examples and benchmark calculations, allowing thereby an eventual
+reader to start writing her/his own codes. We start with an
+object-oriented serial code and end with in-depth discussions on
+strategies for porting the code to present and planned high-performance computing facilities. }
 
 
 %\maketile
@@ -13,36 +17,27 @@
 Studies of infinite nuclear matter play an important role in nuclear
 physics. The aim of this part of the lectures is to provide the
 necessary ingredients for perfoming studies of neutron star matter (or
-matter in $\beta$-equilibrium) and symmetric nuclear matter. We start
-however with the electron gas in two and three dimensions for both
-historical and pedagogical reasons. Since there are several benchmark
-calculations for the electron gas, this small detour will allow us to
-establish the necessary formalism. Thereafter we will study infinite
-nuclear matter
-\begin{itemize}
-\item at the Hartree-Fock with realistic nuclear forces and
+matter in $\beta$-equilibrium) and symmetric nuclear matter. The
+framework and formalism can easily be extended to other dense and homogeneous 
+fermionic systems such as the electron gas in two and three
+dimensions.
 
-\item using many-body methods like coupled-cluster theory or in-medium SRG as discussed in our previous sections.
-\end{itemize}
+Studies of dense baryonic matter are of central importance to our
+basic understanding of the stability of nuclear matter, spanning from
+matter at high densities and temperatures to matter as found within
+dense astronomical objects like neutron stars.
 
-Studies of dense baryonic matter are of central importance to our basic understanding 
-of the stability of nuclear matter, spanning from matter at high densities and temperatures
-to matter as found within dense astronomical objects  like neutron stars. 
-
-Neutron star matter
-at densities of  0.1 fm$^{-3}$ and greater, is often assumed to 
-be made of mainly neutrons, protons, electrons and 
-muons in beta equilibrium. However, other baryons like various hyperons may exist, as well as possible mesonic condensates and transitions to quark degrees of freedom at higher densities. 
-Here we focus on specific definitions of various phases and focus 
-on distinct phases of matter such as pure baryonic
-matter and/or quark matter.
-The composition of matter is then 
-determined by the requirements of chemical and electrical equilibrium.
-Furthermore, we will also consider matter at temperatures much lower
-than the typical Fermi energies.
-The equilibrium conditions are governed by the weak processes 
-(normally referred to as the processes
-for $\beta$-equilibrium)
+Neutron star matter at densities of 0.1 fm$^{-3}$ and greater, is
+often assumed to be made of mainly neutrons, protons, electrons and
+muons in beta equilibrium. However, other baryons like various
+hyperons may exist, as well as possible mesonic condensates and
+transitions to quark degrees of freedom at higher densities.  In these notes we limit ourselves to
+matter composed of neutrons and protons only in 
+chemical and electrical equilibrium.  Furthermore, we will also
+consider matter at temperatures much lower than the typical Fermi
+energies.  The equilibrium conditions are governed by the weak
+processes (normally referred to as the processes for
+$\beta$-equilibrium)
 \begin{equation} 
       b_1 \rightarrow b_2 + l +\bar{\nu}_l \hspace{1cm} b_2 +l \rightarrow b_1 
 +\nu_l,
@@ -58,30 +53,23 @@ a density close to nuclear matter saturation density, the latter being
      n_0 \approx 0.16 \pm 0.02 \hspace{1cm} \mathrm{fm}^{-3},
 \]
 with a corresponding binding energy ${\cal E}_0$ 
-for symmetric nuclear matter (SNM) at saturation density of
+for symmetric nuclear matter at saturation density of
 \[
      {\cal E}_0 = B/A=-15.6\pm 0.2 \hspace{1cm} \mathrm{MeV}.
 \]
-In this work the energy per baryon ${\cal E}$ will always be in units of MeV, 
-while
-the energy density $\varepsilon$ will 
-be in units of MeVfm$^{-3}$ and the number density\footnote{We will often 
-loosely just use density in our discussions.}
-$n$ in units of fm$^{-3}$. The pressure $P$ is 
-defined through the relation
+The
+pressure $P$ is defined through the relation
 \begin{equation}
     P=n^2\frac{\partial {\cal E}}{\partial n}=
-      n\frac{\partial \varepsilon}{\partial n}-\varepsilon,
+      n\frac{\partial \varepsilon}{\partial n}-\varepsilon.
 \end{equation}
-with 
-dimension MeVfm$^{-3}$. 
+
 Similarly, the chemical potential for particle species $i$
 is given by
 \begin{equation}
-     \mu_i = \left(\frac{\partial \varepsilon}{\partial n_i}\right),
+     \mu_i = \left(\frac{\partial \varepsilon}{\partial n_i}\right).
      \label{eq:chemicalpotdef}
 \end{equation}
-with dimension MeV.
 In calculations of properties of neutron star matter in $\beta$-equilibrium,
 we will need to calculate the energy per baryon ${\cal E}$ for e.g.~several 
 proton fractions $x_p$, which corresponds to
@@ -135,59 +123,6 @@ charge conservation, Eq. (\ref{eq:chargeconserv}), to read
      n_p = n_e+n_{\mu},
 \]
 and require that $\mu_e = \mu_{\mu}$.
-With more particles present, the equations read
-\begin{equation}
-    \sum_i\left(n_{b_i}^+ +n_{l_i}^+\right) =   
-    \sum_i\left(n_{b_i}^- +n_{l_i}^-\right),
-    \label{eq:generalcharge}
-\end{equation}
-and 
-\begin{equation} 
-     \mu_n=b_i\mu_i+q_i\mu_l,
-     \label{eq:generalbeta}
-\end{equation}
-where $b_i$ is the baryon number, $q_i$ the lepton charge and the superscripts 
-$(\pm)$ on 
-number densities $n$ represent particles with positive or negative charge.
-To give an example, it is possible to have baryonic matter with hyperons like
-$\Lambda$ 
-and $\Sigma^{-,0,+}$ and isobars $\Delta^{-,0,+,++}$ as well in addition
-to the nucleonic degrees of freedom.
-In this case the chemical equilibrium condition of Eq. (\ref{eq:generalbeta}  ) 
-becomes,
-excluding muons,
-\begin{align}
-    \mu_{\Sigma^-} = \mu_{\Delta^-} = \mu_n + \mu_e , \nonumber \\ 
-    \mu_{\Lambda} = \mu_{\Sigma^0} = \mu_{\Delta^0} = \mu_n , \nonumber \\
-    \mu_{\Sigma^+} = \mu_{\Delta^+} = \mu_p = \mu_n - \mu_e ,\nonumber \\
-    \mu_{\Delta^{++}} = \mu_n - 2 \mu_e .
-    \label{eq:beta_baryonicmatter}
-\end{align}
-A transition from hadronic to quark matter is expected at high densities. 
-The high-density quark matter phase
-in the interior of neutron stars is also described by
-requiring the system to be locally neutral
-\begin{equation} 
-    \label{eq:quarkneut}
-    (2/3)n_u -(1/3)n_d - (1/3)n_s - n_e = 0,
-\end{equation}
-where $n_{u,d,s,e}$ 
-are the densities of the $u$, $d$ and $s$ quarks and of the
-electrons (eventually muons as well), respectively. 
-Morover, the system must be in $\beta$-equilibrium, i.e.\ 
-the chemical potentials have to satisfy the following equations:
-\begin{equation}
-      \label{eq:ud}
-      \mu_d=\mu_u+\mu_e,
-\end{equation}
-and
-\begin{equation}
-      \label{eq:us}
-      \mu_s=\mu_u+\mu_e .
-\end{equation}
-Equations (\ref{eq:quarkneut})-(\ref{eq:us}) have to be solved 
-self-consistently together with the field equations for quarks 
-at a fixed density $n=n_u+n_d+n_s$.
 
 An important ingredient in the discussion of the EoS and the criteria for
 matter in $\beta$-equilibrium is the so-called symmetry energy ${\cal S} (n)$, 
@@ -237,37 +172,10 @@ information on the symmetry energy, and thereby the related proton fraction.
 We will shed more light on this topic in the next subsection.
 
 
-Finally, another property of interest in the discussion of the various 
-equations of state  
-is the incompressibility modulus $K$ at non-zero pressure
-\begin{equation}
-    K=9\frac{\partial P}{\partial n}.
-    \label{eq:incompressibility}
-\end{equation}
-The sound speed $v_s$ depends as well on the density
-of the nuclear medium through the relation
-\begin{equation}
-    \left(\frac{v_s}{c}\right)^2=\frac{dP}{d\varepsilon}=
-    \frac{dP}{dn}\frac{dn}{d\varepsilon}=
-    \left(\frac{K}{9(m_nc^2+{\cal E}+P/n)}\right).
-    \label{eq:speedofsound}
-\end{equation}
-It is important to keep track of the dependence on density of $v_s$
-since a superluminal behavior can occur at higher densities for most
-non-relativistic EoS.
-Superluminal behavior would
-not occur with a fully relativistic theory, and it is necessary to
-gauge the magnitude of the effect it introduces at the higher densities.
-This will be discussed at the end of this section.
-The adiabatic constant $\Gamma$ can also be extracted from the EoS
-by 
-\begin{equation}
-    \Gamma = \frac{n}{P}\frac{\partial P}{\partial n}.
-    \label{eq:adiabaticconstant}
-\end{equation}
 
 
-\section{Brief reminder on second quantization}
+
+\section{Single-particle basis, Hamiltonians and models for the nuclear force}
 
 \[
   \Phi_{AS}(\alpha_1, \dots, \alpha_A; x_1, \dots x_A)=
@@ -354,7 +262,7 @@ and specify the contributions to the twobody, onebody and the scalar part.
 
 
 
-\section{Single-particle basis, Hamiltonians and models for the nuclear force}
+
 
 This is a homogeneous system and the one-particle wave functions are given by plane wave functions normalized to a volume $\Omega$ 
 for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
@@ -644,8 +552,10 @@ momentum space, and we will therefore not need the last equation.
 
 \section{Hartree-Fock theory}
 
-Hartree-Fock (HF) theory is an algorithm for finding an approximative expression for the ground state of a given Hamiltonian. The basic ingredients are
-Define a single-particle basis $\{\psi_{\alpha}\}$ so that
+Hartree-Fock (HF) theory is an algorithm for finding an approximative
+expression for the ground state of a given Hamiltonian. The basic
+ingredients are Define a single-particle basis $\{\psi_{\alpha}\}$ so
+that
 \[ 
 \hat{h}^{\mathrm{HF}}\psi_{\alpha} = \varepsilon_{\alpha}\psi_{\alpha}
 \]
@@ -654,15 +564,22 @@ with the Hartree-Fock Hamiltonian defined as
 \hat{h}^{\mathrm{HF}}=\hat{t}+\hat{u}_{\mathrm{ext}}+\hat{u}^{\mathrm{HF}}
 \]
 
-The term  $\hat{u}^{\mathrm{HF}}$ is a single-particle potential to be determined by the HF algorithm.
+The term $\hat{u}^{\mathrm{HF}}$ is a single-particle potential to be
+determined by the HF algorithm.
 
-The HF algorithm means to choose $\hat{u}^{\mathrm{HF}}$ in order to have 
+The HF algorithm means to choose $\hat{u}^{\mathrm{HF}}$ in order to
+have
 \[ \langle \hat{H} \rangle = E^{\mathrm{HF}}= \langle \Phi_0 | \hat{H}|\Phi_0 \rangle
 \]
-that is to find a local minimum with a Slater determinant $\Phi_0$ being the ansatz for the ground state. 
-The variational principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the exact ground state energy.
+that is to find a local minimum with a Slater determinant $\Phi_0$
+being the ansatz for the ground state.  The variational principle
+ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the exact ground
+state energy.
 
-We will show that the Hartree-Fock Hamiltonian $\hat{h}^{\mathrm{HF}}$ equals our definition of the operator $\hat{f}$ discussed in connection with the new definition of the normal-ordered Hamiltonian (see later lectures), that is we have, for a specific matrix element
+We will show that the Hartree-Fock Hamiltonian $\hat{h}^{\mathrm{HF}}$
+equals our definition of the operator $\hat{f}$ discussed in
+connection with the new definition of the normal-ordered Hamiltonian
+(see later lectures), that is we have, for a specific matrix element
 \[
 \langle p |\hat{h}^{\mathrm{HF}}| q \rangle =\langle p |\hat{f}| q \rangle=\langle p|\hat{t}+\hat{u}_{\mathrm{ext}}|q \rangle +\sum_{i\le F} \langle pi | \hat{V} | qi\rangle_{AS},
 \]
@@ -685,27 +602,36 @@ strong force. For nuclear systems thus, there would be no external
 one-body potential in the Hartree-Fock Hamiltonian.
 
 
-Another possibility is to expand the single-particle functions in a known basis  and vary the coefficients, 
-that is, the new single-particle wave function is written as a linear expansion
-in terms of a fixed chosen orthogonal basis (for example the well-known harmonic oscillator functions or the hydrogen-like functions etc).
-We define our new Hartree-Fock single-particle basis by performing a unitary transformation 
-on our previous basis (labelled with greek indices) as
+Another possibility is to expand the single-particle functions in a
+known basis and vary the coefficients, that is, the new
+single-particle wave function is written as a linear expansion in
+terms of a fixed chosen orthogonal basis (for example the well-known
+harmonic oscillator functions or the hydrogen-like functions etc).  We
+define our new Hartree-Fock single-particle basis by performing a
+unitary transformation on our previous basis (labelled with greek
+indices) as
 \begin{equation}
 \psi_p^{HF}  = \sum_{\lambda} C_{p\lambda}\phi_{\lambda}. \label{eq:newbasis}
 \end{equation}
-In this case we vary the coefficients $C_{p\lambda}$. If the basis has infinitely many solutions, we need
-to truncate the above sum.  We assume that the basis $\phi_{\lambda}$ is orthogonal. A unitary transformation keeps the orthogonality, as discussed in exercise 1 below.  
+In this case we vary the coefficients $C_{p\lambda}$. If the basis has
+infinitely many solutions, we need to truncate the above sum.  We
+assume that the basis $\phi_{\lambda}$ is orthogonal. A unitary
+transformation keeps the orthogonality, as discussed in exercise 1
+below.
 
 
 
 
-It is normal to choose a single-particle basis defined as the eigenfunctions
-of parts of the full Hamiltonian. The typical situation consists of the solutions of the one-body part of the Hamiltonian, that is we have
+It is normal to choose a single-particle basis defined as the
+eigenfunctions of parts of the full Hamiltonian. The typical situation
+consists of the solutions of the one-body part of the Hamiltonian,
+that is we have
 \[
 \hat{h}_0\phi_{\lambda}=\epsilon_{\lambda}\phi_{\lambda}.
 \]
-The single-particle wave functions $\phi_{\lambda}({\bf r})$, defined by the quantum numbers $\lambda$ and ${\bf r}$
-are defined as the overlap 
+The single-particle wave functions $\phi_{\lambda}({\bf r})$, defined
+by the quantum numbers $\lambda$ and ${\bf r}$ are defined as the
+overlap
 \[
    \phi_{\lambda}({\bf r})  = \langle {\bf r} | \lambda \rangle .
 \]
@@ -713,34 +639,40 @@ are defined as the overlap
 
 
 
-In our discussions hereafter we will use our definitions of single-particle states above and below the Fermi ($F$) level given by the labels
-$ijkl\dots \le F$ for so-called single-hole states and $abcd\dots > F$ for so-called particle states.
-For general single-particle states we employ the labels $pqrs\dots$. 
+In our discussions hereafter we will use our definitions of
+single-particle states above and below the Fermi ($F$) level given by
+the labels $ijkl\dots \le F$ for so-called single-hole states and
+$abcd\dots > F$ for so-called particle states.  For general
+single-particle states we employ the labels $pqrs\dots$.
 
 
 
 
 
 \[
-  E[\Phi] 
-  = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
-  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS},
+  E[\Phi] = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle
+  + \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS},
 \]
-we found the expression for the energy functional in terms of the basis function $\phi_{\lambda}({\bf r})$. We then  varied the above energy functional with respect to the basis functions $|\mu \rangle$. 
-Now we are interested in defining a new basis defined in terms of
-a chosen basis as defined in Eq.~(ref{eq:newbasis}). We can then rewrite the energy functional as
+we found the expression for the energy functional in terms of the
+basis function $\phi_{\lambda}({\bf r})$. We then varied the above
+energy functional with respect to the basis functions $|\mu \rangle$.
+Now we are interested in defining a new basis defined in terms of a
+chosen basis as defined in Eq.~(ref{eq:newbasis}). We can then rewrite
+the energy functional as
 \begin{equation}
   E[\Phi^{HF}] 
   = \sum_{i=1}^A \langle i | h | i \rangle +
   \frac{1}{2}\sum_{ij=1}^A\langle ij|\hat{v}|ij\rangle_{AS}, \label{FunctionalEPhi2}
 \end{equation}
-where $\Phi^{HF}$ is the new Slater determinant defined by the new basis of Eq.~(ref{eq:newbasis}). 
+where $\Phi^{HF}$ is the new Slater determinant defined by the new
+basis of Eq.~(ref{eq:newbasis}).
 
 
 
 
 
-Using Eq.~(\ref{eq:newbasis}) we can rewrite Eq.~(\ref{FunctionalEPhi2}) as 
+Using Eq.~(\ref{eq:newbasis}) we can rewrite
+Eq.~(\ref{FunctionalEPhi2}) as
 \begin{equation}
   E[\Psi] 
   = \sum_{i=1}^A \sum_{\alpha\beta} C^*_{i\alpha}C_{i\beta}\langle \alpha | h | \beta \rangle +
@@ -748,9 +680,11 @@ Using Eq.~(\ref{eq:newbasis}) we can rewrite Eq.~(\ref{FunctionalEPhi2}) as
 \end{equation}
 
 
-We wish now to minimize the above functional. We introduce again a set of Lagrange multipliers, noting that
-since $\langle i | j \rangle = \delta_{i,j}$ and $\langle \alpha | \beta \rangle = \delta_{\alpha,\beta}$, 
-the coefficients $C_{i\gamma}$ obey the relation
+We wish now to minimize the above functional. We introduce again a set
+of Lagrange multipliers, noting that since $\langle i | j \rangle
+= \delta_{i,j}$ and $\langle \alpha | \beta \rangle
+= \delta_{\alpha,\beta}$, the coefficients $C_{i\gamma}$ obey the
+relation
 \[
  \langle i | j \rangle=\delta_{i,j}=\sum_{\alpha\beta} C^*_{i\alpha}C_{i\beta}\langle \alpha | \beta \rangle=
 \sum_{\alpha} C^*_{i\alpha}C_{i\alpha},
@@ -814,19 +748,23 @@ one-body and two-body matrix elements. These details will be discussed
 below when we solve the Hartree-Fock equations numerical.
 
 
-Our Hartree-Fock matrix  is thus
+Our Hartree-Fock matrix is thus
 \[
 \hat{h}_{\alpha\beta}^{HF}=\langle \alpha | \hat{h}_0 | \beta \rangle+
 \sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 \]
-The Hartree-Fock equations are solved in an iterative waym starting with a guess for the coefficients $C_{j\gamma}=\delta_{j,\gamma}$ and solving the equations by diagonalization till the new single-particle energies
-$\epsilon_i^{\mathrm{HF}}$ do not change anymore by a prefixed quantity. 
+The Hartree-Fock equations are solved in an iterative waym starting
+with a guess for the coefficients $C_{j\gamma}=\delta_{j,\gamma}$ and
+solving the equations by diagonalization till the new single-particle
+energies $\epsilon_i^{\mathrm{HF}}$ do not change anymore by a
+prefixed quantity.
 
 
 
 
-Normally we assume that the single-particle basis $|\beta\rangle$ forms an eigenbasis for the operator
-$\hat{h}_0$, meaning that the Hartree-Fock matrix becomes  
+Normally we assume that the single-particle basis $|\beta\rangle$
+forms an eigenbasis for the operator $\hat{h}_0$, meaning that the
+Hartree-Fock matrix becomes
 \[
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
 \sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
@@ -843,12 +781,18 @@ can be written out in a more compact form as
 
 
 
-The Hartree-Fock equations are, in their simplest form, solved in an iterative way, starting with a guess for the
-coefficients $C_{i\alpha}$. We label the coefficients as $C_{i\alpha}^{(n)}$, where the subscript $n$ stands for iteration $n$.
-To set up the algorithm we can proceed as follows:
+The Hartree-Fock equations are, in their simplest form, solved in an
+iterative way, starting with a guess for the coefficients
+$C_{i\alpha}$. We label the coefficients as $C_{i\alpha}^{(n)}$, where
+the subscript $n$ stands for iteration $n$.  To set up the algorithm
+we can proceed as follows:
 
-We start with a guess $C_{i\alpha}^{(0)}=\delta_{i,\alpha}$. Alternatively, we could have used random starting values as long as the vectors are normalized. Another possibility is to give states below the Fermi level a larger weight.
-The Hartree-Fock matrix simplifies then to (assuming that the coefficients $C_{i\alpha} $  are real)
+We start with a guess
+$C_{i\alpha}^{(0)}=\delta_{i,\alpha}$. Alternatively, we could have
+used random starting values as long as the vectors are
+normalized. Another possibility is to give states below the Fermi
+level a larger weight.  The Hartree-Fock matrix simplifies then to
+(assuming that the coefficients $C_{i\alpha} $ are real)
 \[
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
 \sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(0)}C_{j\delta}^{(0)}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
@@ -857,22 +801,25 @@ The Hartree-Fock matrix simplifies then to (assuming that the coefficients $C_{i
 
 
 
-Solving the Hartree-Fock eigenvalue problem yields then new eigenvectors $C_{i\alpha}^{(1)}$ and eigenvalues
-$\epsilon_i^{HF(1)}$. 
-With the new eigenvalues we can set up a new Hartree-Fock potential 
+Solving the Hartree-Fock eigenvalue problem yields then new
+eigenvectors $C_{i\alpha}^{(1)}$ and eigenvalues $\epsilon_i^{HF(1)}$.
+With the new eigenvalues we can set up a new Hartree-Fock potential
 \[
 \sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(1)}C_{j\delta}^{(1)}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 \]
-The diagonalization with the new Hartree-Fock potential yields new eigenvectors and eigenvalues.
-This process is continued till for example
+The diagonalization with the new Hartree-Fock potential yields new
+eigenvectors and eigenvalues.  This process is continued till for
+example
 \[
 \frac{\sum_{p} |\epsilon_i^{(n)}-\epsilon_i^{(n-1)}|}{m} \le \lambda,  
 \]
-where $\lambda$ is a user prefixed quantity ($\lambda \sim 10^{-8}$ or smaller) and $p$ runs over all calculated single-particle
-energies and $m$ is the number of single-particle states.
+where $\lambda$ is a user prefixed quantity ($\lambda \sim 10^{-8}$ or
+smaller) and $p$ runs over all calculated single-particle energies and
+$m$ is the number of single-particle states.
 
 
-We can rewrite the ground state energy by adding and subtracting $\hat{u}^{HF}(x_i)$ 
+We can rewrite the ground state energy by adding and subtracting
+$\hat{u}^{HF}(x_i)$
 \[
   E_0^{HF} =\langle \Phi_0 | \hat{H} | \Phi_0\rangle = 
 \sum_{i\le F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| j\rangle+ \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i |\hat{u}^{HF}| i\rangle,
@@ -882,11 +829,13 @@ which results in
   E_0^{HF}
   = \sum_{i\le F}^A \varepsilon_i^{HF} + \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i |\hat{u}^{HF}| i\rangle.
 \]
-Our single-particle states $ijk\dots$ are now single-particle states obtained from the solution of the Hartree-Fock equations.
+Our single-particle states $ijk\dots$ are now single-particle states
+obtained from the solution of the Hartree-Fock equations.
 
 
 
-Using our definition of the Hartree-Fock single-particle energies we obtain then the following expression for the total ground-state energy
+Using our definition of the Hartree-Fock single-particle energies we
+obtain then the following expression for the total ground-state energy
 \[
   E_0^{HF}
   = \sum_{i\le F}^A \varepsilon_i - \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle ij|\hat{v}|ji\rangle\right].
@@ -897,8 +846,8 @@ Using our definition of the Hartree-Fock single-particle energies we obtain then
 
 \subsection{Slater determinants as basis states}
 
-The simplest possible choice for many-body wavefunctions are \textbf{product} wavefunctions.
-That is
+The simplest possible choice for many-body wavefunctions
+are \textbf{product} wavefunctions.  That is
 \[ 
 \Psi(x_1, x_2, x_3, \ldots, x_A) \approx \phi_1(x_1) \phi_2(x_2) \phi_3(x_3) \ldots
 \]
@@ -946,23 +895,29 @@ two columns can be the same) lead to the following consequence of the Pauli prin
 \end{itemize}
 
 \noindent
-As a practical matter, however, Slater determinants beyond $N=4$ quickly become 
-unwieldy. Thus we turn to the \textbf{occupation representation} or \textbf{second quantization} to simplify calculations. 
+As a practical matter, however, Slater determinants beyond $N=4$
+quickly become unwieldy. Thus we turn to the \textbf{occupation
+representation} or \textbf{second quantization} to simplify
+calculations.
 
-The occupation representation, using fermion \textbf{creation} and \textbf{annihilation} 
-operators, is compact and efficient. It is also abstract and, at first encounter, not easy to 
-internalize. It is inspired by other operator formalism, such as the ladder operators for 
-the harmonic oscillator or for angular momentum, but unlike those cases, the operators \textbf{do not have coordinate space representations}.
+The occupation representation, using fermion \textbf{creation}
+and \textbf{annihilation} operators, is compact and efficient. It is
+also abstract and, at first encounter, not easy to internalize. It is
+inspired by other operator formalism, such as the ladder operators for
+the harmonic oscillator or for angular momentum, but unlike those
+cases, the operators \textbf{do not have coordinate space
+representations}.
 
-Instead, one can think of fermion creation/annihilation operators as a game of symbols that 
-compactly reproduces what one would do, albeit clumsily, with full coordinate-space Slater 
-determinants. 
+Instead, one can think of fermion creation/annihilation operators as a
+game of symbols that compactly reproduces what one would do, albeit
+clumsily, with full coordinate-space Slater determinants.
 
 
 
-We start with a set of orthonormal single-particle states $\{ \phi_i(x) \}$. 
-(Note: this requirement, and others, can be relaxed, but leads to a 
-more involved formalism.) \textbf{Any} orthonormal set will do. 
+We start with a set of orthonormal single-particle states
+$\{ \phi_i(x) \}$.  (Note: this requirement, and others, can be
+relaxed, but leads to a more involved formalism.) \textbf{Any}
+orthonormal set will do.
 
 To each single-particle state $\phi_i(x)$ we associate a creation operator 
 $\hat{a}^\dagger_i$ and an annihilation operator $\hat{a}_i$. 
@@ -2504,7 +2459,11 @@ In Coupled cluster theory it becomes (irrespective of level of truncation of $T$
 \sum_{abij}\langle ij | \hat{v}| ab \rangle t_{ij}^{ab}.
 \]
 
-Coupled cluster theory has several interesting computational features and is the method of choice in quantum chemistry. The method was originally proposed by Coester and Kummel, two nuclear physicists (way back in the fifties). It came back in full strength in nuclear physics during the last decade. 
+Coupled cluster theory has several interesting computational features
+and is the method of choice in quantum chemistry. The method was
+originally proposed by Coester and Kummel, two nuclear physicists (way
+back in the fifties). It came back in full strength in nuclear physics
+during the last decade.
 
 There are several interesting features:
 \begin{itemize}
@@ -2528,7 +2487,9 @@ However, Coupled Cluster theory is
 \noindent
 \subsection{The CCD approximation}
 
-We will now approximate the cluster operator $\hat{T}$ to include only $2p-2h$ correlations. This leads to the so-called CCD approximation, that is
+We will now approximate the cluster operator $\hat{T}$ to include only
+$2p-2h$ correlations. This leads to the so-called CCD approximation,
+that is
 \[
 \hat{T}\approx \hat{T}_2=\frac{1}{4}\sum_{abij}t_{ij}^{ab}a^{\dagger}_aa^{\dagger}_ba_ja_i,
 \]
@@ -2537,8 +2498,9 @@ meaning that we have
 \vert \Psi_0 \rangle \approx \vert \Psi_{CCD} \rangle = \exp{\left(\hat{T}_2\right)}\vert \Phi_0\rangle.
 \]
 
-Inserting these equations in the expression for the computation of the energy we have,
-with a Hamiltonian defined with respect to a general vacuum (see the exercises in the second quantization part)
+Inserting these equations in the expression for the computation of the
+energy we have, with a Hamiltonian defined with respect to a general
+vacuum (see the exercises in the second quantization part)
 \[
 \hat{H}=\hat{H}_N+E_{\mathrm{ref}},
 \]
