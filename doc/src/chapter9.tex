@@ -2602,17 +2602,355 @@ The next approximation is to include the two-hole term in Eq. (\ref{eq:ccd}), a 
 \end{equation}
 This equation is solved the same way as we would do for Eq. (\ref{eq:ccd1}). The final step is then to include all terms in Eq. (\ref{eq:ccd}). 
 
+\section{Developing a numerical project}
 
-\subsection{Formal derivation of the CCSD equations}
+This section will focus on writing a working CCD code from scratch. If you are familiar with writing quantum many-body physics codes, feel free to skip ahead as we are going to go into some detail about implementing CCD as a computer code now. As we saw earlier, the CCD equations can be written as 
+\begin{align}
+\left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)t_{ij}^{ab} = \langle ab \vert \hat{v} \vert ij \rangle  & \nonumber \\ 
++\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle t_{ij}^{cd}+\frac{1}{2}\sum_{kl} \langle kl \vert \hat{v} \vert ij \rangle t_{kl}^{ab}+\hat{P}(ij\vert ab)\sum_{kc} \langle kb \vert \hat{v} \vert cj \rangle t_{ik}^{ac} & \nonumber \\
++\frac{1}{4}\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{ij}^{cd}t_{kl}^{ab}+\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}& \nonumber \\
+-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{ik}^{dc}t_{lj}^{ab}-\frac{1}{2}\hat{P}(ab)\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{lk}^{ac}t_{ij}^{db},&
+\label{eq:ccd2}
+\end{align}
+for all $i < j$ and all $a < b$, using the standard notation that $a,b,...$ are particle states and $i,j,...$ are hole states. With the CCD correlation energy given by
+\begin{equation}
+\Delta E_{CCD} = \frac{1}{4} \sum_{ijab} \braket{ij|\hat{v}|ab}t^{ab}_{ij}.
+\label{eq:ccdcorr}
+\end{equation}
+One way to solve these equations, is to write equation (\ref{eq:ccd2}) as a series of iterative nonlinear algebraic equations.
+\begin{align}
+t_{ij}^{ab}{}^{(n+1)} = \frac{1}{\epsilon^{ab}_{ij}} \bigg(\langle ab \vert \hat{v} \vert ij \rangle  & \nonumber \\ 
++\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle t_{ij}^{cd}{}^{(n)}+\frac{1}{2}\sum_{kl} \langle kl \vert \hat{v} \vert ij \rangle t_{kl}^{ab}{}^{(n)}+\hat{P}(ij\vert ab)\sum_{kc} \langle kb \vert \hat{v} \vert cj \rangle t_{ik}^{ac}{}^{(n)} & \nonumber \\
++\frac{1}{4}\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{ij}^{cd}{}^{(n)}t_{kl}^{ab}{}^{(n)}+\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{ik}^{ac}{}^{(n)}t_{jl}^{bd}{}^{(n)}& \nonumber \\
+-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{ik}^{dc}{}^{(n)}t_{lj}^{ab}{}^{(n)}-\frac{1}{2}\hat{P}(ab)\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle t_{lk}^{ac}{}^{(n)}t_{ij}^{db}{}^{(n)} \bigg),&
+\label{eq:ccd3}
+\end{align}
+for all $i < j$ and all $a < b$, where $\epsilon^{ab}_{ij} = \left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)$, and $t_{ij}^{ab}{}^{(n)}$ is the $t$ amplitude for the nth iteration of the series. This way, given some starting guess $t_{ij}^{ab}{}^{(0)}$, we can generate subsequent $t$ amplitudes that converges to some value. Discussion of the mathematical details regarding convergence will be tabled for later; for now we will talk about implementing these equations into a computer program and assume convergence. In pseudocode, the function that updates the $t$ amplitudes looks like
 
+\begin{algorithmic} 
+\State CCD\_Update()
+  \For{$i \in \{0,N_{fermi}-1\}$ }  
+  \For{$j \in \{0,N_{fermi}-1\}$ }
+  \For{$a \in \{N_{fermi},N_{sp}-1\}$ }
+  \For{$b \in \{N_{fermi},N_{sp}-1\}$ }
+  \State $\text{sum} \gets \text{TBME}[\text{index}(a,b,i,j)$]
+  \For{$c \in \{N_{fermi},N_{sp}-1\}$ }
+  \For{$d \in \{N_{fermi},N_{sp}-1\}$ }
+  \State $\text{sum} \gets \text{sum} + 0.5*\text{ME}[\text{index}(a,b,c,d)] * t\_\text{amplitudes}\_\text{old}[\text{index}(c,d,i,j)]$
+  \EndFor
+  \EndFor
+  \State ...
+  \State sum $\gets$ sum + (all other terms)
+  \State ...
+  \State energy\_denom = SP\_energy[$i$]+SP\_energy[$j$]-SP\_energy[$a$]-SP\_energy[$b$]
+  \State t\_amplitudes[index($a,b,i,j$)] = sum/energy\_denom
+  \EndFor
+  \EndFor
+  \EndFor
+  \EndFor
+\end{algorithmic}
+Where $N_{fermi}$ is the fermi level and $N_{sp}$ is the total number of single particle (s.p.) states, indexed from 0 to $N_{sp}-1$. At the most basic level, the CCD equations are just the addition of many products containing $t_{ij}^{ab}$ amplitudes and two-body matrix elements (TBMEs) $\braket{ij|\hat{v}|ab}$, so a lot of care should be placed into how we store these objects. These are both objects with four indices, so a sensible first implementation of the CCD equations would be to create two 4-D arrays to store the objects. However, it is often more convenient to work with simple 1-D arrays instead. $index()$ is a function that maps the four indices onto one index so that a 1-D array can be used. An example of such a function is:
+\begin{algorithmic}
+\Function{index}{$p,q,r,s$} 
+\State \textbf{return} $p*N_{sp}^3 + q*N_{sp}^2 + r*N_{sp} + s$
+\EndFunction
+\end{algorithmic}
+Because elements with repeated indices vanish, $t_{ii}^{ab}=t_{ij}^{aa}=0$ and $\braket{pp|\hat{v}|rs}=\braket{pq|\hat{v}|rr}=0$, data structures using this index function will contain many elements that are automatically zero, so we will discuss more efficient storage strategies later. Notice also that we are looping over all $i,j,a,b$, rather than the restricted indices. This means that we are doing redundant work, but it is simpler to code up, and we will want to unrestrict these indices later anyways.
 
+ The goal of this code is to calculate the correlation energy, $\Delta E_{CCD}$, so after each iteration of our equation, we use our newest $t$ amplitudes to update this value,
+\begin{equation}
+\Delta E_{CCD}^{(n)} = \frac{1}{4} \sum_{ijab} \braket{ij|\hat{v}|ab}t^{ab}_{ij}{}^{(n)}.
+\end{equation}
+We check that our result is converged by checking that to see if the most recent iteration has changed the correlation energy by less than some tolerance threshold $\eta$,
+\begin{equation}
+\eta > | \Delta E_{CCD}^{(n+1)} - \Delta E_{CCD}^{(n)} |.
+\end{equation}
+The basic structure of the iterative process will look like:
+\begin{algorithmic}
+  \While {(abs(energy\_Diff) $>$ tolerance)}
+  \State CCD\_Update()
+  \State correlation\_Energy $\gets$ CCD\_Corr\_Energy()
+  \State energy\_Diff $\gets$ correlation\_Energy - correlation\_Energy\_old
+  \State correlation\_Energy\_old $\gets$ correlation\_Energy
+  \State t\_amplitudes\_old $\gets$ t\_amplitudes
+  \EndWhile
+\end{algorithmic}
 
+Prior to this algorithm, the $t$ amplitudes should be initalized, $t_{ij}^{ab}{}^{(0)}$. A particularly convenient choice is to set $t_{ij}^{ab}{}^{(0)} = 0$. Notice that if this starting point is used, then
 
-\section{How to build a numerical quantum mechanical project}
+\begin{align}
+t_{ij}^{ab}{}^{(1)} = \frac{\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}}   & \nonumber \\
+\label{eq:ccdGuess}
+\end{align}
+\begin{equation}
+\Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}},
+\end{equation}
 
+which is the result from MBPT2. This is a useful, as one iteration of the CCD equations can be ran, and checked against MBPT2 to give some confidence that everything is working so far. To check that everything is working, it is useful to run the code using a minimal example. A simple pairing model Hamiltonian is a nice place to start.
+\begin{equation}
+\hat{H}_0 = \xi \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p \sigma} 
+\end{equation}
+\begin{equation}
+\hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-} a_{q-}a_{q+}
+\end{equation}
+which represents a basic pairing model with p levels each with a spin degeneracy of 2. The form of the coupled cluster equations in (Eq) uses single-particle states that are eigenstates of the Hartree-Fock operator, $\left(\hat{u}+\hat{u}_{\text{HF}}\right\vert p\rangle=\epsilon_{p}\vert p\rangle$. In the pairing model, this condition is already fulfilled. All we have to do is define the lowest $N_{fermi}$ states as holes then redefine the single-particle energies,
+\begin{equation}
+\epsilon_q = h_{qq} + \sum_{i} \braket{qi||qi}.
+\end{equation}
+To be more specific, let's look at this pairing model with 4 particles and 8 single-particle states. These states (with $\xi = 1.0$) could be labeled as such with
+\begin{center}
+    \begin{tabular}{| l | l | l | l | l |}
+    \hline
+    State Label & p & 2s$_z$ & E & type\\ \hline
+    0 & 1 & 1 & -g/2 & hole \\ \hline
+    1 & 1 & -1 & -g/2 & hole \\ \hline
+    2 & 2 & 1 & 1-g/2 & hole \\ \hline
+    3 & 2 & -1 & 1-g/2 & hole \\ \hline
+    4 & 3 & 1 & 2 & particle \\ \hline
+    5 & 3 & -1 & 2 & particle \\ \hline
+    6 & 4 & 1 & 3 & particle \\ \hline
+    7 & 4 & -1 & 3 & particle \\ \hline 
+    \end{tabular}
+\end{center}
 
-\section{Summary}
- 
+Here are some more results for specific values of g that can be used for benchmarking.
+
+\begin{center}
+    \begin{tabular}{| l | l | l | l |}
+    \hline
+    g & E$_{ref}$ & $\Delta E_{MBPT2}$ & $\Delta E_{CCD}$ \\ \hline
+    -1.0 & 3 & -0.46667 & -0.21895* \\ \hline
+    -0.5 & 2.5 & -0.08874 & -0.06306 \\ \hline
+    0.0 & 2 & 0 & 0 \\ \hline
+    0.5 & 1.5 & -0.06239 & -0.08336 \\ \hline
+    1.0 & 1 & -0.21905 & -0.36956 \\ \hline     
+    \end{tabular}
+\end{center}
+The $g=-1.0$ case diverges without implementing iterative mixing. Sometimes iterative solvers run into oscillating solutions, and mixing can help the iterations break this cycle.
+\begin{equation}
+t^{(i)} = \alpha t^{(i)}_{no\_mixing} + (1 - \alpha) t^{(i-1)}
+\end{equation}
+In the case of this simple pairing model, it is easy to calculate $\Delta E_{MBPT2}$ by hand, which is useful to check the code's calcuation of this value, as well as the first CCD iteration.
+\begin{equation}
+\Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij||ab} \braket{ab||ij}}{ \epsilon_{ij}^{ab}} = \sum_{a<b,i<j} \frac{\braket{ij||ab} \braket{ab||ij}}{ \epsilon_{ij}^{ab}}
+\end{equation}
+For our pairing example:
+\[
+\Delta E_{MBPT2} = \frac{\braket{01||45}^2}{\epsilon_{01}^{45}} + \frac{\braket{01||67}^2}{\epsilon_{01}^{67}} + \frac{\braket{23||45}^2}{\epsilon_{23}^{45}} + \frac{\braket{23||67}^2}{\epsilon_{23}^{67}} 
+\]
+\[
+\Delta E_{MBPT2} = -\frac{g^2}{4} \bigg( \frac{1}{  4 + g} + \frac{1}{  6 + g} + \frac{1}{  2 + g} + \frac{1}{  4 + g}  \bigg),
+\]
+which is a nice expression which can be used to check the results for any value of g.
+
+Once a working pairing model has been implemented, improvements can start to be made, all the while using the pairing model to make sure that the code is still working and giving correct answers. Realistic systems will be much larger than this small pairing example. 
+
+One limitation that will be ran into while trying to do realistic CCD calculations is that of memory. The 4-indexed TBMEs and t-amplitudes have to store a lot of elements, and the size of these arrays can quite become larger than that of the available memory on the machine. If calculation wants to use 500 s.p. basis states, then a structure like $\braket{pq|v|rs}$ will have length 500 for each of its four indices, which means it will have $500^4 = 625*10^8$ elements. To get a handle on how much memory is used, consider the elements as double-precision floating point type. One double takes up 8 bytes of memory. So this array would take up $8*625*10^8$ bytes = $5000 * 10^8$ bytes = $500$ Gbytes of memory. Most personal computers in 2016 have 4-8 Gbytes of RAM, so this calculation would be way out of reach. There are supercomputers that can handle applications using 500 Gbytes of memory, but we can quickly reduce the total memory required by applying some physical arguments. In addition to vanishing elements with repeated indices, mentioned above, elements that do not obey certain symmetries are also zero. Almost all realistic two-body forces preserve some quantities due to symmetries in the interaction. For example, an interaction with rotational symmetry will conserve angular momentum. This means that a two-body ket state $\ket{rs}$, which has some set of quantum numbers, will retain quantum numbers corresponding to the interaction symmetries after being acted on by $\hat{v}$. This state is then projected onto $\ket{pq}$ with its own set of quantum numbers. Thus  $\braket{pq|v|rs}$ is only non-zero if $\ket{pq}$ and $\ket{rs}$ share the same quantum numbers that are preserved by $\hat{v}$. In addition, because the cluster operators represent excitations due to the interaction, $t_{ij}^{ab}$ is only non-zero if $\ket{ij}$ has the same relevant quantum numbers as $\ket{ab}$.
+
+To take advantage of this, these two-body ket states can be organized into ``channels'' of shared quantum numbers. In the case of the pairing model, the interaction preserves the total spin projection of a two-body state, $S_{z}=s_{z1}+s_{z2}$. The single particle states can have spin of +1/2 or -1/2, so there can be three two-body channels with $S_{z}=-1,0,+1$. These channels can then be indexed with a unique label in a similar way to the single particle index scheme. In more complicated systems, there will be many more channels involving multiple symmetries, so it is useful to create a data structure that stores the relevant two-body quantum numbers to keep track of the labeling scheme.
+
+Now it is more efficient to use two-dimensional array data structures, where the first index refers to the channel number and the second refers to the element withing that channel. So to access matrix elements or $t$ amplitudes, you can loop over the channels first, then the indices within that channel. To get an idea of the savings using this block diagonal structure, let's look at a case with a plane wave basis, with three momentum and one spin quantum numbers, with an interaction that conserves linear momentum in all three dimensions, as well as the total spin projection. Using 502 basis states, the TBME's require about 0.23 Gb of memory in block diagonal form, which is an enormous saving from the 500 Gb mentions earlier in the na\"ive storage scheme.
+
+Since the calculation of all of these zeros can now be avoided, improvements in speed as memory will now follow. To get a handle on how example these CCD calculations are we need only to look at the most expensive sum in equation \ref{eq:ccd2}. This corresponds to the sum over $klcd$. Since this sum is repeated for all $i < j$ and $a < b$, that means these equations will scale as $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However, (as we saw earlier?), they can be rewritten using intermediates as
+
+\begin{align}
+0 = \braket{ab|\hat{v}|ij} + \hat{P}(ab) \sum_{c} \braket{b| \chi |c} \braket{ac| t |ij} - \hat{P}(ij) \sum_{k} \braket{k| \chi |j} \braket{ab| t |ik} & \nonumber \\ 
++ \frac{1}{2}\sum_{cd} \braket{ab| \chi |cd} \braket{cd| t |ij} +  \frac{1}{2} \sum_{kl} \braket{ab| t |kl} \braket{kl| \chi |ij} \\ 
++ \hat{P}(ij)\hat{P}(ab) \sum_{kc} \braket{ac| t |ik}\braket{kb| \chi |cj} & \nonumber
+\end{align}
+for all $i,j,a,b$, the reason why these indices are now unrestricted will be explained later. Where the intermediates $\chi$ are
+\begin{equation}
+\braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld} \braket{bd|t|kl} \braket{kl|v|cd}
+\end{equation}
+\begin{equation}
+\braket{k| \chi |j} = \braket{k|f|j} + \frac{1}{2} \sum_{cdl} \braket{kl|v|cd} \braket{cd|t|jl} 
+\end{equation}
+\begin{equation}
+\braket{kl| \chi |ij} = \braket{kl|v|ij} + \frac{1}{2} \sum_{cd} \braket{kl|v|cd} \braket{cd|t|ij} 
+\label{eq:mtxEx}
+\end{equation}
+\begin{equation}
+\braket{kb| \chi |cj} = \braket{kb|v|cj} + \frac{1}{2} \sum_{dl} \braket{kl|v|cd} \braket{db|t|lj} 
+\end{equation}
+\begin{equation}
+\braket{ab| \chi |cd} = \braket{ab|v|cd} 
+\end{equation}
+
+Maybe demonstrate how these equations are equal here? 
+
+Now the CCD equations will scale as $\mathcal{O}(n_{h}^{2} n_{p}^{4})$ which is quite a bit better than before. This is of course at the cost of computing the intermediates at the beginning of each iteration, which the most expensive one, $\braket{kb| \chi |cj}$, will scale as $\mathcal{O}(n_{h}^{3} n_{p}^{3})$. To further speed these computations up, we see that these sums can be written as matrix-matrix multiplication. It is not obvious how to write all of these sums in such a way, but it is useful to first remember that to write out the multiplication of matices $\hat{C} = \hat{A} * \hat{B}$ is
+\begin{equation}
+C_{ij} = \sum_{k} A_{ik} * B_{kj}.
+\end{equation}
+Notice that equation (\ref{eq:mtxEx}) can be written as
+\[
+\braket{K| \chi |I} = \braket{K|v|I} + \frac{1}{2} \sum_{C} \braket{K|v|C} \braket{C|t|I} 
+\]
+by mapping the two index pairs $kl \to K, ij \to I, cd \to C$. So now the sum looks like a matrix-matrix multiplication. This is useful because there are packages like BLAS (Basic Linear Algebra Subprograms) which have extremely fast implementations of matrix-matrix multiplication.
+
+Now that we have a working CCD program, we can move on to more realistic cases. One such case is infinite nuclear matter using a plane-wave basis. These states are solutions to the free-particle Hamiltonian,
+\begin{equation}
+\frac{-\hbar^2}{2m}\nabla^2\mathop{\phi(\vec{x})}=\epsilon\mathop{\phi(\vec{x})}.
+\end{equation}
+For a finite basis, we approximate the problem by constructing a box with sides of length $L$, which quantizes the momentum, and impose periodic boundary conditions in each direction.
+\begin{align}
+\mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)} \\
+\mathop{\phi_{\vec{k}}(\vec{x})}=\frac{1}{\sqrt{L^{3}}}e^{i\vec{k}\cdot\vec{x}},\hspace{0.5cm}\vec{k}=\frac{2\pi\vec{n}}{L},\hspace{0.5cm}n_{i}
+\end{align}
+
+The first step in calculating infinite matter is to construct a model space by finding every single-particle state relevant to a given problem. In our case, this amounts to looping over the quantum numbers for spin, isospin, and the three momentum directions. To control the model space size, the momentum can be truncated to give a cubic space, where $n_{i}\leq n_{\text{max}}$, or a spherical space, where $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\leq N_{\text{max}}$. The number of single-particle states in a cubic space increases rapidly with $n_{\text{max}}$ compared to the spherical case with $N_{\text{max}}$. For example, in pure neutron matter a cubic space with $n_{\text{max}}=3$ has $668$ states while the spherical space with $N_{\text{max}}=17$ has $610$ states. Therefore, the spherical case will be used for the rest of the calculations here. The loop increases in energy by counting the number of shells, so states can be 'filled' by labeling the first $P$ proton and $N$ neutron states as holes. The following loop is for pure neutron matter and requires the number of neutrons, $N$ and density, $\rho=N/L^{3}$, as input. Symmetric nuclear matter requires an extra loop over isospin.
+
+\begin{algorithmic}
+  \State $n=0$
+  \For{$\text{shell}\in\{ 0,...,N_{\text{max}}\}$}
+  \For{$-\sqrt{N_{\text{max}}}\leq n_{x}\leq\sqrt{N_{\text{max}}}$}
+  \For{$-\sqrt{N_{\text{max}}}\leq n_{y}\leq\sqrt{N_{\text{max}}}$}
+  \For{$-\sqrt{N_{\text{max}}}\leq n_{z}\leq\sqrt{N_{\text{max}}}$}
+  \For{$s_{z}\in\{-\frac{1}{2},\frac{1}{2}\}$}
+  \If{$n_{x}^{2}+n_{y}^{2}+n_{z}^{2}=\text{shell}$}
+  \State $\text{Energy}=\frac{4\pi^{2}\hbar^{2}}{2m}\times\text{shell}$
+  \If{$n<N$}
+  \State $\text{type}=\text{``hole''}$
+  \Else
+  \State $\text{type}=\text{``particle''}$
+  \EndIf
+  \State STATES $\gets$ ($n$, $n_{x}$, $n_{y}$, $n_{z}$, $s_{z}$, Energy, type)
+  \State $n\gets n+1$
+  \EndIf
+  \EndFor
+  \EndFor
+  \EndFor
+  \EndFor
+  \EndFor
+\end{algorithmic}
+
+The next step is to build every two-body state in the model space and separate them by their particle/hole character and combined quantum numbers. While each single-particle state was unique, two-body states can share quantum numbers with members of a particular two-body channel. These channels allow us to remove matrix elements and cluster amplitudes that violate the symmetries of the interaction and greatly reduces the size and speed of the calculation. Our structures will depend on direct two-body channels, $T$, where the quantum numbers are added and cross two-body channels, $X$, where the quantum numbers are subtracted. Before filling the channels, it's helpful to order them with an index function which returns a unique index for a given set of two-body quantum numbers. Without an index function, one has to loop over all the channels for each two-body state which adds a substantial amount of time to this algorithm. An example of an index function for the direct channels in symmetric nuclear matter is, for $N_{x}=n_{x,1}+n_{x,2}$, $N_{y}=n_{y,1}+n_{y,2}$, $N_{z}=n_{z,1}+n_{z,2}$, $S_{z}=s_{z,1}+s_{z,2}$, $T_{z}=t_{z,1}+t_{z,2}$, $m=2\lfloor\sqrt{N_{\text{max}}}\rfloor$, and $M=2m+1$,
+\begin{equation}
+\text{Ind}\left( N_{x},N_{y},N_{z},S_{z},T_{z}\right)=2\left( N_{x}+m\right)M^{3}+2\left( N_{y}+m\right)M^{2}+2\left( N_{z}+m\right)M+2\left( S_{z}+1\right)+\left(T_{z}+1\right).
+\end{equation}
+This function, which can also be used for the cross-channel index function, is well suited for a cubic model space but can be applied in either case. An additional restriction for two-body states is that they must be composed of two different states to satisfy the Pauli-exclusion principle. 
+
+\begin{algorithmic}
+  \For{$\text{sp1}\in STATES$}
+  \For{$\text{sp2}\in STATES$}
+  \If{$sp1\neq sp2$}
+  \State $N_{i}\gets n_{i,1}+n_{i,2}$
+  \State $S_{z}\gets s_{z,1}+s_{z,2}$
+  \State $T_{z}\gets t_{z,1}+t_{z,2}$
+  \State $\text{i\_dir}\gets\text{Ind}\left(N_{x},N_{y},N_{z},S_{z},T_{z}\right)$
+  \State $T\gets$ (sp1, sp2, i\_dir)
+  \State $N'_{i}\gets n_{i,1}-n_{i,2}$
+  \State $S'_{z}\gets s_{z,1}-s_{z,2}$
+  \State $T'_{z}\gets t_{z,1}-t_{z,2}$
+  \State $\text{i\_cross}\gets\text{Ind}\left(N'_{x},N'_{y},N'_{z},S'_{z},T'_{z}\right)$
+  \State $X\gets$ (sp1, sp2, i\_cross)
+  \EndIf
+  \EndFor
+  \EndFor
+\end{algorithmic}
+
+From the cross channels, one can construct the cross channel compliments, $X'$, where $X\left( pq\right)\equiv X'\left( qp\right)$. Also from the direct channels, one can construct one-body, and correspondint three-body, channels for each single-particle state, $K$ by finding every combination of two two-body states within a direct channel that contains that single particle state, $T\left( pq\right)=T\left( rs\right)\Rightarrow K_{p}\gets\left( qrs\right)$.
+
+\begin{algorithmic}
+  \For{$\text{Chan}\in T$}
+  \For{$\text{tb1}\in\text{Chan}$}
+  \For{$\text{tb2}\in\text{Chan}$}
+  \State $K\gets\text{tb1}_{1}$
+  \State $K_{\text{tb1}_{1}}\gets\mathop{\text{tb1}_{2},\text{tb2}_{1},\text{tb2}_{2}}$
+  \EndFor
+  \EndFor
+  \EndFor
+\end{algorithmic}
+
+These different sctructures can be further categorized by a two-body state's particle-hole character, $\braket{pp| t |hh}, \braket{hh| v |hh}, \braket{pp| v |pp}, \braket{hh| v |pp}$, and $\braket{hp| v |hp}$, which greatly simplifies the matrix-matrix multiplications of the CCD iterations by indexing the summed variables in a systematic way. Summations are constructed by placeing two structures next to each other in such a way that the inner, summed indices are of the same channel. The resulting structure is indexed by the outer channels.
+
+\begin{align}
+\braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld} \braket{bd|t|kl} \braket{kl|v|cd} &\rightarrow f_{c}^{b}\left( K\left( b\right),K\left( c\right)\right) - \frac{1}{2}t_{kl}^{bd}\left( K\left( b\right),K_{b}\left( kld\right)\right)\cdot v_{cd}^{kl}\left( K_{c}\left( kld\right),K\left( c\right)\right) \\
+\braket{k| \chi |j} = \braket{k|f|j} + \frac{1}{2} \sum_{cdl} \braket{kl|v|cd} \braket{cd|t|jl} &\rightarrow f_{j}^{k}\left( K\left( k\right),K\left( j\right)\right) + \frac{1}{2}v_{cd}^{kl}\left( K\left( k\right),K_{k}\left( cdl\right)\right)\cdot t_{jl}^{cd}\left( K_{j}\left( cdl\right),K\left( j\right)\right) \\
+\braket{kl| \chi |ij} = \braket{kl|v|ij} + \frac{1}{2} \sum_{cd} \braket{kl|v|cd} \braket{cd|t|ij} &\rightarrow v_{ij}^{kl}\left( T\left( kl\right),T\left( ij\right)\right) + \frac{1}{2}v_{cd}^{kl}\left( T\left( kl\right),T\left( cd\right)\right)\cdot t_{ij}^{cd}\left( T\left( cd\right),T\left( ij\right)\right) \\
+\braket{kb| \chi |cj} = \braket{kb|v|cj} + \frac{1}{2} \sum_{dl} \braket{kl|v|cd} \braket{db|t|lj} &\rightarrow v_{cj}^{kb}\left( X\left( kc\right),X\left( jb\right)\right) + \frac{1}{2}v_{cd}^{kl}\left( X\left( kc\right),X\left( dl\right)\right)\cdot t_{lj}^{db}\left( X\left( dl\right),X\left( jb\right)\right) \\
+\braket{ab| \chi |cd} = \braket{ab|v|cd} &\rightarrow v_{cd}^{ab}\left( T\left( ab\right),T\left( cd\right)\right) \\
+\sum_{c} \braket{b| \chi |c} \braket{ac| t |ij} &\rightarrow \chi_{c}^{b}\left( K\left( b\right),K\left( c\right)\right)\cdot t_{ij}^{ac}\left( K\left( c\right), K_{c}\left( ija\right)\right) \\
+\sum_{k} \braket{k| \chi |j} \braket{ab| t |ik} &\rightarrow \chi_{j}^{k}\left( K\left( j\right),K\left( k\right)\right)\cdot t_{ik}^{ab}\left( K\left( c\right), K_{c}\left( ija\right)\right) \\
+\sum_{cd} \braket{ab| \chi |cd} \braket{cd| t |ij} &\rightarrow \chi_{cd}^{ab}\left( T\left( ab\right),T\left( cd\right)\right)\cdot t_{ij}^{cd}\left( T\left( cd\right),T\left( ij\right)\right) \\
+\sum_{kl} \braket{ab| t |kl} \braket{kl| \chi |ij} &\rightarrow t_{kl}^{ab}\left( T\left( ab\right),T\left( kl\right)\right)\cdot \chi_{ij}^{kl}\left( T\left( kl\right),T\left( ij\right)\right) \\ 
+\sum_{kc} \braket{ac| t |ik}\braket{kb| \chi |cj} = \sum_{kc} \braket{ai^{-1}| t |kc^{-1}}\braket{kc^{-1}| \chi |jb^{-1}} &\rightarrow t_{ik}^{ac}\left( X\left( ia\right),X\left( kc\right)\right)\cdot \chi_{cj}^{kb}\left( X\left( kc\right),X\left( jb\right)\right)
+\end{align}
+
+The interaction we will use for these calculations is a semirealistic nucleon-nucleon potential known as the Minnesota potential which has the form, $V_{\alpha}\left( r\right)=V_{\alpha}e^{-\alpha r^{2}}$. The spin and isospin dependence of the Minnesota potential is given by,
+\begin{equation}
+V\left( r\right)=\frac{1}{2}\left( V_{R}+\frac{1}{2}\left( 1+P_{12}^{\sigma}\right) V_{T}+\frac{1}{2}\left( 1-P_{12}^{\sigma}\right) V_{S}\right)\left( 1-P_{12}^{\sigma}P_{12}^{\tau}\right),
+\end{equation}
+where $P_{12}^{\sigma}=\frac{1}{2}\left( 1+\sigma_{1}\cdot\sigma_{2}\right)$ and $P_{12}^{\tau}=\frac{1}{2}\left( 1+\tau_{1}\cdot\tau_{2}\right)$ are the spin and isospin exchange operators, respectively. When this potential is integrated over space, the result depends only on the magnitude of the momentum transfer, $\vec{q}=\frac{1}{2}\left(\vec{k}_{p}-\vec{k}_{q}-\vec{k}_{r}+\vec{k}_{s}\right)$, as well as the spin and isospin dependencies,
+\begin{equation}
+\braket{pq| V_{\alpha} |rs}=\frac{V_{\alpha}}{L^{3}}\left(\frac{\pi}{\alpha}\right)^{3/2}e^{\frac{-q^{2}}{4\alpha}}\delta_{\vec{k}_{p}+\vec{k}_{q},\vec{k}_{r}+\vec{k}_{s}}
+\end{equation}
+\begin{center}
+  \begin{tabular}{| l | l | l |}
+    \hline
+    $\alpha$ & $V_{\alpha}$ & $\kappa_{\alpha}$ \\ \hline
+    $R$ & 200 $\mathrm{MeV}$ & 1.487 $\mathrm{fm}^{-2}$ \\ \hline
+    $T$ & 178 $\mathrm{MeV}$ & 0.639 $\mathrm{fm}^{-2}$ \\ \hline
+    $S$ & 91.85 $\mathrm{MeV}$ & 0.465 $\mathrm{fm}^{-2}$ \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Chapter9-figures/fig1.pdf}
+  \caption{Energy per particle of pure neutron matter computed in the CCD approximation with the Minnesota potential for different numbers of particles with $\mathrm{N_{max}=20}$.}
+  \label{fig:fig1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Chapter9-figures/fig2.pdf}
+  \caption{Energy per particle of pure neutron matter computed in the CCD approximation with the Minnesota potential for different model space sizes with $\mathrm{A=20}$.}
+  \label{fig:fig2}
+\end{figure}
+
+We approximated our problem with periodic boundary conditions, $\mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)}$, but we could have chosen anti-periodic boundary conditions, $\mathop{\phi(x_{i})}=-\mathop{\phi(x_{i}+L)}$. The difference between these two shows how the correlation energy contains finite-size effects. One solution to this problem is by integrating over solutions between periodic and anti-periodic conditions, known as twist-averaging. First, we multiply the single-particle states by a phase for each direction, characterized by a twist-angle, $\theta_{i}$.
+\begin{equation}
+  \mathop{\phi_{\vec{k}}(\vec{x}+\vec{L})}\rightarrow\mathop{e^{i\vec{\theta}}\phi_{\vec{k}}(\vec{x})}
+\end{equation}
+$\theta_{i}=0$ for PBC and $\theta_{i}=\pi$ for APBC
+\begin{align}
+\vec{k}\rightarrow\vec{k}+\frac{\vec{\theta}}{L} \\
+\epsilon_{\vec{k}}\rightarrow\epsilon_{\vec{k}}+\frac{\pi}{L}\vec{k}\cdot\vec{\theta}+\frac{\pi^{2}}{L^{2}}
+\end{align}
+Adding these phases changes the single-particle energies, the correction of which disappear as $L\rightarrow\infty$, depending on $\vec{\theta}$ and thus changes the shell structure so that hole states can jump up to particle states and vis a versa. So it's necessary to fill hole states separately for each $\vec{\theta}$. Integration over some quantitiy is approximated by a weighted sum, such as Gauss-Legendre quadrature, over the quantity for each set of twist angles.
+
+\begin{algorithmic}
+  \State Build mesh points and weights for each direction $i$: $\{\theta_{i},w_{i}\}$
+  \State $E_{\text{twist}}=0$
+  \For{$\mathop{(\theta_{x},w_{x})}\in\mathop{\{\theta_{x},w_{x}\}}$}
+  \For{$\mathop{(\theta_{y},w_{y})}\in\mathop{\{\theta_{y},w_{y}\}}$}
+  \For{$\mathop{(\theta_{z},w_{z})}\in\mathop{\{\theta_{z},w_{z}\}}$}
+  \State Build Basis States with $k_{i}\rightarrow k_{i}+\frac{\theta_{i}}{L}$
+  \State Order States by Energy and Fill Holes
+  \State Get Result $E$ (T,HF,CCD)
+  \State $E_{\text{twist}}=E_{\text{twist}}+\frac{1}{\pi^{3}}w_{x}w_{y}w_{z}E$
+  \EndFor
+  \EndFor
+  \EndFor
+\end{algorithmic}
+
+This technique gives results which depend much less on the particle number, but requires a full calculation for each set of twist angles, which can grow very quickly. For example, using 10 twist angles in each direction requires 1000 calculations. To see the effects of twist averaging, it's easy to calculate the kinetic energy per particle and the Hartree-Fock energy per particle, which avoids the full CCD calculation. These calculations can be compared to the exact values for infinite matter, which are calculated by integrating the the relevent values up to the fermi surface.
+
+\begin{align}
+  \text{T}_{\text{inf}}=\frac{3\hbar^{2}k_{f}^{2}}{10m} \\
+  \text{HF}_{\text{inf}}=\frac{1}{\mathop{(2\pi)^{6}}}\frac{L^{3}}{2\rho}\int_{0}^{k_{f}}d\vec{k}_{1}\int_{0}^{k_{f}}d\vec{k}_{2}\braket{\vec{k}_{1}\vec{k}_{2}|\hat{v}|\vec{k}_{1}\vec{k}_{2}}
+\end{align}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Chapter9-figures/fig3.pdf}
+  \caption{Finite-size effects in the kinetic energy of pure neutron matter computed with the Minnesota potential as a function of the number of particles for both periodic boundary conditions and twist-averaged boundary conditions.}
+  \label{fig:fig3}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Chapter9-figures/fig4.pdf}
+  \caption{Finite-size effects in the Hartree-Fock energy of pure neutron matter computed with the Minnesota potential as a function of the number of particles for both periodic boundary conditions and twist-averaged boundary conditions.}
+  \label{fig:fig4}
+\end{figure}
 
 
 
