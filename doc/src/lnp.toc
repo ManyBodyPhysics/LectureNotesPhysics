@@ -60,43 +60,51 @@
 \contentsline {section}{\numberline {7.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{15}{section.7.5}
 \contentsline {section}{Appendix}{16}{section*.23}
 \contentsline {section}{References}{16}{section*.24}
-\contentsline {titlech}{\numberline {8}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{17}{section*.25}
+\contentsline {titlech}{\numberline {8}High-performance computing Many-body methods and infinite nuclear matter}{17}{section*.25}
 \authcount {1}
-\contentsline {authorch}{Francesco Pederiva}{17}{section*.25}
-\contentsline {section}{\numberline {8.1}The Nuclear few- and many-body problem}{17}{section.8.1}
-\contentsline {section}{\numberline {8.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{17}{section.8.2}
-\contentsline {section}{\numberline {8.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{17}{section.8.3}
-\contentsline {section}{\numberline {8.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{17}{section.8.4}
-\contentsline {section}{\numberline {8.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{17}{section.8.5}
-\contentsline {section}{Appendix}{18}{section*.26}
-\contentsline {section}{References}{18}{section*.27}
-\contentsline {titlech}{\numberline {9}High-performance computing Many-body methods and infinite nuclear matter}{19}{section*.28}
+\contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{17}{section*.25}
+\contentsline {section}{\numberline {8.1}Introduction}{17}{section.8.1}
+\contentsline {section}{\numberline {8.2}Single-particle basis, Hamiltonians and models for the nuclear force}{19}{section.8.2}
+\contentsline {section}{\numberline {8.3}Hartree-Fock theory}{24}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Introducing our first ansatz for the ground state}{28}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Slater determinants as basis states}{28}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}The Breuckner $G$-matrix}{29}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{34}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Example of a Hamiltonian matrix}{36}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}A non-practical way of solving the eigenvalue problem}{37}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Summarizing FCI and bringing in approximative methods}{39}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Building a many-body basis}{40}{subsection.8.4.4}
+\contentsline {section}{\numberline {8.5}Many-body perturbation theory}{42}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Many-body perturbation theory}{42}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}Interpreting the correlation energy and the wave operator}{45}{subsection.8.5.2}
+\contentsline {section}{\numberline {8.6}Coupled cluster theory}{47}{section.8.6}
+\contentsline {section}{\numberline {8.7}Introduction}{47}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}A non-practical way of solving the eigenvalue problem}{47}{subsection.8.7.1}
+\contentsline {subsection}{\numberline {8.7.2}Summarizing FCI and bringing in approximative methods}{49}{subsection.8.7.2}
+\contentsline {subsection}{\numberline {8.7.3}A quick tour of Coupled Cluster theory}{50}{subsection.8.7.3}
+\contentsline {subsection}{\numberline {8.7.4}The CCD approximation}{51}{subsection.8.7.4}
+\contentsline {paragraph}{Approximations to the full CCD equations.}{53}{section*.26}
+\contentsline {section}{\numberline {8.8}Developing a numerical project}{54}{section.8.8}
+\contentsline {titlech}{\numberline {9}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{67}{section*.27}
 \authcount {1}
-\contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{19}{section*.28}
-\contentsline {section}{\numberline {9.1}Introduction}{19}{section.9.1}
-\contentsline {section}{\numberline {9.2}Single-particle basis, Hamiltonians and models for the nuclear force}{21}{section.9.2}
-\contentsline {section}{\numberline {9.3}Hartree-Fock theory}{26}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}Introducing our first ansatz for the ground state}{30}{subsection.9.3.1}
-\contentsline {subsection}{\numberline {9.3.2}Slater determinants as basis states}{30}{subsection.9.3.2}
-\contentsline {subsection}{\numberline {9.3.3}The Breuckner $G$-matrix}{31}{subsection.9.3.3}
-\contentsline {section}{\numberline {9.4}Full Configuration Interaction Theory}{36}{section.9.4}
-\contentsline {subsection}{\numberline {9.4.1}Example of a Hamiltonian matrix}{38}{subsection.9.4.1}
-\contentsline {subsection}{\numberline {9.4.2}A non-practical way of solving the eigenvalue problem}{39}{subsection.9.4.2}
-\contentsline {subsection}{\numberline {9.4.3}Summarizing FCI and bringing in approximative methods}{41}{subsection.9.4.3}
-\contentsline {subsection}{\numberline {9.4.4}Building a many-body basis}{42}{subsection.9.4.4}
-\contentsline {section}{\numberline {9.5}Many-body perturbation theory}{44}{section.9.5}
-\contentsline {subsection}{\numberline {9.5.1}Many-body perturbation theory}{44}{subsection.9.5.1}
-\contentsline {subsection}{\numberline {9.5.2}Interpreting the correlation energy and the wave operator}{47}{subsection.9.5.2}
-\contentsline {section}{\numberline {9.6}Coupled cluster theory}{49}{section.9.6}
-\contentsline {section}{\numberline {9.7}Introduction}{49}{section.9.7}
-\contentsline {subsection}{\numberline {9.7.1}A non-practical way of solving the eigenvalue problem}{49}{subsection.9.7.1}
-\contentsline {subsection}{\numberline {9.7.2}Summarizing FCI and bringing in approximative methods}{51}{subsection.9.7.2}
-\contentsline {subsection}{\numberline {9.7.3}A quick tour of Coupled Cluster theory}{52}{subsection.9.7.3}
-\contentsline {subsection}{\numberline {9.7.4}The CCD approximation}{53}{subsection.9.7.4}
-\contentsline {paragraph}{Approximations to the full CCD equations.}{55}{section*.29}
-\contentsline {section}{\numberline {9.8}Developing a numerical project}{56}{section.9.8}
-\contentsline {titlech}{\numberline {10}Concluding remarks and perspectives}{69}{section*.30}
+\contentsline {authorch}{Francesco Pederiva}{67}{section*.27}
+\contentsline {section}{\numberline {9.1}The Nuclear few- and many-body problem}{67}{section.9.1}
+\contentsline {section}{\numberline {9.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{67}{section.9.2}
+\contentsline {section}{\numberline {9.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{67}{section.9.3}
+\contentsline {section}{\numberline {9.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{67}{section.9.4}
+\contentsline {section}{\numberline {9.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{67}{section.9.5}
+\contentsline {section}{Appendix}{68}{section*.28}
+\contentsline {section}{References}{68}{section*.29}
+\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{69}{section*.30}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{69}{section*.30}
-\contentsline {section}{\numberline {10.1}Concluding remarks}{69}{section.10.1}
-\contentsline {section}{\numberline {10.2}Perspectives}{69}{section.10.2}
+\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Titus Morris, and Nathan Parzuchowski}{69}{section*.30}
+\contentsline {section}{\numberline {10.1}Introduction}{69}{section.10.1}
+\contentsline {section}{\numberline {10.2}The similarity renormalization group approach}{69}{section.10.2}
+\contentsline {section}{\numberline {10.3}In-medium SRG studies of infinite matter}{69}{section.10.3}
+\contentsline {section}{Appendix}{70}{section*.31}
+\contentsline {section}{References}{70}{section*.32}
+\contentsline {titlech}{\numberline {11}Concluding remarks and perspectives}{71}{section*.33}
+\authcount {1}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{71}{section*.33}
+\contentsline {section}{\numberline {11.1}Concluding remarks}{71}{section.11.1}
+\contentsline {section}{\numberline {11.2}Perspectives}{71}{section.11.2}

@@ -12,6 +12,7 @@ A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: chapter8.aux
 A level-1 auxiliary file: chapter9.aux
 A level-1 auxiliary file: chapter10.aux
+A level-1 auxiliary file: chapter11.aux
 The style file: spphys.bst
 I found no \bibdata command---while reading file lnp.aux
 Warning--I didn't find a database entry for "science-contrib"
@@ -41,7 +42,7 @@ Warning--I didn't find a database entry for "basic-DOI"
 Warning--I didn't find a database entry for "basic-mono"
 You've used 0 entries,
             2812 wiz_defined-function locations,
-            633 strings with 4816 characters,
+            634 strings with 4829 characters,
 and the built_in function-call counts, 28 in all, are:
 = -- 0
 > -- 0
