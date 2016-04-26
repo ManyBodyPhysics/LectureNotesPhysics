@@ -182,7 +182,7 @@ We will shed more light on this topic in the next subsection.
 
 
 \section{Single-particle basis, Hamiltonians and models for the nuclear force}
-We begin our discussion
+
 \[
   \Phi_{AS}(\alpha_1, \dots, \alpha_A; x_1, \dots x_A)=
             \frac{1}{\sqrt{A}} \sum_{\hat{P}} (-1)^P \hat{P} \prod_{i=1}^A \psi_{\alpha_i}(x_i),
