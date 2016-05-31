@@ -640,7 +640,7 @@ the free-nucleon transfer matrix and the auxiliary field $s$.}%
 \includegraphics[
 height=13.00cm
 ]
-{Chapter6-figures/getzdualvecs.png}%
+{getzdualvecs.png}%
 \caption{Sample code which calculates 
 auxiliary-field transfer matrix multiplications on the right starting from 
 the single-nucleon final states.  We only show terms involving the 
