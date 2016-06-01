@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  31 MAY 2016 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  31 MAY 2016 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1100,7 +1100,92 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 ] (./lnp.toc
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
- [9] [10])
+ [9] [10]
+Overfull \hbox (3.22194pt too wide) detected at line 103
+ []\T1/fve/m/n/10 100
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 104
+ []\T1/fve/m/n/10 101
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 106
+ []\T1/fve/m/n/10 104
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 110
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 111
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 112
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 113
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 114
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 115
+ []\T1/fve/m/n/10 118
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 116
+ []\T1/fve/m/n/10 118
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 120
+ []\T1/fve/m/n/10 119
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 121
+ []\T1/fve/m/n/10 119
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 122
+ []\T1/fve/m/n/10 119
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 123
+ []\T1/fve/m/n/10 120
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 124
+ []\T1/fve/m/n/10 120
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 128
+ []\T1/fve/m/n/10 121
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 129
+ []\T1/fve/m/n/10 121
+ []
+
+)
 \tf@toc=\write6
 \openout6 = `lnp.toc'.
 
@@ -1260,579 +1345,1247 @@ LaTeX Warning: Empty `thebibliography' environment on input line 121.
 
 
 
-] [5]
+]
+Overfull \hbox (5.05159pt too wide) in paragraph at lines 13--13
+\T1/fve/b/n/10 Abstract \T1/fve/m/n/10 We present a brief in-tro-duc-tion to QC
+D, the QCD phase di-a-gram, and non-equilibrium
+ []
 
-LaTeX Warning: Citation `science-contrib' on page 6 undefined on input line 41.
+[5]
 
-
-
-LaTeX Warning: Citation `science-online' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `science-mono' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `science-journal' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Feynman' on page 6 undefined on input line 92.
 
 
-
-LaTeX Warning: Citation `science-DOI' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `phys-online' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Metropolis:1953am' on page 6 undefined on input line 1
+32.
 
 
-LaTeX Warning: Citation `phys-mono' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Creutz:1980gp' on page 6 undefined on input line 134.
 
 
-LaTeX Warning: Citation `phys-journal' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `phys-DOI' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `phys-contrib' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-mono' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-online' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-journal' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-contrib' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-DOI' on page 6 undefined on input line 41.
-
-
-LaTeX Warning: Citation `humlinphil-journal' on page 6 undefined on input line 
-41.
-
-
-LaTeX Warning: Citation `humlinphil-contrib' on page 6 undefined on input line 
-41.
-
-
-LaTeX Warning: Citation `humlinphil-mono' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Shuryak:1984xr' on page 6 undefined on input line 134.
 
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 6 undefined on input line 4
+LaTeX Warning: Citation `Shuryak:1987tr' on page 6 undefined on input line 134.
+
+
+
+LaTeX Warning: Citation `Schafer:2004xa' on page 6 undefined on input line 134.
+
+
+[6]
+
+LaTeX Warning: Citation `Schafer:2004xa' on page 7 undefined on input line 183.
+
+
+[7] <Chapter2-figures/config1.pdf, id=719, 478.78876pt x 412.54124pt>
+File: Chapter2-figures/config1.pdf Graphic file (type pdf)
+
+<use Chapter2-figures/config1.pdf>
+Package pdftex.def Info: Chapter2-figures/config1.pdf used on input line 232.
+(pdftex.def)             Requested size: 256.0748pt x 220.64128pt.
+
+
+LaTeX Warning: Citation `Jarrell:1996rrw' on page 8 undefined on input line 279
+.
+
+
+LaTeX Warning: Citation `Asakawa:2000tr' on page 8 undefined on input line 279.
+
+
+[8 <./Chapter2-figures/config1.pdf>] [9]
+
+LaTeX Warning: Citation `Jarzynski:1997' on page 10 undefined on input line 360
+.
+
+LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
+(Font)              Font shape `T1/fve/b/sl' tried instead on input line 365.
+LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
+(Font)              scaled to size 10.79993pt on input line 365.
+
+LaTeX Warning: Citation `Gross:1973id' on page 10 undefined on input line 411.
+
+
+LaTeX Warning: Citation `Politzer:1973fx' on page 10 undefined on input line 41
+1.
+
+[10]
+
+LaTeX Warning: Citation `Coleman:1973jx' on page 11 undefined on input line 423
+.
+
+
+LaTeX Warning: Citation `Gross:1973id' on page 11 undefined on input line 428.
+
+
+LaTeX Warning: Citation `Politzer:1973fx' on page 11 undefined on input line 42
+8.
+
+
+LaTeX Warning: Citation `Nakamura:2010zzi' on page 11 undefined on input line 4
+47.
+
+
+LaTeX Warning: Citation `Nakamura:2010zzi' on page 11 undefined on input line 4
+52.
+
+<Chapter2-figures/qcd_ms_high.pdf, id=775, 588.1975pt x 534.99875pt>
+File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
+
+<use Chapter2-figures/qcd_ms_high.pdf>
+Package pdftex.def Info: Chapter2-figures/qcd_ms_high.pdf used on input line 45
+6.
+(pdftex.def)             Requested size: 297.20906pt x 270.33142pt.
+
+
+LaTeX Warning: Citation `Alford:2007xm' on page 11 undefined on input line 479.
+
+
+
+LaTeX Warning: Citation `Adams:2012th' on page 11 undefined on input line 479.
+
+
+LaTeX Warning: Citation `Braun-Munzinger:2015hba' on page 11 undefined on input
+ line 479.
+
+
+LaTeX Warning: Citation `GellMann:1968rz' on page 11 undefined on input line 49
+4.
+
+
+LaTeX Warning: Citation `Coleman:1980mx' on page 11 undefined on input line 494
+.
+
+
+LaTeX Warning: Citation `tHooft:1979bh' on page 11 undefined on input line 494.
+
+
+[11] [12 <./Chapter2-figures/qcd_ms_high.pdf>]
+
+LaTeX Warning: Citation `GellMann:1968rz' on page 13 undefined on input line 57
+4.
+
+
+LaTeX Warning: Citation `Shuryak:1977ut' on page 13 undefined on input line 596
+.
+
+
+LaTeX Warning: Citation `Shuryak:1978ij' on page 13 undefined on input line 596
+.
+
+
+LaTeX Warning: Citation `Linde:1980ts' on page 13 undefined on input line 621.
+
+[13]
+
+LaTeX Warning: Citation `Pisarski:1983ms' on page 14 undefined on input line 63
+2.
+
+
+LaTeX Warning: Citation `Aoki:2006we' on page 14 undefined on input line 636.
+
+
+LaTeX Warning: Citation `Bazavov:2011nk' on page 14 undefined on input line 636
+.
+
+
+LaTeX Warning: Citation `Aoki:2006br' on page 14 undefined on input line 638.
+
+
+LaTeX Warning: Citation `Aoki:2009sc' on page 14 undefined on input line 638.
+
+
+LaTeX Warning: Citation `Bazavov:2011nk' on page 14 undefined on input line 639
+.
+
+
+LaTeX Warning: Citation `Bazavov:2014pvz' on page 14 undefined on input line 63
+9.
+
+
+LaTeX Warning: Citation `Stephanov:2004wx' on page 14 undefined on input line 6
+44.
+
+
+LaTeX Warning: Citation `Fodor:2001pe' on page 14 undefined on input line 650.
+
+
+LaTeX Warning: Citation `Allton:2002zi' on page 14 undefined on input line 650.
+
+
+
+LaTeX Warning: Citation `Karsch:2003va' on page 14 undefined on input line 650.
+
+
+
+LaTeX Warning: Citation `Fodor:2004nz' on page 14 undefined on input line 650.
+
+
+LaTeX Warning: Citation `Gavai:2008zr' on page 14 undefined on input line 650.
+
+
+LaTeX Warning: Citation `Datta:2012pj' on page 14 undefined on input line 650.
+
+
+LaTeX Warning: Citation `deForcrand:2010he' on page 14 undefined on input line 
+653.
+
+
+LaTeX Warning: Citation `Stephanov:1998dy' on page 14 undefined on input line 6
+58.
+
+
+LaTeX Warning: Citation `Sauer:1976zzf' on page 14 undefined on input line 678.
+
+
+
+LaTeX Warning: Citation `Pochodzalla:1995xy' on page 14 undefined on input line
+ 678.
+
+
+LaTeX Warning: Citation `Elliott:2013pna' on page 14 undefined on input line 67
+8.
+
+[14]
+
+LaTeX Warning: Citation `Alford:1998mk' on page 15 undefined on input line 703.
+
+
+
+LaTeX Warning: Citation `Schafer:1999fe' on page 15 undefined on input line 703
+.
+
+
+LaTeX Warning: Citation `Alford:2007xm' on page 15 undefined on input line 725.
+
+
+
+LaTeX Warning: Citation `Schafer:1998ef' on page 15 undefined on input line 735
+.
+
+
+LaTeX Warning: Citation `Hatsuda:2006ps' on page 15 undefined on input line 735
+.
+
+
+LaTeX Warning: Citation `Creutz:1983' on page 15 undefined on input line 752.
+
+
+LaTeX Warning: Citation `Montvay:1994' on page 15 undefined on input line 752.
+
+
+LaTeX Warning: Citation `Smit:2002' on page 15 undefined on input line 752.
+
+
+LaTeX Warning: Citation `Gattringer:2009' on page 15 undefined on input line 75
+2.
+
+
+LaTeX Warning: Citation `Lin:2014' on page 15 undefined on input line 752.
+
+
+LaTeX Warning: Citation `Fodor:2009ax' on page 15 undefined on input line 754.
+
+
+LaTeX Warning: Citation `Ding:2015ona' on page 15 undefined on input line 754.
+
+[15]
+
+LaTeX Warning: Citation `Wilson:1974sk' on page 16 undefined on input line 778.
+
+
+
+LaTeX Warning: Citation `Fodor:2009ax' on page 16 undefined on input line 837.
+
+
+LaTeX Warning: Citation `Ding:2015ona' on page 16 undefined on input line 837.
+
+[16]
+
+LaTeX Warning: Citation `Mezzadri:2006' on page 17 undefined on input line 850.
+
+
+
+LaTeX Warning: Citation `Hasenfratz:1980kn' on page 17 undefined on input line 
+879.
+
+
+LaTeX Warning: Citation `Lepage:1998dt' on page 17 undefined on input line 892.
+
+
+
+LaTeX Warning: Citation `Wolff:1988uh' on page 17 undefined on input line 903.
+
+[17]
+
+LaTeX Warning: Citation `Wilson:1974sk' on page 18 undefined on input line 922.
+
+
+
+LaTeX Warning: Citation `Kogut:1974ag' on page 18 undefined on input line 923.
+
+
+LaTeX Warning: Citation `Kaplan:1992bt' on page 18 undefined on input line 924.
+
+
+
+LaTeX Warning: Citation `Neuberger:1997fp' on page 18 undefined on input line 9
+25.
+
+
+LaTeX Warning: Citation `Luscher:2010ae' on page 18 undefined on input line 953
+.
+
+[18]
+
+LaTeX Warning: Citation `Endress:2014qpa' on page 19 undefined on input line 99
+9.
+
+<Chapter2-figures/topology.pdf, id=858, 361.35pt x 252.945pt>
+File: Chapter2-figures/topology.pdf Graphic file (type pdf)
+
+<use Chapter2-figures/topology.pdf>
+Package pdftex.def Info: Chapter2-figures/topology.pdf used on input line 1004.
+
+(pdftex.def)             Requested size: 297.20906pt x 208.04921pt.
+
+
+LaTeX Warning: Citation `Dick:2015twa' on page 19 undefined on input line 1008.
+
+
+
+LaTeX Warning: Citation `Dick:2015twa' on page 19 undefined on input line 1008.
+
+
+
+LaTeX Warning: Citation `Teper:1985ek' on page 19 undefined on input line 1028.
+
+
+
+LaTeX Warning: Citation `Luscher:2010iy' on page 19 undefined on input line 103
+2.
+
+
+LaTeX Warning: Citation `Belavin:1975fg' on page 19 undefined on input line 104
+5.
+
+
+LaTeX Warning: Citation `Schafer:1996wv' on page 19 undefined on input line 104
+5.
+
+[19 <./Chapter2-figures/topology.pdf>]
+
+LaTeX Warning: Citation `Schafer:1996wv' on page 20 undefined on input line 105
+7.
+
+
+LaTeX Warning: Citation `DelDebbio:2004ns' on page 20 undefined on input line 1
+076.
+
+
+LaTeX Warning: Citation `Ce:2014sfa' on page 20 undefined on input line 1076.
+
+
+LaTeX Warning: Citation `Schafer:1996wv' on page 20 undefined on input line 108
 1.
 
 
-LaTeX Warning: Citation `humlinphil-DOI' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Poppitz:2012nz' on page 20 undefined on input line 108
+4.
+
+[20]
+
+LaTeX Warning: Citation `Banks:1979yr' on page 21 undefined on input line 1122.
 
 
-LaTeX Warning: Citation `basic-contrib' on page 6 undefined on input line 41.
+
+LaTeX Warning: Citation `Ginsparg:1981bj' on page 21 undefined on input line 11
+36.
 
 
-LaTeX Warning: Citation `basic-online' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Schafer:1996wv' on page 21 undefined on input line 118
+4.
 
 
-LaTeX Warning: Citation `basic-journal' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Cherman:2016hcd' on page 21 undefined on input line 11
+96.
+
+[21]
+
+LaTeX Warning: Citation `Lin:2014' on page 22 undefined on input line 1264.
+
+[22]
+
+LaTeX Warning: Citation `Cristoforetti:2012su' on page 23 undefined on input li
+ne 1304.
 
 
-LaTeX Warning: Citation `basic-DOI' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Aarts:2014nxa' on page 23 undefined on input line 1304
+.
 
 
-LaTeX Warning: Citation `basic-mono' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `Aarts:2009uq' on page 23 undefined on input line 1306.
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 43.
 
-) [6]
+LaTeX Warning: Citation `Sexty:2013ica' on page 23 undefined on input line 1306
+.
+
+
+LaTeX Warning: Citation `Kloiber:2013rba' on page 23 undefined on input line 13
+07.
+
+
+LaTeX Warning: Citation `Schafer:2009dj' on page 23 undefined on input line 134
+6.
+
+
+LaTeX Warning: Citation `Schaefer:2014awa' on page 23 undefined on input line 1
+346.
+
+[23]
+
+LaTeX Warning: Citation `Karsch:1986cq' on page 24 undefined on input line 1386
+.
+
+
+LaTeX Warning: Citation `Meyer:2007ic' on page 24 undefined on input line 1386.
+
+
+
+LaTeX Warning: Citation `Meyer:2007dy' on page 24 undefined on input line 1386.
+
+
+
+LaTeX Warning: Citation `Sakai:2007cm' on page 24 undefined on input line 1386.
+
+
+
+Overfull \hbox (2.46152pt too wide) in paragraph at lines 1383--1391
+\T1/fve/m/n/10 and $\OML/ztmcm/m/it/10 n[]\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10
+ !\OT1/ztmcm/m/n/10 )$ \T1/fve/m/n/10 is the Bose dis-tri-bu-tion func-tion. Th
+e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
+ []
+
+
+LaTeX Warning: Citation `Aarts:2007wj' on page 24 undefined on input line 1399.
+
+
+
+LaTeX Warning: Citation `Aarts:2007va' on page 24 undefined on input line 1399.
+
+
+
+LaTeX Warning: Citation `Aarts:2006wt' on page 24 undefined on input line 1403.
+
+
+
+LaTeX Warning: Citation `Meyer:2008gt' on page 24 undefined on input line 1403.
+
+
+
+LaTeX Warning: Citation `Romatschke:2009ng' on page 24 undefined on input line 
+1406.
+
+
+LaTeX Warning: Citation `Arnold:2000dr' on page 24 undefined on input line 1424
+.
+
+
+LaTeX Warning: Citation `Karsch:1986cq' on page 24 undefined on input line 1427
+.
+
+
+LaTeX Warning: Citation `Meyer:2007ic' on page 24 undefined on input line 1429.
+
+
+
+LaTeX Warning: Citation `Meyer:2008gt' on page 24 undefined on input line 1429.
+
+
+
+LaTeX Warning: Citation `Kovtun:2004de' on page 24 undefined on input line 1434
+.
+
+[24] <Chapter2-figures/hic_evol_schem.pdf, id=930, 848.16875pt x 259.97125pt>
+File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
+
+<use Chapter2-figures/hic_evol_schem.pdf>
+Package pdftex.def Info: Chapter2-figures/hic_evol_schem.pdf used on input line
+ 1440.
+(pdftex.def)             Requested size: 403.35562pt x 123.63043pt.
+
+
+LaTeX Warning: Citation `Romatschke:2009im' on page 25 undefined on input line 
+1509.
+
+
+LaTeX Warning: Citation `Rezzolla:2013' on page 25 undefined on input line 1509
+.
+
+
+LaTeX Warning: Citation `Jeon:2015dfa' on page 25 undefined on input line 1509.
+
+
+[25 <./Chapter2-figures/hic_evol_schem.pdf>] [26]
+
+LaTeX Warning: Citation `Colella:1984' on page 27 undefined on input line 1626.
+
+
+
+LaTeX Warning: Citation `Blondin:1993' on page 27 undefined on input line 1627.
+
+
+
+LaTeX Warning: Citation `Schafer:2010dv' on page 27 undefined on input line 162
+8.
+
+[27]
+
+LaTeX Warning: Citation `Colella:1984' on page 28 undefined on input line 1683.
+
+
+
+LaTeX Warning: Citation `Colella:1984' on page 28 undefined on input line 1694.
+
+
+[28]
+
+LaTeX Warning: Citation `Florkowski:2010cf' on page 29 undefined on input line 
+1757.
+
+
+LaTeX Warning: Citation `Martinez:2010sc' on page 29 undefined on input line 17
+57.
+
+
+LaTeX Warning: Citation `Bluhm:2015raa' on page 29 undefined on input line 1757
+.
+
+
+LaTeX Warning: Citation `Bluhm:2015bzi' on page 29 undefined on input line 1757
+.
+
+
+LaTeX Warning: Citation `Romatschke:2011hm' on page 29 undefined on input line 
+1759.
+
+
+LaTeX Warning: Citation `Brewer:2015hua' on page 29 undefined on input line 175
+9.
+
+[29]
+
+LaTeX Warning: Citation `Kadanoff' on page 30 undefined on input line 1791.
+
+
+LaTeX Warning: Citation `Bertsch:1988ik' on page 30 undefined on input line 182
+4.
+
+
+LaTeX Warning: Citation `Lepers:2010be' on page 30 undefined on input line 1825
+.
+
+[30]
+
+LaTeX Warning: Citation `Bass:1998ca' on page 31 undefined on input line 1913.
+
+
+LaTeX Warning: Citation `Buss:2011mx' on page 31 undefined on input line 1913.
+
+
+LaTeX Warning: Citation `Ehehalt:1996uq' on page 31 undefined on input line 191
+4.
+
+
+LaTeX Warning: Citation `Geiger:1991nj' on page 31 undefined on input line 1924
+.
+
+
+LaTeX Warning: Citation `Xu:2004mz' on page 31 undefined on input line 1924.
+
+
+LaTeX Warning: Citation `McLerran:1993ni' on page 31 undefined on input line 19
+34.
+
+
+LaTeX Warning: Citation `Mueller:2002gd' on page 31 undefined on input line 193
+5.
+
+[31]
+
+LaTeX Warning: Citation `Mrowczynski:2016etf' on page 32 undefined on input lin
+e 1947.
+
+[32]
+
+LaTeX Warning: Citation `Berges:2008wm' on page 33 undefined on input line 2031
+.
+
+
+LaTeX Warning: Citation `Dusling:2010rm' on page 33 undefined on input line 203
+5.
+
+
+LaTeX Warning: Citation `Litim:2001db' on page 33 undefined on input line 2039.
+
+
+
+LaTeX Warning: Citation `Wong:1970fu' on page 33 undefined on input line 2040.
+
+
+LaTeX Warning: Citation `Hu:1996sf' on page 33 undefined on input line 2041.
+
+
+LaTeX Warning: Citation `Maldacena:1997re' on page 33 undefined on input line 2
+050.
+
+
+LaTeX Warning: Citation `Son:2007vk' on page 33 undefined on input line 2050.
+
+
+LaTeX Warning: Citation `Gubser:2009md' on page 33 undefined on input line 2050
+.
+
+
+LaTeX Warning: Citation `CasalderreySolana:2011us' on page 33 undefined on inpu
+t line 2050.
+
+
+LaTeX Warning: Citation `DeWolfe:2013cua' on page 33 undefined on input line 20
+50.
+
+[33] [34]
+
+LaTeX Warning: Citation `Son:2007vk' on page 35 undefined on input line 2215.
+
+
+LaTeX Warning: File `AdS5_Schwarz_eta_w_txt.eps' not found on input line 2224.
+
+Package epstopdf Info: Source file: <AdS5_Schwarz_eta_w_txt.eps>
+(epstopdf)             Output file: <AdS5_Schwarz_eta_w_txt-eps-converted-to.pd
+f>
+(epstopdf)             Command: <repstopdf --outfile=AdS5_Schwarz_eta_w_txt-eps
+-converted-to.pdf AdS5_Schwarz_eta_w_txt.eps>
+(epstopdf)             \includegraphics on input line 2224.
+Package epstopdf Info: Output file is already uptodate.
+
+! Package pdftex.def Error: File `AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf' 
+not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2224 ...width=6.5cm]{AdS5_Schwarz_eta_w_txt.eps}
+                                                  
+? 
+
+LaTeX Warning: File `AdS5_Schwarz_eta_w_subtr_txt.eps' not found on input line 
+2225.
+
+Package epstopdf Info: Source file: <AdS5_Schwarz_eta_w_subtr_txt.eps>
+(epstopdf)             Output file: <AdS5_Schwarz_eta_w_subtr_txt-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=AdS5_Schwarz_eta_w_subtr_t
+xt-eps-converted-to.pdf AdS5_Schwarz_eta_w_subtr_txt.eps>
+(epstopdf)             \includegraphics on input line 2225.
+Package epstopdf Info: Output file is already uptodate.
+
+! Package pdftex.def Error: File `AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to
+.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2225 ...6.5cm]{AdS5_Schwarz_eta_w_subtr_txt.eps}
+                                                  
+? 
+
+LaTeX Warning: Citation `Policastro:2002se' on page 35 undefined on input line 
+2248.
+
+[35]
+
+LaTeX Warning: Citation `Teaney:2006nc' on page 36 undefined on input line 2258
+.
+
+
+LaTeX Warning: Citation `Policastro:2002se' on page 36 undefined on input line 
+2280.
+
+
+LaTeX Warning: Citation `Son:2006em' on page 36 undefined on input line 2280.
+
+[36] <Chapter2-figures/EnergyDensity.pdf, id=1139, 651.27232pt x 359.16324pt>
+File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
+
+<use Chapter2-figures/EnergyDensity.pdf>
+Package pdftex.def Info: Chapter2-figures/EnergyDensity.pdf used on input line 
+2324.
+(pdftex.def)             Requested size: 241.84842pt x 133.37059pt.
+
+
+LaTeX Warning: Citation `Chesler:2010bi' on page 37 undefined on input line 233
+1.
+
+
+LaTeX Warning: Citation `Chesler:2010bi' on page 37 undefined on input line 233
+1.
+
+
+LaTeX Warning: Citation `Schaefer:2014awa' on page 37 undefined on input line 2
+343.
+
+
+LaTeX Warning: Citation `Chesler:2013lia' on page 37 undefined on input line 23
+52.
+
+
+LaTeX Warning: Citation `Rangamani:2009xk' on page 37 undefined on input line 2
+362.
+
+[37 <./Chapter2-figures/EnergyDensity.pdf>]
+
+LaTeX Warning: Citation `Clay-YM' on page 38 undefined on input line 2379.
+
+
+LaTeX Warning: Citation `Clay-NS' on page 38 undefined on input line 2379.
+
+
+LaTeX Warning: Citation `Villani:2009' on page 38 undefined on input line 2380.
+
+
+
+LaTeX Warning: Citation `Perelman' on page 38 undefined on input line 2382.
+
+
+LaTeX Warning: Citation `Schafer:2004xa' on page 38 undefined on input line 238
+5.
+
+
+LaTeX Warning: Citation `Blondin:1993' on page 38 undefined on input line 2390.
+
+
+
+LaTeX Warning: Citation `Shen:2014vra' on page 38 undefined on input line 2394.
+
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2411.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2411.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2411.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2411.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 2411.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2411.
+
+
+LaTeX Warning: Citation `Creutz:2004' on page 38 undefined on input line 2415.
+
+[38] [39] [40]) [41]
 \openout2 = `chapter3.aux'.
 
- (./chapter3.tex [7
+ (./chapter3.tex [42
 
 
 
 
-]
+] [43]
 
-LaTeX Warning: Citation `science-contrib' on page 8 undefined on input line 40.
-
-
-
-LaTeX Warning: Citation `science-online' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `science-contrib' on page 44 undefined on input line 40
+.
 
 
-LaTeX Warning: Citation `science-mono' on page 8 undefined on input line 40.
-
-
-LaTeX Warning: Citation `science-journal' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `science-online' on page 44 undefined on input line 40.
 
 
 
-LaTeX Warning: Citation `science-DOI' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `science-mono' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-online' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `science-journal' on page 44 undefined on input line 40
+.
 
 
-LaTeX Warning: Citation `phys-mono' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `science-DOI' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-journal' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `phys-online' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-DOI' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `phys-mono' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-contrib' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `phys-journal' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-mono' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `phys-DOI' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-online' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `phys-contrib' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-journal' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-mono' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-contrib' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-online' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-DOI' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-journal' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `humlinphil-journal' on page 8 undefined on input line 
+
+LaTeX Warning: Citation `psysoc-contrib' on page 44 undefined on input line 40.
+
+
+
+LaTeX Warning: Citation `psysoc-DOI' on page 44 undefined on input line 40.
+
+
+LaTeX Warning: Citation `humlinphil-journal' on page 44 undefined on input line
+ 40.
+
+
+LaTeX Warning: Citation `humlinphil-contrib' on page 44 undefined on input line
+ 40.
+
+
+LaTeX Warning: Citation `humlinphil-mono' on page 44 undefined on input line 40
+.
+
+
+LaTeX Warning: Citation `humlinphil-online' on page 44 undefined on input line 
 40.
 
 
-LaTeX Warning: Citation `humlinphil-contrib' on page 8 undefined on input line 
-40.
-
-
-LaTeX Warning: Citation `humlinphil-mono' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `humlinphil-DOI' on page 44 undefined on input line 40.
 
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 8 undefined on input line 4
-0.
+LaTeX Warning: Citation `basic-contrib' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `humlinphil-DOI' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `basic-online' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-contrib' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `basic-journal' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-online' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `basic-DOI' on page 44 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-journal' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `basic-mono' on page 44 undefined on input line 40.
 
-
-LaTeX Warning: Citation `basic-DOI' on page 8 undefined on input line 40.
-
-
-LaTeX Warning: Citation `basic-mono' on page 8 undefined on input line 40.
-
-) [8]
+) [44]
 \openout2 = `chapter4.aux'.
 
- (./chapter4.tex [9
+ (./chapter4.tex [45
 
 
 
 
 ]
 
-LaTeX Warning: Citation `science-contrib' on page 10 undefined on input line 38
+LaTeX Warning: Citation `science-contrib' on page 46 undefined on input line 38
 .
 
 
-LaTeX Warning: Citation `science-online' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `science-online' on page 46 undefined on input line 38.
 
 
 
-LaTeX Warning: Citation `science-mono' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `science-mono' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `science-journal' on page 10 undefined on input line 38
+LaTeX Warning: Citation `science-journal' on page 46 undefined on input line 38
 .
 
 
-LaTeX Warning: Citation `science-DOI' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `science-DOI' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `phys-online' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `phys-online' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `phys-mono' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `phys-mono' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `phys-journal' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `phys-journal' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `phys-DOI' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `phys-DOI' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `phys-contrib' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `phys-contrib' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `psysoc-mono' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `psysoc-mono' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `psysoc-online' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `psysoc-online' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `psysoc-journal' on page 10 undefined on input line 38.
-
-
-
-LaTeX Warning: Citation `psysoc-contrib' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `psysoc-journal' on page 46 undefined on input line 38.
 
 
 
-LaTeX Warning: Citation `psysoc-DOI' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `psysoc-contrib' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `humlinphil-journal' on page 10 undefined on input line
+
+LaTeX Warning: Citation `psysoc-DOI' on page 46 undefined on input line 38.
+
+
+LaTeX Warning: Citation `humlinphil-journal' on page 46 undefined on input line
  38.
 
 
-LaTeX Warning: Citation `humlinphil-contrib' on page 10 undefined on input line
+LaTeX Warning: Citation `humlinphil-contrib' on page 46 undefined on input line
  38.
 
 
-LaTeX Warning: Citation `humlinphil-mono' on page 10 undefined on input line 38
+LaTeX Warning: Citation `humlinphil-mono' on page 46 undefined on input line 38
 .
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 10 undefined on input line 
+LaTeX Warning: Citation `humlinphil-online' on page 46 undefined on input line 
 38.
 
 
-LaTeX Warning: Citation `humlinphil-DOI' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `humlinphil-DOI' on page 46 undefined on input line 38.
 
 
 
-LaTeX Warning: Citation `basic-contrib' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `basic-contrib' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `basic-online' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `basic-online' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `basic-journal' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `basic-journal' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `basic-DOI' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `basic-DOI' on page 46 undefined on input line 38.
 
 
-LaTeX Warning: Citation `basic-mono' on page 10 undefined on input line 38.
+LaTeX Warning: Citation `basic-mono' on page 46 undefined on input line 38.
 
 
 LaTeX Warning: Empty `thebibliography' environment on input line 39.
 
-) [10]
+) [46]
 \openout2 = `chapter5.aux'.
 
- (./chapter5.tex [11
+ (./chapter5.tex [47
 
 
 
 
 ]
 
-LaTeX Warning: Citation `science-contrib' on page 12 undefined on input line 40
+LaTeX Warning: Citation `science-contrib' on page 48 undefined on input line 40
 .
 
 
-LaTeX Warning: Citation `science-online' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `science-online' on page 48 undefined on input line 40.
 
 
 
-LaTeX Warning: Citation `science-mono' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `science-mono' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `science-journal' on page 12 undefined on input line 40
+LaTeX Warning: Citation `science-journal' on page 48 undefined on input line 40
 .
 
 
-LaTeX Warning: Citation `science-DOI' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `science-DOI' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-online' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `phys-online' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-mono' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `phys-mono' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-journal' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `phys-journal' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-DOI' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `phys-DOI' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `phys-contrib' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `phys-contrib' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-mono' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-mono' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-online' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-online' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `psysoc-journal' on page 12 undefined on input line 40.
-
-
-
-LaTeX Warning: Citation `psysoc-contrib' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-journal' on page 48 undefined on input line 40.
 
 
 
-LaTeX Warning: Citation `psysoc-DOI' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `psysoc-contrib' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `humlinphil-journal' on page 12 undefined on input line
+
+LaTeX Warning: Citation `psysoc-DOI' on page 48 undefined on input line 40.
+
+
+LaTeX Warning: Citation `humlinphil-journal' on page 48 undefined on input line
  40.
 
 
-LaTeX Warning: Citation `humlinphil-contrib' on page 12 undefined on input line
+LaTeX Warning: Citation `humlinphil-contrib' on page 48 undefined on input line
  40.
 
 
-LaTeX Warning: Citation `humlinphil-mono' on page 12 undefined on input line 40
+LaTeX Warning: Citation `humlinphil-mono' on page 48 undefined on input line 40
 .
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 12 undefined on input line 
+LaTeX Warning: Citation `humlinphil-online' on page 48 undefined on input line 
 40.
 
 
-LaTeX Warning: Citation `humlinphil-DOI' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `humlinphil-DOI' on page 48 undefined on input line 40.
 
 
 
-LaTeX Warning: Citation `basic-contrib' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `basic-contrib' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-online' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `basic-online' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-journal' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `basic-journal' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-DOI' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `basic-DOI' on page 48 undefined on input line 40.
 
 
-LaTeX Warning: Citation `basic-mono' on page 12 undefined on input line 40.
+LaTeX Warning: Citation `basic-mono' on page 48 undefined on input line 40.
 
 
 LaTeX Warning: Empty `thebibliography' environment on input line 41.
 
-) [12]
+) [48]
 \openout2 = `chapter6.aux'.
 
  (./chapter6.tex
 
-LaTeX Warning: Citation `Weinberg:1990rz' on page 13 undefined on input line 21
+LaTeX Warning: Citation `Weinberg:1990rz' on page 49 undefined on input line 21
 .
 
 
-LaTeX Warning: Citation `Weinberg:1991um' on page 13 undefined on input line 21
+LaTeX Warning: Citation `Weinberg:1991um' on page 49 undefined on input line 21
 .
 
 
-LaTeX Warning: Citation `Ordonez:1992xp' on page 13 undefined on input line 21.
+LaTeX Warning: Citation `Ordonez:1992xp' on page 49 undefined on input line 21.
 
 
 
-LaTeX Warning: Citation `Ordonez:1993tn' on page 13 undefined on input line 21.
+LaTeX Warning: Citation `Ordonez:1993tn' on page 49 undefined on input line 21.
 
 
 
-LaTeX Warning: Citation `vanKolck:1994yi' on page 13 undefined on input line 21
+LaTeX Warning: Citation `vanKolck:1994yi' on page 49 undefined on input line 21
 .
 
 
-LaTeX Warning: Citation `Epelbaum:1998hg' on page 13 undefined on input line 21
+LaTeX Warning: Citation `Epelbaum:1998hg' on page 49 undefined on input line 21
 .
 
 
-LaTeX Warning: Citation `Epelbaum:1998ka' on page 13 undefined on input line 21
+LaTeX Warning: Citation `Epelbaum:1998ka' on page 49 undefined on input line 21
 .
 
 
-LaTeX Warning: Citation `Bedaque:2002mn' on page 13 undefined on input line 21.
+LaTeX Warning: Citation `Bedaque:2002mn' on page 49 undefined on input line 21.
 
 
 
-LaTeX Warning: Citation `Epelbaum:2008ga' on page 13 undefined on input line 21
+LaTeX Warning: Citation `Epelbaum:2008ga' on page 49 undefined on input line 21
 .
 
 
-LaTeX Warning: Citation `Lee:2008fa' on page 13 undefined on input line 31.
+LaTeX Warning: Citation `Lee:2008fa' on page 49 undefined on input line 31.
 
 
-LaTeX Warning: Citation `Drut:2012a' on page 13 undefined on input line 31.
+LaTeX Warning: Citation `Drut:2012a' on page 49 undefined on input line 31.
 
 
-LaTeX Warning: Citation `Hubbard:1959ub' on page 13 undefined on input line 40.
+LaTeX Warning: Citation `Hubbard:1959ub' on page 49 undefined on input line 40.
 
 
 
-LaTeX Warning: Citation `Stratonovich:1958' on page 13 undefined on input line 
+LaTeX Warning: Citation `Stratonovich:1958' on page 49 undefined on input line 
 40.
 
 
-LaTeX Warning: Citation `Weingarten:1980hx' on page 13 undefined on input line 
+LaTeX Warning: Citation `Weingarten:1980hx' on page 49 undefined on input line 
 41.
 
 
-LaTeX Warning: Citation `Scalettar:1986uy' on page 13 undefined on input line 4
+LaTeX Warning: Citation `Scalettar:1986uy' on page 49 undefined on input line 4
 2.
 
 
-LaTeX Warning: Citation `Gottlieb:1987mq' on page 13 undefined on input line 42
+LaTeX Warning: Citation `Gottlieb:1987mq' on page 49 undefined on input line 42
 .
 
 
-LaTeX Warning: Citation `Duane:1987de' on page 13 undefined on input line 42.
+LaTeX Warning: Citation `Duane:1987de' on page 49 undefined on input line 42.
 
 
-LaTeX Warning: Citation `Muller:1999cp' on page 13 undefined on input line 44.
+LaTeX Warning: Citation `Muller:1999cp' on page 49 undefined on input line 44.
 
 
-LaTeX Warning: Citation `Lee:2004si' on page 13 undefined on input line 46.
+LaTeX Warning: Citation `Lee:2004si' on page 49 undefined on input line 46.
 
 
-LaTeX Warning: Citation `Lee:2004qd' on page 13 undefined on input line 46.
+LaTeX Warning: Citation `Lee:2004qd' on page 49 undefined on input line 46.
 
 
-LaTeX Warning: Citation `Lee:2005is' on page 13 undefined on input line 46.
+LaTeX Warning: Citation `Lee:2005is' on page 49 undefined on input line 46.
 
 
-LaTeX Warning: Citation `Lee:2005it' on page 13 undefined on input line 46.
+LaTeX Warning: Citation `Lee:2005it' on page 49 undefined on input line 46.
 
 
-LaTeX Warning: Citation `Borasoy:2005yc' on page 13 undefined on input line 48.
-
-
-
-LaTeX Warning: Citation `Borasoy:2006qn' on page 13 undefined on input line 49.
+LaTeX Warning: Citation `Borasoy:2005yc' on page 49 undefined on input line 48.
 
 
 
-LaTeX Warning: Citation `Borasoy:2007vi' on page 13 undefined on input line 50.
+LaTeX Warning: Citation `Borasoy:2006qn' on page 49 undefined on input line 49.
 
 
 
-LaTeX Warning: Citation `Borasoy:2007vk' on page 13 undefined on input line 50.
+LaTeX Warning: Citation `Borasoy:2007vi' on page 49 undefined on input line 50.
 
 
 
-LaTeX Warning: Citation `Wlazlowski:2014jna' on page 13 undefined on input line
+LaTeX Warning: Citation `Borasoy:2007vk' on page 49 undefined on input line 50.
+
+
+
+LaTeX Warning: Citation `Wlazlowski:2014jna' on page 49 undefined on input line
  50.
 
 
-LaTeX Warning: Citation `Epelbaum:2009zs' on page 13 undefined on input line 50
+LaTeX Warning: Citation `Epelbaum:2009zs' on page 49 undefined on input line 50
 .
 
 
-LaTeX Warning: Citation `Epelbaum:2009pd' on page 13 undefined on input line 50
+LaTeX Warning: Citation `Epelbaum:2009pd' on page 49 undefined on input line 50
 .
 
 
-LaTeX Warning: Citation `Epelbaum:2011md' on page 13 undefined on input line 50
+LaTeX Warning: Citation `Epelbaum:2011md' on page 49 undefined on input line 50
 .
 
 
-LaTeX Warning: Citation `Epelbaum:2012qn' on page 13 undefined on input line 50
+LaTeX Warning: Citation `Epelbaum:2012qn' on page 49 undefined on input line 50
 .
 
 
-LaTeX Warning: Citation `Epelbaum:2012iu' on page 13 undefined on input line 50
+LaTeX Warning: Citation `Epelbaum:2012iu' on page 49 undefined on input line 50
 .
 
 
-LaTeX Warning: Citation `Lahde:2013uqa' on page 13 undefined on input line 50.
+LaTeX Warning: Citation `Lahde:2013uqa' on page 49 undefined on input line 50.
 
 
-LaTeX Warning: Citation `Epelbaum:2013paa' on page 13 undefined on input line 5
+LaTeX Warning: Citation `Epelbaum:2013paa' on page 49 undefined on input line 5
 0.
 
 
-LaTeX Warning: Citation `Elhatisari:2016owd' on page 13 undefined on input line
+LaTeX Warning: Citation `Elhatisari:2016owd' on page 49 undefined on input line
  50.
 
 
-LaTeX Warning: Citation `Rupak:2013aue' on page 13 undefined on input line 50.
+LaTeX Warning: Citation `Rupak:2013aue' on page 49 undefined on input line 50.
 
 
-LaTeX Warning: Citation `Rupak:2014xza' on page 13 undefined on input line 50.
+LaTeX Warning: Citation `Rupak:2014xza' on page 49 undefined on input line 50.
 
 
-LaTeX Warning: Citation `Elhatisari:2015iga' on page 13 undefined on input line
+LaTeX Warning: Citation `Elhatisari:2015iga' on page 49 undefined on input line
  50.
 
-[13
+[49
 
 
 
 
 ]
 
-LaTeX Warning: Citation `Epelbaum:2009zs' on page 14 undefined on input line 60
+LaTeX Warning: Citation `Epelbaum:2009zs' on page 50 undefined on input line 60
 .
 
 
-LaTeX Warning: Citation `Luscher:1985dn' on page 14 undefined on input line 63.
+LaTeX Warning: Citation `Luscher:1985dn' on page 50 undefined on input line 63.
 
 
 
-LaTeX Warning: Citation `Luscher:1986pf' on page 14 undefined on input line 63.
+LaTeX Warning: Citation `Luscher:1986pf' on page 50 undefined on input line 63.
 
 
 
-LaTeX Warning: Citation `Luscher:1991ux' on page 14 undefined on input line 63.
+LaTeX Warning: Citation `Luscher:1991ux' on page 50 undefined on input line 63.
 
 
 
-LaTeX Warning: Citation `Borasoy:2007vy' on page 14 undefined on input line 68.
+LaTeX Warning: Citation `Borasoy:2007vy' on page 50 undefined on input line 68.
 
 
 
-LaTeX Warning: Citation `Carlson:1984' on page 14 undefined on input line 68.
+LaTeX Warning: Citation `Carlson:1984' on page 50 undefined on input line 68.
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 72.
 
-LaTeX Warning: Citation `Borasoy:2007vi' on page 14 undefined on input line 92.
+LaTeX Warning: Citation `Borasoy:2007vi' on page 50 undefined on input line 92.
 
 
 
-LaTeX Warning: Citation `Lu:2015riz' on page 14 undefined on input line 94.
+LaTeX Warning: Citation `Lu:2015riz' on page 50 undefined on input line 94.
 
-[14]
+[50]
 
-LaTeX Warning: Citation `Lu:2015riz' on page 15 undefined on input line 103.
-
-
-LaTeX Warning: Citation `Pine:2013zja' on page 15 undefined on input line 116.
+LaTeX Warning: Citation `Lu:2015riz' on page 51 undefined on input line 103.
 
 
-LaTeX Warning: Citation `Elhatisari:2014lka' on page 15 undefined on input line
+LaTeX Warning: Citation `Pine:2013zja' on page 51 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Elhatisari:2014lka' on page 51 undefined on input line
  116.
 
 
-LaTeX Warning: Citation `Elhatisari:2015iga' on page 15 undefined on input line
+LaTeX Warning: Citation `Elhatisari:2015iga' on page 51 undefined on input line
  116.
 
 
-LaTeX Warning: Citation `Rokash:2015hra' on page 15 undefined on input line 116
+LaTeX Warning: Citation `Rokash:2015hra' on page 51 undefined on input line 116
 .
 
 
-LaTeX Warning: Citation `Elhatisari:2016owd' on page 15 undefined on input line
+LaTeX Warning: Citation `Elhatisari:2016owd' on page 51 undefined on input line
  116.
 
 
@@ -1845,40 +2598,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--179
 
  []
 
-[15] <Chapter6-figures/formalism.png, id=705, 439.8834pt x 249.5724pt>
+[51] <Chapter6-figures/formalism.png, id=1441, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
 Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 208.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
-LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
-(Font)              Font shape `T1/fve/b/sl' tried instead on input line 217.
-LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
-(Font)              scaled to size 10.79993pt on input line 217.
- [16 <./Chapter6-figures/formalism.png>]
+ [52 <./Chapter6-figures/formalism.png>]
 
-LaTeX Warning: Citation `Creutz:1988wv' on page 17 undefined on input line 318.
+LaTeX Warning: Citation `Creutz:1988wv' on page 53 undefined on input line 318.
 
 
 
-LaTeX Warning: Citation `Creutz:1999zy' on page 17 undefined on input line 318.
+LaTeX Warning: Citation `Creutz:1999zy' on page 53 undefined on input line 318.
 
 
-[17]
+[53]
 
-LaTeX Warning: Citation `Carlson:2014vla' on page 18 undefined on input line 36
+LaTeX Warning: Citation `Carlson:2014vla' on page 54 undefined on input line 36
 1.
 
-<Chapter6-figures/worldlines.png, id=741, 579.6054pt x 495.7722pt>
+<Chapter6-figures/worldlines.png, id=1474, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
 Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 370
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
- [18] [19 <./Chapter6-figures/worldlines.png>] [20] [21]
-<Chapter6-figures/HSworldlines.png, id=794, 579.6054pt x 495.7722pt>
+ [54] [55 <./Chapter6-figures/worldlines.png>] [56] [57]
+<Chapter6-figures/HSworldlines.png, id=1528, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -1886,7 +2635,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 10.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=798, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=1532, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -1897,7 +2646,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 630.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 630.
 
-<Chapter6-figures/getzdualvecs.png, id=799, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=1533, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -1909,32 +2658,32 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 644.
 
-<Chapter6-figures/call_getzvecs.png, id=800, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=1534, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
 Package pdftex.def Info: Chapter6-figures/call_getzvecs.png used on input line 
 659.
 (pdftex.def)             Requested size: 247.7999pt x 91.04872pt.
- [22 <./Chapter6-figures/HSworldlines.png>]
+ [58 <./Chapter6-figures/HSworldlines.png>]
 
-LaTeX Warning: Citation `Scalettar:1986uy' on page 23 undefined on input line 6
+LaTeX Warning: Citation `Scalettar:1986uy' on page 59 undefined on input line 6
 76.
 
 
-LaTeX Warning: Citation `Gottlieb:1987mq' on page 23 undefined on input line 67
+LaTeX Warning: Citation `Gottlieb:1987mq' on page 59 undefined on input line 67
 6.
 
 
-LaTeX Warning: Citation `Duane:1987de' on page 23 undefined on input line 676.
+LaTeX Warning: Citation `Duane:1987de' on page 59 undefined on input line 676.
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4
+[59pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.702 \end{equation}
-                     <./Chapter6-figures/getzvecs.png>] [24pdfTeX warning (ext4
+                     <./Chapter6-figures/getzvecs.png>] [60pdfTeX warning (ext4
 ): destination with the same identifier (name{figure.6.5}) has been already use
 d, duplicate ignored
 
@@ -1943,156 +2692,149 @@ d, duplicate ignored
 l.712 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=827, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=1560, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 785.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
- [25]
-<Chapter6-figures/dVds.png, id=844, 507.8975pt x 367.3725pt>
+ [61]
+<Chapter6-figures/dVds.png, id=1577, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 808.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=846, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=1579, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
 Package pdftex.def Info: Chapter6-figures/accept.png used on input line 827.
 (pdftex.def)             Requested size: 291.45789pt x 182.09746pt.
- [26 <./Chapter6-figures/bose_sum.png> <./Chapter6-figures/dVds.png>] [27 <./Ch
-apter6-figures/accept.png>]) [28]
+ [62 <./Chapter6-figures/bose_sum.png> <./Chapter6-figures/dVds.png>] [63 <./Ch
+apter6-figures/accept.png>]) [64]
 \openout2 = `chapter7.aux'.
 
 
-(./chapter7.tex [29
+(./chapter7.tex [65
 
 
 
 
 ]
 
-LaTeX Warning: Citation `science-contrib' on page 30 undefined on input line 41
+LaTeX Warning: Citation `science-contrib' on page 66 undefined on input line 41
 .
 
 
-LaTeX Warning: Citation `science-online' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `science-online' on page 66 undefined on input line 41.
 
 
 
-LaTeX Warning: Citation `science-mono' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `science-mono' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `science-journal' on page 30 undefined on input line 41
+LaTeX Warning: Citation `science-journal' on page 66 undefined on input line 41
 .
 
 
-LaTeX Warning: Citation `science-DOI' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `science-DOI' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `phys-online' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `phys-online' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `phys-mono' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `phys-mono' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `phys-journal' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `phys-journal' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `phys-DOI' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `phys-DOI' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `phys-contrib' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `phys-contrib' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `psysoc-mono' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `psysoc-mono' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `psysoc-online' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `psysoc-online' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `psysoc-journal' on page 30 undefined on input line 41.
-
-
-
-LaTeX Warning: Citation `psysoc-contrib' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `psysoc-journal' on page 66 undefined on input line 41.
 
 
 
-LaTeX Warning: Citation `psysoc-DOI' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `psysoc-contrib' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `humlinphil-journal' on page 30 undefined on input line
+
+LaTeX Warning: Citation `psysoc-DOI' on page 66 undefined on input line 41.
+
+
+LaTeX Warning: Citation `humlinphil-journal' on page 66 undefined on input line
  41.
 
 
-LaTeX Warning: Citation `humlinphil-contrib' on page 30 undefined on input line
+LaTeX Warning: Citation `humlinphil-contrib' on page 66 undefined on input line
  41.
 
 
-LaTeX Warning: Citation `humlinphil-mono' on page 30 undefined on input line 41
+LaTeX Warning: Citation `humlinphil-mono' on page 66 undefined on input line 41
 .
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 30 undefined on input line 
+LaTeX Warning: Citation `humlinphil-online' on page 66 undefined on input line 
 41.
 
 
-LaTeX Warning: Citation `humlinphil-DOI' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `humlinphil-DOI' on page 66 undefined on input line 41.
 
 
 
-LaTeX Warning: Citation `basic-contrib' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `basic-contrib' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-online' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `basic-online' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-journal' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `basic-journal' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-DOI' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `basic-DOI' on page 66 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-mono' on page 30 undefined on input line 41.
+LaTeX Warning: Citation `basic-mono' on page 66 undefined on input line 41.
 
 
 LaTeX Warning: Empty `thebibliography' environment on input line 42.
 
-) [30]
+) [66]
 \openout2 = `chapter8.aux'.
 
  (./chapter8.tex
 
-LaTeX Warning: Reference `chap:chapter9' on page 31 undefined on input line 16.
+LaTeX Warning: Reference `chap:chapter9' on page 67 undefined on input line 16.
 
 
 
-LaTeX Warning: Reference `chap:chapter10' on page 31 undefined on input line 16
+LaTeX Warning: Reference `chap:chapter10' on page 67 undefined on input line 16
 .
 
-[31
+[67
 
 
 
 
-] [32] [33] [34] [35] [36] [37] [38] [39]
+] [68] [69] [70] [71] [72] [73] [74] [75]
 Overfull \hbox (85.6646pt too wide) in paragraph at lines 745--755
 \T1/fve/m/n/10 The lat-ter is noth-ing but a stan-dard eigen-value prob-lem. Co
 m-pared with Eq. (refeq:hartreefockcoordinatespace),
  []
 
-[40] [41] [42]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 971.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 971.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 971.
-
+[76] [77] [78]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 971.
@@ -2101,260 +2843,266 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 971.
 
-[43]
+[79]
 
-LaTeX Warning: Reference `fig:goldstone' on page 44 undefined on input line 101
+LaTeX Warning: Reference `fig:goldstone' on page 80 undefined on input line 101
 8.
 
-[44]
+[80]
 
-LaTeX Warning: Reference `fig:goldstone' on page 45 undefined on input line 109
+LaTeX Warning: Reference `fig:goldstone' on page 81 undefined on input line 109
 7.
 
 
-LaTeX Warning: Reference `fig:goldstone' on page 45 undefined on input line 114
+LaTeX Warning: Reference `fig:goldstone' on page 81 undefined on input line 114
 4.
 
 
-LaTeX Warning: Reference `fig:goldstone' on page 45 undefined on input line 114
+LaTeX Warning: Reference `fig:goldstone' on page 81 undefined on input line 114
 5.
 
-[45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59]
-[60] [61] [62] [63] [64] [65] [66] [67] [68]
+[81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95]
+[96] [97] [98] [99] [100] [101] [102] [103] [104]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
 (Font)              using `T1/fve/m/n' instead on input line 2660.
 
-[69] [70] [71] [72] [73] [74]
+[105] [106] [107] [108] [109] [110]
 Overfull \hbox (61.6545pt too wide) in paragraph at lines 2884--2884
 [] 
  []
 
-[75] <Chapter8-figures/fig1.pdf, id=1234, 500.87437pt x 400.11984pt>
+[111] <Chapter8-figures/fig1.pdf, id=1968, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
 Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2905.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=1235, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=1969, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
 Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2911.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
- [76 <./Chapter8-figures/fig1.pdf>] [77 <./Chapter8-figures/fig2.pdf>]
-<Chapter8-figures/fig3.pdf, id=1359, 523.75674pt x 407.53818pt>
+ [112 <./Chapter8-figures/fig1.pdf>] [113 <./Chapter8-figures/fig2.pdf>]
+<Chapter8-figures/fig3.pdf, id=2092, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
 Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2950.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=1360, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=2093, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
 Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2956.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
-) [78 <./Chapter8-figures/fig3.pdf>] [79 <./Chapter8-figures/fig4.pdf>]
+) [114 <./Chapter8-figures/fig3.pdf>] [115 <./Chapter8-figures/fig4.pdf>]
 \openout2 = `chapter9.aux'.
 
- (./chapter9.tex [80
+ (./chapter9.tex [116
 
 
 
 
-] [81]
+] [117]
 
-LaTeX Warning: Citation `science-contrib' on page 82 undefined on input line 42
+LaTeX Warning: Citation `science-contrib' on page 118 undefined on input line 4
+2.
+
+
+LaTeX Warning: Citation `science-online' on page 118 undefined on input line 42
 .
 
 
-LaTeX Warning: Citation `science-online' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `science-mono' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `science-journal' on page 118 undefined on input line 4
+2.
+
+
+LaTeX Warning: Citation `science-DOI' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `phys-online' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `phys-mono' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `phys-journal' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `phys-DOI' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `phys-contrib' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `psysoc-mono' on page 118 undefined on input line 42.
+
+
+LaTeX Warning: Citation `psysoc-online' on page 118 undefined on input line 42.
 
 
 
-LaTeX Warning: Citation `science-mono' on page 82 undefined on input line 42.
-
-
-LaTeX Warning: Citation `science-journal' on page 82 undefined on input line 42
+LaTeX Warning: Citation `psysoc-journal' on page 118 undefined on input line 42
 .
 
 
-LaTeX Warning: Citation `science-DOI' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `psysoc-contrib' on page 118 undefined on input line 42
+.
 
 
-LaTeX Warning: Citation `phys-online' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `psysoc-DOI' on page 118 undefined on input line 42.
 
 
-LaTeX Warning: Citation `phys-mono' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `humlinphil-journal' on page 118 undefined on input lin
+e 42.
 
 
-LaTeX Warning: Citation `phys-journal' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `humlinphil-contrib' on page 118 undefined on input lin
+e 42.
 
 
-LaTeX Warning: Citation `phys-DOI' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `humlinphil-mono' on page 118 undefined on input line 4
+2.
 
 
-LaTeX Warning: Citation `phys-contrib' on page 82 undefined on input line 42.
-
-
-LaTeX Warning: Citation `psysoc-mono' on page 82 undefined on input line 42.
-
-
-LaTeX Warning: Citation `psysoc-online' on page 82 undefined on input line 42.
-
-
-LaTeX Warning: Citation `psysoc-journal' on page 82 undefined on input line 42.
-
-
-
-LaTeX Warning: Citation `psysoc-contrib' on page 82 undefined on input line 42.
-
-
-
-LaTeX Warning: Citation `psysoc-DOI' on page 82 undefined on input line 42.
-
-
-LaTeX Warning: Citation `humlinphil-journal' on page 82 undefined on input line
+LaTeX Warning: Citation `humlinphil-online' on page 118 undefined on input line
  42.
 
 
-LaTeX Warning: Citation `humlinphil-contrib' on page 82 undefined on input line
- 42.
-
-
-LaTeX Warning: Citation `humlinphil-mono' on page 82 undefined on input line 42
+LaTeX Warning: Citation `humlinphil-DOI' on page 118 undefined on input line 42
 .
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 82 undefined on input line 
-42.
-
-
-LaTeX Warning: Citation `humlinphil-DOI' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `basic-contrib' on page 118 undefined on input line 42.
 
 
 
-LaTeX Warning: Citation `basic-contrib' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `basic-online' on page 118 undefined on input line 42.
 
 
-LaTeX Warning: Citation `basic-online' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `basic-journal' on page 118 undefined on input line 42.
 
 
-LaTeX Warning: Citation `basic-journal' on page 82 undefined on input line 42.
+
+LaTeX Warning: Citation `basic-DOI' on page 118 undefined on input line 42.
 
 
-LaTeX Warning: Citation `basic-DOI' on page 82 undefined on input line 42.
-
-
-LaTeX Warning: Citation `basic-mono' on page 82 undefined on input line 42.
+LaTeX Warning: Citation `basic-mono' on page 118 undefined on input line 42.
 
 
 LaTeX Warning: Empty `thebibliography' environment on input line 43.
 
-) [82]
+) [118]
 \openout2 = `chapter10.aux'.
 
- (./chapter10.tex [83
+ (./chapter10.tex [119
 
 
 
 
 ]
 
-LaTeX Warning: Citation `science-contrib' on page 84 undefined on input line 41
+LaTeX Warning: Citation `science-contrib' on page 120 undefined on input line 4
+1.
+
+
+LaTeX Warning: Citation `science-online' on page 120 undefined on input line 41
 .
 
 
-LaTeX Warning: Citation `science-online' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `science-mono' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `science-journal' on page 120 undefined on input line 4
+1.
+
+
+LaTeX Warning: Citation `science-DOI' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `phys-online' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `phys-mono' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `phys-journal' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `phys-DOI' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `phys-contrib' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `psysoc-mono' on page 120 undefined on input line 41.
+
+
+LaTeX Warning: Citation `psysoc-online' on page 120 undefined on input line 41.
 
 
 
-LaTeX Warning: Citation `science-mono' on page 84 undefined on input line 41.
-
-
-LaTeX Warning: Citation `science-journal' on page 84 undefined on input line 41
+LaTeX Warning: Citation `psysoc-journal' on page 120 undefined on input line 41
 .
 
 
-LaTeX Warning: Citation `science-DOI' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `psysoc-contrib' on page 120 undefined on input line 41
+.
 
 
-LaTeX Warning: Citation `phys-online' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `psysoc-DOI' on page 120 undefined on input line 41.
 
 
-LaTeX Warning: Citation `phys-mono' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `humlinphil-journal' on page 120 undefined on input lin
+e 41.
 
 
-LaTeX Warning: Citation `phys-journal' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `humlinphil-contrib' on page 120 undefined on input lin
+e 41.
 
 
-LaTeX Warning: Citation `phys-DOI' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `humlinphil-mono' on page 120 undefined on input line 4
+1.
 
 
-LaTeX Warning: Citation `phys-contrib' on page 84 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-mono' on page 84 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-online' on page 84 undefined on input line 41.
-
-
-LaTeX Warning: Citation `psysoc-journal' on page 84 undefined on input line 41.
-
-
-
-LaTeX Warning: Citation `psysoc-contrib' on page 84 undefined on input line 41.
-
-
-
-LaTeX Warning: Citation `psysoc-DOI' on page 84 undefined on input line 41.
-
-
-LaTeX Warning: Citation `humlinphil-journal' on page 84 undefined on input line
+LaTeX Warning: Citation `humlinphil-online' on page 120 undefined on input line
  41.
 
 
-LaTeX Warning: Citation `humlinphil-contrib' on page 84 undefined on input line
- 41.
-
-
-LaTeX Warning: Citation `humlinphil-mono' on page 84 undefined on input line 41
+LaTeX Warning: Citation `humlinphil-DOI' on page 120 undefined on input line 41
 .
 
 
-LaTeX Warning: Citation `humlinphil-online' on page 84 undefined on input line 
-41.
-
-
-LaTeX Warning: Citation `humlinphil-DOI' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `basic-contrib' on page 120 undefined on input line 41.
 
 
 
-LaTeX Warning: Citation `basic-contrib' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `basic-online' on page 120 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-online' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `basic-journal' on page 120 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-journal' on page 84 undefined on input line 41.
+
+LaTeX Warning: Citation `basic-DOI' on page 120 undefined on input line 41.
 
 
-LaTeX Warning: Citation `basic-DOI' on page 84 undefined on input line 41.
-
-
-LaTeX Warning: Citation `basic-mono' on page 84 undefined on input line 41.
+LaTeX Warning: Citation `basic-mono' on page 120 undefined on input line 41.
 
 
 LaTeX Warning: Empty `thebibliography' environment on input line 42.
 
-) [84]
+) [120]
 \openout2 = `chapter11.aux'.
 
- (./chapter11.tex) [85
+ (./chapter11.tex) [121
 
 
 
@@ -2369,7 +3117,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 19C3E9B231605F9869FC3D2E81797243;8531.
+(rerunfilecheck)             Checksum: B786C2CBE07ECF472569EB8186BE1EAB;9547.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2383,32 +3131,36 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
  ) 
 Here is how much of TeX's memory you used:
- 18981 strings out of 493089
- 307008 string characters out of 6134842
- 430678 words of memory out of 5000000
- 21561 multiletter control sequences out of 15000+600000
- 116057 words of font info for 171 fonts, out of 8000000 for 9000
+ 19697 strings out of 493089
+ 317079 string characters out of 6134842
+ 456439 words of memory out of 5000000
+ 21838 multiletter control sequences out of 15000+600000
+ 121401 words of font info for 192 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,14n,40p,1929b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,14n,40p,1929b,1628s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/bera/fvmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsf
-s/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (94 pages, 1168116 bytes).
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/bera/fvmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs
+/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on lnp.pdf (130 pages, 2005386 bytes).
 PDF statistics:
- 1676 PDF objects out of 1728 (max. 8388607)
- 1395 compressed objects within 14 object streams
- 432 named destinations out of 1000 (max. 500000)
- 890 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2504 PDF objects out of 2984 (max. 8388607)
+ 2156 compressed objects within 22 object streams
+ 852 named destinations out of 1000 (max. 500000)
+ 1025 words of extra memory for PDF output out of 10000 (max. 10000000)
 
