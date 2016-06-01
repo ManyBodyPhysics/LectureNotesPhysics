@@ -6,10 +6,10 @@
 \abstract{We present a computational approach to infinite nuclear matter employing
 Hartree-Fock theory, many-body perturbation theory and coupled cluster
 theory. These lectures are closely linked with those in
-chapters \ref{chap:chapter9} and \ref{chap:chapter10} and serve as
+chapters \ref{chap:chapter9}, \ref{chap:chapter10} and \ref{chap:chapter11} and serve as
 input for the correlation functions employed in Monte Carlo
-calculations and in-medium similarity renormalization group theory of
-dense fermionic systems.  We provide extensive code examples and
+calculations in chapter \ref{chap:chapter9}, the in-medium similarity renormalization group theory of
+dense fermionic systems of chapter chapter \ref{chap:chapter10} and the Green's function approach in chapter \ref{chap:chapter11}.  We provide extensive code examples and
 benchmark calculations, allowing thereby an eventual reader to start
 writing her/his own codes. We start with an object-oriented serial
 code and end with in-depth discussions on strategies for porting the
@@ -23,10 +23,16 @@ code to present and planned high-performance computing facilities. }
 Studies of infinite nuclear matter play an important role in nuclear
 physics. The aim of this part of the lectures is to provide the
 necessary ingredients for perfoming studies of neutron star matter (or
-matter in $\beta$-equilibrium) and symmetric nuclear matter. The
-framework and formalism can easily be extended to other dense and homogeneous 
-fermionic systems such as the electron gas in two and three
-dimensions.
+matter in $\beta$-equilibrium) and symmetric nuclear matter.  We will
+mainly focus on pure neutron matter, but the framework and formalism
+can easily be extended to other dense and homogeneous fermionic
+systems such as the electron gas in two and three dimensions. The
+introductory material we present here forms also the basis for the
+next three chapters, starting with the definition of the
+single-particle basis and our Hamiltonians as well as Hartree-Fock
+theory. For infinite matter, due to the translational invariance of
+the Hamiltonian, the single-particle basis, in terms of plane waves,
+unchanged under Hartree-Fock calculations.
 
 Studies of dense baryonic matter are of central importance to our
 basic understanding of the stability of nuclear matter, spanning from
@@ -37,11 +43,37 @@ Neutron star matter at densities of 0.1 fm$^{-3}$ and greater, is
 often assumed to be made of mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
-transitions to quark degrees of freedom at higher densities.  In these notes we limit ourselves to
-matter composed of neutrons and protons only in 
-chemical and electrical equilibrium.  Furthermore, we will also
+transitions to quark degrees of freedom at higher densities \cite{hh2000}.  
+In these notes we limit ourselves to
+matter composed of neutrons only.  Furthermore, we will also
 consider matter at temperatures much lower than the typical Fermi
-energies.  The equilibrium conditions are governed by the weak
+energies.  
+
+In the next section we present some of the basic quantities that enter the different many-body methods 
+discussed in this and the three subsequent chapters. All these methods start with some single-particle basis states,
+normally obtained via the solution of mean-field approaches like  Hartree-Fock theory. Contributions from 
+correlations beyond such a mean-field basis to selected observables, are then obtained
+via a plethora of many-body methods. These methods represent different mathematical algorithms used to solve either 
+Schr\"{o}dinger's or Dirac's equations for many interacting fermions. After the definitions of our basis states, we derive the Hartree-Fock equations
+in the subsequent section and move on with many-body perturbation theory, full configuration interaction theory and coupled cluster theory. 
+Monte Carlo methods, Green's function theory approaches and Similarity Renormlization group approaches are discussed in the subsequent three chapters. 
+
+The strengths and weaknesses of these methods are discussed throughout these chapters, with applications to either a simple pairing model
+and/or pure neutron matter. Our focus will be on pure neutron matter, starting with a simple model for the interaction
+between nucleons. This allows us to focus on the pedagogical and algorithmic aspects of the various many-body methods, avoiding thereby the  full complexity of nuclear forces.
+If properly written however, the codes can easily be extended to include models of the nuclear interactions based on effective field theory \cite{eft} and other baryon species than just neutrons. In our conclusions we point  back to models for nuclear forces and their links to the underlying theory of the strong interaction discussed in the first chapters of this book, bridging thereby the gap between the theory of nuclear Hamiltonians and many-body methods. 
+
+
+\section{Single-particle basis, Hamiltonians and models for the nuclear force}
+
+
+Although our focus here and in the coming chapters is on neutron matter only, 
+our formalism lends itself easily to studies of nuclear  matter 
+with a given proton fraction and electrons. In this section we outline some of the background details, with a focus on the calculational basis
+and the representation of a nuclear Hamiltonian. 
+
+Neutron star matter is not composed of only neutrons. Rather, matter is composed of various baryons and leptons in chemical and charge equilibrium.
+The equilibrium conditions are governed by the weak
 processes (normally referred to as the processes for
 $\beta$-equilibrium)
 \begin{equation} 
@@ -49,22 +81,21 @@ $\beta$-equilibrium)
 +\nu_l,
       \label{eq:betadecay}
 \end{equation}
-where $b_1$ and $b_2$ refer to e.g.\  the baryons being a neutron and a proton, 
-respectively, 
-$l$ is either an electron or a muon and  $\bar{\nu}_l $
-and $\nu_l$ their respective anti-neutrinos and neutrinos. Muons typically 
+where $b_1$ and $b_2$ refer to  different types of baryons, for example a neutron and a proton.  
+The symbol $l$ is either an electron or a muon and  $\bar{\nu}_l $
+and $\nu_l$ their respective anti-neutrinos and neutrinos. Leptons like muons 
 appear at
 a density close to nuclear matter saturation density, the latter being
 \[
      n_0 \approx 0.16 \pm 0.02 \hspace{1cm} \mathrm{fm}^{-3},
 \]
-with a corresponding binding energy ${\cal E}_0$ 
+with a corresponding energy per baryon ${\cal E}_0$ 
 for symmetric nuclear matter at saturation density of
 \[
      {\cal E}_0 = B/A=-15.6\pm 0.2 \hspace{1cm} \mathrm{MeV}.
 \]
-The
-pressure $P$ is defined through the relation
+The energy per baryon is the central quantity in the present studies. From the energy per baryon, we can define the pressure 
+$P$ which counteracts the gravitional forces and hinders the gravitational collapse of neutron start. The pressure  is defined through the relation
 \begin{equation}
     P=n^2\frac{\partial {\cal E}}{\partial n}=
       n\frac{\partial \varepsilon}{\partial n}-\varepsilon.
@@ -77,16 +108,16 @@ is given by
      \label{eq:chemicalpotdef}
 \end{equation}
 In calculations of properties of neutron star matter in $\beta$-equilibrium,
-we will need to calculate the energy per baryon ${\cal E}$ for e.g.~several 
-proton fractions $x_p$, which corresponds to
+we need to calculate the energy per baryon ${\cal E}$ for e.g.~several 
+proton fractions $x_p$. The proton fraction corresponds to
 the ratio of protons as
-compared to the total nucleon number ($Z/A$), 
+compared to the total nucleon number ($Z/A$). It is 
  defined as
 \begin{equation}
     x_p = \frac{n_p}{n},
 \end{equation}
 where $n=n_p+n_n$, the total baryonic density if neutrons and
-protons are the only baryons present. In that case,
+protons are the only baryons present. If this is the case,
 the total Fermi momentum $k_F$ and the Fermi momenta $k_{Fp}$,
 $k_{Fn}$ for protons and neutrons are related to the total nucleon density
 $n$ by
@@ -97,8 +128,8 @@ $n$ by
     \label{eq:densi}
 \end{align}
 The energy per baryon will thus be
-labelled as ${\cal E}(n,x_p)$.
-${\cal E}(n,0)$ will then refer to the energy per baryon for pure neutron
+labelled as ${\cal E}(n,x_p)$. The quantity
+${\cal E}(n,0)$ refers then to the energy per baryon for pure neutron
 matter (PNM) while ${\cal E}(n,\frac{1}{2})$ is the corresponding value for 
 SNM. Furthermore, in this work, subscripts $n,p,e,\mu$
 will always refer to neutrons, protons, electrons and muons, respectively.
@@ -175,13 +206,12 @@ $\frac{1}{2}$.
 Typical values for ${\cal S} (n)$ at $n_0$ are in the range $27-38$ MeV.
 For densities greater than $n_0$ it is more difficult to get a reliable 
 information on the symmetry energy, and thereby the related proton fraction.
-We will shed more light on this topic in the next subsection.
 
 
 
 
 
-\section{Single-particle basis, Hamiltonians and models for the nuclear force}
+
 We begin our discussion
 \[
   \Phi_{AS}(\alpha_1, \dots, \alpha_A; x_1, \dots x_A)=
@@ -2959,6 +2989,16 @@ This technique gives results which depend much less on the particle number, but 
 \end{figure}
 
 
+\section{Conclusions}
 
 
+\section{Exercises}
+
+\begin{prob}
+
+\end{prob}
+
+\begin{acknowledgement}
+If you want to include acknowledgments of assistance and the like at the end of an individual chapter please use the \verb|acknowledgement| environment -- it will automatically render Springer's preferred layout.
+\end{acknowledgement}
 

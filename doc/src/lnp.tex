@@ -29,13 +29,138 @@
  \usepackage{hyperref}
  \usepackage{bezier}
  \usepackage{pstricks}
-% \usepackage{refcheck}
+%\usepackage{refcheck}
 \setcounter{tocdepth}{2}
-
 \usepackage{textcomp,type1ec,pdfpages}
 \usepackage{bera}
 
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 
+ \lstset{language=c++}
+ \lstset{alsolanguage=[90]Fortran}
+ \lstset{alsolanguage=python}
+% \lstset{basicstyle=\small}
+ \lstset{backgroundcolor=\color{white}}
+ \lstset{frame=single}
+ \lstset{stringstyle=\ttfamily}
+ \lstset{keywordstyle=\color{red}\bfseries}
+ \lstset{commentstyle=\itshape\color{blue}}
+ \lstset{showspaces=false}
+ \lstset{showstringspaces=false}
+ \lstset{showtabs=false}
+ \lstset{breaklines}
+ 
+
+% Default settings for code listings
+% \lstnewenvironment{Python}[1]{
+\lstset{%frame=tb,
+  language=c++,
+  alsolanguage=python,
+  %aboveskip=3mm,
+ % belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+ frame=single,  
+  breaklines=true,
+  %%%% FOR PYTHON 
+  otherkeywords={\ , \}, \{},
+  keywordstyle=\color{blue},
+  emph={void, ||, &&, break, class,continue, delete, else,
+  for, if, include, return,try,while},
+  emphstyle=\color{black}\bfseries,
+  emph={[2]True, False, None, self},
+  emphstyle=[2]\color{dkgreen},
+  emphstyle=[2]\color{red},
+  emph={[3]from, import, as},
+  emphstyle=[3]\color{blue},
+  upquote=true,
+  morecomment=[s]{"""}{"""},
+  commentstyle=\color{green}\slshape, %%% cambie gray por green
+  emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+  emphstyle=[4]\color{blue},
+  breakatwhitespace=true,
+  tabsize=2
+}
+
+\renewcommand{\lstlistlistingname}{Code Listings}
+\renewcommand{\lstlistingname}{Code Listing}
+\definecolor{gray}{gray}{0.5}
+\definecolor{green}{rgb}{0,0.5,0}
+
+\lstnewenvironment{Python}[1]{
+\lstset{
+language=python,
+basicstyle=\footnotesize\setstretch{1},
+stringstyle=\color{red},
+showstringspaces=false,
+alsoletter={1234567890},
+otherkeywords={\ , \}, \{},
+keywordstyle=\color{blue},
+emph={access,and,break,class,continue,def,del,elif ,else,%
+except,exec,finally,for,from,global,if,import,in,is,%
+lambda,not,or,pass,print,raise,return,try,while},
+emphstyle=\color{black}\bfseries,
+emph={[2]True, False, None, self},
+emphstyle=[2]\color{red},
+emph={[3]from, import, as},
+emphstyle=[3]\color{blue},
+upquote=true,
+morecomment=[s]{"""}{"""},
+commentstyle=\color{dkgreen}\slshape, % el color era gray pero lo cambie a verde
+emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+emphstyle=[4]\color{blue},
+framexleftmargin=1mm, framextopmargin=1mm, rulesepcolor=\color{blue},
+breakatwhitespace=true,
+tabsize=2
+}}{}
+
+
+\lstnewenvironment{C++}[1]{
+\lstset{
+language=c++,
+% basicstyle=\ttfamily\small\setstretch{1},
+basicstyle=\footnotesize\setstretch{1},
+stringstyle=\color{red},
+showstringspaces=false,
+alsoletter={1234567890},
+otherkeywords={\ , \}, \{},
+keywordstyle=\color{blue},
+emph={access,and,break,class,continue,def,del,elif ,else,%
+except,exec,finally,for,from,global,if,import,in,is,%
+lambda,not,or,pass,print,raise,return,try,while},
+emphstyle=\color{black}\bfseries,
+emph={[2]True, False, None, self},
+emphstyle=[2]\color{red},
+emph={[3]from, import, as},
+emphstyle=[3]\color{blue},
+upquote=true,
+morecomment=[s]{"""}{"""},
+commentstyle=\color{dkgreen}\slshape, % el color era gray pero lo cambie a verde
+emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+emphstyle=[4]\color{blue},
+% literate=*{:}{{\textcolor{blue}:}}{1}%
+% {=}{{\textcolor{blue}=}}{1}%
+% {-}{{\textcolor{blue}-}}{1}%
+% {+}{{\textcolor{blue}+}}{1}%
+% {*}{{\textcolor{blue}*}}{1}%
+% {!}{{\textcolor{blue}!}}{1}%
+% {(}{{\textcolor{blue}(}}{1}%
+% {)}{{\textcolor{blue})}}{1}%
+% {[}{{\textcolor{blue}[}}{1}%
+% {]}{{\textcolor{blue}]}}{1}%
+% {<}{{\textcolor{blue}<}}{1}%
+% {>}{{\textcolor{blue}>}}{1},%
+framexleftmargin=1mm, framextopmargin=1mm, rulesepcolor=\color{blue},
+breakatwhitespace=true,
+tabsize=2
+}}{}
 
 \makeindex             % used for the subject index
                        % please use the style svind.ist with
@@ -112,7 +237,7 @@
 \include{chapter11}
 
 \bibliographystyle{spphys}
-% \bibliography{lib}
+\bibliography{lnplib}
 \end{document}
 
 \printindex

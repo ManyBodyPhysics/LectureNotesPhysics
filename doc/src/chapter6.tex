@@ -1,6 +1,7 @@
 \title{Lattice methods and the nuclear few- and many-body problem}
 \author{Dean Lee}
-\institute{Dean Lee \at Name of institution and address, \email{name@email.address}}
+\institute{Dean Lee \at  Department of Physics, 
+North Carolina State University, Raleigh, NC 27695,  USA, \email{dean\_lee@nscu.edu}}
 \maketitle
 
 \abstract{This chapter builds upon the review of lattice methods and effective
@@ -618,7 +619,7 @@ auxiliary-field transfer matrix multiplications on the left starting from the
 single-nucleon initial states.  We only show the terms which arise from 
 the free-nucleon transfer matrix and the auxiliary field $s$.  Similarly, in Fig.~\ref{getzdualvecs}, we show a sample code which calculates 
 the auxiliary-field transfer matrix multiplications on the right starting from 
-the single-nucleon final states.  Again we present only the terms arising from the free-nucleon transfer matrix and the auxiliary field $s$.  In Fig.~\ref{call_getzvecs} we show how these transfer matrix product multiplications are implemented as subroutines 
+the single-nucleon final states.  Again we present only the terms arising from the free-nucleon transfer matrix and the auxiliary field $s$.  In Fig.~\ref{call_getzvecs} we show how these transfer matrix product multiplications are implemented as functions or subroutines (specific to Fortran as programming language) 
 and used to compute the determinant and inverse of the matrix of single-nucleon amplitudes {\bf M}.   
 \begin{figure}[ptb]%
 \centering
@@ -657,7 +658,7 @@ height=3.20cm
 ]
 {Chapter6-figures/call_getzvecs.png}%
 \caption{Sample code showing how the transfer matrix product 
-multiplications are called as subroutines and used to 
+multiplications are called as functions or subroutines and used to 
 compute the determinant and inverse of the matrix of single-nucleon
 amplitudes.}%
 \label{call_getzvecs}%
@@ -846,17 +847,17 @@ Verify that the change in the action produced by the hybrid Monte Carlo update i
 
 \begin{prob}
 \label{prob6.2}
-Write a subroutine that generates the single-nucleon states on the lattice corresponding to the Slater-determinant state of four nucleons --- proton spin-up, proton spin-down, neutron spin-up, and neutron spin-down --- each with zero momentum.\end{prob} 
+Write a function (subroutine) that generates the single-nucleon states on the lattice corresponding to the Slater-determinant state of four nucleons --- proton spin-up, proton spin-down, neutron spin-up, and neutron spin-down --- each with zero momentum.\end{prob} 
 
 \begin{prob}
 \label{prob6.3}
-Write a subroutine that extends the sample code in Fig.~\ref{getzvecs}  to repeatedly multiply the auxiliary-field transfer matrix on the left starting from some initial single-nucleon wave functions.  Include the contributions from the auxiliary fields $s$ and $s_I$ as well as the pion
+Write a (function) subroutine that extends the sample code in Fig.~\ref{getzvecs}  to repeatedly multiply the auxiliary-field transfer matrix on the left starting from some initial single-nucleon wave functions.  Include the contributions from the auxiliary fields $s$ and $s_I$ as well as the pion
  field $\pi_I$.  
 \end{prob}
 
 \begin{prob}
 \label{prob6.4}
-Write a subroutine that extends the sample code in Fig.~\ref{getzdualvecs}  to
+Write a function (subroutine) that extends the sample code in Fig.~\ref{getzdualvecs}  to
 repeatedly multiply the auxiliary-field transfer matrix on the right starting from some final
 single-nucleon wave functions.  Include the contributions from the auxiliary
 fields $s$ and $s_I$ as well as the pion
@@ -865,13 +866,13 @@ fields $s$ and $s_I$ as well as the pion
 
 \begin{prob}
 \label{prob6.5}
-Use the Slater-determinant state constructed in Prob.~\ref{prob6.2} as the initial and final states.  Apply the subroutines written in Prob.~\ref{prob6.3} and Prob.~\ref{prob6.4} with all coupling constants set to zero.  Verify that this state is the ground state of the non-interacting system with energy equal to zero.
+Use the Slater-determinant state constructed in Prob.~\ref{prob6.2} as the initial and final states.  Apply the functions (subroutines) written in Prob.~\ref{prob6.3} and Prob.~\ref{prob6.4} with all coupling constants set to zero.  Verify that this state is the ground state of the non-interacting system with energy equal to zero.
 \end{prob}
 
 \begin{prob}
 \label{prob6.6}
 Use the Slater-determinant state constructed in Prob.~\ref{prob6.2} as the initial and final
-states.  Then implement the subroutines written in Prob.~\ref{prob6.3} and Prob.~\ref{prob6.4}
+states.  Then implement the functions (subroutines) written in Prob.~\ref{prob6.3} and Prob.~\ref{prob6.4}
 and extend the sample code in Fig.~\ref{dVds} to compute the derivatives of $V(s)$ with respect to $s({\bf n},n_t)$, $s_I({\bf n},n_t)$, and $\pi_I({\bf n},n_t)$.
 \end{prob}
 
@@ -889,8 +890,18 @@ Take the code you have written for Prob.~\ref{prob6.7} and complete the remainin
 steps needed to calculate the energy of the four-nucleon ground state by computing the ratio of the amplitudes $Z(L_t)/Z(L_t-1)$.
 \end{prob}
 
-\section*{Acknowledgements}
-The author is grateful for discussions with Amy Nicholson and Morten Hjorth-Jensen.  He is also greatly indebted to his collaborators Jose Alarc{\'o}n, Dechuan Du, Serdar Elhatisari, Evgeny Epelbaum, Nico Klein, Hermann Krebs, Timo L{\"a}hde, Ning Li, Bing-nan Lu, Thomas Luu, Ulf-G. Mei{\ss}ner, Alexander Rokash, and Gautam Rupak.  Partial financial support provided by the U.S. Department of Energy (DE-FG02-03ER41260).  Computational resources were provided by the J\"{u}lich Supercomputing Centre.
+\begin{acknowledgement}
+The author is grateful for discussions with Amy Nicholson and Morten
+Hjorth-Jensen.  He is also greatly indebted to his collaborators Jose
+Alarc{\'o}n, Dechuan Du, Serdar Elhatisari, Evgeny Epelbaum, Nico
+Klein, Hermann Krebs, Timo L{\"a}hde, Ning Li, Bing-nan Lu, Thomas
+Luu, Ulf-G. Mei{\ss}ner, Alexander Rokash, and Gautam Rupak.  Partial
+financial support provided by the U.S. Department of Energy
+(DE-FG02-03ER41260).  Computational resources were provided by the
+J\"{u}lich Supercomputing Centre.
+\end{acknowledgement}
+
+
 
 
 

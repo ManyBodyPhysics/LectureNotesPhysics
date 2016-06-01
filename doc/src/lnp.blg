@@ -14,7 +14,12 @@ A level-1 auxiliary file: chapter9.aux
 A level-1 auxiliary file: chapter10.aux
 A level-1 auxiliary file: chapter11.aux
 The style file: spphys.bst
-I found no \bibdata command---while reading file lnp.aux
+Reallocated field_info (elt_size=4) to 10460 items from 5000.
+Database file #1: lnplib.bib
+Repeated entry---line 3795 of file lnplib.bib
+ : @article{Carlson:2014vla
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "science-contrib"
 Warning--I didn't find a database entry for "science-online"
 Warning--I didn't find a database entry for "science-mono"
@@ -40,45 +45,50 @@ Warning--I didn't find a database entry for "basic-online"
 Warning--I didn't find a database entry for "basic-journal"
 Warning--I didn't find a database entry for "basic-DOI"
 Warning--I didn't find a database entry for "basic-mono"
-You've used 0 entries,
+Warning--empty journal in Mrowczynski:2016etf
+Warning--empty journal in CasalderreySolana:2011us
+Warning--empty journal in Elhatisari:2016owd
+Warning--empty journal in Lu:2015riz
+Warning--empty journal in Rokash:2015hra
+You've used 185 entries,
             2812 wiz_defined-function locations,
-            634 strings with 4829 characters,
-and the built_in function-call counts, 28 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            1889 strings with 36371 characters,
+and the built_in function-call counts, 61845 in all, are:
+= -- 4176
+> -- 1631
+< -- 2
++ -- 677
+- -- 482
+* -- 3641
+:= -- 7250
+add.period$ -- 136
+call.type$ -- 185
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 190
+duplicate$ -- 6797
+empty$ -- 6453
+format.name$ -- 620
+if$ -- 14144
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 185
+missing$ -- 1744
+newline$ -- 699
+num.names$ -- 185
+pop$ -- 2562
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 1606
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 2145
+swap$ -- 4031
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 7
+warning$ -- 5
+while$ -- 352
+width$ -- 188
+write$ -- 1733
 (There was 1 error message)
