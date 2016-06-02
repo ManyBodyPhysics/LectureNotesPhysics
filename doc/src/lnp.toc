@@ -106,28 +106,26 @@
 \contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{131}{section*.17}
 \contentsline {section}{\numberline {8.1}Introduction}{131}{section.8.1}
 \contentsline {section}{\numberline {8.2}Single-particle basis, Hamiltonians and models for the nuclear force}{132}{section.8.2}
-\contentsline {section}{\numberline {8.3}Hartree-Fock theory}{139}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Introducing our first ansatz for the ground state}{143}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Slater determinants as basis states}{143}{subsection.8.3.2}
-\contentsline {subsection}{\numberline {8.3.3}The Breuckner $G$-matrix}{144}{subsection.8.3.3}
-\contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{149}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}Example of a Hamiltonian matrix}{151}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.2.1}Introduction to nuclear matter and Hamiltonians}{132}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Single-particle basis for infinite matter}{137}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Two-body interaction}{140}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Models from Efective field theory for the two- and three-nucleon interactions}{142}{subsection.8.2.4}
+\contentsline {section}{\numberline {8.3}Hartree-Fock theory}{145}{section.8.3}
+\contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{148}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Example of a Hamiltonian matrix}{150}{subsection.8.4.1}
 \contentsline {subsection}{\numberline {8.4.2}A non-practical way of solving the eigenvalue problem}{152}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Summarizing FCI and bringing in approximative methods}{154}{subsection.8.4.3}
-\contentsline {subsection}{\numberline {8.4.4}Building a many-body basis}{154}{subsection.8.4.4}
-\contentsline {section}{\numberline {8.5}Many-body perturbation theory}{157}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}Many-body perturbation theory}{157}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}Interpreting the correlation energy and the wave operator}{160}{subsection.8.5.2}
-\contentsline {section}{\numberline {8.6}Coupled cluster theory}{162}{section.8.6}
-\contentsline {section}{\numberline {8.7}Introduction}{162}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}A non-practical way of solving the eigenvalue problem}{162}{subsection.8.7.1}
-\contentsline {subsection}{\numberline {8.7.2}Summarizing FCI and bringing in approximative methods}{164}{subsection.8.7.2}
-\contentsline {subsection}{\numberline {8.7.3}A quick tour of Coupled Cluster theory}{164}{subsection.8.7.3}
-\contentsline {subsection}{\numberline {8.7.4}The CCD approximation}{166}{subsection.8.7.4}
+\contentsline {subsection}{\numberline {8.4.3}Summarizing FCI and bringing in approximative methods}{153}{subsection.8.4.3}
+\contentsline {section}{\numberline {8.5}Many-body perturbation theory}{154}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Interpreting the correlation energy and the wave operator}{157}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}The Breuckner $G$-matrix}{159}{subsection.8.5.2}
+\contentsline {section}{\numberline {8.6}Coupled cluster theory}{163}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}Introduction}{163}{subsection.8.6.1}
+\contentsline {subsection}{\numberline {8.6.2}A quick tour of Coupled Cluster theory}{164}{subsection.8.6.2}
+\contentsline {subsection}{\numberline {8.6.3}The CCD approximation}{166}{subsection.8.6.3}
 \contentsline {paragraph}{Approximations to the full CCD equations.}{167}{section*.18}
-\contentsline {section}{\numberline {8.8}Developing a numerical project}{169}{section.8.8}
-\contentsline {section}{\numberline {8.9}Conclusions}{179}{section.8.9}
-\contentsline {section}{\numberline {8.10}Exercises}{179}{section.8.10}
+\contentsline {section}{\numberline {8.7}Developing a numerical project}{168}{section.8.7}
+\contentsline {section}{\numberline {8.8}Conclusions}{178}{section.8.8}
+\contentsline {section}{\numberline {8.9}Exercises}{178}{section.8.9}
 \contentsline {titlech}{\numberline {9}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{191}{section*.19}
 \authcount {1}
 \contentsline {authorch}{Francesco Pederiva}{191}{section*.19}
@@ -138,12 +136,28 @@
 \contentsline {section}{\numberline {9.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{191}{section.9.5}
 \contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{193}{section*.20}
 \authcount {1}
-\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Titus Morris, Nathan Parzuchowski, and Fei Yuan}{193}{section*.20}
-\contentsline {section}{\numberline {10.1}Introduction}{193}{section.10.1}
-\contentsline {section}{\numberline {10.2}The similarity renormalization group approach}{193}{section.10.2}
-\contentsline {section}{\numberline {10.3}In-medium SRG studies of infinite matter}{193}{section.10.3}
-\contentsline {titlech}{\numberline {11}Concluding remarks and perspectives}{195}{section*.21}
+\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{193}{section*.20}
+\contentsline {section}{\numberline {10.1}Introduction}{194}{section.10.1}
+\contentsline {section}{\numberline {10.2}IM-SRG Flow Equations}{194}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Preliminaries}{194}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Normal Ordering and Wick's Theorem}{195}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Normal-Ordered Hamiltonian}{196}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}$M$-Scheme Flow Equations}{197}{subsection.10.2.4}
+\contentsline {subsection}{\numberline {10.2.5}$J$-Scheme Flow Equations}{198}{subsection.10.2.5}
+\contentsline {subsection}{\numberline {10.2.6}General Observables}{199}{subsection.10.2.6}
+\contentsline {section}{\numberline {10.3}Choice of Generator}{200}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Decoupling}{200}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}White Generators}{202}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Imaginary-Time Generators}{203}{subsection.10.3.3}
+\contentsline {subsection}{\numberline {10.3.4}Wegner Generators}{204}{subsection.10.3.4}
+\contentsline {subsection}{\numberline {10.3.5}Decay Scales}{205}{subsection.10.3.5}
+\contentsline {section}{\numberline {10.4}In-medium SRG studies of infinite matter}{206}{section.10.4}
+\contentsline {titlech}{\numberline {11}Green's function approaches}{207}{section*.21}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{195}{section*.21}
-\contentsline {section}{\numberline {11.1}Concluding remarks}{195}{section.11.1}
-\contentsline {section}{\numberline {11.2}Perspectives}{195}{section.11.2}
+\contentsline {authorch}{Carlo Barbieri and Adriana Carbone}{207}{section*.21}
+\contentsline {section}{\numberline {11.1}Concluding remarks}{207}{section.11.1}
+\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{209}{section*.22}
+\authcount {1}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{209}{section*.22}
+\contentsline {section}{\numberline {12.1}Concluding remarks}{209}{section.12.1}
+\contentsline {section}{\numberline {12.2}Perspectives}{209}{section.12.2}

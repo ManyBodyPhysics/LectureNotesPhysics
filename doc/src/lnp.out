@@ -85,40 +85,53 @@
 \BOOKMARK [0][-]{section*.17}{Justin G. Lietz, Samuel Novario, Gustav R. Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{}% 85
 \BOOKMARK [1][-]{section.8.1}{Introduction}{section*.17}% 86
 \BOOKMARK [1][-]{section.8.2}{Single-particle basis, Hamiltonians and models for the nuclear force}{section*.17}% 87
-\BOOKMARK [1][-]{section.8.3}{Hartree-Fock theory}{section*.17}% 88
-\BOOKMARK [2][-]{subsection.8.3.1}{Introducing our first ansatz for the ground state}{section.8.3}% 89
-\BOOKMARK [2][-]{subsection.8.3.2}{Slater determinants as basis states}{section.8.3}% 90
-\BOOKMARK [2][-]{subsection.8.3.3}{The Breuckner G-matrix}{section.8.3}% 91
-\BOOKMARK [1][-]{section.8.4}{Full Configuration Interaction Theory}{section*.17}% 92
-\BOOKMARK [2][-]{subsection.8.4.1}{Example of a Hamiltonian matrix}{section.8.4}% 93
-\BOOKMARK [2][-]{subsection.8.4.2}{A non-practical way of solving the eigenvalue problem}{section.8.4}% 94
-\BOOKMARK [2][-]{subsection.8.4.3}{Summarizing FCI and bringing in approximative methods}{section.8.4}% 95
-\BOOKMARK [2][-]{subsection.8.4.4}{Building a many-body basis}{section.8.4}% 96
+\BOOKMARK [2][-]{subsection.8.2.1}{Introduction to nuclear matter and Hamiltonians}{section.8.2}% 88
+\BOOKMARK [2][-]{subsection.8.2.2}{Single-particle basis for infinite matter}{section.8.2}% 89
+\BOOKMARK [2][-]{subsection.8.2.3}{Two-body interaction}{section.8.2}% 90
+\BOOKMARK [2][-]{subsection.8.2.4}{Models from Efective field theory for the two- and three-nucleon interactions}{section.8.2}% 91
+\BOOKMARK [1][-]{section.8.3}{Hartree-Fock theory}{section*.17}% 92
+\BOOKMARK [1][-]{section.8.4}{Full Configuration Interaction Theory}{section*.17}% 93
+\BOOKMARK [2][-]{subsection.8.4.1}{Example of a Hamiltonian matrix}{section.8.4}% 94
+\BOOKMARK [2][-]{subsection.8.4.2}{A non-practical way of solving the eigenvalue problem}{section.8.4}% 95
+\BOOKMARK [2][-]{subsection.8.4.3}{Summarizing FCI and bringing in approximative methods}{section.8.4}% 96
 \BOOKMARK [1][-]{section.8.5}{Many-body perturbation theory}{section*.17}% 97
-\BOOKMARK [2][-]{subsection.8.5.1}{Many-body perturbation theory}{section.8.5}% 98
-\BOOKMARK [2][-]{subsection.8.5.2}{Interpreting the correlation energy and the wave operator}{section.8.5}% 99
+\BOOKMARK [2][-]{subsection.8.5.1}{Interpreting the correlation energy and the wave operator}{section.8.5}% 98
+\BOOKMARK [2][-]{subsection.8.5.2}{The Breuckner G-matrix}{section.8.5}% 99
 \BOOKMARK [1][-]{section.8.6}{Coupled cluster theory}{section*.17}% 100
-\BOOKMARK [1][-]{section.8.7}{Introduction}{section*.17}% 101
-\BOOKMARK [2][-]{subsection.8.7.1}{A non-practical way of solving the eigenvalue problem}{section.8.7}% 102
-\BOOKMARK [2][-]{subsection.8.7.2}{Summarizing FCI and bringing in approximative methods}{section.8.7}% 103
-\BOOKMARK [2][-]{subsection.8.7.3}{A quick tour of Coupled Cluster theory}{section.8.7}% 104
-\BOOKMARK [2][-]{subsection.8.7.4}{The CCD approximation}{section.8.7}% 105
-\BOOKMARK [1][-]{section.8.8}{Developing a numerical project}{section*.17}% 106
-\BOOKMARK [1][-]{section.8.9}{Conclusions}{section*.17}% 107
-\BOOKMARK [1][-]{section.8.10}{Exercises}{section*.17}% 108
-\BOOKMARK [0][-]{section*.19}{Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 109
-\BOOKMARK [0][-]{section*.19}{Francesco Pederiva}{}% 110
-\BOOKMARK [1][-]{section.9.1}{The Nuclear few- and many-body problem}{section*.19}% 111
-\BOOKMARK [1][-]{section.9.2}{Methods for bound states based on the variational principle I:The No Core Shell Model \(NCSM\)}{section*.19}% 112
-\BOOKMARK [1][-]{section.9.3}{Methods for bound states based on the variational principle II:The Hyperspherical Harmonics \(HH\) method}{section*.19}% 113
-\BOOKMARK [1][-]{section.9.4}{Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{section*.19}% 114
-\BOOKMARK [1][-]{section.9.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{section*.19}% 115
-\BOOKMARK [0][-]{section*.20}{In-medium SRG approaches to infinite nuclear matter}{}% 116
-\BOOKMARK [0][-]{section*.20}{Scott K. Bogner, Heiko Hergert, Titus Morris, Nathan Parzuchowski, and Fei Yuan}{}% 117
-\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.20}% 118
-\BOOKMARK [1][-]{section.10.2}{The similarity renormalization group approach}{section*.20}% 119
-\BOOKMARK [1][-]{section.10.3}{In-medium SRG studies of infinite matter}{section*.20}% 120
-\BOOKMARK [0][-]{section*.21}{Concluding remarks and perspectives}{}% 121
-\BOOKMARK [0][-]{section*.21}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 122
-\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{section*.21}% 123
-\BOOKMARK [1][-]{section.11.2}{Perspectives}{section*.21}% 124
+\BOOKMARK [2][-]{subsection.8.6.1}{Introduction}{section.8.6}% 101
+\BOOKMARK [2][-]{subsection.8.6.2}{A quick tour of Coupled Cluster theory}{section.8.6}% 102
+\BOOKMARK [2][-]{subsection.8.6.3}{The CCD approximation}{section.8.6}% 103
+\BOOKMARK [1][-]{section.8.7}{Developing a numerical project}{section*.17}% 104
+\BOOKMARK [1][-]{section.8.8}{Conclusions}{section*.17}% 105
+\BOOKMARK [1][-]{section.8.9}{Exercises}{section*.17}% 106
+\BOOKMARK [0][-]{section*.19}{Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 107
+\BOOKMARK [0][-]{section*.19}{Francesco Pederiva}{}% 108
+\BOOKMARK [1][-]{section.9.1}{The Nuclear few- and many-body problem}{section*.19}% 109
+\BOOKMARK [1][-]{section.9.2}{Methods for bound states based on the variational principle I:The No Core Shell Model \(NCSM\)}{section*.19}% 110
+\BOOKMARK [1][-]{section.9.3}{Methods for bound states based on the variational principle II:The Hyperspherical Harmonics \(HH\) method}{section*.19}% 111
+\BOOKMARK [1][-]{section.9.4}{Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{section*.19}% 112
+\BOOKMARK [1][-]{section.9.5}{Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{section*.19}% 113
+\BOOKMARK [0][-]{section*.20}{In-medium SRG approaches to infinite nuclear matter}{}% 114
+\BOOKMARK [0][-]{section*.20}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 115
+\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.20}% 116
+\BOOKMARK [1][-]{section.10.2}{IM-SRG Flow Equations}{section*.20}% 117
+\BOOKMARK [2][-]{subsection.10.2.1}{Preliminaries}{section.10.2}% 118
+\BOOKMARK [2][-]{subsection.10.2.2}{Normal Ordering and Wick's Theorem}{section.10.2}% 119
+\BOOKMARK [2][-]{subsection.10.2.3}{Normal-Ordered Hamiltonian}{section.10.2}% 120
+\BOOKMARK [2][-]{subsection.10.2.4}{M-Scheme Flow Equations}{section.10.2}% 121
+\BOOKMARK [2][-]{subsection.10.2.5}{J-Scheme Flow Equations}{section.10.2}% 122
+\BOOKMARK [2][-]{subsection.10.2.6}{General Observables}{section.10.2}% 123
+\BOOKMARK [1][-]{section.10.3}{Choice of Generator}{section*.20}% 124
+\BOOKMARK [2][-]{subsection.10.3.1}{Decoupling}{section.10.3}% 125
+\BOOKMARK [2][-]{subsection.10.3.2}{White Generators}{section.10.3}% 126
+\BOOKMARK [2][-]{subsection.10.3.3}{Imaginary-Time Generators}{section.10.3}% 127
+\BOOKMARK [2][-]{subsection.10.3.4}{Wegner Generators}{section.10.3}% 128
+\BOOKMARK [2][-]{subsection.10.3.5}{Decay Scales}{section.10.3}% 129
+\BOOKMARK [1][-]{section.10.4}{In-medium SRG studies of infinite matter}{section*.20}% 130
+\BOOKMARK [0][-]{section*.21}{Green's function approaches}{}% 131
+\BOOKMARK [0][-]{section*.21}{Carlo Barbieri and Adriana Carbone}{}% 132
+\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{section*.21}% 133
+\BOOKMARK [0][-]{section*.22}{Concluding remarks and perspectives}{}% 134
+\BOOKMARK [0][-]{section*.22}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 135
+\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.22}% 136
+\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.22}% 137

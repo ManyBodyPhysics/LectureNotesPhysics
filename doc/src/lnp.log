@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 JUN 2016 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 JUN 2016 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2065,7 +2065,11 @@ LaTeX Warning: Label `Carlson:2014vla' multiply defined.
 
 LaTeX Warning: Label `eq:ccd2' multiply defined.
 
-) (./chapter9.aux) (./chapter10.aux) (./chapter11.aux))
+) (./chapter9.aux) (./chapter10.aux
+
+LaTeX Warning: Label `sec:observables' multiply defined.
+
+) (./chapter11.aux) (./chapter12.aux))
 \openout1 = `lnp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
@@ -2346,52 +2350,52 @@ Overfull \hbox (3.22194pt too wide) detected at line 108
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 109
- []\T1/fve/m/n/10 139
+ []\T1/fve/m/n/10 132
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 110
- []\T1/fve/m/n/10 143
+ []\T1/fve/m/n/10 137
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 111
- []\T1/fve/m/n/10 143
+ []\T1/fve/m/n/10 140
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 112
- []\T1/fve/m/n/10 144
+ []\T1/fve/m/n/10 142
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 113
- []\T1/fve/m/n/10 149
+ []\T1/fve/m/n/10 145
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 114
- []\T1/fve/m/n/10 151
+ []\T1/fve/m/n/10 148
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 115
- []\T1/fve/m/n/10 152
+ []\T1/fve/m/n/10 150
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 116
- []\T1/fve/m/n/10 154
+ []\T1/fve/m/n/10 152
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 117
- []\T1/fve/m/n/10 154
+ []\T1/fve/m/n/10 153
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 118
- []\T1/fve/m/n/10 157
+ []\T1/fve/m/n/10 154
  []
 
 
@@ -2401,52 +2405,52 @@ Overfull \hbox (3.22194pt too wide) detected at line 119
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 120
- []\T1/fve/m/n/10 160
+ []\T1/fve/m/n/10 159
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 121
- []\T1/fve/m/n/10 162
+ []\T1/fve/m/n/10 163
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 122
- []\T1/fve/m/n/10 162
+ []\T1/fve/m/n/10 163
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 123
- []\T1/fve/m/n/10 162
+ []\T1/fve/m/n/10 164
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 124
- []\T1/fve/m/n/10 164
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 125
- []\T1/fve/m/n/10 164
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 126
  []\T1/fve/m/n/10 166
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 126
+ []\T1/fve/m/n/10 168
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 127
+ []\T1/fve/m/n/10 178
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 128
- []\T1/fve/m/n/10 169
+ []\T1/fve/m/n/10 178
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 129
- []\T1/fve/m/n/10 179
+Overfull \hbox (3.22194pt too wide) detected at line 132
+ []\T1/fve/m/n/10 191
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 130
- []\T1/fve/m/n/10 179
+Overfull \hbox (3.22194pt too wide) detected at line 133
+ []\T1/fve/m/n/10 191
  []
 
 
@@ -2465,38 +2469,93 @@ Overfull \hbox (3.22194pt too wide) detected at line 136
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 137
- []\T1/fve/m/n/10 191
+Overfull \hbox (3.22194pt too wide) detected at line 140
+ []\T1/fve/m/n/10 194
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 138
- []\T1/fve/m/n/10 191
+Overfull \hbox (3.22194pt too wide) detected at line 141
+ []\T1/fve/m/n/10 194
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 142
- []\T1/fve/m/n/10 193
+ []\T1/fve/m/n/10 194
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 143
- []\T1/fve/m/n/10 193
+ []\T1/fve/m/n/10 195
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 144
- []\T1/fve/m/n/10 193
+ []\T1/fve/m/n/10 196
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 145
+ []\T1/fve/m/n/10 197
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 146
+ []\T1/fve/m/n/10 198
+ []
+
+[11]
+Overfull \hbox (3.22194pt too wide) detected at line 147
+ []\T1/fve/m/n/10 199
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 148
- []\T1/fve/m/n/10 195
+ []\T1/fve/m/n/10 200
  []
 
-[11]
+
 Overfull \hbox (3.22194pt too wide) detected at line 149
- []\T1/fve/m/n/10 195
+ []\T1/fve/m/n/10 200
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 150
+ []\T1/fve/m/n/10 202
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 151
+ []\T1/fve/m/n/10 203
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 152
+ []\T1/fve/m/n/10 204
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 153
+ []\T1/fve/m/n/10 205
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 154
+ []\T1/fve/m/n/10 206
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 158
+ []\T1/fve/m/n/10 207
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 162
+ []\T1/fve/m/n/10 209
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 163
+ []\T1/fve/m/n/10 209
  []
 
 )
@@ -2555,7 +2614,7 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 209.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 218.
- [5] <Chapter2-figures/config1.pdf, id=755, 478.78876pt x 412.54124pt>
+ [5] <Chapter2-figures/config1.pdf, id=822, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
@@ -2569,7 +2628,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 365.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 365.
- [8] <Chapter2-figures/qcd_ms_high.pdf, id=822, 588.1975pt x 534.99875pt>
+ [8] <Chapter2-figures/qcd_ms_high.pdf, id=888, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
@@ -2586,7 +2645,7 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 844.
  [15]
-<Chapter2-figures/topology.pdf, id=978, 361.35pt x 252.945pt>
+<Chapter2-figures/topology.pdf, id=1044, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
@@ -2600,7 +2659,7 @@ Overfull \hbox (2.46152pt too wide) in paragraph at lines 1383--1391
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-<Chapter2-figures/hic_evol_schem.pdf, id=1106, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1172, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
@@ -2609,7 +2668,7 @@ Package pdftex.def Info: Chapter2-figures/hic_evol_schem.pdf used on input line
 (pdftex.def)             Requested size: 403.35562pt x 123.63043pt.
  [22] [23 <./Chapter2-figures/hic_evol_schem.pdf>] [24] [25] [26] [27] [28] [29
 ] [30] [31] [32]
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf, id=1353, 614.295pt x 794.97pt>
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf, id=1419, 614.295pt x 794.97pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf>
@@ -2617,7 +2676,7 @@ Package pdftex.def Info: Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf used on in
 put line 2224.
 (pdftex.def)             Requested size: 184.9429pt x 239.34195pt.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf, id=1355, 614.295pt x 794.97
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf, id=1421, 614.295pt x 794.97
 pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf Graphic file (type pdf)
 
@@ -2636,7 +2695,7 @@ LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2297.
  [34 <./Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf> <./Chapter2-figures/AdS5_S
 chwarz_eta_w_subtr_txt.pdf>]
-<Chapter2-figures/EnergyDensity.pdf, id=1447, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=1513, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
@@ -2932,21 +2991,21 @@ LaTeX Warning: Citation `Kaplan:2005es' on page 49 undefined on input line 114.
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 4.49997pt on input line 117.
-[49] <Chapter5-figures/al0.png, id=1806, 385.44pt x 300.12125pt>
+[49] <Chapter5-figures/al0.png, id=1873, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
 Package pdftex.def Info: Chapter5-figures/al0.png used on input line 146.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
-<Chapter5-figures/ae0.png, id=1808, 387.4475pt x 302.12875pt>
+<Chapter5-figures/ae0.png, id=1875, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
 Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 147.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
-<Chapter5-figures/ag0.png, id=1809, 383.4325pt x 300.12125pt>
+<Chapter5-figures/ag0.png, id=1876, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
@@ -2954,21 +3013,21 @@ Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 148.
 (pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
  [50 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
 res/ag0.png>] [51]
-<Chapter5-figures/simple1.png, id=1840, 788.9475pt x 95.35625pt>
+<Chapter5-figures/simple1.png, id=1907, 788.9475pt x 95.35625pt>
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
 Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 187.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
-<Chapter5-figures/loop1.png, id=1843, 893.3375pt x 191.71625pt>
+<Chapter5-figures/loop1.png, id=1910, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
 Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 192.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
-<Chapter5-figures/beta.pdf, id=1847, 481.8pt x 303.24593pt>
+<Chapter5-figures/beta.pdf, id=1914, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
@@ -2991,14 +3050,14 @@ LaTeX Warning: Citation `Kaplan:1996xu' on page 53 undefined on input line 216.
 
 LaTeX Warning: Citation `Drut:2012md' on page 57 undefined on input line 342.
 
-[57] <Chapter5-figures/dimer.png, id=1945, 905.3825pt x 206.7725pt>
+[57] <Chapter5-figures/dimer.png, id=2012, 905.3825pt x 206.7725pt>
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
 Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 367.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
  [58 <./Chapter5-figures/dimer.png>]
-<Chapter5-figures/lattice.png, id=1956, 352.31625pt x 315.1775pt>
+<Chapter5-figures/lattice.png, id=2023, 352.31625pt x 315.1775pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
@@ -3029,7 +3088,7 @@ LaTeX Warning: Citation `Nicholson:2012xt' on page 68 undefined on input line 6
 
 LaTeX Warning: Citation `EKLN5' on page 68 undefined on input line 679.
 
-[68] [69] <Chapter5-figures/QCDbubble.pdf, id=2089, 424.58624pt x 370.38374pt>
+[68] [69] <Chapter5-figures/QCDbubble.pdf, id=2155, 424.58624pt x 370.38374pt>
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
@@ -3037,7 +3096,7 @@ Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 716.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
  [70 <./Chapter5-figures/QCDbubble.pdf>]
-<Chapter5-figures/overlap.pdf, id=2109, 481.8pt x 303.65443pt>
+<Chapter5-figures/overlap.pdf, id=2175, 481.8pt x 303.65443pt>
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
@@ -3070,14 +3129,14 @@ LaTeX Warning: Citation `EKLN4' on page 73 undefined on input line 786.
 
 LaTeX Warning: Citation `EKLN4' on page 73 undefined on input line 786.
 
-<Chapter5-figures/cumulant.png, id=2144, 491.8375pt x 321.2pt>
+<Chapter5-figures/cumulant.png, id=2210, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
 Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 787.
 (pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
  [73] [74 <./Chapter5-figures/cumulant.png>] <Chapter5-figures/twobody.png, id=
-2171, 800.9925pt x 530.98375pt>
+2238, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
@@ -3142,7 +3201,7 @@ LaTeX Warning: Citation `Symanzik4' on page 82 undefined on input line 1060.
 
 LaTeX Warning: Citation `EKLN4' on page 82 undefined on input line 1060.
 
-[82] <Chapter5-figures/dispersion.png, id=2271, 737.75626pt x 509.905pt>
+[82] <Chapter5-figures/dispersion.png, id=2337, 737.75626pt x 509.905pt>
 File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
@@ -3418,14 +3477,14 @@ LaTeX Warning: Citation `Drut:2012md' on page 86 undefined on input line 1174.
 
 LaTeX Warning: Citation `Drut:2012md' on page 86 undefined on input line 1174.
 
-<Chapter5-figures/luscher.pdf, id=2306, 755.82375pt x 493.845pt>
+<Chapter5-figures/luscher.pdf, id=2373, 755.82375pt x 493.845pt>
 File: Chapter5-figures/luscher.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/luscher.pdf>
 Package pdftex.def Info: Chapter5-figures/luscher.pdf used on input line 1175.
 (pdftex.def)             Requested size: 212.29312pt x 138.70517pt.
  [86]
-<Chapter5-figures/interaction.png, id=2324, 658.46pt x 512.91624pt>
+<Chapter5-figures/interaction.png, id=2390, 658.46pt x 512.91624pt>
 File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
@@ -3439,7 +3498,7 @@ LaTeX Warning: Citation `EKLN1' on page 87 undefined on input line 1201.
 
 LaTeX Warning: Citation `EKLN1' on page 87 undefined on input line 1201.
 
-<Chapter5-figures/tuning.png, id=2329, 466.74374pt x 294.09875pt>
+<Chapter5-figures/tuning.png, id=2395, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
@@ -3476,7 +3535,7 @@ LaTeX Warning: Citation `EKLN4' on page 90 undefined on input line 1251.
 LaTeX Warning: Citation `NishidaSonConformal' on page 91 undefined on input lin
 e 1267.
 
-<Chapter5-figures/dimer2.png, id=2374, 748.7975pt x 110.4125pt>
+<Chapter5-figures/dimer2.png, id=2440, 748.7975pt x 110.4125pt>
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
@@ -3537,14 +3596,14 @@ LaTeX Warning: Citation `Kaplan:1998we' on page 98 undefined on input line 1495
 LaTeX Warning: Citation `Fleming:1999ee' on page 98 undefined on input line 149
 5.
 
-<Chapter5-figures/tree.png, id=2456, 112.42pt x 74.2775pt>
+<Chapter5-figures/tree.png, id=2522, 112.42pt x 74.2775pt>
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
 Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1499.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
 
-<Chapter5-figures/box.png, id=2457, 118.4425pt x 73.27374pt>
+<Chapter5-figures/box.png, id=2523, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
@@ -3560,7 +3619,7 @@ LaTeX Warning: Citation `Epelbaum:2010nr' on page 98 undefined on input line 15
 14.
 
 [98 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
-<Chapter5-figures/sunset.png, id=2471, 787.94376pt x 73.27374pt> [99]
+<Chapter5-figures/sunset.png, id=2537, 787.94376pt x 73.27374pt> [99]
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
@@ -3575,7 +3634,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 1536--1537
 LaTeX Warning: Citation `Braaten:2004rn' on page 100 undefined on input line 15
 44.
 
-<Chapter5-figures/dresseddimer.png, id=2481, 858.20625pt x 60.225pt>
+<Chapter5-figures/dresseddimer.png, id=2547, 858.20625pt x 60.225pt>
 File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
@@ -3587,7 +3646,7 @@ Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
 LaTeX Warning: Citation `Braaten:2004rn' on page 101 undefined on input line 15
 64.
 
-<Chapter5-figures/3body.png, id=2494, 821.0675pt x 84.315pt>
+<Chapter5-figures/3body.png, id=2560, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
@@ -3613,7 +3672,7 @@ LaTeX Warning: Citation `V1970563' on page 101 undefined on input line 1585.
 LaTeX Warning: Citation `Efimov:1971zz' on page 101 undefined on input line 158
 5.
 
-<Chapter5-figures/HLambda.pdf, id=2496, 481.8pt x 319.76967pt>
+<Chapter5-figures/HLambda.pdf, id=2562, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
@@ -4726,7 +4785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
-[111] <Chapter6-figures/formalism.png, id=2631, 439.8834pt x 249.5724pt>
+[111] <Chapter6-figures/formalism.png, id=2698, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
@@ -4734,7 +4793,7 @@ Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 209.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
  [112 <./Chapter6-figures/formalism.png>]
-[113] <Chapter6-figures/worldlines.png, id=2666, 579.6054pt x 495.7722pt>
+[113] <Chapter6-figures/worldlines.png, id=2733, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
@@ -4742,7 +4801,7 @@ Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 371
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [114] [115 <./Chapter6-figures/worldlines.png>] [116] [117]
-<Chapter6-figures/HSworldlines.png, id=2720, 579.6054pt x 495.7722pt>
+<Chapter6-figures/HSworldlines.png, id=2786, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -4750,7 +4809,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 11.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=2724, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=2790, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -4761,7 +4820,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 631.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 631.
 
-<Chapter6-figures/getzdualvecs.png, id=2725, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=2791, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -4773,7 +4832,7 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 645.
 
-<Chapter6-figures/call_getzvecs.png, id=2726, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=2792, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
@@ -4796,21 +4855,21 @@ ed, duplicate ignored
 l.713 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=2754, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=2821, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 786.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
  [121]
-<Chapter6-figures/dVds.png, id=2771, 507.8975pt x 367.3725pt>
+<Chapter6-figures/dVds.png, id=2838, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 809.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=2773, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=2840, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
@@ -5895,92 +5954,231 @@ LaTeX Warning: Citation `hh2000' on page 132 undefined on input line 46.
 
 LaTeX Warning: Citation `eft' on page 132 undefined on input line 64.
 
-[132] [133] [134] [135] [136] [137] [138] [139] [140]
-Overfull \hbox (85.6646pt too wide) in paragraph at lines 775--785
+[132] [133]
+
+LaTeX Warning: Citation `symmetryenergy2013' on page 134 undefined on input lin
+e 205.
+
+[134]
+Overfull \hbox (3.30031pt too wide) in paragraph at lines 291--292
+[]\T1/fve/m/n/10 Now we im-pose an-ti-sym-me-try, by hav-ing the fermion op-er-
+a-tors sat-isfy the anti-commutation
+ []
+
+
+LaTeX Warning: Citation `deffockspace' on page 135 undefined on input line 312.
+
+
+[135] [136]
+
+LaTeX Warning: Reference `prob8.1' on page 137 undefined on input line 378.
+
+! Undefined control sequence.
+l.380 \hat{H}=E_{\mathrem
+                         {Ref}}+\hat{H}_N,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.384 E_{\mathrem
+                 {Ref}}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0\rangle = \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[137]
+
+LaTeX Warning: Reference `prob8.2' on page 138 undefined on input line 431.
+
+[138] [139] [140] [141]
+
+LaTeX Warning: Citation `weinberg1990' on page 142 undefined on input line 695.
+
+
+
+LaTeX Warning: Citation `weinberg1991' on page 142 undefined on input line 695.
+
+
+
+LaTeX Warning: Citation `ordonez1992' on page 142 undefined on input line 695.
+
+
+LaTeX Warning: Citation `ordonez1994' on page 142 undefined on input line 695.
+
+
+LaTeX Warning: Citation `ordonez1996' on page 142 undefined on input line 695.
+
+
+LaTeX Warning: Citation `vankolck1999' on page 142 undefined on input line 695.
+
+
+
+LaTeX Warning: Citation `machleidt2011' on page 142 undefined on input line 695
+.
+
+
+LaTeX Warning: Citation `epelbaum2009' on page 142 undefined on input line 695.
+
+
+
+LaTeX Warning: Citation `ekstrom2013' on page 142 undefined on input line 695.
+
+
+LaTeX Warning: Citation `carlsson2014' on page 142 undefined on input line 735.
+
+
+
+LaTeX Warning: Citation `machleidt2011' on page 142 undefined on input line 736
+.
+
+
+LaTeX Warning: Citation `epelbaum2009' on page 142 undefined on input line 736.
+
+
+
+LaTeX Warning: Citation `ekstrom2013' on page 142 undefined on input line 736.
+
+
+LaTeX Warning: File `Figs/diagNNLO.pdf' not found on input line 739.
+
+
+! Package pdftex.def Error: File `Figs/diagNNLO.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.739 ....14}{\includegraphics{Figs/diagNNLO.pdf}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `weinberg1990' on page 142 undefined on input line 753.
+
+
+
+LaTeX Warning: Citation `weinberg1991' on page 142 undefined on input line 753.
+
+
+[142]
+
+LaTeX Warning: Citation `carlsson2014' on page 143 undefined on input line 800.
+
+
+
+LaTeX Warning: Citation `machleidt2011' on page 143 undefined on input line 837
+.
+
+
+LaTeX Warning: Citation `carlsson2014' on page 143 undefined on input line 837.
+
+
+
+LaTeX Warning: Citation `machleidt2011' on page 143 undefined on input line 838
+.
+
+[143]
+
+LaTeX Warning: Citation `epelbaum2002' on page 144 undefined on input line 915.
+
+
+
+LaTeX Warning: Citation `navratil2007' on page 144 undefined on input line 933.
+
+
+[144] [145] [146]
+Overfull \hbox (85.6646pt too wide) in paragraph at lines 1128--1138
 \T1/fve/m/n/10 The lat-ter is noth-ing but a stan-dard eigen-value prob-lem. Co
 m-pared with Eq. (refeq:hartreefockcoordinatespace),
  []
 
-[141] [142] [143]
+[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1001.
+(hyperref)                removing `math shift' on input line 1854.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1001.
+(hyperref)                removing `math shift' on input line 1854.
 
-[144]
+[158]
 
-LaTeX Warning: Reference `fig:goldstone' on page 145 undefined on input line 10
-48.
+LaTeX Warning: Reference `fig:goldstone' on page 159 undefined on input line 19
+01.
 
-[145]
+[159]
 
-LaTeX Warning: Reference `fig:goldstone' on page 146 undefined on input line 11
+LaTeX Warning: Reference `fig:goldstone' on page 160 undefined on input line 19
+80.
+
+[160]
+
+LaTeX Warning: Reference `fig:goldstone' on page 161 undefined on input line 20
 27.
 
 
-LaTeX Warning: Reference `fig:goldstone' on page 146 undefined on input line 11
-74.
+LaTeX Warning: Reference `fig:goldstone' on page 161 undefined on input line 20
+28.
 
-
-LaTeX Warning: Reference `fig:goldstone' on page 146 undefined on input line 11
-75.
-
-[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
-[158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169]
+[161] [162] [163] [164] [165] [166] [167] [168]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 2690.
+(Font)              using `T1/fve/m/n' instead on input line 2569.
 
-[170] [171] [172] [173] [174]
-Overfull \hbox (61.6545pt too wide) in paragraph at lines 2914--2914
+[169] [170] [171] [172] [173] [174]
+Overfull \hbox (61.6545pt too wide) in paragraph at lines 2793--2793
 [] 
  []
 
-[175] <Chapter8-figures/fig1.pdf, id=3160, 500.87437pt x 400.11984pt>
+[175] <Chapter8-figures/fig1.pdf, id=3247, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2935.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2797.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=3161, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=3248, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2941.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2803.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
  [176] [177 <./Chapter8-figures/fig1.pdf>]
-[178 <./Chapter8-figures/fig2.pdf>]
-<Chapter8-figures/fig3.pdf, id=3301, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=3326, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2980.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2842.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=3302, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=3327, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2986.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2848.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
- [179 <./Chapter8-figures/fig3.pdf>]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 3031--3036
+ [178 <./Chapter8-figures/fig2.pdf>]
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 2893--2898
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
-[180 <./Chapter8-figures/fig4.pdf>] [181] [182] [183] [184] [185]
-Overfull \hbox (23.5658pt too wide) in paragraph at lines 3422--3424
+[179 <./Chapter8-figures/fig3.pdf>] [180 <./Chapter8-figures/fig4.pdf>]
+[181] [182] [183] [184] [185]
+Overfull \hbox (23.5658pt too wide) in paragraph at lines 3284--3286
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (23.5658pt too wide) in paragraph at lines 3432--3434
+Overfull \hbox (23.5658pt too wide) in paragraph at lines 3294--3296
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -5996,31 +6194,868 @@ Overfull \hbox (23.5658pt too wide) in paragraph at lines 3432--3434
 ]) [191]
 \openout2 = `chapter10.aux'.
 
- (./chapter10.tex [192
+ (./chapter10.tex
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \DeclareMathSymbol
+                      {\NS}{\mathord}{AMSb}{"4E}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.2 \DeclareMathSymbol{\NS
+                          }{\mathord}{AMSb}{"4E}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2 \DeclareMathSymbol{\NS}{\mathord
+                                    }{AMSb}{"4E}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.2 \DeclareMathSymbol{\NS}{\mathord}
+                                     {AMSb}{"4E}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \DeclareMathOperator
+                        {\abrapar}{\big<}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.3 \DeclareMathOperator{\abrapar
+                                 }{\big<}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \DeclareMathOperator
+                        {\aketpar}{\big>}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.4 \DeclareMathOperator{\aketpar
+                                 }{\big>}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.5 
+    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Command \ket already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...mmand{\ket}[1]{\ensuremath{\,|{#1}\rangle}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \braket already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...t}[2]{\ensuremath{\langle{#1}|{#2}\rangle}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \expect already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ...xpect}[1]{\ensuremath{\langle{#1}\rangle}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \half already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 ...command{\half}{\ensuremath{\tfrac{1}{2}}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \keV already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \newcommand{\keV}{\ensuremath{\,\text{keV}}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \MeV already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 \newcommand{\MeV}{\ensuremath{\,\text{MeV}}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \eV already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 \newcommand{\eV}{\ensuremath{\,\text{eV}}}
+                                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \GeV already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 \newcommand{\GeV}{\ensuremath{\,\text{GeV}}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[192
+
+
+]
+Names of authors too long for running head. Please supply
+a shorter form with \authorrunning prior to \maketitle
+
+LaTeX Warning: Citation `Wegner:1994dk' on page 193 undefined on input line 168
+.
+
+
+LaTeX Warning: Citation `Glazek:1993il' on page 193 undefined on input line 168
+.
+
+[193
+
+
+]
+
+LaTeX Warning: Citation `Bogner:2007kt' on page 194 undefined on input line 180
+.
+
+
+LaTeX Warning: Citation `Bogner:2010pq' on page 194 undefined on input line 180
+.
+
+
+LaTeX Warning: Citation `Jurgenson:2009bs' on page 194 undefined on input line 
+180.
+
+
+LaTeX Warning: Citation `Hebeler:2012ly' on page 194 undefined on input line 18
+0.
+
+
+LaTeX Warning: Citation `Navratil:2000hf' on page 194 undefined on input line 1
+99.
+
+
+LaTeX Warning: Citation `Barrett:2013oq' on page 194 undefined on input line 19
+9.
+
+
+LaTeX Warning: Citation `Coester:1958dq' on page 194 undefined on input line 20
+1.
+
+
+LaTeX Warning: Citation `Coester:1960cr' on page 194 undefined on input line 20
+1.
+
+
+LaTeX Warning: Citation `Shavitt:2009' on page 194 undefined on input line 201.
 
 
 
+LaTeX Warning: Citation `Hagen:2010uq' on page 194 undefined on input line 201.
 
-])
-[193]
+
+[194]
+
+LaTeX Warning: Citation `Epelbaum:2009ve' on page 195 undefined on input line 2
+17.
+
+
+LaTeX Warning: Citation `Bogner:2010pq' on page 195 undefined on input line 217
+.
+
+! Undefined control sequence.
+l.221 ...equiv \nord{\aaO_i\aO_j} +\, \contraction
+                                                  [1.5ex]{}{\aO}{{}^\dag_i}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.225   \contraction
+                    [1.5ex]{}{\aO}{{}^\dag_i}{\aO}\aaO_i\aO_j \equiv \matrix...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Ring:1980bb' on page 195 undefined on input line 227.
+
+! Undefined control sequence.
+<argument> ...&\hphantom {\equiv } + \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dots \aO _{j_{2}}} -\; \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...om {\equiv } + \left ( \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...}\aaO _{i_1}\aO _{j_1} \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...aaO _{i_2}\aO _{j_2} - \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...}\aaO _{i_1}\aO _{j_2} \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...&\hphantom {\equiv } + \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dots \aO _{j_{2}}} -\; \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...om {\equiv } + \left ( \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...}\aaO _{i_1}\aO _{j_1} \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...aaO _{i_2}\aO _{j_2} - \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...}\aaO _{i_1}\aO _{j_2} \contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.248 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (13.98811pt too wide) in paragraph at lines 248--248
+[] 
+ []
+
+[195]
+
+LaTeX Warning: Citation `Shavitt:2009' on page 196 undefined on input line 263.
+
+
+! Undefined control sequence.
+<argument> ...m {=} + (-1)^{M\cdot N}\contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.280 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...v } + (-1)^{(M-1)(N-1)}\contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.280 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...m {=} + (-1)^{M\cdot N}\contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.280 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...v } + (-1)^{(M-1)(N-1)}\contraction 
+                                                  [1.5ex]{}{\aO }{{}^\dag _{...
+l.280 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.283   \contraction
+                    [1.5ex]{}{\aO}{{}^\dag_{i}}{\aO}\aO_{i}\aaO_{j}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \bm 
+               {\op {p}}
+l.304 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \bm 
+               {\op {p}}
+l.304 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \bm 
+               {\op {p}}
+l.304 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \bm 
+               {\op {p}}
+l.304 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \bm 
+               {\op {p}}
+l.304 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \bm 
+               {\op {p}}
+l.304 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `sec:com' on page 196 undefined on input line 305.
+
+
+LaTeX Warning: Citation `Hergert:2009wh' on page 196 undefined on input line 30
+5.
+
+[196]
+
+LaTeX Warning: Citation `Weinberg:1996uf' on page 197 undefined on input line 3
+38.
+
+
+LaTeX Warning: Citation `Tsukiyama:2011uq' on page 197 undefined on input line 
+338.
+
+
+LaTeX Warning: Citation `Tsukiyama:2012fk' on page 197 undefined on input line 
+338.
+
+
+LaTeX Warning: Citation `Hergert:2013mi' on page 197 undefined on input line 33
+8.
+
+
+LaTeX Warning: Reference `app:imsrg3' on page 197 undefined on input line 338.
+
+[197]
+
+LaTeX Warning: Reference `app:commutators' on page 198 undefined on input line 
+349.
+
+
+LaTeX Warning: Reference `sec:mbpt' on page 198 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Day:1967zl' on page 198 undefined on input line 389.
+
+
+LaTeX Warning: Citation `Brandow:1967tg' on page 198 undefined on input line 38
+9.
+
+
+LaTeX Warning: Citation `Fetter:2003ve' on page 198 undefined on input line 389
+.
+
+
+LaTeX Warning: Citation `Brandow:1967tg' on page 198 undefined on input line 39
+2.
+
+
+LaTeX Warning: Citation `Shavitt:2009' on page 198 undefined on input line 392.
+
+
+
+LaTeX Warning: Citation `Shavitt:2009' on page 198 undefined on input line 395.
+
+
+
+LaTeX Warning: Citation `Hagen:2014ve' on page 198 undefined on input line 395.
+
+
+
+LaTeX Warning: Citation `Dickhoff:2004fk' on page 198 undefined on input line 3
+95.
+
+
+LaTeX Warning: Citation `Barbieri:2007fk' on page 198 undefined on input line 3
+95.
+
+
+LaTeX Warning: Citation `Cipollone:2013uq' on page 198 undefined on input line 
+395.
+
+
+LaTeX Warning: Citation `White:2002fk' on page 198 undefined on input line 395.
+
+
+
+LaTeX Warning: Citation `Yanai:2006uq' on page 198 undefined on input line 395.
+
+
+[198]
+
+LaTeX Warning: Citation `Suhonen:2007wo' on page 199 undefined on input line 43
+4.
+
+
+LaTeX Warning: Citation `Kuo:1981fk' on page 199 undefined on input line 440.
+
+
+LaTeX Warning: Reference `sec:numerics_radii' on page 199 undefined on input li
+ne 451.
+
+
+LaTeX Warning: Reference `sec:com' on page 199 undefined on input line 451.
+
+[199]
+
+LaTeX Warning: Citation `Anderson:2010br' on page 200 undefined on input line 4
+53.
+
+
+LaTeX Warning: Citation `Bogner:2010pq' on page 200 undefined on input line 453
+.
+
+
+LaTeX Warning: Citation `Blanes:2009fk' on page 200 undefined on input line 453
+.
+
+
+LaTeX Warning: Citation `Morris:2015ve' on page 200 undefined on input line 453
+.
+
+
+LaTeX Warning: Reference `sec:magnus' on page 200 undefined on input line 453.
+
+
+LaTeX Warning: File `fig/H_initial.eps' not found on input line 464.
+
+Package epstopdf Info: Source file: <fig/H_initial.eps>
+(epstopdf)             Output file: <fig/H_initial-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=fig/H_initial-eps-converte
+d-to.pdf fig/H_initial.eps>
+(epstopdf)             \includegraphics on input line 464.
+Package epstopdf Info: Output file is already uptodate.
+
+! Package pdftex.def Error: File `fig/H_initial-eps-converted-to.pdf' not found
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.464 ...idth=0.46\unitlength]{fig/H_initial.eps}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig/H_IMSRG_3ph_decoupling.eps' not found on input line 46
+5.
+
+Package epstopdf Info: Source file: <fig/H_IMSRG_3ph_decoupling.eps>
+(epstopdf)             Output file: <fig/H_IMSRG_3ph_decoupling-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <repstopdf --outfile=fig/H_IMSRG_3ph_decoupling
+-eps-converted-to.pdf fig/H_IMSRG_3ph_decoupling.eps>
+(epstopdf)             \includegraphics on input line 465.
+Package epstopdf Info: Output file is already uptodate.
+
+! Package pdftex.def Error: File `fig/H_IMSRG_3ph_decoupling-eps-converted-to.p
+df' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.465 ...tlength]{fig/H_IMSRG_3ph_decoupling.eps}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `sec:mrimsrg' on page 200 undefined on input line 492.
+
+
+
+LaTeX Warning: Reference `sec:shell_model' on page 200 undefined on input line 
+492.
+
+[200]
+
+LaTeX Warning: Citation `Bogner:2010pq' on page 201 undefined on input line 509
+.
+
+
+LaTeX Warning: Citation `Jurgenson:2009bs' on page 201 undefined on input line 
+509.
+
+
+LaTeX Warning: Citation `Hebeler:2012ly' on page 201 undefined on input line 50
+9.
+
+
+LaTeX Warning: Reference `sec:refstate' on page 201 undefined on input line 534
+.
+
+
+LaTeX Warning: Reference `sec:numerics_decoupling' on page 201 undefined on inp
+ut line 540.
+
+
+LaTeX Warning: Reference `fig:decoupling' on page 201 undefined on input line 5
+46.
+
+
+LaTeX Warning: Citation `Shavitt:2009' on page 201 undefined on input line 551.
+
+
+[201]
+
+LaTeX Warning: Citation `White:2002fk' on page 202 undefined on input line 558.
+
+
+
+LaTeX Warning: Citation `Tsukiyama:2011uq' on page 202 undefined on input line 
+558.
+
+
+LaTeX Warning: Citation `Shavitt:2009' on page 202 undefined on input line 566.
+
+
+
+LaTeX Warning: Citation `White:2002fk' on page 202 undefined on input line 566.
+
+
+[202]
+
+LaTeX Warning: Citation `Tsukiyama:2012fk' on page 203 undefined on input line 
+593.
+
+
+LaTeX Warning: Citation `Hergert:2013ij' on page 203 undefined on input line 59
+3.
+
+
+LaTeX Warning: Reference `sec:mbpt' on page 203 undefined on input line 595.
+
+
+LaTeX Warning: Citation `Carlson:2015lq' on page 203 undefined on input line 60
+1.
+
+
+LaTeX Warning: Citation `Wegner:1994dk' on page 203 undefined on input line 616
+.
+
+[203]
+
+LaTeX Warning: Reference `app:commutators' on page 204 undefined on input line 
+620.
+
+
+LaTeX Warning: Citation `Wegner:1994dk' on page 204 undefined on input line 638
+.
+
+
+LaTeX Warning: Citation `Kehrein:2006kx' on page 204 undefined on input line 63
+8.
+
+
+LaTeX Warning: Citation `Anderson:2008hx' on page 204 undefined on input line 6
+53.
+
+
+LaTeX Warning: Citation `Bogner:2010pq' on page 204 undefined on input line 653
+.
+
+[204]
+
+LaTeX Warning: Reference `sec:mbpt' on page 205 undefined on input line 694.
+
+[205]
+
+LaTeX Warning: Reference `sec:numerics' on page 206 undefined on input line 729
+.
+
+) [206]
 \openout2 = `chapter11.aux'.
 
- (./chapter11.tex [194
+ (./chapter11.tex) [207
 
 
 
 
-]) [195]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 242.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
- (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) 
-(./chapter4.aux) (./chapter5.aux)
-(./chapter6.aux) (./chapter7.aux) (./chapter8.aux) (./chapter9.aux)
-(./chapter10.aux) (./chapter11.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 242.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 242.
+]
+\openout2 = `chapter12.aux'.
+
+ (./chapter12.tex [208
+
+
+
+
+]) [209]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
+ (./lnp.aux
+(./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
+(./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./chapter7.aux)
+(./chapter8.aux) (./chapter9.aux) (./chapter10.aux) (./chapter11.aux)
+(./chapter12.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 68DD14AA5A7809B9B59A0EE667A9DC28;10339.
+(rerunfilecheck)             Checksum: 38E23033A27D10C44D9A503A7966DEDD;11299.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -6031,13 +7066,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
  ) 
 Here is how much of TeX's memory you used:
- 22091 strings out of 493089
- 349018 string characters out of 6134842
- 528962 words of memory out of 5000000
- 23422 multiletter control sequences out of 15000+600000
+ 22444 strings out of 493089
+ 353125 string characters out of 6134842
+ 534271 words of memory out of 5000000
+ 23649 multiletter control sequences out of 15000+600000
  129595 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,20n,122p,1929b,1819s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -6065,10 +7100,10 @@ exlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (204 pages, 3003450 bytes).
+Output written on lnp.pdf (218 pages, 3072129 bytes).
 PDF statistics:
- 4145 PDF objects out of 4296 (max. 8388607)
- 3631 compressed objects within 37 object streams
- 1599 named destinations out of 1728 (max. 500000)
- 1226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4459 PDF objects out of 5155 (max. 8388607)
+ 3928 compressed objects within 40 object streams
+ 1712 named destinations out of 1728 (max. 500000)
+ 1330 words of extra memory for PDF output out of 10000 (max. 10000000)
 

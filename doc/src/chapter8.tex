@@ -686,6 +686,256 @@ where $P_{12}^{\sigma}=\frac{1}{2}\left( 1+\sigma_{1}\cdot\sigma_{2}\right)$ and
 \end{center}
 
 
+\subsection{Models from Efective field theory for the two- and three-nucleon interactions}\label{subsec:forcemodels}
+
+During the past two decades, it has been demonstrated that chiral
+effective field theory represents a powerful tool to deal with
+hadronic interactions at low energy in a systematic and
+model-independent way (see
+Refs.~\cite{weinberg1990,weinberg1991,ordonez1992,ordonez1994,ordonez1996,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013}).
+EFTs are defined in terms of effective Lagrangians which are given by
+an infinite series of terms with increasing number of derivatives
+and/or nucleon fields, with the dependence of each term on the pion
+field prescribed by the rules of broken chiral symmetry.  Applying
+this Lagrangian to a particular process, an unlimited number of
+Feynman graphs can be drawn. Therefore, a scheme is needed that makes
+the theory manageable and calculable.  This scheme which tells us how
+to distinguish between large (important) and small (unimportant)
+contributions is chiral perturbation theory (ChPT).  ChPT allows for
+an expansion in terms of $(Q/\Lambda_\chi)^\nu$, where $Q$ is generic
+for an external momentum (nucleon three-momentum or pion
+four-momentum) or a pion mass, and $\Lambda_\chi \sim 1$ GeV is the
+chiral symmetry breaking scale.  Determining the power $\nu$ has
+become known as power counting.
+
+Nuclear potentials are defined as sets of irreducible
+graphs up to a given order.
+The power $\nu$ of a few-nucleon diagram involving $A$ nucleons
+is given in terms of naive dimensional analysis by:
+\begin{equation} 
+\nu = -2 +2A - 2C + 2L 
++ \sum_i \Delta_i \, ,  
+\label{eq_nu} 
+\end{equation}
+with
+\begin{equation}
+\Delta_i  \equiv   d_i + \frac{n_i}{2} - 2  \, ,
+\label{eq_Deltai}
+\end{equation}
+where $C$ denotes the number of separately connected pieces and
+$L$ the number of loops in the diagram;
+$d_i$ is the number of derivatives or pion-mass insertions and $n_i$ the number of nucleon fields 
+(nucleon legs) involved in vertex $i$; the sum runs over all vertices contained
+in the diagram under consideration.
+Note that $\Delta_i \geq 0$
+for all interactions allowed by chiral symmetry.   In this work we will focus on optimized two- and three-nucleon forces  at order 
+NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.   Studies of the convergence of chiral perturbation theory for the quantities studied here, will be
+presented in  a future work.  
+
+Below we revisit briefly the formalism and results presented in Refs.~\cite{carlsson2014}. For further details on chiral effective field theory 
+and nuclear interactions, see for example Refs.~\cite{machleidt2011,epelbaum2009,ekstrom2013}
+\begin{figure}[t]\centering
+%\vspace*{-0.25cm}
+\scalebox{0.14}{\includegraphics{Figs/diagNNLO.pdf}}
+%\vspace*{-1.0cm}
+\caption{Nuclear forces in ChPT up to NNLO. Solid lines
+represent nucleons and dashed lines pions. 
+Small dots, large solid dots, and solid squares
+denote vertices of index $\Delta_i= \, $ 0, 1, and 2, respectively.}
+\label{fig_diagNNLO}
+\end{figure}
+For an irreducible $NN$ diagram (``two-nucleon potential'', $A=2$, $C=1$),
+Eq.~(\ref{eq_nu}) collapses to
+\begin{equation} 
+\nu =  2L + \sum_i \Delta_i \, .  
+\label{eq_nunn} 
+\end{equation}
+Thus, in terms of naive dimensional analysis or ``Weinberg counting'' \cite{weinberg1990,weinberg1991},
+the various orders of the irreducible graphs which define the chiral 
+$NN$ potential 
+are given by (cf.\ Fig.~\ref{fig_diagNNLO})
+\begin{eqnarray}
+V_{\rm LO} & = & 
+V_{\rm ct}^{(0)} + 
+V_{1\pi}^{(0)} 
+\label{eq_VLO}
+\\
+V_{\rm NLO} & = & V_{\rm LO} +
+V_{\rm ct}^{(2)} + 
+V_{1\pi}^{(2)} +
+V_{2\pi}^{(2)} 
+\label{eq_VNLO}
+\\
+V_{\rm NNLO} & = & V_{\rm NLO} +
+V_{1\pi}^{(3)} + 
+V_{2\pi}^{(3)} 
+\label{eq_VNNLO}
+\end{eqnarray}
+where 
+the superscript denotes the order $\nu$ of the low-momentum expansion.
+LO stands for leading order, NLO for next-to-leading
+order and NNLO stands for next-to-next-to leading order.
+Contact potentials carry the subscript ``ct'' and
+pion-exchange potentials can be identified by an obvious subscript.
+
+The charge-independent one-pion-exchange (1PE) potential reads
+\begin{equation}
+V_{1\pi} ({\vec p}~', \vec p) = - 
+%\frac{1}{(2\pi)^3} \,
+\frac{g_A^2}{4f_\pi^2}
+\: 
+{\vec \tau}_1 \cdot {\vec \tau}_2 
+\:
+\frac{
+\vec \sigma_1 \cdot \vec q \,\, \vec \sigma_2 \cdot \vec q}
+{q^2 + m_\pi^2} 
+\,,
+\label{eq:eq_1PEci}
+\end{equation}
+where ${\vec p}~'$ and $\vec p$ designate the final and initial
+nucleon momenta in the center-of-mass system (CMS) and $\vec q \equiv
+{\vec p}~' - \vec p$ is the momentum transfer; $\vec \sigma_{1,2}$ and
+$\vec tau_{1,2}$ are the spin and isospin operators of nucleon 1 and
+2; $g_A$, $f_\pi$, and $m_\pi$ denote axial-vector coupling constant,
+the pion decay constant, and the pion mass, respectively. As in Ref.~\cite{carlsson2014}, we use
+$f_\pi=92.4$ MeV and $g_A=1.29$ throughout this work.  
+Since higher order corrections contribute only to mass
+and coupling constant renormalizations and since, on shell, there are
+no relativistic corrections, the on-shell 1PE has the form
+of Eq.~(\ref{eq:eq_1PEci}) to all orders.
+
+It is well known that, for high-precision $NN$ potentials,
+charge dependence is important.
+Therefore, we will 
+take the charge dependence of the 1PE into account.
+Defining a pion-mass dependent 1PE by
+\[
+V_{1\pi} (m_\pi) \equiv - \,
+%\frac{1}{(2\pi)^3} \,
+\frac{g_A^2}{4f_\pi^2} \,
+\frac{
+\vec \sigma_1 \cdot \vec q \,\, \vec \sigma_2 \cdot \vec q}
+{q^2 + m_\pi^2} 
+\,,
+\]
+the 1PE for proton-proton ($pp$) and neutron-neutron ($nn$)
+scattering is
+\[
+V_{1\pi}^{(pp)} ({\vec p}~', \vec p) = 
+V_{1\pi}^{(nn)} ({\vec p}~', \vec p) =
+V_{1\pi} (m_{\pi^0}) \,,
+\]
+while for neutron-proton ($np$) scattering we have
+\[
+V_{1\pi}^{(np)} ({\vec p}~', \vec p) 
+= -V_{1\pi} (m_{\pi^0}) + (-1)^{T+1}\, 2\, V_{1\pi} (m_{\pi^\pm})
+\,,
+\]
+where $T$ denotes the isospin of the two-nucleon system.
+We use $m_{\pi^0}=134.9766$ MeV and
+ $m_{\pi^\pm}=139.5702$ MeV.
+For the leading-order, next-to-leading order and NNLO, we refer the reader to Refs.~\cite{machleidt2011,carlsson2014}.
+The final interaction at order NNLO is multiplied with the following factors \cite{machleidt2011},
+\begin{equation}
+\widehat{V}({\vec p}~',{\vec p})
+\equiv 
+\frac{1}{(2\pi)^3}
+\sqrt{\frac{M_N}{E_{p'}}}\:  
+{V}({\vec p}~',{\vec p})\:
+ \sqrt{\frac{M_N}{E_{p}}}
+\label{eq_minrel1}
+\end{equation}
+with $E_p=\sqrt{M_N^2+p^2}$ and
+where the factor $1/(2\pi)^3$ is just added for convenience.
+The potential $\widehat{V}$ satisfies the nonrelativistic
+Lippmann-Schwinger (LS) equation,
+\begin{equation}
+ \widehat{T}({\vec p}~',{\vec p})= \widehat{V}({\vec p}~',{\vec p})+
+\int d^3p''\:
+\widehat{V}({\vec p}~',{\vec p}~'')\:
+\frac{M_N}
+{{ p}^{2}-{p''}^{2}+i\epsilon}\:
+\widehat{T}({\vec p}~'',{\vec p}) \, .
+\label{eq_LS}
+\end{equation}
+In $pp$ scattering, we use $M_N=M_p=938.2720$ MeV,
+and in $nn$ scattering, $M_N=M_n=939.5653$ MeV.
+Moreover, the on-shell momentum is simply
+\begin{equation}
+p^2  =  \frac12 M_N T_{\rm lab} \,,
+\end{equation}
+where $T_{\rm lab}$ denotes 
+the kinetic energy of the incident nucleon 
+in the laboratory system (``Lab.\ Energy'').
+For $np$ scattering, we have
+\begin{eqnarray}
+M_N  &=&  \frac{2M_pM_n}{M_p+M_n} = 938.9182 \mbox{ MeV, and}
+\\
+p^2 & = & \frac{M_p^2 T_{\rm lab} (T_{\rm lab} + 2M_n)}
+               {(M_p + M_n)^2 + 2T_{\rm lab} M_p}  
+\,,
+\end{eqnarray}
+which is based upon relativistic kinematics.
+
+Iteration of $\widehat V$ in the LS equation, Eq.~(\ref{eq_LS}),
+requires cutting $\widehat V$ off for high momenta to avoid infinities.
+This is consistent with the fact that ChPT
+is a low-momentum expansion which
+is valid only for momenta $Q \ll \Lambda_\chi \approx 1$ GeV.
+Therefore, the potential $\widehat V$
+is multiplied
+with the regulator function $f(p',p)$,
+\begin{equation}
+{\widehat V}(\vec{ p}~',{\vec p})
+\longmapsto
+{\widehat V}(\vec{ p}~',{\vec p}) \, f(p',p) 
+\end{equation}
+with
+\begin{equation}
+f(p',p) = \exp[-(p'/\Lambda)^{2n}-(p/\Lambda)^{2n}] \,.
+\label{eq:eq_f}
+\end{equation}
+
+
+Up to NNLO in chiral perturbation theory there are, in addition to the
+two-body interaction diagrams discussed above, also a few three-body
+interaction diagrams, see Fig.~\ref{fig_diagNNLO}. In
+chiral perturbation theory, the orders are generated systematically,
+and at a given chiral order the number of Feynman diagrams is
+finite. Consistency requires that a calculation includes all diagrams
+which are present at the chosen order. In this work we employ 
+chirally consistent many-body calculations including all NNLO nuclear
+interactions.
+
+There are in total five contact terms that determine the strength of the NNLO
+three-nucleon force (3NF); $c_1,c_3,$ and $c_4$ are associated with
+the three-body two-pion-exchange (2PE) diagram, $c_D$ and $c_E$
+determine the strength of the one-pion-exchange plus contact (1PE)
+diagram and the pure contact (CNT) diagram, respectively. Following
+the notation of Ref.~\cite{epelbaum2002} the three-body diagrams are given
+by
+\begin{equation}
+V^{\textnormal{2PE}}_{ijk} = \sum_{i \neq j \neq k} \frac{1}{2} \left( \frac{g_A}{f_{\pi}} \right)^2 \frac{(\vec{\sigma_i} \cdot \vec{q_i})(\vec{\sigma_j}\cdot \vec{q_j})}{(\vec{q_i}^2 + m_{\pi)}^2)(\vec{q_j}^2 + m_{\pi)}^2)} F_{ijk}^{\alpha \beta} \tau_i^{\alpha}\tau_{j}^{\beta} \,,
+\end{equation}
+where $q_{i}$ denotes the momentum transfer associated with nucleon $i$, and
+\begin{align}
+F_{ijk}^{\alpha \beta} ={}&  \delta^{\alpha \beta} \left[ -\frac{4c_1m_{\pi}^2}{f_{\pi}^2} + \frac{2c_3}{f_{\pi}^2}\vec{q_i}\cdot \vec{q_j}\right]\\
+{}&+\sum_{\gamma}\frac{c_4}{f_{\pi}^2}\epsilon^{\alpha \beta \gamma} \tau_{k}^{\gamma} \vec{\sigma_k} \cdot [\vec{q_i} \times \vec{q_j}] \,.
+\end{align}
+For this diagram, no new parameters are introduced since the $c_1,c_3,c_4$ appear already in the 2PE two-nucleon interaction. The remaining two three-body terms are given by
+\begin{equation}
+V^{\textnormal{1PE}}_{ijk} = -\sum_{i \neq j \neq k} \frac{g_A}{8f_{\pi}^2} \frac{c_D}{f_{\pi}^2\Lambda_{\chi}} \frac{ (\vec{\sigma_j} \cdot \vec{q_j})}{(\vec{q_j}^2 + m_{\pi}^2)} (\tau_i \cdot \tau_j)(\vec{\sigma_i}\cdot \vec{\sigma_j})
+\end{equation}
+and
+\begin{equation}
+V^{\textnormal{CNT}}_{ijk} = \frac{1}{2}\sum_{i \neq j \neq k} \frac{c_E}{f_{\pi}^4 \Lambda_{\chi}} (\tau_i \cdot \tau_j) 
+\end{equation}
+with $\Lambda_{\chi}=700$ MeV. Following~\cite{navratil2007}, we use a regulator depending on the momentum-transfer $q$, 
+\begin{equation}
+f(q) = \exp[-q^4/\Lambda]
+\end{equation}
+and thus obtain a local three-body force. 
+
 
 
 
@@ -3278,9 +3528,6 @@ We are much indebted to Thomas Papenbrock for many discussions on many-body phys
 Computational resources were provided by Michigan State University and the Research Council of Norway via the Notur project (Supercomputing grant NN2977K).
 This work was supported by NSF Grant No. PHY-1404159 and  the Research Council of Norway under contract ISP-Fysikk/216699.
 \end{acknowledgement}
-
-
-
 
 
 
