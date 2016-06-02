@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUN 2016 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 JUN 2016 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,8 +949,1119 @@ LaTeX Warning: Unused global option(s):
     [sectrefs].
 
 (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
-(./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./chapter7.aux)
-(./chapter8.aux
+(./chapter4.aux) (./chapter5.aux
+
+LaTeX Warning: Label `Feynman' multiply defined.
+
+
+LaTeX Warning: Label `Metropolis:1953am' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1980gp' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1984xr' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1987tr' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:2004xa' multiply defined.
+
+
+LaTeX Warning: Label `Jarrell:1996rrw' multiply defined.
+
+
+LaTeX Warning: Label `Asakawa:2000tr' multiply defined.
+
+
+LaTeX Warning: Label `Jarzynski:1997' multiply defined.
+
+
+LaTeX Warning: Label `Gross:1973id' multiply defined.
+
+
+LaTeX Warning: Label `Politzer:1973fx' multiply defined.
+
+
+LaTeX Warning: Label `Coleman:1973jx' multiply defined.
+
+
+LaTeX Warning: Label `Nakamura:2010zzi' multiply defined.
+
+
+LaTeX Warning: Label `Alford:2007xm' multiply defined.
+
+
+LaTeX Warning: Label `Adams:2012th' multiply defined.
+
+
+LaTeX Warning: Label `Braun-Munzinger:2015hba' multiply defined.
+
+
+LaTeX Warning: Label `GellMann:1968rz' multiply defined.
+
+
+LaTeX Warning: Label `Coleman:1980mx' multiply defined.
+
+
+LaTeX Warning: Label `tHooft:1979bh' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1977ut' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1978ij' multiply defined.
+
+
+LaTeX Warning: Label `Linde:1980ts' multiply defined.
+
+
+LaTeX Warning: Label `Pisarski:1983ms' multiply defined.
+
+
+LaTeX Warning: Label `Aoki:2006we' multiply defined.
+
+
+LaTeX Warning: Label `Bazavov:2011nk' multiply defined.
+
+
+LaTeX Warning: Label `Aoki:2006br' multiply defined.
+
+
+LaTeX Warning: Label `Aoki:2009sc' multiply defined.
+
+
+LaTeX Warning: Label `Bazavov:2014pvz' multiply defined.
+
+
+LaTeX Warning: Label `Stephanov:2004wx' multiply defined.
+
+
+LaTeX Warning: Label `Fodor:2001pe' multiply defined.
+
+
+LaTeX Warning: Label `Allton:2002zi' multiply defined.
+
+
+LaTeX Warning: Label `Karsch:2003va' multiply defined.
+
+
+LaTeX Warning: Label `Fodor:2004nz' multiply defined.
+
+
+LaTeX Warning: Label `Gavai:2008zr' multiply defined.
+
+
+LaTeX Warning: Label `Datta:2012pj' multiply defined.
+
+
+LaTeX Warning: Label `deForcrand:2010he' multiply defined.
+
+
+LaTeX Warning: Label `Stephanov:1998dy' multiply defined.
+
+
+LaTeX Warning: Label `Sauer:1976zzf' multiply defined.
+
+
+LaTeX Warning: Label `Pochodzalla:1995xy' multiply defined.
+
+
+LaTeX Warning: Label `Elliott:2013pna' multiply defined.
+
+
+LaTeX Warning: Label `Alford:1998mk' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:1999fe' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:1998ef' multiply defined.
+
+
+LaTeX Warning: Label `Hatsuda:2006ps' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1983' multiply defined.
+
+
+LaTeX Warning: Label `Montvay:1994' multiply defined.
+
+
+LaTeX Warning: Label `Smit:2002' multiply defined.
+
+
+LaTeX Warning: Label `Gattringer:2009' multiply defined.
+
+
+LaTeX Warning: Label `Lin:2014' multiply defined.
+
+
+LaTeX Warning: Label `Fodor:2009ax' multiply defined.
+
+
+LaTeX Warning: Label `Ding:2015ona' multiply defined.
+
+
+LaTeX Warning: Label `Wilson:1974sk' multiply defined.
+
+
+LaTeX Warning: Label `Mezzadri:2006' multiply defined.
+
+
+LaTeX Warning: Label `Hasenfratz:1980kn' multiply defined.
+
+
+LaTeX Warning: Label `Lepage:1998dt' multiply defined.
+
+
+LaTeX Warning: Label `Wolff:1988uh' multiply defined.
+
+
+LaTeX Warning: Label `Kogut:1974ag' multiply defined.
+
+
+LaTeX Warning: Label `Kaplan:1992bt' multiply defined.
+
+
+LaTeX Warning: Label `Neuberger:1997fp' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:2010ae' multiply defined.
+
+
+LaTeX Warning: Label `Endress:2014qpa' multiply defined.
+
+
+LaTeX Warning: Label `Dick:2015twa' multiply defined.
+
+
+LaTeX Warning: Label `Teper:1985ek' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:2010iy' multiply defined.
+
+
+LaTeX Warning: Label `Belavin:1975fg' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:1996wv' multiply defined.
+
+
+LaTeX Warning: Label `DelDebbio:2004ns' multiply defined.
+
+
+LaTeX Warning: Label `Ce:2014sfa' multiply defined.
+
+
+LaTeX Warning: Label `Poppitz:2012nz' multiply defined.
+
+
+LaTeX Warning: Label `Banks:1979yr' multiply defined.
+
+
+LaTeX Warning: Label `Ginsparg:1981bj' multiply defined.
+
+
+LaTeX Warning: Label `Cherman:2016hcd' multiply defined.
+
+
+LaTeX Warning: Label `Cristoforetti:2012su' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2014nxa' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2009uq' multiply defined.
+
+
+LaTeX Warning: Label `Sexty:2013ica' multiply defined.
+
+
+LaTeX Warning: Label `Kloiber:2013rba' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:2009dj' multiply defined.
+
+
+LaTeX Warning: Label `Schaefer:2014awa' multiply defined.
+
+
+LaTeX Warning: Label `Karsch:1986cq' multiply defined.
+
+
+LaTeX Warning: Label `Meyer:2007ic' multiply defined.
+
+
+LaTeX Warning: Label `Meyer:2007dy' multiply defined.
+
+
+LaTeX Warning: Label `Sakai:2007cm' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2007wj' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2007va' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2006wt' multiply defined.
+
+
+LaTeX Warning: Label `Meyer:2008gt' multiply defined.
+
+
+LaTeX Warning: Label `Romatschke:2009ng' multiply defined.
+
+
+LaTeX Warning: Label `Arnold:2000dr' multiply defined.
+
+
+LaTeX Warning: Label `Kovtun:2004de' multiply defined.
+
+
+LaTeX Warning: Label `Romatschke:2009im' multiply defined.
+
+
+LaTeX Warning: Label `Rezzolla:2013' multiply defined.
+
+
+LaTeX Warning: Label `Jeon:2015dfa' multiply defined.
+
+
+LaTeX Warning: Label `Colella:1984' multiply defined.
+
+
+LaTeX Warning: Label `Blondin:1993' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:2010dv' multiply defined.
+
+
+LaTeX Warning: Label `Florkowski:2010cf' multiply defined.
+
+
+LaTeX Warning: Label `Martinez:2010sc' multiply defined.
+
+
+LaTeX Warning: Label `Bluhm:2015raa' multiply defined.
+
+
+LaTeX Warning: Label `Bluhm:2015bzi' multiply defined.
+
+
+LaTeX Warning: Label `Romatschke:2011hm' multiply defined.
+
+
+LaTeX Warning: Label `Brewer:2015hua' multiply defined.
+
+
+LaTeX Warning: Label `Kadanoff' multiply defined.
+
+
+LaTeX Warning: Label `Bertsch:1988ik' multiply defined.
+
+
+LaTeX Warning: Label `Lepers:2010be' multiply defined.
+
+
+LaTeX Warning: Label `Bass:1998ca' multiply defined.
+
+
+LaTeX Warning: Label `Buss:2011mx' multiply defined.
+
+
+LaTeX Warning: Label `Ehehalt:1996uq' multiply defined.
+
+
+LaTeX Warning: Label `Geiger:1991nj' multiply defined.
+
+
+LaTeX Warning: Label `Xu:2004mz' multiply defined.
+
+
+LaTeX Warning: Label `McLerran:1993ni' multiply defined.
+
+
+LaTeX Warning: Label `Mueller:2002gd' multiply defined.
+
+
+LaTeX Warning: Label `Mrowczynski:2016etf' multiply defined.
+
+
+LaTeX Warning: Label `Berges:2008wm' multiply defined.
+
+
+LaTeX Warning: Label `Dusling:2010rm' multiply defined.
+
+
+LaTeX Warning: Label `Litim:2001db' multiply defined.
+
+
+LaTeX Warning: Label `Wong:1970fu' multiply defined.
+
+
+LaTeX Warning: Label `Hu:1996sf' multiply defined.
+
+
+LaTeX Warning: Label `Maldacena:1997re' multiply defined.
+
+
+LaTeX Warning: Label `Son:2007vk' multiply defined.
+
+
+LaTeX Warning: Label `Gubser:2009md' multiply defined.
+
+
+LaTeX Warning: Label `CasalderreySolana:2011us' multiply defined.
+
+
+LaTeX Warning: Label `DeWolfe:2013cua' multiply defined.
+
+
+LaTeX Warning: Label `Policastro:2002se' multiply defined.
+
+
+LaTeX Warning: Label `Teaney:2006nc' multiply defined.
+
+
+LaTeX Warning: Label `Son:2006em' multiply defined.
+
+
+LaTeX Warning: Label `Chesler:2010bi' multiply defined.
+
+
+LaTeX Warning: Label `Chesler:2013lia' multiply defined.
+
+
+LaTeX Warning: Label `Rangamani:2009xk' multiply defined.
+
+
+LaTeX Warning: Label `Clay-YM' multiply defined.
+
+
+LaTeX Warning: Label `Clay-NS' multiply defined.
+
+
+LaTeX Warning: Label `Villani:2009' multiply defined.
+
+
+LaTeX Warning: Label `Perelman' multiply defined.
+
+
+LaTeX Warning: Label `Shen:2014vra' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:2004' multiply defined.
+
+
+LaTeX Warning: Label `Weinberg:1990rz' multiply defined.
+
+
+LaTeX Warning: Label `Weinberg:1991um' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2008ga' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:1986pf' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2008fa' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2006qn' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2009pd' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2013paa' multiply defined.
+
+
+LaTeX Warning: Label `Lahde:2013uqa' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2011md' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2012qn' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2012iu' multiply defined.
+
+
+LaTeX Warning: Label `Ordonez:1992xp' multiply defined.
+
+
+LaTeX Warning: Label `Ordonez:1993tn' multiply defined.
+
+
+LaTeX Warning: Label `vanKolck:1994yi' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:1998hg' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:1998ka' multiply defined.
+
+
+LaTeX Warning: Label `Bedaque:2002mn' multiply defined.
+
+
+LaTeX Warning: Label `Drut:2012a' multiply defined.
+
+
+LaTeX Warning: Label `Hubbard:1959ub' multiply defined.
+
+
+LaTeX Warning: Label `Stratonovich:1958' multiply defined.
+
+
+LaTeX Warning: Label `Weingarten:1980hx' multiply defined.
+
+
+LaTeX Warning: Label `Scalettar:1986uy' multiply defined.
+
+
+LaTeX Warning: Label `Gottlieb:1987mq' multiply defined.
+
+
+LaTeX Warning: Label `Duane:1987de' multiply defined.
+
+
+LaTeX Warning: Label `Muller:1999cp' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2004si' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2004qd' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2005is' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2005it' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2005yc' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2007vi' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2007vk' multiply defined.
+
+
+LaTeX Warning: Label `Wlazlowski:2014jna' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2009zs' multiply defined.
+
+
+LaTeX Warning: Label `Elhatisari:2016owd' multiply defined.
+
+
+LaTeX Warning: Label `Rupak:2013aue' multiply defined.
+
+
+LaTeX Warning: Label `Rupak:2014xza' multiply defined.
+
+
+LaTeX Warning: Label `Elhatisari:2015iga' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:1985dn' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:1991ux' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2007vy' multiply defined.
+
+
+LaTeX Warning: Label `Carlson:1984' multiply defined.
+
+
+LaTeX Warning: Label `Lu:2015riz' multiply defined.
+
+
+LaTeX Warning: Label `Pine:2013zja' multiply defined.
+
+
+LaTeX Warning: Label `Elhatisari:2014lka' multiply defined.
+
+
+LaTeX Warning: Label `Rokash:2015hra' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1988wv' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1999zy' multiply defined.
+
+
+LaTeX Warning: Label `Carlson:2014vla' multiply defined.
+
+) (./chapter6.aux
+
+LaTeX Warning: Label `Feynman' multiply defined.
+
+
+LaTeX Warning: Label `Metropolis:1953am' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1980gp' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1984xr' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1987tr' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:2004xa' multiply defined.
+
+
+LaTeX Warning: Label `Jarrell:1996rrw' multiply defined.
+
+
+LaTeX Warning: Label `Asakawa:2000tr' multiply defined.
+
+
+LaTeX Warning: Label `Jarzynski:1997' multiply defined.
+
+
+LaTeX Warning: Label `Gross:1973id' multiply defined.
+
+
+LaTeX Warning: Label `Politzer:1973fx' multiply defined.
+
+
+LaTeX Warning: Label `Coleman:1973jx' multiply defined.
+
+
+LaTeX Warning: Label `Nakamura:2010zzi' multiply defined.
+
+
+LaTeX Warning: Label `Alford:2007xm' multiply defined.
+
+
+LaTeX Warning: Label `Adams:2012th' multiply defined.
+
+
+LaTeX Warning: Label `Braun-Munzinger:2015hba' multiply defined.
+
+
+LaTeX Warning: Label `GellMann:1968rz' multiply defined.
+
+
+LaTeX Warning: Label `Coleman:1980mx' multiply defined.
+
+
+LaTeX Warning: Label `tHooft:1979bh' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1977ut' multiply defined.
+
+
+LaTeX Warning: Label `Shuryak:1978ij' multiply defined.
+
+
+LaTeX Warning: Label `Linde:1980ts' multiply defined.
+
+
+LaTeX Warning: Label `Pisarski:1983ms' multiply defined.
+
+
+LaTeX Warning: Label `Aoki:2006we' multiply defined.
+
+
+LaTeX Warning: Label `Bazavov:2011nk' multiply defined.
+
+
+LaTeX Warning: Label `Aoki:2006br' multiply defined.
+
+
+LaTeX Warning: Label `Aoki:2009sc' multiply defined.
+
+
+LaTeX Warning: Label `Bazavov:2014pvz' multiply defined.
+
+
+LaTeX Warning: Label `Stephanov:2004wx' multiply defined.
+
+
+LaTeX Warning: Label `Fodor:2001pe' multiply defined.
+
+
+LaTeX Warning: Label `Allton:2002zi' multiply defined.
+
+
+LaTeX Warning: Label `Karsch:2003va' multiply defined.
+
+
+LaTeX Warning: Label `Fodor:2004nz' multiply defined.
+
+
+LaTeX Warning: Label `Gavai:2008zr' multiply defined.
+
+
+LaTeX Warning: Label `Datta:2012pj' multiply defined.
+
+
+LaTeX Warning: Label `deForcrand:2010he' multiply defined.
+
+
+LaTeX Warning: Label `Stephanov:1998dy' multiply defined.
+
+
+LaTeX Warning: Label `Sauer:1976zzf' multiply defined.
+
+
+LaTeX Warning: Label `Pochodzalla:1995xy' multiply defined.
+
+
+LaTeX Warning: Label `Elliott:2013pna' multiply defined.
+
+
+LaTeX Warning: Label `Alford:1998mk' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:1999fe' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:1998ef' multiply defined.
+
+
+LaTeX Warning: Label `Hatsuda:2006ps' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1983' multiply defined.
+
+
+LaTeX Warning: Label `Montvay:1994' multiply defined.
+
+
+LaTeX Warning: Label `Smit:2002' multiply defined.
+
+
+LaTeX Warning: Label `Gattringer:2009' multiply defined.
+
+
+LaTeX Warning: Label `Lin:2014' multiply defined.
+
+
+LaTeX Warning: Label `Fodor:2009ax' multiply defined.
+
+
+LaTeX Warning: Label `Ding:2015ona' multiply defined.
+
+
+LaTeX Warning: Label `Wilson:1974sk' multiply defined.
+
+
+LaTeX Warning: Label `Mezzadri:2006' multiply defined.
+
+
+LaTeX Warning: Label `Hasenfratz:1980kn' multiply defined.
+
+
+LaTeX Warning: Label `Lepage:1998dt' multiply defined.
+
+
+LaTeX Warning: Label `Wolff:1988uh' multiply defined.
+
+
+LaTeX Warning: Label `Kogut:1974ag' multiply defined.
+
+
+LaTeX Warning: Label `Kaplan:1992bt' multiply defined.
+
+
+LaTeX Warning: Label `Neuberger:1997fp' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:2010ae' multiply defined.
+
+
+LaTeX Warning: Label `Endress:2014qpa' multiply defined.
+
+
+LaTeX Warning: Label `Dick:2015twa' multiply defined.
+
+
+LaTeX Warning: Label `Teper:1985ek' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:2010iy' multiply defined.
+
+
+LaTeX Warning: Label `Belavin:1975fg' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:1996wv' multiply defined.
+
+
+LaTeX Warning: Label `DelDebbio:2004ns' multiply defined.
+
+
+LaTeX Warning: Label `Ce:2014sfa' multiply defined.
+
+
+LaTeX Warning: Label `Poppitz:2012nz' multiply defined.
+
+
+LaTeX Warning: Label `Banks:1979yr' multiply defined.
+
+
+LaTeX Warning: Label `Ginsparg:1981bj' multiply defined.
+
+
+LaTeX Warning: Label `Cherman:2016hcd' multiply defined.
+
+
+LaTeX Warning: Label `Cristoforetti:2012su' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2014nxa' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2009uq' multiply defined.
+
+
+LaTeX Warning: Label `Sexty:2013ica' multiply defined.
+
+
+LaTeX Warning: Label `Kloiber:2013rba' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:2009dj' multiply defined.
+
+
+LaTeX Warning: Label `Schaefer:2014awa' multiply defined.
+
+
+LaTeX Warning: Label `Karsch:1986cq' multiply defined.
+
+
+LaTeX Warning: Label `Meyer:2007ic' multiply defined.
+
+
+LaTeX Warning: Label `Meyer:2007dy' multiply defined.
+
+
+LaTeX Warning: Label `Sakai:2007cm' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2007wj' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2007va' multiply defined.
+
+
+LaTeX Warning: Label `Aarts:2006wt' multiply defined.
+
+
+LaTeX Warning: Label `Meyer:2008gt' multiply defined.
+
+
+LaTeX Warning: Label `Romatschke:2009ng' multiply defined.
+
+
+LaTeX Warning: Label `Arnold:2000dr' multiply defined.
+
+
+LaTeX Warning: Label `Kovtun:2004de' multiply defined.
+
+
+LaTeX Warning: Label `Romatschke:2009im' multiply defined.
+
+
+LaTeX Warning: Label `Rezzolla:2013' multiply defined.
+
+
+LaTeX Warning: Label `Jeon:2015dfa' multiply defined.
+
+
+LaTeX Warning: Label `Colella:1984' multiply defined.
+
+
+LaTeX Warning: Label `Blondin:1993' multiply defined.
+
+
+LaTeX Warning: Label `Schafer:2010dv' multiply defined.
+
+
+LaTeX Warning: Label `Florkowski:2010cf' multiply defined.
+
+
+LaTeX Warning: Label `Martinez:2010sc' multiply defined.
+
+
+LaTeX Warning: Label `Bluhm:2015raa' multiply defined.
+
+
+LaTeX Warning: Label `Bluhm:2015bzi' multiply defined.
+
+
+LaTeX Warning: Label `Romatschke:2011hm' multiply defined.
+
+
+LaTeX Warning: Label `Brewer:2015hua' multiply defined.
+
+
+LaTeX Warning: Label `Kadanoff' multiply defined.
+
+
+LaTeX Warning: Label `Bertsch:1988ik' multiply defined.
+
+
+LaTeX Warning: Label `Lepers:2010be' multiply defined.
+
+
+LaTeX Warning: Label `Bass:1998ca' multiply defined.
+
+
+LaTeX Warning: Label `Buss:2011mx' multiply defined.
+
+
+LaTeX Warning: Label `Ehehalt:1996uq' multiply defined.
+
+
+LaTeX Warning: Label `Geiger:1991nj' multiply defined.
+
+
+LaTeX Warning: Label `Xu:2004mz' multiply defined.
+
+
+LaTeX Warning: Label `McLerran:1993ni' multiply defined.
+
+
+LaTeX Warning: Label `Mueller:2002gd' multiply defined.
+
+
+LaTeX Warning: Label `Mrowczynski:2016etf' multiply defined.
+
+
+LaTeX Warning: Label `Berges:2008wm' multiply defined.
+
+
+LaTeX Warning: Label `Dusling:2010rm' multiply defined.
+
+
+LaTeX Warning: Label `Litim:2001db' multiply defined.
+
+
+LaTeX Warning: Label `Wong:1970fu' multiply defined.
+
+
+LaTeX Warning: Label `Hu:1996sf' multiply defined.
+
+
+LaTeX Warning: Label `Maldacena:1997re' multiply defined.
+
+
+LaTeX Warning: Label `Son:2007vk' multiply defined.
+
+
+LaTeX Warning: Label `Gubser:2009md' multiply defined.
+
+
+LaTeX Warning: Label `CasalderreySolana:2011us' multiply defined.
+
+
+LaTeX Warning: Label `DeWolfe:2013cua' multiply defined.
+
+
+LaTeX Warning: Label `Policastro:2002se' multiply defined.
+
+
+LaTeX Warning: Label `Teaney:2006nc' multiply defined.
+
+
+LaTeX Warning: Label `Son:2006em' multiply defined.
+
+
+LaTeX Warning: Label `Chesler:2010bi' multiply defined.
+
+
+LaTeX Warning: Label `Chesler:2013lia' multiply defined.
+
+
+LaTeX Warning: Label `Rangamani:2009xk' multiply defined.
+
+
+LaTeX Warning: Label `Clay-YM' multiply defined.
+
+
+LaTeX Warning: Label `Clay-NS' multiply defined.
+
+
+LaTeX Warning: Label `Villani:2009' multiply defined.
+
+
+LaTeX Warning: Label `Perelman' multiply defined.
+
+
+LaTeX Warning: Label `Shen:2014vra' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:2004' multiply defined.
+
+
+LaTeX Warning: Label `Weinberg:1990rz' multiply defined.
+
+
+LaTeX Warning: Label `Weinberg:1991um' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2008ga' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:1986pf' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2008fa' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2006qn' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2009pd' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2013paa' multiply defined.
+
+
+LaTeX Warning: Label `Lahde:2013uqa' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2011md' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2012qn' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2012iu' multiply defined.
+
+
+LaTeX Warning: Label `Ordonez:1992xp' multiply defined.
+
+
+LaTeX Warning: Label `Ordonez:1993tn' multiply defined.
+
+
+LaTeX Warning: Label `vanKolck:1994yi' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:1998hg' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:1998ka' multiply defined.
+
+
+LaTeX Warning: Label `Bedaque:2002mn' multiply defined.
+
+
+LaTeX Warning: Label `Drut:2012a' multiply defined.
+
+
+LaTeX Warning: Label `Hubbard:1959ub' multiply defined.
+
+
+LaTeX Warning: Label `Stratonovich:1958' multiply defined.
+
+
+LaTeX Warning: Label `Weingarten:1980hx' multiply defined.
+
+
+LaTeX Warning: Label `Scalettar:1986uy' multiply defined.
+
+
+LaTeX Warning: Label `Gottlieb:1987mq' multiply defined.
+
+
+LaTeX Warning: Label `Duane:1987de' multiply defined.
+
+
+LaTeX Warning: Label `Muller:1999cp' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2004si' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2004qd' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2005is' multiply defined.
+
+
+LaTeX Warning: Label `Lee:2005it' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2005yc' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2007vi' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2007vk' multiply defined.
+
+
+LaTeX Warning: Label `Wlazlowski:2014jna' multiply defined.
+
+
+LaTeX Warning: Label `Epelbaum:2009zs' multiply defined.
+
+
+LaTeX Warning: Label `Elhatisari:2016owd' multiply defined.
+
+
+LaTeX Warning: Label `Rupak:2013aue' multiply defined.
+
+
+LaTeX Warning: Label `Rupak:2014xza' multiply defined.
+
+
+LaTeX Warning: Label `Elhatisari:2015iga' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:1985dn' multiply defined.
+
+
+LaTeX Warning: Label `Luscher:1991ux' multiply defined.
+
+
+LaTeX Warning: Label `Borasoy:2007vy' multiply defined.
+
+
+LaTeX Warning: Label `Carlson:1984' multiply defined.
+
+
+LaTeX Warning: Label `Lu:2015riz' multiply defined.
+
+
+LaTeX Warning: Label `Pine:2013zja' multiply defined.
+
+
+LaTeX Warning: Label `Elhatisari:2014lka' multiply defined.
+
+
+LaTeX Warning: Label `Rokash:2015hra' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1988wv' multiply defined.
+
+
+LaTeX Warning: Label `Creutz:1999zy' multiply defined.
+
+
+LaTeX Warning: Label `Carlson:2014vla' multiply defined.
+
+) (./chapter7.aux) (./chapter8.aux
 
 LaTeX Warning: Label `eq:ccd2' multiply defined.
 
@@ -1123,84 +2234,276 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 ] (./lnp.toc
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
- [9] [10]
-Overfull \hbox (3.22194pt too wide) detected at line 98
+ [9]
+Overfull \hbox (3.22194pt too wide) detected at line 78
  []\T1/fve/m/n/10 100
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 99
+Overfull \hbox (3.22194pt too wide) detected at line 79
+ []\T1/fve/m/n/10 103
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 80
+ []\T1/fve/m/n/10 103
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 81
+ []\T1/fve/m/n/10 104
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 85
+ []\T1/fve/m/n/10 109
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 86
  []\T1/fve/m/n/10 110
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 87
+ []\T1/fve/m/n/10 112
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 88
+ []\T1/fve/m/n/10 112
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 89
+ []\T1/fve/m/n/10 114
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 90
+ []\T1/fve/m/n/10 114
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 91
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 92
+ []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 93
+ []\T1/fve/m/n/10 118
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 94
+ []\T1/fve/m/n/10 123
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 95
+ []\T1/fve/m/n/10 124
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 99
+ []\T1/fve/m/n/10 129
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 100
- []\T1/fve/m/n/10 110
+ []\T1/fve/m/n/10 129
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 104
- []\T1/fve/m/n/10 113
+Overfull \hbox (3.22194pt too wide) detected at line 101
+ []\T1/fve/m/n/10 129
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 105
- []\T1/fve/m/n/10 113
+Overfull \hbox (3.22194pt too wide) detected at line 102
+ []\T1/fve/m/n/10 129
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 106
- []\T1/fve/m/n/10 113
+Overfull \hbox (3.22194pt too wide) detected at line 103
+ []\T1/fve/m/n/10 129
  []
 
-
+[10]
 Overfull \hbox (3.22194pt too wide) detected at line 107
- []\T1/fve/m/n/10 113
+ []\T1/fve/m/n/10 131
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 108
- []\T1/fve/m/n/10 113
+ []\T1/fve/m/n/10 132
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 109
+ []\T1/fve/m/n/10 139
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 110
+ []\T1/fve/m/n/10 143
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 111
+ []\T1/fve/m/n/10 143
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 112
- []\T1/fve/m/n/10 115
+ []\T1/fve/m/n/10 144
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 113
- []\T1/fve/m/n/10 115
+ []\T1/fve/m/n/10 149
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 114
- []\T1/fve/m/n/10 115
+ []\T1/fve/m/n/10 151
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 115
+ []\T1/fve/m/n/10 152
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 116
+ []\T1/fve/m/n/10 154
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 117
+ []\T1/fve/m/n/10 154
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 118
- []\T1/fve/m/n/10 117
+ []\T1/fve/m/n/10 157
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 119
- []\T1/fve/m/n/10 117
+ []\T1/fve/m/n/10 157
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 120
- []\T1/fve/m/n/10 118
+ []\T1/fve/m/n/10 160
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 121
+ []\T1/fve/m/n/10 162
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 122
+ []\T1/fve/m/n/10 162
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 123
+ []\T1/fve/m/n/10 162
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 124
+ []\T1/fve/m/n/10 164
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 125
+ []\T1/fve/m/n/10 164
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 126
+ []\T1/fve/m/n/10 166
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 128
+ []\T1/fve/m/n/10 169
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 129
+ []\T1/fve/m/n/10 179
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 130
+ []\T1/fve/m/n/10 179
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 134
+ []\T1/fve/m/n/10 191
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 135
+ []\T1/fve/m/n/10 191
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 136
+ []\T1/fve/m/n/10 191
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 137
+ []\T1/fve/m/n/10 191
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 138
+ []\T1/fve/m/n/10 191
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 142
+ []\T1/fve/m/n/10 193
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 143
+ []\T1/fve/m/n/10 193
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 144
+ []\T1/fve/m/n/10 193
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 148
+ []\T1/fve/m/n/10 195
+ []
+
+[11]
+Overfull \hbox (3.22194pt too wide) detected at line 149
+ []\T1/fve/m/n/10 195
  []
 
 )
 \tf@toc=\write6
 \openout6 = `lnp.toc'.
 
- [11] [12
-
-
-]
+ [12]
 \openout2 = `chapter1.aux'.
 
  (./chapter1.tex
@@ -1229,6 +2532,8 @@ Package hyperref Warning: bookmark level for unknown authorch defaults to 0.
 
 
 
+
+
 ]) [2]
 \openout2 = `chapter2.aux'.
 
@@ -1250,7 +2555,7 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 209.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 218.
- [5] <Chapter2-figures/config1.pdf, id=670, 478.78876pt x 412.54124pt>
+ [5] <Chapter2-figures/config1.pdf, id=755, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
@@ -1264,7 +2569,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 365.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 365.
- [8] <Chapter2-figures/qcd_ms_high.pdf, id=736, 588.1975pt x 534.99875pt>
+ [8] <Chapter2-figures/qcd_ms_high.pdf, id=822, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
@@ -1281,7 +2586,7 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 844.
  [15]
-<Chapter2-figures/topology.pdf, id=892, 361.35pt x 252.945pt>
+<Chapter2-figures/topology.pdf, id=978, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
@@ -1295,7 +2600,7 @@ Overfull \hbox (2.46152pt too wide) in paragraph at lines 1383--1391
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-<Chapter2-figures/hic_evol_schem.pdf, id=1020, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1106, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
@@ -1304,7 +2609,7 @@ Package pdftex.def Info: Chapter2-figures/hic_evol_schem.pdf used on input line
 (pdftex.def)             Requested size: 403.35562pt x 123.63043pt.
  [22] [23 <./Chapter2-figures/hic_evol_schem.pdf>] [24] [25] [26] [27] [28] [29
 ] [30] [31] [32]
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf, id=1267, 614.295pt x 794.97pt>
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf, id=1353, 614.295pt x 794.97pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf>
@@ -1312,7 +2617,7 @@ Package pdftex.def Info: Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf used on in
 put line 2224.
 (pdftex.def)             Requested size: 184.9429pt x 239.34195pt.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf, id=1269, 614.295pt x 794.97
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf, id=1355, 614.295pt x 794.97
 pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf Graphic file (type pdf)
 
@@ -1331,7 +2636,7 @@ LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2297.
  [34 <./Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf> <./Chapter2-figures/AdS5_S
 chwarz_eta_w_subtr_txt.pdf>]
-<Chapter2-figures/EnergyDensity.pdf, id=1361, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=1447, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
@@ -1347,7 +2652,24 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2416.
 LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
 (Font)              scaled to size 7.64995pt on input line 2422.
- [36] [37]) [38]
+ [36] [37] (./lnp.bbl
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <8.5> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 10.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 7.64995pt on input line 10.
+ [38] [39]
+Underfull \hbox (badness 2735) in paragraph at lines 358--361
+[]\T1/fve/m/n/8.5 S. Sakai, A. Naka-mura, PoS \T1/fve/b/n/8.5 LAT2007\T1/fve/m/
+n/8.5 , 221 (2007).  DOI $10 . 1063 / 1 . 2729742$.  [AIP Conf.
+ []
+
+[40]
+Underfull \hbox (badness 1990) in paragraph at lines 569--572
+[]\T1/fve/m/n/8.5 G. Perel-man, The en-tropy for-mula for the Ricci flow and it
+s ge-o-met-ric ap-pli-ca-tions (2002).
+ []
+
+[41])) [42]
 \openout2 = `chapter3.aux'.
 
  (./chapter3.tex
@@ -1355,15 +2677,15 @@ LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
 (Font)              Font shape `T1/fve/m/sl' tried instead on input line 6.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 6.
- [39
+ [43
 
 
 
 
-]) [40]
+]) [44]
 \openout2 = `chapter4.aux'.
 
- (./chapter4.tex) [41
+ (./chapter4.tex) [45
 
 
 
@@ -1371,26 +2693,2030 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 ]
 \openout2 = `chapter5.aux'.
 
+ (./chapter5.tex
 
-(./chapter5.tex [42
+! LaTeX Error: Command \qslash already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \newcommand\qslash {\slashed{q}}
+                                    
+? s
+OK, entering \scrollmode...
+
+! LaTeX Error: Command \Dslash already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \newcommand\Dslash {\slashed{D}}
+                                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \be already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \newcommand{\be}{\begin{equation}}
+                                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \ee already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \newcommand{\ee}{\end{equation}}
+                                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[46
 
 
 
 
-]) [43]
+]
+
+LaTeX Warning: Citation `EKLN1' on page 47 undefined on input line 87.
+
+
+LaTeX Warning: Citation `EKLN4' on page 47 undefined on input line 87.
+
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.65994pt on input line 98.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 5.661pt on input line 98.
+[47]
+
+LaTeX Warning: Citation `Lepage:1989hd' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Berkowitz:2015eaa' on page 48 undefined on input line 
+104.
+
+
+LaTeX Warning: Citation `Kurth:2015cvl' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Nicholson:2015pys' on page 48 undefined on input line 
+104.
+
+
+LaTeX Warning: Citation `Orginos:2015aya' on page 48 undefined on input line 10
+4.
+
+
+LaTeX Warning: Citation `Detmold:2015daa' on page 48 undefined on input line 10
+4.
+
+
+LaTeX Warning: Citation `Chang:2015qxa' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Beane:2015yha' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Beane:2014sda' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Beane:2014ora' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Beane:2013br' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Beane:2012vq' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Beane:2011iw' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Beane:2009py' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Yamazaki:2015vjn' on page 48 undefined on input line 1
+04.
+
+
+LaTeX Warning: Citation `Yamazaki:2015asa' on page 48 undefined on input line 1
+04.
+
+
+LaTeX Warning: Citation `Yamazaki:2013rna' on page 48 undefined on input line 1
+04.
+
+
+LaTeX Warning: Citation `Yamazaki:2012fn' on page 48 undefined on input line 10
+4.
+
+
+LaTeX Warning: Citation `Yamazaki:2012hi' on page 48 undefined on input line 10
+4.
+
+
+LaTeX Warning: Citation `Doi:2015uvd' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Doi:2015oha' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Ishii:2006ec' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Murano:2013xxa' on page 48 undefined on input line 104
+.
+
+
+LaTeX Warning: Citation `Aoki:2014mia' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Murano:2013gta' on page 48 undefined on input line 104
+.
+
+
+LaTeX Warning: Citation `HALQCD:2012aa' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Inoue:2010hs' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Beane:2009gs' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Beane:2012vq' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Beane:2014ora' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Beane:2014sda' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Chang:2015qxa' on page 48 undefined on input line 104.
+
+
+
+LaTeX Warning: Citation `Yamazaki:2015vjn' on page 48 undefined on input line 1
+04.
+
+
+LaTeX Warning: Citation `Yamazaki:2015asa' on page 48 undefined on input line 1
+04.
+
+
+LaTeX Warning: Citation `Yamazaki:2013rna' on page 48 undefined on input line 1
+04.
+
+
+LaTeX Warning: Citation `Yamazaki:2012fn' on page 48 undefined on input line 10
+4.
+
+
+LaTeX Warning: Citation `Yamazaki:2012hi' on page 48 undefined on input line 10
+4.
+
+
+LaTeX Warning: Citation `Doi:2011gq' on page 48 undefined on input line 104.
+
+
+LaTeX Warning: Citation `Kaplan:1996xu' on page 48 undefined on input line 112.
+
+
+
+LaTeX Warning: Citation `Kaplan:1998tg' on page 48 undefined on input line 112.
+
+
+
+LaTeX Warning: Citation `Kaplan:1998we' on page 48 undefined on input line 112.
+
+
+
+LaTeX Warning: Citation `Epelbaum:2010nr' on page 48 undefined on input line 11
+2.
+
+
+LaTeX Warning: Citation `Machleidt:2011zz' on page 48 undefined on input line 1
+12.
+
+[48]
+
+LaTeX Warning: Citation `Kaplan:2005es' on page 49 undefined on input line 114.
+
+
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 117.
+[49] <Chapter5-figures/al0.png, id=1806, 385.44pt x 300.12125pt>
+File: Chapter5-figures/al0.png Graphic file (type png)
+
+<use Chapter5-figures/al0.png>
+Package pdftex.def Info: Chapter5-figures/al0.png used on input line 146.
+(pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
+
+<Chapter5-figures/ae0.png, id=1808, 387.4475pt x 302.12875pt>
+File: Chapter5-figures/ae0.png Graphic file (type png)
+
+<use Chapter5-figures/ae0.png>
+Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 147.
+(pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
+
+<Chapter5-figures/ag0.png, id=1809, 383.4325pt x 300.12125pt>
+File: Chapter5-figures/ag0.png Graphic file (type png)
+
+<use Chapter5-figures/ag0.png>
+Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 148.
+(pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
+ [50 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
+res/ag0.png>] [51]
+<Chapter5-figures/simple1.png, id=1840, 788.9475pt x 95.35625pt>
+File: Chapter5-figures/simple1.png Graphic file (type png)
+
+<use Chapter5-figures/simple1.png>
+Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 187.
+(pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
+
+<Chapter5-figures/loop1.png, id=1843, 893.3375pt x 191.71625pt>
+File: Chapter5-figures/loop1.png Graphic file (type png)
+
+<use Chapter5-figures/loop1.png>
+Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 192.
+(pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
+
+<Chapter5-figures/beta.pdf, id=1847, 481.8pt x 303.24593pt>
+File: Chapter5-figures/beta.pdf Graphic file (type pdf)
+
+<use Chapter5-figures/beta.pdf>
+Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 208.
+(pdftex.def)             Requested size: 212.29312pt x 133.6137pt.
+ [52 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>]
+
+LaTeX Warning: Citation `Kaplan:1998we' on page 53 undefined on input line 216.
+
+
+
+LaTeX Warning: Citation `Kaplan:1998tg' on page 53 undefined on input line 216.
+
+
+
+LaTeX Warning: Citation `Kaplan:1996xu' on page 53 undefined on input line 216.
+
+
+[53 <./Chapter5-figures/beta.pdf>] [54] [55] [56]
+
+LaTeX Warning: Citation `Drut:2012md' on page 57 undefined on input line 342.
+
+[57] <Chapter5-figures/dimer.png, id=1945, 905.3825pt x 206.7725pt>
+File: Chapter5-figures/dimer.png Graphic file (type png)
+
+<use Chapter5-figures/dimer.png>
+Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 367.
+(pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
+ [58 <./Chapter5-figures/dimer.png>]
+<Chapter5-figures/lattice.png, id=1956, 352.31625pt x 315.1775pt>
+File: Chapter5-figures/lattice.png Graphic file (type png)
+
+<use Chapter5-figures/lattice.png>
+Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 385.
+(pdftex.def)             Requested size: 127.37717pt x 113.94954pt.
+ [59 <./Chapter5-figures/lattice.png>]
+[60] [61] [62] [63] [64] [65]
+
+LaTeX Warning: Citation `Beane:2010em' on page 66 undefined on input line 609.
+
+
+LaTeX Warning: Citation `Detmold:2014hla' on page 66 undefined on input line 60
+9.
+
+
+LaTeX Warning: Citation `Detmold:2014rfa' on page 66 undefined on input line 60
+9.
+
+[66] [67]
+
+LaTeX Warning: Citation `Grabowska:2012ik' on page 68 undefined on input line 6
+79.
+
+
+LaTeX Warning: Citation `Nicholson:2012xt' on page 68 undefined on input line 6
+79.
+
+
+LaTeX Warning: Citation `EKLN5' on page 68 undefined on input line 679.
+
+[68] [69] <Chapter5-figures/QCDbubble.pdf, id=2089, 424.58624pt x 370.38374pt>
+File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
+
+<use Chapter5-figures/QCDbubble.pdf>
+Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 716.
+
+(pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
+ [70 <./Chapter5-figures/QCDbubble.pdf>]
+<Chapter5-figures/overlap.pdf, id=2109, 481.8pt x 303.65443pt>
+File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
+
+<use Chapter5-figures/overlap.pdf>
+Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 725.
+(pdftex.def)             Requested size: 212.29312pt x 133.79369pt.
+
+
+LaTeX Warning: Citation `BerryEsseen1' on page 71 undefined on input line 728.
+
+
+LaTeX Warning: Citation `BerryEsseen2' on page 71 undefined on input line 728.
+
+[71 <./Chapter5-figures/overlap.pdf>]
+
+LaTeX Warning: Citation `DeGrand:2012ik' on page 72 undefined on input line 754
+.
+
+
+LaTeX Warning: Citation `Nicholson:2012zp' on page 72 undefined on input line 7
+59.
+
+
+LaTeX Warning: Citation `Nicholson:2015zxa' on page 72 undefined on input line 
+759.
+
+[72]
+
+LaTeX Warning: Citation `EKLN4' on page 73 undefined on input line 786.
+
+
+LaTeX Warning: Citation `EKLN4' on page 73 undefined on input line 786.
+
+<Chapter5-figures/cumulant.png, id=2144, 491.8375pt x 321.2pt>
+File: Chapter5-figures/cumulant.png Graphic file (type png)
+
+<use Chapter5-figures/cumulant.png>
+Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 787.
+(pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
+ [73] [74 <./Chapter5-figures/cumulant.png>] <Chapter5-figures/twobody.png, id=
+2171, 800.9925pt x 530.98375pt>
+File: Chapter5-figures/twobody.png Graphic file (type png)
+
+<use Chapter5-figures/twobody.png>
+Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 847.
+(pdftex.def)             Requested size: 382.12502pt x 253.31367pt.
+ [75]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[76 <./Chapter5-figures/twobody.png>]
+
+LaTeX Warning: Citation `Dudek:2010wm' on page 77 undefined on input line 882.
+
+[77]
+
+LaTeX Warning: Citation `MICHAEL1983433' on page 78 undefined on input line 921
+.
+
+
+LaTeX Warning: Citation `Luscher:1990ck' on page 78 undefined on input line 921
+.
+
+
+LaTeX Warning: Citation `Blossier:2009kd' on page 78 undefined on input line 92
+1.
+
+[78] [79]
+
+LaTeX Warning: Citation `Aubin:2011zz' on page 80 undefined on input line 973.
+
+
+LaTeX Warning: Citation `GPOF1' on page 80 undefined on input line 973.
+
+
+LaTeX Warning: Citation `GPOF2' on page 80 undefined on input line 973.
+
+
+LaTeX Warning: Citation `Beane:2009kya' on page 80 undefined on input line 973.
+
+
+
+LaTeX Warning: Citation `Fleming:2009wb' on page 80 undefined on input line 973
+.
+
+
+LaTeX Warning: Citation `Beane:2009kya' on page 80 undefined on input line 973.
+
+
+[80] [81]
+
+LaTeX Warning: Citation `Symanzik1' on page 82 undefined on input line 1060.
+
+
+LaTeX Warning: Citation `Symanzik2' on page 82 undefined on input line 1060.
+
+
+LaTeX Warning: Citation `Symanzik3' on page 82 undefined on input line 1060.
+
+
+LaTeX Warning: Citation `Symanzik4' on page 82 undefined on input line 1060.
+
+
+LaTeX Warning: Citation `EKLN4' on page 82 undefined on input line 1060.
+
+[82] <Chapter5-figures/dispersion.png, id=2271, 737.75626pt x 509.905pt>
+File: Chapter5-figures/dispersion.png Graphic file (type png)
+
+<use Chapter5-figures/dispersion.png>
+Package pdftex.def Info: Chapter5-figures/dispersion.png used on input line 108
+1.
+(pdftex.def)             Requested size: 382.12502pt x 264.10953pt.
+
+
+LaTeX Warning: Citation `Batrouni' on page 83 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `Daviesetal1' on page 83 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `Daviesetal2' on page 83 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `Katzetal1' on page 83 undefined on input line 1092.
+
+[83 <./Chapter5-figures/dispersion.png>]
+
+LaTeX Warning: Citation `Luscher:1990ux' on page 84 undefined on input line 111
+5.
+
+
+LaTeX Warning: Citation `Beane:2003da' on page 84 undefined on input line 1115.
+
+
+[84] [85]
+
+LaTeX Warning: Citation `Briceno:2012yi' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Hansen:2012tf' on page 86 undefined on input line 1171
+.
+
+
+LaTeX Warning: Citation `Li:2014wga' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Briceno:2014oea' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Briceno:2015tza' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Briceno:2015csa' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Briceno:2015axa' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Briceno:2014uqa' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Luu:2011ep' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Konig:2011nz' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Koenig:2011ti' on page 86 undefined on input line 1171
+.
+
+
+LaTeX Warning: Citation `Rummukainen:1995vs' on page 86 undefined on input line
+ 1171.
+
+
+LaTeX Warning: Citation `Kim:2005gf' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Bour:2011ef' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Davoudi:2011md' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Li:2003jn' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Feng:2004ua' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Hansen:2016fzj' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Hansen:2015zga' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Hansen:2014eka' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Briceno:2012rv' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Beane:2007qr' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Detmold:2008gh' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Smigielski:2008pa' on page 86 undefined on input line 
+1171.
+
+
+LaTeX Warning: Citation `Briceno:2013lba' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Briceno:2013bda' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Beane:2006mx' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Beane:2011iw' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Beane:2012vq' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Detmold:2015daa' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Beane:2015yha' on page 86 undefined on input line 1171
+.
+
+
+LaTeX Warning: Citation `Chang:2015qxa' on page 86 undefined on input line 1171
+.
+
+
+LaTeX Warning: Citation `Orginos:2015aya' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Yamazaki:2012hi' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Yamazaki:2015asa' on page 86 undefined on input line 1
+171.
+
+
+LaTeX Warning: Citation `Berkowitz:2015eaa' on page 86 undefined on input line 
+1171.
+
+
+LaTeX Warning: Citation `Murano:2013xxa' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Wilson:2014cna' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Wilson:2015dqa' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Dudek:2012gj' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Dudek:2012xn' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Dudek:2014qha' on page 86 undefined on input line 1171
+.
+
+
+LaTeX Warning: Citation `Beane:2011sc' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Aoki:2007rd' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Aoki:2011yj' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Pelissier:2012pi' on page 86 undefined on input line 1
+171.
+
+
+LaTeX Warning: Citation `Feng:2010es' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Torres:2014vna' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Bolton:2015psa' on page 86 undefined on input line 117
+1.
+
+
+LaTeX Warning: Citation `Briceno:2015dca' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Lang:2012sv' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Prelovsek:2013ela' on page 86 undefined on input line 
+1171.
+
+
+LaTeX Warning: Citation `Lang:2014yfa' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Lang:2015hza' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Lang:2011mn' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Briceno:2016kkp' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Verduci:2014csa' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Lang:2012db' on page 86 undefined on input line 1171.
+
+
+LaTeX Warning: Citation `Torok:2009dg' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Detmold:2015qwf' on page 86 undefined on input line 11
+71.
+
+
+LaTeX Warning: Citation `Beane:2012ey' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Beane:2009py' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Beane:2006gf' on page 86 undefined on input line 1171.
+
+
+
+LaTeX Warning: Citation `Drut:2012md' on page 86 undefined on input line 1174.
+
+
+LaTeX Warning: Citation `Drut:2012md' on page 86 undefined on input line 1174.
+
+<Chapter5-figures/luscher.pdf, id=2306, 755.82375pt x 493.845pt>
+File: Chapter5-figures/luscher.pdf Graphic file (type pdf)
+
+<use Chapter5-figures/luscher.pdf>
+Package pdftex.def Info: Chapter5-figures/luscher.pdf used on input line 1175.
+(pdftex.def)             Requested size: 212.29312pt x 138.70517pt.
+ [86]
+<Chapter5-figures/interaction.png, id=2324, 658.46pt x 512.91624pt>
+File: Chapter5-figures/interaction.png Graphic file (type png)
+
+<use Chapter5-figures/interaction.png>
+Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 11
+95.
+(pdftex.def)             Requested size: 382.12502pt x 297.6638pt.
+
+
+LaTeX Warning: Citation `EKLN1' on page 87 undefined on input line 1201.
+
+
+LaTeX Warning: Citation `EKLN1' on page 87 undefined on input line 1201.
+
+<Chapter5-figures/tuning.png, id=2329, 466.74374pt x 294.09875pt>
+File: Chapter5-figures/tuning.png Graphic file (type png)
+
+<use Chapter5-figures/tuning.png>
+Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1202.
+(pdftex.def)             Requested size: 212.29312pt x 133.76576pt.
+
+
+LaTeX Warning: Citation `EKLN1' on page 87 undefined on input line 1205.
+
+[87 <./Chapter5-figures/luscher.pdf>] [88 <./Chapter5-figures/interaction.png> 
+<./Chapter5-figures/tuning.png>]
+
+LaTeX Warning: Citation `Kaplan:2005es' on page 89 undefined on input line 1231
+.
+
+[89]
+
+LaTeX Warning: Citation `Symanzik1' on page 90 undefined on input line 1251.
+
+
+LaTeX Warning: Citation `Symanzik2' on page 90 undefined on input line 1251.
+
+
+LaTeX Warning: Citation `Symanzik3' on page 90 undefined on input line 1251.
+
+
+LaTeX Warning: Citation `Symanzik4' on page 90 undefined on input line 1251.
+
+
+LaTeX Warning: Citation `EKLN4' on page 90 undefined on input line 1251.
+
+[90]
+
+LaTeX Warning: Citation `NishidaSonConformal' on page 91 undefined on input lin
+e 1267.
+
+<Chapter5-figures/dimer2.png, id=2374, 748.7975pt x 110.4125pt>
+File: Chapter5-figures/dimer2.png Graphic file (type png)
+
+<use Chapter5-figures/dimer2.png>
+Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1275.
+(pdftex.def)             Requested size: 424.58624pt x 62.60724pt.
+
+
+LaTeX Warning: Citation `NishidaSonConformal' on page 91 undefined on input lin
+e 1278.
+
+
+LaTeX Warning: Citation `2007PhRvL..99w3201B' on page 91 undefined on input lin
+e 1280.
+
+
+LaTeX Warning: Citation `2011CRPhy..12...86B' on page 91 undefined on input lin
+e 1280.
+
+
+LaTeX Warning: Citation `2006PhRvL..97o0401W' on page 91 undefined on input lin
+e 1290.
+
+[91 <./Chapter5-figures/dimer2.png>]
+
+LaTeX Warning: Citation `EKLN4' on page 92 undefined on input line 1296.
+
+[92] [93] [94]
+
+LaTeX Warning: Citation `PhysRev.98.145' on page 95 undefined on input line 136
+3.
+
+
+LaTeX Warning: Citation `Phillips:1996ae' on page 95 undefined on input line 13
+63.
+
+
+LaTeX Warning: Citation `Cohen:1996my' on page 95 undefined on input line 1363.
+
+
+
+LaTeX Warning: Citation `Phillips:1997xu' on page 95 undefined on input line 13
+67.
+
+[95] [96] [97]
+
+LaTeX Warning: Citation `Kaplan:1996xu' on page 98 undefined on input line 1495
+.
+
+
+LaTeX Warning: Citation `Kaplan:1998tg' on page 98 undefined on input line 1495
+.
+
+
+LaTeX Warning: Citation `Kaplan:1998we' on page 98 undefined on input line 1495
+.
+
+
+LaTeX Warning: Citation `Fleming:1999ee' on page 98 undefined on input line 149
+5.
+
+<Chapter5-figures/tree.png, id=2456, 112.42pt x 74.2775pt>
+File: Chapter5-figures/tree.png Graphic file (type png)
+
+<use Chapter5-figures/tree.png>
+Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1499.
+(pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
+
+<Chapter5-figures/box.png, id=2457, 118.4425pt x 73.27374pt>
+File: Chapter5-figures/box.png Graphic file (type png)
+
+<use Chapter5-figures/box.png>
+Package pdftex.def Info: Chapter5-figures/box.png used on input line 1505.
+(pdftex.def)             Requested size: 42.46121pt x 26.26782pt.
+
+
+LaTeX Warning: Citation `Fleming:1999ee' on page 98 undefined on input line 151
+2.
+
+
+LaTeX Warning: Citation `Epelbaum:2010nr' on page 98 undefined on input line 15
+14.
+
+[98 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
+<Chapter5-figures/sunset.png, id=2471, 787.94376pt x 73.27374pt> [99]
+File: Chapter5-figures/sunset.png Graphic file (type png)
+
+<use Chapter5-figures/sunset.png>
+Package pdftex.def Info: Chapter5-figures/sunset.png used on input line 1536.
+(pdftex.def)             Requested size: 424.58624pt x 39.48335pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 1536--1537
+[][] 
+ []
+
+
+LaTeX Warning: Citation `Braaten:2004rn' on page 100 undefined on input line 15
+44.
+
+<Chapter5-figures/dresseddimer.png, id=2481, 858.20625pt x 60.225pt>
+File: Chapter5-figures/dresseddimer.png Graphic file (type png)
+
+<use Chapter5-figures/dresseddimer.png>
+Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
+554.
+(pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
+ [100 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
+
+LaTeX Warning: Citation `Braaten:2004rn' on page 101 undefined on input line 15
+64.
+
+<Chapter5-figures/3body.png, id=2494, 821.0675pt x 84.315pt>
+File: Chapter5-figures/3body.png Graphic file (type png)
+
+<use Chapter5-figures/3body.png>
+Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1576.
+(pdftex.def)             Requested size: 424.58624pt x 43.5996pt.
+
+
+LaTeX Warning: Citation `Bedaque:1998km' on page 101 undefined on input line 15
+79.
+
+
+LaTeX Warning: Citation `Bedaque:1998kg' on page 101 undefined on input line 15
+79.
+
+
+LaTeX Warning: Citation `Beane:2000wh' on page 101 undefined on input line 1579
+.
+
+
+LaTeX Warning: Citation `V1970563' on page 101 undefined on input line 1585.
+
+
+LaTeX Warning: Citation `Efimov:1971zz' on page 101 undefined on input line 158
+5.
+
+<Chapter5-figures/HLambda.pdf, id=2496, 481.8pt x 319.76967pt>
+File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
+
+<use Chapter5-figures/HLambda.pdf>
+Package pdftex.def Info: Chapter5-figures/HLambda.pdf used on input line 1589.
+(pdftex.def)             Requested size: 212.29312pt x 140.89426pt.
+ [101 <./Chapter5-figures/3body.png>]
+
+LaTeX Warning: Citation `Hammer:2010kp' on page 102 undefined on input line 160
+4.
+
+
+LaTeX Warning: Citation `Nicholson:2012zp' on page 102 undefined on input line 
+1608.
+
+[102 <./Chapter5-figures/HLambda.pdf>]
+
+LaTeX Warning: Citation `EKLN1' on page 103 undefined on input line 1619.
+
+
+LaTeX Warning: Citation `EKLN2' on page 103 undefined on input line 1619.
+
+
+LaTeX Warning: Citation `EKLN3' on page 103 undefined on input line 1619.
+
+
+LaTeX Warning: Citation `EKLN4' on page 103 undefined on input line 1619.
+
+
+LaTeX Warning: Citation `LEKN1' on page 103 undefined on input line 1619.
+
+
+LaTeX Warning: Citation `NEKL1' on page 103 undefined on input line 1619.
+
+
+LaTeX Warning: Citation `Epelbaum:2010xt' on page 103 undefined on input line 1
+619.
+
+
+LaTeX Warning: Citation `Lahde:2013kma' on page 103 undefined on input line 161
+9.
+
+
+LaTeX Warning: Citation `Epelbaum:2013wla' on page 103 undefined on input line 
+1619.
+
+
+LaTeX Warning: Citation `Lahde:2014bna' on page 103 undefined on input line 161
+9.
+
+[103]
+
+LaTeX Warning: Citation `EKLN2' on page 104 undefined on input line 1629.
+
+
+LaTeX Warning: Citation `Lepage:1989hd' on page 104 undefined on input line 163
+7.
+
+
+LaTeX Warning: Citation `EKLN1' on page 104 undefined on input line 1645.
+
+(./lnp.bblpdfTeX warning (ext4): destination with the same identifier (name{cit
+e.Feynman}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \bibitem{Feynman}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{cite.Metropolis:1953am}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 \bibitem{Metropolis:1953am}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Creutz:1980gp}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.18 \bibitem{Creutz:1980gp}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Shuryak:1984xr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 \bibitem{Shuryak:1984xr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Shuryak:1987tr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 \bibitem{Shuryak:1987tr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Schafer:2004xa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 \bibitem{Schafer:2004xa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Jarrell:1996rrw}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.35 \bibitem{Jarrell:1996rrw}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Asakawa:2000tr}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.39 \bibitem{Asakawa:2000tr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Jarzynski:1997}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.44 \bibitem{Jarzynski:1997}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Gross:1973id}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.48 \bibitem{Gross:1973id}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Politzer:1973fx}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 \bibitem{Politzer:1973fx}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Coleman:1973jx}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.56 \bibitem{Coleman:1973jx}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Nakamura:2010zzi}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.60 \bibitem{Nakamura:2010zzi}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Alford:2007xm}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.64 \bibitem{Alford:2007xm}
+                             [104]pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Adams:2012th}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.69 \bibitem{Adams:2012th}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Braun-Munzinger:2015hba}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.74 \bibitem{Braun-Munzinger:2015hba}
+                                      pdfTeX warning (ext4): destination with t
+he same identifier (name{cite.GellMann:1968rz}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.79 \bibitem{GellMann:1968rz}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Coleman:1980mx}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.83 \bibitem{Coleman:1980mx}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.tHooft:1979bh}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 \bibitem{tHooft:1979bh}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Shuryak:1977ut}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.90 \bibitem{Shuryak:1977ut}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Shuryak:1978ij}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.94 \bibitem{Shuryak:1978ij}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Linde:1980ts}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.99 \bibitem{Linde:1980ts}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Pisarski:1983ms}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.103 \bibitem{Pisarski:1983ms}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Aoki:2006we}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.107 \bibitem{Aoki:2006we}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Bazavov:2011nk}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.112 \bibitem{Bazavov:2011nk}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Aoki:2006br}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 \bibitem{Aoki:2006br}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Aoki:2009sc}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.120 \bibitem{Aoki:2009sc}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Bazavov:2014pvz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.125 \bibitem{Bazavov:2014pvz}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Stephanov:2004wx}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.129 \bibitem{Stephanov:2004wx}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Fodor:2001pe}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.132 \bibitem{Fodor:2001pe}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Allton:2002zi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.135 \bibitem{Allton:2002zi}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Karsch:2003va}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.140 \bibitem{Karsch:2003va}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Fodor:2004nz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 \bibitem{Fodor:2004nz}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Gavai:2008zr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.150 \bibitem{Gavai:2008zr}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Datta:2012pj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.154 \bibitem{Datta:2012pj}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.deForcrand:2010he}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.158 \bibitem{deForcrand:2010he}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Stephanov:1998dy}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.162 \bibitem{Stephanov:1998dy}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Sauer:1976zzf}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.166 \bibitem{Sauer:1976zzf}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Pochodzalla:1995xy}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.170 \bibitem{Pochodzalla:1995xy}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Elliott:2013pna}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.174 \bibitem{Elliott:2013pna}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Alford:1998mk}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.179 \bibitem{Alford:1998mk}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Schafer:1999fe}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.183 \bibitem{Schafer:1999fe}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Schafer:1998ef}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.187 \bibitem{Schafer:1998ef}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Hatsuda:2006ps}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.191 \bibitem{Hatsuda:2006ps}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Creutz:1983}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.196 \bibitem{Creutz:1983}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Montvay:1994}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.200 \bibitem{Montvay:1994}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Smit:2002}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.204 \bibitem{Smit:2002}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.Gattringer:2009}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208 \bibitem{Gattringer:2009}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Lin:2014}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.212 \bibitem{Lin:2014}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{cite.Fodor:2009ax}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.215 \bibitem{Fodor:2009ax}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Ding:2015ona}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.219 \bibitem{Ding:2015ona}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Wilson:1974sk}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.224 \bibitem{Wilson:1974sk}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Mezzadri:2006}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.229 \bibitem{Mezzadri:2006}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Hasenfratz:1980kn}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.234 \bibitem{Hasenfratz:1980kn}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Lepage:1998dt}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.239 \bibitem{Lepage:1998dt}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Wolff:1988uh}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \bibitem{Wolff:1988uh}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Kogut:1974ag}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.248 \bibitem{Kogut:1974ag}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Kaplan:1992bt}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.252 \bibitem{Kaplan:1992bt}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Neuberger:1997fp}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.256 \bibitem{Neuberger:1997fp}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Luscher:2010ae}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.260 \bibitem{Luscher:2010ae}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Endress:2014qpa}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.265 \bibitem{Endress:2014qpa}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Dick:2015twa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.270 \bibitem{Dick:2015twa}
+                             [105]pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Teper:1985ek}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.275 \bibitem{Teper:1985ek}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Luscher:2010iy}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.279 \bibitem{Luscher:2010iy}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Belavin:1975fg}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.284 \bibitem{Belavin:1975fg}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Schafer:1996wv}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.289 \bibitem{Schafer:1996wv}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.DelDebbio:2004ns}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.293 \bibitem{DelDebbio:2004ns}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Ce:2014sfa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.297 \bibitem{Ce:2014sfa}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Poppitz:2012nz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.300 \bibitem{Poppitz:2012nz}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Banks:1979yr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.304 \bibitem{Banks:1979yr}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Ginsparg:1981bj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.308 \bibitem{Ginsparg:1981bj}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Cherman:2016hcd}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.312 \bibitem{Cherman:2016hcd}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Cristoforetti:2012su}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.317 \bibitem{Cristoforetti:2012su}
+                                    pdfTeX warning (ext4): destination with the
+ same identifier (name{cite.Aarts:2014nxa}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.322 \bibitem{Aarts:2014nxa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Aarts:2009uq}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.326 \bibitem{Aarts:2009uq}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Sexty:2013ica}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.330 \bibitem{Sexty:2013ica}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Kloiber:2013rba}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.334 \bibitem{Kloiber:2013rba}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Schafer:2009dj}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.337 \bibitem{Schafer:2009dj}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Schaefer:2014awa}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.341 \bibitem{Schaefer:2014awa}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Karsch:1986cq}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.345 \bibitem{Karsch:1986cq}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Meyer:2007ic}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.349 \bibitem{Meyer:2007ic}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Meyer:2007dy}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.353 \bibitem{Meyer:2007dy}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Sakai:2007cm}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.357 \bibitem{Sakai:2007cm}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Aarts:2007wj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.362 \bibitem{Aarts:2007wj}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Aarts:2007va}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.367 \bibitem{Aarts:2007va}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Aarts:2006wt}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.370 \bibitem{Aarts:2006wt}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Meyer:2008gt}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.375 \bibitem{Meyer:2008gt}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Romatschke:2009ng}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.379 \bibitem{Romatschke:2009ng}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Arnold:2000dr}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.383 \bibitem{Arnold:2000dr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Kovtun:2004de}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.387 \bibitem{Kovtun:2004de}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Romatschke:2009im}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.392 \bibitem{Romatschke:2009im}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Rezzolla:2013}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.396 \bibitem{Rezzolla:2013}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Jeon:2015dfa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.400 \bibitem{Jeon:2015dfa}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Colella:1984}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.404 \bibitem{Colella:1984}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Blondin:1993}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.407 \bibitem{Blondin:1993}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Schafer:2010dv}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.410 \bibitem{Schafer:2010dv}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Florkowski:2010cf}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.414 \bibitem{Florkowski:2010cf}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Martinez:2010sc}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.418 \bibitem{Martinez:2010sc}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Bluhm:2015raa}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.422 \bibitem{Bluhm:2015raa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Bluhm:2015bzi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.426 \bibitem{Bluhm:2015bzi}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Romatschke:2011hm}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.430 \bibitem{Romatschke:2011hm}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Brewer:2015hua}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.434 \bibitem{Brewer:2015hua}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Kadanoff}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.439 \bibitem{Kadanoff}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{cite.Bertsch:1988ik}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.443 \bibitem{Bertsch:1988ik}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Lepers:2010be}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.447 \bibitem{Lepers:2010be}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Bass:1998ca}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.452 \bibitem{Bass:1998ca}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Buss:2011mx}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.457 \bibitem{Buss:2011mx}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Ehehalt:1996uq}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.463 \bibitem{Ehehalt:1996uq}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Geiger:1991nj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.467 \bibitem{Geiger:1991nj}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Xu:2004mz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.471 \bibitem{Xu:2004mz}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.McLerran:1993ni}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.475 \bibitem{McLerran:1993ni}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Mueller:2002gd}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.479 \bibitem{Mueller:2002gd}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Mrowczynski:2016etf}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.483 \bibitem{Mrowczynski:2016etf}
+                                   pdfTeX warning (ext4): destination with the 
+same identifier (name{cite.Berges:2008wm}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.486 \bibitem{Berges:2008wm}
+                              [106]pdfTeX warning (ext4): destination with the 
+same identifier (name{cite.Dusling:2010rm}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.491 \bibitem{Dusling:2010rm}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Litim:2001db}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.496 \bibitem{Litim:2001db}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Wong:1970fu}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.500 \bibitem{Wong:1970fu}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Hu:1996sf}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 \bibitem{Hu:1996sf}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.Maldacena:1997re}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.508 \bibitem{Maldacena:1997re}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Son:2007vk}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.513 \bibitem{Son:2007vk}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Gubser:2009md}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.517 \bibitem{Gubser:2009md}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.CasalderreySolana:2011us}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.521 \bibitem{CasalderreySolana:2011us}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{cite.DeWolfe:2013cua}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.525 \bibitem{DeWolfe:2013cua}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Policastro:2002se}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.530 \bibitem{Policastro:2002se}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Teaney:2006nc}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.534 \bibitem{Teaney:2006nc}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Son:2006em}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.538 \bibitem{Son:2006em}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Chesler:2010bi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542 \bibitem{Chesler:2010bi}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Chesler:2013lia}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.546 \bibitem{Chesler:2013lia}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Rangamani:2009xk}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.550 \bibitem{Rangamani:2009xk}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Clay-YM}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554 \bibitem{Clay-YM}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{cite.Clay-NS}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.559 \bibitem{Clay-NS}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{cite.Villani:2009}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.564 \bibitem{Villani:2009}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Perelman}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.568 \bibitem{Perelman}
+                        
+Underfull \hbox (badness 2237) in paragraph at lines 569--572
+[]\T1/fve/m/n/8.5 G. Perel-man, The en-tropy for-mula for the Ricci flow and it
+s ge-o-met-ric ap-pli-ca-tions (2002).
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Shen:201
+4vra}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.573 \bibitem{Shen:2014vra}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Creutz:2004}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.578 \bibitem{Creutz:2004}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Weinberg:1990rz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.582 \bibitem{Weinberg:1990rz}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Weinberg:1991um}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.585 \bibitem{Weinberg:1991um}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2008ga}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.588 \bibitem{Epelbaum:2008ga}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Luscher:1986pf}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.592 \bibitem{Luscher:1986pf}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Lee:2008fa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.595 \bibitem{Lee:2008fa}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Borasoy:2006qn}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.598 \bibitem{Borasoy:2006qn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Epelbaum:2009pd}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.602 \bibitem{Epelbaum:2009pd}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2013paa}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.606 \bibitem{Epelbaum:2013paa}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Lahde:2013uqa}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.611 \bibitem{Lahde:2013uqa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Epelbaum:2011md}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.616 \bibitem{Epelbaum:2011md}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2012qn}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.621 \bibitem{Epelbaum:2012qn}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2012iu}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.626 \bibitem{Epelbaum:2012iu}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Ordonez:1992xp}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.631 \bibitem{Ordonez:1992xp}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Ordonez:1993tn}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.634 \bibitem{Ordonez:1993tn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.vanKolck:1994yi}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.637 \bibitem{vanKolck:1994yi}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:1998hg}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.640 \bibitem{Epelbaum:1998hg}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:1998ka}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.644 \bibitem{Epelbaum:1998ka}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Bedaque:2002mn}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.648 \bibitem{Bedaque:2002mn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Drut:2012a}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.651 \bibitem{Drut:2012a}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Hubbard:1959ub}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.656 \bibitem{Hubbard:1959ub}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Stratonovich:1958}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.659 \bibitem{Stratonovich:1958}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Weingarten:1980hx}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.662 \bibitem{Weingarten:1980hx}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Scalettar:1986uy}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.665 \bibitem{Scalettar:1986uy}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Gottlieb:1987mq}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.669 \bibitem{Gottlieb:1987mq}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Duane:1987de}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.673 \bibitem{Duane:1987de}
+                             [107]pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Muller:1999cp}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.677 \bibitem{Muller:1999cp}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Lee:2004si}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.681 \bibitem{Lee:2004si}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Lee:2004qd}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.684 \bibitem{Lee:2004qd}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Lee:2005is}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.687 \bibitem{Lee:2005is}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Lee:2005it}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.690 \bibitem{Lee:2005it}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Borasoy:2005yc}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.693 \bibitem{Borasoy:2005yc}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Borasoy:2007vi}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.697 \bibitem{Borasoy:2007vi}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Borasoy:2007vk}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.701 \bibitem{Borasoy:2007vk}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Wlazlowski:2014jna}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.705 \bibitem{Wlazlowski:2014jna}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Epelbaum:2009zs}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.710 \bibitem{Epelbaum:2009zs}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Elhatisari:2016owd}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.714 \bibitem{Elhatisari:2016owd}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Rupak:2013aue}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.717 \bibitem{Rupak:2013aue}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Rupak:2014xza}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.721 \bibitem{Rupak:2014xza}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Elhatisari:2015iga}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.725 \bibitem{Elhatisari:2015iga}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Luscher:1985dn}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.730 \bibitem{Luscher:1985dn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Luscher:1991ux}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.733 \bibitem{Luscher:1991ux}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Borasoy:2007vy}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.736 \bibitem{Borasoy:2007vy}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Carlson:1984}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.740 \bibitem{Carlson:1984}
+                            
+Underfull \hbox (badness 1028) in paragraph at lines 741--746
+[]\T1/fve/m/n/8.5 J. Carl-son, V. Pand-hari-pande, R. Wiringa, Nucl. Phys. A \T
+1/fve/b/n/8.5 424\T1/fve/m/n/8.5 (1), 47 (1984).  DOI $http : / / dx . doi .
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 741--746
+\T1/fve/m/n/8.5 org / 10 . 1016 / 0375-[]9474(84 ) 90127-[]1$.  URL []$\T1/fvm/
+m/n/8.5 http : / / www . sciencedirect . com / science / article / pii /
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Lu:2015r
+iz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.747 \bibitem{Lu:2015riz}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Pine:2013zja}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.750 \bibitem{Pine:2013zja}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Elhatisari:2014lka}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.754 \bibitem{Elhatisari:2014lka}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Rokash:2015hra}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.758 \bibitem{Rokash:2015hra}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Creutz:1988wv}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.761 \bibitem{Creutz:1988wv}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Creutz:1999zy}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.764 \bibitem{Creutz:1999zy}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Carlson:2014vla}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.767 \bibitem{Carlson:2014vla}
+                               )) [108]
 \openout2 = `chapter6.aux'.
 
- (./chapter6.tex [44
+ (./chapter6.tex [109
 
 
 
 
-] [45]
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.65994pt on input line 73.
+]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 73.
- [46]
+ [110]
 Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
@@ -1400,23 +4726,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
-[47] <Chapter6-figures/formalism.png, id=1700, 439.8834pt x 249.5724pt>
+[111] <Chapter6-figures/formalism.png, id=2631, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
 Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 209.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
- [48 <./Chapter6-figures/formalism.png>]
-[49] <Chapter6-figures/worldlines.png, id=1735, 579.6054pt x 495.7722pt>
+ [112 <./Chapter6-figures/formalism.png>]
+[113] <Chapter6-figures/worldlines.png, id=2666, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
 Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 371
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
- [50] [51 <./Chapter6-figures/worldlines.png>] [52] [53]
-<Chapter6-figures/HSworldlines.png, id=1793, 579.6054pt x 495.7722pt>
+ [114] [115 <./Chapter6-figures/worldlines.png>] [116] [117]
+<Chapter6-figures/HSworldlines.png, id=2720, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -1424,7 +4750,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 11.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=1797, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=2724, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -1435,7 +4761,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 631.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 631.
 
-<Chapter6-figures/getzdualvecs.png, id=1798, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=2725, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -1447,55 +4773,1083 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 645.
 
-<Chapter6-figures/call_getzvecs.png, id=1799, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=2726, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
 Package pdftex.def Info: Chapter6-figures/call_getzvecs.png used on input line 
 660.
 (pdftex.def)             Requested size: 247.7999pt x 91.04872pt.
- [54 <./Chapter6-figures/HSworldlines.png>] [55pdfTeX warning (ext4): destinati
-on with the same identifier (name{figure.6.4}) has been already used, duplicate
- ignored
+ [118 <./Chapter6-figures/HSworldlines.png>] [119pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.6.4}) has been already used, duplica
+te ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.703 \end{equation}
-                     <./Chapter6-figures/getzvecs.png>] [56pdfTeX warning (ext4
-): destination with the same identifier (name{figure.6.5}) has been already use
-d, duplicate ignored
+                     <./Chapter6-figures/getzvecs.png>] [120pdfTeX warning (ext
+4): destination with the same identifier (name{figure.6.5}) has been already us
+ed, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.713 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=1826, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=2754, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 786.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
- [57]
-<Chapter6-figures/dVds.png, id=1843, 507.8975pt x 367.3725pt>
+ [121]
+<Chapter6-figures/dVds.png, id=2771, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 809.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=1845, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=2773, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
 Package pdftex.def Info: Chapter6-figures/accept.png used on input line 828.
 (pdftex.def)             Requested size: 291.45789pt x 182.09746pt.
- [58 <./Chapter6-figures/bose_sum.png> <./Chapter6-figures/dVds.png>] [59 <./Ch
-apter6-figures/accept.png>]) [60]
+ [122 <./Chapter6-figures/bose_sum.png> <./Chapter6-figures/dVds.png>] [123 <./
+Chapter6-figures/accept.png>] (./lnp.bblpdfTeX warning (ext4): destination with
+ the same identifier (name{cite.Feynman}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.9 \bibitem{Feynman}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{cite.Metropolis:1953am}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 \bibitem{Metropolis:1953am}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Creutz:1980gp}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.18 \bibitem{Creutz:1980gp}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Shuryak:1984xr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 \bibitem{Shuryak:1984xr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Shuryak:1987tr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 \bibitem{Shuryak:1987tr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Schafer:2004xa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 \bibitem{Schafer:2004xa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Jarrell:1996rrw}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.35 \bibitem{Jarrell:1996rrw}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Asakawa:2000tr}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.39 \bibitem{Asakawa:2000tr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Jarzynski:1997}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.44 \bibitem{Jarzynski:1997}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Gross:1973id}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.48 \bibitem{Gross:1973id}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Politzer:1973fx}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 \bibitem{Politzer:1973fx}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Coleman:1973jx}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.56 \bibitem{Coleman:1973jx}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Nakamura:2010zzi}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.60 \bibitem{Nakamura:2010zzi}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Alford:2007xm}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.64 \bibitem{Alford:2007xm}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Adams:2012th}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.69 \bibitem{Adams:2012th}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Braun-Munzinger:2015hba}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.74 \bibitem{Braun-Munzinger:2015hba}
+                                      pdfTeX warning (ext4): destination with t
+he same identifier (name{cite.GellMann:1968rz}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.79 \bibitem{GellMann:1968rz}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Coleman:1980mx}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.83 \bibitem{Coleman:1980mx}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.tHooft:1979bh}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 \bibitem{tHooft:1979bh}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Shuryak:1977ut}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.90 \bibitem{Shuryak:1977ut}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Shuryak:1978ij}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.94 \bibitem{Shuryak:1978ij}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Linde:1980ts}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.99 \bibitem{Linde:1980ts}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Pisarski:1983ms}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.103 \bibitem{Pisarski:1983ms}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Aoki:2006we}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.107 \bibitem{Aoki:2006we}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Bazavov:2011nk}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.112 \bibitem{Bazavov:2011nk}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Aoki:2006br}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 \bibitem{Aoki:2006br}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Aoki:2009sc}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.120 \bibitem{Aoki:2009sc}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Bazavov:2014pvz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.125 \bibitem{Bazavov:2014pvz}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Stephanov:2004wx}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.129 \bibitem{Stephanov:2004wx}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Fodor:2001pe}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.132 \bibitem{Fodor:2001pe}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Allton:2002zi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.135 \bibitem{Allton:2002zi}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Karsch:2003va}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.140 \bibitem{Karsch:2003va}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Fodor:2004nz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 \bibitem{Fodor:2004nz}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Gavai:2008zr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.150 \bibitem{Gavai:2008zr}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Datta:2012pj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.154 \bibitem{Datta:2012pj}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.deForcrand:2010he}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.158 \bibitem{deForcrand:2010he}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Stephanov:1998dy}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.162 \bibitem{Stephanov:1998dy}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Sauer:1976zzf}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.166 \bibitem{Sauer:1976zzf}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Pochodzalla:1995xy}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.170 \bibitem{Pochodzalla:1995xy}
+                                   [124]pdfTeX warning (ext4): destination with
+ the same identifier (name{cite.Elliott:2013pna}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.174 \bibitem{Elliott:2013pna}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Alford:1998mk}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.179 \bibitem{Alford:1998mk}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Schafer:1999fe}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.183 \bibitem{Schafer:1999fe}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Schafer:1998ef}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.187 \bibitem{Schafer:1998ef}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Hatsuda:2006ps}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.191 \bibitem{Hatsuda:2006ps}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Creutz:1983}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.196 \bibitem{Creutz:1983}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Montvay:1994}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.200 \bibitem{Montvay:1994}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Smit:2002}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.204 \bibitem{Smit:2002}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.Gattringer:2009}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208 \bibitem{Gattringer:2009}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Lin:2014}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.212 \bibitem{Lin:2014}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{cite.Fodor:2009ax}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.215 \bibitem{Fodor:2009ax}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Ding:2015ona}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.219 \bibitem{Ding:2015ona}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Wilson:1974sk}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.224 \bibitem{Wilson:1974sk}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Mezzadri:2006}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.229 \bibitem{Mezzadri:2006}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Hasenfratz:1980kn}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.234 \bibitem{Hasenfratz:1980kn}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Lepage:1998dt}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.239 \bibitem{Lepage:1998dt}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Wolff:1988uh}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \bibitem{Wolff:1988uh}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Kogut:1974ag}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.248 \bibitem{Kogut:1974ag}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Kaplan:1992bt}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.252 \bibitem{Kaplan:1992bt}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Neuberger:1997fp}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.256 \bibitem{Neuberger:1997fp}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Luscher:2010ae}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.260 \bibitem{Luscher:2010ae}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Endress:2014qpa}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.265 \bibitem{Endress:2014qpa}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Dick:2015twa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.270 \bibitem{Dick:2015twa}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Teper:1985ek}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.275 \bibitem{Teper:1985ek}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Luscher:2010iy}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.279 \bibitem{Luscher:2010iy}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Belavin:1975fg}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.284 \bibitem{Belavin:1975fg}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Schafer:1996wv}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.289 \bibitem{Schafer:1996wv}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.DelDebbio:2004ns}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.293 \bibitem{DelDebbio:2004ns}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Ce:2014sfa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.297 \bibitem{Ce:2014sfa}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Poppitz:2012nz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.300 \bibitem{Poppitz:2012nz}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Banks:1979yr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.304 \bibitem{Banks:1979yr}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Ginsparg:1981bj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.308 \bibitem{Ginsparg:1981bj}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Cherman:2016hcd}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.312 \bibitem{Cherman:2016hcd}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Cristoforetti:2012su}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.317 \bibitem{Cristoforetti:2012su}
+                                    pdfTeX warning (ext4): destination with the
+ same identifier (name{cite.Aarts:2014nxa}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.322 \bibitem{Aarts:2014nxa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Aarts:2009uq}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.326 \bibitem{Aarts:2009uq}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Sexty:2013ica}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.330 \bibitem{Sexty:2013ica}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Kloiber:2013rba}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.334 \bibitem{Kloiber:2013rba}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Schafer:2009dj}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.337 \bibitem{Schafer:2009dj}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Schaefer:2014awa}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.341 \bibitem{Schaefer:2014awa}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Karsch:1986cq}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.345 \bibitem{Karsch:1986cq}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Meyer:2007ic}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.349 \bibitem{Meyer:2007ic}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Meyer:2007dy}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.353 \bibitem{Meyer:2007dy}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Sakai:2007cm}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.357 \bibitem{Sakai:2007cm}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Aarts:2007wj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.362 \bibitem{Aarts:2007wj}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Aarts:2007va}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.367 \bibitem{Aarts:2007va}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Aarts:2006wt}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.370 \bibitem{Aarts:2006wt}
+                             [125]pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Meyer:2008gt}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.375 \bibitem{Meyer:2008gt}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Romatschke:2009ng}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.379 \bibitem{Romatschke:2009ng}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Arnold:2000dr}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.383 \bibitem{Arnold:2000dr}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Kovtun:2004de}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.387 \bibitem{Kovtun:2004de}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Romatschke:2009im}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.392 \bibitem{Romatschke:2009im}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Rezzolla:2013}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.396 \bibitem{Rezzolla:2013}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Jeon:2015dfa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.400 \bibitem{Jeon:2015dfa}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Colella:1984}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.404 \bibitem{Colella:1984}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Blondin:1993}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.407 \bibitem{Blondin:1993}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Schafer:2010dv}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.410 \bibitem{Schafer:2010dv}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Florkowski:2010cf}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.414 \bibitem{Florkowski:2010cf}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Martinez:2010sc}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.418 \bibitem{Martinez:2010sc}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Bluhm:2015raa}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.422 \bibitem{Bluhm:2015raa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Bluhm:2015bzi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.426 \bibitem{Bluhm:2015bzi}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Romatschke:2011hm}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.430 \bibitem{Romatschke:2011hm}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Brewer:2015hua}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.434 \bibitem{Brewer:2015hua}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Kadanoff}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.439 \bibitem{Kadanoff}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{cite.Bertsch:1988ik}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.443 \bibitem{Bertsch:1988ik}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Lepers:2010be}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.447 \bibitem{Lepers:2010be}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Bass:1998ca}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.452 \bibitem{Bass:1998ca}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Buss:2011mx}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.457 \bibitem{Buss:2011mx}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Ehehalt:1996uq}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.463 \bibitem{Ehehalt:1996uq}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Geiger:1991nj}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.467 \bibitem{Geiger:1991nj}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Xu:2004mz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.471 \bibitem{Xu:2004mz}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.McLerran:1993ni}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.475 \bibitem{McLerran:1993ni}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Mueller:2002gd}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.479 \bibitem{Mueller:2002gd}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Mrowczynski:2016etf}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.483 \bibitem{Mrowczynski:2016etf}
+                                   pdfTeX warning (ext4): destination with the 
+same identifier (name{cite.Berges:2008wm}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.486 \bibitem{Berges:2008wm}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Dusling:2010rm}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.491 \bibitem{Dusling:2010rm}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Litim:2001db}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.496 \bibitem{Litim:2001db}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Wong:1970fu}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.500 \bibitem{Wong:1970fu}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Hu:1996sf}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 \bibitem{Hu:1996sf}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.Maldacena:1997re}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.508 \bibitem{Maldacena:1997re}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Son:2007vk}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.513 \bibitem{Son:2007vk}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Gubser:2009md}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.517 \bibitem{Gubser:2009md}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.CasalderreySolana:2011us}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.521 \bibitem{CasalderreySolana:2011us}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{cite.DeWolfe:2013cua}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.525 \bibitem{DeWolfe:2013cua}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Policastro:2002se}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.530 \bibitem{Policastro:2002se}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Teaney:2006nc}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.534 \bibitem{Teaney:2006nc}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Son:2006em}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.538 \bibitem{Son:2006em}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Chesler:2010bi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542 \bibitem{Chesler:2010bi}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Chesler:2013lia}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.546 \bibitem{Chesler:2013lia}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Rangamani:2009xk}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.550 \bibitem{Rangamani:2009xk}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Clay-YM}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554 \bibitem{Clay-YM}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{cite.Clay-NS}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.559 \bibitem{Clay-NS}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{cite.Villani:2009}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.564 \bibitem{Villani:2009}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Perelman}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.568 \bibitem{Perelman}
+                        
+Underfull \hbox (badness 2237) in paragraph at lines 569--572
+[]\T1/fve/m/n/8.5 G. Perel-man, The en-tropy for-mula for the Ricci flow and it
+s ge-o-met-ric ap-pli-ca-tions (2002).
+ []
+
+[126]pdfTeX warning (ext4): destination with the same identifier (name{cite.She
+n:2014vra}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.573 \bibitem{Shen:2014vra}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Creutz:2004}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.578 \bibitem{Creutz:2004}
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Weinberg:1990rz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.582 \bibitem{Weinberg:1990rz}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Weinberg:1991um}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.585 \bibitem{Weinberg:1991um}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2008ga}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.588 \bibitem{Epelbaum:2008ga}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Luscher:1986pf}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.592 \bibitem{Luscher:1986pf}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Lee:2008fa}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.595 \bibitem{Lee:2008fa}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Borasoy:2006qn}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.598 \bibitem{Borasoy:2006qn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Epelbaum:2009pd}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.602 \bibitem{Epelbaum:2009pd}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2013paa}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.606 \bibitem{Epelbaum:2013paa}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Lahde:2013uqa}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.611 \bibitem{Lahde:2013uqa}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Epelbaum:2011md}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.616 \bibitem{Epelbaum:2011md}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2012qn}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.621 \bibitem{Epelbaum:2012qn}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:2012iu}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.626 \bibitem{Epelbaum:2012iu}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Ordonez:1992xp}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.631 \bibitem{Ordonez:1992xp}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Ordonez:1993tn}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.634 \bibitem{Ordonez:1993tn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.vanKolck:1994yi}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.637 \bibitem{vanKolck:1994yi}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:1998hg}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.640 \bibitem{Epelbaum:1998hg}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Epelbaum:1998ka}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.644 \bibitem{Epelbaum:1998ka}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Bedaque:2002mn}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.648 \bibitem{Bedaque:2002mn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Drut:2012a}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.651 \bibitem{Drut:2012a}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Hubbard:1959ub}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.656 \bibitem{Hubbard:1959ub}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Stratonovich:1958}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.659 \bibitem{Stratonovich:1958}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Weingarten:1980hx}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.662 \bibitem{Weingarten:1980hx}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{cite.Scalettar:1986uy}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.665 \bibitem{Scalettar:1986uy}
+                                pdfTeX warning (ext4): destination with the sam
+e identifier (name{cite.Gottlieb:1987mq}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.669 \bibitem{Gottlieb:1987mq}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Duane:1987de}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.673 \bibitem{Duane:1987de}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Muller:1999cp}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.677 \bibitem{Muller:1999cp}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Lee:2004si}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.681 \bibitem{Lee:2004si}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Lee:2004qd}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.684 \bibitem{Lee:2004qd}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Lee:2005is}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.687 \bibitem{Lee:2005is}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Lee:2005it}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.690 \bibitem{Lee:2005it}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Borasoy:2005yc}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.693 \bibitem{Borasoy:2005yc}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Borasoy:2007vi}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.697 \bibitem{Borasoy:2007vi}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Borasoy:2007vk}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.701 \bibitem{Borasoy:2007vk}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Wlazlowski:2014jna}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.705 \bibitem{Wlazlowski:2014jna}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Epelbaum:2009zs}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.710 \bibitem{Epelbaum:2009zs}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.Elhatisari:2016owd}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.714 \bibitem{Elhatisari:2016owd}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Rupak:2013aue}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.717 \bibitem{Rupak:2013aue}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Rupak:2014xza}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.721 \bibitem{Rupak:2014xza}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Elhatisari:2015iga}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.725 \bibitem{Elhatisari:2015iga}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Luscher:1985dn}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.730 \bibitem{Luscher:1985dn}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Luscher:1991ux}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.733 \bibitem{Luscher:1991ux}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Borasoy:2007vy}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.736 \bibitem{Borasoy:2007vy}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Carlson:1984}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.740 \bibitem{Carlson:1984}
+                            
+Underfull \hbox (badness 1028) in paragraph at lines 741--746
+[]\T1/fve/m/n/8.5 J. Carl-son, V. Pand-hari-pande, R. Wiringa, Nucl. Phys. A \T
+1/fve/b/n/8.5 424\T1/fve/m/n/8.5 (1), 47 (1984).  DOI $http : / / dx . doi .
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 741--746
+\T1/fve/m/n/8.5 org / 10 . 1016 / 0375-[]9474(84 ) 90127-[]1$.  URL []$\T1/fvm/
+m/n/8.5 http : / / www . sciencedirect . com / science / article / pii /
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Lu:2015r
+iz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.747 \bibitem{Lu:2015riz}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{cite.Pine:2013zja}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.750 \bibitem{Pine:2013zja}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Elhatisari:2014lka}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.754 \bibitem{Elhatisari:2014lka}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{cite.Rokash:2015hra}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.758 \bibitem{Rokash:2015hra}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{cite.Creutz:1988wv}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.761 \bibitem{Creutz:1988wv}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Creutz:1999zy}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.764 \bibitem{Creutz:1999zy}
+                              [127]pdfTeX warning (ext4): destination with the 
+same identifier (name{cite.Carlson:2014vla}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.767 \bibitem{Carlson:2014vla}
+                               )) [128]
 \openout2 = `chapter7.aux'.
 
-
-(./chapter7.tex) [61
+ (./chapter7.tex) [129
 
 
 
@@ -1503,50 +5857,51 @@ apter6-figures/accept.png>]) [60]
 ]
 \openout2 = `chapter8.aux'.
 
- (./chapter8.tex [62
+ (./chapter8.tex
+[130
 
 
 
 
 ]
 
-LaTeX Warning: Reference `chap:chapter9' on page 63 undefined on input line 16.
-
-
-
-LaTeX Warning: Reference `chap:chapter10' on page 63 undefined on input line 16
+LaTeX Warning: Reference `chap:chapter9' on page 131 undefined on input line 16
 .
 
 
-LaTeX Warning: Reference `chap:chapter11' on page 63 undefined on input line 16
+LaTeX Warning: Reference `chap:chapter10' on page 131 undefined on input line 1
+6.
+
+
+LaTeX Warning: Reference `chap:chapter11' on page 131 undefined on input line 1
+6.
+
+
+LaTeX Warning: Reference `chap:chapter9' on page 131 undefined on input line 16
 .
 
 
-LaTeX Warning: Reference `chap:chapter9' on page 63 undefined on input line 16.
+LaTeX Warning: Reference `chap:chapter10' on page 131 undefined on input line 1
+6.
 
 
+LaTeX Warning: Reference `chap:chapter11' on page 131 undefined on input line 1
+6.
 
-LaTeX Warning: Reference `chap:chapter10' on page 63 undefined on input line 16
-.
+[131]
 
-
-LaTeX Warning: Reference `chap:chapter11' on page 63 undefined on input line 16
-.
-
-[63]
-
-LaTeX Warning: Citation `hh2000' on page 64 undefined on input line 46.
+LaTeX Warning: Citation `hh2000' on page 132 undefined on input line 46.
 
 
-LaTeX Warning: Citation `eft' on page 64 undefined on input line 64.
+LaTeX Warning: Citation `eft' on page 132 undefined on input line 64.
 
-[64] [65] [66] [67] [68] [69] [70] [71] [72]
+[132] [133] [134] [135] [136] [137] [138] [139] [140]
 Overfull \hbox (85.6646pt too wide) in paragraph at lines 775--785
 \T1/fve/m/n/10 The lat-ter is noth-ing but a stan-dard eigen-value prob-lem. Co
 m-pared with Eq. (refeq:hartreefockcoordinatespace),
  []
 
-[73] [74] [75]
+[141] [142] [143]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1001.
@@ -1555,119 +5910,117 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1001.
 
-[76]
+[144]
 
-LaTeX Warning: Reference `fig:goldstone' on page 77 undefined on input line 104
-8.
+LaTeX Warning: Reference `fig:goldstone' on page 145 undefined on input line 10
+48.
 
-[77]
+[145]
 
-LaTeX Warning: Reference `fig:goldstone' on page 78 undefined on input line 112
-7.
-
-
-LaTeX Warning: Reference `fig:goldstone' on page 78 undefined on input line 117
-4.
+LaTeX Warning: Reference `fig:goldstone' on page 146 undefined on input line 11
+27.
 
 
-LaTeX Warning: Reference `fig:goldstone' on page 78 undefined on input line 117
-5.
+LaTeX Warning: Reference `fig:goldstone' on page 146 undefined on input line 11
+74.
 
-[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
-[93] [94] [95] [96] [97] [98] [99] [100] [101]
+
+LaTeX Warning: Reference `fig:goldstone' on page 146 undefined on input line 11
+75.
+
+[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
+[158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
 (Font)              using `T1/fve/m/n' instead on input line 2690.
 
-[102] [103] [104] [105] [106]
+[170] [171] [172] [173] [174]
 Overfull \hbox (61.6545pt too wide) in paragraph at lines 2914--2914
 [] 
  []
 
-[107] <Chapter8-figures/fig1.pdf, id=2214, 500.87437pt x 400.11984pt>
+[175] <Chapter8-figures/fig1.pdf, id=3160, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
 Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2935.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=2215, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=3161, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
 Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2941.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
- [108] [109 <./Chapter8-figures/fig1.pdf>]
-[110 <./Chapter8-figures/fig2.pdf>]
-<Chapter8-figures/fig3.pdf, id=2353, 523.75674pt x 407.53818pt>
+ [176] [177 <./Chapter8-figures/fig1.pdf>]
+[178 <./Chapter8-figures/fig2.pdf>]
+<Chapter8-figures/fig3.pdf, id=3301, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
 Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2980.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=2354, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=3302, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
 Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2986.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
-) [111 <./Chapter8-figures/fig3.pdf>] [112 <./Chapter8-figures/fig4.pdf>]
+ [179 <./Chapter8-figures/fig3.pdf>]
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 3031--3036
+\T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
+mil-to-nian con-tains anti-symmetrized
+ []
+
+[180 <./Chapter8-figures/fig4.pdf>] [181] [182] [183] [184] [185]
+Overfull \hbox (23.5658pt too wide) in paragraph at lines 3422--3424
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (23.5658pt too wide) in paragraph at lines 3432--3434
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[186] [187] [188]) [189]
 \openout2 = `chapter9.aux'.
 
- (./chapter9.tex) [113
+ (./chapter9.tex [190
 
 
 
 
-]
+]) [191]
 \openout2 = `chapter10.aux'.
 
- (./chapter10.tex [114
+ (./chapter10.tex [192
 
 
 
 
 ])
-[115]
+[193]
 \openout2 = `chapter11.aux'.
 
- (./chapter11.tex [116
+ (./chapter11.tex [194
 
 
 
 
-]) [117] (./lnp.bbl
-LaTeX Font Info:    Font shape `T1/fve/m/it' in size <8.5> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 10.
-LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 7.64995pt on input line 10.
- [118
-
-]
-Underfull \hbox (badness 2735) in paragraph at lines 358--361
-[]\T1/fve/m/n/8.5 S. Sakai, A. Naka-mura, PoS \T1/fve/b/n/8.5 LAT2007\T1/fve/m/
-n/8.5 , 221 (2007).  DOI $10 . 1063 / 1 . 2729742$.  [AIP Conf.
- []
-
-[119]
-Underfull \hbox (badness 1990) in paragraph at lines 569--572
-[]\T1/fve/m/n/8.5 G. Perel-man, The en-tropy for-mula for the Ricci flow and it
-s ge-o-met-ric ap-pli-ca-tions (2002).
- []
-
-[120])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
- [121]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
- (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux)
-(./chapter3.aux) (./chapter4.aux) (./chapter5.aux) (./chapter6.aux)
-(./chapter7.aux) (./chapter8.aux) (./chapter9.aux) (./chapter10.aux)
-(./chapter11.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
+]) [195]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 242.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
+ (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) 
+(./chapter4.aux) (./chapter5.aux)
+(./chapter6.aux) (./chapter7.aux) (./chapter8.aux) (./chapter9.aux)
+(./chapter10.aux) (./chapter11.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 242.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 242.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 82D0318D389448193877126417234103;9005.
+(rerunfilecheck)             Checksum: 68DD14AA5A7809B9B59A0EE667A9DC28;10339.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1678,16 +6031,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
  ) 
 Here is how much of TeX's memory you used:
- 20796 strings out of 493089
- 331168 string characters out of 6134842
- 501624 words of memory out of 5000000
- 22771 multiletter control sequences out of 15000+600000
- 119729 words of font info for 195 fonts, out of 8000000 for 9000
+ 22091 strings out of 493089
+ 349018 string characters out of 6134842
+ 528962 words of memory out of 5000000
+ 23422 multiletter control sequences out of 15000+600000
+ 129595 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,14n,122p,1929b,1789s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,122p,1929b,1819s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1705,16 +6058,17 @@ nts/type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 /bera/fvmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fv
 mr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmro8a.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on lnp.pdf (130 pages, 2066039 bytes).
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on lnp.pdf (204 pages, 3003450 bytes).
 PDF statistics:
- 2840 PDF objects out of 2984 (max. 8388607)
- 2478 compressed objects within 25 object streams
- 993 named destinations out of 1000 (max. 500000)
- 975 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4145 PDF objects out of 4296 (max. 8388607)
+ 3631 compressed objects within 37 object streams
+ 1599 named destinations out of 1728 (max. 500000)
+ 1226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
