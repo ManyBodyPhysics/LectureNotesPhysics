@@ -981,14 +981,622 @@ obtain then the following expression for the total ground-state energy
 \]
 
 
+\section{Full Configuration Interaction Theory}
+
+We have defined the ansatz for the ground state as 
+\[
+|\Phi_0\rangle = \left(\prod_{i\le F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
+\]
+where the index $i$ defines different single-particle states up to the Fermi level. We have assumed that we have $N$ fermions. 
+A given one-particle-one-hole ($1p1h$) state can be written as
+\[
+|\Phi_i^a\rangle = \hat{a}_{a}^{\dagger}\hat{a}_i|\Phi_0\rangle,
+\]
+while a $2p2h$ state can be written as
+\[
+|\Phi_{ij}^{ab}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i|\Phi_0\rangle,
+\]
+and a general $ApAh$ state as 
+\[
+|\Phi_{ijk\dots}^{abc\dots}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
+\]
+
+We use letters $ijkl\dots$ for states below the Fermi level and $abcd\dots$ for states above the Fermi level. A general single-particle state is given by letters $pqrs\dots$.
+
+We can then expand our exact state function for the ground state 
+as
+\[
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
+=(C_0+\hat{C})|\Phi_0\rangle,
+\]
+where we have introduced the so-called correlation operator 
+\[
+\hat{C}=\sum_{ai}C_i^a\hat{a}_{a}^{\dagger}\hat{a}_i  +\sum_{abij}C_{ij}^{ab}\hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i+\dots
+\]
+Since the normalization of $\Psi_0$ is at our disposal and since $C_0$ is by hypothesis non-zero, we may arbitrarily set $C_0=1$ with 
+corresponding proportional changes in all other coefficients. Using this so-called intermediate normalization we have
+\[
+\langle \Psi_0 | \Phi_0 \rangle = \langle \Phi_0 | \Phi_0 \rangle = 1, 
+\]
+resulting in 
+\[
+|\Psi_0\rangle=(1+\hat{C})|\Phi_0\rangle.
+\]
+
+
+We rewrite 
+\[
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots,
+\]
+in a more compact form as 
+\[
+|\Psi_0\rangle=\sum_{PH}C_H^P\Phi_H^P=\left(\sum_{PH}C_H^P\hat{A}_H^P\right)|\Phi_0\rangle,
+\]
+where $H$ stands for $0,1,\dots,n$ hole states and $P$ for $0,1,\dots,n$ particle states. 
+Our requirement of unit normalization gives
+\[
+\langle \Psi_0 | \Psi_0 \rangle = \sum_{PH}|C_H^P|^2= 1,
+\]
+and the energy can be written as 
+\[
+E= \langle \Psi_0 | \hat{H} |\Psi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}.
+\]
+
+
+Normally 
+\[
+E= \langle \Psi_0 | \hat{H} |\Psi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'},
+\]
+is solved by diagonalization setting up the Hamiltonian matrix defined by the basis of all possible Slater determinants. A diagonalization
+is equivalent to finding the variational minimum   of 
+\[
+ \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda \langle \Psi_0 |\Psi_0 \rangle,
+\]
+where $\lambda$ is a variational multiplier to be identified with the energy of the system.
+
+The minimization process results in 
+\[
+\delta\left[ \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda \langle \Psi_0 |\Psi_0 \rangle\right]=
+\]
+\[
+\sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}+
+C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]-
+\lambda( \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
+\]
+Since the coefficients $\delta[C_H^{*P}]$ and $\delta[C_{H'}^{P'}]$ are complex conjugates it is necessary and sufficient to require the quantities that multiply with $\delta[C_H^{*P}]$ to vanish.  
+
+This leads to 
+\[
+\sum_{P'H'}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda C_H^{P}=0,
+\]
+for all sets of $P$ and $H$.
+
+If we then multiply by the corresponding $C_H^{*P}$ and sum over $PH$ we obtain
+\[ 
+\sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda\sum_{PH}|C_H^P|^2=0,
+\]
+leading to the identification $\lambda = E$. This means that we have for all $PH$ sets
+\begin{equation}
+\sum_{P'H'}\langle \Phi_H^P | \hat{H} -E|\Phi_{H'}^{P'} \rangle = 0. \label{eq:fullci}
+\end{equation}
+
+
+
+An alternative way to derive the last equation is to start from 
+\[
+(\hat{H} -E)|\Psi_0\rangle = (\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0, 
+\]
+and if this equation is successively projected against all $\Phi_H^P$ in the expansion of $\Psi$, we end up with Eq.~(\ref{eq:fullci}).
+
+One solves this equation normally by diagonalization. If we are able to solve this equation exactly (that is
+numerically exactly) in a large Hilbert space (it will be truncated in terms of the number of single-particle states included in the definition
+of Slater determinants), it can then serve as a benchmark for other many-body methods which approximate the correlation operator
+$\hat{C}$.  
+
+
+\subsection{Example of a Hamiltonian matrix}
+
+Suppose, as an example, that we have six fermions below the Fermi level.
+This means that we can make at most $6p-6h$ excitations. If we have an infinity of single particle states above the Fermi level, we will obviously have an infinity of say $2p-2h$ excitations. Each such way to configure the particles is called a \textbf{configuration}. We will always have to truncate in the basis of single-particle states.
+This gives us a finite number of possible Slater determinants. Our Hamiltonian matrix would then look like (where each block can have a large dimensionalities):
+
+\begin{table}
+\begin{center}
+\begin{tabular}{cccccccc}
+\hline
+\multicolumn{1}{c}{  } & \multicolumn{1}{c}{ $0p-0h$ } & \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } & \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } & \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ } \\
+\hline
+$0p-0h$ & x       & x       & x       & 0       & 0       & 0       & 0       \\
+$1p-1h$ & x       & x       & x       & x       & 0       & 0       & 0       \\
+$2p-2h$ & x       & x       & x       & x       & x       & 0       & 0       \\
+$3p-3h$ & 0       & x       & x       & x       & x       & x       & 0       \\
+$4p-4h$ & 0       & 0       & x       & x       & x       & x       & x       \\
+$5p-5h$ & 0       & 0       & 0       & x       & x       & x       & x       \\
+$6p-6h$ & 0       & 0       & 0       & 0       & x       & x       & x       \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+with a two-body force. Why are there non-zero blocks of elements? 
+If we use a Hartree-Fock basis, this corresponds to a particular unitary transformation where matrix elements of the type $\langle 0p-0h \vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and our Hamiltonian matrix becomes 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{cccccccc}
+\hline
+\multicolumn{1}{c}{  } & \multicolumn{1}{c}{ $0p-0h$ } & \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } & \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } & \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ } \\
+\hline
+$0p-0h$ & $\tilde{x}$ & 0           & $\tilde{x}$ & 0           & 0           & 0           & 0           \\
+$1p-1h$ & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0           & 0           & 0           \\
+$2p-2h$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0           & 0           \\
+$3p-3h$ & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0           \\
+$4p-4h$ & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
+$5p-5h$ & 0           & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
+$6p-6h$ & 0           & 0           & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+If we do not make any truncations in the possible sets of Slater determinants (many-body states) we can make by distributing $A$ nucleons among $n$ single-particle states, we call such a calculation for 
+\begin{itemize}
+\item Full configuration interaction theory
+\end{itemize}
+
+\noindent
+If we make truncations, we have different possibilities
+
+\begin{itemize}
+\item The standard nuclear shell-model. Here we define an effective Hilbert space with respect to a given core. The calculations are normally then performed for all many-body states that can be constructed from the effective Hilbert spaces. This approach requires a properly defined effective Hamiltonian
+
+\item We can truncate in the number of excitations. For example, we can limit the possible Slater determinants to only $1p-1h$ and $2p-2h$ excitations. This is called a configuration interaction calculation at the level of singles and doubles excitations, or just CISD. 
+
+\item We can limit the number of excitations in terms of the excitation energies. If we do not define a core, this defines normally what is called the no-core shell-model approach. 
+\end{itemize}
+
+\noindent
+What happens if we have a three-body interaction and a Hartree-Fock basis? 
+
+Full configuration interaction theory calculations provide in principle, if we can diagonalize numerically, all states of interest. The dimensionality of the problem explodes however quickly.
+
+The total number of Slater determinants which can be built with say $N$ neutrons distributed among $n$ single particle states is
+\[
+\left (\begin{array}{c} n \\ N\end{array} \right) =\frac{n!}{(n-N)!N!}. 
+\]
+
+For a model space which comprises the first for major shells only $0s$, $0p$, $1s0d$ and $1p0f$ we have $40$ single particle states for neutrons and protons.  For the eight neutrons of oxygen-16 we would then have
+\[
+\left (\begin{array}{c} 40 \\ 8\end{array} \right) =\frac{40!}{(32)!8!}\sim 10^{9}, 
+\]
+and multiplying this with the number of proton Slater determinants we end up with approximately witha dimensionality $d$ of $d\sim 10^{18}$.
+
+
+This number can be reduced if we look at specific symmetries only. However, the dimensionality explodes quickly!
+
+\begin{itemize}
+\item For Hamiltonian matrices of dimensionalities  which are smaller than $d\sim 10^5$, we would use so-called direct methods for diagonalizing the Hamiltonian matrix
+
+\item For larger dimensionalities iterative eigenvalue solvers like Lanczos' method are used. The most efficient codes at present can handle matrices of $d\sim 10^{10}$. 
+\end{itemize}
+
+\noindent
+\subsection{A non-practical way of solving the eigenvalue problem}
+
+For reasons to come (links with Coupled-Cluster theory and Many-Body perturbation theory), 
+we will rewrite Eq.~(\ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients $C_H^P$. 
+To obtain the eigenstates and eigenvalues in terms of non-linear equations is not a very practical approach. However, it serves the scope of linking FCI theory with approximative solutions to the many-body problem.
+
+To see this, we look at the contributions arising from 
+\[
+\langle \Phi_H^P | = \langle \Phi_0|
+\]
+in  Eq.~(\ref{eq:fullci}), that is we multiply with $\langle \Phi_0 |$
+from the left in 
+\[
+(\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
+\]
+If we assume that we have a two-body operator at most, Slater's rule gives then an equation for the 
+correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
+\[
+\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
+\]
+or 
+\[
+E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
+\]
+where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
+The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
+
+In our notes on Hartree-Fock calculations, 
+we have already computed the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a Hartree-Fock basis, then the matrix elements
+$\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a \emph{correlation energy} given by
+\[
+E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}. 
+\]
+
+
+Inserting the various matrix elements we can rewrite the previous equation as
+\[
+\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
+\]
+This equation determines the correlation energy but not the coefficients $C$. 
+We need more equations. Our next step is to set up
+\[
+\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
+\]
+as this equation will allow us to find an expression for the coefficents $C_i^a$ since we can rewrite this equation as 
+\[
+\langle i | \hat{f}| a\rangle +\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=EC_i^a.
+\]
+
+We see that on the right-hand side we have the energy $E$. This leads to a non-linear equation in the unknown coefficients. 
+These equations are normally solved iteratively ( that is we can start with a guess for the coefficients $C_i^a$). A common choice is to use perturbation theory for the first guess, setting thereby
+\[
+ C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\epsilon_i-\epsilon_a}.
+\]
+
+The observant reader will however see that we need an equation for $C_{jk}^{bc}$ and $C_{jkl}^{bcd}$ as well.
+To find equations for these coefficients we need then to continue our multiplications from the left with the various
+$\Phi_{H}^P$ terms. 
+
+
+For $C_{jk}^{bc}$ we need then
+\[
+\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
+\]
+\[
+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0,
+\]
+and we can isolate the coefficients $C_{kl}^{cd}$ in a similar way as we did for the coefficients $C_{i}^{a}$. 
+A standard choice for the first iteration is to set 
+\[
+C_{ij}^{ab} =\frac{\langle ij \vert \hat{v} \vert ab \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
+\]
+At the end we can rewrite our solution of the Schroedinger equation in terms of $n$ coupled equations for the coefficients $C_H^P$.
+This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
+various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
+as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with Coupled Cluster theory and
+many-body perturbation theory.
+
+
+\subsection{Summarizing FCI and bringing in approximative methods}
+
+
+If we can diagonalize large matrices, FCI is the method of choice since:
+\begin{itemize}
+\item It gives all eigenvalues, ground state and excited states
+
+\item The eigenvectors are obtained directly from the coefficients $C_H^P$ which result from the diagonalization
+
+\item We can compute easily expectation values of other operators, as well as transition probabilities
+
+\item Correlations are easy to understand in terms of contributions to a given operator beyond the Hartree-Fock contribution. This is the standard approach in  many-body theory. 
+\end{itemize}
+
+\noindent
+The correlation energy is defined as, with a two-body Hamiltonian,  
+\[
+\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
+\]
+
+The coefficients $C$ result from the solution of the eigenvalue problem. 
+The energy of say the ground state is then
+\[
+E=E_{ref}+\Delta E,
+\]
+where the so-called reference energy is the energy we obtain from a Hartree-Fock calculation, that is
+\[
+E_{ref}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
+\]
+
+However, as we have seen, even for a small case like the four first major shells and a nucleus like oxygen-16, the dimensionality becomes quickly intractable. If we wish to include single-particle states that reflect weakly bound systems, we need a much larger single-particle basis. We need thus approximative methods that sum specific correlations to infinite order. 
+
+Popular methods are
+\begin{itemize}
+\item Many-body perturbation theory (in essence a Taylor expansion)
+
+\item Coupled cluster theory (coupled non-linear equations)
+
+\item Green's function approaches (matrix inversion)
+
+\item Similarity group transformation methods (coupled ordinary differential equations
+\end{itemize}
+
+All these methods start normally with a Hartree-Fock basis as the calculational basis. 
 
 
 
 
+\section{Many-body perturbation theory}
+
+We assume here that we are only interested in the ground state of the system and 
+expand the exact wave function in term of a series of Slater determinants
+\[
+\vert \Psi_0\rangle = \vert \Phi_0\rangle + \sum_{m=1}^{\infty}C_m\vert \Phi_m\rangle,
+\]
+where we have assumed that the true ground state is dominated by the 
+solution of the unperturbed problem, that is
+\[
+\hat{H}_0\vert \Phi_0\rangle= W_0\vert \Phi_0\rangle.
+\]
+The state $\vert \Psi_0\rangle$ is not normalized, rather we have used an intermediate 
+normalization $\langle \Phi_0 \vert \Psi_0\rangle=1$ since we have $\langle \Phi_0\vert \Phi_0\rangle=1$. 
+
+
+
+The Schroedinger equation is
+\[
+\hat{H}\vert \Psi_0\rangle = E\vert \Psi_0\rangle,
+\]
+and multiplying the latter from the left with $\langle \Phi_0\vert $ gives
+\[
+\langle \Phi_0\vert \hat{H}\vert \Psi_0\rangle = E\langle \Phi_0\vert \Psi_0\rangle=E,
+\]
+and subtracting from this equation
+\[
+\langle \Psi_0\vert \hat{H}_0\vert \Phi_0\rangle= W_0\langle \Psi_0\vert \Phi_0\rangle=W_0,
+\]
+and using the fact that the both operators $\hat{H}$ and $\hat{H}_0$ are hermitian 
+results in
+\[
+\Delta E=E-W_0=\langle \Phi_0\vert \hat{H}_I\vert \Psi_0\rangle,
+\]
+which is an exact result. We call this quantity the correlation energy.
+
+
+
+This equation forms the starting point for all perturbative derivations. However,
+as it stands it represents nothing but a mere formal rewriting of Schroedinger's equation and is not of much practical use. The exact wave function $\vert \Psi_0\rangle$ is unknown. In order to obtain a perturbative expansion, we need to expand the exact wave function in terms of the interaction $\hat{H}_I$. 
+
+Here we have assumed that our model space defined by the operator $\hat{P}$ is one-dimensional, meaning that
+\[
+\hat{P}= \vert \Phi_0\rangle \langle \Phi_0\vert ,
+\]
+and
+\[
+\hat{Q}=\sum_{m=1}^{\infty}\vert \Phi_m\rangle \langle \Phi_m\vert .
+\]
+
+
+We can thus rewrite the exact wave function as
+\[
+\vert \Psi_0\rangle= (\hat{P}+\hat{Q})\vert \Psi_0\rangle=\vert \Phi_0\rangle+\hat{Q}\vert \Psi_0\rangle.
+\]
+Going back to the Schr\"odinger equation, we can rewrite it as, adding and a subtracting a term $\omega \vert \Psi_0\rangle$ as
+\[
+\left(\omega-\hat{H}_0\right)\vert \Psi_0\rangle=\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle,
+\]
+where $\omega$ is an energy variable to be specified later. 
+
+
+We assume also that the resolvent of $\left(\omega-\hat{H}_0\right)$ exits, that is
+it has an inverse which defined the unperturbed Green's function as
+\[
+\left(\omega-\hat{H}_0\right)^{-1}=\frac{1}{\left(\omega-\hat{H}_0\right)}.
+\]
+
+We can rewrite Schroedinger's equation as
+\[
+\vert \Psi_0\rangle=\frac{1}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle,
+\]
+and multiplying from the left with $\hat{Q}$ results in
+\[
+\hat{Q}\vert \Psi_0\rangle=\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle,
+\]
+which is possible since we have defined the operator $\hat{Q}$ in terms of the eigenfunctions of $\hat{H}$.
 
 
 
 
+These operators commute meaning that
+\[
+\hat{Q}\frac{1}{\left(\omega-\hat{H}_0\right)}\hat{Q}=\hat{Q}\frac{1}{\left(\omega-\hat{H}_0\right)}=\frac{\hat{Q}}{\left(\omega-\hat{H}_0\right)}.
+\]
+With these definitions we can in turn define the wave function as 
+\[
+\vert \Psi_0\rangle=\vert \Phi_0\rangle+\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle.
+\]
+This equation is again nothing but a formal rewrite of Schr\"odinger's equation
+and does not represent a practical calculational scheme.  
+It is a non-linear equation in two unknown quantities, the energy $E$ and the exact
+wave function $\vert \Psi_0\rangle$. We can however start with a guess for $\vert \Psi_0\rangle$ on the right hand side of the last equation.
+
+
+
+ The most common choice is to start with the function which is expected to exhibit the largest overlap with the wave function we are searching after, namely $\vert \Phi_0\rangle$. This can again be inserted in the solution for $\vert \Psi_0\rangle$ in an iterative fashion and if we continue along these lines we end up with
+\[
+\vert \Psi_0\rangle=\sum_{i=0}^{\infty}\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle, 
+\]
+for the wave function and
+\[
+\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle, 
+\]
+which is now  a perturbative expansion of the exact energy in terms of the interaction
+$\hat{H}_I$ and the unperturbed wave function $\vert \Psi_0\rangle$.
+
+
+
+In our equations for $\vert \Psi_0\rangle$ and $\Delta E$ in terms of the unperturbed
+solutions $\vert \Phi_i\rangle$  we have still an undetermined parameter $\omega$
+and a dependecy on the exact energy $E$. Not much has been gained thus from a practical computational point of view. 
+
+In Brilluoin-Wigner perturbation theory it is customary to set $\omega=E$. This results in the following perturbative expansion for the energy $\Delta E$
+\[
+\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle=
+\]
+\[
+\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+
+\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+\dots\right)\vert \Phi_0\rangle. 
+\]
+
+\[
+\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle=\]
+\[
+\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+
+\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+\dots\right)\vert \Phi_0\rangle. 
+\]
+This expression depends however on the exact energy $E$ and is again not very convenient from a practical point of view. It can obviously be solved iteratively, by starting with a guess for  $E$ and then solve till some kind of self-consistency criterion has been reached. 
+
+Actually, the above expression is nothing but a rewrite again of the full Schr\"odinger equation. 
+
+Defining $e=E-\hat{H}_0$ and recalling that $\hat{H}_0$ commutes with 
+$\hat{Q}$ by construction and that $\hat{Q}$ is an idempotent operator
+$\hat{Q}^2=\hat{Q}$. 
+Using this equation in the above expansion for $\Delta E$ we can write the denominator 
+\[
+\hat{Q}\frac{1}{\hat{e}-\hat{Q}\hat{H}_I\hat{Q}}=
+\]
+\[
+\hat{Q}\left[\frac{1}{\hat{e}}+\frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}
+\frac{1}{\hat{e}}+\frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}
+\frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}\frac{1}{\hat{e}}+\dots\right]\hat{Q}.
+\]
+
+Inserted in the expression for $\Delta E$ leads to 
+\[
+\Delta E=
+\langle \Phi_0\vert \hat{H}_I+\hat{H}_I\hat{Q}\frac{1}{E-\hat{H}_0-\hat{Q}\hat{H}_I\hat{Q}}\hat{Q}\hat{H}_I\vert \Phi_0\rangle. 
+\]
+In RS perturbation theory we set $\omega = W_0$ and obtain the following expression for the energy difference
+\[
+\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{W_0-\hat{H}_0}\left(\hat{H}_I-\Delta E\right)\right\}^i\vert \Phi_0\rangle=
+\]
+\[
+\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)+
+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)+\dots\right)\vert \Phi_0\rangle.
+\]
+
+
+
+Recalling that $\hat{Q}$ commutes with $\hat{H_0}$ and since $\Delta E$ is a constant we obtain that
+\[
+\hat{Q}\Delta E\vert \Phi_0\rangle = \hat{Q}\Delta E\vert \hat{Q}\Phi_0\rangle = 0.
+\]
+Inserting this results in the expression for the energy results in
+\[
+\Delta E=\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I+
+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I+\dots\right)\vert \Phi_0\rangle.
+\]
+
+
+
+We can now this expression in terms of a perturbative expression in terms
+of $\hat{H}_I$ where we iterate the last expression in terms of $\Delta E$
+\[
+\Delta E=\sum_{i=1}^{\infty}\Delta E^{(i)}.
+\]
+We get the following expression for $\Delta E^{(i)}$
+\[
+\Delta E^{(1)}=\langle \Phi_0\vert \hat{H}_I\vert \Phi_0\rangle,
+\] 
+which is just the contribution to first order in perturbation theory,
+\[
+\Delta E^{(2)}=\langle\Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\vert \Phi_0\rangle, 
+\]
+which is the contribution to second order.
+
+
+
+\[
+\Delta E^{(3)}=\langle \Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\Phi_0\rangle-
+\langle\Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\langle \Phi_0\vert \hat{H}_I\vert \Phi_0\rangle\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\vert \Phi_0\rangle,
+\]
+being the third-order contribution. 
+
+
+\subsection{Interpreting the correlation energy and the wave operator}
+
+In the shell-model lectures we showed that we could rewrite the exact state function for say the ground state, as a linear expansion in terms of all possible Slater determinants. That is, we 
+define the ansatz for the ground state as 
+\[
+|\Phi_0\rangle = \left(\prod_{i\le F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
+\]
+where the index $i$ defines different single-particle states up to the Fermi level. We have assumed that we have $N$ fermions. 
+A given one-particle-one-hole ($1p1h$) state can be written as
+\[
+|\Phi_i^a\rangle = \hat{a}_{a}^{\dagger}\hat{a}_i|\Phi_0\rangle,
+\]
+while a $2p2h$ state can be written as
+\[
+|\Phi_{ij}^{ab}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i|\Phi_0\rangle,
+\]
+and a general $ApAh$ state as 
+\[
+|\Phi_{ijk\dots}^{abc\dots}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
+\]
+
+We use letters $ijkl\dots$ for states below the Fermi level and $abcd\dots$ for states above the Fermi level. A general single-particle state is given by letters $pqrs\dots$.
+
+We can then expand our exact state function for the ground state 
+as
+\[
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
+=(C_0+\hat{C})|\Phi_0\rangle,
+\]
+where we have introduced the so-called correlation operator 
+\[
+\hat{C}=\sum_{ai}C_i^a\hat{a}_{a}^{\dagger}\hat{a}_i  +\sum_{abij}C_{ij}^{ab}\hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i+\dots
+\]
+Since the normalization of $\Psi_0$ is at our disposal and since $C_0$ is by hypothesis non-zero, we may arbitrarily set $C_0=1$ with 
+corresponding proportional changes in all other coefficients. Using this so-called intermediate normalization we have
+\[
+\langle \Psi_0 | \Phi_0 \rangle = \langle \Phi_0 | \Phi_0 \rangle = 1, 
+\]
+resulting in 
+\[
+|\Psi_0\rangle=(1+\hat{C})|\Phi_0\rangle.
+\]
+
+In a shell-model calculation, the unknown coefficients in $\hat{C}$ are the 
+eigenvectors which result from the diagonalization of the Hamiltonian matrix.
+
+How can we use perturbation theory to determine the same coefficients? Let us study the contributions to second order in the interaction, namely
+\[
+\Delta E^{(2)}=\langle\Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\vert \Phi_0\rangle.
+\]
+
+The intermediate states given by $\hat{Q}$ can at most be of a $2p-2h$ nature if we have a two-body Hamiltonian. This means that second order in the perturbation theory can have $1p-1h$ and $2p-2h$ at most as intermediate states. When we diagonalize, these contributions are included to infinite order. This means that higher-orders in perturbation theory bring in more complicated correlations. 
+
+If we limit the attention to a Hartree-Fock basis, then we have that
+$\langle\Phi_0\vert \hat{H}_I \vert 2p-2h\rangle$ is the only contribution and the contribution to the energy reduces to
+\[
+\Delta E^{(2)}=\frac{1}{4}\sum_{abij}\langle ij\vert \hat{v}\vert ab\rangle \frac{\langle ab\vert \hat{v}\vert ij\rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
+\]
+
+If we compare this to the correlation energy obtained from full configuration interaction theory with a Hartree-Fock basis, we found that
+\[
+E-E_0 =\Delta E=
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab},
+\]
+where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
+
+We see that if we set
+\[
+C_{ij}^{ab} =\frac{1}{4}\frac{\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b},
+\]
+we have a perfect agreement between FCI and MBPT. However, FCI includes such $2p-2h$ correlations to infinite order. In order to make a meaningful comparison we would at least need to sum such correlations to infinite order in perturbation theory. 
+
+Summing up, we can see that
+\begin{itemize}
+\item MBPT introduces order-by-order specific correlations and we make comparisons with exact calculations like FCI
+
+\item At every order, we can calculate all contributions since they are well-known and either tabulated or calculated on the fly.
+
+\item MBPT is a non-variational theory and there is no guarantee that higher orders will improve the convergence. 
+
+\item However, since FCI calculations are limited by the size of the Hamiltonian matrices to diagonalize (today's most efficient codes can attach dimensionalities of ten billion basis states, MBPT can function as an approximative method which gives a straightforward (but tedious) calculation recipe. 
+
+\item MBPT has been widely used to compute effective interactions for the nuclear shell-model.
+
+\item But there are better methods which sum to infinite order important correlations. Coupled cluster theory is one of these methods. 
+\end{itemize}
 
 
 
@@ -1392,857 +2000,8 @@ obtain new values for $M_{N}^{*}$ and $\Delta$. This procedure
 continues until these parameters vary little.
 
 
-
-
-
-\section{Full Configuration Interaction Theory}
-
-We have defined the ansatz for the ground state as 
-\[
-|\Phi_0\rangle = \left(\prod_{i\le F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
-\]
-where the index $i$ defines different single-particle states up to the Fermi level. We have assumed that we have $N$ fermions. 
-A given one-particle-one-hole ($1p1h$) state can be written as
-\[
-|\Phi_i^a\rangle = \hat{a}_{a}^{\dagger}\hat{a}_i|\Phi_0\rangle,
-\]
-while a $2p2h$ state can be written as
-\[
-|\Phi_{ij}^{ab}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i|\Phi_0\rangle,
-\]
-and a general $ApAh$ state as 
-\[
-|\Phi_{ijk\dots}^{abc\dots}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
-\]
-
-We use letters $ijkl\dots$ for states below the Fermi level and $abcd\dots$ for states above the Fermi level. A general single-particle state is given by letters $pqrs\dots$.
-
-We can then expand our exact state function for the ground state 
-as
-\[
-|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
-=(C_0+\hat{C})|\Phi_0\rangle,
-\]
-where we have introduced the so-called correlation operator 
-\[
-\hat{C}=\sum_{ai}C_i^a\hat{a}_{a}^{\dagger}\hat{a}_i  +\sum_{abij}C_{ij}^{ab}\hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i+\dots
-\]
-Since the normalization of $\Psi_0$ is at our disposal and since $C_0$ is by hypothesis non-zero, we may arbitrarily set $C_0=1$ with 
-corresponding proportional changes in all other coefficients. Using this so-called intermediate normalization we have
-\[
-\langle \Psi_0 | \Phi_0 \rangle = \langle \Phi_0 | \Phi_0 \rangle = 1, 
-\]
-resulting in 
-\[
-|\Psi_0\rangle=(1+\hat{C})|\Phi_0\rangle.
-\]
-
-
-We rewrite 
-\[
-|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots,
-\]
-in a more compact form as 
-\[
-|\Psi_0\rangle=\sum_{PH}C_H^P\Phi_H^P=\left(\sum_{PH}C_H^P\hat{A}_H^P\right)|\Phi_0\rangle,
-\]
-where $H$ stands for $0,1,\dots,n$ hole states and $P$ for $0,1,\dots,n$ particle states. 
-Our requirement of unit normalization gives
-\[
-\langle \Psi_0 | \Psi_0 \rangle = \sum_{PH}|C_H^P|^2= 1,
-\]
-and the energy can be written as 
-\[
-E= \langle \Psi_0 | \hat{H} |\Psi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}.
-\]
-
-
-Normally 
-\[
-E= \langle \Psi_0 | \hat{H} |\Psi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'},
-\]
-is solved by diagonalization setting up the Hamiltonian matrix defined by the basis of all possible Slater determinants. A diagonalization
-is equivalent to finding the variational minimum   of 
-\[
- \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda \langle \Psi_0 |\Psi_0 \rangle,
-\]
-where $\lambda$ is a variational multiplier to be identified with the energy of the system.
-
-The minimization process results in 
-\[
-\delta\left[ \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda \langle \Psi_0 |\Psi_0 \rangle\right]=
-\]
-\[
-\sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}+
-C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]-
-\lambda( \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
-\]
-Since the coefficients $\delta[C_H^{*P}]$ and $\delta[C_{H'}^{P'}]$ are complex conjugates it is necessary and sufficient to require the quantities that multiply with $\delta[C_H^{*P}]$ to vanish.  
-
-This leads to 
-\[
-\sum_{P'H'}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda C_H^{P}=0,
-\]
-for all sets of $P$ and $H$.
-
-If we then multiply by the corresponding $C_H^{*P}$ and sum over $PH$ we obtain
-\[ 
-\sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda\sum_{PH}|C_H^P|^2=0,
-\]
-leading to the identification $\lambda = E$. This means that we have for all $PH$ sets
-\begin{equation}
-\sum_{P'H'}\langle \Phi_H^P | \hat{H} -E|\Phi_{H'}^{P'} \rangle = 0. \label{eq:fullci}
-\end{equation}
-
-
-
-An alternative way to derive the last equation is to start from 
-\[
-(\hat{H} -E)|\Psi_0\rangle = (\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0, 
-\]
-and if this equation is successively projected against all $\Phi_H^P$ in the expansion of $\Psi$, we end up with Eq.~(\ref{eq:fullci}).
-
-One solves this equation normally by diagonalization. If we are able to solve this equation exactly (that is
-numerically exactly) in a large Hilbert space (it will be truncated in terms of the number of single-particle states included in the definition
-of Slater determinants), it can then serve as a benchmark for other many-body methods which approximate the correlation operator
-$\hat{C}$.  
-
-
-\subsection{Example of a Hamiltonian matrix}
-
-Suppose, as an example, that we have six fermions below the Fermi level.
-This means that we can make at most $6p-6h$ excitations. If we have an infinity of single particle states above the Fermi level, we will obviously have an infinity of say $2p-2h$ excitations. Each such way to configure the particles is called a \textbf{configuration}. We will always have to truncate in the basis of single-particle states.
-This gives us a finite number of possible Slater determinants. Our Hamiltonian matrix would then look like (where each block can have a large dimensionalities):
-
-
-\begin{quote}
-\begin{tabular}{cccccccc}
-\hline
-\multicolumn{1}{c}{  } & \multicolumn{1}{c}{ $0p-0h$ } & \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } & \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } & \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ } \\
-\hline
-$0p-0h$ & x       & x       & x       & 0       & 0       & 0       & 0       \\
-$1p-1h$ & x       & x       & x       & x       & 0       & 0       & 0       \\
-$2p-2h$ & x       & x       & x       & x       & x       & 0       & 0       \\
-$3p-3h$ & 0       & x       & x       & x       & x       & x       & 0       \\
-$4p-4h$ & 0       & 0       & x       & x       & x       & x       & x       \\
-$5p-5h$ & 0       & 0       & 0       & x       & x       & x       & x       \\
-$6p-6h$ & 0       & 0       & 0       & 0       & x       & x       & x       \\
-\hline
-\end{tabular}
-\end{quote}
-
-\noindent
-with a two-body force. Why are there non-zero blocks of elements? 
-If we use a Hartree-Fock basis, this corresponds to a particular unitary transformation where matrix elements of the type $\langle 0p-0h \vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and our Hamiltonian matrix becomes 
-
-
-\begin{quote}
-\begin{tabular}{cccccccc}
-\hline
-\multicolumn{1}{c}{  } & \multicolumn{1}{c}{ $0p-0h$ } & \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } & \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } & \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ } \\
-\hline
-$0p-0h$ & $\tilde{x}$ & 0           & $\tilde{x}$ & 0           & 0           & 0           & 0           \\
-$1p-1h$ & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0           & 0           & 0           \\
-$2p-2h$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0           & 0           \\
-$3p-3h$ & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0           \\
-$4p-4h$ & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
-$5p-5h$ & 0           & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
-$6p-6h$ & 0           & 0           & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
-\hline
-\end{tabular}
-\end{quote}
-
-\noindent
-If we do not make any truncations in the possible sets of Slater determinants (many-body states) we can make by distributing $A$ nucleons among $n$ single-particle states, we call such a calculation for 
-\begin{itemize}
-\item Full configuration interaction theory
-\end{itemize}
-
-\noindent
-If we make truncations, we have different possibilities
-
-\begin{itemize}
-\item The standard nuclear shell-model. Here we define an effective Hilbert space with respect to a given core. The calculations are normally then performed for all many-body states that can be constructed from the effective Hilbert spaces. This approach requires a properly defined effective Hamiltonian
-
-\item We can truncate in the number of excitations. For example, we can limit the possible Slater determinants to only $1p-1h$ and $2p-2h$ excitations. This is called a configuration interaction calculation at the level of singles and doubles excitations, or just CISD. 
-
-\item We can limit the number of excitations in terms of the excitation energies. If we do not define a core, this defines normally what is called the no-core shell-model approach. 
-\end{itemize}
-
-\noindent
-What happens if we have a three-body interaction and a Hartree-Fock basis? 
-
-Full configuration interaction theory calculations provide in principle, if we can diagonalize numerically, all states of interest. The dimensionality of the problem explodes however quickly.
-
-The total number of Slater determinants which can be built with say $N$ neutrons distributed among $n$ single particle states is
-\[
-\left (\begin{array}{c} n \\ N\end{array} \right) =\frac{n!}{(n-N)!N!}. 
-\]
-
-For a model space which comprises the first for major shells only $0s$, $0p$, $1s0d$ and $1p0f$ we have $40$ single particle states for neutrons and protons.  For the eight neutrons of oxygen-16 we would then have
-\[
-\left (\begin{array}{c} 40 \\ 8\end{array} \right) =\frac{40!}{(32)!8!}\sim 10^{9}, 
-\]
-and multiplying this with the number of proton Slater determinants we end up with approximately witha dimensionality $d$ of $d\sim 10^{18}$.
-
-
-This number can be reduced if we look at specific symmetries only. However, the dimensionality explodes quickly!
-
-\begin{itemize}
-\item For Hamiltonian matrices of dimensionalities  which are smaller than $d\sim 10^5$, we would use so-called direct methods for diagonalizing the Hamiltonian matrix
-
-\item For larger dimensionalities iterative eigenvalue solvers like Lanczos' method are used. The most efficient codes at present can handle matrices of $d\sim 10^{10}$. 
-\end{itemize}
-
-\noindent
-\subsection{A non-practical way of solving the eigenvalue problem}
-
-For reasons to come (links with Coupled-Cluster theory and Many-Body perturbation theory), 
-we will rewrite Eq.~(\ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients $C_H^P$. 
-To obtain the eigenstates and eigenvalues in terms of non-linear equations is not a very practical approach. However, it serves the scope of linking FCI theory with approximative solutions to the many-body problem.
-
-To see this, we look at the contributions arising from 
-\[
-\langle \Phi_H^P | = \langle \Phi_0|
-\]
-in  Eq.~(\ref{eq:fullci}), that is we multiply with $\langle \Phi_0 |$
-from the left in 
-\[
-(\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
-\]
-If we assume that we have a two-body operator at most, Slater's rule gives then an equation for the 
-correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
-\[
-\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
-\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
-\]
-or 
-\[
-E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
-\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
-\]
-where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
-The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
-
-In our notes on Hartree-Fock calculations, 
-we have already computed the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a Hartree-Fock basis, then the matrix elements
-$\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a \emph{correlation energy} given by
-\[
-E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}. 
-\]
-
-
-Inserting the various matrix elements we can rewrite the previous equation as
-\[
-\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
-\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
-\]
-This equation determines the correlation energy but not the coefficients $C$. 
-We need more equations. Our next step is to set up
-\[
-\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
-\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
-\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
-\]
-as this equation will allow us to find an expression for the coefficents $C_i^a$ since we can rewrite this equation as 
-\[
-\langle i | \hat{f}| a\rangle +\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+
-\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
-\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=EC_i^a.
-\]
-
-We see that on the right-hand side we have the energy $E$. This leads to a non-linear equation in the unknown coefficients. 
-These equations are normally solved iteratively ( that is we can start with a guess for the coefficients $C_i^a$). A common choice is to use perturbation theory for the first guess, setting thereby
-\[
- C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\epsilon_i-\epsilon_a}.
-\]
-
-The observant reader will however see that we need an equation for $C_{jk}^{bc}$ and $C_{jkl}^{bcd}$ as well.
-To find equations for these coefficients we need then to continue our multiplications from the left with the various
-$\Phi_{H}^P$ terms. 
-
-
-For $C_{jk}^{bc}$ we need then
-\[
-\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
-\]
-\[
-\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0,
-\]
-and we can isolate the coefficients $C_{kl}^{cd}$ in a similar way as we did for the coefficients $C_{i}^{a}$. 
-A standard choice for the first iteration is to set 
-\[
-C_{ij}^{ab} =\frac{\langle ij \vert \hat{v} \vert ab \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
-\]
-At the end we can rewrite our solution of the Schroedinger equation in terms of $n$ coupled equations for the coefficients $C_H^P$.
-This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
-various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
-as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with Coupled Cluster theory and
-many-body perturbation theory.
-
-
-\subsection{Summarizing FCI and bringing in approximative methods}
-
-
-If we can diagonalize large matrices, FCI is the method of choice since:
-\begin{itemize}
-\item It gives all eigenvalues, ground state and excited states
-
-\item The eigenvectors are obtained directly from the coefficients $C_H^P$ which result from the diagonalization
-
-\item We can compute easily expectation values of other operators, as well as transition probabilities
-
-\item Correlations are easy to understand in terms of contributions to a given operator beyond the Hartree-Fock contribution. This is the standard approach in  many-body theory. 
-\end{itemize}
-
-\noindent
-The correlation energy is defined as, with a two-body Hamiltonian,  
-\[
-\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
-\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
-\]
-
-The coefficients $C$ result from the solution of the eigenvalue problem. 
-The energy of say the ground state is then
-\[
-E=E_{ref}+\Delta E,
-\]
-where the so-called reference energy is the energy we obtain from a Hartree-Fock calculation, that is
-\[
-E_{ref}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
-\]
-
-However, as we have seen, even for a small case like the four first major shells and a nucleus like oxygen-16, the dimensionality becomes quickly intractable. If we wish to include single-particle states that reflect weakly bound systems, we need a much larger single-particle basis. We need thus approximative methods that sum specific correlations to infinite order. 
-
-Popular methods are
-\begin{itemize}
-\item Many-body perturbation theory (in essence a Taylor expansion)
-
-\item Coupled cluster theory (coupled non-linear equations)
-
-\item Green's function approaches (matrix inversion)
-
-\item Similarity group transformation methods (coupled ordinary differential equations
-\end{itemize}
-
-\noindent
-All these methods start normally with a Hartree-Fock basis as the calculational basis. 
-
-
-\subsection{Building a many-body basis}
-
-Here we will discuss how we can set up a single-particle basis which we can use in the various parts of our projects, from the simple pairing model to infinite nuclear matter. We will use here the simple pairing model to illustrate in particular how to set up a single-particle basis. We will also use this do discuss standard FCI approaches like:
-\begin{enumerate}
- \item Standard shell-model basis in one or two major shells
-
- \item Full CI in a given basis and no truncations
-
- \item CISD and CISDT approximations
-
- \item No-core shell model and truncation in excitation energy
-\end{enumerate}
-
-\noindent
-An important step in an FCI code  is to construct the many-body basis.  
-
-While the formalism is independent of the choice of basis, the \textbf{effectiveness} of a calculation 
-will certainly be basis dependent. 
-
-Furthermore there are common conventions useful to know.
-
-First, the single-particle basis has angular momentum as a good quantum number.  You can 
-imagine the single-particle wavefunctions being generated by a one-body Hamiltonian, 
-for example a harmonic oscillator.  Modifications include harmonic oscillator plus 
-spin-orbit splitting, or self-consistent mean-field potentials, or the Woods-Saxon potential which mocks 
-up the self-consistent mean-field. 
-For nuclei, the harmonic oscillator, modified by spin-orbit splitting, provides a useful language 
-for describing single-particle states.
-
-
-Each single-particle state is labeled by the following quantum numbers: 
-
-\begin{itemize}
-\item Orbital angular momentum $l$
-
-\item Intrinsic spin $s$ = 1/2 for protons and neutrons
-
-\item Angular momentum $j = l \pm 1/2$
-
-\item $z$-component $j_z$ (or $m$)
-
-\item Some labeling of the radial wavefunction, typically $n$ the number of nodes in  the radial wavefunction, but in the case of harmonic oscillator one can also use the principal quantum number $N$, where the harmonic oscillator energy is $(N+3/2)\hbar \omega$.  For our nuclear matter projects, you will need to change the quantum numbers to those relevant for calculations
-\end{itemize}
-
-\noindent
-in three-dimensional cartesian basis, see the relevante \href{{https://github.com/NuclearTalent/Course2ManyBodyMethods/blob/master/doc/pub/cc/pdf/Lectures1-2_TALENT_NuclearMatter_GH.pdf}}{lectures}.
-
-
-In this format one labels states by $n(l)_j$, with $(l)$ replaced by a letter:
-$s$ for $l=0$, $p$ for $l=1$, $d$ for $l=2$, $f$ for $l=3$, and thenceforth alphabetical.
-
-
- In practice the single-particle space has to be severely truncated.  This truncation is 
-typically based upon the single-particle energies, which is the effective energy 
-from a mean-field potential. 
-
-Sometimes we freeze the core and only consider a valence space. For example, one 
-may assume a frozen ${}^{4}\mbox{He}$ core, with two protons and two neutrons in the $0s_{1/2}$ 
-shell, and then only allow active particles in the $0p_{1/2}$ and $0p_{3/2}$ orbits. 
-
-
-Another example is a frozen ${}^{16}\mbox{O}$ core, with eight protons and eight neutrons filling the 
-$0s_{1/2}$,  $0p_{1/2}$ and $0p_{3/2}$ orbits, with valence particles in the 
-$0d_{5/2}, 1s_{1/2}$ and $0d_{3/2}$ orbits.
-
-
-Sometimes we refer to nuclei by the valence space where their last nucleons go.  
-So, for example, we call ${}^{12}\mbox{C}$ a $p$-shell nucleus, while ${}^{26}\mbox{Al}$ is an 
-$sd$-shell nucleus and ${}^{56}\mbox{Fe}$ is a $pf$-shell nucleus.
-
-
-
-
-
-There are different kinds of truncations.
-
-\begin{itemize}
-\item For example, one can start with `filled' orbits (almost always the lowest), and then  allow one, two, three... particles excited out of those filled orbits. These are called  1p-1h, 2p-2h, 3p-3h excitations. 
-
-\item Alternately, one can state a maximal orbit and allow all possible configurations with  particles occupying states up to that maximum. This is called \emph{full configuration}.
-
-\item Finally, for particular use in nuclear physics, there is the \emph{energy} truncation, also  called the $N\hbar\Omega$ or $N_{max}$ truncation. 
-\end{itemize}
-
-\noindent
-Here one works in a harmonic oscillator basis, with each major oscillator shell assigned  a principal quantum number $N=0,1,2,3,...$. 
-The $N\hbar\Omega$ or $N_{max}$ truncation: Any configuration is given an noninteracting energy, which is the sum 
-of the single-particle harmonic oscillator energies. (Thus this ignores 
-spin-orbit splitting.)
-
-Excited state are labeled relative to the lowest configuration by the 
-number of harmonic oscillator quanta.
-
-This truncation is useful because if one includes \emph{all} configuration up to 
-some $N_{max}$, and has a translationally invariant interaction, then the intrinsic 
-motion and the center-of-mass motion factor. In other words, we can know exactly 
-the center-of-mass wavefunction. 
-
-In almost all cases, the many-body Hamiltonian is rotationally invariant. This means 
-it commutes with the operators $\hat{J}^2, \hat{J}_z$ and so eigenstates will have 
-good $J,M$. Furthermore, the eigenenergies do not depend upon the orientation $M$. 
-
-
-Therefore we can choose to construct a many-body basis which has fixed $M$; this is 
-called an $M$-scheme basis. 
-
-
-Alternately, one can construct a many-body basis which has fixed $J$, or a $J$-scheme 
-basis. 
-
-The Hamiltonian matrix will have smaller dimensions (a factor of 10 or more) in the $J$-scheme than in the $M$-scheme. 
-On the other hand, as we'll show in the next slide, the $M$-scheme is very easy to 
-construct with Slater determinants, while the $J$-scheme basis states, and thus the 
-matrix elements, are more complicated, almost always being linear combinations of 
-$M$-scheme states. $J$-scheme bases are important and useful, but we'll focus on the 
-simpler $M$-scheme.
-
-The quantum number $m$ is additive (because the underlying group is Abelian): 
-if a Slater determinant $\hat{a}_i^\dagger \hat{a}^\dagger_j \hat{a}^\dagger_k \ldots | 0 \rangle$ 
-is built from single-particle states all with good $m$, then the total 
-\[
-M = m_i + m_j + m_k + \ldots
-\]
-This is \emph{not} true of $J$, because the angular momentum group SU(2) is not Abelian.
-
-The upshot is that 
-\begin{itemize}
-\item It is easy to construct a Slater determinant with good total $M$;
-
-\item It is trivial to calculate $M$ for each Slater determinant;
-
-\item So it is easy to construct an $M$-scheme basis with fixed total $M$.
-\end{itemize}
-
-\noindent
-Note that the individual $M$-scheme basis states will \emph{not}, in general, 
-have good total $J$. 
-Because the Hamiltonian is rotationally invariant, however, the eigenstates will 
-have good $J$. (The situation is muddied when one has states of different $J$ that are 
-nonetheless degenerate.) 
-
-
-
-
-Example: two $j=1/2$ orbits
-
-
-\begin{quote}
-\begin{tabular}{ccccc}
-\hline
-\multicolumn{1}{c}{ Index } & \multicolumn{1}{c}{ $n$ } & \multicolumn{1}{c}{ $l$ } & \multicolumn{1}{c}{ $j$ } & \multicolumn{1}{c}{ $m_j$ } \\
-\hline
-1     & 0   & 0   & 1/2 & -1/2  \\
-2     & 0   & 0   & 1/2 & 1/2   \\
-3     & 1   & 0   & 1/2 & -1/2  \\
-4     & 1   & 0   & 1/2 & 1/2   \\
-\hline
-\end{tabular}
-\end{quote}
-
-\noindent
-Note that the order is arbitrary.
-There are $\left ( \begin{array}{c} 4 \\ 2 \end{array} \right) = 6$ two-particle states, 
-which we list with the total $M$:
-
-
-\begin{quote}
-\begin{tabular}{cc}
-\hline
-\multicolumn{1}{c}{ Occupied } & \multicolumn{1}{c}{ $M$ } \\
-\hline
-1,2      & 0   \\
-1,3      & -1  \\
-1,4      & 0   \\
-2,3      & 0   \\
-2,4      & 1   \\
-3,4      & 0   \\
-\hline
-\end{tabular}
-\end{quote}
-
-\noindent
-and 1 each with $M = \pm 1$.
-
-
-
-
-As another example, consider using only single particle states from the $0d_{5/2}$ space. 
-They have the following quantum numbers
-
-
-\begin{quote}
-\begin{tabular}{ccccc}
-\hline
-\multicolumn{1}{c}{ Index } & \multicolumn{1}{c}{ $n$ } & \multicolumn{1}{c}{ $l$ } & \multicolumn{1}{c}{ $j$ } & \multicolumn{1}{c}{ $m_j$ } \\
-\hline
-1     & 0   & 2   & 5/2 & -5/2  \\
-2     & 0   & 2   & 5/2 & -3/2  \\
-3     & 0   & 2   & 5/2 & -1/2  \\
-4     & 0   & 2   & 5/2 & 1/2   \\
-5     & 0   & 2   & 5/2 & 3/2   \\
-6     & 0   & 2   & 5/2 & 5/2   \\
-\hline
-\end{tabular}
-\end{quote}
-
-\noindent
-There are $\left ( \begin{array}{c} 6 \\ 2 \end{array} \right) = 15$ two-particle states, 
-which we list with the total $M$:
-
-
-\begin{quote}
-\begin{tabular}{cccccc}
-\hline
-\multicolumn{1}{c}{ Occupied } & \multicolumn{1}{c}{ $M$ } & \multicolumn{1}{c}{ Occupied } & \multicolumn{1}{c}{ $M$ } & \multicolumn{1}{c}{ Occupied } & \multicolumn{1}{c}{ $M$ } \\
-\hline
-1,2      & -4  & 2,3      & -2  & 3,5      & 1   \\
-1,3      & -3  & 2,4      & -1  & 3,6      & 2   \\
-1,4      & -2  & 2,5      & 0   & 4,5      & 2   \\
-1,5      & -1  & 2,6      & 1   & 4,6      & 3   \\
-1,6      & 0   & 3,4      & 0   & 5,6      & 4   \\
-\hline
-\end{tabular}
-\end{quote}
-
-
-\section{Many-body perturbation theory}
-
-\subsection{Many-body perturbation theory}
-
-We assume here that we are only interested in the ground state of the system and 
-expand the exact wave function in term of a series of Slater determinants
-\[
-\vert \Psi_0\rangle = \vert \Phi_0\rangle + \sum_{m=1}^{\infty}C_m\vert \Phi_m\rangle,
-\]
-where we have assumed that the true ground state is dominated by the 
-solution of the unperturbed problem, that is
-\[
-\hat{H}_0\vert \Phi_0\rangle= W_0\vert \Phi_0\rangle.
-\]
-The state $\vert \Psi_0\rangle$ is not normalized, rather we have used an intermediate 
-normalization $\langle \Phi_0 \vert \Psi_0\rangle=1$ since we have $\langle \Phi_0\vert \Phi_0\rangle=1$. 
-
-
-
-The Schroedinger equation is
-\[
-\hat{H}\vert \Psi_0\rangle = E\vert \Psi_0\rangle,
-\]
-and multiplying the latter from the left with $\langle \Phi_0\vert $ gives
-\[
-\langle \Phi_0\vert \hat{H}\vert \Psi_0\rangle = E\langle \Phi_0\vert \Psi_0\rangle=E,
-\]
-and subtracting from this equation
-\[
-\langle \Psi_0\vert \hat{H}_0\vert \Phi_0\rangle= W_0\langle \Psi_0\vert \Phi_0\rangle=W_0,
-\]
-and using the fact that the both operators $\hat{H}$ and $\hat{H}_0$ are hermitian 
-results in
-\[
-\Delta E=E-W_0=\langle \Phi_0\vert \hat{H}_I\vert \Psi_0\rangle,
-\]
-which is an exact result. We call this quantity the correlation energy.
-
-
-
-This equation forms the starting point for all perturbative derivations. However,
-as it stands it represents nothing but a mere formal rewriting of Schroedinger's equation and is not of much practical use. The exact wave function $\vert \Psi_0\rangle$ is unknown. In order to obtain a perturbative expansion, we need to expand the exact wave function in terms of the interaction $\hat{H}_I$. 
-
-Here we have assumed that our model space defined by the operator $\hat{P}$ is one-dimensional, meaning that
-\[
-\hat{P}= \vert \Phi_0\rangle \langle \Phi_0\vert ,
-\]
-and
-\[
-\hat{Q}=\sum_{m=1}^{\infty}\vert \Phi_m\rangle \langle \Phi_m\vert .
-\]
-
-
-We can thus rewrite the exact wave function as
-\[
-\vert \Psi_0\rangle= (\hat{P}+\hat{Q})\vert \Psi_0\rangle=\vert \Phi_0\rangle+\hat{Q}\vert \Psi_0\rangle.
-\]
-Going back to the Schr\"odinger equation, we can rewrite it as, adding and a subtracting a term $\omega \vert \Psi_0\rangle$ as
-\[
-\left(\omega-\hat{H}_0\right)\vert \Psi_0\rangle=\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle,
-\]
-where $\omega$ is an energy variable to be specified later. 
-
-
-We assume also that the resolvent of $\left(\omega-\hat{H}_0\right)$ exits, that is
-it has an inverse which defined the unperturbed Green's function as
-\[
-\left(\omega-\hat{H}_0\right)^{-1}=\frac{1}{\left(\omega-\hat{H}_0\right)}.
-\]
-
-We can rewrite Schroedinger's equation as
-\[
-\vert \Psi_0\rangle=\frac{1}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle,
-\]
-and multiplying from the left with $\hat{Q}$ results in
-\[
-\hat{Q}\vert \Psi_0\rangle=\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle,
-\]
-which is possible since we have defined the operator $\hat{Q}$ in terms of the eigenfunctions of $\hat{H}$.
-
-
-
-
-These operators commute meaning that
-\[
-\hat{Q}\frac{1}{\left(\omega-\hat{H}_0\right)}\hat{Q}=\hat{Q}\frac{1}{\left(\omega-\hat{H}_0\right)}=\frac{\hat{Q}}{\left(\omega-\hat{H}_0\right)}.
-\]
-With these definitions we can in turn define the wave function as 
-\[
-\vert \Psi_0\rangle=\vert \Phi_0\rangle+\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\vert \Psi_0\rangle.
-\]
-This equation is again nothing but a formal rewrite of Schr\"odinger's equation
-and does not represent a practical calculational scheme.  
-It is a non-linear equation in two unknown quantities, the energy $E$ and the exact
-wave function $\vert \Psi_0\rangle$. We can however start with a guess for $\vert \Psi_0\rangle$ on the right hand side of the last equation.
-
-
-
- The most common choice is to start with the function which is expected to exhibit the largest overlap with the wave function we are searching after, namely $\vert \Phi_0\rangle$. This can again be inserted in the solution for $\vert \Psi_0\rangle$ in an iterative fashion and if we continue along these lines we end up with
-\[
-\vert \Psi_0\rangle=\sum_{i=0}^{\infty}\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle, 
-\]
-for the wave function and
-\[
-\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle, 
-\]
-which is now  a perturbative expansion of the exact energy in terms of the interaction
-$\hat{H}_I$ and the unperturbed wave function $\vert \Psi_0\rangle$.
-
-
-
-In our equations for $\vert \Psi_0\rangle$ and $\Delta E$ in terms of the unperturbed
-solutions $\vert \Phi_i\rangle$  we have still an undetermined parameter $\omega$
-and a dependecy on the exact energy $E$. Not much has been gained thus from a practical computational point of view. 
-
-In Brilluoin-Wigner perturbation theory it is customary to set $\omega=E$. This results in the following perturbative expansion for the energy $\Delta E$
-\[
-\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle=
-\]
-\[
-\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+
-\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+\dots\right)\vert \Phi_0\rangle. 
-\]
-
-\[
-\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle=\]
-\[
-\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+
-\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{E-\hat{H}_0}\hat{H}_I+\dots\right)\vert \Phi_0\rangle. 
-\]
-This expression depends however on the exact energy $E$ and is again not very convenient from a practical point of view. It can obviously be solved iteratively, by starting with a guess for  $E$ and then solve till some kind of self-consistency criterion has been reached. 
-
-Actually, the above expression is nothing but a rewrite again of the full Schr\"odinger equation. 
-
-Defining $e=E-\hat{H}_0$ and recalling that $\hat{H}_0$ commutes with 
-$\hat{Q}$ by construction and that $\hat{Q}$ is an idempotent operator
-$\hat{Q}^2=\hat{Q}$. 
-Using this equation in the above expansion for $\Delta E$ we can write the denominator 
-\[
-\hat{Q}\frac{1}{\hat{e}-\hat{Q}\hat{H}_I\hat{Q}}=
-\]
-\[
-\hat{Q}\left[\frac{1}{\hat{e}}+\frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}
-\frac{1}{\hat{e}}+\frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}
-\frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}\frac{1}{\hat{e}}+\dots\right]\hat{Q}.
-\]
-
-Inserted in the expression for $\Delta E$ leads to 
-\[
-\Delta E=
-\langle \Phi_0\vert \hat{H}_I+\hat{H}_I\hat{Q}\frac{1}{E-\hat{H}_0-\hat{Q}\hat{H}_I\hat{Q}}\hat{Q}\hat{H}_I\vert \Phi_0\rangle. 
-\]
-In RS perturbation theory we set $\omega = W_0$ and obtain the following expression for the energy difference
-\[
-\Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{W_0-\hat{H}_0}\left(\hat{H}_I-\Delta E\right)\right\}^i\vert \Phi_0\rangle=
-\]
-\[
-\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)+
-\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)+\dots\right)\vert \Phi_0\rangle.
-\]
-
-
-
-Recalling that $\hat{Q}$ commutes with $\hat{H_0}$ and since $\Delta E$ is a constant we obtain that
-\[
-\hat{Q}\Delta E\vert \Phi_0\rangle = \hat{Q}\Delta E\vert \hat{Q}\Phi_0\rangle = 0.
-\]
-Inserting this results in the expression for the energy results in
-\[
-\Delta E=\langle \Phi_0\vert \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I+
-\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}(\hat{H}_I-\Delta E)\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I+\dots\right)\vert \Phi_0\rangle.
-\]
-
-
-
-We can now this expression in terms of a perturbative expression in terms
-of $\hat{H}_I$ where we iterate the last expression in terms of $\Delta E$
-\[
-\Delta E=\sum_{i=1}^{\infty}\Delta E^{(i)}.
-\]
-We get the following expression for $\Delta E^{(i)}$
-\[
-\Delta E^{(1)}=\langle \Phi_0\vert \hat{H}_I\vert \Phi_0\rangle,
-\] 
-which is just the contribution to first order in perturbation theory,
-\[
-\Delta E^{(2)}=\langle\Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\vert \Phi_0\rangle, 
-\]
-which is the contribution to second order.
-
-
-
-\[
-\Delta E^{(3)}=\langle \Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\Phi_0\rangle-
-\langle\Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\langle \Phi_0\vert \hat{H}_I\vert \Phi_0\rangle\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\vert \Phi_0\rangle,
-\]
-being the third-order contribution. 
-
-
-\subsection{Interpreting the correlation energy and the wave operator}
-
-In the shell-model lectures we showed that we could rewrite the exact state function for say the ground state, as a linear expansion in terms of all possible Slater determinants. That is, we 
-define the ansatz for the ground state as 
-\[
-|\Phi_0\rangle = \left(\prod_{i\le F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
-\]
-where the index $i$ defines different single-particle states up to the Fermi level. We have assumed that we have $N$ fermions. 
-A given one-particle-one-hole ($1p1h$) state can be written as
-\[
-|\Phi_i^a\rangle = \hat{a}_{a}^{\dagger}\hat{a}_i|\Phi_0\rangle,
-\]
-while a $2p2h$ state can be written as
-\[
-|\Phi_{ij}^{ab}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i|\Phi_0\rangle,
-\]
-and a general $ApAh$ state as 
-\[
-|\Phi_{ijk\dots}^{abc\dots}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
-\]
-
-We use letters $ijkl\dots$ for states below the Fermi level and $abcd\dots$ for states above the Fermi level. A general single-particle state is given by letters $pqrs\dots$.
-
-We can then expand our exact state function for the ground state 
-as
-\[
-|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
-=(C_0+\hat{C})|\Phi_0\rangle,
-\]
-where we have introduced the so-called correlation operator 
-\[
-\hat{C}=\sum_{ai}C_i^a\hat{a}_{a}^{\dagger}\hat{a}_i  +\sum_{abij}C_{ij}^{ab}\hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i+\dots
-\]
-Since the normalization of $\Psi_0$ is at our disposal and since $C_0$ is by hypothesis non-zero, we may arbitrarily set $C_0=1$ with 
-corresponding proportional changes in all other coefficients. Using this so-called intermediate normalization we have
-\[
-\langle \Psi_0 | \Phi_0 \rangle = \langle \Phi_0 | \Phi_0 \rangle = 1, 
-\]
-resulting in 
-\[
-|\Psi_0\rangle=(1+\hat{C})|\Phi_0\rangle.
-\]
-
-In a shell-model calculation, the unknown coefficients in $\hat{C}$ are the 
-eigenvectors which result from the diagonalization of the Hamiltonian matrix.
-
-How can we use perturbation theory to determine the same coefficients? Let us study the contributions to second order in the interaction, namely
-\[
-\Delta E^{(2)}=\langle\Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\vert \Phi_0\rangle.
-\]
-
-The intermediate states given by $\hat{Q}$ can at most be of a $2p-2h$ nature if we have a two-body Hamiltonian. This means that second order in the perturbation theory can have $1p-1h$ and $2p-2h$ at most as intermediate states. When we diagonalize, these contributions are included to infinite order. This means that higher-orders in perturbation theory bring in more complicated correlations. 
-
-If we limit the attention to a Hartree-Fock basis, then we have that
-$\langle\Phi_0\vert \hat{H}_I \vert 2p-2h\rangle$ is the only contribution and the contribution to the energy reduces to
-\[
-\Delta E^{(2)}=\frac{1}{4}\sum_{abij}\langle ij\vert \hat{v}\vert ab\rangle \frac{\langle ab\vert \hat{v}\vert ij\rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
-\]
-
-If we compare this to the correlation energy obtained from full configuration interaction theory with a Hartree-Fock basis, we found that
-\[
-E-E_0 =\Delta E=
-\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab},
-\]
-where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
-
-We see that if we set
-\[
-C_{ij}^{ab} =\frac{1}{4}\frac{\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b},
-\]
-we have a perfect agreement between FCI and MBPT. However, FCI includes such $2p-2h$ correlations to infinite order. In order to make a meaningful comparison we would at least need to sum such correlations to infinite order in perturbation theory. 
-
-Summing up, we can see that
-\begin{itemize}
-\item MBPT introduces order-by-order specific correlations and we make comparisons with exact calculations like FCI
-
-\item At every order, we can calculate all contributions since they are well-known and either tabulated or calculated on the fly.
-
-\item MBPT is a non-variational theory and there is no guarantee that higher orders will improve the convergence. 
-
-\item However, since FCI calculations are limited by the size of the Hamiltonian matrices to diagonalize (today's most efficient codes can attach dimensionalities of ten billion basis states, MBPT can function as an approximative method which gives a straightforward (but tedious) calculation recipe. 
-
-\item MBPT has been widely used to compute effective interactions for the nuclear shell-model.
-
-\item But there are better methods which sum to infinite order important correlations. Coupled cluster theory is one of these methods. 
-\end{itemize}
-
 \section{Coupled cluster theory}
-\section{Introduction}
+\subsection{Introduction}
 Coester and Kummel first developed the ideas that led to coupled-cluster
 theory in the late 1950s. The basic idea is that the correlated wave function
 of a many-body system $\mid\Psi\rangle$
@@ -2257,141 +2016,21 @@ theory that includes summation of ladder diagrams , ring
 diagrams, and an infinite-order
 generalization of many-body perturbation theory..
 
-Developments and applications
-of coupled-cluster theory took different routes in chemistry
-and nuclear physics. In quantum chemistry,
-coupled-cluster developments
-and applications have proven to be extremely useful, see for example the review by \href{{http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.79.291}}{Barrett and Musial} as well as the recent 
-textbook by \href{{http://www.cambridge.org/fr/academic/subjects/chemistry/physical-chemistry/many-body-methods-chemistry-and-physics-mbpt-and-coupled-cluster-theory?format=HB}}{Shavitt and Barrett}.  Many previous applications to nuclear physics struggled with the repulsive character of the nuclear forces and limited basis sets used in the computations. Most of these problems have been overcome during the last decade and coupled-cluster
-theory is one of the computational methods of preference for doing nuclear physics, with applications ranging from light nuclei to medium-heavy nuclei,
-see for example the recent review by \href{{http://iopscience.iop.org/0034-4885/77/9/096302}}{Hagen, Papenbrock, Hjorth-Jensen and Dean}. 
-
-
-\subsection{A non-practical way of solving the eigenvalue problem}
-
-Before we proceed with the derivation of the Coupled cluster equations, let us repeat some of the arguments we presented during our FCI lectures. 
-In our FCI discussions, we rewrote the solution of the Schroedinger equation as a set of coupled equationsin the unknown coefficients $C$. Let us repeat some of these arguments.
-To obtain the eigenstates and eigenvalues in terms of non-linear equations is not a very practical approach. However, it serves the scope of linking FCI theory with approximative solutions to the many-body problem
-like Coupled cluster (CC) theory 
-
-If we assume that we have a two-body operator at most, the Slater-Condon rule 
-gives then an equation for the 
-correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
-\[
-\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
-\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
-\]
-or 
-\[
-E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
-\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
-\]
-where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
-The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
-
-In our notes on Hartree-Fock calculations, 
-we have already computed the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a Hartree-Fock basis, then the matrix elements
-$\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a \emph{correlation energy} given by
-\[
-E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}. 
-\]
-
-
-Inserting the various matrix elements we can rewrite the previous equation as
-\[
-\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
-\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
-\]
-This equation determines the correlation energy but not the coefficients $C$. 
-We need more equations. Our next step is to set up
-\[
-\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
-\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
-\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
-\]
-as this equation will allow us to find an expression for the coefficents $C_i^a$ since we can rewrite this equation as 
-\[
-\langle i | \hat{f}| a\rangle +\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+
-\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
-\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=EC_i^a.
-\]
-
-We see that on the right-hand side we have the energy $E$. This leads to a non-linear equation in the unknown coefficients. 
-These equations are normally solved iteratively ( that is we can start with a guess for the coefficients $C_i^a$). A common choice is to use perturbation theory for the first guess, setting thereby
-\[
- C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\epsilon_i-\epsilon_a}.
-\]
-
-The observant reader will however see that we need an equation for $C_{jk}^{bc}$ and $C_{jkl}^{bcd}$ as well.
-To find equations for these coefficients we need then to continue our multiplications from the left with the various
-$\Phi_{H}^P$ terms. 
-
-
-For $C_{jk}^{bc}$ we need then
-\[
-\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
-\]
-\[
-\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0,
-\]
-and we can isolate the coefficients $C_{kl}^{cd}$ in a similar way as we did for the coefficients $C_{i}^{a}$. 
-A standard choice for the first iteration is to set 
-\[
-C_{ij}^{ab} =\frac{\langle ij \vert \hat{v} \vert ab \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
-\]
-At the end we can rewrite our solution of the Schroedinger equation in terms of $n$ coupled equations for the coefficients $C_H^P$.
-This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
-various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
-as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with Coupled Cluster theory and
-many-body perturbation theory.
-
-
-\subsection{Summarizing FCI and bringing in approximative methods}
-
-
-If we can diagonalize large matrices, FCI is the method of choice since:
-\begin{itemize}
-\item It gives all eigenvalues, ground state and excited states
-
-\item The eigenvectors are obtained directly from the coefficients $C_H^P$ which result from the diagonalization
-
-\item We can compute easily expectation values of other operators, as well as transition probabilities
-
-\item Correlations are easy to understand in terms of contributions to a given operator beyond the Hartree-Fock contribution. This is the standard approach in  many-body theory. 
-\end{itemize}
-
-\noindent
-The correlation energy is defined as, with a two-body Hamiltonian,  
-\[
-\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
-\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
-\]
-
-The coefficients $C$ result from the solution of the eigenvalue problem. 
-The energy of say the ground state is then
-\[
-E=E_{ref}+\Delta E,
-\]
-where the so-called reference energy is the energy we obtain from a Hartree-Fock calculation, that is
-\[
-E_{ref}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
-\]
-
-However, as we have seen, even for a small case like the four first major shells and a nucleus like oxygen-16, the dimensionality becomes quickly intractable. If we wish to include single-particle states that reflect weakly bound systems, we need a much larger single-particle basis. We need thus approximative methods that sum specific correlations to infinite order. 
-
-Popular methods are
-\begin{itemize}
-\item \href{{http://www.sciencedirect.com/science/journal/03701573/261/3-4}}{Many-body perturbation theory (in essence a Taylor expansion)}
-
-\item \href{{http://iopscience.iop.org/0034-4885/77/9/096302}}{Coupled cluster theory (coupled non-linear equations)}
-
-\item \href{{http://www.worldscientific.com/worldscibooks/10.1142/6821}}{Green's function approaches (matrix inversion)}
-
-\item \href{{http://journals.aps.org/prc/abstract/10.1103/PhysRevC.85.061304}}{Similarity group transformation methods (coupled ordinary differential equations)}
-\end{itemize}
-
-\noindent
-All these methods start normally with a Hartree-Fock basis as the calculational basis. 
+Developments and applications of coupled-cluster theory took different
+routes in chemistry and nuclear physics. In quantum chemistry,
+coupled-cluster developments and applications have proven to be
+extremely useful, see for example the review
+by \href{{http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.79.291}}{Barrett
+and Musial} as well as the recent textbook
+by \href{{http://www.cambridge.org/fr/academic/subjects/chemistry/physical-chemistry/many-body-methods-chemistry-and-physics-mbpt-and-coupled-cluster-theory?format=HB}}{Shavitt
+and Barrett}.  Many previous applications to nuclear physics struggled
+with the repulsive character of the nuclear forces and limited basis
+sets used in the computations. Most of these problems have been
+overcome during the last decade and coupled-cluster theory is one of
+the computational methods of preference for doing nuclear physics,
+with applications ranging from light nuclei to medium-heavy nuclei,
+see for example the recent review
+by \href{{http://iopscience.iop.org/0034-4885/77/9/096302}}{Hagen,Papenbrock, Hjorth-Jensen and Dean}.
 
 
 \subsection{A quick tour of Coupled Cluster theory}
@@ -2458,8 +2097,8 @@ similar to those discussed above in connection withe FCI discussion.
 
 If we truncate our equations at the CCSD level, it corresponds to performing a transformation of the Hamiltonian matrix of the following type for a six particle problem (with a two-body Hamiltonian):
 
-
-\begin{quote}
+\begin{table}
+\begin{center}
 \begin{tabular}{cccccccc}
 \hline
 \multicolumn{1}{c}{  } & \multicolumn{1}{c}{ $0p-0h$ } & \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } & \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } & \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ } \\
@@ -2473,10 +2112,8 @@ $5p-5h$ & 0           & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & 
 $6p-6h$ & 0           & 0           & 0           & 0           & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ \\
 \hline
 \end{tabular}
-\end{quote}
-
-\noindent
-
+\end{center}
+\end{table}
 
 In our FCI discussion the correlation energy is defined as, with a two-body Hamiltonian,  
 \[
@@ -2502,8 +2139,6 @@ There are several interesting features:
 
 \item We can include a large basis of single-particle states, not possible in standard FCI calculations
 \end{itemize}
-
-\noindent
 However, Coupled Cluster theory is
 \begin{itemize}
 \item non-variational
@@ -2515,7 +2150,6 @@ However, Coupled Cluster theory is
 \item we cannot quantify properly the error we make when truncations are made in the cluster operator
 \end{itemize}
 
-\noindent
 \subsection{The CCD approximation}
 
 We will now approximate the cluster operator $\hat{T}$ to include only
@@ -3556,18 +3190,7 @@ for the second part of the project.
 
 \end{prob}
 
-\begin{acknowledgement}
-We are much indebted to Thomas Papenbrock for many discussions on many-body physics.
-Computational resources were provided by Michigan State University and the Research Council of Norway via the Notur project (Supercomputing grant NN2977K).
-This work was supported by NSF Grant No. PHY-1404159 and  the Research Council of Norway under contract ISP-Fysikk/216699.
-\end{acknowledgement}
-
-
-
-
-
-
-
+\begin{prob}
 Consider a Slater determinant built up of orthogonal single-particle orbitals $\psi_{\lambda}$, 
 with $\lambda = 1,2,\dots,A$.
 
@@ -3647,3 +3270,18 @@ exact state
 based on the calculations above, which are the only elements which will contribute?  (there is no need to perform any calculation here, use your results from exercises a), b), and c)).
 
 These results simplify to a large extent shell-model calculations. 
+\end{prob}
+
+
+\begin{acknowledgement}
+We are much indebted to Thomas Papenbrock for many discussions on many-body physics.
+Computational resources were provided by Michigan State University and the Research Council of Norway via the Notur project (Supercomputing grant NN2977K).
+This work was supported by NSF Grant No. PHY-1404159 and  the Research Council of Norway under contract ISP-Fysikk/216699.
+\end{acknowledgement}
+
+
+
+
+
+
+
