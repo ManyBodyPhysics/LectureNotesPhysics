@@ -180,10 +180,15 @@ tabsize=2
 \maketitle
 
 
-
+%\include{dedic}
+%\include{foreword}
 \include{preface}
+%\include{acknow}
 
 \tableofcontents
+
+%\include{acronym}
+
 
 \mainmatter
 % Introduction by MHJ, MPL and UVK                                                      \
@@ -212,6 +217,7 @@ tabsize=2
 \include{chapter7}
 
 % Wave function based many-body methods, Morten Hjorth-Jensen,                          \
+
 % Gaute Hagen, Gustav Jansen, Justin G.~Lietz and Samuel Novario                                       \
 
 \include{chapter8}
@@ -222,7 +228,7 @@ tabsize=2
 
 \include{chapter9}
 
-% In-medium SRG bt Morris, Parzuchowski, Bogner and Hergert et al
+% In-medium SRG bt Morris, Parzuchowski, Bogner and Hergert
 
 
 \include{chapter10}
