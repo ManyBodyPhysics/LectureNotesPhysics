@@ -1,0 +1,582 @@
+\begin{thebibliography}{100}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Feynman}
+R.P. Feynman, A.R. Hibbs, \emph{Quantum Mechanics and Path Integrals}
+  (McGraw-Hill, 1965)
+
+\bibitem{Metropolis:1953am}
+N.~Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, E.~Teller, J.
+  Chem. Phys. \textbf{21}, 1087 (1953).
+\newblock \doi{10.1063/1.1699114}
+
+\bibitem{Creutz:1980gp}
+M.~Creutz, B.~Freedman, Annals Phys. \textbf{132}, 427 (1981).
+\newblock \doi{10.1016/0003-4916(81)90074-9}
+
+\bibitem{Shuryak:1984xr}
+E.V. Shuryak, O.V. Zhirov, Nucl. Phys. \textbf{B242}, 393 (1984).
+\newblock \doi{10.1016/0550-3213(84)90401-2}
+
+\bibitem{Shuryak:1987tr}
+E.V. Shuryak, Nucl. Phys. \textbf{B302}, 621 (1988).
+\newblock \doi{10.1016/0550-3213(88)90191-5}
+
+\bibitem{Schafer:2004xa}
+T.~Sch{\"a}fer, {Instantons and Monte Carlo methods in quantum mechanics}
+  (2004).
+\newblock ArXive:hep-lat/0411010
+
+\bibitem{Jarrell:1996rrw}
+M.~Jarrell, J.E. Gubernatis, Phys. Rept. \textbf{269}, 133 (1996).
+\newblock \doi{10.1016/0370-1573(95)00074-7}
+
+\bibitem{Asakawa:2000tr}
+M.~Asakawa, T.~Hatsuda, Y.~Nakahara, Prog. Part. Nucl. Phys. \textbf{46}, 459
+  (2001).
+\newblock \doi{10.1016/S0146-6410(01)00150-8}
+
+\bibitem{Jarzynski:1997}
+C.~{Jarzynski}, Physical Review Letters \textbf{78}, 2690 (1997).
+\newblock \doi{10.1103/PhysRevLett.78.2690}
+
+\bibitem{Gross:1973id}
+D.J. Gross, F.~Wilczek, Phys.Rev.Lett. \textbf{30}, 1343 (1973).
+\newblock \doi{10.1103/PhysRevLett.30.1343}
+
+\bibitem{Politzer:1973fx}
+H.D. Politzer, Phys.Rev.Lett. \textbf{30}, 1346 (1973).
+\newblock \doi{10.1103/PhysRevLett.30.1346}
+
+\bibitem{Coleman:1973jx}
+S.R. Coleman, E.J. Weinberg, Phys.Rev. \textbf{D7}, 1888 (1973).
+\newblock \doi{10.1103/PhysRevD.7.1888}
+
+\bibitem{Nakamura:2010zzi}
+K.~Nakamura, et~al., J. Phys. \textbf{G37}, 075021 (2010).
+\newblock \doi{10.1088/0954-3899/37/7A/075021}
+
+\bibitem{Alford:2007xm}
+M.G. Alford, A.~Schmitt, K.~Rajagopal, T.~Sch{\"a}fer, Rev. Mod. Phys.
+  \textbf{80}, 1455 (2008).
+\newblock \doi{10.1103/RevModPhys.80.1455}
+
+\bibitem{Adams:2012th}
+A.~Adams, L.D. Carr, T.~Sch{\"a}fer, P.~Steinberg, J.E. Thomas, New J. Phys.
+  \textbf{14}, 115009 (2012).
+\newblock \doi{10.1088/1367-2630/14/11/115009}
+
+\bibitem{Braun-Munzinger:2015hba}
+P.~Braun-Munzinger, V.~Koch, T.~Sch{\"a}fer, J.~Stachel, Phys. Rept.
+  \textbf{621}, 76 (2016).
+\newblock \doi{10.1016/j.physrep.2015.12.003}
+
+\bibitem{GellMann:1968rz}
+M.~Gell-Mann, R.J. Oakes, B.~Renner, Phys. Rev. \textbf{175}, 2195 (1968).
+\newblock \doi{10.1103/PhysRev.175.2195}
+
+\bibitem{Coleman:1980mx}
+S.R. Coleman, E.~Witten, Phys. Rev. Lett. \textbf{45}, 100 (1980).
+\newblock \doi{10.1103/PhysRevLett.45.100}
+
+\bibitem{tHooft:1979bh}
+G.~'t~Hooft, NATO Sci. Ser. B \textbf{59}, 135 (1980)
+
+\bibitem{Shuryak:1977ut}
+E.V. Shuryak, Sov. Phys. JETP \textbf{47}, 212 (1978).
+\newblock [Zh. Eksp. Teor. Fiz.74,408(1978)]
+
+\bibitem{Shuryak:1978ij}
+E.V. Shuryak, Phys. Lett. \textbf{B78}, 150 (1978).
+\newblock \doi{10.1016/0370-2693(78)90370-2}.
+\newblock [Yad. Fiz.28,796(1978)]
+
+\bibitem{Linde:1980ts}
+A.D. Linde, Phys. Lett. \textbf{B96}, 289 (1980).
+\newblock \doi{10.1016/0370-2693(80)90769-8}
+
+\bibitem{Pisarski:1983ms}
+R.D. Pisarski, F.~Wilczek, Phys. Rev. \textbf{D29}, 338 (1984).
+\newblock \doi{10.1103/PhysRevD.29.338}
+
+\bibitem{Aoki:2006we}
+Y.~Aoki, G.~Endrodi, Z.~Fodor, S.D. Katz, K.K. Szabo, Nature \textbf{443}, 675
+  (2006).
+\newblock \doi{10.1038/nature05120}
+
+\bibitem{Bazavov:2011nk}
+A.~Bazavov, et~al., Phys. Rev. \textbf{D85}, 054503 (2012).
+\newblock \doi{10.1103/PhysRevD.85.054503}
+
+\bibitem{Aoki:2006br}
+Y.~Aoki, Z.~Fodor, S.D. Katz, K.K. Szabo, Phys. Lett. \textbf{B643}, 46 (2006).
+\newblock \doi{10.1016/j.physletb.2006.10.021}
+
+\bibitem{Aoki:2009sc}
+Y.~Aoki, S.~Borsanyi, S.~Durr, Z.~Fodor, S.D. Katz, S.~Krieg, K.K. Szabo, JHEP
+  \textbf{06}, 088 (2009).
+\newblock \doi{10.1088/1126-6708/2009/06/088}
+
+\bibitem{Bazavov:2014pvz}
+A.~Bazavov, et~al., Phys. Rev. \textbf{D90}(9), 094503 (2014).
+\newblock \doi{10.1103/PhysRevD.90.094503}
+
+\bibitem{Stephanov:2004wx}
+M.A. Stephanov, Prog. Theor. Phys. Suppl. \textbf{153}, 139 (2004)
+
+\bibitem{Fodor:2001pe}
+Z.~Fodor, S.D. Katz, JHEP \textbf{03}, 014 (2002)
+
+\bibitem{Allton:2002zi}
+C.~Allton, S.~Ejiri, S.~Hands, O.~Kaczmarek, F.~Karsch, et~al., Phys.Rev.
+  \textbf{D66}, 074507 (2002).
+\newblock \doi{10.1103/PhysRevD.66.074507}
+
+\bibitem{Karsch:2003va}
+F.~Karsch, C.R. Allton, S.~Ejiri, S.J. Hands, O.~Kaczmarek, E.~Laermann,
+  C.~Schmidt, Nucl. Phys. Proc. Suppl. \textbf{129}, 614 (2004).
+\newblock \doi{10.1016/S0920-5632(03)02659-8}.
+\newblock [,614(2003)]
+
+\bibitem{Fodor:2004nz}
+Z.~Fodor, S.~Katz, JHEP \textbf{0404}, 050 (2004).
+\newblock \doi{10.1088/1126-6708/2004/04/050}
+
+\bibitem{Gavai:2008zr}
+R.V. Gavai, S.~Gupta, Phys. Rev. \textbf{D78}, 114503 (2008).
+\newblock \doi{10.1103/PhysRevD.78.114503}
+
+\bibitem{Datta:2012pj}
+S.~Datta, R.V. Gavai, S.~Gupta, Nucl. Phys. \textbf{A904-905}, 883c (2013).
+\newblock \doi{10.1016/j.nuclphysa.2013.02.156}
+
+\bibitem{deForcrand:2010he}
+P.~de~Forcrand, O.~Philipsen, Phys. Rev. Lett. \textbf{105}, 152001 (2010).
+\newblock \doi{10.1103/PhysRevLett.105.152001}
+
+\bibitem{Stephanov:1998dy}
+M.A. Stephanov, K.~Rajagopal, E.V. Shuryak, Phys. Rev. Lett. \textbf{81}, 4816
+  (1998)
+
+\bibitem{Sauer:1976zzf}
+G.~Sauer, H.~Chandra, U.~Mosel, Nucl. Phys. \textbf{A264}, 221 (1976).
+\newblock \doi{10.1016/0375-9474(76)90429-2}
+
+\bibitem{Pochodzalla:1995xy}
+J.~Pochodzalla, et~al., Phys. Rev. Lett. \textbf{75}, 1040 (1995).
+\newblock \doi{10.1103/PhysRevLett.75.1040}
+
+\bibitem{Elliott:2013pna}
+J.B. Elliott, P.T. Lake, L.G. Moretto, L.~Phair, Phys. Rev. \textbf{C87}(5),
+  054622 (2013).
+\newblock \doi{10.1103/PhysRevC.87.054622}
+
+\bibitem{Alford:1998mk}
+M.G. Alford, K.~Rajagopal, F.~Wilczek, Nucl. Phys. \textbf{B537}, 443 (1999).
+\newblock \doi{10.1016/S0550-3213(98)00668-3}
+
+\bibitem{Schafer:1999fe}
+T.~Sch{\"a}fer, Nucl. Phys. \textbf{B575}, 269 (2000).
+\newblock \doi{10.1016/S0550-3213(00)00063-8}
+
+\bibitem{Schafer:1998ef}
+T.~Sch{\"a}fer, F.~Wilczek, Phys. Rev. Lett. \textbf{82}, 3956 (1999).
+\newblock \doi{10.1103/PhysRevLett.82.3956}
+
+\bibitem{Hatsuda:2006ps}
+T.~Hatsuda, M.~Tachibana, N.~Yamamoto, G.~Baym, Phys. Rev. Lett. \textbf{97},
+  122001 (2006).
+\newblock \doi{10.1103/PhysRevLett.97.122001}
+
+\bibitem{Creutz:1983}
+M.~Creutz, \emph{Quarks, Gluons, and Lattices} (Cambridge University Press,
+  1983)
+
+\bibitem{Montvay:1994}
+I.~Montvay, G.~M{\"u}nster, \emph{Quantum Fields on a Lattice} (Cambridge
+  University Press, 1994)
+
+\bibitem{Smit:2002}
+J.~Smit, \emph{Introduction to Quantum Fields on a Lattice} (Cambridge
+  University Press, 2002)
+
+\bibitem{Gattringer:2009}
+C.~Gattringer, C.B. Lang, \emph{Quantum Chromodynamics on the Lattice}
+  (Springer, 2009)
+
+\bibitem{Lin:2014}
+H.W. Lin, H.B. Meyer, \emph{Lattice QCD for Nuclear Physics} (Springer, 2014)
+
+\bibitem{Fodor:2009ax}
+Z.~Fodor, S.D. Katz, {The Phase diagram of quantum chromodynamics} (2009).
+\newblock ArXiv:0908.3341
+
+\bibitem{Ding:2015ona}
+H.T. Ding, F.~Karsch, S.~Mukherjee, {Thermodynamics of strong-interaction
+  matter from Lattice QCD} (2015).
+\newblock ArXiv:1504.05274
+
+\bibitem{Wilson:1974sk}
+K.G. Wilson, Phys. Rev. \textbf{D10}, 2445 (1974).
+\newblock \doi{10.1103/PhysRevD.10.2445}.
+\newblock [,45(1974)]
+
+\bibitem{Mezzadri:2006}
+F.~{Mezzadri}, {How to generate random matrices from the classical compact
+  groups} (2006).
+\newblock ArXiv:math-ph/0609050
+
+\bibitem{Hasenfratz:1980kn}
+A.~Hasenfratz, P.~Hasenfratz, Phys. Lett. \textbf{B93}, 165 (1980).
+\newblock \doi{10.1016/0370-2693(80)90118-5}.
+\newblock [,241(1980)]
+
+\bibitem{Lepage:1998dt}
+G.P. Lepage, in \emph{{Strong interactions at low and intermediate energies.
+  Proceedings, 13th Annual Hampton University Graduate Studies, HUGS'98,
+  Newport News, USA, May 26-June 12, 1998}} (1998), pp. 49--90
+
+\bibitem{Wolff:1988uh}
+U.~Wolff, Phys. Rev. Lett. \textbf{62}, 361 (1989).
+\newblock \doi{10.1103/PhysRevLett.62.361}
+
+\bibitem{Kogut:1974ag}
+J.B. Kogut, L.~Susskind, Phys. Rev. \textbf{D11}, 395 (1975).
+\newblock \doi{10.1103/PhysRevD.11.395}
+
+\bibitem{Kaplan:1992bt}
+D.B. Kaplan, Phys. Lett. \textbf{B288}, 342 (1992).
+\newblock \doi{10.1016/0370-2693(92)91112-M}
+
+\bibitem{Neuberger:1997fp}
+H.~Neuberger, Phys. Lett. \textbf{B417}, 141 (1998).
+\newblock \doi{10.1016/S0370-2693(97)01368-3}
+
+\bibitem{Luscher:2010ae}
+M.~Luscher, in \emph{{Modern perspectives in lattice QCD: Quantum field theory
+  and high performance computing. Proceedings, International School, 93rd
+  Session, Les Houches, France, August 3-28, 2009}} (2010), pp. 331--399
+
+\bibitem{Endress:2014qpa}
+E.~Endress, C.~Pena, K.~Sivalingam, Comput. Phys. Commun. \textbf{195}, 35
+  (2015).
+\newblock \doi{10.1016/j.cpc.2015.04.017}
+
+\bibitem{Dick:2015twa}
+V.~Dick, F.~Karsch, E.~Laermann, S.~Mukherjee, S.~Sharma, Phys. Rev.
+  \textbf{D91}(9), 094504 (2015).
+\newblock \doi{10.1103/PhysRevD.91.094504}
+
+\bibitem{Teper:1985ek}
+M.~Teper, Phys. Lett. \textbf{B171}, 86 (1986).
+\newblock \doi{10.1016/0370-2693(86)91004-X}
+
+\bibitem{Luscher:2010iy}
+M.~L{\"u}scher, JHEP \textbf{08}, 071 (2010).
+\newblock \doi{10.1007/JHEP08(2010)071, 10.1007/JHEP03(2014)092}.
+\newblock [Erratum: JHEP03,092(2014)]
+
+\bibitem{Belavin:1975fg}
+A.A. Belavin, A.M. Polyakov, A.S. Schwartz, {\relax Yu}.S. Tyupkin, Phys. Lett.
+  \textbf{B59}, 85 (1975).
+\newblock \doi{10.1016/0370-2693(75)90163-X}
+
+\bibitem{Schafer:1996wv}
+T.~Sch{\"a}fer, E.V. Shuryak, Rev. Mod. Phys. \textbf{70}, 323 (1998).
+\newblock \doi{10.1103/RevModPhys.70.323}
+
+\bibitem{DelDebbio:2004ns}
+L.~Del~Debbio, L.~Giusti, C.~Pica, Phys. Rev. Lett. \textbf{94}, 032003 (2005).
+\newblock \doi{10.1103/PhysRevLett.94.032003}
+
+\bibitem{Ce:2014sfa}
+M.~Ce, C.~Consonni, G.P. Engel, L.~Giusti, PoS \textbf{LATTICE2014}, 353 (2014)
+
+\bibitem{Poppitz:2012nz}
+E.~Poppitz, T.~Sch{\"a}fer, M.~{\"U}nsal, JHEP \textbf{03}, 087 (2013).
+\newblock \doi{10.1007/JHEP03(2013)087}
+
+\bibitem{Banks:1979yr}
+T.~Banks, A.~Casher, Nucl. Phys. \textbf{B169}, 103 (1980).
+\newblock \doi{10.1016/0550-3213(80)90255-2}
+
+\bibitem{Ginsparg:1981bj}
+P.H. Ginsparg, K.G. Wilson, Phys. Rev. \textbf{D25}, 2649 (1982).
+\newblock \doi{10.1103/PhysRevD.25.2649}
+
+\bibitem{Cherman:2016hcd}
+A.~Cherman, T.~Sch{\"a}fer, M.~Unsal, {Chiral Lagrangian from Duality and
+  Monopole Operators in Compactified QCD} (2016).
+\newblock ArXiv:1604.06108
+
+\bibitem{Cristoforetti:2012su}
+M.~Cristoforetti, F.~Di~Renzo, L.~Scorzato, Phys. Rev. \textbf{D86}, 074506
+  (2012).
+\newblock \doi{10.1103/PhysRevD.86.074506}
+
+\bibitem{Aarts:2014nxa}
+G.~Aarts, L.~Bongiovanni, E.~Seiler, D.~Sexty, JHEP \textbf{10}, 159 (2014).
+\newblock \doi{10.1007/JHEP10(2014)159}
+
+\bibitem{Aarts:2009uq}
+G.~Aarts, E.~Seiler, I.O. Stamatescu, Phys. Rev. \textbf{D81}, 054508 (2010).
+\newblock \doi{10.1103/PhysRevD.81.054508}
+
+\bibitem{Sexty:2013ica}
+D.~Sexty, Phys. Lett. \textbf{B729}, 108 (2014).
+\newblock \doi{10.1016/j.physletb.2014.01.019}
+
+\bibitem{Kloiber:2013rba}
+T.~Kloiber, C.~Gattringer, PoS \textbf{LATTICE2013}, 206 (2014)
+
+\bibitem{Schafer:2009dj}
+T.~Sch{\"a}fer, D.~Teaney, Rept. Prog. Phys. \textbf{72}, 126001 (2009).
+\newblock \doi{10.1088/0034-4885/72/12/126001}
+
+\bibitem{Schaefer:2014awa}
+T.~Sch{\"a}fer, Ann. Rev. Nucl. Part. Sci. \textbf{64}, 125 (2014).
+\newblock \doi{10.1146/annurev-nucl-102313-025439}
+
+\bibitem{Karsch:1986cq}
+F.~Karsch, H.W. Wyld, Phys. Rev. \textbf{D35}, 2518 (1987).
+\newblock \doi{10.1103/PhysRevD.35.2518}
+
+\bibitem{Meyer:2007ic}
+H.B. Meyer, Phys. Rev. \textbf{D76}, 101701 (2007).
+\newblock \doi{10.1103/PhysRevD.76.101701}
+
+\bibitem{Meyer:2007dy}
+H.B. Meyer, Phys. Rev. Lett. \textbf{100}, 162001 (2008).
+\newblock \doi{10.1103/PhysRevLett.100.162001}
+
+\bibitem{Sakai:2007cm}
+S.~Sakai, A.~Nakamura, PoS \textbf{LAT2007}, 221 (2007).
+\newblock \doi{10.1063/1.2729742}.
+\newblock [AIP Conf. Proc.893,5(2007)]
+
+\bibitem{Aarts:2007wj}
+G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Phys. Rev. Lett. \textbf{99},
+  022002 (2007).
+\newblock \doi{10.1103/PhysRevLett.99.022002}
+
+\bibitem{Aarts:2007va}
+G.~Aarts, PoS \textbf{LAT2007}, 001 (2007)
+
+\bibitem{Aarts:2006wt}
+G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Nucl. Phys. \textbf{A785}, 202
+  (2007).
+\newblock \doi{10.1016/j.nuclphysa.2006.11.148}
+
+\bibitem{Meyer:2008gt}
+H.B. Meyer, JHEP \textbf{08}, 031 (2008).
+\newblock \doi{10.1088/1126-6708/2008/08/031}
+
+\bibitem{Romatschke:2009ng}
+P.~Romatschke, D.T. Son, Phys. Rev. \textbf{D80}, 065021 (2009).
+\newblock \doi{10.1103/PhysRevD.80.065021}
+
+\bibitem{Arnold:2000dr}
+P.B. Arnold, G.D. Moore, L.G. Yaffe, JHEP \textbf{11}, 001 (2000).
+\newblock \doi{10.1088/1126-6708/2000/11/001}
+
+\bibitem{Kovtun:2004de}
+P.~Kovtun, D.T. Son, A.O. Starinets, Phys. Rev. Lett. \textbf{94}, 111601
+  (2005).
+\newblock \doi{10.1103/PhysRevLett.94.111601}
+
+\bibitem{Romatschke:2009im}
+P.~Romatschke, Int. J. Mod. Phys. \textbf{E19}, 1 (2010).
+\newblock \doi{10.1142/S0218301310014613}
+
+\bibitem{Rezzolla:2013}
+L.~Rezzolla, O.~Zanotti, \emph{Relativistic Hydrodynamics} (Oxford University
+  Press, 2013)
+
+\bibitem{Jeon:2015dfa}
+S.~Jeon, U.~Heinz, Int. J. Mod. Phys. \textbf{E24}(10), 1530010 (2015).
+\newblock \doi{10.1142/S0218301315300106}
+
+\bibitem{Colella:1984}
+P.~Colella, P.R. Woodward, J.\ Comp.\ Phys. \textbf{54}, 174 (1984)
+
+\bibitem{Blondin:1993}
+J.M. Blondin, E.A. Lufkin, Astrophys.\ J.\ Supp.\ Ser. \textbf{88}, 589 (1993)
+
+\bibitem{Schafer:2010dv}
+T.~Sch{\"a}fer, Phys. Rev. \textbf{A82}, 063629 (2010).
+\newblock \doi{10.1103/PhysRevA.82.063629}
+
+\bibitem{Florkowski:2010cf}
+W.~Florkowski, R.~Ryblewski, Phys. Rev. \textbf{C83}, 034907 (2011).
+\newblock \doi{10.1103/PhysRevC.83.034907}
+
+\bibitem{Martinez:2010sc}
+M.~Martinez, M.~Strickland, Nucl. Phys. \textbf{A848}, 183 (2010).
+\newblock \doi{10.1016/j.nuclphysa.2010.08.011}
+
+\bibitem{Bluhm:2015raa}
+M.~Bluhm, T.~Sch{\"a}fer, Phys. Rev. \textbf{A92}(4), 043602 (2015).
+\newblock \doi{10.1103/PhysRevA.92.043602}
+
+\bibitem{Bluhm:2015bzi}
+M.~Bluhm, T.~Sch{\"a}fer, Phys. Rev. Lett. \textbf{116}(11), 115301 (2016).
+\newblock \doi{10.1103/PhysRevLett.116.115301}
+
+\bibitem{Romatschke:2011hm}
+P.~Romatschke, M.~Mendoza, S.~Succi, Phys. Rev. \textbf{C84}, 034903 (2011).
+\newblock \doi{10.1103/PhysRevC.84.034903}
+
+\bibitem{Brewer:2015hua}
+J.~Brewer, M.~Mendoza, R.E. Young, P.~Romatschke, Phys. Rev. \textbf{A93}(1),
+  013618 (2016).
+\newblock \doi{10.1103/PhysRevA.93.013618}
+
+\bibitem{Kadanoff}
+L.P. Kadanoff, G.~Baym, \emph{Quantum Statistical Mechanics} (W.~A.~Benjamin,
+  1962)
+
+\bibitem{Bertsch:1988ik}
+G.F. Bertsch, S.~Das~Gupta, Phys. Rept. \textbf{160}, 189 (1988).
+\newblock \doi{10.1016/0370-1573(88)90170-6}
+
+\bibitem{Lepers:2010be}
+T.~Lepers, D.~Davesne, S.~Chiacchiera, M.~Urban, Phys. Rev. \textbf{A82},
+  023609 (2010).
+\newblock \doi{10.1103/PhysRevA.82.023609}
+
+\bibitem{Bass:1998ca}
+S.A. Bass, et~al., Prog. Part. Nucl. Phys. \textbf{41}, 255 (1998).
+\newblock \doi{10.1016/S0146-6410(98)00058-1}.
+\newblock [Prog. Part. Nucl. Phys.41,225(1998)]
+
+\bibitem{Buss:2011mx}
+O.~Buss, T.~Gaitanos, K.~Gallmeister, H.~van Hees, M.~Kaskulov, O.~Lalakulich,
+  A.B. Larionov, T.~Leitner, J.~Weil, U.~Mosel, Phys. Rept. \textbf{512}, 1
+  (2012).
+\newblock \doi{10.1016/j.physrep.2011.12.001}
+
+\bibitem{Ehehalt:1996uq}
+W.~Ehehalt, W.~Cassing, Nucl. Phys. \textbf{A602}, 449 (1996).
+\newblock \doi{10.1016/0375-9474(96)00097-8}
+
+\bibitem{Geiger:1991nj}
+K.~Geiger, B.~Muller, Nucl. Phys. \textbf{B369}, 600 (1992).
+\newblock \doi{10.1016/0550-3213(92)90280-O}
+
+\bibitem{Xu:2004mz}
+Z.~Xu, C.~Greiner, Phys. Rev. \textbf{C71}, 064901 (2005).
+\newblock \doi{10.1103/PhysRevC.71.064901}
+
+\bibitem{McLerran:1993ni}
+L.D. McLerran, R.~Venugopalan, Phys. Rev. \textbf{D49}, 2233 (1994).
+\newblock \doi{10.1103/PhysRevD.49.2233}
+
+\bibitem{Mueller:2002gd}
+A.H. Mueller, D.T. Son, Phys. Lett. \textbf{B582}, 279 (2004).
+\newblock \doi{10.1016/j.physletb.2003.12.047}
+
+\bibitem{Mrowczynski:2016etf}
+S.~Mrowczynski, B.~Schenke, M.~Strickland,   (2016)
+
+\bibitem{Berges:2008wm}
+J.~Berges, A.~Rothkopf, J.~Schmidt, Phys. Rev. Lett. \textbf{101}, 041603
+  (2008).
+\newblock \doi{10.1103/PhysRevLett.101.041603}
+
+\bibitem{Dusling:2010rm}
+K.~Dusling, T.~Epelbaum, F.~Gelis, R.~Venugopalan, Nucl. Phys. \textbf{A850},
+  69 (2011).
+\newblock \doi{10.1016/j.nuclphysa.2010.11.009}
+
+\bibitem{Litim:2001db}
+D.F. Litim, C.~Manuel, Phys. Rept. \textbf{364}, 451 (2002).
+\newblock \doi{10.1016/S0370-1573(02)00015-7}
+
+\bibitem{Wong:1970fu}
+S.K. Wong, Nuovo Cim. \textbf{A65}, 689 (1970).
+\newblock \doi{10.1007/BF02892134}
+
+\bibitem{Hu:1996sf}
+C.R. Hu, B.~Muller, Phys. Lett. \textbf{B409}, 377 (1997).
+\newblock \doi{10.1016/S0370-2693(97)00851-4}
+
+\bibitem{Maldacena:1997re}
+J.M. Maldacena, Int. J. Theor. Phys. \textbf{38}, 1113 (1999).
+\newblock \doi{10.1023/A:1026654312961}.
+\newblock [Adv. Theor. Math. Phys.2,231(1998)]
+
+\bibitem{Son:2007vk}
+D.T. Son, A.O. Starinets, Ann. Rev. Nucl. Part. Sci. \textbf{57}, 95 (2007).
+\newblock \doi{10.1146/annurev.nucl.57.090506.123120}
+
+\bibitem{Gubser:2009md}
+S.S. Gubser, A.~Karch, Ann. Rev. Nucl. Part. Sci. \textbf{59}, 145 (2009).
+\newblock \doi{10.1146/annurev.nucl.010909.083602}
+
+\bibitem{CasalderreySolana:2011us}
+J.~Casalderrey-Solana, H.~Liu, D.~Mateos, K.~Rajagopal, U.A. Wiedemann,
+  (2011)
+
+\bibitem{DeWolfe:2013cua}
+O.~DeWolfe, S.S. Gubser, C.~Rosen, D.~Teaney, Prog. Part. Nucl. Phys.
+  \textbf{75}, 86 (2014).
+\newblock \doi{10.1016/j.ppnp.2013.11.001}
+
+\bibitem{Policastro:2002se}
+G.~Policastro, D.T. Son, A.O. Starinets, JHEP \textbf{09}, 043 (2002).
+\newblock \doi{10.1088/1126-6708/2002/09/043}
+
+\bibitem{Teaney:2006nc}
+D.~Teaney, Phys. Rev. \textbf{D74}, 045025 (2006).
+\newblock \doi{10.1103/PhysRevD.74.045025}
+
+\bibitem{Son:2006em}
+D.T. Son, A.O. Starinets, JHEP \textbf{03}, 052 (2006).
+\newblock \doi{10.1088/1126-6708/2006/03/052}
+
+\bibitem{Chesler:2010bi}
+P.M. Chesler, L.G. Yaffe, Phys. Rev. Lett. \textbf{106}, 021601 (2011).
+\newblock \doi{10.1103/PhysRevLett.106.021601}
+
+\bibitem{Chesler:2013lia}
+P.M. Chesler, L.G. Yaffe, JHEP \textbf{07}, 086 (2014).
+\newblock \doi{10.1007/JHEP07(2014)086}
+
+\bibitem{Rangamani:2009xk}
+M.~Rangamani, Class. Quant. Grav. \textbf{26}, 224003 (2009).
+\newblock \doi{10.1088/0264-9381/26/22/224003}
+
+\bibitem{Clay-YM}
+A.~Jaffe, E.~Witten, {Quantum Yang Mills Theory, Official Description of
+  Millenium Prize Problems} (2000).
+\newblock {www.claymath.org}
+
+\bibitem{Clay-NS}
+C.~Fefferman, {Existence and smoothness of the Navier-Stokes Equation, Official
+  Description of Millenium Prize Problems} (2000).
+\newblock {www.claymath.org}
+
+\bibitem{Villani:2009}
+C.~Mouhot, C.~Villani, Acta Mathematica \textbf{207}, 29 (2011).
+\newblock \doi{10.1007/s11511-011-0068-9}
+
+\bibitem{Perelman}
+G.~Perelman, {The entropy formula for the Ricci flow and its geometric
+  applications} (2002).
+\newblock ArXiv:math/0211159 [math.DG]
+
+\bibitem{Shen:2014vra}
+C.~Shen, Z.~Qiu, H.~Song, J.~Bernhard, S.~Bass, U.~Heinz, Comput. Phys. Commun.
+  \textbf{199}, 61 (2016).
+\newblock \doi{10.1016/j.cpc.2015.08.039}
+
+\bibitem{Creutz:2004}
+M.~Creutz, Computers in Science \& Engineering \textbf{March/April 2004}, 80
+  (2004)
+
+\end{thebibliography}

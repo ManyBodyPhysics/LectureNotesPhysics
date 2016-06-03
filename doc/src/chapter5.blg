@@ -1,0 +1,108 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter5.aux
+The style file: spphys.bst
+Database file #1: lnplib.bib
+Repeated entry---line 8330 of file lnplib.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8339 of file lnplib.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8396 of file lnplib.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8406 of file lnplib.bib
+ : @article{Lee:2008fa
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8546 of file lnplib.bib
+ : @article{Borasoy:2006qn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8604 of file lnplib.bib
+ : @article{Epelbaum:2009pd
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8616 of file lnplib.bib
+ : @article{Epelbaum:2011md
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8630 of file lnplib.bib
+ : @article{Epelbaum:2012qn
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8644 of file lnplib.bib
+ : @article{Epelbaum:2012iu
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8658 of file lnplib.bib
+ : @article{Lahde:2013uqa
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8672 of file lnplib.bib
+ : @article{Epelbaum:2013paa
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8743 of file lnplib.bib
+ : @article{Luscher:1986pf
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Berkowitz:2015eaa
+Warning--empty journal in Kurth:2015cvl
+Warning--empty booktitle in Epelbaum:2010nr
+Warning--empty booktitle in Kaplan:2005es
+Warning--empty journal in Nicholson:2012xt
+Warning--empty journal in Briceno:2012yi
+Warning--empty journal in Briceno:2015tza
+Warning--empty journal in Wilson:2014cna
+Warning--empty journal in Wilson:2015dqa
+Warning--empty journal in Bolton:2015psa
+Warning--empty journal in Briceno:2016kkp
+Warning--empty journal in Detmold:2015qwf
+Warning--empty journal in Lahde:2013kma
+You've used 156 entries,
+            2812 wiz_defined-function locations,
+            1624 strings with 33904 characters,
+and the built_in function-call counts, 56394 in all, are:
+= -- 3469
+> -- 1872
+< -- 0
++ -- 728
+- -- 572
+* -- 3591
+:= -- 6666
+add.period$ -- 125
+call.type$ -- 156
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 169
+duplicate$ -- 6051
+empty$ -- 5735
+format.name$ -- 703
+if$ -- 12723
+int.to.chr$ -- 0
+int.to.str$ -- 156
+missing$ -- 1639
+newline$ -- 601
+num.names$ -- 156
+pop$ -- 2291
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1378
+stack$ -- 0
+substring$ -- 1950
+swap$ -- 3723
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 13
+while$ -- 290
+width$ -- 159
+write$ -- 1472
+(There were 12 error messages)

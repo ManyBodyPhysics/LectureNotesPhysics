@@ -1,0 +1,106 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter6.aux
+The style file: spphys.bst
+Database file #1: lnplib.bib
+Repeated entry---line 8330 of file lnplib.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8339 of file lnplib.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8396 of file lnplib.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8406 of file lnplib.bib
+ : @article{Lee:2008fa
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8546 of file lnplib.bib
+ : @article{Borasoy:2006qn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8604 of file lnplib.bib
+ : @article{Epelbaum:2009pd
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8616 of file lnplib.bib
+ : @article{Epelbaum:2011md
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8630 of file lnplib.bib
+ : @article{Epelbaum:2012qn
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8644 of file lnplib.bib
+ : @article{Epelbaum:2012iu
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8658 of file lnplib.bib
+ : @article{Lahde:2013uqa
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8672 of file lnplib.bib
+ : @article{Epelbaum:2013paa
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8743 of file lnplib.bib
+ : @article{Luscher:1986pf
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8761 of file lnplib.bib
+ : @article{Borasoy:2007vy
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8834 of file lnplib.bib
+ : @article{Carlson:2014vla
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Elhatisari:2016owd
+Warning--empty journal in Lu:2015riz
+Warning--empty journal in Rokash:2015hra
+You've used 50 entries,
+            2812 wiz_defined-function locations,
+            942 strings with 12780 characters,
+and the built_in function-call counts, 17048 in all, are:
+= -- 1053
+> -- 524
+< -- 0
++ -- 208
+- -- 158
+* -- 1043
+:= -- 2018
+add.period$ -- 23
+call.type$ -- 50
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 1873
+empty$ -- 1758
+format.name$ -- 197
+if$ -- 3854
+int.to.chr$ -- 0
+int.to.str$ -- 50
+missing$ -- 502
+newline$ -- 181
+num.names$ -- 50
+pop$ -- 733
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 424
+stack$ -- 0
+substring$ -- 583
+swap$ -- 1114
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 96
+width$ -- 52
+write$ -- 447
+(There were 14 error messages)

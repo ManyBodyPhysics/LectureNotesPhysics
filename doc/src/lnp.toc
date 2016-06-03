@@ -1,9 +1,14 @@
 \contentsline {title}{No Title Given}{v}{section*.1}
 \authcount {1}
 \contentsline {author}{No Author Given}{v}{section*.1}
+\gdef \the@ipfilectr {@-1}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-2}
 \contentsline {titlech}{\numberline {1}Motivation and overarching aims}{1}{section*.4}
 \authcount {1}
 \contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{1}{section*.4}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-3}
 \contentsline {titlech}{\numberline {2}Quantum Chromodynamics}{3}{section*.5}
 \authcount {1}
 \contentsline {authorch}{Thomas Sch\"afer}{3}{section*.5}
@@ -28,6 +33,8 @@
 \contentsline {section}{\numberline {2.6}Outlook and acknowledgments}{35}{section.2.6}
 \contentsline {section}{Appendix}{36}{section*.6}
 \contentsline {section}{References}{38}{section*.7}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-4}
 \contentsline {titlech}{\numberline {3}Lattice quantum chromodynamics approach to nuclear physics}{43}{section*.8}
 \authcount {1}
 \contentsline {authorch}{Tetsuo Hatsuda}{43}{section*.8}
@@ -38,11 +45,15 @@
 \contentsline {section}{\numberline {3.5}Hadron interactions: basics}{43}{section.3.5}
 \contentsline {section}{Appendix}{44}{section*.9}
 \contentsline {section}{References}{44}{section*.10}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-5}
 \contentsline {titlech}{\numberline {4}Theoretical aspects of few-body systems and effective field theories}{45}{section*.11}
 \authcount {1}
 \contentsline {authorch}{Hans-Werner Hammer}{45}{section*.11}
 \contentsline {section}{\numberline {4.1}General Introduction}{45}{section.4.1}
 \contentsline {section}{\numberline {4.2}More stuff}{45}{section.4.2}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-6}
 \contentsline {titlech}{\numberline {5}Lattice methods and effective field theory}{47}{section*.12}
 \authcount {1}
 \contentsline {authorch}{Amy Nicholson}{47}{section*.12}
@@ -79,20 +90,24 @@
 \contentsline {subsection}{\numberline {5.5.4}Final considerations}{103}{subsection.5.5.4}
 \contentsline {section}{\numberline {5.6}Reading/Exercises}{103}{section.5.6}
 \contentsline {section}{References}{104}{section*.13}
-\contentsline {titlech}{\numberline {6}Lattice methods and the nuclear few- and many-body problem}{109}{section*.14}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-7}
+\contentsline {titlech}{\numberline {6}Lattice methods and the nuclear few- and many-body problem}{111}{section*.14}
 \authcount {1}
-\contentsline {authorch}{Dean Lee}{109}{section*.14}
-\contentsline {section}{\numberline {6.1}Introduction}{109}{section.6.1}
-\contentsline {section}{\numberline {6.2}Scattering on the lattice}{110}{section.6.2}
-\contentsline {section}{\numberline {6.3}Lattice formalisms}{112}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Grassmann path integral}{112}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Transfer matrix operator}{114}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Grassmann path integral with auxiliary field}{114}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Transfer matrix operator with auxiliary field}{117}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Projection Monte Carlo}{117}{section.6.4}
-\contentsline {section}{\numberline {6.5}Importance sampling}{118}{section.6.5}
-\contentsline {section}{\numberline {6.6}Exercises}{123}{section.6.6}
-\contentsline {section}{References}{124}{section*.15}
+\contentsline {authorch}{Dean Lee}{111}{section*.14}
+\contentsline {section}{\numberline {6.1}Introduction}{111}{section.6.1}
+\contentsline {section}{\numberline {6.2}Scattering on the lattice}{112}{section.6.2}
+\contentsline {section}{\numberline {6.3}Lattice formalisms}{114}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Grassmann path integral}{114}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Transfer matrix operator}{116}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Grassmann path integral with auxiliary field}{116}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Transfer matrix operator with auxiliary field}{119}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Projection Monte Carlo}{119}{section.6.4}
+\contentsline {section}{\numberline {6.5}Importance sampling}{120}{section.6.5}
+\contentsline {section}{\numberline {6.6}Exercises}{125}{section.6.6}
+\contentsline {section}{References}{126}{section*.15}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-8}
 \contentsline {titlech}{\numberline {7}From few to many nucleons and methods for nuclear reactions}{129}{section*.16}
 \authcount {1}
 \contentsline {authorch}{Giuseppina Orlandini}{129}{section*.16}
@@ -101,6 +116,8 @@
 \contentsline {section}{\numberline {7.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{129}{section.7.3}
 \contentsline {section}{\numberline {7.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{129}{section.7.4}
 \contentsline {section}{\numberline {7.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{129}{section.7.5}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-9}
 \contentsline {titlech}{\numberline {8}High-performance computing Many-body methods and infinite nuclear matter}{131}{section*.17}
 \authcount {1}
 \contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{131}{section*.17}
@@ -113,11 +130,11 @@
 \contentsline {section}{\numberline {8.3}Hartree-Fock theory}{145}{section.8.3}
 \contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{148}{section.8.4}
 \contentsline {subsection}{\numberline {8.4.1}Example of a Hamiltonian matrix}{150}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}A non-practical way of solving the eigenvalue problem}{152}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.2}A non-practical way of solving the eigenvalue problem}{151}{subsection.8.4.2}
 \contentsline {subsection}{\numberline {8.4.3}Summarizing FCI and bringing in approximative methods}{153}{subsection.8.4.3}
 \contentsline {section}{\numberline {8.5}Many-body perturbation theory}{154}{section.8.5}
 \contentsline {subsection}{\numberline {8.5.1}Interpreting the correlation energy and the wave operator}{157}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}The Breuckner $G$-matrix}{159}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.2}The Breuckner $G$-matrix}{158}{subsection.8.5.2}
 \contentsline {section}{\numberline {8.6}Coupled cluster theory}{163}{section.8.6}
 \contentsline {subsection}{\numberline {8.6.1}Introduction}{163}{subsection.8.6.1}
 \contentsline {subsection}{\numberline {8.6.2}A quick tour of Coupled Cluster theory}{164}{subsection.8.6.2}
@@ -126,17 +143,22 @@
 \contentsline {section}{\numberline {8.7}Developing a numerical project}{168}{section.8.7}
 \contentsline {section}{\numberline {8.8}Conclusions}{178}{section.8.8}
 \contentsline {section}{\numberline {8.9}Exercises}{178}{section.8.9}
-\contentsline {titlech}{\numberline {9}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{191}{section*.19}
+\contentsline {section}{References}{189}{section*.19}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-10}
+\contentsline {titlech}{\numberline {9}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{191}{section*.20}
 \authcount {1}
-\contentsline {authorch}{Francesco Pederiva}{191}{section*.19}
+\contentsline {authorch}{Francesco Pederiva}{191}{section*.20}
 \contentsline {section}{\numberline {9.1}The Nuclear few- and many-body problem}{191}{section.9.1}
 \contentsline {section}{\numberline {9.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{191}{section.9.2}
 \contentsline {section}{\numberline {9.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{191}{section.9.3}
 \contentsline {section}{\numberline {9.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{191}{section.9.4}
 \contentsline {section}{\numberline {9.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{191}{section.9.5}
-\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{193}{section*.20}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-11}
+\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{193}{section*.21}
 \authcount {1}
-\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{193}{section*.20}
+\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{193}{section*.21}
 \contentsline {section}{\numberline {10.1}Introduction}{194}{section.10.1}
 \contentsline {section}{\numberline {10.2}IM-SRG Flow Equations}{194}{section.10.2}
 \contentsline {subsection}{\numberline {10.2.1}Preliminaries}{194}{subsection.10.2.1}
@@ -152,12 +174,17 @@
 \contentsline {subsection}{\numberline {10.3.4}Wegner Generators}{204}{subsection.10.3.4}
 \contentsline {subsection}{\numberline {10.3.5}Decay Scales}{205}{subsection.10.3.5}
 \contentsline {section}{\numberline {10.4}In-medium SRG studies of infinite matter}{206}{section.10.4}
-\contentsline {titlech}{\numberline {11}Green's function approaches}{207}{section*.21}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-12}
+\contentsline {titlech}{\numberline {11}Green's function approaches}{207}{section*.22}
 \authcount {1}
-\contentsline {authorch}{Carlo Barbieri and Adriana Carbone}{207}{section*.21}
+\contentsline {authorch}{Carlo Barbieri and Adriana Carbone}{207}{section*.22}
 \contentsline {section}{\numberline {11.1}Concluding remarks}{207}{section.11.1}
-\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{209}{section*.22}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-13}
+\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{209}{section*.23}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{209}{section*.22}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{209}{section*.23}
 \contentsline {section}{\numberline {12.1}Concluding remarks}{209}{section.12.1}
 \contentsline {section}{\numberline {12.2}Perspectives}{209}{section.12.2}
+\gdef \the@ipfilectr {}
