@@ -1,3 +1,4 @@
+\label{chap:chapter8}
 \title{High-performance computing Many-body methods and infinite nuclear matter}
 \author{Justin G.~Lietz, Samuel Novario, Gustav R.~Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}
 \institute{Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu}, \and Gustav R.~Jansen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{jansen@ornl.gov}, \and Gaute Hagen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{hageng@ornl.gov},  \and Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}}
@@ -3451,14 +3452,17 @@ The unitary transformation
 brings us into the new basis.  
 The new basis has quantum numbers $a=1,2,\dots,A$.
 Show that the new basis is orthogonal.
-
-Show that the new Slater determinant constructed from the new single-particle wave functions can be
+\begin{enumerate}
+\item[a)] Show that the new Slater determinant constructed from the new single-particle wave functions can be
 written as the determinant based on the previous basis and the determinant of the matrix $C$.
-
+\item[b)]
 Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
 Hint: $C$ is a unitary matrix. 
+\end{enumerate}
+\end{prob}
 
 
+\begin{prob}
 We will assume that we can build various Slater determinants using an orthogonal  single-particle basis $\psi_{\lambda}$, 
 with $\lambda = 1,2,\dots,A$. 
 
@@ -3472,8 +3476,9 @@ It will later be interpreted as a so-called one-particle-one-hole excitation.
 Similarly, the Slater determinant $|\Phi_{ij}^{ab}\rangle$
 differs by two single-particle states from $|\Phi_0\rangle$ and is normally thought of as a two-particle-two-hole excitation.
 
-Define a general onebody operator $\hat{F} = \sum_{i}^A\hat{f}(x_{i})$ and a general  twobody operator $\hat{G}=\sum_{i>j}^A\hat{g}(x_{i},x_{j})$ with $g$ being invariant under the interchange of the coordinates of particles $i$ and $j$. You can use here the results from the second exercise set, exercise 3.
-Calculate
+Define a general onebody operator $\hat{F} = \sum_{i}^A\hat{f}(x_{i})$ and a general  twobody operator $\hat{G}=\sum_{i>j}^A\hat{g}(x_{i},x_{j})$ with $g$ being invariant under the interchange of the coordinates of particles $i$ and $j$. 
+\begin{enumerate}
+\item[a)]
 \[
 \langle \Phi_0 \vert\hat{F}\vert\Phi_0\rangle,
 \]
@@ -3481,7 +3486,7 @@ and
 \[
 \langle \Phi_0\vert\hat{G}|\Phi_0\rangle.
 \]
-
+\item[b)]
 Find thereafter 
 \[
 \langle \Phi_0 |\hat{F}|\Phi_i^a\rangle,
@@ -3490,7 +3495,7 @@ and
 \[
 \langle \Phi_0|\hat{G}|\Phi_i^a\rangle,
 \]
-
+\item[c)]
 Finally, find
 \[
 \langle \Phi_0 |\hat{F}|\Phi_{ij}^{ab}\rangle,
@@ -3499,13 +3504,13 @@ and
 \[
 \langle \Phi_0|\hat{G}|\Phi_{ij}^{ab}\rangle.
 \]
-
+\item[d)]
 What happens with the two-body operator if we have a transition probability  of the type
 \[
 \langle \Phi_0|\hat{G}|\Phi_{ijk}^{abc}\rangle,
 \]
 where the Slater determinant to the right of the operator differs by more than two single-particle states?
-
+\item[e)]
 With an orthogonal basis of Slater determinants $\Phi_{\lambda}$, we can now construct an exact many-body state as a linear expansion of Slater determinants, that is, a given exact state
 \[
 \Psi_i = \sum_{\lambda =0}^{\infty}C_{i\lambda}\Phi_{\lambda}.
@@ -3520,6 +3525,7 @@ exact state
 based on the calculations above, which are the only elements which will contribute?  (there is no need to perform any calculation here, use your results from exercises a), b), and c)).
 
 These results simplify to a large extent shell-model calculations. 
+\end{enumerate}
 \end{prob}
 
 

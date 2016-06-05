@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUN 2016 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 JUN 2016 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1520,9 +1520,15 @@ Package hyperref Warning: bookmark level for unknown authorch defaults to 0.
 
 
 ]) [2]
+! Too many }'s.
+l.192 \include{chapter1}}
+                         
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 \openout2 = `chapter2.aux'.
 
- (./chapter2.tex
+(./chapter2.tex
 Overfull \hbox (5.05159pt too wide) in paragraph at lines 13--13
 \T1/fve/b/n/10 Abstract \T1/fve/m/n/10 We present a brief in-tro-duc-tion to QC
 D, the QCD phase di-a-gram, and non-equilibrium
@@ -1703,7 +1709,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2 \newcommand\qslash {\slashed{q}}
+l.3 \newcommand\qslash {\slashed{q}}
                                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1717,7 +1723,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \newcommand\Dslash {\slashed{D}}
+l.7 \newcommand\Dslash {\slashed{D}}
                                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1731,7 +1737,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \newcommand{\be}{\begin{equation}}
+l.19 \newcommand{\be}{\begin{equation}}
                                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1745,7 +1751,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \newcommand{\ee}{\end{equation}}
+l.20 \newcommand{\ee}{\end{equation}}
                                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1759,32 +1765,32 @@ or  <return>  to continue without it.
 
 ]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.65994pt on input line 98.
+(Font)              scaled to size 6.65994pt on input line 99.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 5.661pt on input line 98.
+(Font)              scaled to size 5.661pt on input line 99.
  [47] [48]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 117.
+(Font)              scaled to size 4.49997pt on input line 118.
  [49]
 <Chapter5-figures/al0.png, id=1932, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
-Package pdftex.def Info: Chapter5-figures/al0.png used on input line 146.
+Package pdftex.def Info: Chapter5-figures/al0.png used on input line 147.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
 <Chapter5-figures/ae0.png, id=1934, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
-Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 147.
+Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 148.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
 <Chapter5-figures/ag0.png, id=1935, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
-Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 148.
+Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 149.
 (pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
  [50 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
 res/ag0.png>] [51]
@@ -1792,21 +1798,21 @@ res/ag0.png>] [51]
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
-Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 187.
+Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 188.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
 <Chapter5-figures/loop1.png, id=1969, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
-Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 192.
+Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 193.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
 <Chapter5-figures/beta.pdf, id=1973, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
-Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 208.
+Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 209.
 (pdftex.def)             Requested size: 212.29312pt x 133.6137pt.
  [52 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>] [53 <./Ch
 apter5-figures/beta.pdf>] [54] [55] [56]
@@ -1814,14 +1820,14 @@ apter5-figures/beta.pdf>] [54] [55] [56]
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
-Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 367.
+Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 368.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
  [58 <./Chapter5-figures/dimer.png>]
 <Chapter5-figures/lattice.png, id=2087, 352.31625pt x 315.1775pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
-Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 385.
+Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 386.
 (pdftex.def)             Requested size: 127.37717pt x 113.94954pt.
  [59 <./Chapter5-figures/lattice.png>]
 [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
@@ -1829,7 +1835,7 @@ Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 385.
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
-Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 716.
+Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 717.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
  [70 <./Chapter5-figures/QCDbubble.pdf>]
@@ -1837,21 +1843,21 @@ Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 716.
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
-Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 725.
+Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 726.
 (pdftex.def)             Requested size: 212.29312pt x 133.79369pt.
  [71 <./Chapter5-figures/overlap.pdf>]
 [72] <Chapter5-figures/cumulant.png, id=2299, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
-Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 787.
+Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 788.
 (pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
  [73] [74 <./Chapter5-figures/cumulant.png>] <Chapter5-figures/twobody.png, id=
 2326, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
-Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 847.
+Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 848.
 (pdftex.def)             Requested size: 382.12502pt x 253.31367pt.
  [75]
 
@@ -1863,14 +1869,14 @@ File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
 Package pdftex.def Info: Chapter5-figures/dispersion.png used on input line 108
-1.
+2.
 (pdftex.def)             Requested size: 382.12502pt x 264.10953pt.
  [83 <./Chapter5-figures/dispersion.png>]
 [84] [85] <Chapter5-figures/luscher.pdf, id=2567, 755.82375pt x 493.845pt>
 File: Chapter5-figures/luscher.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/luscher.pdf>
-Package pdftex.def Info: Chapter5-figures/luscher.pdf used on input line 1175.
+Package pdftex.def Info: Chapter5-figures/luscher.pdf used on input line 1176.
 (pdftex.def)             Requested size: 212.29312pt x 138.70517pt.
  [86]
 <Chapter5-figures/interaction.png, id=2637, 658.46pt x 512.91624pt>
@@ -1878,14 +1884,14 @@ File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
 Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 11
-95.
+96.
 (pdftex.def)             Requested size: 382.12502pt x 297.6638pt.
 
 <Chapter5-figures/tuning.png, id=2644, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
-Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1202.
+Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1203.
 (pdftex.def)             Requested size: 212.29312pt x 133.76576pt.
  [87 <./Chapter5-figures/luscher.pdf>]
 [88 <./Chapter5-figures/interaction.png> <./Chapter5-figures/tuning.png>]
@@ -1893,7 +1899,7 @@ Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1202.
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
-Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1275.
+Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1276.
 (pdftex.def)             Requested size: 424.58624pt x 62.60724pt.
  [91 <./Chapter5-figures/dimer2.png>] [92]
 [93] [94] [95] [96] [97]
@@ -1901,24 +1907,24 @@ Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1275.
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
-Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1499.
+Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1500.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
 
 <Chapter5-figures/box.png, id=2803, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
-Package pdftex.def Info: Chapter5-figures/box.png used on input line 1505.
+Package pdftex.def Info: Chapter5-figures/box.png used on input line 1506.
 (pdftex.def)             Requested size: 42.46121pt x 26.26782pt.
  [98 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
 <Chapter5-figures/sunset.png, id=2821, 787.94376pt x 73.27374pt> [99]
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
-Package pdftex.def Info: Chapter5-figures/sunset.png used on input line 1536.
+Package pdftex.def Info: Chapter5-figures/sunset.png used on input line 1537.
 (pdftex.def)             Requested size: 424.58624pt x 39.48335pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 1536--1537
+Overfull \hbox (12.0pt too wide) in paragraph at lines 1537--1538
 [][] 
  []
 
@@ -1927,25 +1933,33 @@ File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
 Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
-554.
+555.
 (pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
  [100 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
 <Chapter5-figures/3body.png, id=2847, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
-Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1576.
+Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1577.
 (pdftex.def)             Requested size: 424.58624pt x 43.5996pt.
 
 <Chapter5-figures/HLambda.pdf, id=2854, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
-Package pdftex.def Info: Chapter5-figures/HLambda.pdf used on input line 1589.
+Package pdftex.def Info: Chapter5-figures/HLambda.pdf used on input line 1590.
 (pdftex.def)             Requested size: 212.29312pt x 140.89426pt.
  [101 <./Chapter5-figures/3body.png>]
-[102 <./Chapter5-figures/HLambda.pdf>] [103] (./chapter5.bbl [104] [105]
-[106]
+[102 <./Chapter5-figures/HLambda.pdf>] [103]
+Overfull \hbox (7.37244pt too wide) in paragraph at lines 1660--1661
+[]\T1/fve/m/n/10 Add a har-monic po-ten-tial to your code by mod-i-fy-ing the i
+n-ter-ac-tion: $\OML/ztmcm/m/it/10 X\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 ^^\\O
+T1/ztmcm/m/n/10 ) \OMS/ztmcm/m/n/10 ! \OML/ztmcm/m/it/10 e[]X\OT1/ztmcm/m/n/10 
+(\OML/ztmcm/m/it/10 ^^\\OT1/ztmcm/m/n/10 )\OML/ztmcm/m/it/10 e[]$\T1/fve/m/n/10
+ ,
+ []
+
+(./chapter5.bbl [104] [105] [106]
 Underfull \hbox (badness 10000) in paragraph at lines 300--304
 \T1/fve/m/n/10 90468-[]6$.  URL []$\T1/fvm/m/n/10 http : / / www . sciencedirec
 t . com / science / article / pii /
@@ -1991,7 +2005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
-[113] <Chapter6-figures/formalism.png, id=3115, 439.8834pt x 249.5724pt>
+[113] <Chapter6-figures/formalism.png, id=3123, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
@@ -1999,7 +2013,7 @@ Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 209.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
  [114 <./Chapter6-figures/formalism.png>]
-[115] <Chapter6-figures/worldlines.png, id=3149, 579.6054pt x 495.7722pt>
+[115] <Chapter6-figures/worldlines.png, id=3158, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
@@ -2007,7 +2021,7 @@ Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 371
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [116] [117 <./Chapter6-figures/worldlines.png>] [118] [119]
-<Chapter6-figures/HSworldlines.png, id=3207, 579.6054pt x 495.7722pt>
+<Chapter6-figures/HSworldlines.png, id=3215, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -2015,7 +2029,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 11.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=3211, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=3219, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -2026,7 +2040,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 631.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 631.
 
-<Chapter6-figures/getzdualvecs.png, id=3212, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=3220, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -2038,7 +2052,7 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 645.
 
-<Chapter6-figures/call_getzvecs.png, id=3213, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=3221, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
@@ -2061,21 +2075,21 @@ ed, duplicate ignored
 l.713 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=3241, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=3249, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 786.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
  [123]
-<Chapter6-figures/dVds.png, id=3258, 507.8975pt x 367.3725pt>
+<Chapter6-figures/dVds.png, id=3267, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 809.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=3260, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=3269, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
@@ -2107,66 +2121,84 @@ Underfull \hbox (badness 1152) in paragraph at lines 186--188
 ]) [129]
 \openout2 = `chapter8.aux'.
 
- (./chapter8.tex [130
+ (./chapter8.tex
+
+! LaTeX Error: Command \braket already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \newcommand{\braket}[1]{\langle#1\rangle}
+                                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \bra already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \newcommand{\bra}[1]{\left\langle #1 \right|}
+                                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \ket already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \newcommand{\ket}[1]{\left| #1 \right\rangle}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[130
 
 
 
 
 
-]
+] [131]
 
-LaTeX Warning: Reference `chap:chapter9' on page 131 undefined on input line 16
-.
-
-
-LaTeX Warning: Reference `chap:chapter10' on page 131 undefined on input line 1
-6.
+Package natbib Warning: Citation `hh2000' on page 132 undefined on input line 6
+0.
 
 
-LaTeX Warning: Reference `chap:chapter11' on page 131 undefined on input line 1
-6.
-
-
-LaTeX Warning: Reference `chap:chapter9' on page 131 undefined on input line 16
-.
-
-
-LaTeX Warning: Reference `chap:chapter10' on page 131 undefined on input line 1
-6.
-
-
-LaTeX Warning: Reference `chap:chapter11' on page 131 undefined on input line 1
-6.
-
-[131]
-
-Package natbib Warning: Citation `hh2000' on page 132 undefined on input line 4
-6.
-
-
-Package natbib Warning: Citation `eft' on page 132 undefined on input line 64.
+Package natbib Warning: Citation `eft' on page 132 undefined on input line 78.
 
 [132] [133]
 
 Package natbib Warning: Citation `symmetryenergy2013' on page 134 undefined on 
-input line 205.
+input line 219.
 
 [134]
-Overfull \hbox (3.30031pt too wide) in paragraph at lines 291--292
+Overfull \hbox (3.30031pt too wide) in paragraph at lines 305--306
 []\T1/fve/m/n/10 Now we im-pose an-ti-sym-me-try, by hav-ing the fermion op-er-
 a-tors sat-isfy the anti-commutation
  []
 
 
 Package natbib Warning: Citation `deffockspace' on page 135 undefined on input 
-line 312.
+line 326.
 
 [135] [136]
 
-LaTeX Warning: Reference `prob8.1' on page 137 undefined on input line 378.
+LaTeX Warning: Reference `prob8.1' on page 137 undefined on input line 392.
 
 ! Undefined control sequence.
-l.380 \hat{H}=E_{\mathrem
+l.394 \hat{H}=E_{\mathrem
                          {Ref}}+\hat{H}_N,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2175,7 +2207,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.384 E_{\mathrem
+l.398 E_{\mathrem
                  {Ref}}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0\rangle = \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2185,63 +2217,63 @@ and I'll forget about whatever was undefined.
 
 [137]
 
-LaTeX Warning: Reference `prob8.2' on page 138 undefined on input line 431.
+LaTeX Warning: Reference `prob8.2' on page 138 undefined on input line 445.
 
 [138] [139] [140] [141]
 
 Package natbib Warning: Citation `weinberg1990' on page 142 undefined on input 
-line 695.
+line 709.
 
 
 Package natbib Warning: Citation `weinberg1991' on page 142 undefined on input 
-line 695.
+line 709.
 
 
 Package natbib Warning: Citation `ordonez1992' on page 142 undefined on input l
-ine 695.
+ine 709.
 
 
 Package natbib Warning: Citation `ordonez1994' on page 142 undefined on input l
-ine 695.
+ine 709.
 
 
 Package natbib Warning: Citation `ordonez1996' on page 142 undefined on input l
-ine 695.
+ine 709.
 
 
 Package natbib Warning: Citation `vankolck1999' on page 142 undefined on input 
-line 695.
+line 709.
 
 
 Package natbib Warning: Citation `machleidt2011' on page 142 undefined on input
- line 695.
+ line 709.
 
 
 Package natbib Warning: Citation `epelbaum2009' on page 142 undefined on input 
-line 695.
+line 709.
 
 
 Package natbib Warning: Citation `ekstrom2013' on page 142 undefined on input l
-ine 695.
+ine 709.
 
 
 Package natbib Warning: Citation `carlsson2014' on page 142 undefined on input 
-line 735.
+line 749.
 
 
 Package natbib Warning: Citation `machleidt2011' on page 142 undefined on input
- line 736.
+ line 750.
 
 
 Package natbib Warning: Citation `epelbaum2009' on page 142 undefined on input 
-line 736.
+line 750.
 
 
 Package natbib Warning: Citation `ekstrom2013' on page 142 undefined on input l
-ine 736.
+ine 750.
 
 
-LaTeX Warning: File `Figs/diagNNLO.pdf' not found on input line 739.
+LaTeX Warning: File `Figs/diagNNLO.pdf' not found on input line 753.
 
 
 ! Package pdftex.def Error: File `Figs/diagNNLO.pdf' not found.
@@ -2250,7 +2282,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.739 ....14}{\includegraphics{Figs/diagNNLO.pdf}}
+l.753 ....14}{\includegraphics{Figs/diagNNLO.pdf}}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
@@ -2258,40 +2290,40 @@ If that doesn't work, type  X <return>  to quit.
 
 
 Package natbib Warning: Citation `weinberg1990' on page 142 undefined on input 
-line 753.
+line 767.
 
 
 Package natbib Warning: Citation `weinberg1991' on page 142 undefined on input 
-line 753.
+line 767.
 
 [142]
 
 Package natbib Warning: Citation `carlsson2014' on page 143 undefined on input 
-line 800.
+line 814.
 
 
 Package natbib Warning: Citation `machleidt2011' on page 143 undefined on input
- line 837.
+ line 851.
 
 
 Package natbib Warning: Citation `carlsson2014' on page 143 undefined on input 
-line 837.
+line 851.
 
 
 Package natbib Warning: Citation `machleidt2011' on page 143 undefined on input
- line 838.
+ line 852.
 
 [143]
 
 Package natbib Warning: Citation `epelbaum2002' on page 144 undefined on input 
-line 915.
+line 929.
 
 
 Package natbib Warning: Citation `navratil2007' on page 144 undefined on input 
-line 933.
+line 947.
 
 [144] [145] [146]
-Overfull \hbox (85.6646pt too wide) in paragraph at lines 1128--1138
+Overfull \hbox (85.6646pt too wide) in paragraph at lines 1142--1152
 \T1/fve/m/n/10 The lat-ter is noth-ing but a stan-dard eigen-value prob-lem. Co
 m-pared with Eq. (refeq:hartreefockcoordinatespace),
  []
@@ -2299,86 +2331,199 @@ m-pared with Eq. (refeq:hartreefockcoordinatespace),
 [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1854.
+(hyperref)                removing `math shift' on input line 1868.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1854.
+(hyperref)                removing `math shift' on input line 1868.
 
 [158]
 
 LaTeX Warning: Reference `fig:goldstone' on page 159 undefined on input line 19
-01.
+15.
 
 [159]
 
 LaTeX Warning: Reference `fig:goldstone' on page 160 undefined on input line 19
-80.
+94.
 
 
 LaTeX Warning: Reference `fig:goldstone' on page 160 undefined on input line 20
-27.
+41.
 
 
 LaTeX Warning: Reference `fig:goldstone' on page 160 undefined on input line 20
-28.
+42.
 
 [160] [161] [162] [163] [164] [165] [166] [167] [168]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 2569.
+(Font)              using `T1/fve/m/n' instead on input line 2583.
 
 [169] [170] [171] [172] [173] [174]
-Overfull \hbox (61.6545pt too wide) in paragraph at lines 2793--2793
+Overfull \hbox (61.6545pt too wide) in paragraph at lines 2807--2807
 [] 
  []
 
-<Chapter8-figures/fig1.pdf, id=3656, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig1.pdf, id=3670, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2797.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2811.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
  [175]
-<Chapter8-figures/fig2.pdf, id=3671, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=3685, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2803.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2817.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
  [176 <./Chapter8-figures/fig1.pdf>] [177 <./Chapter8-figures/fig2.pdf>]
-<Chapter8-figures/fig3.pdf, id=3793, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=3807, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2842.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2856.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=3794, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=3808, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2848.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2862.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
- [178 <./Chapter8-figures/fig3.pdf>]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 2893--2898
+ [178 <./Chapter8-figures/fig3.pdf>] [179 <./Chapter8-figures/fig4.pdf>]
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 2950--2955
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
-[179 <./Chapter8-figures/fig4.pdf>] [180] [181] [182] [183] [184]
-Overfull \hbox (23.5658pt too wide) in paragraph at lines 3284--3286
+[180]
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3044 \item
+            [c)]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3044 \item[c)]
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3044 \item[c)]
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3049 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3049 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.3049 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Overfull \hbox (741.07489pt too wide) detected at line 3049
+[] \OT1/ztmcm/m/n/10 = [](\OML/ztmcm/m/it/10 p \OMS/ztmcm/m/n/10 ^^@ \OT1/ztmcm
+/m/n/10 1)\OML/ztmcm/m/it/10 a[]a[] \OMS/ztmcm/m/n/10 ^^@ []\OML/ztmcm/m/it/10 
+g [] [][]: ShowalsothatHamiltoniancommuteswiththeproductofthepaircreationandann
+ihilationoperators:Thismodelcorrespondstoasystemwithnobrokenpairs:Thismeansthat
+theHamiltoniancanonlylinktwo \OMS/ztmcm/m/n/10 ^^@ \OML/ztmcm/m/it/10 particles
+tatesinso \OMS/ztmcm/m/n/10 ^^@ \OML/ztmcm/m/it/10 calledspin \OMS/ztmcm/m/n/10
+ ^^@ \OML/ztmcm/m/it/10 reversedstates:[]
+ []
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.3049 
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[181] [182] [183] [184] [185]
+Overfull \hbox (35.5658pt too wide) in paragraph at lines 3332--3334
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (23.5658pt too wide) in paragraph at lines 3294--3296
+Overfull \hbox (35.5658pt too wide) in paragraph at lines 3342--3344
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[185] [186] [187] [188] (./chapter8.bbl
+[186] [187]
+
+! LaTeX Error: \begin{equation*} on input line 3040 ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3446 \end{enumerate}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 3008 ended by \end{prob}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3447 \end{prob}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[188] (./chapter8.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 9.
 
@@ -2395,46 +2540,6 @@ Package natbib Warning: Empty `thebibliography' environment on input line 9.
 \openout2 = `chapter10.aux'.
 
  (./chapter10.tex
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \DeclareMathSymbol
-                      {\NS}{\mathord}{AMSb}{"4E}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Undefined control sequence.
-l.2 \DeclareMathSymbol{\NS
-                          }{\mathord}{AMSb}{"4E}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2 \DeclareMathSymbol{\NS}{\mathord
-                                    }{AMSb}{"4E}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing { inserted.
-<to be read again> 
-                   }
-l.2 \DeclareMathSymbol{\NS}{\mathord}
-                                     {AMSb}{"4E}
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
 
 ! LaTeX Error: Can be used only in preamble.
 
@@ -2479,25 +2584,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.5 
-    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.5 
-    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 ! LaTeX Error: Command \ket already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -2522,6 +2608,20 @@ Type  H <return>  for immediate help.
                                                   
 l.8 ...t}[2]{\ensuremath{\langle{#1}|{#2}\rangle}}
                                                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \tr already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \newcommand{\tr}{\ensuremath{\mathrm{tr}}}
+                                               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -3254,6 +3354,19 @@ LaTeX Warning: Reference `sec:numerics' on page 206 undefined on input line 729
 
 Package natbib Warning: There were undefined citations.
 
+
+! LaTeX Error: \begin{prob} on input line 2916 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.241 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
 (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
@@ -3263,7 +3376,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: C8E49780975A6D22F584E67EC687FE43;11359.
+(rerunfilecheck)             Checksum: 33B7DCFDC7CC72B9B462D82FBD5439D8;11375.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3275,43 +3388,47 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 2916 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 23978 strings out of 493089
- 385347 string characters out of 6134842
- 540352 words of memory out of 5000000
- 25018 multiletter control sequences out of 15000+600000
+ 24001 strings out of 493089
+ 385507 string characters out of 6134842
+ 540830 words of memory out of 5000000
+ 25029 multiletter control sequences out of 15000+600000
  126285 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,20n,122p,1933b,1819s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/bera/fvmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fv
-mr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmro8a.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (218 pages, 3074034 bytes).
+ 56i,20n,122p,1933b,1907s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/bera/fvmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/bera/fvmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/b
+era/fvmro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs
+/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on lnp.pdf (218 pages, 3081648 bytes).
 PDF statistics:
- 4903 PDF objects out of 5155 (max. 8388607)
- 4365 compressed objects within 44 object streams
- 1869 named destinations out of 2073 (max. 500000)
+ 4924 PDF objects out of 5155 (max. 8388607)
+ 4386 compressed objects within 44 object streams
+ 1881 named destinations out of 2073 (max. 500000)
  1338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

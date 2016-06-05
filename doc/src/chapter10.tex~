@@ -1,5 +1,5 @@
-\label{chap:chapter10}
 %%%%% bra/ket angles
+\DeclareMathSymbol{\NS}{\mathord}{AMSb}{"4E}
 \DeclareMathOperator{\abrapar}{\big<}
 \DeclareMathOperator{\aketpar}{\big>}
 

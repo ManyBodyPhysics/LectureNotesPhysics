@@ -1,4 +1,3 @@
-\label{chap:chapter5}
 \newcommand\mpi {m_{\pi}}
 \newcommand\qslash {\slashed{q}}
 %\newcommand{\note}[1]{{\bf \textcolor{red}{\uppercase{#1}}}}
@@ -1619,46 +1618,35 @@ Possibly the biggest open issues to be resolved are the sign/noise problems and 
 
 Despite these limitations there have been enormous successes for lattice EFT for few- and many-body states both for systems at unitarity and nuclei. As an example, at unitarity the energies of up to 50 two-component fermions have been calculated with errors comparable to state-of-the-art Green's Function Monte Carlo calculations \cite{EKLN1,EKLN2,EKLN3,EKLN4,LEKN1,NEKL1}. The Raleigh-Bonn group has calculated properties of nuclei up to $A=28$ \cite{Epelbaum:2010xt,Epelbaum:2009pd,Epelbaum:2013paa,Lahde:2013kma,Lahde:2013uqa}. Particularly exciting is their investigation of the structure of the Hoyle state, a key component of the triple alpha process necessary for Carbon production in stars \cite{Epelbaum:2011md,Epelbaum:2012qn,Epelbaum:2012iu,Epelbaum:2013wla,Lahde:2014bna}. 
 
-\section{Reading assignments and Exercises}
+\section{Reading/Exercises}
+\begin{itemize}
+\item Write a simple lattice code to evaluate a two-particle correlation function as a function of Euclidean time using a $Z_2$ auxiliary field. Simple sources for two-particle states may be delta functions in position or momentum space. Use the long time behavior of the effective mass function, $\ln \frac{C_2(\tau)}{C_2(\tau+1)} \tautoinfty E_0$ (see \Sec{observables}), to determine the ground state energy for your choice of coupling, $g$. Compare this with what you expect from \Eq{eigeqlambda}, using the relation $\lambda = e^{-E_0}$, as the number of lattice points is increased.
 
-\begin{prob}
-Write a simple lattice code to evaluate a two-particle correlation function as a function of Euclidean time using a $Z_2$ auxiliary field. Simple sources for two-particle states may be delta functions in position or momentum space. Use the long time behavior of the effective mass function, $\ln \frac{C_2(\tau)}{C_2(\tau+1)} \tautoinfty E_0$ (see \Sec{observables}), to determine the ground state energy for your choice of coupling, $g$. Compare this with what you expect from \Eq{eigeqlambda}, using the relation $\lambda = e^{-E_0}$, as the number of lattice points is increased.
-\end{prob}
+\item Much of these lecture notes follow this review: arXiv:1208.6556. There you will also find more information about algorithms. The following is an excellent pedagogical introduction to EFT's by David B. Kaplan: arXiv:nucl-th/0510023.
 
+\item Construct sources for three fermions in an $l=0$, $l=1$ state and find the lowest energies corresponding to each state at unitarity. Which $l$ corresponds to the true ground state of this system?
 
-\begin{prob}
-Much of these lecture notes follow this review: arXiv:1208.6556. There you will also find more information about algorithms. The following is an excellent pedagogical introduction to EFT's by David B. Kaplan: arXiv:nucl-th/0510023.
-\end{prob}
-
-\begin{prob}
-Construct sources for three fermions in an $l=0$, $l=1$ state and find the lowest energies corresponding to each state at unitarity. Which $l$ corresponds to the true ground state of this system?
-\end{prob}
-
-\begin{prob}
-Explore the cumulant expansion using a toy model \cite{EKLN2}: 
+\item Explore the cumulant expansion using a toy model \cite{EKLN2}: 
 \beq
 C(\tau,\phi) = \prod_{i=1}^{\tau}(1+g\phi_i) \ ,
 \eeq
 for $0\leq g \leq 1$ and $\phi \in [-1,1]$. The true mean of the correlator should be $\langle C(\tau,\phi)\rangle = 1$, corresponding to $E_0=0$. Compare the cumulant expansion cut off at various orders on a finite sample size to the mean calculated using standard methods as the sample size is varied.
-\end{prob}
-\begin{prob}
-Reading:
+
+\item Reading:
 D. Lee: arXiv:0804.3501 \cite{Lee:2008fa}
 G.P. Lepage: Analysis of algorithms for lattice field theory \cite{Lepage:1989hd}
-\end{prob}
-\begin{prob}
-Add a term
+
+\item Add a term
 \beq
 c \psidag_{\tau} \nabla_{L}^2 \psi_{\tau-1}
 \eeq
 to the simple interaction, \Eq{pointint}, and derive an analytic expression for tuning the couplings, $g_0,c$ in order to eliminate the effective range contribution. You may use either the scattering amplitude or the transfer matrix method.
-\end{prob}
-\begin{prob}
-Write numerical code (Mathematica will suffice) to solve the transfer matrix for two particles for a chosen set of coefficients, $g_{2n}$ (\Eq{tuningcoef}), using $L=32$, $M=5$, and tune your coefficients to match the first few expected L\"uscher eigenvalues at unitarity. Compare your results with those in Table II of Ref.~\cite{EKLN1}.
-\end{prob}
-\begin{prob}
- Add a harmonic potential to your code by modifying the interaction: $X(\tau) \to e^{-U/2}X(\tau)e^{-U/2}$, with the matrix $U$ given by $U_{x,x'} = 1/2 \kappa x^2 \delta_{x,x'}$. Find the energies of two unitary fermions in a harmonic trap, exploring and removing finite volume and discretization effects by varying the parameters, $L,L_0=\left(\kappa M\right)^{-1/4},\omega=\sqrt{\kappa/M}$, and performing extrapolations in these quantities if necessary. Compare your result to the expected value of 2$\omega$. 
-\end{prob}
+
+\item Write numerical code (Mathematica will suffice) to solve the transfer matrix for two particles for a chosen set of coefficients, $g_{2n}$ (\Eq{tuningcoef}), using $L=32$, $M=5$, and tune your coefficients to match the first few expected L\"uscher eigenvalues at unitarity. Compare your results with those in Table II of Ref.~\cite{EKLN1}.
+
+\item Add a harmonic potential to your code by modifying the interaction: $X(\tau) \to e^{-U/2}X(\tau)e^{-U/2}$, with the matrix $U$ given by $U_{x,x'} = 1/2 \kappa x^2 \delta_{x,x'}$. Find the energies of two unitary fermions in a harmonic trap, exploring and removing finite volume and discretization effects by varying the parameters, $L,L_0=\left(\kappa M\right)^{-1/4},\omega=\sqrt{\kappa/M}$, and performing extrapolations in these quantities if necessary. Compare your result to the expected value of 2$\omega$. 
+
+\end{itemize}
 
 \begin{acknowledgement}
 The author would like to thank Michael Endres, David B. Kaplan, and Jong-Wan Lee for extensive discussions, and especially M. Endres for the use of code. AN was supported in part by U.S. DOE grant No. DE-SC00046548. 

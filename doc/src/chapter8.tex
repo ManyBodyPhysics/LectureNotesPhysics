@@ -1,3 +1,17 @@
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]{\bra{#1}#2\ket{#3}}
+\newcommand{\normord}[1]{\left\{#1\right\}}
+
+\label{chap:chapter8}
 \title{High-performance computing Many-body methods and infinite nuclear matter}
 \author{Justin G.~Lietz, Samuel Novario, Gustav R.~Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}
 \institute{Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu}, \and Gustav R.~Jansen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{jansen@ornl.gov}, \and Gaute Hagen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{hageng@ornl.gov},  \and Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}}
@@ -2855,6 +2869,49 @@ This technique gives results which depend much less on the particle number, but 
 
 
 \section{Exercises}
+\begin{prob}
+Show that the onebody part of the Hamiltonian
+    \begin{equation*}
+        \hat{H}_0 = \sum_{pq} \element{p}{\hat{h}_0}{q} a^\dagger_p a_q
+    \end{equation*}
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+    \begin{align*}
+        \hat{H}_0 &= \sum_{pq} \element{p}{\hat{h}_0}{q} a^\dagger_p a_q \nonumber \\
+            &= \sum_{pq} \element{p}{\hat{h}_0}{q} \left\{a^\dagger_p a_q\right\} + 
+                \delta_{pq\in i} \sum_{pq} \element{p}{\hat{h}_0}{q} \nonumber \\
+            &= \sum_{pq} \element{p}{\hat{h}_0}{q} \left\{a^\dagger_p a_q\right\} +
+                \sum_i \element{i}{\hat{h}_0}{i}
+    \end{align*}
+Explain the meaning of the various symbols. Which reference 
+vacuum has been used?
+\end{prob}
+
+\begin{prob}
+Show that the twobody part of the Hamiltonian
+    \begin{equation*}
+        \hat{H}_I = \frac{1}{4} \sum_{pqrs} \element{pq}{\hat{v}}{rs} a^\dagger_p a^\dagger_q a_s  a_r
+    \end{equation*}
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+    \begin{align*}
+    \hat{H}_I &= \frac{1}{4} \sum_{pqrs} \element{pq}{\hat{v}}{rs} a^\dagger_p a^\dagger_q a_s  a_r \nonumber \\
+        &= \frac{1}{4} \sum_{pqrs} \element{pq}{\hat{v}}{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r}
+            + \sum_{pqi} \element{pi}{\hat{v}}{qi} \normord{a^\dagger_p a_q} 
+            + \frac{1}{2} \sum_{ij} \element{ij}{\hat{v}}{ij}
+    \end{align*}
+Explain again the meaning of the various symbols.
+\end{prob}
+
+\begin{prob}
+     Derive the normal-ordered form of the threebody part of the Hamiltonian.
+    \begin{align*}
+    \hat{H}_3 &= \frac{1}{36} \sum_{\substack{
+                        pqr \\
+                        stu}}
+                 \element{pqr}{\hat{v}_3}{stu} a^\dagger_p a^\dagger_q a^\dagger_r a_u a_t a_s\\
+    \end{align*}
+and specify the contributions to the twobody, onebody and the scalar part.
+\end{prob}
+
 
 \begin{prob}
 We present a simplified Hamiltonian consisting of an unperturbed
@@ -2947,6 +3004,9 @@ $\sigma=\pm$ represent the two possible spin values. The interaction
 can only couple pairs and excites therefore only two particles at the
 time.
 
+
+\begin{enumerate}
+\item[a)]
 Show that the unperturbed Hamiltonian $\hat{H}_0$ and $\hat{V}$
   commute with both the spin projection $\hat{S}_z$ and the total spin
   $\hat{S}^2$, given by
@@ -2975,17 +3035,19 @@ and
 \hat{P}^{-}_p = a_{p-}a_{p+},
 \]
 respectively.
-
+\item[b)]
 Show that you can rewrite the Hamiltonian (with $\xi=1$) as
 \[
 \hat{H}=\sum_{p\sigma}(p-1)a_{p\sigma}^{\dagger}a_{p\sigma}
 -\frac{1}{2}g\sum_{pq}\hat{P}^{+}_p\hat{P}^{-}_q.
-\]
+\
+\item[c)]
 Show also that Hamiltonian commutes with the product of the pair
 creation and annihilation operators.  This model corresponds to a
 system with no broken pairs. This means that the Hamiltonian can only
 link two-particle states in so-called spin-reversed states.
 
+\item[d)]
 Construct thereafter the Hamiltonian matrix for a system with no
   broken pairs and total spin $S=0$ for the case of the four lowest
   single-particle levels indicated in the
@@ -3093,21 +3155,7 @@ CI case, there would be an infinite number of them, as we can have
 arbitrarily long chains of operators that still only have at most 2p2h
 intermediate states.
 
-
-We switch now to approximative methods, in our case Hartree-Fock
-  theory and many-body perturbation theory. Hereafter we will define
-  our model space to consist of the single-particle levels $p=1,2$.
-  The remaining levels $p=3,4$ define our excluded space.  This means
-  that our ground state Slater determinant consists of four particles
-  which can be placed in the doubly degenerate orbits $p=1$ and $p=2$.
-  Our first step is to perform a Hartree-Fock calculation with the
-  pairing Hamiltonian.  Write first the normal-ordered Hamiltonian
-  with respect to the above reference state given by four spin $1/2$
-  fermions in the single-particle levels $p=1,2$. Define what is meant
-  by a canonical Hartree-Fock case, a non-canonical case and a general
-  case.  For all three cases, write down the normal-ordered
-  Hamiltonian and draw the diagrammatic form of the Hamiltonian for all three cases.
-
+\item[e)]
 We will now set up the Hartree-Fock equations by varying the
 coefficients of the single-particle functions. The single-particle
 basis functions are defined as
@@ -3123,7 +3171,7 @@ solution. Discuss also which diagrams in Fig.~ref{fig:diagrams} that
 can be affected by a Hartree-Fock basis. Compute the total binding
 energy using a Hartree-Fock basis and comment your results.
 
-
+\item[f)]
 We will now study the system using non-degenerate
 Rayleigh-Schroedinger perturbation theory to third order in the
 interaction.  If we exclude the first order contribution, all possible
@@ -3395,7 +3443,7 @@ This is seen in particular for the results to fourth order. For negative interac
 fourth order gives a better result than second and third order, while for $g>0$ the relative error is
 worse.
 We note also the non-variational character of many-body perturbation theory, with results at different undershooting the true ground state correlation energy
-
+\end{enumerate}
 \end{prob}
 
 
@@ -3411,14 +3459,17 @@ elements and single-particle states with their pertinent quantum
 numbers. Use for example the setup discussed in the FCI lectures for
 the pairing model.
 
+\begin{enumerate}
 
+\item[a)]
 Explain why no single excitations are involved in this model.
 
 
-
+\item[b)]
 Set up the coupled cluster equations for doubles excitations and convince yourself about their
 meaning and correctness.
 
+\item[c)]
 Write a class which holds
 single-particle data like specific quantum numbers, single-particle
 Hamiltonian etc. Write also a class which sets up and stores two-body
@@ -3427,7 +3478,7 @@ thereafter functions/classes which implement the coupled cluster
 method with doubles only.
 
 
-
+\item[d)]
 Compare your results with
 those from the exact diagonalization with and without the $4p4h$
 excitation. Compare also your results to perturbation theory at
@@ -3437,7 +3488,7 @@ theory, you can also compare your results with those obtained from
 Green's function theory. The aim is to finalize this part during the
 first week. The codes you will develop can be used as a starting point
 for the second part of the project.
-
+\end{enumerate}
 \end{prob}
 
 \begin{prob}
@@ -3538,3 +3589,5 @@ This work was supported by NSF Grant No. PHY-1404159 (Michigan State University)
 
 \bibliographystyle{spphys}
 \bibliography{lnplib}
+
+
