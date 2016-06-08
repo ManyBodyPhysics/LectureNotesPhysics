@@ -7,94 +7,95 @@
 \contentsline {titlech}{\numberline {1}Motivation and overarching aims}{1}{section*.4}
 \authcount {1}
 \contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{1}{section*.4}
+\contentsline {section}{References}{3}{section*.5}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-3}
-\contentsline {titlech}{\numberline {2}Quantum Chromodynamics}{3}{section*.5}
+\contentsline {titlech}{\numberline {2}Quantum Chromodynamics}{5}{section*.6}
 \authcount {1}
-\contentsline {authorch}{Thomas Sch\"afer}{3}{section*.5}
-\contentsline {section}{\numberline {2.1}Introduction}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Path integrals and the Metropolis algorithm}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Quantumchromodynamics}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}QCD at zero temperature and density}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}QCD at finite temperature}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}High baryon density QCD}{12}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Lattice QCD}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}The Wilson action}{13}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Fermions on the lattice}{15}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}The QCD vacuum}{17}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Lattice QCD at finite baryon density}{20}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Real time properties}{21}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}Nonequilibrium QCD}{23}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Fluid Dynamics}{23}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Computational fluid dynamics}{25}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Kinetic theory}{27}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Classical field theory}{29}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Nonequilibrium QCD: Holography}{31}{subsection.2.5.5}
-\contentsline {section}{\numberline {2.6}Outlook and acknowledgments}{35}{section.2.6}
-\contentsline {section}{Appendix}{36}{section*.6}
-\contentsline {section}{References}{38}{section*.7}
+\contentsline {authorch}{Thomas Sch\"afer}{5}{section*.6}
+\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Path integrals and the Metropolis algorithm}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Quantumchromodynamics}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}QCD at zero temperature and density}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}QCD at finite temperature}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}High baryon density QCD}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Lattice QCD}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}The Wilson action}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Fermions on the lattice}{17}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}The QCD vacuum}{19}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Lattice QCD at finite baryon density}{22}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Real time properties}{23}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Nonequilibrium QCD}{25}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Fluid Dynamics}{25}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Computational fluid dynamics}{27}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Kinetic theory}{29}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Classical field theory}{31}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Nonequilibrium QCD: Holography}{33}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Outlook and acknowledgments}{37}{section.2.6}
+\contentsline {section}{Appendix}{38}{section*.7}
+\contentsline {section}{References}{40}{section*.8}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-4}
-\contentsline {titlech}{\numberline {3}Lattice quantum chromodynamics approach to nuclear physics}{43}{section*.8}
+\contentsline {titlech}{\numberline {3}Lattice quantum chromodynamics approach to nuclear physics}{45}{section*.9}
 \authcount {1}
-\contentsline {authorch}{Tetsuo Hatsuda}{43}{section*.8}
-\contentsline {section}{\numberline {3.1}General Introduction}{43}{section.3.1}
-\contentsline {section}{\numberline {3.2}Continuum quantum chromodynamics: basics}{43}{section.3.2}
-\contentsline {section}{\numberline {3.3}Lattice quantum chromodynamics: basics}{43}{section.3.3}
-\contentsline {section}{\numberline {3.4}Lattice quantum chromodynamics: applications}{43}{section.3.4}
-\contentsline {section}{\numberline {3.5}Hadron interactions: basics}{43}{section.3.5}
-\contentsline {section}{Appendix}{44}{section*.9}
-\contentsline {section}{References}{44}{section*.10}
+\contentsline {authorch}{Tetsuo Hatsuda}{45}{section*.9}
+\contentsline {section}{\numberline {3.1}General Introduction}{45}{section.3.1}
+\contentsline {section}{\numberline {3.2}Continuum quantum chromodynamics: basics}{45}{section.3.2}
+\contentsline {section}{\numberline {3.3}Lattice quantum chromodynamics: basics}{45}{section.3.3}
+\contentsline {section}{\numberline {3.4}Lattice quantum chromodynamics: applications}{45}{section.3.4}
+\contentsline {section}{\numberline {3.5}Hadron interactions: basics}{45}{section.3.5}
+\contentsline {section}{Appendix}{46}{section*.10}
+\contentsline {section}{References}{46}{section*.11}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-5}
-\contentsline {titlech}{\numberline {4}Theoretical aspects of few-body systems and effective field theories}{45}{section*.11}
+\contentsline {titlech}{\numberline {4}Theoretical aspects of few-body systems and effective field theories}{47}{section*.12}
 \authcount {1}
-\contentsline {authorch}{Hans-Werner Hammer}{45}{section*.11}
-\contentsline {section}{\numberline {4.1}General Introduction}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}More stuff}{45}{section.4.2}
+\contentsline {authorch}{Hans-Werner Hammer}{47}{section*.12}
+\contentsline {section}{\numberline {4.1}General Introduction}{47}{section.4.1}
+\contentsline {section}{\numberline {4.2}More stuff}{47}{section.4.2}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-6}
-\contentsline {titlech}{\numberline {5}Lattice methods and effective field theory}{47}{section*.12}
+\contentsline {titlech}{\numberline {5}Lattice methods and effective field theory}{49}{section*.13}
 \authcount {1}
-\contentsline {authorch}{Amy Nicholson}{47}{section*.12}
-\contentsline {section}{\numberline {5.1}Introduction}{47}{section.5.1}
-\contentsline {section}{\numberline {5.2}Basics of Effective Field Theory and Lattice Effective Field Theory}{49}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Pionless Effective Field Theory}{49}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}Two particle scattering amplitude}{49}{subsubsection.5.2.1.1}
-\contentsline {subsubsection}{\numberline {5.2.1.2}Two-body LECs}{51}{subsubsection.5.2.1.2}
-\contentsline {subsection}{\numberline {5.2.2}Lattice Effective Field Theory}{53}{subsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.2.1}Free field theory}{54}{subsubsection.5.2.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2.2}Interactions}{55}{subsubsection.5.2.2.2}
-\contentsline {subsubsection}{\numberline {5.2.2.3}Importance sampling}{56}{subsubsection.5.2.2.3}
-\contentsline {subsubsection}{\numberline {5.2.2.4}Example formulation}{57}{subsubsection.5.2.2.4}
-\contentsline {subsubsection}{\numberline {5.2.2.5}Tuning the two-body interaction}{59}{subsubsection.5.2.2.5}
-\contentsline {section}{\numberline {5.3}Calculating observables}{63}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Signal-to-noise}{64}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}Sign Problems}{67}{subsubsection.5.3.1.1}
-\contentsline {subsubsection}{\numberline {5.3.1.2}Noise in Many-Body Systems}{69}{subsubsection.5.3.1.2}
-\contentsline {subsection}{\numberline {5.3.2}Statistical Overlap}{70}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Interpolating Fields}{74}{subsection.5.3.3}
-\contentsline {subsubsection}{\numberline {5.3.3.1}Angular momentum in a box}{76}{subsubsection.5.3.3.1}
-\contentsline {subsection}{\numberline {5.3.4}Analysis methods}{77}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Systematic errors and improvement}{81}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Improving the kinetic energy operator}{81}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Improving the interaction}{84}{subsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.2.1}L\"uscher's method}{84}{subsubsection.5.4.2.1}
-\contentsline {subsubsection}{\numberline {5.4.2.2}Applying L\"uscher's method to tune the two-body couplings}{86}{subsubsection.5.4.2.2}
-\contentsline {subsection}{\numberline {5.4.3}Scaling of discretization errors for many-body systems}{89}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Additional sources of systematic error}{92}{subsection.5.4.4}
-\contentsline {section}{\numberline {5.5}Beyond leading order EFT}{93}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Tuning the effective range}{94}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Including pions}{98}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}3- and higher-body interactions}{100}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}Final considerations}{103}{subsection.5.5.4}
-\contentsline {section}{\numberline {5.6}Reading assignments and Exercises}{103}{section.5.6}
-\contentsline {section}{References}{104}{section*.13}
+\contentsline {authorch}{Amy Nicholson}{49}{section*.13}
+\contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}
+\contentsline {section}{\numberline {5.2}Basics of Effective Field Theory and Lattice Effective Field Theory}{51}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Pionless Effective Field Theory}{51}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Two particle scattering amplitude}{51}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}Two-body LECs}{53}{subsubsection.5.2.1.2}
+\contentsline {subsection}{\numberline {5.2.2}Lattice Effective Field Theory}{55}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Free field theory}{56}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Interactions}{57}{subsubsection.5.2.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.3}Importance sampling}{58}{subsubsection.5.2.2.3}
+\contentsline {subsubsection}{\numberline {5.2.2.4}Example formulation}{59}{subsubsection.5.2.2.4}
+\contentsline {subsubsection}{\numberline {5.2.2.5}Tuning the two-body interaction}{61}{subsubsection.5.2.2.5}
+\contentsline {section}{\numberline {5.3}Calculating observables}{65}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Signal-to-noise}{66}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Sign Problems}{69}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Noise in Many-Body Systems}{71}{subsubsection.5.3.1.2}
+\contentsline {subsection}{\numberline {5.3.2}Statistical Overlap}{72}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Interpolating Fields}{76}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}Angular momentum in a box}{78}{subsubsection.5.3.3.1}
+\contentsline {subsection}{\numberline {5.3.4}Analysis methods}{79}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Systematic errors and improvement}{83}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Improving the kinetic energy operator}{83}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Improving the interaction}{86}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}L\"uscher's method}{86}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Applying L\"uscher's method to tune the two-body couplings}{88}{subsubsection.5.4.2.2}
+\contentsline {subsection}{\numberline {5.4.3}Scaling of discretization errors for many-body systems}{91}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Additional sources of systematic error}{94}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Beyond leading order EFT}{95}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Tuning the effective range}{96}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Including pions}{100}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}3- and higher-body interactions}{102}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Final considerations}{105}{subsection.5.5.4}
+\contentsline {section}{\numberline {5.6}Reading assignments and Exercises}{105}{section.5.6}
+\contentsline {section}{References}{106}{section*.14}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-7}
-\contentsline {titlech}{\numberline {6}Lattice methods and the nuclear few- and many-body problem}{111}{section*.14}
+\contentsline {titlech}{\numberline {6}Lattice methods and the nuclear few- and many-body problem}{111}{section*.15}
 \authcount {1}
-\contentsline {authorch}{Dean Lee}{111}{section*.14}
+\contentsline {authorch}{Dean Lee}{111}{section*.15}
 \contentsline {section}{\numberline {6.1}Introduction}{111}{section.6.1}
 \contentsline {section}{\numberline {6.2}Scattering on the lattice}{112}{section.6.2}
 \contentsline {section}{\numberline {6.3}Lattice formalisms}{114}{section.6.3}
@@ -105,12 +106,12 @@
 \contentsline {section}{\numberline {6.4}Projection Monte Carlo}{119}{section.6.4}
 \contentsline {section}{\numberline {6.5}Importance sampling}{120}{section.6.5}
 \contentsline {section}{\numberline {6.6}Exercises}{125}{section.6.6}
-\contentsline {section}{References}{126}{section*.15}
+\contentsline {section}{References}{126}{section*.16}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-8}
-\contentsline {titlech}{\numberline {7}From few to many nucleons and methods for nuclear reactions}{129}{section*.16}
+\contentsline {titlech}{\numberline {7}From few to many nucleons and methods for nuclear reactions}{129}{section*.17}
 \authcount {1}
-\contentsline {authorch}{Giuseppina Orlandini}{129}{section*.16}
+\contentsline {authorch}{Giuseppina Orlandini}{129}{section*.17}
 \contentsline {section}{\numberline {7.1}The Nuclear few- and many-body problem}{129}{section.7.1}
 \contentsline {section}{\numberline {7.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{129}{section.7.2}
 \contentsline {section}{\numberline {7.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{129}{section.7.3}
@@ -118,73 +119,73 @@
 \contentsline {section}{\numberline {7.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{129}{section.7.5}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-9}
-\contentsline {titlech}{\numberline {8}High-performance computing Many-body methods and infinite nuclear matter}{131}{section*.17}
+\contentsline {titlech}{\numberline {8}High-performance computing Many-body methods and infinite nuclear matter}{131}{section*.18}
 \authcount {1}
-\contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{131}{section*.17}
+\contentsline {authorch}{Justin G.\nobreakspace {}Lietz, Samuel Novario, Gustav R.\nobreakspace {}Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{131}{section*.18}
 \contentsline {section}{\numberline {8.1}Introduction}{131}{section.8.1}
-\contentsline {section}{\numberline {8.2}Single-particle basis, Hamiltonians and models for the nuclear force}{132}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Introduction to nuclear matter and Hamiltonians}{132}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Single-particle basis for infinite matter}{137}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.2}Single-particle basis, Hamiltonians and models for the nuclear force}{133}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Introduction to nuclear matter and Hamiltonians}{133}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Single-particle basis for infinite matter}{138}{subsection.8.2.2}
 \contentsline {subsection}{\numberline {8.2.3}Two-body interaction}{140}{subsection.8.2.3}
 \contentsline {subsection}{\numberline {8.2.4}Models from Efective field theory for the two- and three-nucleon interactions}{142}{subsection.8.2.4}
 \contentsline {section}{\numberline {8.3}Hartree-Fock theory}{145}{section.8.3}
-\contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{148}{section.8.4}
+\contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{149}{section.8.4}
 \contentsline {subsection}{\numberline {8.4.1}Example of a Hamiltonian matrix}{150}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}A non-practical way of solving the eigenvalue problem}{151}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.2}A non-practical way of solving the eigenvalue problem}{152}{subsection.8.4.2}
 \contentsline {subsection}{\numberline {8.4.3}Summarizing FCI and bringing in approximative methods}{153}{subsection.8.4.3}
 \contentsline {section}{\numberline {8.5}Many-body perturbation theory}{154}{section.8.5}
 \contentsline {subsection}{\numberline {8.5.1}Interpreting the correlation energy and the wave operator}{157}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}The Breuckner $G$-matrix}{158}{subsection.8.5.2}
-\contentsline {section}{\numberline {8.6}Coupled cluster theory}{163}{section.8.6}
-\contentsline {subsection}{\numberline {8.6.1}Introduction}{163}{subsection.8.6.1}
+\contentsline {subsection}{\numberline {8.5.2}The Breuckner $G$-matrix}{159}{subsection.8.5.2}
+\contentsline {section}{\numberline {8.6}Coupled cluster theory}{164}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}Introduction}{164}{subsection.8.6.1}
 \contentsline {subsection}{\numberline {8.6.2}A quick tour of Coupled Cluster theory}{164}{subsection.8.6.2}
 \contentsline {subsection}{\numberline {8.6.3}The CCD approximation}{166}{subsection.8.6.3}
-\contentsline {paragraph}{Approximations to the full CCD equations.}{167}{section*.18}
-\contentsline {section}{\numberline {8.7}Developing a numerical project}{168}{section.8.7}
+\contentsline {paragraph}{Approximations to the full CCD equations.}{167}{section*.19}
+\contentsline {section}{\numberline {8.7}Developing a numerical project}{169}{section.8.7}
 \contentsline {section}{\numberline {8.8}Conclusions}{178}{section.8.8}
 \contentsline {section}{\numberline {8.9}Exercises}{178}{section.8.9}
-\contentsline {section}{References}{189}{section*.19}
+\contentsline {section}{References}{191}{section*.20}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-10}
-\contentsline {titlech}{\numberline {9}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{191}{section*.20}
+\contentsline {titlech}{\numberline {9}Variational and diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{193}{section*.21}
 \authcount {1}
-\contentsline {authorch}{Francesco Pederiva}{191}{section*.20}
-\contentsline {section}{\numberline {9.1}The Nuclear few- and many-body problem}{191}{section.9.1}
-\contentsline {section}{\numberline {9.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{191}{section.9.2}
-\contentsline {section}{\numberline {9.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{191}{section.9.3}
-\contentsline {section}{\numberline {9.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{191}{section.9.4}
-\contentsline {section}{\numberline {9.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{191}{section.9.5}
+\contentsline {authorch}{Francesco Pederiva}{193}{section*.21}
+\contentsline {section}{\numberline {9.1}The Nuclear few- and many-body problem}{193}{section.9.1}
+\contentsline {section}{\numberline {9.2}Methods for bound states based on the variational principle I:The No Core Shell Model (NCSM)}{193}{section.9.2}
+\contentsline {section}{\numberline {9.3}Methods for bound states based on the variational principle II:The Hyperspherical Harmonics (HH) method}{193}{section.9.3}
+\contentsline {section}{\numberline {9.4}Methods for reactions involving continuum states I:Perturbation induced reactions and integral transforms}{193}{section.9.4}
+\contentsline {section}{\numberline {9.5}Methods for reactions involving continuum states II:The continuum state problem reduced to a bound state problem}{193}{section.9.5}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-11}
-\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{193}{section*.21}
+\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{195}{section*.22}
 \authcount {1}
-\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{193}{section*.21}
-\contentsline {section}{\numberline {10.1}Introduction}{194}{section.10.1}
-\contentsline {section}{\numberline {10.2}IM-SRG Flow Equations}{194}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Preliminaries}{194}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Normal Ordering and Wick's Theorem}{195}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Normal-Ordered Hamiltonian}{196}{subsection.10.2.3}
-\contentsline {subsection}{\numberline {10.2.4}$M$-Scheme Flow Equations}{197}{subsection.10.2.4}
-\contentsline {subsection}{\numberline {10.2.5}$J$-Scheme Flow Equations}{198}{subsection.10.2.5}
-\contentsline {subsection}{\numberline {10.2.6}General Observables}{199}{subsection.10.2.6}
-\contentsline {section}{\numberline {10.3}Choice of Generator}{200}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Decoupling}{200}{subsection.10.3.1}
-\contentsline {subsection}{\numberline {10.3.2}White Generators}{202}{subsection.10.3.2}
-\contentsline {subsection}{\numberline {10.3.3}Imaginary-Time Generators}{203}{subsection.10.3.3}
-\contentsline {subsection}{\numberline {10.3.4}Wegner Generators}{204}{subsection.10.3.4}
-\contentsline {subsection}{\numberline {10.3.5}Decay Scales}{205}{subsection.10.3.5}
-\contentsline {section}{\numberline {10.4}In-medium SRG studies of infinite matter}{206}{section.10.4}
+\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{195}{section*.22}
+\contentsline {section}{\numberline {10.1}Introduction}{196}{section.10.1}
+\contentsline {section}{\numberline {10.2}IM-SRG Flow Equations}{196}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Preliminaries}{196}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Normal Ordering and Wick's Theorem}{197}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Normal-Ordered Hamiltonian}{198}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}$M$-Scheme Flow Equations}{199}{subsection.10.2.4}
+\contentsline {subsection}{\numberline {10.2.5}$J$-Scheme Flow Equations}{200}{subsection.10.2.5}
+\contentsline {subsection}{\numberline {10.2.6}General Observables}{201}{subsection.10.2.6}
+\contentsline {section}{\numberline {10.3}Choice of Generator}{202}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Decoupling}{202}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}White Generators}{204}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Imaginary-Time Generators}{205}{subsection.10.3.3}
+\contentsline {subsection}{\numberline {10.3.4}Wegner Generators}{206}{subsection.10.3.4}
+\contentsline {subsection}{\numberline {10.3.5}Decay Scales}{207}{subsection.10.3.5}
+\contentsline {section}{\numberline {10.4}In-medium SRG studies of infinite matter}{208}{section.10.4}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-12}
-\contentsline {titlech}{\numberline {11}Green's function approaches}{207}{section*.22}
+\contentsline {titlech}{\numberline {11}Green's function approaches}{209}{section*.23}
 \authcount {1}
-\contentsline {authorch}{Carlo Barbieri and Adriana Carbone}{207}{section*.22}
-\contentsline {section}{\numberline {11.1}Concluding remarks}{207}{section.11.1}
+\contentsline {authorch}{Carlo Barbieri and Adriana Carbone}{209}{section*.23}
+\contentsline {section}{\numberline {11.1}Concluding remarks}{209}{section.11.1}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-13}
-\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{209}{section*.23}
+\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{211}{section*.24}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{209}{section*.23}
-\contentsline {section}{\numberline {12.1}Concluding remarks}{209}{section.12.1}
-\contentsline {section}{\numberline {12.2}Perspectives}{209}{section.12.2}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{211}{section*.24}
+\contentsline {section}{\numberline {12.1}Concluding remarks}{211}{section.12.1}
+\contentsline {section}{\numberline {12.2}Perspectives}{211}{section.12.2}
 \gdef \the@ipfilectr {}
