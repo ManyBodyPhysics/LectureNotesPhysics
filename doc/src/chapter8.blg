@@ -5,6 +5,7 @@ The style file: spphys.bst
 Database file #1: lnplib.bib
 Warning--I didn't find a database entry for "prakash2006"
 Warning--I didn't find a database entry for "symmetryenergy2013"
+Warning--I didn't find a database entry for "minnesota"
 Warning--I didn't find a database entry for "weinberg1990"
 Warning--I didn't find a database entry for "weinberg1991"
 Warning--I didn't find a database entry for "ordonez1992"
@@ -14,7 +15,7 @@ Warning--I didn't find a database entry for "vankolck1999"
 Warning--I didn't find a database entry for "carlsson2014"
 You've used 33 entries,
             2812 wiz_defined-function locations,
-            822 strings with 10886 characters,
+            823 strings with 10895 characters,
 and the built_in function-call counts, 12014 in all, are:
 = -- 764
 > -- 384
@@ -53,4 +54,4 @@ warning$ -- 0
 while$ -- 63
 width$ -- 35
 write$ -- 336
-(There were 9 warnings)
+(There were 10 warnings)
