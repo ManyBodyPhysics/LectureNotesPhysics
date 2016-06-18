@@ -51,6 +51,54 @@ Repeated entry---line 8743 of file lnplib.bib
  : @article{Luscher:1986pf
  :                        ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 12980 of file lnplib.bib
+ : @article{Bedaque:1998kg
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 12992 of file lnplib.bib
+ : @article{Bedaque:1998km
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13042 of file lnplib.bib
+ : @article{Braaten:2004rn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13096 of file lnplib.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13131 of file lnplib.bib
+ : @article{Fleming:1999ee
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13196 of file lnplib.bib
+ : @article{Kaplan:2005es
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13231 of file lnplib.bib
+ : @article{Kaplan:1998tg
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13244 of file lnplib.bib
+ : @article{Kaplan:1998we
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13258 of file lnplib.bib
+ : @article{Kaplan:1996xu
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13321 of file lnplib.bib
+ : @article{Machleidt:2011zz
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13384 of file lnplib.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13393 of file lnplib.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in Berkowitz:2015eaa
 Warning--empty journal in Kurth:2015cvl
 Warning--empty booktitle in Epelbaum:2010nr
@@ -105,4 +153,4 @@ warning$ -- 13
 while$ -- 290
 width$ -- 159
 write$ -- 1472
-(There were 12 error messages)
+(There were 24 error messages)

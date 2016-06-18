@@ -59,6 +59,22 @@ Repeated entry---line 8834 of file lnplib.bib
  : @article{Carlson:2014vla
  :                         ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 13004 of file lnplib.bib
+ : @article{Bedaque:2002mn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13096 of file lnplib.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13384 of file lnplib.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13393 of file lnplib.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in Elhatisari:2016owd
 Warning--empty journal in Lu:2015riz
 Warning--empty journal in Rokash:2015hra
@@ -103,4 +119,4 @@ warning$ -- 3
 while$ -- 96
 width$ -- 52
 write$ -- 447
-(There were 14 error messages)
+(There were 18 error messages)
