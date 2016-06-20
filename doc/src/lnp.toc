@@ -174,16 +174,16 @@
 \contentsline {subsection}{\numberline {8.3.1}Hartree-Fock algorithm with simple Python code}{192}{subsection.8.3.1}
 \contentsline {section}{\numberline {8.4}Full Configuration Interaction Theory}{193}{section.8.4}
 \contentsline {subsection}{\numberline {8.4.1}A non-practical way of solving the eigenvalue problem}{197}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}Summarizing FCI and bringing in approximative methods}{198}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.2}Short summary}{199}{subsection.8.4.2}
 \contentsline {section}{\numberline {8.5}Many-body perturbation theory}{199}{section.8.5}
 \contentsline {subsection}{\numberline {8.5.1}Interpreting the correlation energy and the wave operator}{202}{subsection.8.5.1}
 \contentsline {subsection}{\numberline {8.5.2}The Breuckner $G$-matrix}{204}{subsection.8.5.2}
-\contentsline {section}{\numberline {8.6}Coupled cluster theory}{208}{section.8.6}
+\contentsline {section}{\numberline {8.6}Coupled cluster theory}{209}{section.8.6}
 \contentsline {subsection}{\numberline {8.6.1}Introduction}{209}{subsection.8.6.1}
 \contentsline {subsection}{\numberline {8.6.2}A quick tour of Coupled Cluster theory}{209}{subsection.8.6.2}
 \contentsline {subsection}{\numberline {8.6.3}The CCD approximation}{211}{subsection.8.6.3}
 \contentsline {paragraph}{Approximations to the full CCD equations.}{212}{section*.23}
-\contentsline {section}{\numberline {8.7}Developing a numerical project}{213}{section.8.7}
+\contentsline {section}{\numberline {8.7}Developing a numerical project}{214}{section.8.7}
 \contentsline {section}{\numberline {8.8}Conclusions}{223}{section.8.8}
 \contentsline {section}{\numberline {8.9}Exercises}{223}{section.8.9}
 \contentsline {section}{\numberline {8.10}Solutions to selected exercises}{231}{section.8.10}

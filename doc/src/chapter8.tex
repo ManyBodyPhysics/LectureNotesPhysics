@@ -7,18 +7,21 @@
 \author{Justin G.~Lietz, Samuel Novario, Gustav R.~Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}
 \institute{Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu}, \and Gustav R.~Jansen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{jansen@ornl.gov}, \and Gaute Hagen \at Oak Ridge National Laboratory, Physics Division, Oak Ridge, Tennessee, USA and Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA, \email{hageng@ornl.gov},  \and Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}}
 
-\maketitle
-\abstract{We present a computational approach to infinite nuclear matter employing
-Hartree-Fock theory, many-body perturbation theory and coupled cluster
-theory. These lectures are closely linked with those in
-chapters \ref{chap:chapter9}, \ref{chap:chapter10} and \ref{chap:chapter11} and serve as
-input for the correlation functions employed in Monte Carlo
-calculations in chapter \ref{chap:chapter9}, the in-medium similarity renormalization group theory of
-dense fermionic systems of chapter chapter \ref{chap:chapter10} and the Green's function approach in chapter \ref{chap:chapter11}.  We provide extensive code examples and
-benchmark calculations, allowing thereby an eventual reader to start
-writing her/his own codes. We start with an object-oriented serial
-code and end with in-depth discussions on strategies for porting the
-code to present and planned high-performance computing facilities. }
+\maketitle 
+\abstract{We present a computational approach to infinite
+  nuclear matter employing Hartree-Fock theory, many-body perturbation
+  theory and coupled cluster theory. These lectures are closely linked
+  with those in chapters \ref{chap:chapter9}, \ref{chap:chapter10} and
+  \ref{chap:chapter11} and serve as input for the correlation
+  functions employed in Monte Carlo calculations in chapter
+  \ref{chap:chapter9}, the in-medium similarity renormalization group
+  theory of dense fermionic systems of chapter chapter
+  \ref{chap:chapter10} and the Green's function approach in chapter
+  \ref{chap:chapter11}.  We provide extensive code examples and
+  benchmark calculations, allowing thereby an eventual reader to start
+  writing her/his own codes. We start with an object-oriented serial
+  code and end with in-depth discussions on strategies for porting the
+  code to present and planned high-performance computing facilities. }
 
 
 %\maketile
@@ -53,17 +56,19 @@ nucleonic matter.  In recent years, there has been a considerable
 algorithmic development of first principle (or {\em ab initio})
 methods for solving the nuclear many-body problem. Linked with a
 similar progress in the derivation of nuclear forces based on
-effective field theory (EFT), see chapters four, five and six  of the present text and Refs.~\cite{vankolck1994,machleidt2011,epelbaum2009}, 
-we are now in a
-situation where reliable results can be provided at different levels
-of approximation.  The nuclear Hamiltonians which are now used
-routinely in nuclear structure and nuclear matter calculations,
-include both $NN$ and 3NFs derived from EFT, see for example
+effective field theory (EFT), see chapters four, five and six of the
+present text and Refs.~\cite{vankolck1994,machleidt2011,epelbaum2009},
+we are now in a situation where reliable results can be provided at
+different levels of approximation.  The nuclear Hamiltonians which are
+now used routinely in nuclear structure and nuclear matter
+calculations, include both $NN$ and 3NFs derived from EFT, see for
+example
 Refs.~\cite{hammer2013,binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,krueger2013,carbone2013}.
 Parallel to the development of nuclear forces from EFT, which employs
 symmetries of quantum chromodynamics, there are recent and promising
 approaches to derive the EoS using forces constrained from lattice
-quantum chromodynamics calculations \cite{tetsuo2013}, see chapters 2 and 3 of the present text.
+quantum chromodynamics calculations \cite{tetsuo2013}, see chapters 2
+and 3 of the present text.
 
 Theoretical studies of nuclear matter and the pertinent EoS span back
 to the very early days of nuclear many-body physics. These early
@@ -1418,7 +1423,7 @@ $\hat{C}$.  Our pairing model discussed in problem \ref{prob:pairingmodel} is an
 To better understand the meaning of possible configurations and the derivation of a Hamiltonian matrix, we consider here a simple example
 of six fermions. We assume we can make an ansatz for the ground state with all six fermions below the Fermi level. We will label this state as a zero-particle-zero-hole state $0p-0h$. With six nucleons we can make 
 at most $6p-6h$ excitations. If we have an infinity of single particle states above the Fermi level, we will obviously have an infinity of say $2p-2h$ excitations. Each such way to configure the particles represents  a configuration. We will always have to truncate in the basis of single-particle states.
-This gives us a finite number of possible Slater determinants. Our Hamiltonian matrix would then look like (where each block is marked with $x$ can contain a large quantity of non-zero matrix elements) as shown here
+This gives us a finite number of possible Slater determinants. Our Hamiltonian matrix would then look like (where each block which is marked with $x$ can contain a large quantity of non-zero matrix elements) as shown here
 \begin{table}
 \begin{center}
 \begin{tabular}{cccccccc}
@@ -1460,16 +1465,16 @@ If we make truncations, we have different possibilities
 \begin{itemize}
 \item The standard nuclear shell-model. Here we define an effective Hilbert space with respect to a given core. The calculations are normally then performed for all many-body states that can be constructed from the effective Hilbert spaces. This approach requires a properly defined effective Hamiltonian.
 
-\item We can truncate in the number of excitations. For example, we can limit the possible Slater determinants to only $1p-1h$ and $2p-2h$ excitations. This is called a configuration interaction calculation at the level of singles and doubles excitations. If we truncate at the level of three-particle-three-hole excitations we end up singles, doubles and triples excitations.  
+\item We can truncate in the number of excitations. For example, we can limit the possible Slater determinants to only $1p-1h$ and $2p-2h$ excitations. This is called a configuration interaction calculation at the level of singles and doubles excitations. If we truncate at the level of three-particle-three-hole excitations we end up with singles, doubles and triples excitations.  Such truncations reduce considerably the size of the Hamiltonian matrices to be diagonalized, but can lead to so-called unlinked contributions, and thereby wrong results, for a given expectation value \cite{barrettmusial2007}. 
 
-\item We can limit the number of excitations in terms of the excitation energies. If we do not define a core, this defines normally what is called the no-core shell-model approach. 
+\item We can limit the number of excitations in terms of the excitation energies. If we do not define a core, this defines normally what is called the no-core shell-model approach \cite{navratil2009}. 
 \end{itemize}
 
 \subsection{A non-practical way of solving the eigenvalue problem}
 
-For reasons to come (links with coupled cluster theory and Many-Body perturbation theory), 
+For reasons to come (links with coupled cluster theory and many-body perturbation theory), 
 we will rewrite Eq.~(\ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients $C_H^P$. 
-To obtain the eigenstates and eigenvalues in terms of non-linear equations is not a very practical approach. However, it serves the scope of linking FCI theory with approximative solutions to the many-body problem.
+To obtain the eigenstates and eigenvalues in terms of non-linear equations is, from a computational perspective, as a inefficient as finding the roots (and thereby eigenvalues) of the characteristic polynomial. However, this digression  serves the scope of linking full configuration interaction  theory with approximative solutions to the many-body problem.
 
 To see this, we look at the contributions arising from 
 \[
@@ -1480,8 +1485,10 @@ from the left in
 \[
 (\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
 \]
-If we assume that we have a two-body operator at most, Slater's rule, see  problem \ref{prob:hamiltoniansetup}, gives then an equation for the 
-correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
+If we assume that we have a two-body operator at most, the Slater-Condon rule for a two-body interaction, 
+see  problem \ref{prob:hamiltoniansetup}, results in an
+expression for  the 
+correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only
 \[
 \langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
 \sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
@@ -1500,7 +1507,7 @@ Hamiltonian.
 In our notes on Hartree-Fock calculations, we have already computed
 the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and
 $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a
-Hartree-Fock basis, then the matrix elements $\langle \Phi_0 |
+Hartree-Fock basis,  $\langle \Phi_0 |
 \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a
 \emph{correlation energy} given by
 \[
@@ -1551,16 +1558,14 @@ A standard choice for the first iteration is to set
 C_{ij}^{ab} =\frac{\langle ij \vert \hat{v} \vert ab \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
 \]
 At the end we can rewrite our solution of the Schr\"odinger equation in terms of a series coupled equations for the coefficients $C_H^P$.
-This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
+This is a very cumbersome way of solving a many-body problem. However, by using this iterative scheme we can illustrate how we can compute the
 various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
-as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with coupled cluster theory and
-many-body perturbation theory.
+as parts of different many-body approximations to full configuration interaction theory. 
+
+\subsection{Short summary}
 
 
-\subsection{Summarizing FCI and bringing in approximative methods}
-
-
-If we can diagonalize large matrices, FCI is the method of choice since
+If we can diagonalize large matrices, full configuration uteraction theory is the method of choice since
 \begin{itemize}
 \item It gives all eigenvalues, ground state and excited states.
 
@@ -1582,13 +1587,13 @@ The energy of say the ground state is then
 \[
 E=E_{\mathrm{Ref}}+\Delta E,
 \]
-where the so-called reference energy is the energy we obtain from say a Hartree-Fock calculation
+where the so-called reference energy is the energy we can obtain from a Hartree-Fock calculation
 However, as we have seen, even for a small case like the four first major shells and a nucleus like oxygen-16, the dimensionality becomes quickly intractable. If we wish to include single-particle states that reflect weakly bound systems, we need a much larger single-particle basis. We need thus approximative methods that sum specific correlations to infinite order. 
 All these methods start normally with a Hartree-Fock basis as the calculational basis. In the next section we discuss one of these possible approximative methods, namely many-body perturbation theory. 
 
 \section{Many-body perturbation theory}
 
-We assume here that we are only interested in a non-degenerate ground state of the system and 
+We assume here that we are only interested in the non-degenerate ground state of a given system and 
 expand the exact wave function in term of a series of Slater determinants
 \[
 \vert \Psi_0\rangle = \vert \Phi_0\rangle + \sum_{m=1}^{\infty}C_m\vert \Phi_m\rangle,
@@ -1768,7 +1773,7 @@ being the third-order contribution.
 
 \subsection{Interpreting the correlation energy and the wave operator}
 
-In the FCI section  we showed that we could rewrite the exact state function for say the ground state, as a linear expansion in terms of all possible Slater determinants. 
+In the FCI section  we showed that we could rewrite the exact state function for  the ground state as a linear expansion in terms of all possible Slater determinants. 
 We expanded then  (as an example) our exact state function for the ground state as
 \[
 |\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots

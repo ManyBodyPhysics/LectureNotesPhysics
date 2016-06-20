@@ -113,7 +113,7 @@
 \BOOKMARK [2][-]{subsection.8.3.1}{Hartree-Fock algorithm with simple Python code}{section.8.3}% 113
 \BOOKMARK [1][-]{section.8.4}{Full Configuration Interaction Theory}{section*.22}% 114
 \BOOKMARK [2][-]{subsection.8.4.1}{A non-practical way of solving the eigenvalue problem}{section.8.4}% 115
-\BOOKMARK [2][-]{subsection.8.4.2}{Summarizing FCI and bringing in approximative methods}{section.8.4}% 116
+\BOOKMARK [2][-]{subsection.8.4.2}{Short summary}{section.8.4}% 116
 \BOOKMARK [1][-]{section.8.5}{Many-body perturbation theory}{section*.22}% 117
 \BOOKMARK [2][-]{subsection.8.5.1}{Interpreting the correlation energy and the wave operator}{section.8.5}% 118
 \BOOKMARK [2][-]{subsection.8.5.2}{The Breuckner G-matrix}{section.8.5}% 119

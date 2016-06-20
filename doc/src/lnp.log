@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 JUN 2016 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 JUN 2016 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1373,7 +1373,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 176
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 177
- []\T1/fve/m/n/10 198
+ []\T1/fve/m/n/10 199
  []
 
 
@@ -1393,7 +1393,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 180
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 181
- []\T1/fve/m/n/10 208
+ []\T1/fve/m/n/10 209
  []
 
 
@@ -1413,7 +1413,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 184
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 186
- []\T1/fve/m/n/10 213
+ []\T1/fve/m/n/10 214
  []
 
 
@@ -6149,15 +6149,15 @@ Underfull \hbox (badness 2884) in paragraph at lines 176--181
 ] [175] [176]
 [177]
 
-LaTeX Warning: Citation `prakash2006' on page 178 undefined on input line 217.
+LaTeX Warning: Citation `prakash2006' on page 178 undefined on input line 222.
 
 [178]
 
 LaTeX Warning: Citation `symmetryenergy2013' on page 179 undefined on input lin
-e 280.
+e 285.
 
 [179]
-Overfull \hbox (6.34229pt too wide) in paragraph at lines 362--363
+Overfull \hbox (6.34229pt too wide) in paragraph at lines 367--368
 []\T1/fve/m/n/10 Now we im-pose anti-symmetry, by hav-ing the fermion op-er-a-t
 ors sat-isfy the anti-commutation
  []
@@ -6165,212 +6165,216 @@ ors sat-isfy the anti-commutation
 [180]
 
 LaTeX Warning: Reference `eq:kineticenergy' on page 181 undefined on input line
- 412.
+ 417.
 
 [181]
 
 LaTeX Warning: Reference `problem:prob8kinetic' on page 182 undefined on input 
-line 501.
+line 506.
 
 [182] [183] [184] [185]
 
-LaTeX Warning: Citation `minnesota' on page 186 undefined on input line 729.
+LaTeX Warning: Citation `minnesota' on page 186 undefined on input line 734.
 
 
-LaTeX Warning: Citation `minnesota' on page 186 undefined on input line 739.
+LaTeX Warning: Citation `minnesota' on page 186 undefined on input line 744.
 
 
-LaTeX Warning: Citation `weinberg1990' on page 186 undefined on input line 758.
-
-
-
-LaTeX Warning: Citation `weinberg1991' on page 186 undefined on input line 758.
+LaTeX Warning: Citation `weinberg1990' on page 186 undefined on input line 763.
 
 
 
-LaTeX Warning: Citation `ordonez1992' on page 186 undefined on input line 758.
+LaTeX Warning: Citation `weinberg1991' on page 186 undefined on input line 763.
 
 
-LaTeX Warning: Citation `ordonez1994' on page 186 undefined on input line 758.
+
+LaTeX Warning: Citation `ordonez1992' on page 186 undefined on input line 763.
 
 
-LaTeX Warning: Citation `ordonez1996' on page 186 undefined on input line 758.
+LaTeX Warning: Citation `ordonez1994' on page 186 undefined on input line 763.
 
 
-LaTeX Warning: Citation `vankolck1999' on page 186 undefined on input line 758.
+LaTeX Warning: Citation `ordonez1996' on page 186 undefined on input line 763.
+
+
+LaTeX Warning: Citation `vankolck1999' on page 186 undefined on input line 763.
 
 
 [186]
 
-LaTeX Warning: Citation `carlsson2016' on page 187 undefined on input line 798.
+LaTeX Warning: Citation `carlsson2016' on page 187 undefined on input line 803.
 
 
 <Chapter8-figures/diagNNLO.pdf, id=4580, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
-Package pdftex.def Info: Chapter8-figures/diagNNLO.pdf used on input line 802.
+Package pdftex.def Info: Chapter8-figures/diagNNLO.pdf used on input line 807.
 (pdftex.def)             Requested size: 1803.73438pt x 1574.87991pt.
 
 
-LaTeX Warning: Citation `weinberg1990' on page 187 undefined on input line 816.
+LaTeX Warning: Citation `weinberg1990' on page 187 undefined on input line 821.
 
 
 
-LaTeX Warning: Citation `weinberg1991' on page 187 undefined on input line 816.
+LaTeX Warning: Citation `weinberg1991' on page 187 undefined on input line 821.
 
 
 [187 <./Chapter8-figures/diagNNLO.pdf>]
 
-LaTeX Warning: Citation `carlsson2014' on page 188 undefined on input line 899.
+LaTeX Warning: Citation `carlsson2014' on page 188 undefined on input line 904.
 
 
 [188] [189]
 
 LaTeX Warning: Reference `problem:prob8.9' on page 190 undefined on input line 
-1066.
+1071.
 
 [190] [191] [192] [193] [194] [195]
 
 LaTeX Warning: Reference `prob:pairingmodel' on page 196 undefined on input lin
-e 1415.
+e 1420.
 
 
 LaTeX Warning: Reference `prob:hamiltoniansetup' on page 196 undefined on input
- line 1439.
+ line 1444.
 
 [196]
 
+LaTeX Warning: Citation `barrettmusial2007' on page 197 undefined on input line
+ 1468.
+
+
 LaTeX Warning: Reference `prob:hamiltoniansetup' on page 197 undefined on input
- line 1483.
+ line 1489.
 
-[197] [198] [199] [200] [201]
+[197] [198] [199] [200] [201] [202]
 
-LaTeX Warning: Reference `prob:pairingmodel' on page 202 undefined on input lin
-e 1796.
+LaTeX Warning: Reference `prob:pairingmodel' on page 203 undefined on input lin
+e 1801.
 
-[202] [203]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1861.
-
+[203]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1861.
+(hyperref)                removing `math shift' on input line 1866.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1866.
 
 
 LaTeX Warning: Reference `fig:goldstone' on page 204 undefined on input line 19
-08.
+13.
 
 [204]
 
 LaTeX Warning: Reference `fig:goldstone' on page 205 undefined on input line 19
-87.
+92.
 
 [205]
 
 LaTeX Warning: Reference `fig:goldstone' on page 206 undefined on input line 20
-34.
+39.
 
 
 LaTeX Warning: Reference `fig:goldstone' on page 206 undefined on input line 20
-35.
+40.
 
 [206] [207] [208] [209] [210] [211] [212] [213] [214]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 2578.
+(Font)              using `T1/fve/m/n' instead on input line 2583.
 
 [215] [216] [217] [218] [219]
-Overfull \hbox (61.6545pt too wide) in paragraph at lines 2802--2802
+Overfull \hbox (61.6545pt too wide) in paragraph at lines 2807--2807
 [] 
  []
 
-[220] <Chapter8-figures/fig1.pdf, id=4864, 500.87437pt x 400.11984pt>
+[220] <Chapter8-figures/fig1.pdf, id=4866, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2806.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 2811.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=4865, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=4867, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2812.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 2817.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
  [221] [222 <./Chapter8-figures/fig1.pdf>]
-<Chapter8-figures/fig3.pdf, id=4943, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=4945, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2851.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 2856.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=4944, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=4946, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2857.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 2862.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
  [223 <./Chapter8-figures/fig2.pdf>] [224 <./Chapter8-figures/fig3.pdf>]
 
-LaTeX Warning: Citation `minnesota' on page 225 undefined on input line 2937.
+LaTeX Warning: Citation `minnesota' on page 225 undefined on input line 2942.
 
 [225 <./Chapter8-figures/fig4.pdf>] [226] [227]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 3109--3114
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 3114--3119
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
 [228] [229]
 
-LaTeX Warning: Reference `fig:diagrams' on page 230 undefined on input line 323
-9.
-
-
 LaTeX Warning: Reference `fig:diagrams' on page 230 undefined on input line 324
-8.
+4.
 
 
 LaTeX Warning: Reference `fig:diagrams' on page 230 undefined on input line 325
-9.
+3.
+
+
+LaTeX Warning: Reference `fig:diagrams' on page 230 undefined on input line 326
+4.
 
 
 LaTeX Warning: Reference `fig:fourthorder1p1h' on page 230 undefined on input l
-ine 3262.
+ine 3267.
 
 
 LaTeX Warning: Reference `fig:fourthorder2p2h' on page 230 undefined on input l
-ine 3262.
+ine 3267.
 
 
 LaTeX Warning: Reference `fig:fourthorder3p3h' on page 230 undefined on input l
-ine 3262.
+ine 3267.
 
 
 LaTeX Warning: Reference `fig:fourthorder4p4h' on page 230 undefined on input l
-ine 3262.
+ine 3267.
 
 [230] [231] [232]
 
 LaTeX Warning: Reference `problem:prob8.4' on page 233 undefined on input line 
-3469.
+3474.
 
 [233] [234] [235] [236]
-Overfull \hbox (23.5658pt too wide) in paragraph at lines 3696--3698
+Overfull \hbox (23.5658pt too wide) in paragraph at lines 3701--3703
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (23.5658pt too wide) in paragraph at lines 3706--3708
+Overfull \hbox (23.5658pt too wide) in paragraph at lines 3711--3713
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [237] [238]
-Overfull \hbox (10.71318pt too wide) in paragraph at lines 3815--3816
+Overfull \hbox (10.71318pt too wide) in paragraph at lines 3820--3821
 \T1/fve/m/n/10 Wick's the-o-rem is based on two fun-da-men-tal con-cepts, namel
 y $[]$ and $[]$.
  []
@@ -7187,7 +7191,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: E89407446AE3DE3AE352039BEB7F0EC5;15442.
+(rerunfilecheck)             Checksum: 3AFFB6B6EDAD71A6D128E5EA728278C4;15402.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -7206,13 +7210,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
 ### simple group (level 1) entered at line 95 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 24159 strings out of 493089
- 381604 string characters out of 6134842
- 558771 words of memory out of 5000000
- 24390 multiletter control sequences out of 15000+600000
+ 24162 strings out of 493089
+ 381663 string characters out of 6134842
+ 559806 words of memory out of 5000000
+ 24392 multiletter control sequences out of 15000+600000
  154173 words of font info for 259 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,122p,1974b,2037s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,25n,122p,1954b,2037s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -7241,10 +7245,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (310 pages, 3814864 bytes).
+Output written on lnp.pdf (310 pages, 3826665 bytes).
 PDF statistics:
- 6884 PDF objects out of 7423 (max. 8388607)
- 6131 compressed objects within 62 object streams
- 2630 named destinations out of 2984 (max. 500000)
+ 6887 PDF objects out of 7423 (max. 8388607)
+ 6134 compressed objects within 62 object streams
+ 2631 named destinations out of 2984 (max. 500000)
  1947 words of extra memory for PDF output out of 10000 (max. 10000000)
 
