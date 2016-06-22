@@ -493,7 +493,7 @@ with the anti-symmetrized matrix element
             pqr|\hat{v}_3|uts\rangle.
 \end{align}
 In this and the forthcoming chapters we will limit ourselves to
-two-body interactions at most.
+two-body interactions at most.  Throughout this chapter and the subsequent three we will drop the subscript $AS$ and use only anti-symmetrized matrix elements.
 
 Using the ansatz for the ground state $\vert \Phi_0$ as new reference
 vacuum state, we need to redefine the anticommutation relations to
@@ -1128,12 +1128,12 @@ that is we have, for a specific matrix element
 \[
 \langle p |\hat{h}^{\mathrm{HF}}| q \rangle =\langle p |\hat{f}| q
 \rangle=\langle p|\hat{t}+\hat{u}_{\mathrm{ext}}|q \rangle +\sum_{i\le
-  F} \langle pi | \hat{V} | qi\rangle_{AS},
+  F} \langle pi | \hat{V} | qi\rangle,
 \]
 meaning that
 \[
 \langle p|\hat{u}^{\mathrm{HF}}|q\rangle = \sum_{i\le F} \langle pi |
-\hat{V} | qi\rangle_{AS}.
+\hat{V} | qi\rangle.
 \]
 The so-called Hartree-Fock potential $\hat{u}^{\mathrm{HF}}$ brings an
 explicit medium dependence due to the summation over all
@@ -1206,7 +1206,7 @@ application to infinite nuclear matter)
 \[
   E[\Phi_0] = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
   \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle
-  \mu\nu|\hat{v}|\mu\nu\rangle_{AS}.
+  \mu\nu|\hat{v}|\mu\nu\rangle.
 \]
 Now we are interested in defining a new basis defined in terms of a
 chosen basis as defined in Eq.~(\ref{eq:newbasis}). We can then
@@ -1214,7 +1214,7 @@ rewrite the energy functional as
 \begin{equation}
   E[\Phi^{HF}] = \sum_{i\le F} \langle i | h | i \rangle +
   \frac{1}{2}\sum_{ij\le F}\langle
-  ij|\hat{v}|ij\rangle_{AS}, \label{FunctionalEPhi2}
+  ij|\hat{v}|ij\rangle, \label{FunctionalEPhi2}
 \end{equation}
 where $\Phi^{HF}$ is the new Slater determinant defined by the new
 basis of Eq.~(\ref{eq:newbasis}).
@@ -1230,7 +1230,7 @@ Eq.~(\ref{FunctionalEPhi2}) as
   C^*_{i\alpha}C_{i\beta}\langle \alpha | h | \beta \rangle +
   \frac{1}{2}\sum_{ij\le F}\sum_{{\alpha\beta\gamma\delta}}
   C^*_{i\alpha}C^*_{j\beta}C_{i\gamma}C_{j\delta}\langle
-  \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}. \label{FunctionalEPhi3}
+  \alpha\beta|\hat{v}|\gamma\delta\rangle. \label{FunctionalEPhi3}
 \end{equation}
 
 
@@ -1266,7 +1266,7 @@ following Hartree-Fock equations
 \sum_{\beta} C_{i\beta}\langle \alpha | h | \beta \rangle+
 \sum_{j\le F}\sum_{\beta\gamma\delta}
 C^*_{j\beta}C_{j\delta}C_{i\gamma}\langle
-\alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}=\epsilon_i^{HF}C_{i\alpha}.
+\alpha\beta|\hat{v}|\gamma\delta\rangle=\epsilon_i^{HF}C_{i\alpha}.
 \]
 
 
@@ -1274,7 +1274,7 @@ We can rewrite this equation as (changing dummy variables)
 \[
 \sum_{\beta} \left\{\langle \alpha | h | \beta \rangle+
 \sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
-\alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}\right\}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}.
+\alpha\gamma|\hat{v}|\beta\delta\rangle\right\}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}.
 \]
 Note that the sums over greek indices run over the number of basis set
 functions (in principle an infinite number).
@@ -1283,7 +1283,7 @@ Defining
 \[
 h_{\alpha\beta}^{HF}=\langle \alpha | h | \beta \rangle+
 \sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
-\alpha\gamma|\hat{v}|\beta\delta\rangle_{AS},
+\alpha\gamma|\hat{v}|\beta\delta\rangle,
 \]
 we can rewrite the new equations as
 \begin{equation}
@@ -1294,7 +1294,7 @@ Hartree-Fock matrix is thus
 \[
 \hat{h}_{\alpha\beta}^{HF}=\langle \alpha | \hat{h}_0 | \beta \rangle+
 \sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
-\alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
+\alpha\gamma|\hat{v}|\beta\delta\rangle.
 \]
 The Hartree-Fock equations are solved in an iterative way starting
 with a guess for the coefficients $C_{j\gamma}=\delta_{j,\gamma}$ and
@@ -1308,7 +1308,7 @@ Hartree-Fock matrix becomes
 \[
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
 \sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
-\alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
+\alpha\gamma|\hat{v}|\beta\delta\rangle.
 \]
 
 \subsection{Hartree-Fock algorithm with simple Python code}
@@ -1321,7 +1321,7 @@ which is defined as
 It means that we can rewrite the Hartree-Fock Hamiltonian as
 \[
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
-\sum_{\gamma\delta} \rho_{\gamma\delta}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{\gamma\delta} \rho_{\gamma\delta}\langle \alpha\gamma|V|\beta\delta\rangle.
 \]
 It is convenient to use the density matrix since we can precalculate in every iteration the product of the eigenvector components $C$. 
 
@@ -1340,13 +1340,13 @@ Hartree-Fock Hamiltonian.
 \item The Hartree-Fock matrix simplifies then to
 \[
 \hat{h}_{\alpha\beta}^{HF}(0)=\epsilon_{\alpha}\delta_{\alpha,\beta}+
-\sum_{\gamma\delta} \rho_{\gamma\delta}^{(0)}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{\gamma\delta} \rho_{\gamma\delta}^{(0)}\langle \alpha\gamma|V|\beta\delta\rangle.
 \]
 Solving the Hartree-Fock eigenvalue problem yields then new eigenvectors $C_{i\alpha}^{(1)}$ and eigenvalues
 $\epsilon_i^{\mathrm{HF}}(1)$. 
 \item With the new eigenvectors we can set up a new Hartree-Fock potential 
 \[
-\sum_{\gamma\delta} \rho_{\gamma\delta}^{(1)}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{\gamma\delta} \rho_{\gamma\delta}^{(1)}\langle \alpha\gamma|V|\beta\delta\rangle.
 \]
 The diagonalization with the new Hartree-Fock potential yields new eigenvectors and eigenvalues.
 \item This process is continued till a user defined test is
@@ -1633,12 +1633,12 @@ A given
 
   The minimization process results in
   \begin{align}
-  \delta\left[ \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda
-    \langle \Psi_0 |\Psi_0 \rangle\right]=&
-  \sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H}
+  0=&\delta\left[ \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda
+    \langle \Psi_0 |\Psi_0 \rangle\right]\\
+  =& \sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H}
   |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}+ C_H^{*P}\langle \Phi_H^P |
   \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]- \lambda(
-  \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
+  \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\}.
   \end{align}
   Since the coefficients $\delta[C_H^{*P}]$ and $\delta[C_{H'}^{P'}]$
   are complex conjugates it is necessary and sufficient to require the
@@ -1699,7 +1699,7 @@ A given
   Hamiltonian matrix would then look like (where each block which is
   marked with an $x$ can contain a large quantity of non-zero matrix
   elements) as shown here
-  \begin{table}
+  \begin{table}[h]
   \begin{center}
   \begin{tabular}{cccccccc}
   \hline \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ $0p-0h$ } &
@@ -1720,7 +1720,7 @@ A given
   transformation where matrix elements of the type $\langle 0p-0h
   \vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 |
   \hat{H}|\Phi_{i}^{a}\rangle=0$ and our Hamiltonian matrix becomes
-  \begin{table}
+  \begin{table}[h]
   \begin{center}
   \begin{tabular}{cccccccc}
   \hline \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ $0p-0h$ } &
@@ -1841,14 +1841,14 @@ If we do not define a core, this defines normally what is
   \]
   as this equation will allow us to find an expression for the
   coefficents $C_i^a$  through 
-  \[
+  \begin{equation}\label{eq:c1p1h}
   \langle i | \hat{f}| a\rangle +\langle \Phi_i^a |
   \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+ \sum_{bj\ne ai}\langle
   \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+
   \sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle
   C_{jk}^{bc}+ \sum_{bcdjkl}\langle \Phi_i^a |
   \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=EC_i^a.
-  \]
+  \end{equation}
 
   We see that on the right-hand side we have the energy $E$. This
   leads to a non-linear equation in the unknown coefficients since the coefficients appear also in the definition of the correlation
@@ -1869,15 +1869,16 @@ energy of Eq.~(\ref{eq:correlationenergy}).  These
 
 
   For $C_{jk}^{bc}$ we have
-  \[
-  \langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle +
+  \begin{align}\label{eq:c2p2h}
+  0=&\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle +
   \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle
-  C_{k}^{c}+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd}
+  C_{k}^{c}+ \\
+  &\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd}
   \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H}
   -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle
   \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle
-  C_{klmn}^{cdef}=0.
-  \]
+  C_{klmn}^{cdef}.
+  \end{align}
   We can isolate the coefficients $C_{kl}^{cd}$ in a similar way
   as we did for the coefficients $C_{i}^{a}$.  A standard choice for
   the first iteration is to use again perturbation theory to first order in the interaction and set
@@ -2213,33 +2214,33 @@ due to lack of momentum conservation. They would also be zero in case a canonica
   an uncoupled scheme). Diagram  (1) results in
   \begin{equation}
      (1)=\frac{1}{2^2}\sum_{ij\leq F}\sum_{ab>F}
-    \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS} \langle
-      ab\vert\hat{v}\vert ij\rangle_{AS}}
+    \frac{\langle ij\vert\hat{v}\vert ab\rangle \langle
+      ab\vert\hat{v}\vert ij\rangle}
          {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b},
   \end{equation}
  while diagram (2) is zero due to lack of momentum conservation. We have two factors of $1/2$ since there are two equivalent pairs fermions (two  particle states and two hole states) starting at the same vertex and ending at the same vertex. The expression for diagram (3)  is 
   \begin{equation}
      (3)=\sum_{ijk\leq k_F}\sum_{abc > F}
-    \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS} \langle
-      bk\vert\hat{v}\vert ic\rangle_{AS} \langle ac\vert\hat{v}\vert
-      ik\rangle_{AS}}
+    \frac{\langle ij\vert\hat{v}\vert ab\rangle \langle
+      bk\vert\hat{v}\vert ic\rangle \langle ac\vert\hat{v}\vert
+      ik\rangle}
          {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
            (\varepsilon_i+\varepsilon_k-\varepsilon_a-\varepsilon_c)}.
   \end{equation}
   Diagrams (4) and (5) read
   \begin{equation}
      (4)=\frac{1}{2^3}\sum_{ij\le F}\sum_{abcd > F}
-    \frac{\langle ij\vert\hat{v}\vert cd\rangle_{AS} \langle
-      cd\vert\hat{v}\vert ab\rangle_{AS} \langle ab\vert\hat{v}\vert
-      ij\rangle_{AS}}
+    \frac{\langle ij\vert\hat{v}\vert cd\rangle \langle
+      cd\vert\hat{v}\vert ab\rangle \langle ab\vert\hat{v}\vert
+      ij\rangle}
          {(\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d)
            (\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)},
   \end{equation}
   \begin{equation}
      (5)=\frac{1}{2^3}\sum_{ijkl\le F}\sum_{ab > F}
-    \frac{\langle ab\vert\hat{v}\vert kl\rangle_{AS} \langle
-      kl\vert\hat{v}\vert ij\rangle_{AS} \langle ij\vert\hat{v}\vert
-      ab\rangle_{AS}}
+    \frac{\langle ab\vert\hat{v}\vert kl\rangle \langle
+      kl\vert\hat{v}\vert ij\rangle \langle ij\vert\hat{v}\vert
+      ab\rangle}
          {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
            (\varepsilon_k+\varepsilon_l-\varepsilon_a-\varepsilon_b)},
   \end{equation}
@@ -2375,100 +2376,100 @@ interaction. This leads us to section \ref{sec:cctheory} and the final
 many-body method of this chapter, coupled cluster theory. 
 
 
-  \section{Coupled cluster theory}\label{sec:cctheory}.
-  Coester and Kummel first developed the ideas that led to coupled
-  cluster theory in the late 1950s. The basic idea is that the
-  correlated wave function of a many-body system $\mid\Psi\rangle$ can
-  be formulated as an exponential of correlation operators $T$ acting
-  on a reference state $\mid\Phi\rangle$
-  \[
-  \mid\Psi\rangle = \exp\left(-\hat{T}\right)\mid\Phi\rangle\ .
-  \]
-  We will discuss how to define the operators later in this work. This
-  simple ansatz carries enormous power. It leads to a non-perturbative
-  many-body theory that includes summation of ladder diagrams , ring
-  diagrams, and an infinite-order generalization of many-body
-  perturbation theory.
-
-  Developments and applications of coupled cluster theory took
-  different routes in chemistry and nuclear physics. In quantum
-  chemistry, coupled cluster developments and applications have proven
-  to be extremely useful, see for example the review by Barrett and
-  Musial as well as the recent textbook by Shavitt and Bartlett
-  \cite{shavittbartlett2009}.
-
-  Many previous applications to nuclear physics struggled with the
-  repulsive character of the nuclear forces and limited basis sets
-  used in the computations. Most of these problems have been overcome
-  during the last decade and coupled-cluster theory is one of the
-  computational methods of preference for doing nuclear physics, with
+\section{Coupled cluster theory}\label{sec:cctheory}
+  
+Coester and Kummel developed the ideas that led to coupled cluster
+theory in the late 1950s. The basic idea is that the correlated wave function
+of a many-body system $\mid\Psi\rangle$
+can be formulated as an exponential of correlation
+operators $T$ acting on a reference state $\mid\Phi\rangle$.
+\begin{equation}
+\mid\Psi\rangle = \exp\left(-\hat{T}\right)\mid\Phi\rangle\;.
+\end{equation}
+We will discuss how to define the operators later in this work. This simple
+ansatz carries enormous power. It leads to a non-perturbative many-body
+theory that includes summation of ladder diagrams \cite{brueckner1955}, ring
+diagrams \cite{GB1957}, and an infinite-order
+generalization of many-body perturbation theory
+\cite{Bart_silver74, Bart_silver76}.
+Developments and applications of coupled cluster theory took
+different routes in chemistry and nuclear physics. In quantum
+chemistry, coupled cluster developments and applications have proven
+to be extremely useful, see for example the review by Barrett and
+Musial as well as the recent textbook by Shavitt and Bartlett \cite{shavittbartlett2009}.
+Many previous applications to nuclear physics struggled with the
+repulsive character of the nuclear forces and limited basis sets
+used in the computations. Most of these problems have been overcome
+during the last decade and coupled cluster theory is one of the
+computational methods of preference for doing nuclear physics, with
   applications ranging from light nuclei to medium-heavy nuclei, see
   for example the recent reviews by Hagen {\em et al} \cite{papenbrock2014,hagen2016}.
 
 
-  \subsection{A quick tour of Coupled Cluster theory}
+\subsection{A quick tour of Coupled Cluster theory}
 
   The ansatz for the wavefunction (ground state) is given by
-  \begin{equation*}
+  \begin{equation}
      \vert \Psi\rangle = \vert \Psi_{CC}\rangle = e^{\hat{T}} \vert
      \Phi_0\rangle = \left( \sum_{n=1}^{A} \frac{1}{n!} \hat{T}^n
      \right) \vert \Phi_0\rangle,
-  \end{equation*}
+  \end{equation}
   where $A$ represents the maximum number of particle-hole excitations
   and $\hat{T}$ is the cluster operator defined as
-  \begin{align*}
+  \begin{align}
               \hat{T} &= \hat{T}_1 + \hat{T}_2 + \ldots + \hat{T}_A
               \\ \hat{T}_n &= \left(\frac{1}{n!}\right)^2
               \sum_{\substack{ i_1,i_2,\ldots i_n \\ a_1,a_2,\ldots
                   a_n}} t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}
               a_{a_1}^\dagger a_{a_2}^\dagger \ldots a_{a_n}^\dagger
               a_{i_n} \ldots a_{i_2} a_{i_1}.
-          \end{align*}
+          \end{align}
       The energy is given by
-      \begin{equation*}
+      \begin{equation}
           E_{\mathrm{CC}} = \langle\Phi_0\vert \overline{H}\vert
           \Phi_0\rangle,
-      \end{equation*}
+      \end{equation}
       where $\overline{H}$ is a similarity transformed Hamiltonian
-      \begin{align*}
+      \begin{align}
           \overline{H}&= e^{-\hat{T}} \hat{H}_N e^{\hat{T}}
           \\ \hat{H}_N &= \hat{H} - \langle\Phi_0\vert \hat{H} \vert
           \Phi_0\rangle.
-      \end{align*}
+      \end{align}
 
       The coupled cluster energy is a function of the unknown cluster
       amplitudes $t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}$, given by
       the solutions to the amplitude equations
-      \begin{equation*}
+      \begin{equation}
           0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
           \overline{H}\vert \Phi_0\rangle.
-      \end{equation*}
-  The similarity transformed Hamiltonian $\overline{H}$ is expanded
+      \end{equation}
+In order to set up the above equations, 
+the similarity transformed Hamiltonian $\overline{H}$ is expanded
   using the Baker-Campbell-Hausdorff expression,
-      \begin{align*}
+      \begin{align}
           \overline{H}&= \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right]
           + \frac{1}{2} \left[\left[ \hat{H}_N, \hat{T} \right],
             \hat{T}\right] + \ldots \\ & \quad \frac{1}{n!} \left[
             \ldots \left[ \hat{H}_N, \hat{T} \right], \ldots \hat{T}
             \right] +\dots
-      \end{align*}
+      \end{align}
   and simplified using the connected cluster theorem
-      \begin{equation*}
+      \begin{equation}
           \overline{H}= \hat{H}_N + \left( \hat{H}_N \hat{T}\right)_c
           + \frac{1}{2} \left( \hat{H}_N \hat{T}^2\right)_c + \dots +
           \frac{1}{n!} \left( \hat{H}_N \hat{T}^n\right)_c +\dots
-      \end{equation*}
-
-  A much used approximation is to truncate the cluster operator
-  $\hat{T}$ at the $n=2$ level. This defines the so-called singes and
-  doubles approximation to the Coupled Cluster wavefunction, normally
-  shortened to CCSD..
+      \end{equation}
+For the derivation of these expressions, see for example Ref.~\cite{shavittbartlett2009}.
+A much used approximation is to truncate the cluster operator
+$\hat{T}$ at the $n=2$ level. This defines the so-called singes and
+doubles approximation to the Coupled Cluster wavefunction, normally
+shortened to CCSD..
 
   The coupled cluster wavefunction is now given by
-  \begin{equation*}
+  \begin{equation}
               \vert \Psi_{CC}\rangle = e^{\hat{T}_1 + \hat{T}_2} \vert
               \Phi_0\rangle
-  \end{equation*}
+  \end{equation}
   where
           \begin{align*}
               \hat{T}_1 &= \sum_{ia} t_{i}^{a} a_{a}^\dagger a_i
@@ -2479,13 +2480,12 @@ many-body method of this chapter, coupled cluster theory.
   The amplutudes $t$ play a role similar to the coefficients $C$ in
   the shell-model calculations. They are obtained by solving a set of
   non-linear equations similar to those discussed above in connection
-  withe FCI discussion.
+  with the configuration interaction theory  discussion, see Eqs.~(\ref{eq:c1p1h}) and (\ref{eq:c2p2h}). 
 
   If we truncate our equations at the CCSD level, it corresponds to
   performing a transformation of the Hamiltonian matrix of the
-  following type for a six particle problem (with a two-body
-  Hamiltonian):
-
+  following type for the six particle problem (with a two-body
+  Hamiltonian) discussed in section \ref{sec:fci}
   \begin{table}
   \begin{center}
   \begin{tabular}{cccccccc}
@@ -2506,25 +2506,299 @@ many-body method of this chapter, coupled cluster theory.
   \end{center}
   \end{table}
 
-  In our FCI discussion the correlation energy is defined as, with a
-  two-body Hamiltonian,
+  In our configuration interaction theory discussion the correlation energy is defined as (with a
+  two-body Hamiltonian) 
   \[
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
   \sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
   \]
+We can obtain a similar expression for the coupled cluster energy starting from 
 
-  In Coupled cluster theory it becomes (irrespective of level of
-  truncation of $T$)
+        The expanded CC energy equation involves an infinite sum over nested commutators
+        \begin{align*}
+            E_{CC} &= \bra{\Psi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
+                \frac{1}{2} \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right] \\
+                & \qquad + \frac{1}{3!} \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right] \\
+                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] ++ \Bigr) \ket{\Psi_0}, \\
+        \end{align*}
+        but fortunately we can show that it truncates naturally, depending on the Hamiltonian.
+        The first term is zero by construction
+        \begin{equation*}
+            \bra{\Psi_0} \op{H}_N \ket{\Psi_0} = 0
+        \end{equation*}       
+     The second term can be split up into different pieces
+        \begin{align*}
+        \bra{\Psi_0}\left[ \hat{H}_N, \hat{T} \right]\ket{\Psi_0} & = 
+            \bra{\Psi_0} \Bigl(\left[ \hat{F}_N, \hat{T}_1 \right] + \left[ \hat{F}_N, \hat{T}_2 \right]
+            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Psi_0}
+    \end{align*}
+    Since we need the explicit expressions for the commutators both in the next term and in the amplitude equations, we calculate them separately.
+Let us demonstrate this by looking at some selected commutators. Let us start with $\left[ \hat{F}_N, \hat{T}_1 \right]$
+We write it out as
+    \begin{align*}
+        \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pqia} \left(f_q^p \normord{a_p^\dagger a_q} 
+            t_i^a \normord{a_a^\dagger a_i} - t_i^a \normord{a_a^\dagger a_i} f_q^p \normord{a_p^\dagger a_q} \right) \\
+        &= \sum_{pqia} f_q^p t_i^a \left( \normord{a_p^\dagger a_q} \normord{a_a^\dagger a_i} -
+                \normord{a_a^\dagger a_i} \normord{a_p^\dagger a_q} \right)
+    \end{align*}
+        \begin{align*}
+            \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \normord{a_a^\dagger a_i a_p^\dagger a_q} \pause
+                = \normord{a_p^\dagger a_q a_a^\dagger a_i} \\ \pause
+        \normord{a_p^\dagger a_q}\normord{a_a^\dagger a_i} &= \normord{a_p^\dagger a_q a_a^\dagger a_i}  \\ \pause
+            & \quad + \normord{
+               \contraction{}{a}{{}^\dagger_pa_q a^\dagger_a}{a}
+                a^\dagger_p a_q a^\dagger_a a_i} +
+            \normord{
+                \contraction{a^\dagger_p}{a}{{}_q}{a}
+                a^\dagger_p a_q a^\dagger_a a_i} \\ \pause
+            & \quad + \normord{
+                \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a}{a}
+                \contraction{a^\dagger_p}{a}{{}_q}{a}
+                a^\dagger_p a_q a^\dagger_a a_i} \\ \pause
+            &=  \normord{a_p^\dagger a_q a_a^\dagger a_i} + \delta_{qa} \normord{a_p^\dagger a_i} + \delta_{pi} \normord{a_q a_a^\dagger}
+            + \delta_{qa}\delta_{pi}
+        \end{align*}
+        Wicks theorem gives us
+        \begin{align*}
+            \left\{a_p^\dagger a_q \right\}\left\{a_a^\dagger a_i\right\} - \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \delta_{qa} \left\{ a_p^\dagger a_i\right\} + \delta_{pi} \left\{ a_q a_a^\dagger \right\} + \delta_{qa}\delta_{pi}.
+    \end{align*}
+
+        Inserted into the original expression, we arrive at the explicit value of the commutator
+        \begin{align*}
+        \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
+                \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a \\
+            &= \left( \op{F}_N \op{T}_1 \right)_c.
+        \end{align*}
+    The subscript means that the product only includes terms where the operators are connected by at least one shared index.
+
+Let us next look at the term $\left[ \hat{F}_N, \hat{T}_2 \right]$.
+we have
+    \begin{align*}
+        \left[ \hat{F}_N, \hat{T}_2 \right] 
+        &= \left[\sum_{pq} f_q^p \normord{a^\dagger_p a_q},
+            \frac{1}{4}\sum_{ijab} t_{ij}^{ab} \normord{a^\dagger_a a^\dagger_b a_j a_i} \right] \\
+        &= \frac{1}{4}\sum_{\substack{pq\\ijab}}
+        \left[ \normord{a^\dagger_p a_q}, \normord{a^\dagger_a a^\dagger_b a_j a_i} \right] \\
+        &= \frac{1}{4}\sum_{\substack{pq\\ijab}}
+            f_q^p t_{ij}^{ab}
+        \left( \normord{a^\dagger_p a_q} \normord{a^\dagger_a a^\dagger_b a_j a_i}
+            - \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} \right)
+    \end{align*}
+    \begin{align*}
+        \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} &= 
+            \normord{a^\dagger_a a^\dagger_b a_j a_i a^\dagger_p a_q} \\ 
+        &= \normord{a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i} 
+        \\
+        \normord{a^\dagger_p a_q} \normord{a^\dagger_a a^\dagger_b a_j a_i} &= 
+            \normord{a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i}
+        + \left\{ 
+        \contraction{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\}
+        + \left\{ 
+        \contraction{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b a_j}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\} \\
+        & \quad 
+        + \left\{ 
+        \contraction{a^\dagger_p}{a}{{}_q}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\}
+        + \left\{ 
+        \contraction{a^\dagger_p}{a}{{}_q a^\dagger_a}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\}
+        + \left\{ 
+        \contraction{a^\dagger_p}{a}{{}_q}{a}
+        \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\} \\
+        & \quad 
+        + \left\{ 
+        \contraction{a^\dagger_p}{a}{{}_q}{a}
+        \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b a_j}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\}
+        + \left\{ 
+        \contraction{a^\dagger_p}{a}{{}_q a^\dagger_a}{a}
+        \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\}
+        + \left\{ 
+        \contraction{a^\dagger_p}{a}{{}_q a^\dagger_a}{a}
+        \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b a_j}{a}
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\} \\ \pause
+        &= \normord{a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i}
+        - \delta_{pj} \normord{a_q a^\dagger_a a^\dagger_b a_i}
+        + \delta_{pi} \normord{a_q a^\dagger_a a^\dagger_b a_j} \\
+        & \quad + \delta_{qa} \normord{a^\dagger_p a^\dagger_b a_j a_i}
+        - \delta_{qb}\normord{a^\dagger_p a^\dagger_a a_j a_i} 
+        - \delta_{pj} \delta_{qa} \normord{a^\dagger_b a_i} \\
+        & \quad + \delta_{pi} \delta_{qa} \normord{a^\dagger_b a_j}
+        + \delta_{pj} \delta_{qb} \normord{a^\dagger_a a_i}
+        - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j}
+    \end{align*}
+    Wick's theorem gives us
+    \begin{align*}
+        & \Bigl( \normord{a^\dagger_p a_q} \normord{a^\dagger_a a^\dagger_b a_j a_i}
+            - \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} \Bigr) = \\
+        & \qquad - \delta_{pj} \normord{a_q a^\dagger_a a^\dagger_b a_i}
+        + \delta_{pi} \normord{a_q a^\dagger_a a^\dagger_b a_j}
+        + \delta_{qa} \normord{a^\dagger_p a^\dagger_b a_j a_i} \\
+        & \qquad - \delta_{qb}\normord{a^\dagger_p a^\dagger_a a_j a_i} 
+        - \delta_{pj} \delta_{qa} \normord{a^\dagger_b a_i}
+        + \delta_{pi} \delta_{qa} \normord{a^\dagger_b a_j}
+        + \delta_{pj} \delta_{qb} \normord{a^\dagger_a a_i} \\
+        & \qquad - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j}
+    \end{align*}
+    Inserted into the original expression, we arrive at
+    \begin{align*}
+        \left[ \op{F}_N, \op{T}_2 \right]
+        &= \frac{1}{4} \sum_{\substack{pq\\abij}} f_q^p t_{ij}^{ab} \Bigl(
+        - \delta_{pj} \normord{a_q a^\dagger_a a^\dagger_b a_i}
+        + \delta_{pi} \normord{a_q a^\dagger_a a^\dagger_b a_j} \\
+        & \quad + \delta_{qa} \normord{a^\dagger_p a^\dagger_b a_j a_i}
+        - \delta_{qb}\normord{a^\dagger_p a^\dagger_a a_j a_i} 
+        - \delta_{pj} \delta_{qa} \normord{a^\dagger_b a_i} \\
+        & \quad + \delta_{pi} \delta_{qa} \normord{a^\dagger_b a_j}
+        + \delta_{pj} \delta_{qb} \normord{a^\dagger_a a_i}
+        - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j} \Bigr).
+    \end{align*}
+
+    After renaming indices and changing the order of operators, we arrive at the explicit expression
+    \begin{align*}
+        \left[ \op{F}_N, \op{T}_2 \right]
+        &= \frac{1}{2} \sum_{qijab} f_q^i t_{ij}^{ab} \normord{a_q a^\dagger_a a^\dagger_b a_j}
+        + \frac{1}{2} \sum_{pijab} f_a^p t_{ij}^{ab} \normord{a^\dagger_p a^\dagger_b a_j a_i} \\
+        & \quad + \sum_{ijab} f_a^i t_{ij}^{ab} \normord{a^\dagger_b a_j} \\
+    &= \left( \op{F}_N \op{T}_2\right)_c.
+    \end{align*}
+    The subscript implies that only the connected terms from the product contribute.
+Our next terms is  $\frac{1}{2}\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$, that is we need to calculate
+        \begin{align*}
+        \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
+                \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a
+        \end{align*}
+    \begin{align*}
+        \left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1\right] 
+        &= \Bigl[ \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} +
+            \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a, \sum_{jb} t_j^b \normord{a_b^\dagger a_j} \\
+        &= \Bigl[ \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} +
+            \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger}, \sum_{jb} t_j^b \normord{a_b^\dagger a_j} \\
+        &= \sum_{pabij} f_a^p t_i^a t_j^b \left[ \normord{a_p^\dagger a_i}, \normord{a_b^\dagger a_j} \right] +
+            \sum_{qabij} f_q^i t_i^a t_j^b \left[ \normord{a_q a_a^\dagger}, \normord{a_b^\dagger a_j} \right]
+    \end{align*}
+    \begin{align*}
+        \normord{a_b^\dagger a_j} \normord{a_p^\dagger a_i} &= \normord{a_b^\dagger a_j a_p^\dagger a_i} 
+            = \normord{ a_p^\dagger a_i a_b^\dagger a_j} \\
+        \normord{a_b^\dagger a_j} \normord{a_q a_a^\dagger} &= \normord{ a_b^\dagger a_j a_q a_a^\dagger} 
+            =  \normord{ a_q a_a^\dagger a_b^\dagger a_j}
+
+
+The term $\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$ results in 
+    \begin{align*}
+        \frac{1}{2} \left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1\right] 
+        &= \frac{1}{2} \left(\sum_{pabij} f_a^p t_i^a t_j^b \delta_{pj} \normord{a_i a_b^\dagger}
+            - \sum_{qabij} f_q^i t_i^a t_j^b \delta_{qb} \normord{a_a^\dagger a_j}\right) \\
+        &= -\frac{1}{2} 2 \sum_{abij} f_b^j t_j^a t_i^b \normord{a_a^\dagger a_i} \\
+        &= -\sum_{abij} f_b^j t_j^a t_i^b \normord{a_a^\dagger a_i} \\
+        &= \frac{1}{2} \left(  \op{F}_N \op{T}_1^2 \right)_c
+    \end{align*}
+    \begin{align*}
+        \bra{\Phi_0} \left[ \hat{V}_N, \hat{T}_1 \right] \ket{\Phi_0} &= 
+            \bra{\Phi_0}
+                \left[ \frac{1}{4} \sum_{pqrs} \bra{pq}\ket{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r},
+                    \sum_{ia} t_i^a \normord{a^\dagger_a a_i} \right] \ket{\Phi_0} \\ 
+            &= \frac{1}{4}\sum_{\substack{
+                pqr \\
+                sia}} \bra{pq}\ket{rs} t_i^a \bra{\Phi_0} 
+                \left[ \normord{a^\dagger_p a^\dagger_q a_s  a_r}, \normord{a^\dagger_a a_i} \right]
+                \ket{\Phi_0} \\ 
+        &= 0
+    \end{align*}
+    \begin{align*}
+        & \bra{\Phi_0} \left[ \hat{V}_N, \hat{T}_2 \right] \ket{\Phi_0}= \\
+            & \quad \bra{\Phi_0}
+                \left[ \frac{1}{4} \sum_{pqrs} \bra{pq}\ket{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r},
+                    \frac{1}{4}\sum_{ijab} t_{ij}^{ab} \normord{a^\dagger_a a^\dagger_b a_j a_i} \right] \ket{\Phi_0} \\ 
+            &= \frac{1}{16}\sum_{\substack{
+                    pqr \\
+                    sijab}} \bra{pq}\ket{rs}t_{ij}^{ab} \bra{\Phi_0} 
+                \left[ \normord{a^\dagger_p a^\dagger_q a_s  a_r}, \normord{a^\dagger_a a^\dagger_b a_j a_i} \right]
+                \ket{\Phi_0} \\ 
+            &= \frac{1}{16}\sum_{\substack{
+                    pqr \\
+                    sijab}} \bra{pq}\ket{rs}t_{ij}^{ab} \bra{\Phi_0}
+            \Bigl(
+            \left\{
+            \contraction{a^\dagger_p a^\dagger_q a_s}{a}{{}_r}{a}
+            \contraction[1.25ex]{a^\dagger_p a^\dagger_q}{a}{{}_s a_r a^\dagger_a}{a}
+            \contraction[1.50ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a^\dagger_b}{a}
+            \contraction[1.75ex]{}{a}{{}^\dagger_p a^\dagger_q a_s a_r a^\dagger_a a^\dagger_b a_j}{a}
+            a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a^\dagger_b a_j a_i \right\}
+            + \left\{
+            \contraction{a^\dagger_p a^\dagger_q}{a}{{}_s a_r}{a}
+            \contraction[1.25ex]{a^\dagger_p a^\dagger_q a_s}{a}{{}_r a^\dagger_p}{a}
+            \contraction[1.50ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a^\dagger_b}{a}
+            \contraction[1.75ex]{}{a}{{}^\dagger_p a^\dagger_q a_s a_r a^\dagger_a a^\dagger_b a_j}{a}
+            a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a^\dagger_b a_j a_i \right\} \\
+            & \quad \left\{
+            \contraction{a^\dagger_p a^\dagger_q a_s}{a}{{}_r}{a}
+            \contraction[1.25ex]{a^\dagger_p a^\dagger_q}{a}{{}_s a_r a^\dagger_a}{a}
+            \contraction[1.5ex]{}{a}{{}^\dagger_p a^\dagger_q a_s a_r a^\dagger_a a^\dagger_b}{a}
+            \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a^\dagger_b a_j}{a}
+            a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a^\dagger_b a_j a_i \right\}
+            + \left\{
+            \contraction{a^\dagger_p a^\dagger_q}{a}{{}_s a_r}{a}
+            \contraction[1.25ex]{a^\dagger_p a^\dagger_q a_s}{a}{{}_r a^\dagger_p}{a}
+            \contraction[1.5ex]{}{a}{{}^\dagger_p a^\dagger_q a_s a_r a^\dagger_a a^\dagger_b}{a}
+            \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a^\dagger_b a_j}{a}
+            a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a^\dagger_b a_j a_i \right\}
+            \Bigr) \ket{\Phi_0} \\ 
+            &= \frac{1}{4} \sum_{ijab} \bra{ij}\ket{ab} t_{ij}^{ab}
+    \end{align*}
+
+    \begin{align*}
+        E_{CC} & \Leftarrow \bra{\Phi_0} \frac{1}{2} \left( \op{H}_N \op{T}^2 \right)_c \ket{\Phi_0}
+     \end{align*}
+    \begin{align*}
+        & \bra{\Phi_0} \frac{1}{2} \left( \op{V}_N \op{T}_1^2 \right)_c \ket{\Phi_0} = \\
+            & \quad \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\ket{rs} t_i^a t_j^b 
+            \bra{\Phi_0} \left(\normord{a^\dagger_p a^\dagger_q a_s  a_r} 
+            \normord{a^\dagger_a a_i} \normord{a^\dagger_b a_j} \right)_c\ket{\Phi_0} \\ 
+        &= \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\ket{rs} t_i^a t_j^b \bra{\Phi_0} \\
+        & \quad \Bigl( 
+        \left\{
+        \contraction{a^\dagger_p a^\dagger_q a_s}{a}{{}_r}{a}
+        \contraction[1.25ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a}{a}
+        \contraction[1.5ex]{a^\dagger_p a^\dagger_q }{a}{{}_s a_r a^\dagger_a a_i}{a}
+        \contraction[1.75ex]{}{a}{{}^\dagger_p a^\dagger_q a_s a_r a^\dagger_a a_i a^\dagger_b}{a}
+        a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a_i a^\dagger_b a_j \right\}
+        +\left\{
+        \contraction{a^\dagger_p a^\dagger_q}{a}{{}_s a_r}{a}
+        \contraction[1.25ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a}{a}
+        \contraction[1.5ex]{a^\dagger_p a^\dagger_q a_s}{a}{{}_r a^\dagger_a a_i}{a}
+        \contraction[1.75ex]{}{a}{{}^\dagger_p a^\dagger_q a_s a_r a^\dagger_a a_i a^\dagger_b}{a}
+        a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a_i a^\dagger_b a_j \right\}
+        + \left\{
+        \contraction{a^\dagger_p a^\dagger_q a_s}{a}{{}_r}{a}
+        \contraction[1.25ex]{}{a}{{}^\dagger_p q^\dagger_q a_s a_r a^\dagger_a}{a}
+        \contraction[1.5ex]{a^\dagger_p a^\dagger_q }{a}{{}_s a_r a^\dagger_a a_i}{a}
+        \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a_i a^\dagger_b}{a}
+        a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a_i a^\dagger_b a_j \right\} \\
+        & \quad +\left\{
+        \contraction{a^\dagger_p a^\dagger_q}{a}{{}_s a_r}{a}
+        \contraction[1.25ex]{}{a}{{}^\dagger_p q^\dagger_q a_s a_r a^\dagger_a}{a}
+        \contraction[1.5ex]{a^\dagger_p a^\dagger_q a_s}{a}{{}_r a^\dagger_a a_i}{a}
+        \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a_i a^\dagger_b}{a}
+        a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a_i a^\dagger_b a_j \right\}
+        \Bigr) \ket{\Phi_0} \\ \pause
+        &= \frac{1}{2} \sum_{ijab} \bra{ij}\ket{ab} t_i^a t_j^b
+    \end{align*}
+    
+
+
+All terms resulting in the final coupled cluster energy can be found in the recent text of Shavitt and Bartlett, see Ref.~\cite{shavittbartlett2009}.
+Continuing along these lines, we arrive at the final expression for the correlation (irrespective of level of truncation of $T$)
   \[
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle t_{i}^{a}+
   \sum_{abij}\langle ij | \hat{v}| ab \rangle t_{ij}^{ab}.
   \]
+We leave it as challenge to the reader to derive the corresponding equations for the 
 
-  Coupled cluster theory has several interesting computational
-  features and is the method of choice in quantum chemistry. The
-  method was originally proposed by Coester and Kummel, two nuclear
-  physicists (way back in the fifties). It came back in full strength
-  in nuclear physics during the last decade.
 
   There are several interesting features:
   \begin{itemize}
@@ -3485,7 +3759,7 @@ many-body method of this chapter, coupled cluster theory.
   \[
     E[\Phi_0]= E_{\mathrm{Ref}}= \sum_{i\le F}^A \langle i | \hat{h}_0
     | i \rangle + \frac{1}{2}\sum_{ij\le F}^A\langle
-    ij|\hat{v}|ij\rangle_{AS}.
+    ij|\hat{v}|ij\rangle.
   \]
   Insert thereafter the plane wave function basis for the various
   single-particle states and show that the above energy can be written
@@ -3493,7 +3767,7 @@ many-body method of this chapter, coupled cluster theory.
   \[
     E[\Phi_0] = \sum_{i\le F}^A \langle k_i | \hat{t} | k_i \rangle +
     \frac{1}{2}\sum_{ij\le F}^A\langle
-    k_ik_j|\hat{v}|k_ik_j\rangle_{AS},
+    k_ik_j|\hat{v}|k_ik_j\rangle,
   \]
   where we use the shorthand $\vert k_i\rangle = \vert
   \mathbf{k}_i,\sigma_i,\tau_{z_i}\rangle$ for the single-particle
@@ -3508,7 +3782,7 @@ many-body method of this chapter, coupled cluster theory.
   symmetric nuclear matter)
   \[
     \frac{E_{\mathrm{Ref}}}{A}=\frac{3\hbar^2k_F^2}{10M_N}+\frac{1}{2n}\frac{L^3}{(2\pi)^6}\sum_{\sigma_i\sigma_j}\sum_{\tau_{z_i}\tau_{z_j}}\int_0^{\mathbf{k}_F}d\mathbf{k}_i\int_0^{\mathbf{k}_F}d\mathbf{k}_j\langle
-    k_ik_j|\hat{v}|k_ik_j\rangle_{AS},
+    k_ik_j|\hat{v}|k_ik_j\rangle,
   \]
   with the density $n=V/A=L^3/A$.
 
@@ -4034,7 +4308,7 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   \end{sol}
 
   \begin{sol}{problem:prob8.4}
-  We give first the final Hamiltonian matrix !bt
+  We give first the final Hamiltonian matrix
   \[
   H = \left (
   \begin{array}{cccccc}
@@ -4440,13 +4714,8 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
 
 
 
- \bibliographystyle{spphys} \bibliography{lnplib}
-
-
-
-
-
-
+\bibliographystyle{spphys} 
+\bibliography{lnplib}
 
 
 
