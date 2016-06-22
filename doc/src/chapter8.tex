@@ -2,8 +2,9 @@
 \newcommand{\normord}[1]{\left\{#1\right\}}
 \newcommand*{\kpr}[1]{\left\{#1\right\}}
 \newcommand*{\fpr}[1]{\left[#1\right]}
-\newcommand*{\for}[3]{\langle#1|#2|#3\rangle} \title{High-performance
-  computing Many-body methods and infinite nuclear matter}
+\newcommand*{\for}[3]{\langle#1|#2|#3\rangle} 
+
+\title{Computational Nuclear Physics and Post Hartree-Fock Methods}
 \author{Justin G.~Lietz, Samuel Novario, Gustav R.~Jansen, Gaute
   Hagen, and Morten Hjorth-Jensen,} \institute{Justin G.~Lietz \at
   Department of Physics and Astronomy and National Superconducting
@@ -24,16 +25,15 @@
   and Department of Physics, University of Oslo, Oslo, Norway,
   \email{hjensen@msu.edu}}
 
-\maketitle \abstract{We present a computational approach to infinite
+\maketitle 
+\abstract{ We present a computational approach to infinite
   nuclear matter employing Hartree-Fock theory, many-body perturbation
   theory and coupled cluster theory. These lectures are closely linked
-  with those in chapters \ref{chap:chapter9}, \ref{chap:chapter10} and
-  \ref{chap:chapter11} and serve as input for the correlation
-  functions employed in Monte Carlo calculations in chapter
-  \ref{chap:chapter9}, the in-medium similarity renormalization group
-  theory of dense fermionic systems of chapter chapter
-  \ref{chap:chapter10} and the Green's function approach in chapter
-  \ref{chap:chapter11}.  We provide extensive code examples and
+  with those in chapters 9, 10 and 11 and serve as input for the
+  correlation functions employed in Monte Carlo calculations in
+  chapter 9, the in-medium similarity renormalization group theory of
+  dense fermionic systems of chapter 10 and the Green's function
+  approach in chapter 11.  We provide extensive code examples and
   benchmark calculations, allowing thereby an eventual reader to start
   writing her/his own codes. We start with an object-oriented serial
   code and end with in-depth discussions on strategies for porting the
@@ -77,7 +77,7 @@ present text and Refs.~\cite{vankolck1994,machleidt2011,epelbaum2009},
 we are now in a situation where reliable results can be provided at
 different levels of approximation.  The nuclear Hamiltonians which are
 now used routinely in nuclear structure and nuclear matter
-calculations, include both $NN$ and 3NFs derived from EFT, see for
+calculations, include both nucleon-nucleon ($NN$) and three-nucleon forces (3NFs) derived from EFT, see for
 example
 Refs.~\cite{hammer2013,binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,krueger2013,carbone2013}.
 Parallel to the development of nuclear forces from EFT, which employs
@@ -102,7 +102,8 @@ many-body methods like coupled cluster theory
 \cite{gandolfi2009,lovato2012}, Green's function approaches
 \cite{baldo2012a,carbone2013,dickhoff2004} and density functional
 theories \cite{erler2013}, just to mention a few of the actual
-many-body methods which are used for nuclear matter studies.
+many-body methods which are used for nuclear matter studies. Many of these methods
+are discussed in detail in this and the following chapters.
 
 
 The aim of this part of the lectures (comprising this chapter and the
@@ -124,7 +125,7 @@ often assumed to be made of mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
 transitions to quark degrees of freedom at higher densities
-\cite{hh2000}.  In these notes we limit ourselves to matter composed
+\cite{hh2000,prakash1996,steiner2010}.  In these notes we limit ourselves to matter composed
 of neutrons only.  Furthermore, we will also consider matter at
 temperatures much lower than the typical Fermi energies.
 
@@ -148,7 +149,7 @@ The strengths and weaknesses of these methods are discussed throughout
 these chapters, with applications to either a simple pairing model
 and/or pure neutron matter. Our focus will be on pure neutron matter,
 starting with a simple model for the interaction between
-nucleons. This allows us to focus on the pedagogical and algorithmic
+nucleons. This allows us to focus on pedagogical and algorithmic
 aspects of the various many-body methods, avoiding thereby the full
 complexity of nuclear forces.  If properly written however, the codes
 can easily be extended to include models of the nuclear interactions
@@ -196,7 +197,7 @@ nuclear matter at saturation density of
 The energy per baryon is the central quantity in the present
 studies. From the energy per baryon, we can define the pressure $P$
 which counteracts the gravitional forces and hinders the gravitational
-collapse of neutron start. The pressure is defined through the
+collapse of a neutron star. The pressure is defined through the
 relation
 \begin{equation}
     P=n^2\frac{\partial {\cal E}}{\partial n}= n\frac{\partial
@@ -209,8 +210,8 @@ potential for particle species $i$ is given by
      \label{eq:chemicalpotdef}
 \end{equation}
 In calculations of properties of neutron star matter in
-$\beta$-equilibrium, we need to calculate the energy per baryon ${\cal
-  E}$ for e.g.~several proton fractions $x_p$. The proton fraction
+$\beta$-equilibrium, we need to calculate the energy per baryon ${\cal E}$ 
+for several proton fractions $x_p$. The proton fraction
 corresponds to the ratio of protons as compared to the total nucleon
 number ($Z/A$). It is defined as
 \begin{equation}
@@ -219,7 +220,7 @@ number ($Z/A$). It is defined as
 where $n=n_p+n_n$ is the total baryonic density if neutrons and
 protons are the only baryons present. If this is the case, the total
 Fermi momentum $k_F$ and the Fermi momenta $k_{Fp}$, $k_{Fn}$ for
-protons and neutrons are related to the total nucleon density $n$ by
+protons and neutrons, respectively, are related to the total nucleon density $n$ by
 \begin{align}
      n = & \frac{2}{3\pi^2} k_F^3 \nonumber \\ = & x_p n + (1-x_p) n
      \nonumber \\ = & \frac{1}{3\pi^2} k_{Fp}^3 + \frac{1}{3\pi^2}
@@ -228,8 +229,8 @@ protons and neutrons are related to the total nucleon density $n$ by
 \end{align}
 The energy per baryon will thus be labelled as ${\cal E}(n,x_p)$. The
 quantity ${\cal E}(n,0)$ refers then to the energy per baryon for pure
-neutron matter (PNM) while ${\cal E}(n,\frac{1}{2})$ is the
-corresponding value for SNM. Furthermore, in this work, subscripts
+neutron matter while ${\cal E}(n,\frac{1}{2})$ is the
+corresponding value for symmetric nuclear matter. Furthermore, in this work, subscripts
 $n,p,e,\mu$ will always refer to neutrons, protons, electrons and
 muons, respectively.
 
@@ -239,7 +240,7 @@ than the typical radius of such a star ($\sim 10$ km), we will
 throughout assume that neutrinos escape freely from the neutron star,
 see for example Ref.~\cite{prakash2006} for a discussion on trapped
 neutrinos. Eq.~(\ref{eq:betadecay}) yields then the following
-conditions for matter in $\beta$ equilibrium with for example
+conditions for matter in $\beta$-equilibrium with for example
 nucleonic degrees freedom only
 \begin{equation}
     \mu_n=\mu_p+\mu_e,
@@ -280,8 +281,8 @@ where the term $d^2 {\cal E}/dx_p^2$ is to be associated with the
 symmetry energy ${\cal S} (n)$ in the empirical mass formula. If we
 assume that higher order derivatives in the above expansion are small,
 then through the conditions for $\beta$-equilbrium of
-Eqs. (\ref{eq:npebetaequilibrium}) and (\ref{eq:chargeconserv}) and
-Eq. (\ref{eq:chemicalpotdef}) we can define the proton fraction by the
+Eqs.~(\ref{eq:npebetaequilibrium}) and (\ref{eq:chargeconserv}) and
+Eq.~(\ref{eq:chemicalpotdef}) we can define the proton fraction by the
 symmetry energy as
 \begin{equation}  
     \hbar c\left(3\pi^2nx_p\right)^{1/3} = 4{\cal S}
@@ -304,10 +305,10 @@ energy, and thereby the related proton fraction.
 
 With this background, we are now ready to define our basic inputs and
 approximations to the various many-body theories discussed in this
-chapter the three subsequent ones.  We will assume that the
+chapter and the three subsequent ones.  We will assume that the
 interacting part of the Hamiltonian can be approximated by a two-body
 interaction.  This means that our Hamiltonian is written as the sum of
-some one-body part and a two-body part
+a one-body part and a two-body part
 \begin{equation}
     \hat{H} = \hat{H}_0 + \hat{H}_I = \sum_{i=1}^A \hat{h}_0(x_i) +
     \sum_{i < j}^A \hat{v}(r_{ij}),
@@ -330,7 +331,7 @@ potential. For atoms, the external potential is defined by the Coulomb
 interaction an electron feels from the atomic nucleus. However, other
 potentials are fully possible, such as one derived from the
 self-consistent solution of the Hartree-Fock equations to be discussed
-below. Since we will work with plane waves, the one-body operator is
+below. Since we will work with infinite matter and plane wave basis states, the one-body operator is
 simply given by the kinetic energy operator.
 
 Our Hamiltonian is invariant under the permutation (interchange) of
@@ -356,7 +357,7 @@ for say the ground state with a Slater determinant
      \\ \psi_{\sigma}(x_1)&\psi_{\sigma}(x_2)& \dots & \dots &
      \psi_{\sigma}(x_A)\end{array} \right|, \label{eq:HartreeFockDet}
 \end{equation}
-where $x_i$ stand for the coordinates and spin values of a particle
+where $x_i$ stand for the coordinates and spin values of particle
 $i$ and $\alpha,\beta,\dots, \gamma$ are quantum numbers needed to
 describe remaining quantum numbers.
 
@@ -376,12 +377,12 @@ implementation of the Pauli principle since no two particles can be at
 the same place (two columns being the same in the above determinant)
 and no two particles can be in the same state (two rows being the
 same).  As a practical matter, however, Slater determinants beyond
-$N=4$ quickly become unwieldy. Thus we turn to the \textbf{occupation
-  representation} or \textbf{second quantization} to simplify
+$N=4$ quickly become unwieldy. Thus we turn to the occupation
+  representation or second quantization to simplify
 calculations. For a good introduction to second quantization see for
 examples Ref.~\cite{shavittbartlett2009}.
 
-We start thus with a set of orthonormal single-particle states $\{
+We start with a set of orthonormal single-particle states $\{
 \psi_{\alpha}(x) \}$.  To each single-particle state
 $\psi_{\alpha}(x)$ we associate a creation operator
 $a^\dagger_{\alpha}$ and an annihilation operator $a_{\alpha}$.  When
@@ -389,46 +390,44 @@ acting on the vacuum state $| 0 \rangle$, the creation operator
 $a^\dagger_{\alpha}$ causes a particle to occupy the single-particle
 state $\psi_{\alpha}(x)$
 \[
-\psi_{\alpha}(x) \rightarrow a^\dagger_{\alpha} |0 \rangle
+\psi_{\alpha}(x) \rightarrow a^\dagger_{\alpha} |0 \rangle.
 \]
-But with multiple creation operators we can occupy multiple states:
+But with multiple creation operators we can occupy multiple states
 \[
 \psi_{\alpha}(x) \psi_{\beta}(x^\prime) \psi_{\delta}(x^{\prime
   \prime}) \rightarrow a^\dagger_{\alpha} a^\dagger_{\beta}
 a^\dagger_{\delta} |0 \rangle.
 \]
 
-Now we impose anti-symmetry, by having the fermion operators satisfy
+Now we impose anti-symmetry by having the fermion operators satisfy
 the anti-commutation relations
 \[
 a^\dagger_{\alpha} a^\dagger_{\beta} + a^\dagger_{\beta}
 a^\dagger_{\alpha} = \left\{ a^\dagger_{\alpha}
 ,a^\dagger_{\beta}\right\}= 0,
 \]
-so that
+with the consequence that
 \[
 a^\dagger_{\alpha} a^\dagger_{\beta} = - a^\dagger_{\beta}
 a^\dagger_{\alpha}.
 \]
-Because of this property, with obtain $a^\dagger_{\alpha}
+Because of this property, we obtain $a^\dagger_{\alpha}
 a^\dagger_{\alpha} = 0$, enforcing the Pauli exclusion principle.
 Thus we can represent a Slater determinant using creation operators as
 \[
-a^\dagger_{\alpha} a^\dagger_{\beta} a^\dagger_{\delta} \ldots |0
-\rangle
+a^\dagger_{\alpha} a^\dagger_{\beta} a^\dagger_{\delta} \ldots |0\rangle,
 \]
-each index $\alpha,\beta,\delta, \ldots$ must be unique.
+where each index $\alpha,\beta,\delta, \ldots$ has to be unique.
 
 We will now find it convenient to define a Fermi level and introduce a
-new reference vacuum. The Fermi level is defined in terms of all
-occupied single-particle states below a certain excitation
+new reference vacuum. The Fermi level is normally  defined in terms of all
+occupied single-particle states below a certain
 single-particle energy.  With the definition of a Fermi level, we can
 in turn define our ansatz for the ground state, represented by a
-Slater determinant as $\Phi_0$.  We will throughout the rest of this
-text using creation and annihilation operators to represent quantum
+Slater determinant $\Phi_0$.  We will throughout the rest of this
+text use creation and annihilation operators to represent quantum
 mechanical operators and states.  It means that our compact
-representation of a given Slater determinant in Fock space
-\cite{shavittbartlett2009} is
+representation for a given Slater determinant in Fock space is
 \[
   \Phi_{0}=|i_1 \dots i_A\rangle= a_{i_1}^{\dagger} \dots
   a_{i_A}^{\dagger} |0\rangle
@@ -456,8 +455,8 @@ We can rewrite the ansatz for the ground state as
 where we have introduced the shorthand labels for states below the
 Fermi level $F$ as $i,j,\ldots \leq F$. For single-particle states
 above the Fermi level we reserve the labels $a,b,\ldots > F$, while
-the labels $p,q, \ldots$ represent any possible single particle state,
-that is states below and above the Fermi level.
+the labels $p,q, \ldots$ represent any possible single particle state.
+
 
 Since our focus is on infinite systems, the one-body part of the
 Hamiltonian is given by the kinetic energy operator only.  In second
@@ -503,10 +502,9 @@ vacuum state, we need to redefine the anticommutation relations to
 \]
 and
 \[
-\left\{a_p, a_q^\dagger \right\} = \delta_{pq}, \hspace{0.1cm} p, q >
-F.
+\left\{a_p, a_q^\dagger \right\} = \delta_{pq}, \hspace{0.1cm} p, q > F.
 \]
-It is easy to see then that
+It is easy to see that
 \[
         a_i|\Phi_0\rangle = |\Phi_i\rangle\ne 0, \hspace{0.5cm}
         a_a^\dagger|\Phi_0\rangle = |\Phi^a\rangle\ne 0,
@@ -516,7 +514,7 @@ and
 a_i^\dagger|\Phi_0\rangle = 0 \hspace{0.5cm} a_a|\Phi_0\rangle = 0.
 \]
 With the new reference vacuum state the Hamiltonian can be rewritten
-as, see problem \ref{problem:prob8.1}
+as, see problem \ref{problem:prob8.1},
 \[
 \hat{H}=E_{\mathrm{Ref}}+\hat{H}_N,
 \]
@@ -527,13 +525,13 @@ E_{\mathrm{Ref}}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0\rangle =
 \sum_{i\le F} \langle i|\hat{h}_0|i\rangle + \frac{1}{2} \sum_{ij\le
   F}\langle ij|\hat{v}|ij\rangle,
 \]
-and the new normal-ordered Hamiltonian defined as
-\[
+and the new normal-ordered Hamiltonian is defined as
+\begin{equation}\label{eq:Hnormalorder}
 \hat{H}_N = \sum_{pq} \langle p|\hat{h}_0|q\rangle \left\{a^\dagger_p
 a_q\right\}+\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle
 \left\{a^\dagger_p a^\dagger_q a_s a_r\right\}+\sum_{pq,i\le F}
 \langle pi|\hat{v}|qi\rangle \left\{a^\dagger_p a_q\right\},
-\]
+\end{equation}
 where the curly brackets represent normal-ordering with respect to the
 new reference vacuum state.  The normal-ordered Hamiltonian can be
 rewritten in terms of a new one-body operator and a two-body operator
@@ -543,8 +541,7 @@ as
 \]
 with
 \[
-\hat{F}_N=\sum_{pq} \langle p|\hat{f}|q\rangle \left\{a^\dagger_p
-a_q\right\},
+\hat{F}_N=\sum_{pq} \langle p|\hat{f}|q\rangle \left\{a^\dagger_pa_q\right\},
 \]
 where
 \[
@@ -663,19 +660,19 @@ n = g \frac{k_F^3}{6\pi^2},
 \]
 where $k_F$ is the Fermi momentum and the degeneracy $g$, which is two
 for one type of spin-$1/2$ particles and four for symmetric nuclear
-matter.  With the density defined, having fixed the number of
+matter.  With the density defined and having fixed the number of
 particles $A$ and the Fermi momentum $k_F$, we can define the length
 $L$ of the box used with periodic boundary contributions via the
 relation
 \[
   V= L^3= \frac{A}{n}.
 \]
-We can then can use $L$ to define the spacing between various
-$k$-values, that is
+Wit $L$ we can to define the spacing between various
+$k$-values given by
 \[
   \Delta k = \frac{2\pi}{L}.
 \]
-Here, $A$ can be the number of nucleons. If we deal with the electron
+Here, $A$ is the number of nucleons. If we deal with the electron
 gas only, this needs to be replaced by the number of electrons $N$.
 Exercise \ref{problem:spbasissetup} deals with setting up a program
 that establishes the single-particle basis for nuclear matter
@@ -879,7 +876,7 @@ this Lagrangian to a particular process, an unlimited number of
 Feynman graphs can be drawn. Therefore, a scheme is needed that makes
 the theory manageable and calculable.  This scheme which tells us how
 to distinguish between large (important) and small (unimportant)
-contributions is chiral perturbation theory (ChPT).  ChPT allows for
+contributions is chiral perturbation theory (ChPT).  Chiral perturbation theory  allows for
 an expansion in terms of $(Q/\Lambda_\chi)^\nu$, where $Q$ is generic
 for an external momentum (nucleon three-momentum or pion
 four-momentum) or a pion mass, and $\Lambda_\chi \sim 1$ GeV is the
@@ -905,9 +902,7 @@ or pion-mass insertions and $n_i$ the number of nucleon fields
 contained in the diagram under consideration.  Note that $\Delta_i
 \geq 0$ for all interactions allowed by chiral symmetry.  In this work
 we will focus on optimized two- and three-nucleon forces at order
-NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.  Studies of the
-convergence of chiral perturbation theory for the quantities studied
-here, will be presented in a future work.
+NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.  
 
 Below we revisit briefly the formalism and results presented in
 Refs.~\cite{carlsson2016}. For further details on chiral effective
