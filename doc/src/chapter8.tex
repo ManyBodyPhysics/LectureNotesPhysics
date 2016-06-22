@@ -1104,8 +1104,7 @@ expression for the ground state of a given Hamiltonian. The basic
 ingredients contain a single-particle basis $\{\psi_{\alpha}\}$
 defined by the solution of the following eigenvalue problem
 \[ 
-\hat{h}^{\mathrm{HF}}\psi_{\alpha} =
-\varepsilon_{\alpha}\psi_{\alpha},
+\hat{h}^{\mathrm{HF}}\psi_{\alpha} =\varepsilon_{\alpha}\psi_{\alpha},
 \]
 with the Hartree-Fock Hamiltonian defined as
 \[
@@ -1117,9 +1116,9 @@ determined by the HF algorithm. The HF algorithm means to choose
 $\hat{u}^{\mathrm{HF}}$ in order to have
 \[ \langle \hat{H} \rangle = E^{\mathrm{HF}}= \langle \Phi_0^{HF} | \hat{H}|\Phi_0^{HF} \rangle,
 \]
-that is to find a local minimum with a Slater determinant
+as a local minimum with a Slater determinant
 $\Phi_0^{HF}$ being the ansatz for the ground state.  The variational
-principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the exact
+principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the representing the exact
 ground state energy.
 
 We will show that the Hartree-Fock Hamiltonian $\hat{h}^{\mathrm{HF}}$
@@ -1168,7 +1167,7 @@ In this case we vary the coefficients $C_{p\lambda}$. If the basis has
 infinitely many solutions, we need to truncate the above sum.  We
 assume that the basis $\phi_{\lambda}$ is orthogonal. A unitary
 transformation keeps the orthogonality, as discussed in problem
-\ref{problem:prob8.9} below.
+\ref{problem:unitarity} below.
 
 
 It is normal to choose a single-particle basis defined as the
@@ -1213,8 +1212,8 @@ Now we are interested in defining a new basis defined in terms of a
 chosen basis as defined in Eq.~(\ref{eq:newbasis}). We can then
 rewrite the energy functional as
 \begin{equation}
-  E[\Phi^{HF}] = \sum_{i=1}^A \langle i | h | i \rangle +
-  \frac{1}{2}\sum_{ij=1}^A\langle
+  E[\Phi^{HF}] = \sum_{i\le F} \langle i | h | i \rangle +
+  \frac{1}{2}\sum_{ij\le F}\langle
   ij|\hat{v}|ij\rangle_{AS}, \label{FunctionalEPhi2}
 \end{equation}
 where $\Phi^{HF}$ is the new Slater determinant defined by the new
@@ -1227,9 +1226,9 @@ basis of Eq.~(\ref{eq:newbasis}).
 Using Eq.~(\ref{eq:newbasis}) we can rewrite
 Eq.~(\ref{FunctionalEPhi2}) as
 \begin{equation}
-  E[\Psi] = \sum_{i=1}^A \sum_{\alpha\beta}
+  E[\Psi] = \sum_{i\le F} \sum_{\alpha\beta}
   C^*_{i\alpha}C_{i\beta}\langle \alpha | h | \beta \rangle +
-  \frac{1}{2}\sum_{ij=1}^A\sum_{{\alpha\beta\gamma\delta}}
+  \frac{1}{2}\sum_{ij\le F}\sum_{{\alpha\beta\gamma\delta}}
   C^*_{i\alpha}C^*_{j\beta}C_{i\gamma}C_{j\delta}\langle
   \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}. \label{FunctionalEPhi3}
 \end{equation}
@@ -1247,7 +1246,7 @@ relation
 \]
 which allows us to define a functional to be minimized that reads
 \begin{equation}
-  F[\Phi^{HF}]=E[\Phi^{HF}] - \sum_{i=1}^A\epsilon_i\sum_{\alpha}
+  F[\Phi^{HF}]=E[\Phi^{HF}] - \sum_{i\le F}\epsilon_i\sum_{\alpha}
   C^*_{i\alpha}C_{i\alpha}.
 \end{equation}
 
@@ -1265,7 +1264,7 @@ a unitary matrix, or orthogonal for a real symmetric matrix) the
 following Hartree-Fock equations
 \[
 \sum_{\beta} C_{i\beta}\langle \alpha | h | \beta \rangle+
-\sum_{j=1}^A\sum_{\beta\gamma\delta}
+\sum_{j\le F}\sum_{\beta\gamma\delta}
 C^*_{j\beta}C_{j\delta}C_{i\gamma}\langle
 \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}=\epsilon_i^{HF}C_{i\alpha}.
 \]
@@ -1274,7 +1273,7 @@ C^*_{j\beta}C_{j\delta}C_{i\gamma}\langle
 We can rewrite this equation as (changing dummy variables)
 \[
 \sum_{\beta} \left\{\langle \alpha | h | \beta \rangle+
-\sum_{j}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
+\sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
 \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}\right\}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}.
 \]
 Note that the sums over greek indices run over the number of basis set
@@ -1283,7 +1282,7 @@ functions (in principle an infinite number).
 Defining
 \[
 h_{\alpha\beta}^{HF}=\langle \alpha | h | \beta \rangle+
-\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
+\sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
 \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS},
 \]
 we can rewrite the new equations as
@@ -1294,7 +1293,7 @@ The latter is nothing but a standard eigenvalue problem.  Our
 Hartree-Fock matrix is thus
 \[
 \hat{h}_{\alpha\beta}^{HF}=\langle \alpha | \hat{h}_0 | \beta \rangle+
-\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
+\sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
 \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 \]
 The Hartree-Fock equations are solved in an iterative way starting
@@ -1308,7 +1307,7 @@ forms an eigenbasis for the operator $\hat{h}_0$, meaning that the
 Hartree-Fock matrix becomes
 \[
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
-\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
+\sum_{j\le F}\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle
 \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 \]
 
@@ -1317,7 +1316,7 @@ Hartree-Fock matrix becomes
 The equations are often rewritten in terms of a so-called density matrix,
 which is defined as 
 \begin{equation}
-\rho_{\gamma\delta}=\sum_{i=1}^{N}\langle\gamma|i\rangle\langle i|\delta\rangle = \sum_{i=1}^{N}C_{i\gamma}C^*_{i\delta}.
+\rho_{\gamma\delta}=\sum_{i\le F}\langle\gamma|i\rangle\langle i|\delta\rangle = \sum_{i=1}^{N}C_{i\gamma}C^*_{i\delta}.
 \end{equation}
 It means that we can rewrite the Hartree-Fock Hamiltonian as
 \[
@@ -1364,14 +1363,14 @@ The following simple Python program implements the above algorithm using the den
 We have omitted the functions that set up the single-particle basis and the anti-symmetrized two-body interaction matrix elements.
 These have to be provided. 
 \begin{lstlisting}
-import numpy as np 
-from decimal import Decimal
 # We skip here functions that set up the one- and two-body parts of the Hamiltonian 
 # These functions need to be defined by the user. The two-body interaction below is
 # calculated by calling the function TwoBodyInteraction(alpha,gamma,beta,delta)
 # Similalry, the one-body part is computed by the function singleparticleH(alpha)
 # We have omitted specific quantum number tests as well (isopsin conservation, 
 # momentum conservation etc)
+import numpy as np 
+from decimal import Decimal
 
 if __name__ == '__main__':
 	
@@ -1432,7 +1431,7 @@ if __name__ == '__main__':
 
 
   We end this section by rewriting the ground state energy by adding
-  and subtracting $\hat{u}^{HF}(x_i)$
+  and subtracting $\hat{u}^{HF}$
   \[
     E_0^{HF} =\langle \Phi_0 | \hat{H} | \Phi_0\rangle = \sum_{i\le
       F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| j\rangle+
@@ -1465,11 +1464,11 @@ if __name__ == '__main__':
   This equation demonstrates that the total energy is not given as the
   sum of the individual single-particle energies.
 
-  \section{Full Configuration Interaction Theory}
+  \section{Full Configuration Interaction Theory}\label{sec:fci}
 
   Full configuration theory (FCI), which represents a discretized
   variant of the continuous eigenvalue problem, allows for, in
-  principle, a numerical exact solution of Schr\"odinger's equation
+  principle, an exact (to numerical precision) solution of Schr\"odinger's equation
   for many interacting fermions or bosons with a given basis set. This
   basis set defines an effective Hilbert space.  For fermionic
   problems, the standard approach is to define an upper limit for the
@@ -1485,14 +1484,14 @@ if __name__ == '__main__':
   possible Slater determinants which can be constructed with a given
   number of fermions $A$.  The total number of Slater determinants
   determines thereafter the dimensionality of the Hamiltonian matrix
-  and thereby an effective Hilbert space.  % say something about
-  truncation errors If we are able to set up the Hamiltonian matrix
+  and thereby an effective Hilbert space. 
+  If we are able to set up the Hamiltonian matrix
   and solve the pertinent eigenvalue problem within this basis set,
   FCI provides numerically exact solutions to all states of interest
   for a given many-body problem. The dimensionality of the problem
-  explodes however quickly. To see this it suffices to consider that
+  explodes however quickly. To see this it suffices to consider
   the total number of Slater determinants which can be built with say
-  $N$ neutrons distributed among $n$ single-particle states is
+  $N$ neutrons distributed among $n$ single-particle states. The total number is
   \[
   \left (\begin{array}{c} n \\ N\end{array} \right)
     =\frac{n!}{(n-N)!N!}.
@@ -1506,9 +1505,9 @@ if __name__ == '__main__':
   \left (\begin{array}{c} 40 \\ 8\end{array} \right)
     =\frac{40!}{(32)!8!}\sim 8\times 10^{7},
   \]
-  possible Slater determinants and multiplying this with the number of
-  proton Slater determinants we end up with approximately $d\sim
-  10^{15}$ possible Slater determinants and a Hamiltonian matrix of
+  possible Slater determinants. Multiplying this with the number of
+  proton Slater determinants we end up with approximately $d\sim 10^{15}$ 
+  possible Slater determinants and a Hamiltonian matrix of
   dimension $10^{15}\times 10^{15}$, and intractable problem if we wish to diagonalize the Hamiltonian matrix. The
   dimensionality can be reduced if we look at specific symmetries,
   however these symmetries will never reduce the problem to
@@ -1551,7 +1550,7 @@ if __name__ == '__main__':
   |\Phi_0\rangle = \left(\prod_{i\le
     F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
   \]
-  where the index $i$ defines different single-particle states up to
+  where the variable  $i$ defines different single-particle states up to
   the Fermi level. We have assumed that we have $A$ nucleons and that the chosen single-particle basis are eigenstates of 
 the one-body Hamiltonian $\hat{h}_0$ (defining thereby an orthogonal basis set).  
 A given
@@ -1570,7 +1569,7 @@ A given
   \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
   \]
 
-  We use letters $ijkl\dots$ for states below the Fermi level and
+  As before, we use letters $ijkl\dots$ for states below the Fermi level and
   $abcd\dots$ for states above the Fermi level. A general
   single-particle state is given by letters $pqrs\dots$.
 
@@ -1633,16 +1632,14 @@ A given
   the energy of the system.
 
   The minimization process results in
-  \[
+  \begin{align}
   \delta\left[ \langle \Psi_0 | \hat{H} |\Psi_0 \rangle-\lambda
-    \langle \Psi_0 |\Psi_0 \rangle\right]=
-  \]
-  \[
+    \langle \Psi_0 |\Psi_0 \rangle\right]=&
   \sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H}
   |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}+ C_H^{*P}\langle \Phi_H^P |
   \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]- \lambda(
   \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
-  \]
+  \end{align}
   Since the coefficients $\delta[C_H^{*P}]$ and $\delta[C_{H'}^{P'}]$
   are complex conjugates it is necessary and sufficient to require the
   quantities that multiply with $\delta[C_H^{*P}]$ to vanish.
@@ -1684,20 +1681,20 @@ A given
   determinants), it can then serve as a benchmark for other many-body
   methods which approximate the correlation operator $\hat{C}$.  Our
   pairing model discussed in problem \ref{prob:pairingmodel} is an
-  example of a system which can be diagonalized numerically, providing
+  example of a system which can be diagonalized exactly, providing
   thereby benchmarks for different approximative methods.
 
 
   To better understand the meaning of possible configurations and the
   derivation of a Hamiltonian matrix, we consider here a simple
   example of six fermions. We assume we can make an ansatz for the
-  ground state with all six fermions below the Fermi level. We will
+  ground state with all six fermions below the Fermi level. We 
   label this state as a zero-particle-zero-hole state $0p-0h$. With
   six nucleons we can make at most $6p-6h$ excitations. If we have an
   infinity of single particle states above the Fermi level, we will
   obviously have an infinity of say $2p-2h$ excitations. Each specific way
   to distribute the particles represents a configuration. We will
-  always have to truncate in the basis of single-particle states.
+  always have to truncate  the basis of single-particle states.
   This gives us a finite number of possible Slater determinants. Our
   Hamiltonian matrix would then look like (where each block which is
   marked with an $x$ can contain a large quantity of non-zero matrix
@@ -1811,8 +1808,8 @@ If we do not define a core, this defines normally what is
   \]
   where the energy $E_{\mathrm{Ref}}$ is the reference energy and
   $\Delta E$ defines the so-called correlation energy.  The
-  single-particle basis functions could be the results of a
-  Hartree-Fock calculation or just the eigenstates of the one-body operator that defined the
+  single-particle basis functions could  result from  a
+  Hartree-Fock calculation or they could be the eigenstates of the one-body operator that defined the
   non-interacting part of the Hamiltonian.
 
   In our Hartree-Fock discussions, we have already computed
@@ -1907,8 +1904,8 @@ energy of Eq.~(\ref{eq:correlationenergy}).  These
 compute expectation values of other operators,
     as well as transition probabilities. Moreover, correlations are easy to understand in terms of contributions
     to a given operator beyond the Hartree-Fock contribution. 
-For larger dimensionalities $d$, with $d > 10^5$, iterative Krylov methods \cite{krylov} like Lanczos' \cite{lancszo} or Davidson's \cite{davidson} 
-algorithms are frequently used. These methods yield, with a finite number of iteration, only a subset of all eigenvalues of interest. Lanczos' algorithm converges to the extreme values, yileding the lowest-lying and highest-lying eigenstates, see for example Ref.~\cite{golubvanloan} for a proof. 
+For larger dimensionalities $d$, with $d > 10^5$, iterative Krylov methods \cite{krylov} like Lanczos' \cite{lanczos} or Davidson's \cite{davidson} 
+algorithms are frequently used. These methods yield, with a finite number of iteration, only a subset of all eigenvalues of interest. Lanczos' algorithm converges to the extreme values, yielding the lowest-lying and highest-lying eigenstates, see for example Ref.~\cite{golubvanloan} for a proof. 
 
 With the eigenvectors we can compute
   the correlation energy, which is defined as (with a two-body Hamiltonian)
@@ -1916,7 +1913,7 @@ With the eigenvectors we can compute
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
   \sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
   \]
-The energy of for example the ground state is then
+The energy of  the ground state is then
   \[
   E=E_{\mathrm{Ref}}+\Delta E.
   \]
@@ -1945,11 +1942,11 @@ The energy of for example the ground state is then
   \[
   \hat{H}_0\vert \Phi_0\rangle= W_0\vert \Phi_0\rangle.
   \]
-  The state $\vert \Psi_0\rangle$ is not normalized, rather we employ again
-  the intermediate normalization $\langle \Phi_0 \vert
+  The state $\vert \Psi_0\rangle$ is not normalized and we employ again
+  intermediate normalization via $\langle \Phi_0 \vert
   \Psi_0\rangle=1$.
 
-  The Schr\"odinger equation is
+  The Schr\"odinger equation is given by
   \[
   \hat{H}\vert \Psi_0\rangle = E\vert \Psi_0\rangle,
   \]
@@ -1964,7 +1961,7 @@ The energy of for example the ground state is then
   \langle \Psi_0\vert \hat{H}_0\vert \Phi_0\rangle= W_0\langle
   \Psi_0\vert \Phi_0\rangle=W_0,
   \]
-  and using the fact that the both operators $\hat{H}$ and $\hat{H}_0$
+  and using the fact that the  operators $\hat{H}$ and $\hat{H}_0$
   are hermitian results in
   \begin{equation}\label{eq:mbptcorrel}
   \Delta E=E-W_0=\langle \Phi_0\vert \hat{H}_I\vert \Psi_0\rangle,
@@ -1977,10 +1974,12 @@ by the unperturbed energy $W_0$. The reader should contrast this equation to our
   \]
 and the total energy
   \[
-  E=E_{\mathrm{Ref}}+\Delta E.
+  E=E_{\mathrm{Ref}}+\Delta E,
   \]
-
-
+where the reference energy is given by
+\[   
+   E_{\mathrm{Ref}}= \langle \Phi_0 \vert \hat{H} \vert \Phi_0\rangle.
+\]
 
   Equation (\ref{eq:mbptcorrel}) forms the starting point for all perturbative
   derivations. However, as it stands it represents nothing but a mere
@@ -2037,10 +2036,7 @@ and the total energy
   which is possible since we have defined the operator $\hat{Q}$ in
   terms of the eigenfunctions of $\hat{H}$.
 
-
-
-
-  These operators commute meaning that
+ Since these operators commute we have
   \[
   \hat{Q}\frac{1}{\left(\omega-\hat{H}_0\right)}\hat{Q}=\hat{Q}\frac{1}{\left(\omega-\hat{H}_0\right)}=\frac{\hat{Q}}{\left(\omega-\hat{H}_0\right)}.
   \]
@@ -2088,7 +2084,7 @@ and the total energy
   $E$. Not much has been gained thus from a practical computational
   point of view.
 
-  In Brilluoin-Wigner perturbation theory it is customary to set
+  In Brilluoin-Wigner perturbation theory \cite{shavittbartlett2009} it is customary to set
   $\omega=E$. This results in the following perturbative expansion for
   the energy $\Delta E$
   \begin{align}
@@ -2103,9 +2099,6 @@ and the total energy
   not very convenient from a practical point of view. It can obviously
   be solved iteratively, by starting with a guess for $E$ and then
   solve till some kind of self-consistency criterion has been reached.
-
-  Actually, the above expression is nothing but a rewrite again of the
-  full Schr\"odinger equation.
 
   Defining $e=E-\hat{H}_0$ and recalling that $\hat{H}_0$ commutes
   with $\hat{Q}$ by construction and that $\hat{Q}$ is an idempotent
@@ -2123,7 +2116,7 @@ and the total energy
   \hat{H}_I+\hat{H}_I\hat{Q}\frac{1}{E-\hat{H}_0-\hat{Q}\hat{H}_I\hat{Q}}\hat{Q}\hat{H}_I\vert
   \Phi_0\rangle.
   \]
-  In Rayleigh-Schr\"odinger (RS) perturbation theory we set $\omega = W_0$ and obtain the
+  In Rayleigh-Schr\"odinger (RS) perturbation theory \cite{shavittbartlett2009} we set $\omega = W_0$ and obtain the
   following expression for the energy difference
   \begin{align}
   \Delta E =& \sum_{i=0}^{\infty}\langle \Phi_0\vert
@@ -2180,11 +2173,102 @@ and the total energy
   \Phi_0\rangle,
   \]
   being the third-order contribution.
+  There exists a formal theory for the calculation
+  of $\Delta E_0$, see for example Ref.~\cite{shavittbartlett2009}.  According to the well-known Goldstone
+  linked-diagram theory, the energy shift $\Delta E_0$ is given
+  exactly by the diagrammatic expansion shown in
+  Fig.~\ref{fig:goldstone}, where ground state diagrams to third order are listed. This theory is a linked-cluster
+  perturbation expansion for the ground state energy of a many-body
+  system, and applies equally well to both nuclear matter and
+  closed-shell nuclei such as the doubly magic nucleus $^{40}$Ca.  
+We will also assume the reader is familiar 
+with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{svavittbartlett2009}.
+Here we simply list the standard diagram rules
+ \begin{itemize}
+        \item Label all lines.
+        \item Sum over all indices. 
+        \item For two-body operators draw dotted lines for the operator from endpoint to endpoint. 
+Keep only topologically distinct diagrams and draw incoming and outgoing lines at every endpoint.
+\item Mark the lines as either holes or particles. 
+        \item Extract matrix elements from diagrams as follows: $f_{\mathrm{in}}^{\mathrm{out}}$ or 
+$\langle \mathrm{out}|f|\mathrm{in}\rangle$, 
+            $\bra{\mathrm{leftout, rightout}}\hat{v}\ket{\mathrm{leftin, rightin}}$)
+\item For the two-body operators, crossing lines (below or above the interaction line) 
+give rise to a minus sign.
+\item For hole states, a hole line which goes through the whole diagram adds a minus sign.  
+\item All closed fermion loops add also a minus.
+\item For every pair of equivalent lines (that is lines that start at the same vertex and end at the same vertex, there is  a factor $1/2$.
+    \end{itemize}
+\begin{figure}
+    \includegraphics[width=\linewidth]{Chapter8-figures/mbpt.pdf}
+      \caption{Diagrams which enter the definition of the ground-state
+      shift energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
+      \label{fig:goldstone}
+\end{figure}
+In an infinite system like nuclear matter or the homogenous electron gas, all diagrams with so-called Hartree-Fock insertions like diagrams (2), (6), (7), (10-16) are zero 
+due to lack of momentum conservation. They would also be zero in case a canonical \cite{shavittbartlett2009} Hartree-Fock basis is employed. 
+
+  Using the standard diagram rules, the various
+  diagrams contained in the above figure can be readily calculated (in
+  an uncoupled scheme). Diagram  (1) results in
+  \begin{equation}
+     (1)=\frac{1}{2^2}\sum_{ij\leq F}\sum_{ab>F}
+    \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS} \langle
+      ab\vert\hat{v}\vert ij\rangle_{AS}}
+         {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b},
+  \end{equation}
+ while diagram (2) is zero due to lack of momentum conservation. We have two factors of $1/2$ since there are two equivalent pairs fermions (two  particle states and two hole states) starting at the same vertex and ending at the same vertex. The expression for diagram (3)  is 
+  \begin{equation}
+     (3)=\sum_{ijk\leq k_F}\sum_{abc > F}
+    \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS} \langle
+      bk\vert\hat{v}\vert ic\rangle_{AS} \langle ac\vert\hat{v}\vert
+      ik\rangle_{AS}}
+         {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
+           (\varepsilon_i+\varepsilon_k-\varepsilon_a-\varepsilon_c)}.
+  \end{equation}
+  Diagrams (4) and (5) read
+  \begin{equation}
+     (4)=\frac{1}{2^3}\sum_{ij\le F}\sum_{abcd > F}
+    \frac{\langle ij\vert\hat{v}\vert cd\rangle_{AS} \langle
+      cd\vert\hat{v}\vert ab\rangle_{AS} \langle ab\vert\hat{v}\vert
+      ij\rangle_{AS}}
+         {(\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d)
+           (\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)},
+  \end{equation}
+  \begin{equation}
+     (5)=\frac{1}{2^3}\sum_{ijkl\le F}\sum_{ab > F}
+    \frac{\langle ab\vert\hat{v}\vert kl\rangle_{AS} \langle
+      kl\vert\hat{v}\vert ij\rangle_{AS} \langle ij\vert\hat{v}\vert
+      ab\rangle_{AS}}
+         {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
+           (\varepsilon_k+\varepsilon_l-\varepsilon_a-\varepsilon_b)},
+  \end{equation}
+where the factor $(1/2)^3$ arises due to the three equivalent pair of lines starting and ending at the same vertices. The last two contributions 
+have an even number of hole lines and closed loops, resulting thus in an positive sign. In problem \ref{problem:diagrams}, you are asked to calculate the expressions for diagrams like (8) and (9) in the above figure. 
+
+  In the expressions for the various diagrams the quantity $\varepsilon$ denotes the single-particle energies
+  defined by $H_0$.  The steps leading to the above expressions for
+  the various diagrams are rather straightforward. Though, if we wish
+  to compute the matrix elements for the interaction $\hat{v}$, a serious
+  problem arises. Typically, the matrix elements will contain a term
+  $V(|{\mathbf r}|)$
+  which represents the interaction potential $V$ between two nucleons,
+  where ${\mathbf r}$ is the internucleon distance.  All modern models
+  for $V$ have a strong short-range repulsive core. Hence, matrix
+  elements involving $V(|{\mathbf r}|)$, will result in large (or
+  infinitely large for a potential with a hard core) and repulsive
+  contributions to the ground-state energy. Thus, the diagrammatic
+  expansion for the ground-state energy in terms of the potential
+  $V(|{\mathbf r}|)$ becomes meaningless. A perturbative expansion in terms of
+such interaction matrix elements may thus lead to a slowly converging expansion.
+A standard recipe to circumvent such problems has been to sum up 
+a selected class of diagrams. We discuss such possibilities in the next subsection.  
+
 
 
   \subsection{Interpreting the correlation energy and the wave operator}
 
-  In the full configuration interaction theory  section we showed that we could rewrite the exact state
+  In the full configuration interaction theory  section \ref{sec:fci} we showed that we could rewrite the exact state
   function for the ground state as a linear expansion in terms of all
   possible Slater determinants.  We expanded then (as an example) our
   exact state function for the ground state as
@@ -2230,7 +2314,7 @@ and the total energy
   ab\rangle \frac{\langle ab\vert \hat{v}\vert
     ij\rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
   \]
-
+Here we have used the results from problem \ref{problem:hamiltoniansetup}. 
   If we compare this to the correlation energy obtained from full
   configuration interaction theory with a Hartree-Fock basis, we found
   that
@@ -2257,237 +2341,41 @@ and the total energy
   requirement of momentum conservation in infinite systems. These
   two-particle-two-hole correlations can also be summed to infinite
   order and a particular class of such excitations are given by
-  two-particle excitations only. These can easily be summed to
-  infinite order, and represent in case of nuclear interactions, which
+  two-particle excitations only. These represent in case of nuclear interactions, which
   are strongly repulsive at short interparticle distances, a
   physically intuitive way to understand the renomalization of nuclear
   forces. Such correlations are easily computed by simple matrix
   inversion techniques and have been widely employed in nuclear
   many-body theory.  Summing up two-particle excitations to infinite
   order leads to an effective two-body interaction which renomalizes
-  the short-range part of the nuclear interactions.  We will discuss
-  the summation of such correlations in our section on the so-called
-  $G$-matrix, see subsection \ref{subsec:gmatrix}. 
+  the short-range part of the nuclear interactions. 
 
+In summary, many-body perturbation theory introduces order-by-order
+specific correlations and we can make comparisons with exact
+calculations like those provided by configuration interaction theory.
+The advantage of for example Rayleigh-Schr\"odinger perturbation
+theory is that at every order in the interaction, we know how to
+calculate all contributions since they can be either tabulated or
+computed on the fly.  However, many-body perturbation theory suffers
+from not being variational theory and there is no guarantee that
+higher-order terms will improve the order-by-order convergence.  It is
+also extremely tedious to compute terms beyond third order, in
+particular if one is interested in effective valence space
+interactions.  There are however classes of correlations which can be
+summed up to infinite order in the interaction.  The hope is that such
+correlations can mitigate specific convergence issues, although there
+is no a priori guarantee thereof.  Examples are the so-called TDA and
+RPA class of diagrams \cite{ripkablaizot}, as well as the resummation
+of two-particle-two-hole correlations discussed in chapter 11. If we limit ourselves to the
+resummation of two-particle correlations only, these lead us to the
+so-called $G$-matrix resummation of diagrams, see for example Ref.~\cite{day1967}.
+There are however computational inexpensive methods which
+sum larger classes of correlations to infinite order in the
+interaction. This leads us to section \ref{sec:cctheory} and the final
+many-body method of this chapter, coupled cluster theory. 
 
-In summary, many-body perturbation theory introduces order-by-order specific correlations and we
-can make comparisons with exact calculations like those provided by configuration interaction theory.
-The advantage of for example Rayleigh-Schr\"odinger perturbation theory is that 
-at every order in the interaction, we know how to  calculate all contributions since they
-can be either tabulated or computed on the fly.
-However, many-body perturbation theory suffers from not being variational theory and  there is no guarantee
-that higher orders will improve the order-by-order convergence.   It is also extremely tedious to compute terms beyond third order, in particular
-if one is interested in effective valence space interactions.  
-There are however classes of correlations which can be summed up to infinite order in the interaction. 
-The hope is that such correlations can mitigate specific convergence issues, although there is no a priori guarantee thereof. 
-Examples are the so-called TDA and RPA class of diagrams \cite{ripkablaizot}, as well as the resummation of two-particle-two-hole correlations. If we limit ourselves to the resummation of two-particle correlations only, these leads us to the so-called $G$-matrix resummation of diagrams discussed in the next subsection. There are however computationall inexpensive methods which sum larger classes of correlations to infinite order in the interaction. This leads us to section \ref{sec:cctheory} and the final  many-body method of this chapter, coupled cluster theory. Before we proceed however, we will digress into a discussion of the so-called $G$-matrix resummation of two-particle correlations  since it provides a useful bridge between many-body perturbation theory and coupled cluster theory.
-
-
-
-
-  \subsection{The Breuckner $G$-matrix}\label{subsec:gmatrix}
-
-  The Brueckner $G$-matrix has historically been an important
-  ingredient in many-body calculations of nuclear systems. In this
-  section, we will briefly survey the philosophy behind the
-  $G$-matrix.
-
-  Historically, the $G$-matrix was developed in microscopic nuclear
-  matter calculations using realistic nucleon-nucleon (NN)
-  interactions.  It is an ingenuous as well as an interesting method
-  to overcome the difficulties caused by the strong, short-range
-  repulsive core contained in all modern models for the NN
-  interaction. The $G$-matrix method was originally developed by
-  Brueckner \cite{bruekcner1956}, and further developed by Goldstone and Bethe, Brandow and
-  Petschek \cite{bps1964}.  In the literature it is generally referred to as the
-  Brueckner theory or the Brueckner-Bethe-Goldstone theory.
-
-  Suppose we want to calculate the nuclear matter ground-state energy
-  $E_0$ using the non-relativistic Schr\"{o}dinger equation
-  \begin{equation}
-        \hat{H}\Psi_0(A)=E_0(A)\Psi_0(A),
-  \end{equation}
-  with $\hat{H}=\hat{T}+\hat{V}$ where $A$ denotes the number of nucleons, $\hat{T}$ is the
-  kinetic energy and $\hat{V}$ is the nucleon-nucleon (NN) potential.
-  The corresponding unperturbed problem is
-  \begin{equation}
-        \hat{H}_0\Phi_0(A)=W_0(A)\Phi_0(A).
-  \end{equation}
-Since we are interested in nuclear matter only, $\hat{H}_0$ is just kinetic energy $\hat{T}$ and $\Phi_0$ is a Slater
-  determinant representing the Fermi sea, where all orbits through the
-  Fermi momentum $k_F$ are filled. We write
-  \begin{equation}
-        E_0=W_0+\Delta E_0,
-  \end{equation}
-  where $\Delta E_0$ is the ground-state energy shift or correlation
-  energy as it was defined in many-body perturbation theory.  If we
-  know how to calculate $\Delta E_0$, then we know $E_0$, since $W_0$
-  is easily obtained. In the limit $A\rightarrow \infty$, the
-  quantities $E_0$ and $\Delta E_0$ themselves are not well defined,
-  but the ratios $E_0/A$ and $\Delta E_0/A$ are. The nuclear-matter
-  binding energy per nucleon is commonly denoted by $BE/A$, which is
-  just $-E_0/A$. In passing, we remind the reader that binding energy per partcile for infinite 
-  symmetric nuclear matter (proton number $Z$=neutron number $N$) is
-  $\approx 16$ MeV.  There exists a formal theory for the calculation
-  of $\Delta E_0$.  According to the well-known Goldstone
-  linked-diagram theory, the energy shift $\Delta E_0$ is given
-  exactly by the diagrammatic expansion shown in
-  Fig.~\ref{fig:goldstone}. This theory, is a linked-cluster
-  perturbation expansion for the ground state energy of a many-body
-  system, and applies equally well to both nuclear matter and
-  closed-shell nuclei such as the doubly magic nucleus $^{40}$Ca.  We
-  will not discuss the Goldstone expansion, but rather discuss briefly
-  how it is used in calculations. We will also assume the reader is familiar 
-with the standard rules for setting up the analytical expressions for various Feymann-Goldstone diagrams.
-\begin{figure}
-    \includegraphics[width=\linewidth]{Chapter8-figures/mbpt2p.pdf}
-      \caption{Diagrams which enter the definition of the ground-state
-      shift energy $\Delta E_0$. Diagram (i) is first order in the 
-      interaction $V$, while diagrams (ii) and (iii) are examples of
-       contributions to second and third order in the interaction, respectively.}
-      \label{fig:goldstone}
-\end{figure}
-
-  Using the standard diagram rules, the various
-  diagrams contained in the above figure can be readily calculated (in
-  an uncoupled scheme)
-  \begin{equation}
-     (i)=\frac{(-)^{n_h+n_l}}{2^{n_{ep}}}\sum_{ij\leq k_F} \langle
-    ij\vert\hat{v}\vert ij\rangle_{AS},
-  \end{equation}
-  with $n_h=n_l=2$ and $n_{ep}=1$. The quantity $n_h$
-  denotes the number of hole lines, $n_l$ the number of closed fermion
-  loops and $n_{ep}$ is the number of so-called equivalent pairs.  The
-  factor $1/2^{n_{ep}}$ is needed since we want to count a pair of
-  particles only once. We will carry this factor $1/2$ with us in the
-  equations below.  The subscript $AS$ denotes the anti-symmetrized
-  and normalized matrix element
-  \begin{equation}
-       \langle ij\vert\hat{v}\vert ij\rangle_{AS}=\langle ij
-       \vert\hat{v}\vert ij\rangle- \langle ji \vert\hat{v}\vert
-       ij\rangle.
-  \end{equation}
-  Similarly, diagrams (ii) and (iii) read
-  \begin{equation}
-     (ii)=\frac{(-)^{2+2}}{2^2}\sum_{ij\leq k_F}\sum_{ab>k_F}
-    \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS} \langle
-      ab\vert\hat{v}\vert ij\rangle_{AS}}
-         {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b},
-  \end{equation}
-  and
-  \begin{equation}
-     (iii)=\frac{(-)^{2+2}}{2^3}\sum_{k_i,k_j\leq k_F}\sum_{abcdk_F}
-    \frac{\langle ij\vert\hat{v}\vert ab\rangle_{AS} \langle
-      ab\vert\hat{v}\vert cd\rangle_{AS} \langle cd\vert\hat{v}\vert
-      ij\rangle_{AS}}
-         {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
-           (\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d)}.
-  \end{equation}
-  In the above, $\varepsilon$ denotes the single-particle energies
-  defined by $H_0$.  The steps leading to the above expressions for
-  the various diagrams are rather straightforward. Though, if we wish
-  to compute the matrix elements for the interaction $v$, a serious
-  problem arises. Typically, the matrix elements will contain a term
-  $V(|{\mathbf r}|)$
-  which represents the interaction potential $V$ between two nucleons,
-  where ${\mathbf r}$ is the internucleon distance.  All modern models
-  for $V$ have a strong short-range repulsive core. Hence, matrix
-  elements involving $V(|{\mathbf r}|)$, will result in large (or
-  infinitely large for a potential with a hard core) and repulsive
-  contributions to the ground-state energy. Thus, the diagrammatic
-  expansion for the ground-state energy in terms of the potential
-  $V(|{\mathbf r}|)$ becomes meaningless.
-
-  One possible solution to this problem is provided by the well-known
-  Brueckner theory or the Brueckner $G$-matrix, or just the
-  $G$-matrix. In fact, the $G$-matrix is an almost indispensable tool
-  in almost every microscopic nuclear structure calculation. Its main
-  idea may be paraphrased as follows.  Suppose we want to calculate
-  the function $f(x)=x/(1+x)$. If $x$ is small, we may expand the
-  function $f(x)$ as a power series $x+x^2+x^3+\dots$ and it may be
-  adequate to just calculate the first few terms. In other words,
-  $f(x)$ may be calculated using a low-order perturbation method. But
-  if $x$ is large (or infinitely large), the above power series is
-  obviously meaningless.  However, the exact function $x/(1+x)$ is
-  still well defined in the limit of $x$ becoming very large.
-
-  These arguments suggest that one should sum up the diagrams (i),
-  (ii), (iii) in Fig.~\ref{fig:goldstone} and the similar ones to all
-  orders, instead of computing them one by one. Denoting this
-  all-order sum as $1/2\tilde{G}_{ijij}$, where we have introduced the
-  shorthand notation $\tilde{G}_{ijij}=\langle k_ik_j\vert
-  \tilde{G}\vert k_ik_j\rangle_{AS}$ (and similarly for $\tilde{v}$),
-  we have that
-  \begin{align}
-        \frac{1}{2}\tilde{G}_{ijij}=&\frac{1}{2}\hat{v}_{ijij}
-        +\sum_{ab>k_F}\frac{1}{2}\hat{v}_{ijab}\frac{1}{\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
-        \nonumber \\ &
-        \times\left[\frac{1}{2}\hat{v}_{abij}+\sum_{cd>k_F}
-          \frac{1}{2}\hat{v}_{abcd}\frac{1}
-               {\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d}
-               \frac{1}{2}V_{cdij}+\dots \right].
-  \end{align}
-  The factor $1/2$ is the same as that discussed above, namely we want
-  to count a pair of particles only once.  The quantity inside the
-  brackets is just $1/2\tilde{G}_{mnij}$ and the above equation can be
-  rewritten as an integral equation
-  \begin{equation}
-        \tilde{G}_{ijij}=\tilde{V}_{ijij}
-        +\sum_{ab>F}\frac{1}{2}\hat{v}_{ijab}\frac{1}{\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
-        \tilde{G}_{abij}.
-  \end{equation}
-  Note that $\tilde{G}$ is the anti-symmetrized $G$-matrix since the
-  potential $\tilde{v}$ is also anti-symmetrized. This means that
-  $\tilde{G}$ obeys
-  \begin{equation}
-    \tilde{G}_{ijij}=-\tilde{G}_{jiij}=-\tilde{G}_{ijji}.
-  \end{equation}
-  The $\tilde{G}$-matrix is defined as
-  \begin{equation}
-      \tilde{G}_{ijij}=G_{ijij}-G_{jiij},
-  \end{equation}
-  and the equation for $G$ is
-  \begin{equation}
-        G_{ijij}=V_{ijij} +\sum_{ab>k_F}V_{ijab}\frac{1}
-        {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b}
-        G_{abij},
-        \label{eq:ggeneral}
-  \end{equation}
-  which is the familiar $G$-matrix equation. The above matrix is
-  specifically designed to treat a class of diagrams contained in
-  $\Delta E_0$, of which typical contributions were shown in
-  fig.~\ref{fig:goldstone}. In fact the sum of the diagrams in
-  fig.~\ref{fig:goldstone} is equal to $1/2(G_{ijij}-G_{jiij})$.
-
-  Let us now define a more general $G$-matrix as
-  \begin{equation}
-        G_{pqrs}=V_{pqrs} +\sum_{ab>0}V_{pqab}\frac{Q(ab)} {\omega
-          -\varepsilon_a-\varepsilon_b} G_{abrs},
-        \label{eq:gwithq}
-  \end{equation}
-  which is an extension of Eq. (\ref{eq:ggeneral}). Note that
-  Eq. (\ref{eq:ggeneral}) has $\varepsilon_i+\varepsilon_j$ in the
-  energy denominator, whereas in the latter equation we have a general
-  energy variable $\omega$ in the denominator. Furthermore, in
-  Eq. (\ref{eq:ggeneral}) we have a restricted sum over $ab$, while in
-  Eq. (\ref{eq:gwithq}) we sum over all $ab$ and we have introduced a
-  weighting factor $Q(ab)$. In Eq. (\ref{eq:gwithq}) $Q(ab)$
-  corresponds to the choice
-  \begin{equation}
-     Q(a , b ) = \left\{\begin{array}{cc}1,&min(a ,b ) >
-     k_F\\ 0,&\mathrm{else}.\end{array}\right. ,
-  \end{equation}
-  where $Q(ab)$ is usually referred to as the $G$-matrix Pauli
-  exclusion operator. The role of $Q$ is to enforce a selection of the
-  intermediate states allowed in the $G$-matrix equation. The above
-  $Q$ requires that the intermediate particles $a$ and $b$ must be
-  both above the Fermi surface defined by $F$. We may enforce a
-  different requirement by using a summation over intermediate states
-  different from that in Eq. (\ref{eq:gwithq}).  If we include also two-hole states, we may resum
-two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dickhoff}.
 
   \section{Coupled cluster theory}\label{sec:cctheory}.
-  \subsection{Introduction}
   Coester and Kummel first developed the ideas that led to coupled
   cluster theory in the late 1950s. The basic idea is that the
   correlated wave function of a many-body system $\mid\Psi\rangle$ can
@@ -2500,7 +2388,7 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
   simple ansatz carries enormous power. It leads to a non-perturbative
   many-body theory that includes summation of ladder diagrams , ring
   diagrams, and an infinite-order generalization of many-body
-  perturbation theory..
+  perturbation theory.
 
   Developments and applications of coupled cluster theory took
   different routes in chemistry and nuclear physics. In quantum
@@ -2515,8 +2403,7 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
   during the last decade and coupled-cluster theory is one of the
   computational methods of preference for doing nuclear physics, with
   applications ranging from light nuclei to medium-heavy nuclei, see
-  for example the recent review by Hagen,Papenbrock, Hjorth-Jensen and
-  Dean.
+  for example the recent reviews by Hagen {\em et al} \cite{papenbrock2014,hagen2016}.
 
 
   \subsection{A quick tour of Coupled Cluster theory}
@@ -3508,7 +3395,7 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
       a^\dagger_r a_u a_t a_s,
   \]
   and specify the contributions to the two-body, one-body and the
-  scalar part.
+  constant part.
   \end{prob}
 
 
@@ -3565,7 +3452,7 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
 
 
 
-  \begin{prob}
+  \begin{prob}\label{problem:unitarity}
   Consider a Slater determinant built up of orthogonal single-particle
   orbitals $\psi_{\lambda}$, with $\lambda = 1,2,\dots,A$.
 
@@ -3638,8 +3525,7 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
 
   \begin{prob}\label{problem:hamiltoniansetup}
   We will assume that we can build various Slater determinants using
-  an orthogonal single-particle basis $\psi_{\lambda}$, with $\lambda
-  = 1,2,\dots,A$.
+  an orthogonal single-particle basis $\psi_{\lambda}$, with $\lambda= 1,2,\dots,A$.
 
 
   The aim of this exercise is to set up specific matrix elements that
@@ -3718,7 +3604,12 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
   \end{enumerate}
   \end{prob}
 
-
+  \begin{prob}\label{problem:diagrams}
+Write down the analytical expressions for diagrams (8) and (9) in Fig.~\ref{fig:goldstone} and discuss whether these
+diagrams should be accounted for or not in the calculation of the energy per particle of infinite matter. 
+If a Hartree-Fock basis is used, should these diagrams be included?  
+Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter due to the lack of momentum conservation. 
+\end{prob}
 
   \begin{prob}\label{problem:pairingmodel}
 
@@ -3915,20 +3806,16 @@ two-particle-two-hole diagrams to infinite order, see for example Ref.~\cite{dic
   [-1,1]$.
 
   We limit now the discussion to the canonical Hartree-Fock case
-  only. To fourth order in perturbation theory we can produce diagrams
-  with $1p-1h$ intermediate excitations as shown in
-  Fig.~\ref{fig:fourthorder1p1h}, $2p-2h$ excitations, see
-  Fig.~\ref{fig:fourthorder2p2h}, $3p-3h$ excitations as shown in
-  Fig.~\ref{fig:fourthorder3p3h} and finally so-called diagrams with
-  intermediate four-particle-four-hole excitations, see
-  Fig.~\ref{fig:fourthorder4p4h}.
+  only. To third order in perturbation theory we can produce diagrams
+  with $1p-1h$, $2p-2h$ and $3p-3h$ intermediate excitations as shown in
+
 
   Define first linked and unlinked diagrams and explain briefly
   Goldstone's linked diagram theorem.  Based on the linked diagram
   theorem and the form of the pairing Hamiltonian, which diagrams will
-  contribute to fourth order?
+  contribute to third order?
 
-  Calculate the energy to fourth order with a canonical Hartree-Fock
+  Calculate the energy to third order with a canonical Hartree-Fock
   basis for $g\in [-1,1]$ and compare with the full diagonalization
   case in exercise b). Discuss the results.
   \end{enumerate}

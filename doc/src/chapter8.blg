@@ -3,6 +3,8 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter8.aux
 The style file: spphys.bst
 Database file #1: lnplib.bib
+Warning--I didn't find a database entry for "prakash1996"
+Warning--I didn't find a database entry for "steiner2010"
 Warning--I didn't find a database entry for "prakash2006"
 Warning--I didn't find a database entry for "symmetryenergy2013"
 Warning--I didn't find a database entry for "minnesota"
@@ -15,9 +17,17 @@ Warning--I didn't find a database entry for "vankolck1999"
 Warning--I didn't find a database entry for "carlsson2016"
 Warning--I didn't find a database entry for "carlsson2014"
 Warning--I didn't find a database entry for "barrettmusial2007"
+Warning--I didn't find a database entry for "krylov"
+Warning--I didn't find a database entry for "lanczos"
+Warning--I didn't find a database entry for "davidson"
+Warning--I didn't find a database entry for "golubvanloan"
+Warning--I didn't find a database entry for "svavittbartlett2009"
+Warning--I didn't find a database entry for "ripkablaizot"
+Warning--I didn't find a database entry for "papenbrock2014"
+Warning--I didn't find a database entry for "hagen2016"
 You've used 34 entries,
             2812 wiz_defined-function locations,
-            832 strings with 11170 characters,
+            842 strings with 11279 characters,
 and the built_in function-call counts, 12417 in all, are:
 = -- 789
 > -- 397
@@ -56,4 +66,4 @@ warning$ -- 0
 while$ -- 65
 width$ -- 36
 write$ -- 346
-(There were 12 warnings)
+(There were 22 warnings)
