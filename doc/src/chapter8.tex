@@ -26,7 +26,7 @@
   \email{hjensen@msu.edu}}
 
 \maketitle 
-\abstract{ We present a computational approach to infinite
+\abstract{We present a computational approach to infinite
   nuclear matter employing Hartree-Fock theory, many-body perturbation
   theory and coupled cluster theory. These lectures are closely linked
   with those in chapters 9, 10 and 11 and serve as input for the
@@ -540,21 +540,21 @@ as
 \hat{H}_N=\hat{F}_N+\hat{V}_N,
 \]
 with
-\[
+\begin{equation}\label{eq:hfn}
 \hat{F}_N=\sum_{pq} \langle p|\hat{f}|q\rangle \left\{a^\dagger_pa_q\right\},
-\]
+\end{equation}
 where
 \[
-\langle p|\hat{f}|q\rangle= \langle p|\hat{h}_0|q\rangle \sum_{i\le F}
+\langle p|\hat{f}|q\rangle= \langle p|\hat{h}_0|q\rangle +\sum_{i\le F}
 \langle pi|\hat{v}|qi\rangle.
 \]
 The last term on the right hand side represents a medium modification
 to the single-particle Hamiltonian due to the two-body interaction.
 Finally, the two-body interaction is given by
-\[	     
+\begin{equation}\label{eq:hvn}	     
 \hat{V}_N = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle
 \left\{a^\dagger_p a^\dagger_q a_s a_r\right\}.
-\]
+\end{equation}	     
 
 \subsection{Single-particle basis for infinite matter}
 
@@ -1916,8 +1916,9 @@ With the eigenvectors we can compute
   \]
 The energy of  the ground state is then
   \[
-  E=E_{\mathrm{Ref}}+\Delta E.
+  E=E_{\mathrm{Ref}}+\Delta E,
   \]
+where $E_{\mathrm{Ref}}$ is the reference energy.
   However, as we have seen, even for a
   small case like the four first major shells and 
   oxygen-16 with 16 active nucleons, the dimensionality becomes quickly intractable. If we
@@ -2035,7 +2036,7 @@ where the reference energy is given by
   \Psi_0\rangle,
   \]
   which is possible since we have defined the operator $\hat{Q}$ in
-  terms of the eigenfunctions of $\hat{H}$.
+  terms of the eigenfunctions of $\hat{H}_0$.
 
  Since these operators commute we have
   \[
@@ -2085,7 +2086,7 @@ where the reference energy is given by
   $E$. Not much has been gained thus from a practical computational
   point of view.
 
-  In Brilluoin-Wigner perturbation theory \cite{shavittbartlett2009} it is customary to set
+  In Brilluoin-Wigner perturbation theory \cite{haxton,shavittbartlett2009} it is customary to set
   $\omega=E$. This results in the following perturbative expansion for
   the energy $\Delta E$
   \begin{align}
@@ -2197,20 +2198,20 @@ $\langle \mathrm{out}|f|\mathrm{in}\rangle$,
 \item For the two-body operators, crossing lines (below or above the interaction line) 
 give rise to a minus sign.
 \item For hole states, a hole line which goes through the whole diagram adds a minus sign.  
-\item All closed fermion loops add also a minus.
-\item For every pair of equivalent lines (that is lines that start at the same vertex and end at the same vertex, there is  a factor $1/2$.
+\item All closed fermion loops add also a minus sign.
+\item For every pair of equivalent lines (that is lines that start at the same vertex and end at the same vertex), there is  a factor $1/2$.
     \end{itemize}
 \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/mbpt.pdf}
       \caption{Diagrams which enter the definition of the ground-state
-      shift energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
+      correlation energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
       \label{fig:goldstone}
 \end{figure}
 In an infinite system like nuclear matter or the homogenous electron gas, all diagrams with so-called Hartree-Fock insertions like diagrams (2), (6), (7), (10-16) are zero 
 due to lack of momentum conservation. They would also be zero in case a canonical \cite{shavittbartlett2009} Hartree-Fock basis is employed. 
 
-  Using the standard diagram rules, the various
-  diagrams contained in the above figure can be readily calculated (in
+  Using the above standard diagram rules, the various
+  diagrams contained in Fig.~\ref{fig:goldstone} can be readily calculated (in
   an uncoupled scheme). Diagram  (1) results in
   \begin{equation}
      (1)=\frac{1}{2^2}\sum_{ij\leq F}\sum_{ab>F}
@@ -2218,7 +2219,7 @@ due to lack of momentum conservation. They would also be zero in case a canonica
       ab\vert\hat{v}\vert ij\rangle}
          {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b},
   \end{equation}
- while diagram (2) is zero due to lack of momentum conservation. We have two factors of $1/2$ since there are two equivalent pairs fermions (two  particle states and two hole states) starting at the same vertex and ending at the same vertex. The expression for diagram (3)  is 
+ while diagram (2) is zero due to lack of momentum conservation. We have two factors of $1/2$ since there are two equivalent pairs of fermions (two  particle states and two hole states) starting at the same vertex and ending at the same vertex. The expression for diagram (3)  is 
   \begin{equation}
      (3)=\sum_{ijk\leq k_F}\sum_{abc > F}
     \frac{\langle ij\vert\hat{v}\vert ab\rangle \langle
@@ -2244,8 +2245,8 @@ due to lack of momentum conservation. They would also be zero in case a canonica
          {(\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)
            (\varepsilon_k+\varepsilon_l-\varepsilon_a-\varepsilon_b)},
   \end{equation}
-where the factor $(1/2)^3$ arises due to the three equivalent pair of lines starting and ending at the same vertices. The last two contributions 
-have an even number of hole lines and closed loops, resulting thus in an positive sign. In problem \ref{problem:diagrams}, you are asked to calculate the expressions for diagrams like (8) and (9) in the above figure. 
+where the factor $(1/2)^3$ arises due to three equivalent pairs of lines starting and ending at the same vertex. The last two contributions 
+have an even number of hole lines and closed loops, resulting thus in a positive sign. In problem \ref{problem:diagrams}, you are asked to calculate the expressions for diagrams like (8) and (9) in the above figure. 
 
   In the expressions for the various diagrams the quantity $\varepsilon$ denotes the single-particle energies
   defined by $H_0$.  The steps leading to the above expressions for
@@ -2263,13 +2264,13 @@ have an even number of hole lines and closed loops, resulting thus in an positiv
   $V(|{\mathbf r}|)$ becomes meaningless. A perturbative expansion in terms of
 such interaction matrix elements may thus lead to a slowly converging expansion.
 A standard recipe to circumvent such problems has been to sum up 
-a selected class of diagrams. We discuss such possibilities in the next subsection.  
+a selected class of diagrams. We discuss such possibilities in section \ref{sec:cc}.  
 
 
 
   \subsection{Interpreting the correlation energy and the wave operator}
 
-  In the full configuration interaction theory  section \ref{sec:fci} we showed that we could rewrite the exact state
+  In section \ref{sec:fci} we showed that we could rewrite the exact state
   function for the ground state as a linear expansion in terms of all
   possible Slater determinants.  We expanded then (as an example) our
   exact state function for the ground state as
@@ -2384,7 +2385,7 @@ of a many-body system $\mid\Psi\rangle$
 can be formulated as an exponential of correlation
 operators $T$ acting on a reference state $\mid\Phi\rangle$.
 \begin{equation}
-\mid\Psi\rangle = \exp\left(-\hat{T}\right)\mid\Phi\rangle\;.
+\mid\Psi\rangle = \exp\left(-\hat{T}\right)\mid\Phi\rangle,
 \end{equation}
 We will discuss how to define the operators later in this work. This simple
 ansatz carries enormous power. It leads to a non-perturbative many-body
@@ -2410,7 +2411,7 @@ computational methods of preference for doing nuclear physics, with
 
   The ansatz for the wavefunction (ground state) is given by
   \begin{equation}
-     \vert \Psi\rangle = \vert \Psi_{CC}\rangle = e^{\hat{T}} \vert
+     \vert \Psi_0\rangle = \vert \Psi_{CC}\rangle = e^{\hat{T}} \vert
      \Phi_0\rangle = \left( \sum_{n=1}^{A} \frac{1}{n!} \hat{T}^n
      \right) \vert \Phi_0\rangle,
   \end{equation}
@@ -2446,26 +2447,27 @@ computational methods of preference for doing nuclear physics, with
 In order to set up the above equations, 
 the similarity transformed Hamiltonian $\overline{H}$ is expanded
   using the Baker-Campbell-Hausdorff expression,
-      \begin{align}
-          \overline{H}&= \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right]
+      \begin{equation}\label{eq:bch}
+          \overline{H}= \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right]
           + \frac{1}{2} \left[\left[ \hat{H}_N, \hat{T} \right],
-            \hat{T}\right] + \ldots \\ & \quad \frac{1}{n!} \left[
+            \hat{T}\right] + \ldots + \frac{1}{n!} \left[
             \ldots \left[ \hat{H}_N, \hat{T} \right], \ldots \hat{T}
             \right] +\dots
-      \end{align}
+      \end{equation}
   and simplified using the connected cluster theorem
       \begin{equation}
           \overline{H}= \hat{H}_N + \left( \hat{H}_N \hat{T}\right)_c
           + \frac{1}{2} \left( \hat{H}_N \hat{T}^2\right)_c + \dots +
           \frac{1}{n!} \left( \hat{H}_N \hat{T}^n\right)_c +\dots
       \end{equation}
-For the derivation of these expressions, see for example Ref.~\cite{shavittbartlett2009}.
+We will discuss parts of the the derivation below.
+For the full derivation of these expressions, see for example Ref.~\cite{shavittbartlett2009}. 
+
 A much used approximation is to truncate the cluster operator
 $\hat{T}$ at the $n=2$ level. This defines the so-called singes and
 doubles approximation to the Coupled Cluster wavefunction, normally
 shortened to CCSD..
-
-  The coupled cluster wavefunction is now given by
+The coupled cluster wavefunction is now given by
   \begin{equation}
               \vert \Psi_{CC}\rangle = e^{\hat{T}_1 + \hat{T}_2} \vert
               \Phi_0\rangle
@@ -2487,6 +2489,7 @@ shortened to CCSD..
   following type for the six particle problem (with a two-body
   Hamiltonian) discussed in section \ref{sec:fci}
   \begin{table}
+\caption{Schematic representation of blocks of matrix elements which are set to zero using the CCSD approximation.}
   \begin{center}
   \begin{tabular}{cccccccc}
   \hline \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ $0p-0h$ } &
@@ -2506,41 +2509,43 @@ shortened to CCSD..
   \end{center}
   \end{table}
 
-  In our configuration interaction theory discussion the correlation energy is defined as (with a
-  two-body Hamiltonian) 
+  In our configuration interaction theory discussion the correlation energy is defined as (with a two-body Hamiltonian) 
   \[
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
   \sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
   \]
 We can obtain a similar expression for the coupled cluster energy starting from 
-
-        The expanded CC energy equation involves an infinite sum over nested commutators
+Using Eq.~(\ref{eq:bch}) we can write the expression for the coupled cluster  ground state energy as an infinite sum over nested commutators
         \begin{align*}
             E_{CC} &= \bra{\Psi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
                 \frac{1}{2} \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right] \\
                 & \qquad + \frac{1}{3!} \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right] \\
-                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] ++ \Bigr) \ket{\Psi_0}, \\
+                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] ++ \Bigr) \ket{\Psi_0}. \\
         \end{align*}
-        but fortunately we can show that it truncates naturally, depending on the Hamiltonian.
+One can show that this infinite series truncates naturally at a given order of nested commutators \cite{shavittbartlett2009}. 
+Let us demonstrate briefly how we can construct the expressions for the energy by approximating $\hat{T}\approx \hat{T}_1+\hat{T}_2$, that is at the level of
+one-particle-one-hole and two-particle-two-hole excitations (the so-called singles and doubles approximation CCSD).
         The first term is zero by construction
         \begin{equation*}
-            \bra{\Psi_0} \op{H}_N \ket{\Psi_0} = 0
+            \bra{\Psi_0} \op{H}_N \ket{\Psi_0} = 0.
         \end{equation*}       
-     The second term can be split up into different pieces
+     The second term can be split into the following contributions
         \begin{align*}
         \bra{\Psi_0}\left[ \hat{H}_N, \hat{T} \right]\ket{\Psi_0} & = 
             \bra{\Psi_0} \Bigl(\left[ \hat{F}_N, \hat{T}_1 \right] + \left[ \hat{F}_N, \hat{T}_2 \right]
-            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Psi_0}
+            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Psi_0}.
     \end{align*}
-    Since we need the explicit expressions for the commutators both in the next term and in the amplitude equations, we calculate them separately.
-Let us demonstrate this by looking at some selected commutators. Let us start with $\left[ \hat{F}_N, \hat{T}_1 \right]$
-We write it out as
+Let us start with $\left[ \hat{F}_N, \hat{T}_1 \right]$, where the one-body operator $\hat{F}_N$ is defined in Eq.~(\ref{eq:hfn}). 
+In the equations below we employ the shorthand $f^p_q = \langle p\vert \hat{f} \vert q\rangle$.  
+We write out the commutator  as
     \begin{align*}
         \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pqia} \left(f_q^p \normord{a_p^\dagger a_q} 
             t_i^a \normord{a_a^\dagger a_i} - t_i^a \normord{a_a^\dagger a_i} f_q^p \normord{a_p^\dagger a_q} \right) \\
         &= \sum_{pqia} f_q^p t_i^a \left( \normord{a_p^\dagger a_q} \normord{a_a^\dagger a_i} -
-                \normord{a_a^\dagger a_i} \normord{a_p^\dagger a_q} \right)
+                \normord{a_a^\dagger a_i} \normord{a_p^\dagger a_q} \right).
     \end{align*}
+We have skipped here curly brackets that indicate that the chains of operators are normal ordered with respect to the new reference state. 
+If we consider the second set of operators and rewrite them with curly brackets we have
         \begin{align*}
             \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \normord{a_a^\dagger a_i a_p^\dagger a_q} \pause
                 = \normord{a_p^\dagger a_q a_a^\dagger a_i} \\ \pause
@@ -2556,23 +2561,26 @@ We write it out as
                 \contraction{a^\dagger_p}{a}{{}_q}{a}
                 a^\dagger_p a_q a^\dagger_a a_i} \\ \pause
             &=  \normord{a_p^\dagger a_q a_a^\dagger a_i} + \delta_{qa} \normord{a_p^\dagger a_i} + \delta_{pi} \normord{a_q a_a^\dagger}
-            + \delta_{qa}\delta_{pi}
+            + \delta_{qa}\delta_{pi}.
         \end{align*}
-        Wicks theorem gives us
+We can then rewrite the two sets of operators as
         \begin{align*}
             \left\{a_p^\dagger a_q \right\}\left\{a_a^\dagger a_i\right\} - \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \delta_{qa} \left\{ a_p^\dagger a_i\right\} + \delta_{pi} \left\{ a_q a_a^\dagger \right\} + \delta_{qa}\delta_{pi}.
     \end{align*}
 
         Inserted into the original expression, we arrive at the explicit value of the commutator
-        \begin{align*}
-        \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
-                \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a \\
-            &= \left( \op{F}_N \op{T}_1 \right)_c.
-        \end{align*}
-    The subscript means that the product only includes terms where the operators are connected by at least one shared index.
-
-Let us next look at the term $\left[ \hat{F}_N, \hat{T}_2 \right]$.
-we have
+        \[
+        \left[ \hat{F}_N, \hat{T}_1 \right] = \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
+                \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a.
+        \]
+We are now ready to compute the expectation value with respect to your reference state. Since the two first terms require the ground state linking to 
+a one-particle-one-hole state, the first two terms are zero and we are left with 
+\begin{equation}\label{eq:firsttermE}
+\langle \Phi_0 \vert \left[ \hat{F}_N, \hat{T}_1 \right] \vert \Phi_0\rangle = \sum_{ai} f_a^i t_i^a.
+\end{equation}
+The two first terms will however contribute to the calculation of the Hamiltonian  matrix element which connects the ground state and a one-particle-one-hole excitation. 
+  
+Let us next look at the term $\left[ \hat{F}_N, \hat{T}_2 \right]$. We have
     \begin{align*}
         \left[ \hat{F}_N, \hat{T}_2 \right] 
         &= \left[\sum_{pq} f_q^p \normord{a^\dagger_p a_q},
@@ -2582,8 +2590,9 @@ we have
         &= \frac{1}{4}\sum_{\substack{pq\\ijab}}
             f_q^p t_{ij}^{ab}
         \left( \normord{a^\dagger_p a_q} \normord{a^\dagger_a a^\dagger_b a_j a_i}
-            - \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} \right)
+            - \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} \right).
     \end{align*}
+The last set of operators can be rewritten as 
     \begin{align*}
         \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} &= 
             \normord{a^\dagger_a a^\dagger_b a_j a_i a^\dagger_p a_q} \\ 
@@ -2629,9 +2638,9 @@ we have
         - \delta_{pj} \delta_{qa} \normord{a^\dagger_b a_i} \\
         & \quad + \delta_{pi} \delta_{qa} \normord{a^\dagger_b a_j}
         + \delta_{pj} \delta_{qb} \normord{a^\dagger_a a_i}
-        - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j}
+        - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j}.
     \end{align*}
-    Wick's theorem gives us
+ We can then rewrite the two sets of operators as
     \begin{align*}
         & \Bigl( \normord{a^\dagger_p a_q} \normord{a^\dagger_a a^\dagger_b a_j a_i}
             - \normord{a^\dagger_a a^\dagger_b a_j a_i} \normord{a^\dagger_p a_q} \Bigr) = \\
@@ -2642,9 +2651,9 @@ we have
         - \delta_{pj} \delta_{qa} \normord{a^\dagger_b a_i}
         + \delta_{pi} \delta_{qa} \normord{a^\dagger_b a_j}
         + \delta_{pj} \delta_{qb} \normord{a^\dagger_a a_i} \\
-        & \qquad - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j}
+        & \qquad - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j},
     \end{align*}
-    Inserted into the original expression, we arrive at
+which, when    inserted into the original expression gives us
     \begin{align*}
         \left[ \op{F}_N, \op{T}_2 \right]
         &= \frac{1}{4} \sum_{\substack{pq\\abij}} f_q^p t_{ij}^{ab} \Bigl(
@@ -2659,14 +2668,16 @@ we have
     \end{align*}
 
     After renaming indices and changing the order of operators, we arrive at the explicit expression
-    \begin{align*}
+    \[
         \left[ \op{F}_N, \op{T}_2 \right]
-        &= \frac{1}{2} \sum_{qijab} f_q^i t_{ij}^{ab} \normord{a_q a^\dagger_a a^\dagger_b a_j}
-        + \frac{1}{2} \sum_{pijab} f_a^p t_{ij}^{ab} \normord{a^\dagger_p a^\dagger_b a_j a_i} \\
-        & \quad + \sum_{ijab} f_a^i t_{ij}^{ab} \normord{a^\dagger_b a_j} \\
-    &= \left( \op{F}_N \op{T}_2\right)_c.
-    \end{align*}
-    The subscript implies that only the connected terms from the product contribute.
+        = \frac{1}{2} \sum_{qijab} f_q^i t_{ij}^{ab} \normord{a_q a^\dagger_a a^\dagger_b a_j}
+        + \frac{1}{2} \sum_{pijab} f_a^p t_{ij}^{ab} \normord{a^\dagger_p a^\dagger_b a_j a_i}+ \sum_{ijab} f_a^i t_{ij}^{ab} \normord{a^\dagger_b a_j}. 
+    \]
+In this case we have two sets of two-particle-two-hole operators and one-particle-one-hole operators and all these terms result in zero expectation values. 
+However, these terms are important for the amplitude equations.  
+In a similar was we can compute the terms involving the interaction $\hat{V}_N$.  
+
+
 Our next terms is  $\frac{1}{2}\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$, that is we need to calculate
         \begin{align*}
         \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
