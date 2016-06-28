@@ -2440,7 +2440,7 @@ computational methods of preference for doing nuclear physics, with
       The coupled cluster energy is a function of the unknown cluster
       amplitudes $t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}$, given by
       the solutions to the amplitude equations
-      \begin{equation}
+      \begin{equation}\label{eq:amplitudeeq}
           0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
           \overline{H}\vert \Phi_0\rangle.
       \end{equation}
@@ -2465,8 +2465,8 @@ For the full derivation of these expressions, see for example Ref.~\cite{shavitt
 
 A much used approximation is to truncate the cluster operator
 $\hat{T}$ at the $n=2$ level. This defines the so-called singes and
-doubles approximation to the Coupled Cluster wavefunction, normally
-shortened to CCSD..
+doubles approximation to the coupled cluster wavefunction, normally
+shortened to CCSD.
 The coupled cluster wavefunction is now given by
   \begin{equation}
               \vert \Psi_{CC}\rangle = e^{\hat{T}_1 + \hat{T}_2} \vert
@@ -2514,7 +2514,7 @@ The coupled cluster wavefunction is now given by
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
   \sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
   \]
-We can obtain a similar expression for the coupled cluster energy starting from 
+We can obtain a similar expression for the correlation energy using coupled cluster theory. 
 Using Eq.~(\ref{eq:bch}) we can write the expression for the coupled cluster  ground state energy as an infinite sum over nested commutators
         \begin{align*}
             E_{CC} &= \bra{\Psi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
@@ -2523,7 +2523,8 @@ Using Eq.~(\ref{eq:bch}) we can write the expression for the coupled cluster  gr
                 & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] ++ \Bigr) \ket{\Psi_0}. \\
         \end{align*}
 One can show that this infinite series truncates naturally at a given order of nested commutators \cite{shavittbartlett2009}. 
-Let us demonstrate briefly how we can construct the expressions for the energy by approximating $\hat{T}\approx \hat{T}_1+\hat{T}_2$, that is at the level of
+Let us demonstrate briefly how we can construct the expressions for the correlation 
+energy by approximating $\hat{T}\approx \hat{T}_1+\hat{T}_2$, that is at the level of
 one-particle-one-hole and two-particle-two-hole excitations (the so-called singles and doubles approximation CCSD).
         The first term is zero by construction
         \begin{equation*}
@@ -2544,8 +2545,8 @@ We write out the commutator  as
         &= \sum_{pqia} f_q^p t_i^a \left( \normord{a_p^\dagger a_q} \normord{a_a^\dagger a_i} -
                 \normord{a_a^\dagger a_i} \normord{a_p^\dagger a_q} \right).
     \end{align*}
-We have skipped here curly brackets that indicate that the chains of operators are normal ordered with respect to the new reference state. 
-If we consider the second set of operators and rewrite them with curly brackets we have
+We have skipped here the curly brackets that indicate that the chains of operators are normal ordered with respect to the new reference state. 
+If we consider the second set of operators and rewrite them with curly brackets (bringing back the normal ordering) we have
         \begin{align*}
             \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \normord{a_a^\dagger a_i a_p^\dagger a_q} \pause
                 = \normord{a_p^\dagger a_q a_a^\dagger a_i} \\ \pause
@@ -2573,7 +2574,7 @@ We can then rewrite the two sets of operators as
         \left[ \hat{F}_N, \hat{T}_1 \right] = \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
                 \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a.
         \]
-We are now ready to compute the expectation value with respect to your reference state. Since the two first terms require the ground state linking to 
+We are now ready to compute the expectation value with respect to our reference state. Since the two first terms require the ground state linking to 
 a one-particle-one-hole state, the first two terms are zero and we are left with 
 \begin{equation}\label{eq:firsttermE}
 \langle \Phi_0 \vert \left[ \hat{F}_N, \hat{T}_1 \right] \vert \Phi_0\rangle = \sum_{ai} f_a^i t_i^a.
@@ -2666,7 +2667,6 @@ which, when    inserted into the original expression gives us
         + \delta_{pj} \delta_{qb} \normord{a^\dagger_a a_i}
         - \delta_{pi} \delta_{qb} \normord{a^\dagger_a a_j} \Bigr).
     \end{align*}
-
     After renaming indices and changing the order of operators, we arrive at the explicit expression
     \[
         \left[ \op{F}_N, \op{T}_2 \right]
@@ -2676,63 +2676,33 @@ which, when    inserted into the original expression gives us
 In this case we have two sets of two-particle-two-hole operators and one-particle-one-hole operators and all these terms result in zero expectation values. 
 However, these terms are important for the amplitude equations.  
 In a similar was we can compute the terms involving the interaction $\hat{V}_N$.  
-
-
-Our next terms is  $\frac{1}{2}\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$, that is we need to calculate
-        \begin{align*}
-        \left[ \hat{F}_N, \hat{T}_1 \right] &= \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} + 
-                \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a
-        \end{align*}
-    \begin{align*}
-        \left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1\right] 
-        &= \Bigl[ \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} +
-            \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger} + \sum_{ai} f_a^i t_i^a, \sum_{jb} t_j^b \normord{a_b^\dagger a_j} \\
-        &= \Bigl[ \sum_{pai} f_a^p t_i^a \normord{a_p^\dagger a_i} +
-            \sum_{qai} f_q^i t_i^a \normord{a_q a_a^\dagger}, \sum_{jb} t_j^b \normord{a_b^\dagger a_j} \\
-        &= \sum_{pabij} f_a^p t_i^a t_j^b \left[ \normord{a_p^\dagger a_i}, \normord{a_b^\dagger a_j} \right] +
-            \sum_{qabij} f_q^i t_i^a t_j^b \left[ \normord{a_q a_a^\dagger}, \normord{a_b^\dagger a_j} \right]
-    \end{align*}
-    \begin{align*}
-        \normord{a_b^\dagger a_j} \normord{a_p^\dagger a_i} &= \normord{a_b^\dagger a_j a_p^\dagger a_i} 
-            = \normord{ a_p^\dagger a_i a_b^\dagger a_j} \\
-        \normord{a_b^\dagger a_j} \normord{a_q a_a^\dagger} &= \normord{ a_b^\dagger a_j a_q a_a^\dagger} 
-            =  \normord{ a_q a_a^\dagger a_b^\dagger a_j}
-
-
-The term $\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$ results in 
-    \begin{align*}
-        \frac{1}{2} \left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1\right] 
-        &= \frac{1}{2} \left(\sum_{pabij} f_a^p t_i^a t_j^b \delta_{pj} \normord{a_i a_b^\dagger}
-            - \sum_{qabij} f_q^i t_i^a t_j^b \delta_{qb} \normord{a_a^\dagger a_j}\right) \\
-        &= -\frac{1}{2} 2 \sum_{abij} f_b^j t_j^a t_i^b \normord{a_a^\dagger a_i} \\
-        &= -\sum_{abij} f_b^j t_j^a t_i^b \normord{a_a^\dagger a_i} \\
-        &= \frac{1}{2} \left(  \op{F}_N \op{T}_1^2 \right)_c
-    \end{align*}
+We obtain then
     \begin{align*}
         \bra{\Phi_0} \left[ \hat{V}_N, \hat{T}_1 \right] \ket{\Phi_0} &= 
             \bra{\Phi_0}
-                \left[ \frac{1}{4} \sum_{pqrs} \bra{pq}\ket{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r},
+                \left[ \frac{1}{4} \sum_{pqrs} \bra{pq}\hat{v}\ket{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r},
                     \sum_{ia} t_i^a \normord{a^\dagger_a a_i} \right] \ket{\Phi_0} \\ 
             &= \frac{1}{4}\sum_{\substack{
                 pqr \\
                 sia}} \bra{pq}\ket{rs} t_i^a \bra{\Phi_0} 
                 \left[ \normord{a^\dagger_p a^\dagger_q a_s  a_r}, \normord{a^\dagger_a a_i} \right]
                 \ket{\Phi_0} \\ 
-        &= 0
+        &= 0,
     \end{align*}
+and
     \begin{align*}
         & \bra{\Phi_0} \left[ \hat{V}_N, \hat{T}_2 \right] \ket{\Phi_0}= \\
             & \quad \bra{\Phi_0}
-                \left[ \frac{1}{4} \sum_{pqrs} \bra{pq}\ket{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r},
+                \left[ \frac{1}{4} \sum_{pqrs} \bra{pq}\hat{v}\ket{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r},
                     \frac{1}{4}\sum_{ijab} t_{ij}^{ab} \normord{a^\dagger_a a^\dagger_b a_j a_i} \right] \ket{\Phi_0} \\ 
             &= \frac{1}{16}\sum_{\substack{
                     pqr \\
-                    sijab}} \bra{pq}\ket{rs}t_{ij}^{ab} \bra{\Phi_0} 
+                    sijab}} \bra{pq}\hat{v}\ket{rs}t_{ij}^{ab} \bra{\Phi_0} 
                 \left[ \normord{a^\dagger_p a^\dagger_q a_s  a_r}, \normord{a^\dagger_a a^\dagger_b a_j a_i} \right]
                 \ket{\Phi_0} \\ 
             &= \frac{1}{16}\sum_{\substack{
                     pqr \\
-                    sijab}} \bra{pq}\ket{rs}t_{ij}^{ab} \bra{\Phi_0}
+                    sijab}} \bra{pq}\hat{v}\ket{rs}t_{ij}^{ab} \bra{\Phi_0}
             \Bigl(
             \left\{
             \contraction{a^\dagger_p a^\dagger_q a_s}{a}{{}_r}{a}
@@ -2759,18 +2729,16 @@ The term $\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$ results in
             \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a^\dagger_b a_j}{a}
             a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a^\dagger_b a_j a_i \right\}
             \Bigr) \ket{\Phi_0} \\ 
-            &= \frac{1}{4} \sum_{ijab} \bra{ij}\ket{ab} t_{ij}^{ab}
+            &= \frac{1}{4} \sum_{ijab} \bra{ij}\hat{v}\ket{ab} t_{ij}^{ab}.
     \end{align*}
-
+The final contribution to the correlation energy comes from the non-linear terms with the amplitudes squared. 
+The contribution from the $\hat{T}^2$ is given by
     \begin{align*}
-        E_{CC} & \Leftarrow \bra{\Phi_0} \frac{1}{2} \left( \op{H}_N \op{T}^2 \right)_c \ket{\Phi_0}
-     \end{align*}
-    \begin{align*}
-        & \bra{\Phi_0} \frac{1}{2} \left( \op{V}_N \op{T}_1^2 \right)_c \ket{\Phi_0} = \\
-            & \quad \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\ket{rs} t_i^a t_j^b 
+        & \bra{\Phi_0} \frac{1}{2} \left( \op{V}_N \op{T}_1^2 \right) \ket{\Phi_0} = \\
+            & \quad \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\hat{v}\ket{rs} t_i^a t_j^b 
             \bra{\Phi_0} \left(\normord{a^\dagger_p a^\dagger_q a_s  a_r} 
             \normord{a^\dagger_a a_i} \normord{a^\dagger_b a_j} \right)_c\ket{\Phi_0} \\ 
-        &= \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\ket{rs} t_i^a t_j^b \bra{\Phi_0} \\
+        &= \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\hat{v}\ket{rs} t_i^a t_j^b \bra{\Phi_0} \\
         & \quad \Bigl( 
         \left\{
         \contraction{a^\dagger_p a^\dagger_q a_s}{a}{{}_r}{a}
@@ -2797,42 +2765,28 @@ The term $\left[ \left[ \op{F}_N, \op{T}_1 \right], \op{T}_1 \right]$ results in
         \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a_i a^\dagger_b}{a}
         a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a_i a^\dagger_b a_j \right\}
         \Bigr) \ket{\Phi_0} \\ \pause
-        &= \frac{1}{2} \sum_{ijab} \bra{ij}\ket{ab} t_i^a t_j^b
+        &= \frac{1}{2} \sum_{ijab} \bra{ij}\hat{v}\ket{ab} t_i^a t_j^b.
     \end{align*}
-    
+ Collecting all terms we have   the final expression for the correlation energy with a two-body interaction given by
+  \begin{equation}\label{eq:energyccsd}
+  \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle t_{i}^{a}+\frac{1}{2} \sum_{ijab} \bra{ij}\hat{v}\ket{ab} t_i^a t_j^b+
+  \frac{1}{4}\sum_{ijab}\langle ij | \hat{v}| ab \rangle t_{ij}^{ab}.
+  \end{equation}
+We leave it as challenge to the reader to derive the corresponding equations for the Hamiltonian matrix elements of Eq.~\ref{eq:amplitudeeq}, restated here
+\[
+          0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
+          \overline{H}\vert \Phi_0\rangle.
+ \]
 
 
-All terms resulting in the final coupled cluster energy can be found in the recent text of Shavitt and Bartlett, see Ref.~\cite{shavittbartlett2009}.
-Continuing along these lines, we arrive at the final expression for the correlation (irrespective of level of truncation of $T$)
-  \[
-  \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle t_{i}^{a}+
-  \sum_{abij}\langle ij | \hat{v}| ab \rangle t_{ij}^{ab}.
-  \]
-We leave it as challenge to the reader to derive the corresponding equations for the 
 
-
-  There are several interesting features:
-  \begin{itemize}
-  \item With a truncation like CCSD or CCSDT, we can include to
-    infinite order correlations like $2p-2h$.
-
-  \item We can include a large basis of single-particle states, not
-    possible in standard FCI calculations
-  \end{itemize}
-  However, Coupled Cluster theory is
-  \begin{itemize}
-  \item non-variational
-
-  \item if we want to find properties of excited states, additional
-    calculations via for example equation of motion methods are needed
-
-  \item if correlations are strong, a single-reference ansatz may not
-    be the best starting point
-
-  \item we cannot quantify properly the error we make when truncations
-    are made in the cluster operator
-  \end{itemize}
-
+  There are several interesting features with the coupled cluster equations. With a truncation like CCSD or even with the inclusion of triples (CCSDT), 
+we can include to infinite order correlations based on one-particle-one-hole and two-particle-two-hole contributions.  
+We can include a large basis of single-particle states, normally not possible in standard FCI calculations. Typical FCI calculations for light nuclei $A\le 16$ can be performed in at most some few harmonic oscillator shells. For heavier nuclei, at most two major shells can be included due to too large dimensionalities.  However, Coupled Cluster theory is non-variational and if we want to find properties of excited states, additional
+    calculations via for example equation of motion methods are needed \cite{shavittbartlett2009,hagen2014}. 
+If correlations are strong, a single-reference ansatz may not
+    be the best starting point and a multi-reference approximation is needed \cite{jansen2015}. Furthermore,  
+we cannot quantify properly the error we make when truncations are made in the cluster operator. 
   \subsection{The CCD approximation}
 
   We will now approximate the cluster operator $\hat{T}$ to include
@@ -2850,7 +2804,7 @@ We leave it as challenge to the reader to derive the corresponding equations for
 
   Inserting these equations in the expression for the computation of
   the energy we have, with a Hamiltonian defined with respect to a
-  general vacuum (see the exercises in the second quantization part)
+  general reference vacuum
   \[
   \hat{H}=\hat{H}_N+E_{\mathrm{ref}},
   \]
@@ -2873,8 +2827,8 @@ We leave it as challenge to the reader to derive the corresponding equations for
   \hat{v} \vert ab \rangle t_{ij}^{ab},
   \]
   where the latter is the correlation energy from this level of
-  approximation of CC theory.  Similarly, the expression for the
-  amplitudes reads
+  approximation of coupled cluster  theory.  Similarly, the expression for the
+  amplitudes reads (see problem \ref{prob:amplitudes})
   \[
   \langle \Phi_{ij}^{ab} \vert
   \exp{-\left(\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
@@ -2923,12 +2877,14 @@ We leave it as challenge to the reader to derive the corresponding equations for
   are solved iteratively. We discuss the implementation of these
   equations below.
 
-  \paragraph{Approximations to the full CCD equations.}
+  \subsection{Approximations to the full CCD equations.}
   It is useful to make approximations to the equations for the
-  amplitudes. The standard method for solving these equations is to
+  amplitudes. These serve as important benchmarks when we are to develop a many-body code.
+The standard method for solving these equations is to
   set up an iterative scheme where method's like Newton's method or
-  similar root searching methods are used to find the amplitudes.
-  Itreative solvers need a guess for the amplitudes. A good starting
+  similar root searching methods are used to find the amplitudes see for example Ref.~\cite{hagen2007}.
+
+  Iterative solvers need a guess for the amplitudes. A good starting
   point is to use the correlated wave operator from perturbation
   theory to first order in the interaction.  This means that we define
   the zeroth approximation to the amplitudes as
@@ -2951,7 +2907,7 @@ We leave it as challenge to the reader to derive the corresponding equations for
   it is however instructive to study a truncated version of the
   equations. We will first study the following approximation where we
   take away all terms except the linear terms that involve the
-  single-particle energies and the the two-particle intermediate
+  single-particle energies and the two-particle intermediate
   excitations, that is
   \begin{equation}
   0 = \langle ab \vert \hat{v} \vert ij \rangle +
@@ -2962,9 +2918,9 @@ We leave it as challenge to the reader to derive the corresponding equations for
 
   Setting the single-particle energies for the hole states equal to an
   energy variable $\omega = \epsilon_i+\epsilon_j$,
-  Eq. (\ref{eq:ccd1}) reduces to the well-known equations for the
+  Eq.~(\ref{eq:ccd1}) reduces to the well-known equations for the
   so-called $G$-matrix, widely used in infinite matter and finite
-  nuclei studies \cite{hh2000}.  The equation can then be reordered
+  nuclei studies, see for example Refs.~\cite{day1967,hh2000}.  The equation can then be reordered
   and solved by matrix inversion.  To see this let us define the
   following quantity
   \[
@@ -2975,7 +2931,7 @@ We leave it as challenge to the reader to derive the corresponding equations for
   \[
   1=\frac{\left(\omega-\epsilon_c-\epsilon_d\right)}{\left(\omega-\epsilon_c-\epsilon_d\right)},
   \]
-  in the intermediate sums over $cd$ in Eq. (\ref{eq:ccd1}), we can
+  in the intermediate sums over $cd$ in Eq.~(\ref{eq:ccd1}), we can
   rewrite the latter equation as
   \[
   \tau_{ij}^{ab}(\omega)= \langle ab \vert \hat{v} \vert ij \rangle +
@@ -2990,11 +2946,11 @@ We leave it as challenge to the reader to derive the corresponding equations for
   two-particle intermediate states are included.
 
   To solve Eq. (\ref{eq:ccd1}), we would thus start with a guess for
-  the unknown amplitudes, typically using the wave operator defined by
+  the unknown amplitudes, normally using the wave operator defined by
   first order in perturbation theory, leading to a zeroth
   approximation to the energy given by second-order perturbation
   theory for the correlation energy.  A simple approach to the
-  solution of Eq. (\ref{eq:ccd1}), is to thus to
+  solution of Eq.~(\ref{eq:ccd1}), is to thus to
   \begin{enumerate}
   \item Start with a guess for the amplitudes and compute the zeroth
     approximation to the correlation energy
@@ -3013,9 +2969,9 @@ We leave it as challenge to the reader to derive the corresponding equations for
 
   \noindent
   The next approximation is to include the two-hole term in
-  Eq. (\ref{eq:ccd}), a term which allow us to make a link with
+  Eq.~(\ref{eq:ccd}), a term which allow us to make a link with
   Green's function theory with two-particle and two-hole
-  correlations. This means that we solve
+  correlations discussed in chapter 11. This means that we solve
   \begin{equation}
   0 = \langle ab \vert \hat{v} \vert ij \rangle +
   \left(\epsilon_a+\epsilon_b-\epsilon_i-\epsilon_j\right)t_{ij}^{ab}+\frac{1}{2}\sum_{cd}
@@ -3029,6 +2985,66 @@ We leave it as challenge to the reader to derive the corresponding equations for
   Eq. (\ref{eq:ccd}).
 
   \section{Developing a numerical project}
+
+When developing numerical projects we would like to emphasize some
+topics we feel can help in structuring a large computational project.
+Amongst these, the validation and verification of the correctness of
+the employed algorithms and programs are central issues which can
+save us a lot of time when developing a numerical project. In the
+discussions below we will use repeatedly the simple pairing model of
+problem \ref{prob:pairingmodel}.  This model allows for benchmarks
+against exact results. In addition, it provides analytical answers to
+several approximations, from perturbation theory to second order in
+the interaction to specific terms in the solution of the coupled
+cluster equations, the in-medium similarity renormalization group
+approach of chapter 10 and the Green's function approach of chapter
+11. It is also important to develop an understanding of how our
+algorithms can go wrong and how they can be implemented in order to
+run as efficiently as possible. When working on a numerical project it
+is important to keep in mind that computing covers numerical as well
+as symbolic computing and paper and pencil solutions. Furthermore,
+version control is something we strongly recommend. It does not only
+save you time in case you struggle with odd errors in new version of
+your codes. It allows you also to make science reproducible.  Making
+your codes available to a larger audience and provinding proper
+benchmarks allows fellow scientists to test what you have developed,
+and perhaps come with considerable improvements and/or finding flaws
+or errors you were not aware of. Our codes may run correctly for some
+specific case, but may fail totally in cases not tested by
+you. Sharing your codes using for example modern version control
+software makes thus your science reproducible and adds in a natural
+way a sound ethical scientific element to what you develop.
+In the discussions below, you will thus find several links to our common repository for the codes that we have developed when writing 
+the various chapters of this text. 
+
+Being able to verify via different tests
+that the program we have developed is working correctly  
+
+And this competence is about:
+
+derivation, verification, and implementation of algorithms
+understanding what can go wrong with algorithms
+overview of important, known algorithms
+understanding how algorithms are used to solve complicated problems
+reproducible science and ethics
+
+
+When building up a numerical project there are several elements you should think of, amongst these we take the liberty of mentioning the following:
+How to structure a code in terms of functions
+How to make a module
+How to read input data flexibly from the command line
+How to write unit tests (test functions)
+How to refactor code in terms of classes (instead of functions only), in our case you think of a system and a solver class
+How to conduct and automate large-scale numerical experiments
+How to write scientific reports in various formats (LaTeX, HTML)
+New code is added in a modular fashion to a library (modules)
+Programs are run through convenient user interfaces
+It takes one quick command to let all your code undergo heavy testing
+Tedious manual work with running programs is automated,
+Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices.
+
+
+
 
   This section will focus on writing a working CCD code from
   scratch. If you are familiar with writing quantum many-body physics
@@ -4150,6 +4166,13 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
     starting point for the second part of the project.
   \end{enumerate}
   \end{prob}
+
+\begin{prob} \label{prob:amplitudes}
+Derive the amplitude equations of Eq.~(\ref{eq:ccd}) starting with 
+ \[
+          0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
+          \overline{H}\vert \Phi_0\rangle.
+ \]
 
   \section{Solutions to selected exercises}
   \begin{sol}{problem:prob8.1}
