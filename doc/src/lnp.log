@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  28 JUN 2016 10:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  28 JUN 2016 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1510,32 +1510,32 @@ Overfull \hbox (3.22194pt too wide) detected at line 204
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 205
- []\T1/fve/m/n/10 250
+ []\T1/fve/m/n/10 241
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 206
- []\T1/fve/m/n/10 250
+ []\T1/fve/m/n/10 254
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 207
- []\T1/fve/m/n/10 258
+ []\T1/fve/m/n/10 254
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 208
- []\T1/fve/m/n/10 264
+ []\T1/fve/m/n/10 262
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 209
- []\T1/fve/m/n/10 266
+ []\T1/fve/m/n/10 265
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 215
- []\T1/fve/m/n/10 269
+Overfull \hbox (3.22194pt too wide) detected at line 210
+ []\T1/fve/m/n/10 267
  []
 
 
@@ -1545,7 +1545,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 216
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 217
- []\T1/fve/m/n/10 271
+ []\T1/fve/m/n/10 269
  []
 
 
@@ -1560,22 +1560,22 @@ Overfull \hbox (3.22194pt too wide) detected at line 219
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 220
- []\T1/fve/m/n/10 272
+ []\T1/fve/m/n/10 271
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 221
+ []\T1/fve/m/n/10 272
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 222
  []\T1/fve/m/n/10 277
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 224
- []\T1/fve/m/n/10 278
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 225
- []\T1/fve/m/n/10 279
+ []\T1/fve/m/n/10 278
  []
 
 
@@ -1590,12 +1590,12 @@ Overfull \hbox (3.22194pt too wide) detected at line 227
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 228
- []\T1/fve/m/n/10 280
+ []\T1/fve/m/n/10 279
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 229
- []\T1/fve/m/n/10 284
+ []\T1/fve/m/n/10 280
  []
 
 
@@ -1605,7 +1605,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 230
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 231
- []\T1/fve/m/n/10 286
+ []\T1/fve/m/n/10 284
  []
 
 
@@ -1620,47 +1620,47 @@ Overfull \hbox (3.22194pt too wide) detected at line 233
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 234
- []\T1/fve/m/n/10 288
+ []\T1/fve/m/n/10 286
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 235
+ []\T1/fve/m/n/10 288
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 236
  []\T1/fve/m/n/10 289
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 239
+Overfull \hbox (3.22194pt too wide) detected at line 240
  []\T1/fve/m/n/10 292
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 242
+Overfull \hbox (3.22194pt too wide) detected at line 243
  []\T1/fve/m/n/10 294
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 243
+Overfull \hbox (3.22194pt too wide) detected at line 244
  []\T1/fve/m/n/10 295
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 244
+Overfull \hbox (3.22194pt too wide) detected at line 245
  []\T1/fve/m/n/10 296
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 245
+Overfull \hbox (3.22194pt too wide) detected at line 246
  []\T1/fve/m/n/10 297
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 249
- []\T1/fve/m/n/10 299
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 250
- []\T1/fve/m/n/10 300
+ []\T1/fve/m/n/10 299
  []
 
 
@@ -1670,25 +1670,25 @@ Overfull \hbox (3.22194pt too wide) detected at line 251
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 252
+ []\T1/fve/m/n/10 300
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 253
  []\T1/fve/m/n/10 302
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 254
+Overfull \hbox (3.22194pt too wide) detected at line 255
  []\T1/fve/m/n/10 304
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 256
+Overfull \hbox (3.22194pt too wide) detected at line 257
  []\T1/fve/m/n/10 305
  []
 
 [12]
-Overfull \hbox (3.22194pt too wide) detected at line 262
- []\T1/fve/m/n/10 310
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 263
  []\T1/fve/m/n/10 310
  []
@@ -1700,27 +1700,27 @@ Overfull \hbox (3.22194pt too wide) detected at line 264
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 265
- []\T1/fve/m/n/10 311
+ []\T1/fve/m/n/10 310
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 266
- []\T1/fve/m/n/10 312
+ []\T1/fve/m/n/10 311
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 267
- []\T1/fve/m/n/10 313
+ []\T1/fve/m/n/10 312
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 268
- []\T1/fve/m/n/10 315
+ []\T1/fve/m/n/10 313
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 269
- []\T1/fve/m/n/10 316
+ []\T1/fve/m/n/10 315
  []
 
 
@@ -1735,41 +1735,46 @@ Overfull \hbox (3.22194pt too wide) detected at line 271
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 272
- []\T1/fve/m/n/10 318
+ []\T1/fve/m/n/10 316
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 273
- []\T1/fve/m/n/10 319
+ []\T1/fve/m/n/10 318
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 274
- []\T1/fve/m/n/10 320
+ []\T1/fve/m/n/10 319
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 275
- []\T1/fve/m/n/10 321
+ []\T1/fve/m/n/10 320
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 276
+ []\T1/fve/m/n/10 321
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 277
  []\T1/fve/m/n/10 322
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 282
+Overfull \hbox (3.22194pt too wide) detected at line 283
  []\T1/fve/m/n/10 323
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 288
+Overfull \hbox (3.22194pt too wide) detected at line 289
  []\T1/fve/m/n/10 325
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 289
+Overfull \hbox (3.22194pt too wide) detected at line 290
  []\T1/fve/m/n/10 325
  []
 
@@ -1840,7 +1845,7 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 209.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 218.
- [7] <Chapter2-figures/config1.pdf, id=1173, 478.78876pt x 412.54124pt>
+ [7] <Chapter2-figures/config1.pdf, id=1178, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
@@ -1852,7 +1857,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 365.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 365.
- [10] <Chapter2-figures/qcd_ms_high.pdf, id=1240, 588.1975pt x 534.99875pt>
+ [10] <Chapter2-figures/qcd_ms_high.pdf, id=1245, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
@@ -1869,7 +1874,7 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 844.
  [17]
-<Chapter2-figures/topology.pdf, id=1397, 361.35pt x 252.945pt>
+<Chapter2-figures/topology.pdf, id=1402, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
@@ -1883,7 +1888,7 @@ Overfull \hbox (2.46152pt too wide) in paragraph at lines 1383--1391
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-<Chapter2-figures/hic_evol_schem.pdf, id=1524, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1529, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
@@ -1892,7 +1897,7 @@ Package pdftex.def Info: Chapter2-figures/hic_evol_schem.pdf used on input line
 (pdftex.def)             Requested size: 403.35562pt x 123.63043pt.
  [24] [25 <./Chapter2-figures/hic_evol_schem.pdf>] [26] [27] [28] [29] [30] [31
 ] [32] [33] [34]
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf, id=1772, 614.295pt x 794.97pt>
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf, id=1777, 614.295pt x 794.97pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf>
@@ -1900,7 +1905,7 @@ Package pdftex.def Info: Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf used on in
 put line 2224.
 (pdftex.def)             Requested size: 184.9429pt x 239.34195pt.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf, id=1774, 614.295pt x 794.97
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf, id=1779, 614.295pt x 794.97
 pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf Graphic file (type pdf)
 
@@ -1919,7 +1924,7 @@ LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2297.
  [36 <./Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf> <./Chapter2-figures/AdS5_S
 chwarz_eta_w_subtr_txt.pdf>]
-<Chapter2-figures/EnergyDensity.pdf, id=1864, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=1869, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
@@ -2207,7 +2212,7 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.661pt on input line 258.
  [49]
-<Chapter4-figures/BosonContact-2body-simple.pdf, id=2164, 224.84pt x 58.2175pt>
+<Chapter4-figures/BosonContact-2body-simple.pdf, id=2169, 224.84pt x 58.2175pt>
 File: Chapter4-figures/BosonContact-2body-simple.pdf Graphic file (type pdf)
 <use Chapter4-figures/BosonContact-2body-simple.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
@@ -2240,7 +2245,7 @@ and I'll forget about whatever was undefined.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 508.
 [52]
-<Chapter4-figures/BosonContact-2body.pdf, id=2226, 249.93375pt x 62.2325pt>
+<Chapter4-figures/BosonContact-2body.pdf, id=2231, 249.93375pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-2body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-2body.pdf>
@@ -2248,7 +2253,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body.pdf used on input
 line 522.
 (pdftex.def)             Requested size: 318.43968pt x 79.29837pt.
  [53 <./Chapter4-figures/BosonContact-2body.pdf>]
-<Chapter4-figures/BosonContact-3body.pdf, id=2267, 334.24875pt x 62.2325pt>
+<Chapter4-figures/BosonContact-3body.pdf, id=2272, 334.24875pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-3body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-3body.pdf>
@@ -3472,7 +3477,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[67] <Chapter4-figures/fig_2bdypert.pdf, id=2492, 482.80376pt x 59.22125pt>
+[67] <Chapter4-figures/fig_2bdypert.pdf, id=2497, 482.80376pt x 59.22125pt>
 File: Chapter4-figures/fig_2bdypert.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_2bdypert.pdf>
@@ -3547,7 +3552,7 @@ and I'll forget about whatever was undefined.
                                                   \fi \fi 
 l.1847 \end{equation}
                       <./Chapter4-figures/fig_2bdypert.pdf>]
-<Chapter4-figures/fig_feynC0int.pdf, id=2542, 275.0275pt x 59.22125pt>
+<Chapter4-figures/fig_feynC0int.pdf, id=2547, 275.0275pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC0int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC0int.pdf>
@@ -3564,7 +3569,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[69] <Chapter4-figures/fig_feynC2int.pdf, id=2566, 470.75874pt x 59.22125pt>
+[69] <Chapter4-figures/fig_feynC2int.pdf, id=2571, 470.75874pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC2int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC2int.pdf>
@@ -3653,7 +3658,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 [70 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.pd
-f>] <Chapter4-figures/fig_feynDimer.pdf, id=2617, 460.72125pt x 88.33pt>
+f>] <Chapter4-figures/fig_feynDimer.pdf, id=2622, 460.72125pt x 88.33pt>
 File: Chapter4-figures/fig_feynDimer.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynDimer.pdf>
@@ -3686,7 +3691,7 @@ Overfull \hbox (13.88416pt too wide) in paragraph at lines 2159--2165
 ell-known Skorniakov-Ter-Martirosian
  []
 
-<Chapter4-figures/fig_feyn8c.pdf, id=2662, 359.3425pt x 151.56625pt>
+<Chapter4-figures/fig_feyn8c.pdf, id=2667, 359.3425pt x 151.56625pt>
 File: Chapter4-figures/fig_feyn8c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn8c.pdf>
@@ -4264,7 +4269,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[74] <Chapter4-figures/fig_feyn9c.pdf, id=2726, 432.61626pt x 61.22874pt>
+[74] <Chapter4-figures/fig_feyn9c.pdf, id=2731, 432.61626pt x 61.22874pt>
 File: Chapter4-figures/fig_feyn9c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn9c.pdf>
@@ -4302,7 +4307,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/B3LecNote.pdf, id=2792, 522.95375pt x 368.37625pt>
+<Chapter4-figures/B3LecNote.pdf, id=2797, 522.95375pt x 368.37625pt>
 File: Chapter4-figures/B3LecNote.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/B3LecNote.pdf>
@@ -4366,7 +4371,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/C0-Vertex.pdf, id=2845, 72.27pt x 58.2175pt>
+<Chapter4-figures/C0-Vertex.pdf, id=2850, 72.27pt x 58.2175pt>
 File: Chapter4-figures/C0-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/C0-Vertex.pdf>
@@ -4527,7 +4532,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<Chapter4-figures/nd-IntEq-Q.pdf, id=2886, 189.70876pt x 34.1275pt>
+<Chapter4-figures/nd-IntEq-Q.pdf, id=2891, 189.70876pt x 34.1275pt>
 File: Chapter4-figures/nd-IntEq-Q.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-Q.pdf>
@@ -4535,7 +4540,7 @@ Package pdftex.def Info: Chapter4-figures/nd-IntEq-Q.pdf used on input line 301
 0.
 (pdftex.def)             Requested size: 212.29312pt x 38.19127pt.
  [82 <./Chapter4-figures/nd-IntEq-Q.pdf>]
-<Chapter4-figures/nd-IntEq-D.pdf, id=2914, 283.0575pt x 80.3pt>
+<Chapter4-figures/nd-IntEq-D.pdf, id=2919, 283.0575pt x 80.3pt>
 File: Chapter4-figures/nd-IntEq-D.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-D.pdf>
@@ -5015,7 +5020,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/Phillips.pdf, id=2967, 392.46625pt x 279.0425pt>
+<Chapter4-figures/Phillips.pdf, id=2972, 392.46625pt x 279.0425pt>
 File: Chapter4-figures/Phillips.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Phillips.pdf>
@@ -5057,7 +5062,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [85] [86 <./Chapter4-figures/Phillips.pdf>]
-<Chapter4-figures/Photon-Vertex-0.pdf, id=3008, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-0.pdf, id=3013, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-0.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-0.pdf>
@@ -5070,7 +5075,7 @@ Overfull \hbox (8.99994pt too wide) in paragraph at lines 3389--3389
  []
 
 [87 <./Chapter4-figures/Photon-Vertex-0.pdf>]
-<Chapter4-figures/OnePhotonExchange.pdf, id=3034, 30.1125pt x 29.10875pt>
+<Chapter4-figures/OnePhotonExchange.pdf, id=3039, 30.1125pt x 29.10875pt>
 File: Chapter4-figures/OnePhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/OnePhotonExchange.pdf>
@@ -5078,7 +5083,7 @@ Package pdftex.def Info: Chapter4-figures/OnePhotonExchange.pdf used on input l
 ine 3430.
 (pdftex.def)             Requested size: 47.4876pt x 45.89969pt.
 
-<Chapter4-figures/TwoPhotonExchange.pdf, id=3036, 50.1875pt x 29.10875pt>
+<Chapter4-figures/TwoPhotonExchange.pdf, id=3041, 50.1875pt x 29.10875pt>
 File: Chapter4-figures/TwoPhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/TwoPhotonExchange.pdf>
@@ -5086,7 +5091,7 @@ Package pdftex.def Info: Chapter4-figures/TwoPhotonExchange.pdf used on input l
 ine 3436.
 (pdftex.def)             Requested size: 79.14603pt x 45.89969pt.
 
-<Chapter4-figures/SinglePhotonBubble.pdf, id=3038, 78.2925pt x 34.1275pt>
+<Chapter4-figures/SinglePhotonBubble.pdf, id=3043, 78.2925pt x 34.1275pt>
 File: Chapter4-figures/SinglePhotonBubble.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/SinglePhotonBubble.pdf>
@@ -5094,7 +5099,7 @@ Package pdftex.def Info: Chapter4-figures/SinglePhotonBubble.pdf used on input
 line 3459.
 (pdftex.def)             Requested size: 106.14656pt x 46.27058pt.
 
-<Chapter4-figures/Photon-Vertex-trans.pdf, id=3041, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-trans.pdf, id=3046, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-trans.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-trans.pdf>
@@ -5108,7 +5113,7 @@ Overfull \hbox (8.99994pt too wide) in paragraph at lines 3503--3503
 
 [88 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonExc
 hange.pdf> <./Chapter4-figures/SinglePhotonBubble.pdf>]
-<Chapter4-figures/Photon-Prop-gauge.pdf, id=3063, 75.28125pt x 22.0825pt>
+<Chapter4-figures/Photon-Prop-gauge.pdf, id=3068, 75.28125pt x 22.0825pt>
 File: Chapter4-figures/Photon-Prop-gauge.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Prop-gauge.pdf>
@@ -5127,7 +5132,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/Photon-Vertex-mag.pdf, id=3064, 84.315pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-mag.pdf, id=3069, 84.315pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-mag.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-mag.pdf>
@@ -5136,7 +5141,7 @@ ine 3563.
 (pdftex.def)             Requested size: 71.99951pt x 46.28654pt.
  [89 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-Pr
 op-gauge.pdf> <./Chapter4-figures/Photon-Vertex-mag.pdf>]
-<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3101, 176.66pt x 108.405pt>
+<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3106, 176.66pt x 108.405pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf>
@@ -5144,7 +5149,7 @@ Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf used on in
 put line 3589.
 (pdftex.def)             Requested size: 149.6064pt x 91.79938pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3103, 152.57pt x 103.38625pt>
+<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3108, 152.57pt x 103.38625pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf Graphic file (type pdf)
 <use Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf used on i
@@ -5220,7 +5225,7 @@ my insertion and my current dilemma will both disappear.
 LaTeX Warning: Reference `sec:Dibaryons' on page 90 undefined on input line 363
 6.
 
-<Chapter4-figures/Deuteron-Vertex.pdf, id=3108, 66.2475pt x 61.22874pt>
+<Chapter4-figures/Deuteron-Vertex.pdf, id=3113, 66.2475pt x 61.22874pt>
 File: Chapter4-figures/Deuteron-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Deuteron-Vertex.pdf>
@@ -5678,21 +5683,21 @@ or  <return>  to continue without it.
 
 
 ] [95] [96] [97]
-<Chapter5-figures/al0.png, id=3276, 385.44pt x 300.12125pt>
+<Chapter5-figures/al0.png, id=3281, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
 Package pdftex.def Info: Chapter5-figures/al0.png used on input line 147.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
-<Chapter5-figures/ae0.png, id=3278, 387.4475pt x 302.12875pt>
+<Chapter5-figures/ae0.png, id=3283, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
 Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 148.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
-<Chapter5-figures/ag0.png, id=3279, 383.4325pt x 300.12125pt>
+<Chapter5-figures/ag0.png, id=3284, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
@@ -5700,21 +5705,21 @@ Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 149.
 (pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
  [98 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
 res/ag0.png>] [99]
-<Chapter5-figures/simple1.png, id=3311, 788.9475pt x 95.35625pt>
+<Chapter5-figures/simple1.png, id=3316, 788.9475pt x 95.35625pt>
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
 Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 188.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
-<Chapter5-figures/loop1.png, id=3314, 893.3375pt x 191.71625pt>
+<Chapter5-figures/loop1.png, id=3319, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
 Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 193.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
-<Chapter5-figures/beta.pdf, id=3318, 481.8pt x 303.24593pt>
+<Chapter5-figures/beta.pdf, id=3323, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
@@ -5722,14 +5727,14 @@ Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 209.
 (pdftex.def)             Requested size: 212.29312pt x 133.6137pt.
  [100 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>] [101 <./
 Chapter5-figures/beta.pdf>] [102] [103] [104]
-[105] <Chapter5-figures/dimer.png, id=3422, 905.3825pt x 206.7725pt>
+[105] <Chapter5-figures/dimer.png, id=3427, 905.3825pt x 206.7725pt>
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
 Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 368.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
  [106 <./Chapter5-figures/dimer.png>]
-<Chapter5-figures/lattice.png, id=3432, 352.31625pt x 315.1775pt>
+<Chapter5-figures/lattice.png, id=3437, 352.31625pt x 315.1775pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
@@ -5737,7 +5742,7 @@ Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 386.
 (pdftex.def)             Requested size: 127.37717pt x 113.94954pt.
  [107 <./Chapter5-figures/lattice.png>]
 [108] [109] [110] [111] [112] [113] [114] [115] [116] [117]
-<Chapter5-figures/QCDbubble.pdf, id=3574, 424.58624pt x 370.38374pt>
+<Chapter5-figures/QCDbubble.pdf, id=3579, 424.58624pt x 370.38374pt>
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
@@ -5745,21 +5750,21 @@ Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 717.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
  [118 <./Chapter5-figures/QCDbubble.pdf>]
-<Chapter5-figures/overlap.pdf, id=3593, 481.8pt x 303.65443pt>
+<Chapter5-figures/overlap.pdf, id=3598, 481.8pt x 303.65443pt>
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
 Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 726.
 (pdftex.def)             Requested size: 212.29312pt x 133.79369pt.
  [119 <./Chapter5-figures/overlap.pdf>]
-[120] <Chapter5-figures/cumulant.png, id=3640, 491.8375pt x 321.2pt>
+[120] <Chapter5-figures/cumulant.png, id=3646, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
 Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 788.
 (pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
  [121] [122 <./Chapter5-figures/cumulant.png>] <Chapter5-figures/twobody.png, i
-d=3669, 800.9925pt x 530.98375pt>
+d=3674, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
@@ -5770,7 +5775,7 @@ Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 848.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [124 <./Chapter5-figures/twobody.png>] [125] [126] [127] [128] [129] [130]
-<Chapter5-figures/dispersion.png, id=3790, 737.75626pt x 509.905pt>
+<Chapter5-figures/dispersion.png, id=3795, 737.75626pt x 509.905pt>
 File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
@@ -5778,14 +5783,14 @@ Package pdftex.def Info: Chapter5-figures/dispersion.png used on input line 108
 2.
 (pdftex.def)             Requested size: 382.12502pt x 264.10953pt.
  [131 <./Chapter5-figures/dispersion.png>] [132] [133] <Chapter5-figures/lusche
-r.pdf, id=3868, 755.82375pt x 493.845pt>
+r.pdf, id=3873, 755.82375pt x 493.845pt>
 File: Chapter5-figures/luscher.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/luscher.pdf>
 Package pdftex.def Info: Chapter5-figures/luscher.pdf used on input line 1176.
 (pdftex.def)             Requested size: 212.29312pt x 138.70517pt.
  [134]
-<Chapter5-figures/interaction.png, id=3916, 658.46pt x 512.91624pt>
+<Chapter5-figures/interaction.png, id=3921, 658.46pt x 512.91624pt>
 File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
@@ -5793,7 +5798,7 @@ Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 11
 96.
 (pdftex.def)             Requested size: 382.12502pt x 297.6638pt.
 
-<Chapter5-figures/tuning.png, id=3923, 466.74374pt x 294.09875pt>
+<Chapter5-figures/tuning.png, id=3928, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
@@ -5801,7 +5806,7 @@ Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1203.
 (pdftex.def)             Requested size: 212.29312pt x 133.76576pt.
  [135 <./Chapter5-figures/luscher.pdf>]
 [136 <./Chapter5-figures/interaction.png> <./Chapter5-figures/tuning.png>]
-[137] [138] <Chapter5-figures/dimer2.png, id=3973, 748.7975pt x 110.4125pt>
+[137] [138] <Chapter5-figures/dimer2.png, id=3978, 748.7975pt x 110.4125pt>
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
@@ -5809,21 +5814,21 @@ Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1276.
 (pdftex.def)             Requested size: 424.58624pt x 62.60724pt.
  [139 <./Chapter5-figures/dimer2.png>]
 [140] [141] [142] [143] [144] [145]
-<Chapter5-figures/tree.png, id=4075, 112.42pt x 74.2775pt>
+<Chapter5-figures/tree.png, id=4080, 112.42pt x 74.2775pt>
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
 Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1500.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
 
-<Chapter5-figures/box.png, id=4076, 118.4425pt x 73.27374pt>
+<Chapter5-figures/box.png, id=4081, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
 Package pdftex.def Info: Chapter5-figures/box.png used on input line 1506.
 (pdftex.def)             Requested size: 42.46121pt x 26.26782pt.
  [146 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
-<Chapter5-figures/sunset.png, id=4094, 787.94376pt x 73.27374pt> [147]
+<Chapter5-figures/sunset.png, id=4099, 787.94376pt x 73.27374pt> [147]
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
@@ -5834,7 +5839,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 1537--1538
 [][] 
  []
 
-<Chapter5-figures/dresseddimer.png, id=4106, 858.20625pt x 60.225pt>
+<Chapter5-figures/dresseddimer.png, id=4111, 858.20625pt x 60.225pt>
 File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
@@ -5842,14 +5847,14 @@ Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
 555.
 (pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
  [148 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
-<Chapter5-figures/3body.png, id=4120, 821.0675pt x 84.315pt>
+<Chapter5-figures/3body.png, id=4125, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
 Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1577.
 (pdftex.def)             Requested size: 424.58624pt x 43.5996pt.
 
-<Chapter5-figures/HLambda.pdf, id=4126, 481.8pt x 319.76967pt>
+<Chapter5-figures/HLambda.pdf, id=4131, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
@@ -5902,7 +5907,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
-[159] <Chapter6-figures/formalism.png, id=4390, 439.8834pt x 249.5724pt>
+[159] <Chapter6-figures/formalism.png, id=4395, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
@@ -5910,7 +5915,7 @@ Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 209.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
  [160 <./Chapter6-figures/formalism.png>]
-[161] <Chapter6-figures/worldlines.png, id=4425, 579.6054pt x 495.7722pt>
+[161] <Chapter6-figures/worldlines.png, id=4430, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
@@ -5918,7 +5923,7 @@ Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 371
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [162] [163 <./Chapter6-figures/worldlines.png>] [164] [165]
-<Chapter6-figures/HSworldlines.png, id=4482, 579.6054pt x 495.7722pt>
+<Chapter6-figures/HSworldlines.png, id=4487, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -5926,7 +5931,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 11.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=4486, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=4491, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -5937,7 +5942,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 631.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 631.
 
-<Chapter6-figures/getzdualvecs.png, id=4487, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=4492, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -5949,7 +5954,7 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 645.
 
-<Chapter6-figures/call_getzvecs.png, id=4488, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=4493, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
@@ -5972,21 +5977,21 @@ ed, duplicate ignored
 l.713 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=4515, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=4520, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 786.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
  [169]
-<Chapter6-figures/dVds.png, id=4533, 507.8975pt x 367.3725pt>
+<Chapter6-figures/dVds.png, id=4538, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 809.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=4535, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=4540, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
@@ -6335,7 +6340,7 @@ Overfull \hbox (3.11128pt too wide) in paragraph at lines 375--378
  de-scribed in the next Sec-tion []7.3.3.1[],
  []
 
-<Chapter7-figures/fig1.pdf, id=4702, 614.295pt x 794.97pt>
+<Chapter7-figures/fig1.pdf, id=4707, 614.295pt x 794.97pt>
 File: Chapter7-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter7-figures/fig1.pdf>
@@ -6373,7 +6378,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter7-figures/fig2.pdf, id=4757, 614.295pt x 794.97pt>
+<Chapter7-figures/fig2.pdf, id=4762, 614.295pt x 794.97pt>
 File: Chapter7-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter7-figures/fig2.pdf>
@@ -7027,7 +7032,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter7-figures/fig3.pdf, id=4813, 614.295pt x 794.97pt>
+<Chapter7-figures/fig3.pdf, id=4818, 614.295pt x 794.97pt>
 File: Chapter7-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter7-figures/fig3.pdf>
@@ -7210,7 +7215,7 @@ LaTeX Warning: Citation `vankolck1999' on page 210 undefined on input line 870.
 LaTeX Warning: Citation `carlsson2016' on page 211 undefined on input line 908.
 
 
-<Chapter8-figures/diagNNLO.pdf, id=5097, 1803.73875pt x 1574.88374pt>
+<Chapter8-figures/diagNNLO.pdf, id=5102, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
@@ -7304,7 +7309,7 @@ ztmcm/m/it/10 f[]$ \T1/fve/m/n/10 or $\OMS/ztmcm/m/n/10 h[]j\OML/ztmcm/m/it/10
 f\OMS/ztmcm/m/n/10 j[]i$\T1/fve/m/n/10 , $[] [] []$) 
  []
 
-<Chapter8-figures/mbpt.pdf, id=5313, 614.295pt x 794.97pt>
+<Chapter8-figures/mbpt.pdf, id=5318, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
@@ -7633,93 +7638,138 @@ e 2995.
 [240] [241]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 3138.
+(Font)              using `T1/fve/m/n' instead on input line 3127.
 
-[242] [243] [244] [245] [246]
-Overfull \hbox (61.6545pt too wide) in paragraph at lines 3554--3554
+[242]
+
+LaTeX Warning: Reference `prob:pairingmodel' on page 243 undefined on input lin
+e 3181.
+
+[243] [244]
+Overfull \hbox (33.80106pt too wide) in paragraph at lines 3302--3304
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (64.87512pt too wide) in paragraph at lines 3312--3314
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (64.87512pt too wide) in paragraph at lines 3322--3324
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (5.05264pt too wide) in paragraph at lines 3331--3333
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (5.05264pt too wide) in paragraph at lines 3340--3342
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][]  
+ []
+
+[245]
+
+LaTeX Warning: File `Chapter8-figures/diagpairing.pdf' not found on input line 
+3378.
+
+
+! Package pdftex.def Error: File `Chapter8-figures/diagpairing.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3378 ...width]{Chapter8-figures/diagpairing.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[246] [247] [248] [249] [250]
+Overfull \hbox (61.6545pt too wide) in paragraph at lines 3711--3711
 [] 
  []
 
-[247] <Chapter8-figures/fig1.pdf, id=5491, 500.87437pt x 400.11984pt>
+[251] <Chapter8-figures/fig1.pdf, id=5663, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3558.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3715.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=5492, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=5664, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3566.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3723.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
- [248] [249 <./Chapter8-figures/fig1.pdf>]
-<Chapter8-figures/fig3.pdf, id=5572, 523.75674pt x 407.53818pt>
+ [252] [253 <./Chapter8-figures/fig1.pdf>]
+<Chapter8-figures/fig3.pdf, id=5742, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3629.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3786.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=5573, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=5743, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3638.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3795.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
- [250 <./Chapter8-figures/fig2.pdf>] [251 <./Chapter8-figures/fig3.pdf>]
+ [254 <./Chapter8-figures/fig2.pdf>] [255 <./Chapter8-figures/fig3.pdf>]
 
-LaTeX Warning: Citation `minnesota' on page 252 undefined on input line 3731.
+LaTeX Warning: Citation `minnesota' on page 256 undefined on input line 3888.
 
-[252 <./Chapter8-figures/fig4.pdf>] [253] [254]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 3953--3958
+[256 <./Chapter8-figures/fig4.pdf>] [257] [258]
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 4110--4115
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
-[255] [256]
+[259] [260]
 
-LaTeX Warning: Reference `fig:diagrams' on page 257 undefined on input line 408
-0.
+LaTeX Warning: Reference `fig:diagrams' on page 261 undefined on input line 423
+7.
 
 
-LaTeX Warning: Reference `fig:diagrams' on page 257 undefined on input line 408
+LaTeX Warning: Reference `fig:diagrams' on page 261 undefined on input line 424
+5.
+
+
+LaTeX Warning: Reference `fig:diagrams' on page 261 undefined on input line 425
 8.
 
-
-LaTeX Warning: Reference `fig:diagrams' on page 257 undefined on input line 410
-1.
-
-[257] [258] [259]
-
-LaTeX Warning: Reference `problem:prob8.4' on page 260 undefined on input line 
-4344.
-
-[260]
-LaTeX Font Info:    Font shape `TS1/fvm/m/sl' will be
-(Font)              scaled to size 7.64995pt on input line 4397.
- [261] [262] [263]
-Overfull \hbox (10.71318pt too wide) in paragraph at lines 4606--4611
+[261] [262] [263] [264]
+Overfull \hbox (10.71318pt too wide) in paragraph at lines 4588--4593
 \T1/fve/m/n/10 Wick's the-o-rem is based on two fun-da-men-tal con-cepts, namel
 y $[]$ and $[]$.
  []
 
-[264] [265] (./chapter8.bbl [266]
+[265] [266] (./chapter8.bbl [267]
 Underfull \hbox (badness 1728) in paragraph at lines 152--158
 []\T1/fve/m/n/8.5 A. Ek-ström, G. Baard-sen, C. Forssén, G. Ha-gen, M. Hjorth-J
 ensen, G.R. Jansen, R. Mach-leidt,
  []
 
-)) [267]
+)) [268]
 \openout2 = `chapter9.aux'.
 
- (./chapter9.tex [268
+ (./chapter9.tex [269
 
 
 
 
 
-] [269] [270] [271] [272] [273]
+] [270] [271] [272] [273]
 
 LaTeX Warning: Citation `detb2' on page 274 undefined on input line 237.
 
@@ -8386,7 +8436,7 @@ LaTeX Warning: Reference `sec:numerics' on page 322 undefined on input line 724
 
 ]) [325]
 
-! LaTeX Error: \begin{prob} on input line 4170 ended by \end{document}.
+! LaTeX Error: \begin{prob} on input line 4327 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -8407,7 +8457,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: BE17500003305F53701C3A1B524D5A92;16724.
+(rerunfilecheck)             Checksum: E8440ABFCC791308C855139BAB753093;16820.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -8422,16 +8472,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 4170 (\begingroup)
+### semi simple group (level 1) entered at line 4327 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 24585 strings out of 493089
- 387403 string characters out of 6134842
- 606076 words of memory out of 5000000
- 24646 multiletter control sequences out of 15000+600000
- 157777 words of font info for 262 fonts, out of 8000000 for 9000
+ 24546 strings out of 493089
+ 387193 string characters out of 6134842
+ 558554 words of memory out of 5000000
+ 24585 multiletter control sequences out of 15000+600000
+ 157483 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,122p,1588b,1858s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,25n,122p,1588b,1789s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -8460,10 +8510,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (336 pages, 3996559 bytes).
+Output written on lnp.pdf (336 pages, 4005812 bytes).
 PDF statistics:
- 7429 PDF objects out of 8907 (max. 8388607)
- 6635 compressed objects within 67 object streams
- 2797 named destinations out of 2984 (max. 500000)
- 2103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7464 PDF objects out of 8907 (max. 8388607)
+ 6669 compressed objects within 67 object streams
+ 2819 named destinations out of 2984 (max. 500000)
+ 2111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

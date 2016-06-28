@@ -202,11 +202,12 @@
 \contentsline {subsection}{\numberline {8.6.2}The CCD approximation}{237}{subsection.8.6.2}
 \contentsline {subsection}{\numberline {8.6.3}Approximations to the full CCD equations.}{238}{subsection.8.6.3}
 \contentsline {section}{\numberline {8.7}Developing a numerical project}{240}{section.8.7}
-\contentsline {section}{\numberline {8.8}Conclusions}{250}{section.8.8}
-\contentsline {section}{\numberline {8.9}Exercises}{250}{section.8.9}
-\contentsline {section}{\numberline {8.10}Solutions to selected exercises}{258}{section.8.10}
-\contentsline {section}{Appendix}{264}{section*.25}
-\contentsline {section}{References}{266}{section*.26}
+\contentsline {subsection}{\numberline {8.7.1}Developing a CCD code for infinite matter}{241}{subsection.8.7.1}
+\contentsline {section}{\numberline {8.8}Conclusions}{254}{section.8.8}
+\contentsline {section}{\numberline {8.9}Exercises}{254}{section.8.9}
+\contentsline {section}{\numberline {8.10}Solutions to selected exercises}{262}{section.8.10}
+\contentsline {section}{Appendix}{265}{section*.25}
+\contentsline {section}{References}{267}{section*.26}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-10}
 \contentsline {titlech}{\numberline {9}Variational and Diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{269}{section*.27}
