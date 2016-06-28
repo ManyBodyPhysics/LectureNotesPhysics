@@ -3227,15 +3227,18 @@ The Hamiltonian matrix for this   four-particle problem with no broken pairs is
   \]
   The following python program diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
-  a full configuration interaction calculation. It i
+  a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation to second order (MBPT2)
+and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
+while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model. 
 
   \begin{lstlisting}
+#!/usr/bin/python
 from sympy import *
 from pylab import *
+import matplotlib.pyplot as plt
 
 below_fermi = (0,1,2,3)
 above_fermi = (4,5,6,7)
-
 states = [(1,1),(1,-1),(2,1),(2,-1),(3,1),(3,-1),(4,1),(4,-1)]
 N = 8
 g = Symbol('g')
@@ -3339,11 +3342,11 @@ for a in above_fermi:
                 for j in below_fermi:
                     s9 += 0.5*assym(i,j,a,b)*assym(a,c,i,j)*f(b,c)/eps((i,j),(a,b))/eps((i,j),(a,c))
 
-ga = linspace(-1,1,10001)
+ga = linspace(-1,1,20)
 e1 = []
 corr2 = []
 corr3 = []
-corr4 = []
+
 for g_val in ga:
     H1 = matrix([[2-g_val , -g_val/2.,  -g_val/2., -g_val/2., -g_val/2.,     0],
                          [-g_val/2.,   4-g_val,  -g_val/2., -g_val/2.,    0., -g_val/2.],
@@ -3359,24 +3362,21 @@ for g_val in ga:
 
 exact = e1 - (2-ga)
 
-plot(ga, exact, linewidth=2.0)
-plot(ga, corr2, linewidth=2.0)
-plot(ga, corr3, linewidth=2.0)
-xlabel(r'Interaction strength, $g$', fontsize=16)
-ylabel(r'Correlation energy', fontsize=16)
-axis([-1,1,-0.5,0.05])
-grid()
-legend((Exact', 'MPBT2', 'MPBT3'),
-           'upper right', shadow=False, fancybox=False,prop={"size":18})
-legend(loc='upper right')
-savefig("perturbationtheory.pdf")
-show()
+plt.axis([-1,1,-0.5,0.05])
+plt.xlabel(r'Interaction strength, $g$', fontsize=16)
+plt.ylabel(r'Correlation energy', fontsize=16)
+exact = plt.plot(ga, exact,'b-*',linewidth = 2.0, label = 'Exact')
+mbpt2 = plt.plot(ga, corr2,'r:.', linewidth = 2.0, label = 'MBPT2')
+mbpt3 = plt.plot(ga, corr3, 'm:v',linewidth = 2.0, label = 'MBPT3')
+plt.legend()
+plt.savefig('perturbationtheory.pdf', format='pdf')
+plt.show()
 \end{lstlisting}
 Figure \ref{fig:diagpairing} shows the exac
 which excludes the four-particle-four-hole excitations. The reference energy is included for comparison.
   \begin{figure}
-    \includegraphics[width=\linewidth]{Chapter8-figures/diagpairing.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order.}
+    \includegraphics[width=\linewidth]{Chapter8-figures/perturbationtheory.pdf}
+    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
     \label{fig:diagpairing}
   \end{figure}
 
