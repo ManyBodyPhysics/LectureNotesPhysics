@@ -2220,7 +2220,7 @@ due to lack of momentum conservation. They would also be zero in case a canonica
          {\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b},
   \end{equation}
  while diagram (2) is zero due to lack of momentum conservation. We have two factors of $1/2$ since there are two equivalent pairs of fermions (two  particle states and two hole states) starting at the same vertex and ending at the same vertex. The expression for diagram (3)  is 
-  \begin{equation}
+  \begin{equation}\label{eq:diag3}
      (3)=\sum_{ijk\leq k_F}\sum_{abc > F}
     \frac{\langle ij\vert\hat{v}\vert ab\rangle \langle
       bk\vert\hat{v}\vert ic\rangle \langle ac\vert\hat{v}\vert
@@ -2229,7 +2229,7 @@ due to lack of momentum conservation. They would also be zero in case a canonica
            (\varepsilon_i+\varepsilon_k-\varepsilon_a-\varepsilon_c)}.
   \end{equation}
   Diagrams (4) and (5) read
-  \begin{equation}
+  \begin{equation}\label{eq:diag4}
      (4)=\frac{1}{2^3}\sum_{ij\le F}\sum_{abcd > F}
     \frac{\langle ij\vert\hat{v}\vert cd\rangle \langle
       cd\vert\hat{v}\vert ab\rangle \langle ab\vert\hat{v}\vert
@@ -2237,7 +2237,7 @@ due to lack of momentum conservation. They would also be zero in case a canonica
          {(\varepsilon_i+\varepsilon_j-\varepsilon_c-\varepsilon_d)
            (\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b)},
   \end{equation}
-  \begin{equation}
+  \begin{equation}\label{eq:diag5}
      (5)=\frac{1}{2^3}\sum_{ijkl\le F}\sum_{ab > F}
     \frac{\langle ab\vert\hat{v}\vert kl\rangle \langle
       kl\vert\hat{v}\vert ij\rangle \langle ij\vert\hat{v}\vert
@@ -3399,6 +3399,31 @@ Figure \ref{fig:diagpairing} shows the resulting correlation energies for the ex
     \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
     \label{fig:diagpairing}
   \end{figure}
+We note from the above program the we have coded the expressions for the various diagrams
+following strictly the mathematical expressions of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5})
+This means that for every diagram we loop explicitely  over every single-particle state. As we will
+  see here, this is extremely inefficient from a computational point
+  of view. In our discussions below, we will rewrite
+  the computations of most diagrams in terms of efficient
+  matrix-matrix multiplications or matrix-vector multiplications.  
+  Figure \ref{fig:diagpairing} shows us that the approximation to both
+  second and third order are very good when the interaction strength
+  is small and contained in the interval $g\in[-0.5,0.5]$, but as the
+  interaction gets stronger in absolute value the agreement  with the exact reference energy for  MBPT2 and MBPT3 worsens. We also note
+  that the third-order result is actually worse than the second order
+  result for larger values of the interaction strength, indicating
+  that there is no guarantee that higher orders in many-body
+  perturbation theory may reduce the relative error in a systematic
+  way.  Adding fourth order contributions 
+  for negative interaction strengths gives a
+  better result than second and third order, while for $g>0$ the
+  relative error is worse.  The fourth order contributions (not shown in the above figure) include also four-particle-four-hole correaltions.
+However, the disagreement for stronger interaction values hint at  the possibility that many-body perturbation theory may not converge order by order. 
+ We note also the non-variational character
+  of many-body perturbation theory, with results at different levels of many-body perturbation theory either
+  overshooting or undershooting the true ground state correlation energy. 
+
+
 
 
 
@@ -3421,6 +3446,9 @@ Here are some more results for specific values of $g$ that can be used
   \begin{equation}
   t^{(i)} = \alpha t^{(i)}_{no\_mixing} + (1 - \alpha) t^{(i-1)}
   \end{equation}
+
+
+
 
   Once a working pairing model has been implemented, improvements can
   start to be made, all the while using the pairing model to make sure
@@ -3490,6 +3518,39 @@ Here are some more results for specific values of $g$ that can be used
   $a < b$, that means these equations will scale as
   $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However, (as we saw earlier?),
   they can be rewritten using intermediates as
+
+
+I made some changes to my CCD code which really sped up the initial block setups. Then, since MBPT2 is much simpler, I threw out a lot of the stuff that was needed for CCD, but not for MBPT2. Now when I run the calculation with ~1200 basis states, the results look pretty nice!
+
+ 
+
+
+Block index setup time: 0.1999882410000282​
+Block matrix Load time: 0.1564653440000257
+Block matrix mult time: 0.004418585999928837
+Total Block calc time: 0.3609267409999575
+
+
+full matrix load time: 11.76799234299983
+full matrix mult time: 4.744922194999845
+​Total Block calc time: 16.51295629999981
+
+Which is a factor of 45 speedup. 
+
+hen the multiplication is just the 4 nested loops over single-particle indices. When I get home tonight, I'll clean up the code and send it to you guys so you can take a look. I just threw those plots together last night. How would you like me to clean them up so that they are publish quality?
+
+
+Also, those block-matrix results still do not use dgemm. At this point, the savings are entirely from excluding the massive amount of zeros that are naively included. Since the block-matrix mult time is still extremely small, I did not see a point. I think for N s.p. states, the block index setup part scales as N^2, and dominates for small systems, the matrix loading should scale as N^4 dominating for moderate to large calculations, but the matrix multiplication in this case scales as N^6 and should dominate enormous calculations. I haven't tested this yet, but that's what it looks like on paper. It seems like the system size has to get VERY large for block-matrix multiplication to cost much at all. 
+
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Chapter8-figures/blockvsfull_log.png}
+    \caption{MBPT2 speedup 1.}
+    \label{fig:speedup1}
+  \end{figure}
+
+
+
+
 
   \begin{align}
   0 = \braket{ab|\hat{v}|ij} + \hat{P}(ab) \sum_{c} \braket{b| \chi
@@ -4521,67 +4582,7 @@ for n in range(nshell):
 
 
 
-  \begin{sol}{problem:prob8.5}
-  To fourth order in the interaction there are several diagrams to
-  consider.  Fortunately, due to the character of the pairing
-  Hamiltonian, several of these contributions are zero. We limit our
-  discussions also to include the canonical HF-case only.  All of the
-  diagrams in the canonical case are shown in figures 3, 4, 5 and 6
-  above.  Using also the linked diagram theorem, where a diagram is
-  called unlinked if and only if it has a disconnected part that is
-  closed, we can eliminate some further diagrams. Goldstones
-  linked-diagram theorem states that all unliked diagrams will cancel
-  against the renormalization terms in Rayleigh-Schr\"odinger
-  perturbation theory, meaning that we can define the energy to each
-  order as a sum of linked diagrams only. We can then disregard
-  diagram 33 and 41.
 
-  Let us now go through all the diagrams and find those that vanish
-  due to having broken pairs, i.e., the diagrams that vanish due to
-  our specific interaction. Take for example diagram 1, which vanishes
-  due to having a term $\langle ab\vert \hat{v} \vert ci\rangle$. From
-  this argument, we see that all four diagrams from figure 3
-  vanish. Similar arguments shows that most diagrams in figure 4 also
-  dissapear. Going through all the diagrams, we see that 5, 6, 14 and
-  15 are the ones that do not vanish in figure 4. For figure 5 we
-  actually see that all diagrams vanish again. For figure 6 we already
-  found that 33 and 41 vanished due to being unlinked---the rest
-  contribute to the perturbative expansion of the energy.  The
-  diagrams of figures 3 and 5 vanish since they involve $1p1h$ and
-  $3p3h$ excitations, respectively.
-
-  The expressions for these diagrams can easily be written in terms of
-  a simple Python program. Note however that for every diagram we do
-  actually perform loops over every single-particle state. As we will
-  see later, this is extremely inefficient from a computational point
-  of view. In our discussions of the projects below, we will rewrite
-  the computations of most diagrams in terms of efficient
-  matrix-matrix multiplications or matrix-vector multiplications.  The
-  following Python program gives us the final results for perturbation
-  theory to fourth order in the interaction. The resulting figures
-  include also plots of the relative error in the correlation
-  energy. That is, we compare the computed correlation in perturbation
-  theory with the result from the exact diagonalization discussed
-  above.
-
-  \begin{lstlisting}
-  \end{lstlisting}
-
-  Running the Python program shows us that the approximation to both
-  second and third order are very good when the interaction strength
-  is small and contained in the interval $g\in[-0.5,0.5]$, but as the
-  interaction gets stronger the approximation worsens. We also note
-  that the third-order result is actually worse than the second order
-  result for larger values of the interaction strength, indicating
-  that there is no guarantee that higher orders in many-body
-  perturbation theory may reduce the relative error in a systematic
-  way.  This is seen in particular for the results to fourth
-  order. For negative interaction strengths fourth order gives a
-  better result than second and third order, while for $g>0$ the
-  relative error is worse.  We note also the non-variational character
-  of many-body perturbation theory, with results at different
-  undershooting the true ground state correlation energy
-  \end{sol}
 
 
   \section*{Appendix, Wick's theorem}
