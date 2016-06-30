@@ -1680,7 +1680,7 @@ A given
   of single-particle states included in the definition of Slater
   determinants), it can then serve as a benchmark for other many-body
   methods which approximate the correlation operator $\hat{C}$.  Our
-  pairing model discussed in problem \ref{prob:pairingmodel} is an
+  pairing model discussed in problem \ref{problem:pairingmodel} is an
   example of a system which can be diagonalized exactly, providing
   thereby benchmarks for different approximative methods.
 
@@ -2296,7 +2296,7 @@ a selected class of diagrams. We discuss such possibilities in section \ref{sec:
   \]
   This contribution will also be discussed in connection with the
   development of a many-body program for nuclear matter, as well as
-  the simple pairing model of problem \ref{prob:pairingmodel}.  The
+  the simple pairing model of problem \ref{problem:pairingmodel}.  The
   intermediate states given by $\hat{Q}$ can at most be of a $2p-2h$
   nature if we have a two-body Hamiltonian. This means that to second
   order in perturbation theory we can at most have $1p-1h$ and $2p-2h$
@@ -2772,21 +2772,26 @@ The contribution from the $\hat{T}^2$ is given by
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle t_{i}^{a}+\frac{1}{2} \sum_{ijab} \bra{ij}\hat{v}\ket{ab} t_i^a t_j^b+
   \frac{1}{4}\sum_{ijab}\langle ij | \hat{v}| ab \rangle t_{ij}^{ab}.
   \end{equation}
-We leave it as challenge to the reader to derive the corresponding equations for the Hamiltonian matrix elements of Eq.~\ref{eq:amplitudeeq}, restated here
-\[
-          0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
-          \overline{H}\vert \Phi_0\rangle.
- \]
+We leave it as a challenge to the reader to derive the corresponding equations for the Hamiltonian matrix elements of Eq.~\ref{eq:amplitudeeq}.
 
 
+  There are several interesting features with the coupled cluster
+  equations. With a truncation like CCSD or even with the inclusion of
+  triples (CCSDT), we can include to infinite order correlations based
+  on one-particle-one-hole and two-particle-two-hole contributions.
+  We can include a large basis of single-particle states, normally not
+  possible in standard FCI calculations. Typical FCI calculations for
+  light nuclei $A\le 16$ can be performed in at most some few harmonic
+  oscillator shells. For heavier nuclei, at most two major shells can
+  be included due to too large dimensionalities.  However, Coupled
+  Cluster theory is non-variational and if we want to find properties
+  of excited states, additional calculations via for example equation
+  of motion methods are needed \cite{shavittbartlett2009,hagen2014}.
+  If correlations are strong, a single-reference ansatz may not be the
+  best starting point and a multi-reference approximation is needed
+  \cite{jansen2015}. Furthermore, we cannot quantify properly the
+  error we make when truncations are made in the cluster operator.
 
-  There are several interesting features with the coupled cluster equations. With a truncation like CCSD or even with the inclusion of triples (CCSDT), 
-we can include to infinite order correlations based on one-particle-one-hole and two-particle-two-hole contributions.  
-We can include a large basis of single-particle states, normally not possible in standard FCI calculations. Typical FCI calculations for light nuclei $A\le 16$ can be performed in at most some few harmonic oscillator shells. For heavier nuclei, at most two major shells can be included due to too large dimensionalities.  However, Coupled Cluster theory is non-variational and if we want to find properties of excited states, additional
-    calculations via for example equation of motion methods are needed \cite{shavittbartlett2009,hagen2014}. 
-If correlations are strong, a single-reference ansatz may not
-    be the best starting point and a multi-reference approximation is needed \cite{jansen2015}. Furthermore,  
-we cannot quantify properly the error we make when truncations are made in the cluster operator. 
   \subsection{The CCD approximation}
 
   We will now approximate the cluster operator $\hat{T}$ to include
@@ -2992,7 +2997,7 @@ Amongst these, the validation and verification of the correctness of
 the employed algorithms and programs are central issues which can
 save you a lot of time when developing a numerical project. In the
 discussions below we will use repeatedly the simple pairing model of
-problem \ref{prob:pairingmodel}.  This model allows for benchmarks
+problem \ref{problem:pairingmodel}.  This model allows for benchmarks
 against exact results. In addition, it provides analytical answers to
 several approximations, from perturbation theory to specific terms in the solution of the coupled
 cluster equations, the in-medium similarity renormalization group
@@ -3103,7 +3108,7 @@ When building up a numerical project there are several elements you should think
   \text{TBME}[\text{index}(a,b,i,j)$] \For{$c \in
     \{N_{fermi},N_{sp}-1\}$ } \For{$d \in \{N_{fermi},N_{sp}-1\}$ }
   \State $\text{sum} \gets \text{sum} +
-  0.5*\text{ME}[\text{index}(a,b,c,d)] *
+  0.5\times\text{ME}[\text{index}(a,b,c,d)] \times
   t\_\text{amplitudes}\_\text{old}[\text{index}(c,d,i,j)]$ \EndFor
   \EndFor \State ...  \State sum $\gets$ sum + (all other terms)
   \State ...  \State energy\_denom =
@@ -3124,8 +3129,8 @@ When building up a numerical project there are several elements you should think
   indices onto one index so that a one-dimensional array can be used. An example
   of such a function is
   \begin{algorithmic}
-  \Function{index}{$p,q,r,s$} \State \textbf{return} $p*N_{sp}^3 +
-  q*N_{sp}^2 + r*N_{sp} + s$ \EndFunction
+  \Function{index}{$p,q,r,s$} \State \textbf{return} $p\times N_{sp}^3 +
+  q\times N_{sp}^2 + r\times N_{sp} + s$ \EndFunction
   \end{algorithmic}
   Because elements with repeated indices vanish,
   $t_{ii}^{ab}=t_{ij}^{aa}=0$ and
@@ -3150,7 +3155,7 @@ Below we will however unrestrict these indices in order to achieve a better spee
   \begin{equation}
   \eta > | \Delta E_{CCD}^{(n+1)} - \Delta E_{CCD}^{(n)} |.
   \end{equation}
-  The basic structure of the iterative process will look like:
+  The basic structure of the iterative process will look like
   \begin{algorithmic}
     \While {(abs(energy\_Diff) $>$ tolerance)} \State CCD\_Update()
     \State correlation\_Energy $\gets$ CCD\_Corr\_Energy() \State
@@ -3164,21 +3169,24 @@ Below we will however unrestrict these indices in order to achieve a better spee
   $t_{ij}^{ab}{}^{(0)}$. A particularly convenient choice, as discussed above, is to set
   $t_{ij}^{ab}{}^{(0)} = 0$. Notice that if this starting point is
   used, then
-
-  \begin{align}
-  t_{ij}^{ab}{}^{(1)} = \frac{\langle ab \vert \hat{v} \vert ij
-    \rangle}{\epsilon^{ab}_{ij}} & \nonumber \\
+  \begin{equation}
+  t_{ij}^{ab}{}^{(1)} = \frac{\langle ab \vert \hat{v} \vert ij\rangle}{\epsilon^{ab}_{ij}},
   \label{eq:ccdGuess}
-  \end{align}
+  \end{equation}
+resulting in the correlation energy
   \begin{equation}
   \Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ab \vert
     \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}},
   \end{equation}
-  which is the result from many-body perturbation theory to second order (MBPT2). This is a very useful result, as one iteration
+  which is the result from many-body perturbation theory to second order (MBPT2). Here we have defined the shorthand
+\[
+\epsilon^{ab}_{ij}=\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b.
+\]
+The above is a very useful result, as one iteration
   of the CCD equations can be ran, and checked against MBPT2 to give
   some confidence that everything is working so far. To check that
   everything is working, it is useful to run the code using a minimal
-  example. We turn then our attention to the simple pairing model Hamiltonian of problem \ref{prob:pairingmodel},
+  example. We turn then our attention to the simple pairing model Hamiltonian of problem \ref{problem:pairingmodel},
   \begin{equation}
   \hat{H}_0 = \xi \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p
     \sigma}
@@ -3187,13 +3195,13 @@ Below we will however unrestrict these indices in order to achieve a better spee
   \hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}
   a_{q-}a_{q+}
   \end{equation}
-  which represents a basic pairing model with $p$ levels each with a
-  spin degeneracy of 2. The form of the coupled cluster equations in
+  which represents a basic pairing model with $p$ levels, each having a
+  spin degeneracy of 2. The form of the coupled cluster equations 
   uses single-particle states that are eigenstates of the
   Hartree-Fock operator, $\left(\hat{u}+\hat{u}_{\text{HF}}\right\vert
   p\rangle=\epsilon_{p}\vert p\rangle$. In the pairing model, this
   condition is already fulfilled. All we have to do is define the
-  lowest $N_{\mathrm{Fermi}}$ states as holes then redefine the single-particle
+  lowest $N_{\mathrm{Fermi}}$ states as holes and  redefine the single-particle
   energies,
   \begin{equation}\label{eq:pairingsp}
   \epsilon_q = h_{qq} + \sum_{i} \braket{qi|\hat{v}|qi}.
@@ -3229,28 +3237,29 @@ The Hamiltonian matrix for this   four-particle problem with no broken pairs is
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model. 
-  In the case of this simple pairing model, it is easy to calculate
-  $\Delta E_{MBPT2}$ by hand, which is useful to check the code's
-  calcuation of this value, as well as the first CCD iteration.
-  \begin{equation}
-  \Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij||ab}
-    \braket{ab||ij}}{ \epsilon_{ij}^{ab}} = \sum_{a<b,i<j}
-  \frac{\braket{ij||ab} \braket{ab||ij}}{ \epsilon_{ij}^{ab}}
-  \end{equation}
-  For our pairing example:
+while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis.
+  In the case of the simple pairing model it is easy to calculate
+  $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since can also be used to check our first CCD iteration.
+We restate this expression
+  \[
+  \Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij|\hat{v}|ab}
+    \braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}} = \sum_{a<b,i<j}
+  \frac{\braket{ij|\hat{v}|ab} \braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}}
+  \]
+  For our pairing example we obtain the following result
   \[
   \Delta E_{MBPT2} = \frac{\braket{01|\hat{v}|45}^2}{\epsilon_{01}^{45}} +
   \frac{\braket{01|\hat{v}|67}^2}{\epsilon_{01}^{67}} +
   \frac{\braket{23|\hat{v}|45}^2}{\epsilon_{23}^{45}} +
-  \frac{\braket{23|\hat{v}|67}^2}{\epsilon_{23}^{67}}
+  \frac{\braket{23|\hat{v}|67}^2}{\epsilon_{23}^{67}},
   \]
+which translates into
   \[
   \Delta E_{MBPT2} = -\frac{g^2}{4} \bigg( \frac{1}{ 4 + g} +
-  \frac{1}{ 6 + g} + \frac{1}{ 2 + g} + \frac{1}{ 4 + g} \bigg),
+  \frac{1}{ 6 + g} + \frac{1}{ 2 + g} + \frac{1}{ 4 + g} \bigg).
   \]
-  which is a nice expression which can be used to check the results
-  for any value of $g$ and provides thereby an important test for our code developments.
+ This expression can be used to check the results
+  for any value of $g$ and provides thereby an important test of  our codes.
 
   \begin{lstlisting}
 #!/usr/bin/python
@@ -3400,7 +3409,7 @@ Figure \ref{fig:diagpairing} shows the resulting correlation energies for the ex
     \label{fig:diagpairing}
   \end{figure}
 We note from the above program the we have coded the expressions for the various diagrams
-following strictly the mathematical expressions of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5})
+following strictly the mathematical expressions of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5}).
 This means that for every diagram we loop explicitely  over every single-particle state. As we will
   see here, this is extremely inefficient from a computational point
   of view. In our discussions below, we will rewrite
@@ -3414,7 +3423,7 @@ This means that for every diagram we loop explicitely  over every single-particl
   result for larger values of the interaction strength, indicating
   that there is no guarantee that higher orders in many-body
   perturbation theory may reduce the relative error in a systematic
-  way.  Adding fourth order contributions 
+  way.  Adding fourth order contributions as shown in Fig.~\ref{fig:pairingccmbpt4}
   for negative interaction strengths gives a
   better result than second and third order, while for $g>0$ the
   relative error is worse.  The fourth order contributions (not shown in the above figure) include also four-particle-four-hole correaltions.
@@ -3422,14 +3431,16 @@ However, the disagreement for stronger interaction values hint at  the possibili
  We note also the non-variational character
   of many-body perturbation theory, with results at different levels of many-body perturbation theory either
   overshooting or undershooting the true ground state correlation energy. 
-
-
-
-
-
-Here are some more results for specific values of $g$ that can be used
-  for benchmarking.
+The coupled cluster results are included in Fig.~\ref{fig:pairingccmbpt4} where we display the difference between the exact correlation energy and the correlation energy obtained with many-body perturbation theory to fourth order.  
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Chapter8-figures/pairingccmbpt4.pdf}
+    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
+    \label{fig:pairingccmbpt4}
+  \end{figure}
+In Table \ref{tab:selectedbenchmarks} we list for the sake of completeness also our coupled cluster results at the CCD level for the same system.
 \begin{table}
+\caption{Coupled cluster and MBPT2 results for the simple pairing model with eight single-particle levels and four spin $1/2$ fermions
+for different values of the interaction strength $g$.} \label{tab:selectedbenchmarks}
   \begin{center}
       \begin{tabular}{| l | l | l | l |}
       \hline g & E$_{ref}$ & $\Delta E_{MBPT2}$ & $\Delta E_{CCD}$
@@ -3456,17 +3467,17 @@ Here are some more results for specific values of $g$ that can be used
   systems will be much larger than this small pairing example.
 
   One limitation that will be ran into while trying to do realistic
-  CCD calculations is that of memory. The 4-indexed TBMEs and
-  t-amplitudes have to store a lot of elements, and the size of these
-  arrays can quite become larger than that of the available memory on
-  the machine. If calculation wants to use 500 s.p. basis states, then
-  a structure like $\braket{pq|v|rs}$ will have length 500 for each of
+  CCD calculations is that of memory. The four-indexed two-body matrix elements (TBMEs) and
+  $t$-amplitudes have to store a lot of elements, and the size of these
+  arrays can quickly exceed the available memory on
+  a machine. If a calculation wants to use 500 single-particle basis states, then
+  a structure like $\braket{pq|v|rs}$ will need a  length of 500 for each of
   its four indices, which means it will have $500^4 = 625\times 10^8$
   elements. To get a handle on how much memory is used, consider the
   elements as double-precision floating point type. One double takes
-  up 8 bytes of memory. So this array would take up $8\times 625\times 10^8$ bytes
+  up 8 bytes of memory. This specific array would take up $8\times 625\times 10^8$ bytes
   = $5000 \times 10^8$ bytes = $500$ Gbytes of memory. Most personal
-  computers in 2016 have 4-8 Gbytes of RAM, so this calculation would
+  computers in 2016 have 4-8 Gbytes of RAM, meaning that this calculation would
   be way out of reach. There are supercomputers that can handle
   applications using 500 Gbytes of memory, but we can quickly reduce
   the total memory required by applying some physical arguments. In

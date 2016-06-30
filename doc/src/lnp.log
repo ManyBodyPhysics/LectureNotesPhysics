@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 JUN 2016 10:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 JUN 2016 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1515,17 +1515,17 @@ Overfull \hbox (3.22194pt too wide) detected at line 205
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 206
- []\T1/fve/m/n/10 255
+ []\T1/fve/m/n/10 256
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 207
- []\T1/fve/m/n/10 255
+ []\T1/fve/m/n/10 256
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 208
- []\T1/fve/m/n/10 262
+ []\T1/fve/m/n/10 264
  []
 
 
@@ -1535,7 +1535,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 209
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 210
- []\T1/fve/m/n/10 268
+ []\T1/fve/m/n/10 269
  []
 
 
@@ -7242,10 +7242,6 @@ Overfull \hbox (41.71066pt too wide) in paragraph at lines 1403--1404
 
 [218] [219] [220]
 
-LaTeX Warning: Reference `prob:pairingmodel' on page 221 undefined on input lin
-e 1683.
-
-
 LaTeX Warning: Reference `prob:hamiltoniansetup' on page 221 undefined on input
  line 1718.
 
@@ -7309,7 +7305,7 @@ ztmcm/m/it/10 f[]$ \T1/fve/m/n/10 or $\OMS/ztmcm/m/n/10 h[]j\OML/ztmcm/m/it/10
 f\OMS/ztmcm/m/n/10 j[]i$\T1/fve/m/n/10 , $[] [] []$) 
  []
 
-<Chapter8-figures/mbpt.pdf, id=5318, 614.295pt x 794.97pt>
+<Chapter8-figures/mbpt.pdf, id=5319, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
@@ -7320,10 +7316,6 @@ Package pdftex.def Info: Chapter8-figures/mbpt.pdf used on input line 2205.
 LaTeX Warning: Reference `sec:cc' on page 230 undefined on input line 2267.
 
 [230]
-
-LaTeX Warning: Reference `prob:pairingmodel' on page 231 undefined on input lin
-e 2299.
-
 
 LaTeX Warning: Citation `ripkablaizot' on page 231 undefined on input line 2370
 .
@@ -7621,56 +7613,46 @@ and I'll forget about whatever was undefined.
 
 [236]
 
-LaTeX Warning: Citation `hagen2014' on page 237 undefined on input line 2786.
+LaTeX Warning: Citation `hagen2014' on page 237 undefined on input line 2789.
 
 
-LaTeX Warning: Citation `jansen2015' on page 237 undefined on input line 2788.
+LaTeX Warning: Citation `jansen2015' on page 237 undefined on input line 2792.
 
 [237]
 
-LaTeX Warning: Citation `hagen2007' on page 238 undefined on input line 2885.
+LaTeX Warning: Citation `hagen2007' on page 238 undefined on input line 2890.
 
-[238] [239]
-
-LaTeX Warning: Reference `prob:pairingmodel' on page 240 undefined on input lin
-e 2995.
-
-[240] [241]
+[238] [239] [240] [241]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 3127.
+(Font)              using `T1/fve/m/n' instead on input line 3132.
 
-[242]
-
-LaTeX Warning: Reference `prob:pairingmodel' on page 243 undefined on input lin
-e 3181.
-
-[243] [244]
-Overfull \hbox (33.80106pt too wide) in paragraph at lines 3326--3328
+[242] [243] [244]
+Overfull \hbox (33.80106pt too wide) in paragraph at lines 3335--3337
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (64.87512pt too wide) in paragraph at lines 3336--3338
+Overfull \hbox (64.87512pt too wide) in paragraph at lines 3345--3347
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (64.87512pt too wide) in paragraph at lines 3346--3348
+Overfull \hbox (64.87512pt too wide) in paragraph at lines 3355--3357
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [245]
-Overfull \hbox (5.05264pt too wide) in paragraph at lines 3355--3357
+Overfull \hbox (5.05264pt too wide) in paragraph at lines 3364--3366
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (5.05264pt too wide) in paragraph at lines 3364--3366
+Overfull \hbox (5.05264pt too wide) in paragraph at lines 3373--3375
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][]  
  []
@@ -7680,18 +7662,38 @@ File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
 Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input 
-line 3398.
+line 3407.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
- [246]
-Overfull \hbox (26.93346pt too wide) in paragraph at lines 3433--3437
+
+
+LaTeX Warning: File `Chapter8-figures/pairingccmbpt4.pdf' not found on input li
+ne 3436.
+
+
+! Package pdftex.def Error: File `Chapter8-figures/pairingccmbpt4.pdf' not foun
+d.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3436 ...th]{Chapter8-figures/pairingccmbpt4.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[246] [247 <./Chapter8-figures/perturbationtheory.pdf>] [248]
+Overfull \hbox (26.93346pt too wide) in paragraph at lines 3539--3543
 []\T1/fve/m/n/10 Block in-dex setup time: 0.1999882410000282â€‹ Block ma-trix L
 oad time: 0.1564653440000257
  []
 
+[249]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.3448 ... the block index setup part scales as N^
+l.3554 ... the block index setup part scales as N^
                                                   2, and dominates for small...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7699,13 +7701,13 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.3449 
+l.3555 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (1013.43257pt too wide) in paragraph at lines 3448--3449
+Overfull \hbox (1013.43257pt too wide) in paragraph at lines 3554--3555
 \T1/fve/m/n/10 block in-dex setup part scales as N$[]\OML/ztmcm/m/it/10 ; anddo
 minatesforsmallsystems; thematrixloadingshouldscaleasN[]dominatingformoderateto
 largecalculations; butthematrixmultiplicationinthiscasescalesasN[]andshoulddomi
@@ -7713,83 +7715,81 @@ nateenormouscalculations:Ihaven[]ttestedthisyet; butthat[]swhatitlookslikeonpap
 er:ItseemslikethesystemsizehastogetVERYlargeforblock \OMS/ztmcm/m/n/10 ^^@
  []
 
-[247 <./Chapter8-figures/perturbationtheory.pdf>]
-<Chapter8-figures/blockvsfull_log.png, id=5681, 578.16pt x 433.62pt>
+<Chapter8-figures/blockvsfull_log.png, id=5701, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
 Package pdftex.def Info: Chapter8-figures/blockvsfull_log.png used on input lin
-e 3522.
+e 3557.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
- [248] [249 <./Chapter8-figures/blockvsfull_log.png>] [250] [251]
-Overfull \hbox (61.6545pt too wide) in paragraph at lines 3748--3748
+ [250 <./Chapter8-figures/blockvsfull_log.png>] [251] [252]
+Overfull \hbox (61.6545pt too wide) in paragraph at lines 3783--3783
 [] 
  []
 
-<Chapter8-figures/fig1.pdf, id=5713, 500.87437pt x 400.11984pt>
+[253] <Chapter8-figures/fig1.pdf, id=5732, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3752.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3787.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=5714, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=5733, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3760.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3795.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
- [252] [253 <./Chapter8-figures/fig1.pdf>]
-[254 <./Chapter8-figures/fig2.pdf>]
-<Chapter8-figures/fig3.pdf, id=5852, 523.75674pt x 407.53818pt>
+ [254] [255 <./Chapter8-figures/fig1.pdf>]
+<Chapter8-figures/fig3.pdf, id=5813, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3823.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3858.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=5853, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=5814, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3832.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3867.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
- [255 <./Chapter8-figures/fig3.pdf>] [256 <./Chapter8-figures/fig4.pdf>]
+ [256 <./Chapter8-figures/fig2.pdf>] [257 <./Chapter8-figures/fig3.pdf>]
 
-LaTeX Warning: Citation `minnesota' on page 257 undefined on input line 3925.
+LaTeX Warning: Citation `minnesota' on page 258 undefined on input line 3960.
 
-[257] [258] [259]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 4147--4152
+[258 <./Chapter8-figures/fig4.pdf>] [259] [260]
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 4182--4187
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
-[260]
+[261] [262]
 
-LaTeX Warning: Reference `fig:diagrams' on page 261 undefined on input line 427
-4.
-
-
-LaTeX Warning: Reference `fig:diagrams' on page 261 undefined on input line 428
-2.
+LaTeX Warning: Reference `fig:diagrams' on page 263 undefined on input line 430
+9.
 
 
-LaTeX Warning: Reference `fig:diagrams' on page 261 undefined on input line 429
-5.
+LaTeX Warning: Reference `fig:diagrams' on page 263 undefined on input line 431
+7.
 
-[261] [262] [263] [264]
-Overfull \hbox (10.71318pt too wide) in paragraph at lines 4625--4630
+
+LaTeX Warning: Reference `fig:diagrams' on page 263 undefined on input line 433
+0.
+
+[263] [264] [265]
+Overfull \hbox (10.71318pt too wide) in paragraph at lines 4600--4605
 \T1/fve/m/n/10 Wick's the-o-rem is based on two fun-da-men-tal con-cepts, namel
 y $[]$ and $[]$.
  []
 
-[265] [266] [267] (./chapter8.bbl
+[266] [267] (./chapter8.bbl [268]
 Underfull \hbox (badness 1728) in paragraph at lines 152--158
 []\T1/fve/m/n/8.5 A. Ek-ström, G. Baard-sen, C. Forssén, G. Ha-gen, M. Hjorth-J
 ensen, G.R. Jansen, R. Mach-leidt,
  []
 
-[268])) [269]
+)) [269]
 \openout2 = `chapter9.aux'.
 
  (./chapter9.tex [270
@@ -8465,7 +8465,7 @@ LaTeX Warning: Reference `sec:numerics' on page 324 undefined on input line 724
 
 ]) [327]
 
-! LaTeX Error: \begin{prob} on input line 4364 ended by \end{document}.
+! LaTeX Error: \begin{prob} on input line 4399 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -8501,16 +8501,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 4364 (\begingroup)
+### semi simple group (level 1) entered at line 4399 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 24560 strings out of 493089
- 387615 string characters out of 6134842
- 560637 words of memory out of 5000000
- 24597 multiletter control sequences out of 15000+600000
+ 24565 strings out of 493089
+ 387673 string characters out of 6134842
+ 566211 words of memory out of 5000000
+ 24601 multiletter control sequences out of 15000+600000
  157483 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,122p,1588b,1858s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,25n,122p,1588b,1789s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -8539,10 +8539,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (338 pages, 4044999 bytes).
+Output written on lnp.pdf (338 pages, 4038729 bytes).
 PDF statistics:
- 7523 PDF objects out of 8907 (max. 8388607)
- 6686 compressed objects within 67 object streams
+ 7532 PDF objects out of 8907 (max. 8388607)
+ 6695 compressed objects within 67 object streams
  2820 named destinations out of 2984 (max. 500000)
  2121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
