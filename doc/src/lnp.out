@@ -26,178 +26,196 @@
 \BOOKMARK [1][-]{section.2.6}{Outlook and acknowledgments}{section*.6}% 26
 \BOOKMARK [1][-]{section*.7}{Appendix}{section*.6}% 27
 \BOOKMARK [1][-]{section*.8}{References}{section*.6}% 28
-\BOOKMARK [0][-]{section*.9}{Lattice quantum chromodynamics approach to nuclear physics}{}% 29
+\BOOKMARK [0][-]{section*.9}{Lattice quantum chromodynamics}{}% 29
 \BOOKMARK [0][-]{section*.9}{Tetsuo Hatsuda}{}% 30
-\BOOKMARK [1][-]{section.3.1}{General Introduction}{section*.9}% 31
-\BOOKMARK [1][-]{section.3.2}{Continuum quantum chromodynamics: basics}{section*.9}% 32
-\BOOKMARK [1][-]{section.3.3}{Lattice quantum chromodynamics: basics}{section*.9}% 33
-\BOOKMARK [1][-]{section.3.4}{Lattice quantum chromodynamics: applications}{section*.9}% 34
-\BOOKMARK [1][-]{section.3.5}{Hadron interactions: basics}{section*.9}% 35
-\BOOKMARK [1][-]{section*.10}{Appendix}{section*.9}% 36
-\BOOKMARK [1][-]{section*.11}{References}{section*.9}% 37
-\BOOKMARK [0][-]{section*.12}{General aspects of effective field theories and few-body applications}{}% 38
-\BOOKMARK [0][-]{section*.12}{Hans-Werner Hammer and Sebastian K\366nig}{}% 39
-\BOOKMARK [1][-]{section.4.1}{Introduction: dimensional analysis and the separation of scales}{section*.12}% 40
-\BOOKMARK [1][-]{section.4.2}{Theoretical foundations of effective field theory}{section*.12}% 41
-\BOOKMARK [2][-]{subsection.4.2.1}{Top-down vs. bottom-up approaches}{section.4.2}% 42
-\BOOKMARK [2][-]{subsection.4.2.2}{Nonrelativistic field theory}{section.4.2}% 43
-\BOOKMARK [2][-]{subsection.4.2.3}{Symmetries and power counting}{section.4.2}% 44
-\BOOKMARK [2][-]{subsection.4.2.4}{Matching}{section.4.2}% 45
-\BOOKMARK [1][-]{section.4.3}{Effective field theory for strongly interacting bosons}{section*.12}% 46
-\BOOKMARK [2][-]{subsection.4.3.1}{EFT for short-range interactions}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.2}{Dimer field formalism}{section.4.3}% 48
-\BOOKMARK [2][-]{subsection.4.3.3}{Three-body system}{section.4.3}% 49
-\BOOKMARK [2][-]{subsection.4.3.4}{Three-body observables}{section.4.3}% 50
-\BOOKMARK [2][-]{subsection.4.3.5}{Renormalization group limit cycle}{section.4.3}% 51
-\BOOKMARK [1][-]{section.4.4}{Effective field theory for nuclear few-body systems}{section*.12}% 52
-\BOOKMARK [2][-]{subsection.4.4.1}{Overview}{section.4.4}% 53
-\BOOKMARK [2][-]{subsection.4.4.2}{Pionless effective field theory}{section.4.4}% 54
-\BOOKMARK [2][-]{subsection.4.4.3}{The two-nucleon S-wave system}{section.4.4}% 55
-\BOOKMARK [2][-]{subsection.4.4.4}{Three nucleons: scattering and bound states}{section.4.4}% 56
-\BOOKMARK [1][-]{section.4.5}{Beyond short-range interactions: adding photons and pions}{section*.12}% 57
-\BOOKMARK [2][-]{subsection.4.5.1}{Electromagnetic interactions}{section.4.5}% 58
-\BOOKMARK [2][-]{subsection.4.5.2}{Example: deuteron breakup}{section.4.5}% 59
-\BOOKMARK [2][-]{subsection.4.5.3}{Chiral effective field theory}{section.4.5}% 60
-\BOOKMARK [1][-]{section*.17}{References}{section*.12}% 61
-\BOOKMARK [0][-]{section*.18}{Lattice methods and effective field theory}{}% 62
-\BOOKMARK [0][-]{section*.18}{Amy Nicholson}{}% 63
-\BOOKMARK [1][-]{section.5.1}{Introduction}{section*.18}% 64
-\BOOKMARK [1][-]{section.5.2}{Basics of Effective Field Theory and Lattice Effective Field Theory}{section*.18}% 65
-\BOOKMARK [2][-]{subsection.5.2.1}{Pionless Effective Field Theory}{section.5.2}% 66
-\BOOKMARK [2][-]{subsection.5.2.2}{Lattice Effective Field Theory}{section.5.2}% 67
-\BOOKMARK [1][-]{section.5.3}{Calculating observables}{section*.18}% 68
-\BOOKMARK [2][-]{subsection.5.3.1}{Signal-to-noise}{section.5.3}% 69
-\BOOKMARK [2][-]{subsection.5.3.2}{Statistical Overlap}{section.5.3}% 70
-\BOOKMARK [2][-]{subsection.5.3.3}{Interpolating Fields}{section.5.3}% 71
-\BOOKMARK [2][-]{subsection.5.3.4}{Analysis methods}{section.5.3}% 72
-\BOOKMARK [1][-]{section.5.4}{Systematic errors and improvement}{section*.18}% 73
-\BOOKMARK [2][-]{subsection.5.4.1}{Improving the kinetic energy operator}{section.5.4}% 74
-\BOOKMARK [2][-]{subsection.5.4.2}{Improving the interaction}{section.5.4}% 75
-\BOOKMARK [2][-]{subsection.5.4.3}{Scaling of discretization errors for many-body systems}{section.5.4}% 76
-\BOOKMARK [2][-]{subsection.5.4.4}{Additional sources of systematic error}{section.5.4}% 77
-\BOOKMARK [1][-]{section.5.5}{Beyond leading order EFT}{section*.18}% 78
-\BOOKMARK [2][-]{subsection.5.5.1}{Tuning the effective range}{section.5.5}% 79
-\BOOKMARK [2][-]{subsection.5.5.2}{Including pions}{section.5.5}% 80
-\BOOKMARK [2][-]{subsection.5.5.3}{3- and higher-body interactions}{section.5.5}% 81
-\BOOKMARK [2][-]{subsection.5.5.4}{Final considerations}{section.5.5}% 82
-\BOOKMARK [1][-]{section.5.6}{Reading assignments and Exercises}{section*.18}% 83
-\BOOKMARK [1][-]{section*.19}{References}{section*.18}% 84
-\BOOKMARK [0][-]{section*.20}{Lattice methods and the nuclear few- and many-body problem}{}% 85
-\BOOKMARK [0][-]{section*.20}{Dean Lee}{}% 86
-\BOOKMARK [1][-]{section.6.1}{Introduction}{section*.20}% 87
-\BOOKMARK [1][-]{section.6.2}{Scattering on the lattice}{section*.20}% 88
-\BOOKMARK [1][-]{section.6.3}{Lattice formalisms}{section*.20}% 89
-\BOOKMARK [2][-]{subsection.6.3.1}{Grassmann path integral}{section.6.3}% 90
-\BOOKMARK [2][-]{subsection.6.3.2}{Transfer matrix operator}{section.6.3}% 91
-\BOOKMARK [2][-]{subsection.6.3.3}{Grassmann path integral with auxiliary field}{section.6.3}% 92
-\BOOKMARK [2][-]{subsection.6.3.4}{Transfer matrix operator with auxiliary field}{section.6.3}% 93
-\BOOKMARK [1][-]{section.6.4}{Projection Monte Carlo}{section*.20}% 94
-\BOOKMARK [1][-]{section.6.5}{Importance sampling}{section*.20}% 95
-\BOOKMARK [1][-]{section.6.6}{Exercises}{section*.20}% 96
-\BOOKMARK [1][-]{section*.21}{References}{section*.20}% 97
-\BOOKMARK [0][-]{section*.22}{Ab initio methods for nuclear structure and reactions: from few to many nucleons}{}% 98
-\BOOKMARK [0][-]{section*.22}{Giuseppina Orlandini}{}% 99
-\BOOKMARK [1][-]{section.7.1}{Introduction: Theory, Model, Method}{section*.22}% 100
-\BOOKMARK [1][-]{section.7.2}{The Non-relativistic Quantum Mechanical Many-Nucleon Problem}{section*.22}% 101
-\BOOKMARK [2][-]{subsection.7.2.1}{Translation and Galileian Invariance}{section.7.2}% 102
-\BOOKMARK [1][-]{section.7.3}{Classification of Ab Initio Approaches for Ground-state Calculations}{section*.22}% 103
-\BOOKMARK [2][-]{subsection.7.3.1}{The Faddeev-Yakubowski \(FY\) Method}{section.7.3}% 104
-\BOOKMARK [2][-]{subsection.7.3.2}{Methods Based on the Variational Theorem \(Diagonalization Methods\)}{section.7.3}% 105
-\BOOKMARK [2][-]{subsection.7.3.3}{Methods Based on Similarity Transformations }{section.7.3}% 106
-\BOOKMARK [2][-]{subsection.7.3.4}{Monte Carlo Methods}{section.7.3}% 107
-\BOOKMARK [1][-]{section.7.4}{Two Diagonalization Methods with Effective Interactions}{section*.22}% 108
-\BOOKMARK [2][-]{subsection.7.4.1}{The No Core Shell Model Method \(NCSM\)}{section.7.4}% 109
-\BOOKMARK [2][-]{subsection.7.4.2}{The Hyperspherical Harmonics Method with Effective Interaction \(EIHH\)}{section.7.4}% 110
-\BOOKMARK [1][-]{section.7.5}{Excited States}{section*.22}% 111
-\BOOKMARK [2][-]{subsection.7.5.1}{Response Functions to Perturbative Probes}{section.7.5}% 112
-\BOOKMARK [1][-]{section.7.6}{Integral Transform Approaches}{section*.22}% 113
-\BOOKMARK [2][-]{subsection.7.6.1}{Sum Rules}{section.7.6}% 114
-\BOOKMARK [2][-]{subsection.7.6.2}{Integral Transform with the Laplace Kernel}{section.7.6}% 115
-\BOOKMARK [2][-]{subsection.7.6.3}{Integral Transform with the Lorentzian kernel}{section.7.6}% 116
-\BOOKMARK [2][-]{subsection.7.6.4}{Integral Transform with the Sumudu Kernel}{section.7.6}% 117
-\BOOKMARK [2][-]{subsection.7.6.5}{Integral Transform with the Stieltjes Kernel}{section.7.6}% 118
-\BOOKMARK [2][-]{subsection.7.6.6}{Methods of Inversion}{section.7.6}% 119
-\BOOKMARK [1][-]{section.7.7}{Conclusion}{section*.22}% 120
-\BOOKMARK [1][-]{section*.23}{References}{section*.22}% 121
-\BOOKMARK [0][-]{section*.24}{Computational Nuclear Physics and Post Hartree-Fock Methods}{}% 122
-\BOOKMARK [0][-]{section*.24}{Justin G. Lietz, Samuel Novario, Gustav R. Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{}% 123
-\BOOKMARK [1][-]{section.8.1}{Introduction}{section*.24}% 124
-\BOOKMARK [1][-]{section.8.2}{Single-particle basis, Hamiltonians and models for the nuclear force}{section*.24}% 125
-\BOOKMARK [2][-]{subsection.8.2.1}{Introduction to nuclear matter and Hamiltonians}{section.8.2}% 126
-\BOOKMARK [2][-]{subsection.8.2.2}{Single-particle basis for infinite matter}{section.8.2}% 127
-\BOOKMARK [2][-]{subsection.8.2.3}{Two-body interaction}{section.8.2}% 128
-\BOOKMARK [2][-]{subsection.8.2.4}{Models from Effective field theory for the two- and three-nucleon interactions}{section.8.2}% 129
-\BOOKMARK [1][-]{section.8.3}{Hartree-Fock theory}{section*.24}% 130
-\BOOKMARK [2][-]{subsection.8.3.1}{Hartree-Fock algorithm with simple Python code}{section.8.3}% 131
-\BOOKMARK [1][-]{section.8.4}{Full Configuration Interaction Theory}{section*.24}% 132
-\BOOKMARK [2][-]{subsection.8.4.1}{A non-practical way of solving the eigenvalue problem}{section.8.4}% 133
-\BOOKMARK [2][-]{subsection.8.4.2}{Short summary}{section.8.4}% 134
-\BOOKMARK [1][-]{section.8.5}{Many-body perturbation theory}{section*.24}% 135
-\BOOKMARK [2][-]{subsection.8.5.1}{Interpreting the correlation energy and the wave operator}{section.8.5}% 136
-\BOOKMARK [1][-]{section.8.6}{Coupled cluster theory}{section*.24}% 137
-\BOOKMARK [2][-]{subsection.8.6.1}{A quick tour of Coupled Cluster theory}{section.8.6}% 138
-\BOOKMARK [2][-]{subsection.8.6.2}{The CCD approximation}{section.8.6}% 139
-\BOOKMARK [2][-]{subsection.8.6.3}{Approximations to the full CCD equations.}{section.8.6}% 140
-\BOOKMARK [1][-]{section.8.7}{Developing a numerical project}{section*.24}% 141
-\BOOKMARK [2][-]{subsection.8.7.1}{Developing a CCD code for infinite matter}{section.8.7}% 142
-\BOOKMARK [1][-]{section.8.8}{Conclusions}{section*.24}% 143
-\BOOKMARK [1][-]{section.8.9}{Exercises}{section*.24}% 144
-\BOOKMARK [1][-]{section.8.10}{Solutions to selected exercises}{section*.24}% 145
-\BOOKMARK [1][-]{section*.25}{Appendix}{section*.24}% 146
-\BOOKMARK [1][-]{section*.26}{References}{section*.24}% 147
-\BOOKMARK [0][-]{section*.27}{Variational and Diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 148
-\BOOKMARK [0][-]{section*.27}{Francesco Pederiva, Alessandro Roggero, Kevin E. Schmidt}{}% 149
-\BOOKMARK [1][-]{section.9.1}{Monte Carlo methods in quantum many-body physics}{section*.27}% 150
-\BOOKMARK [2][-]{subsection.9.1.1}{Expectations in Quantum Mechanics}{section.9.1}% 151
-\BOOKMARK [1][-]{section.9.2}{Variational wavefunctions and VMC for central potentials}{section*.27}% 152
-\BOOKMARK [2][-]{subsection.9.2.1}{Coordinate space formulation}{section.9.2}% 153
-\BOOKMARK [2][-]{subsection.9.2.2}{Variational principle and variational wavefunctions}{section.9.2}% 154
-\BOOKMARK [2][-]{subsection.9.2.3}{Monte Carlo evaluation of integrals}{section.9.2}% 155
-\BOOKMARK [2][-]{subsection.9.2.4}{Wave function optimization}{section.9.2}% 156
-\BOOKMARK [2][-]{subsection.9.2.5}{Example}{section.9.2}% 157
-\BOOKMARK [1][-]{section.9.3}{Projection Monte Carlo Methods in coordinate space}{section*.27}% 158
-\BOOKMARK [2][-]{subsection.9.3.1}{Propagation in imaginary time}{section.9.3}% 159
-\BOOKMARK [2][-]{subsection.9.3.2}{General formulation}{section.9.3}% 160
-\BOOKMARK [2][-]{subsection.9.3.3}{Imaginary time propagator in coordinate representation}{section.9.3}% 161
-\BOOKMARK [2][-]{subsection.9.3.4}{Application to the harmonic oscillator}{section.9.3}% 162
-\BOOKMARK [2][-]{subsection.9.3.5}{Importance sampling}{section.9.3}% 163
-\BOOKMARK [2][-]{subsection.9.3.6}{The fermion sign problem}{section.9.3}% 164
-\BOOKMARK [1][-]{section.9.4}{Quantum Monte Carlo for Nuclear Hamiltonians in coordinate space}{section*.27}% 165
-\BOOKMARK [2][-]{subsection.9.4.1}{Green's Function Monte Carlo}{section.9.4}% 166
-\BOOKMARK [2][-]{subsection.9.4.2}{General Auxiliary Field Formalism}{section.9.4}% 167
-\BOOKMARK [2][-]{subsection.9.4.3}{Operator expectations and importance sampling}{section.9.4}% 168
-\BOOKMARK [2][-]{subsection.9.4.4}{Application to standard diffusion Monte Carlo}{section.9.4}% 169
-\BOOKMARK [2][-]{subsection.9.4.5}{Fixed-phase importance-sampled Diffusion Monte Carlo}{section.9.4}% 170
-\BOOKMARK [2][-]{subsection.9.4.6}{Application to quadratic forms}{section.9.4}% 171
-\BOOKMARK [2][-]{subsection.9.4.7}{Auxiliary Field Breakups}{section.9.4}% 172
-\BOOKMARK [2][-]{subsection.9.4.8}{AFDMC with the v6' potential for nuclear matter}{section.9.4}% 173
-\BOOKMARK [2][-]{subsection.9.4.9}{Isospin-independent spin-orbit interaction}{section.9.4}% 174
-\BOOKMARK [1][-]{section.9.5}{General projection algorithms in Fock space and non-local interactions}{section*.27}% 175
-\BOOKMARK [2][-]{subsection.9.5.1}{Fock space formulation of Diffusion Monte Carlo}{section.9.5}% 176
-\BOOKMARK [2][-]{subsection.9.5.2}{Importance sampling and fixed-node approximation}{section.9.5}% 177
-\BOOKMARK [2][-]{subsection.9.5.3}{Trial wave\205functions from Coupled Cluster}{section.9.5}% 178
-\BOOKMARK [2][-]{subsection.9.5.4}{Propagator sampling with no time-step error}{section.9.5}% 179
-\BOOKMARK [0][-]{section*.28}{In-medium SRG approaches to infinite nuclear matter}{}% 180
-\BOOKMARK [0][-]{section*.28}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 181
-\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.28}% 182
-\BOOKMARK [1][-]{section.10.2}{IM-SRG Flow Equations}{section*.28}% 183
-\BOOKMARK [2][-]{subsection.10.2.1}{Preliminaries}{section.10.2}% 184
-\BOOKMARK [2][-]{subsection.10.2.2}{Normal Ordering and Wick's Theorem}{section.10.2}% 185
-\BOOKMARK [2][-]{subsection.10.2.3}{Normal-Ordered Hamiltonian}{section.10.2}% 186
-\BOOKMARK [2][-]{subsection.10.2.4}{M-Scheme Flow Equations}{section.10.2}% 187
-\BOOKMARK [2][-]{subsection.10.2.5}{J-Scheme Flow Equations}{section.10.2}% 188
-\BOOKMARK [2][-]{subsection.10.2.6}{General Observables}{section.10.2}% 189
-\BOOKMARK [1][-]{section.10.3}{Choice of Generator}{section*.28}% 190
-\BOOKMARK [2][-]{subsection.10.3.1}{Decoupling}{section.10.3}% 191
-\BOOKMARK [2][-]{subsection.10.3.2}{White Generators}{section.10.3}% 192
-\BOOKMARK [2][-]{subsection.10.3.3}{Imaginary-Time Generators}{section.10.3}% 193
-\BOOKMARK [2][-]{subsection.10.3.4}{Wegner Generators}{section.10.3}% 194
-\BOOKMARK [2][-]{subsection.10.3.5}{Decay Scales}{section.10.3}% 195
-\BOOKMARK [1][-]{section.10.4}{In-medium SRG studies of infinite matter}{section*.28}% 196
-\BOOKMARK [0][-]{section*.29}{Green's function approaches}{}% 197
-\BOOKMARK [0][-]{section*.29}{Carlo Barbieri and Adriana Carbone}{}% 198
-\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{section*.29}% 199
-\BOOKMARK [0][-]{section*.30}{Concluding remarks and perspectives}{}% 200
-\BOOKMARK [0][-]{section*.30}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 201
-\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.30}% 202
-\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.30}% 203
+\BOOKMARK [1][-]{section.3.1}{Introduction}{section*.9}% 31
+\BOOKMARK [2][-]{subsection.3.1.1}{Euclidean QCD action}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.2}{Quantum fluctuations}{section.3.1}% 33
+\BOOKMARK [1][-]{section.3.2}{Lattice QCD: theoretical basis }{section*.9}% 34
+\BOOKMARK [2][-]{subsection.3.2.1}{Wilson line}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.2}{Lattice gluons}{section.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.2.3}{Lattice fermions}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.4}{Partition function on the lattice}{section.3.2}% 38
+\BOOKMARK [2][-]{subsection.3.2.5}{Strong coupling expansion and quark confinement}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.6}{Weak coupling expansion and continuum limit}{section.3.2}% 40
+\BOOKMARK [2][-]{subsection.3.2.7}{Running coupling}{section.3.2}% 41
+\BOOKMARK [1][-]{section.3.3}{Lattice QCD: numerical simulations}{section*.9}% 42
+\BOOKMARK [2][-]{subsection.3.3.1}{Importance sampling}{section.3.3}% 43
+\BOOKMARK [2][-]{subsection.3.3.2}{Markov chain Monte Carlo \(MCMC\)}{section.3.3}% 44
+\BOOKMARK [2][-]{subsection.3.3.3}{Hybrid Monte Carlo \(HMC\)}{section.3.3}% 45
+\BOOKMARK [2][-]{subsection.3.3.4}{Error estimate}{section.3.3}% 46
+\BOOKMARK [2][-]{subsection.3.3.5}{Heavy quark potential}{section.3.3}% 47
+\BOOKMARK [2][-]{subsection.3.3.6}{Masses of light hadrons}{section.3.3}% 48
+\BOOKMARK [1][-]{section.3.4}{Lattice QCD and nuclear force}{section*.9}% 49
+\BOOKMARK [2][-]{subsection.3.4.1}{Master equation for baryon-baryon interaction}{section.3.4}% 50
+\BOOKMARK [2][-]{subsection.3.4.2}{Baryon-baryon interaction in flavor SU\(3\) limit}{section.3.4}% 51
+\BOOKMARK [1][-]{section.3.5}{Exercises}{section*.9}% 52
+\BOOKMARK [1][-]{section.3.6}{Appendix}{section*.9}% 53
+\BOOKMARK [1][-]{section.3.6}{Appendix}{section*.9}% 54
+\BOOKMARK [1][-]{section*.15}{References}{section*.9}% 55
+\BOOKMARK [0][-]{section*.16}{General aspects of effective field theories and few-body applications}{}% 56
+\BOOKMARK [0][-]{section*.16}{Hans-Werner Hammer and Sebastian K\366nig}{}% 57
+\BOOKMARK [1][-]{section.4.1}{Introduction: dimensional analysis and the separation of scales}{section*.16}% 58
+\BOOKMARK [1][-]{section.4.2}{Theoretical foundations of effective field theory}{section*.16}% 59
+\BOOKMARK [2][-]{subsection.4.2.1}{Top-down vs. bottom-up approaches}{section.4.2}% 60
+\BOOKMARK [2][-]{subsection.4.2.2}{Nonrelativistic field theory}{section.4.2}% 61
+\BOOKMARK [2][-]{subsection.4.2.3}{Symmetries and power counting}{section.4.2}% 62
+\BOOKMARK [2][-]{subsection.4.2.4}{Matching}{section.4.2}% 63
+\BOOKMARK [1][-]{section.4.3}{Effective field theory for strongly interacting bosons}{section*.16}% 64
+\BOOKMARK [2][-]{subsection.4.3.1}{EFT for short-range interactions}{section.4.3}% 65
+\BOOKMARK [2][-]{subsection.4.3.2}{Dimer field formalism}{section.4.3}% 66
+\BOOKMARK [2][-]{subsection.4.3.3}{Three-body system}{section.4.3}% 67
+\BOOKMARK [2][-]{subsection.4.3.4}{Three-body observables}{section.4.3}% 68
+\BOOKMARK [2][-]{subsection.4.3.5}{Renormalization group limit cycle}{section.4.3}% 69
+\BOOKMARK [1][-]{section.4.4}{Effective field theory for nuclear few-body systems}{section*.16}% 70
+\BOOKMARK [2][-]{subsection.4.4.1}{Overview}{section.4.4}% 71
+\BOOKMARK [2][-]{subsection.4.4.2}{Pionless effective field theory}{section.4.4}% 72
+\BOOKMARK [2][-]{subsection.4.4.3}{The two-nucleon S-wave system}{section.4.4}% 73
+\BOOKMARK [2][-]{subsection.4.4.4}{Three nucleons: scattering and bound states}{section.4.4}% 74
+\BOOKMARK [1][-]{section.4.5}{Beyond short-range interactions: adding photons and pions}{section*.16}% 75
+\BOOKMARK [2][-]{subsection.4.5.1}{Electromagnetic interactions}{section.4.5}% 76
+\BOOKMARK [2][-]{subsection.4.5.2}{Example: deuteron breakup}{section.4.5}% 77
+\BOOKMARK [2][-]{subsection.4.5.3}{Chiral effective field theory}{section.4.5}% 78
+\BOOKMARK [1][-]{section*.21}{References}{section*.16}% 79
+\BOOKMARK [0][-]{section*.22}{Lattice methods and effective field theory}{}% 80
+\BOOKMARK [0][-]{section*.22}{Amy Nicholson}{}% 81
+\BOOKMARK [1][-]{section.5.1}{Introduction}{section*.22}% 82
+\BOOKMARK [1][-]{section.5.2}{Basics of Effective Field Theory and Lattice Effective Field Theory}{section*.22}% 83
+\BOOKMARK [2][-]{subsection.5.2.1}{Pionless Effective Field Theory}{section.5.2}% 84
+\BOOKMARK [2][-]{subsection.5.2.2}{Lattice Effective Field Theory}{section.5.2}% 85
+\BOOKMARK [1][-]{section.5.3}{Calculating observables}{section*.22}% 86
+\BOOKMARK [2][-]{subsection.5.3.1}{Signal-to-noise}{section.5.3}% 87
+\BOOKMARK [2][-]{subsection.5.3.2}{Statistical Overlap}{section.5.3}% 88
+\BOOKMARK [2][-]{subsection.5.3.3}{Interpolating Fields}{section.5.3}% 89
+\BOOKMARK [2][-]{subsection.5.3.4}{Analysis methods}{section.5.3}% 90
+\BOOKMARK [1][-]{section.5.4}{Systematic errors and improvement}{section*.22}% 91
+\BOOKMARK [2][-]{subsection.5.4.1}{Improving the kinetic energy operator}{section.5.4}% 92
+\BOOKMARK [2][-]{subsection.5.4.2}{Improving the interaction}{section.5.4}% 93
+\BOOKMARK [2][-]{subsection.5.4.3}{Scaling of discretization errors for many-body systems}{section.5.4}% 94
+\BOOKMARK [2][-]{subsection.5.4.4}{Additional sources of systematic error}{section.5.4}% 95
+\BOOKMARK [1][-]{section.5.5}{Beyond leading order EFT}{section*.22}% 96
+\BOOKMARK [2][-]{subsection.5.5.1}{Tuning the effective range}{section.5.5}% 97
+\BOOKMARK [2][-]{subsection.5.5.2}{Including pions}{section.5.5}% 98
+\BOOKMARK [2][-]{subsection.5.5.3}{3- and higher-body interactions}{section.5.5}% 99
+\BOOKMARK [2][-]{subsection.5.5.4}{Final considerations}{section.5.5}% 100
+\BOOKMARK [1][-]{section.5.6}{Reading assignments and Exercises}{section*.22}% 101
+\BOOKMARK [1][-]{section*.23}{References}{section*.22}% 102
+\BOOKMARK [0][-]{section*.24}{Lattice methods and the nuclear few- and many-body problem}{}% 103
+\BOOKMARK [0][-]{section*.24}{Dean Lee}{}% 104
+\BOOKMARK [1][-]{section.6.1}{Introduction}{section*.24}% 105
+\BOOKMARK [1][-]{section.6.2}{Scattering on the lattice}{section*.24}% 106
+\BOOKMARK [1][-]{section.6.3}{Lattice formalisms}{section*.24}% 107
+\BOOKMARK [2][-]{subsection.6.3.1}{Grassmann path integral}{section.6.3}% 108
+\BOOKMARK [2][-]{subsection.6.3.2}{Transfer matrix operator}{section.6.3}% 109
+\BOOKMARK [2][-]{subsection.6.3.3}{Grassmann path integral with auxiliary field}{section.6.3}% 110
+\BOOKMARK [2][-]{subsection.6.3.4}{Transfer matrix operator with auxiliary field}{section.6.3}% 111
+\BOOKMARK [1][-]{section.6.4}{Projection Monte Carlo}{section*.24}% 112
+\BOOKMARK [1][-]{section.6.5}{Importance sampling}{section*.24}% 113
+\BOOKMARK [1][-]{section.6.6}{Exercises}{section*.24}% 114
+\BOOKMARK [1][-]{section*.25}{References}{section*.24}% 115
+\BOOKMARK [0][-]{section*.26}{Ab initio methods for nuclear structure and reactions: from few to many nucleons}{}% 116
+\BOOKMARK [0][-]{section*.26}{Giuseppina Orlandini}{}% 117
+\BOOKMARK [1][-]{section.7.1}{Introduction: Theory, Model, Method}{section*.26}% 118
+\BOOKMARK [1][-]{section.7.2}{The Non-relativistic Quantum Mechanical Many-Nucleon Problem}{section*.26}% 119
+\BOOKMARK [2][-]{subsection.7.2.1}{Translation and Galileian Invariance}{section.7.2}% 120
+\BOOKMARK [1][-]{section.7.3}{Classification of Ab Initio Approaches for Ground-state Calculations}{section*.26}% 121
+\BOOKMARK [2][-]{subsection.7.3.1}{The Faddeev-Yakubowski \(FY\) Method}{section.7.3}% 122
+\BOOKMARK [2][-]{subsection.7.3.2}{Methods Based on the Variational Theorem \(Diagonalization Methods\)}{section.7.3}% 123
+\BOOKMARK [2][-]{subsection.7.3.3}{Methods Based on Similarity Transformations }{section.7.3}% 124
+\BOOKMARK [2][-]{subsection.7.3.4}{Monte Carlo Methods}{section.7.3}% 125
+\BOOKMARK [1][-]{section.7.4}{Two Diagonalization Methods with Effective Interactions}{section*.26}% 126
+\BOOKMARK [2][-]{subsection.7.4.1}{The No Core Shell Model Method \(NCSM\)}{section.7.4}% 127
+\BOOKMARK [2][-]{subsection.7.4.2}{The Hyperspherical Harmonics Method with Effective Interaction \(EIHH\)}{section.7.4}% 128
+\BOOKMARK [1][-]{section.7.5}{Excited States}{section*.26}% 129
+\BOOKMARK [2][-]{subsection.7.5.1}{Response Functions to Perturbative Probes}{section.7.5}% 130
+\BOOKMARK [1][-]{section.7.6}{Integral Transform Approaches}{section*.26}% 131
+\BOOKMARK [2][-]{subsection.7.6.1}{Sum Rules}{section.7.6}% 132
+\BOOKMARK [2][-]{subsection.7.6.2}{Integral Transform with the Laplace Kernel}{section.7.6}% 133
+\BOOKMARK [2][-]{subsection.7.6.3}{Integral Transform with the Lorentzian kernel}{section.7.6}% 134
+\BOOKMARK [2][-]{subsection.7.6.4}{Integral Transform with the Sumudu Kernel}{section.7.6}% 135
+\BOOKMARK [2][-]{subsection.7.6.5}{Integral Transform with the Stieltjes Kernel}{section.7.6}% 136
+\BOOKMARK [2][-]{subsection.7.6.6}{Methods of Inversion}{section.7.6}% 137
+\BOOKMARK [1][-]{section.7.7}{Conclusion}{section*.26}% 138
+\BOOKMARK [1][-]{section*.27}{References}{section*.26}% 139
+\BOOKMARK [0][-]{section*.28}{Computational Nuclear Physics and Post Hartree-Fock Methods}{}% 140
+\BOOKMARK [0][-]{section*.28}{Justin G. Lietz, Samuel Novario, Gustav R. Jansen, Gaute Hagen, and Morten Hjorth-Jensen,}{}% 141
+\BOOKMARK [1][-]{section.8.1}{Introduction}{section*.28}% 142
+\BOOKMARK [1][-]{section.8.2}{Single-particle basis, Hamiltonians and models for the nuclear force}{section*.28}% 143
+\BOOKMARK [2][-]{subsection.8.2.1}{Introduction to nuclear matter and Hamiltonians}{section.8.2}% 144
+\BOOKMARK [2][-]{subsection.8.2.2}{Single-particle basis for infinite matter}{section.8.2}% 145
+\BOOKMARK [2][-]{subsection.8.2.3}{Two-body interaction}{section.8.2}% 146
+\BOOKMARK [2][-]{subsection.8.2.4}{Models from Effective field theory for the two- and three-nucleon interactions}{section.8.2}% 147
+\BOOKMARK [1][-]{section.8.3}{Hartree-Fock theory}{section*.28}% 148
+\BOOKMARK [2][-]{subsection.8.3.1}{Hartree-Fock algorithm with simple Python code}{section.8.3}% 149
+\BOOKMARK [1][-]{section.8.4}{Full Configuration Interaction Theory}{section*.28}% 150
+\BOOKMARK [2][-]{subsection.8.4.1}{A non-practical way of solving the eigenvalue problem}{section.8.4}% 151
+\BOOKMARK [2][-]{subsection.8.4.2}{Short summary}{section.8.4}% 152
+\BOOKMARK [1][-]{section.8.5}{Many-body perturbation theory}{section*.28}% 153
+\BOOKMARK [2][-]{subsection.8.5.1}{Interpreting the correlation energy and the wave operator}{section.8.5}% 154
+\BOOKMARK [1][-]{section.8.6}{Coupled cluster theory}{section*.28}% 155
+\BOOKMARK [2][-]{subsection.8.6.1}{A quick tour of Coupled Cluster theory}{section.8.6}% 156
+\BOOKMARK [2][-]{subsection.8.6.2}{The CCD approximation}{section.8.6}% 157
+\BOOKMARK [2][-]{subsection.8.6.3}{Approximations to the full CCD equations.}{section.8.6}% 158
+\BOOKMARK [1][-]{section.8.7}{Developing a numerical project}{section*.28}% 159
+\BOOKMARK [2][-]{subsection.8.7.1}{Developing a CCD code for infinite matter}{section.8.7}% 160
+\BOOKMARK [1][-]{section.8.8}{Conclusions}{section*.28}% 161
+\BOOKMARK [1][-]{section.8.9}{Exercises}{section*.28}% 162
+\BOOKMARK [1][-]{section.8.10}{Solutions to selected exercises}{section*.28}% 163
+\BOOKMARK [1][-]{section*.29}{Appendix}{section*.28}% 164
+\BOOKMARK [1][-]{section*.30}{References}{section*.28}% 165
+\BOOKMARK [0][-]{section*.31}{Variational and Diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 166
+\BOOKMARK [0][-]{section*.31}{Francesco Pederiva, Alessandro Roggero, Kevin E. Schmidt}{}% 167
+\BOOKMARK [1][-]{section.9.1}{Monte Carlo methods in quantum many-body physics}{section*.31}% 168
+\BOOKMARK [2][-]{subsection.9.1.1}{Expectations in Quantum Mechanics}{section.9.1}% 169
+\BOOKMARK [1][-]{section.9.2}{Variational wavefunctions and VMC for central potentials}{section*.31}% 170
+\BOOKMARK [2][-]{subsection.9.2.1}{Coordinate space formulation}{section.9.2}% 171
+\BOOKMARK [2][-]{subsection.9.2.2}{Variational principle and variational wavefunctions}{section.9.2}% 172
+\BOOKMARK [2][-]{subsection.9.2.3}{Monte Carlo evaluation of integrals}{section.9.2}% 173
+\BOOKMARK [2][-]{subsection.9.2.4}{Wave function optimization}{section.9.2}% 174
+\BOOKMARK [2][-]{subsection.9.2.5}{Example}{section.9.2}% 175
+\BOOKMARK [1][-]{section.9.3}{Projection Monte Carlo Methods in coordinate space}{section*.31}% 176
+\BOOKMARK [2][-]{subsection.9.3.1}{Propagation in imaginary time}{section.9.3}% 177
+\BOOKMARK [2][-]{subsection.9.3.2}{General formulation}{section.9.3}% 178
+\BOOKMARK [2][-]{subsection.9.3.3}{Imaginary time propagator in coordinate representation}{section.9.3}% 179
+\BOOKMARK [2][-]{subsection.9.3.4}{Application to the harmonic oscillator}{section.9.3}% 180
+\BOOKMARK [2][-]{subsection.9.3.5}{Importance sampling}{section.9.3}% 181
+\BOOKMARK [2][-]{subsection.9.3.6}{The fermion sign problem}{section.9.3}% 182
+\BOOKMARK [1][-]{section.9.4}{Quantum Monte Carlo for Nuclear Hamiltonians in coordinate space}{section*.31}% 183
+\BOOKMARK [2][-]{subsection.9.4.1}{Green's Function Monte Carlo}{section.9.4}% 184
+\BOOKMARK [2][-]{subsection.9.4.2}{General Auxiliary Field Formalism}{section.9.4}% 185
+\BOOKMARK [2][-]{subsection.9.4.3}{Operator expectations and importance sampling}{section.9.4}% 186
+\BOOKMARK [2][-]{subsection.9.4.4}{Application to standard diffusion Monte Carlo}{section.9.4}% 187
+\BOOKMARK [2][-]{subsection.9.4.5}{Fixed-phase importance-sampled Diffusion Monte Carlo}{section.9.4}% 188
+\BOOKMARK [2][-]{subsection.9.4.6}{Application to quadratic forms}{section.9.4}% 189
+\BOOKMARK [2][-]{subsection.9.4.7}{Auxiliary Field Breakups}{section.9.4}% 190
+\BOOKMARK [2][-]{subsection.9.4.8}{AFDMC with the v6' potential for nuclear matter}{section.9.4}% 191
+\BOOKMARK [2][-]{subsection.9.4.9}{Isospin-independent spin-orbit interaction}{section.9.4}% 192
+\BOOKMARK [1][-]{section.9.5}{General projection algorithms in Fock space and non-local interactions}{section*.31}% 193
+\BOOKMARK [2][-]{subsection.9.5.1}{Fock space formulation of Diffusion Monte Carlo}{section.9.5}% 194
+\BOOKMARK [2][-]{subsection.9.5.2}{Importance sampling and fixed-node approximation}{section.9.5}% 195
+\BOOKMARK [2][-]{subsection.9.5.3}{Trial wave\205functions from Coupled Cluster}{section.9.5}% 196
+\BOOKMARK [2][-]{subsection.9.5.4}{Propagator sampling with no time-step error}{section.9.5}% 197
+\BOOKMARK [0][-]{section*.32}{In-medium SRG approaches to infinite nuclear matter}{}% 198
+\BOOKMARK [0][-]{section*.32}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 199
+\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.32}% 200
+\BOOKMARK [1][-]{section.10.2}{IM-SRG Flow Equations}{section*.32}% 201
+\BOOKMARK [2][-]{subsection.10.2.1}{Preliminaries}{section.10.2}% 202
+\BOOKMARK [2][-]{subsection.10.2.2}{Normal Ordering and Wick's Theorem}{section.10.2}% 203
+\BOOKMARK [2][-]{subsection.10.2.3}{Normal-Ordered Hamiltonian}{section.10.2}% 204
+\BOOKMARK [2][-]{subsection.10.2.4}{M-Scheme Flow Equations}{section.10.2}% 205
+\BOOKMARK [2][-]{subsection.10.2.5}{J-Scheme Flow Equations}{section.10.2}% 206
+\BOOKMARK [2][-]{subsection.10.2.6}{General Observables}{section.10.2}% 207
+\BOOKMARK [1][-]{section.10.3}{Choice of Generator}{section*.32}% 208
+\BOOKMARK [2][-]{subsection.10.3.1}{Decoupling}{section.10.3}% 209
+\BOOKMARK [2][-]{subsection.10.3.2}{White Generators}{section.10.3}% 210
+\BOOKMARK [2][-]{subsection.10.3.3}{Imaginary-Time Generators}{section.10.3}% 211
+\BOOKMARK [2][-]{subsection.10.3.4}{Wegner Generators}{section.10.3}% 212
+\BOOKMARK [2][-]{subsection.10.3.5}{Decay Scales}{section.10.3}% 213
+\BOOKMARK [1][-]{section.10.4}{In-medium SRG studies of infinite matter}{section*.32}% 214
+\BOOKMARK [0][-]{section*.33}{Green's function approaches}{}% 215
+\BOOKMARK [0][-]{section*.33}{Carlo Barbieri and Adriana Carbone}{}% 216
+\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{section*.33}% 217
+\BOOKMARK [0][-]{section*.34}{Concluding remarks and perspectives}{}% 218
+\BOOKMARK [0][-]{section*.34}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 219
+\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.34}% 220
+\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.34}% 221

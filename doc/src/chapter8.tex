@@ -3237,7 +3237,7 @@ The Hamiltonian matrix for this   four-particle problem with no broken pairs is
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis.
+while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
   In the case of the simple pairing model it is easy to calculate
   $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since can also be used to check our first CCD iteration.
 We restate this expression
@@ -3408,10 +3408,10 @@ Figure \ref{fig:diagpairing} shows the resulting correlation energies for the ex
     \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
     \label{fig:diagpairing}
   \end{figure}
-We note from the above program the we have coded the expressions for the various diagrams
+We note from the above program that we have coded the expressions for the various diagrams
 following strictly the mathematical expressions of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5}).
 This means that for every diagram we loop explicitely  over every single-particle state. As we will
-  see here, this is extremely inefficient from a computational point
+  see later, this is extremely inefficient from a computational point
   of view. In our discussions below, we will rewrite
   the computations of most diagrams in terms of efficient
   matrix-matrix multiplications or matrix-vector multiplications.  
@@ -3427,13 +3427,13 @@ This means that for every diagram we loop explicitely  over every single-particl
   for negative interaction strengths gives a
   better result than second and third order, while for $g>0$ the
   relative error is worse.  The fourth order contributions (not shown in the above figure) include also four-particle-four-hole correaltions.
-However, the disagreement for stronger interaction values hint at  the possibility that many-body perturbation theory may not converge order by order. 
+However, the disagreement for stronger interaction values hints at  the possibility that many-body perturbation theory may not converge order by order. 
  We note also the non-variational character
   of many-body perturbation theory, with results at different levels of many-body perturbation theory either
   overshooting or undershooting the true ground state correlation energy. 
 The coupled cluster results are included in Fig.~\ref{fig:pairingccmbpt4} where we display the difference between the exact correlation energy and the correlation energy obtained with many-body perturbation theory to fourth order.  
   \begin{figure}
-    \includegraphics[width=\linewidth]{Chapter8-figures/pairingccmbpt4.pdf}
+    \includegraphics[width=\linewidth]{Chapter8-figures/CCDMBPT4theory.pdf}
     \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
     \label{fig:pairingccmbpt4}
   \end{figure}
@@ -3521,14 +3521,6 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   diagonal form, which is an enormous saving from the 500 Gb mentions
   earlier in the na\"ive storage scheme.
 
-  Since the calculation of all of these zeros can now be avoided,
-  improvements in speed as memory will now follow. To get a handle on
-  how example these CCD calculations are we need only to look at the
-  most expensive sum in equation \ref{eq:ccd2}. This corresponds to
-  the sum over $klcd$. Since this sum is repeated for all $i < j$ and
-  $a < b$, that means these equations will scale as
-  $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However, (as we saw earlier?),
-  they can be rewritten using intermediates as
 
 
 I made some changes to my CCD code which really sped up the initial block setups. Then, since MBPT2 is much simpler, I threw out a lot of the stuff that was needed for CCD, but not for MBPT2. Now when I run the calculation with ~1200 basis states, the results look pretty nice!
@@ -3562,6 +3554,14 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
 
 
 
+  Since the calculation of all  zeros can now be avoided,
+  improvements in speed as memory will now follow. To get a handle on
+  how example these CCD calculations are we need only to look at the
+  most expensive sum in equation \ref{eq:ccd2}. This corresponds to
+  the sum over $klcd$. Since this sum is repeated for all $i < j$ and
+  $a < b$, that means these equations will scale as
+  $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However,,
+  they can be rewritten using intermediates as
 
   \begin{align}
   0 = \braket{ab|\hat{v}|ij} + \hat{P}(ab) \sum_{c} \braket{b| \chi
@@ -3594,7 +3594,6 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   \braket{ab| \chi |cd} = \braket{ab|v|cd}
   \end{equation}
 
-  Maybe demonstrate how these equations are equal here?
 
   Now the CCD equations will scale as $\mathcal{O}(n_{h}^{2}
   n_{p}^{4})$ which is quite a bit better than before. This is of
@@ -3607,7 +3606,7 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   remember that to write out the multiplication of matices $\hat{C} =
   \hat{A} * \hat{B}$ is
   \begin{equation}
-  C_{ij} = \sum_{k} A_{ik} * B_{kj}.
+  C_{ij} = \sum_{k} A_{ik} \times B_{kj}.
   \end{equation}
   Notice that equation (\ref{eq:mtxEx}) can be written as
   \[
