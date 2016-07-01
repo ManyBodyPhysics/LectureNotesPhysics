@@ -13,11 +13,9 @@
   Department of Physics and Astronomy and National Superconducting
   Cyclotron Laboratory, Michigan State University, East Lansing,
   Michigan, USA, \email{novarios@nscl.msu.edu}, \and Gustav R.~Jansen
-  \at Oak Ridge National Laboratory, Physics Division, Oak Ridge,
-  Tennessee, USA and Department of Physics and Astronomy, University
-  of Tennessee, Knoxville, Tennessee, USA, \email{jansen@ornl.gov},
-  \and Gaute Hagen \at Oak Ridge National Laboratory, Physics
-  Division, Oak Ridge, Tennessee, USA and Department of Physics and
+  \at National Center for Computational Sciences and Physics Division, Oak Ridge National Laboratory, Oak Ridge,
+  Tennessee, USA, \email{jansen@ornl.gov},
+  \and Gaute Hagen \at Physics Division, Oak Ridge National Laboratory, Oak Ridge, Tennessee, USA and Department of Physics and
   Astronomy, University of Tennessee, Knoxville, Tennessee, USA,
   \email{hageng@ornl.gov}, \and Morten Hjorth-Jensen \at Department of
   Physics and Astronomy and National Superconducting Cyclotron
@@ -79,7 +77,7 @@ different levels of approximation.  The nuclear Hamiltonians which are
 now used routinely in nuclear structure and nuclear matter
 calculations, include both nucleon-nucleon ($NN$) and three-nucleon forces (3NFs) derived from EFT, see for
 example
-Refs.~\cite{hammer2013,binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,krueger2013,carbone2013}.
+Refs.~\cite{hammer2013,binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,carbone2013}.
 Parallel to the development of nuclear forces from EFT, which employs
 symmetries of quantum chromodynamics, there are recent and promising
 approaches to derive the EoS using forces constrained from lattice
@@ -3020,15 +3018,14 @@ Sharing your codes using for example modern version control
 software makes thus your science reproducible and adds in a natural
 way a sound ethical scientific element to what you develop.
 In the discussions below, you will thus find several links to our 
-common repository for the codes that we have developed when writing 
-the various chapters of this text. 
+common repository for the codes that we have developed.
 
 
 When building up a numerical project there are several elements you should think of, amongst these we take the liberty of mentioning the following:
 \begin{itemize}
 \item Structure a code in terms of functions.
 \item Modularize your codes.
-\item be able to  read input data flexibly.
+\item Be able to  read input data flexibly.
 \item Write unit tests (test functions) and let your code undergo heavy testing.
 \item Refactor code in terms of classes (instead of functions only).
 \item Conduct and automate large-scale numerical experiments.
@@ -3184,7 +3181,7 @@ resulting in the correlation energy
 \]
 The above is a very useful result, as one iteration
   of the CCD equations can be ran, and checked against MBPT2 to give
-  some confidence that everything is working so far. To check that
+  some confidence that everything is working correctly. To check that
   everything is working, it is useful to run the code using a minimal
   example. We turn then our attention to the simple pairing model Hamiltonian of problem \ref{problem:pairingmodel},
   \begin{equation}
@@ -3239,8 +3236,8 @@ The Hamiltonian matrix for this   four-particle problem with no broken pairs is
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
 while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
   In the case of the simple pairing model it is easy to calculate
-  $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since can also be used to check our first CCD iteration.
-We restate this expression
+  $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
+We restate this expression here but including a restriction on the sums over single-particle states
   \[
   \Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij|\hat{v}|ab}
     \braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}} = \sum_{a<b,i<j}
@@ -3427,14 +3424,14 @@ This means that for every diagram we loop explicitely  over every single-particl
   for negative interaction strengths gives a
   better result than second and third order, while for $g>0$ the
   relative error is worse.  The fourth order contributions (not shown in the above figure) include also four-particle-four-hole correaltions.
-However, the disagreement for stronger interaction values hints at  the possibility that many-body perturbation theory may not converge order by order. 
+However, the disagreement for stronger interaction values hints at  the possibility that many-body perturbation theory may not converge order by order.  Perturbative studies of nuclear systems may thus be questionable, unless selected contributions that soften the interactions are properly softened.   
  We note also the non-variational character
   of many-body perturbation theory, with results at different levels of many-body perturbation theory either
   overshooting or undershooting the true ground state correlation energy. 
-The coupled cluster results are included in Fig.~\ref{fig:pairingccmbpt4} where we display the difference between the exact correlation energy and the correlation energy obtained with many-body perturbation theory to fourth order.  
+The coupled cluster results are included in Fig.~\ref{fig:pairingccmbpt4} where we display the difference between the exact correlation energy and the correlation energy obtained with many-body perturbation theory to fourth order.  The MBPT4 results show a better agreement with experiment, but here as well for larger positive values of the interaction, we see clear signs of deviations. 
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/CCDMBPT4theory.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
+    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to fourth order (MBPT4) for a range of interaction values.}
     \label{fig:pairingccmbpt4}
   \end{figure}
 In Table \ref{tab:selectedbenchmarks} we list for the sake of completeness also our coupled cluster results at the CCD level for the same system.
@@ -3508,7 +3505,7 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   data structure that stores the relevant two-body quantum numbers to
   keep track of the labeling scheme.
 
-  Now it is more efficient to use two-dimensional array data
+  It is more efficient to use two-dimensional array data
   structures, where the first index refers to the channel number and
   the second refers to the element withing that channel. So to access
   matrix elements or $t$ amplitudes, you can loop over the channels
@@ -3522,45 +3519,13 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   earlier in the na\"ive storage scheme.
 
 
-
-I made some changes to my CCD code which really sped up the initial block setups. Then, since MBPT2 is much simpler, I threw out a lot of the stuff that was needed for CCD, but not for MBPT2. Now when I run the calculation with ~1200 basis states, the results look pretty nice!
-
- 
-
-
-Block index setup time: 0.1999882410000282​
-Block matrix Load time: 0.1564653440000257
-Block matrix mult time: 0.004418585999928837
-Total Block calc time: 0.3609267409999575
-
-
-full matrix load time: 11.76799234299983
-full matrix mult time: 4.744922194999845
-​Total Block calc time: 16.51295629999981
-
-Which is a factor of 45 speedup. 
-
-hen the multiplication is just the 4 nested loops over single-particle indices. When I get home tonight, I'll clean up the code and send it to you guys so you can take a look. I just threw those plots together last night. How would you like me to clean them up so that they are publish quality?
-
-
-Also, those block-matrix results still do not use dgemm. At this point, the savings are entirely from excluding the massive amount of zeros that are naively included. Since the block-matrix mult time is still extremely small, I did not see a point. I think for N s.p. states, the block index setup part scales as N^2, and dominates for small systems, the matrix loading should scale as N^4 dominating for moderate to large calculations, but the matrix multiplication in this case scales as N^6 and should dominate enormous calculations. I haven't tested this yet, but that's what it looks like on paper. It seems like the system size has to get VERY large for block-matrix multiplication to cost much at all. 
-
-  \begin{figure}
-    \includegraphics[width=\linewidth]{Chapter8-figures/blockvsfull_log.png}
-    \caption{MBPT2 speedup 1.}
-    \label{fig:speedup1}
-  \end{figure}
-
-
-
-
   Since the calculation of all  zeros can now be avoided,
   improvements in speed as memory will now follow. To get a handle on
-  how example these CCD calculations are we need only to look at the
+  how these CCD calculations are we need only to look at the
   most expensive sum in equation \ref{eq:ccd2}. This corresponds to
   the sum over $klcd$. Since this sum is repeated for all $i < j$ and
-  $a < b$, that means these equations will scale as
-  $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However,,
+  $a < b$, it means that these equations will scale as
+  $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However,
   they can be rewritten using intermediates as
 
   \begin{align}
@@ -3572,7 +3537,7 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   \braket{ac| t |ik}\braket{kb| \chi |cj} & \nonumber
   \end{align}
   for all $i,j,a,b$, the reason why these indices are now unrestricted
-  will be explained later. Where the intermediates $\chi$ are
+  will be explained later. The intermediates $\chi$ are defined as
   \begin{equation}
   \braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld}
   \braket{bd|t|kl} \braket{kl|v|cd}
@@ -3595,31 +3560,61 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   \end{equation}
 
 
-  Now the CCD equations will scale as $\mathcal{O}(n_{h}^{2}
-  n_{p}^{4})$ which is quite a bit better than before. This is of
+  With the introduction of the above intermediates, the CCD equations scale now as $\mathcal{O}(n_{h}^{2}
+  n_{p}^{4})$, which is an important improvement. This is of
   course at the cost of computing the intermediates at the beginning
-  of each iteration, which the most expensive one, $\braket{kb| \chi
-    |cj}$, will scale as $\mathcal{O}(n_{h}^{3} n_{p}^{3})$. To
-  further speed these computations up, we see that these sums can be
-  written as matrix-matrix multiplication. It is not obvious how to
+  of each iteration, where the most expensive one, $\braket{kb| \chi |cj}$ scales as $\mathcal{O}(n_{h}^{3} n_{p}^{3})$. To
+  further speed up these computations, we see that these sums can be
+  written in terms of  matrix-matrix multiplications. It is not obvious how to
   write all of these sums in such a way, but it is useful to first
-  remember that to write out the multiplication of matices $\hat{C} =
-  \hat{A} * \hat{B}$ is
+  recall that the expression for the multiplication of two matrices $\hat{C} =
+  \hat{A}\times \hat{B}$ can be written as
   \begin{equation}
   C_{ij} = \sum_{k} A_{ik} \times B_{kj}.
   \end{equation}
-  Notice that equation (\ref{eq:mtxEx}) can be written as
+  We obeserve then  that equation (\ref{eq:mtxEx}) can be written as
   \[
   \braket{K| \chi |I} = \braket{K|v|I} + \frac{1}{2} \sum_{C}
   \braket{K|v|C} \braket{C|t|I}
   \]
-  by mapping the two index pairs $kl \to K, ij \to I, cd \to C$. So
-  now the sum looks like a matrix-matrix multiplication. This is
+  by mapping the two index pairs $kl \to K, ij \to I, cd \to C$. The sum looks now 
+like a matrix-matrix multiplication. This is
   useful because there are packages like BLAS (Basic Linear Algebra
-  Subprograms) which have extremely fast implementations of
+  Subprograms) \cite{blas} which have extremely fast implementations of
   matrix-matrix multiplication.
+  The simplest example to consider is the expression for the correlation energy from MBPT2. We rewrite 
+  \begin{equation}\label{eq:bruteforceMBPT}
+  \Delta E_{MBPT2} = \sum_{a< b, i< j} \frac{\braket{ij|\hat{v}|ab}\braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}},
+\end{equation}
+by defining the matrices $\hat{A}$ and $\hat{B}$ with new indices $I=(ij)$ and $A=(ab)$. The individual matrix elements of these matrices are 
+\[
+A_{IA} = \langle I \vert \hat{v} \vert A \rangle,
+\]
+and 
+\[
+B_{AI} = \frac{\langle A \vert \hat{v} \vert I \rangle}{\epsilon^A_I}.
+\]
+We can then rewrite the correlation energy from MBPT2 as
+\begin{equation}\label{eq:smartMBPT}
+  \Delta E_{MBPT2} = \hat{A}\times \hat{B}.
+\end{equation}
+Figure \ref{fig:speedup1} shows the difference between the brute force summation over single-particle states
+of Eq.~(\ref{eq:bruteforceMBPT}) and the smarter matrix-matrix multiplication of Eq.~(\ref{eq:smartMBPT}) for a given number  of basis states.
+In these calculations we have only considered pure neutron matter with $N=14$ neutrons and a density $n=0.08$ fm$^{-3}$ and plane wave single-particle states with periodic boundary conditions, allowing for up to 
+$1600$ single-particle basis states. The Minnesota interaction model has been used in these calculations.  
+\begin{figure}
+    \includegraphics[width=\linewidth]{Chapter8-figures/blockvsfull_log.png}
+    \caption{MBPT2 contribution to the correlation for pure neutron matter with $N=14$ neutrons and periodic boundary conditions. Up to approximately 1600 single-particle states have been included in the sums over intermediate states in Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT})}. 
+    \label{fig:speedup1}
+  \end{figure}
+With $40$ single-particle shells, see Table \ref{tab:table1} for example, we have in total  $2713$ single-particle states. 
+Using the matrix-matrix algorithm the final calculation time is $2.4$ s (this is the average time after ten numerical experiments).
+The total time using the brute force is $100.6$ s (again the average of ten numerical experiments), resulting in a speed-up of 42. It is useful to dissect the final time in terms of different operations.
+For the matrix-matrix multiplication most of the time is spent setting up the matrix elements for the two-body channels and to load the matrix elements. The final matrix-matrix multiplication takes only $1\%$ of the total time. For the brute force algorithm, the multiplication and summation over the various single-particle states takes almost half of the total time. In our discussion on high-performance computing below, we will discuss in more detail the program used to obtain these results.
 
-  Now that we have a working CCD program, we can move on to more
+
+
+With the definition of the intermediates and appropriate matrix-matrix multiplications and  a working CCD program, we can move on to more
   realistic cases. One such case is infinite nuclear matter using a
   plane-wave basis. These states are solutions to the free-particle
   Hamiltonian,
@@ -3669,18 +3664,18 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
 
   The next step is to build every two-body state in the model space
   and separate them by their particle/hole character and combined
-  quantum numbers. While each single-particle state was unique,
+  quantum numbers. While each single-particle state is unique,
   two-body states can share quantum numbers with members of a
   particular two-body channel. These channels allow us to remove
   matrix elements and cluster amplitudes that violate the symmetries
-  of the interaction and greatly reduces the size and speed of the
+  of the interaction. This reduces greatly the size and speed of the
   calculation. Our structures will depend on direct two-body channels,
-  $T$, where the quantum numbers are added and cross two-body
+  $T$, where the quantum numbers are added, and cross two-body
   channels, $X$, where the quantum numbers are subtracted. Before
-  filling the channels, it's helpful to order them with an index
+  filling the channels, it is helpful to order them with an index
   function which returns a unique index for a given set of two-body
   quantum numbers. Without an index function, one has to loop over all
-  the channels for each two-body state which adds a substantial amount
+  the channels for each two-body state, adding a substantial amount
   of time to this algorithm. An example of an index function for the
   direct channels in symmetric nuclear matter is, for
   $N_{x}=n_{x,1}+n_{x,2}$, $N_{y}=n_{y,1}+n_{y,2}$,
@@ -3712,9 +3707,9 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   \end{algorithmic}
 
   From the cross channels, one can construct the cross channel
-  compliments, $X'$, where $X\left( pq\right)\equiv X'\left(
+  complements, $X'$, where $X\left( pq\right)\equiv X'\left(
   qp\right)$. Also from the direct channels, one can construct
-  one-body, and correspondint three-body, channels for each
+  one-body, and corresponding three-body, channels for each
   single-particle state, $K$ by finding every combination of two
   two-body states within a direct channel that contains that single
   particle state, $T\left( pq\right)=T\left( rs\right)\Rightarrow
@@ -3736,30 +3731,29 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   systematic way. Summations are constructed by placeing two
   structures next to each other in such a way that the inner, summed
   indices are of the same channel. The resulting structure is indexed
-  by the outer channels.
-
+  by the outer channels as shown here
   \begin{align}
   \braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld}
   \braket{bd|t|kl} \braket{kl|v|cd} &\rightarrow f_{c}^{b}\left(
-  K\left( b\right),K\left( c\right)\right) -
+  K\left( b\right),K\left( c\right)\right)\\ \nonumber & -
   \frac{1}{2}t_{kl}^{bd}\left( K\left( b\right),K_{b}\left(
-  kld\right)\right)\cdot v_{cd}^{kl}\left( K_{c}\left(
+  kld\right)\right) v_{cd}^{kl}\left( K_{c}\left(
   kld\right),K\left( c\right)\right) \\ \braket{k| \chi |j} =
   \braket{k|f|j} + \frac{1}{2} \sum_{cdl} \braket{kl|v|cd}
   \braket{cd|t|jl} &\rightarrow f_{j}^{k}\left( K\left(
-  k\right),K\left( j\right)\right) + \frac{1}{2}v_{cd}^{kl}\left(
-  K\left( k\right),K_{k}\left( cdl\right)\right)\cdot
+  k\right),K\left( j\right)\right) \\ \nonumber &+ \frac{1}{2}v_{cd}^{kl}\left(
+  K\left( k\right),K_{k}\left( cdl\right)\right)
   t_{jl}^{cd}\left( K_{j}\left( cdl\right),K\left( j\right)\right)
   \\ \braket{kl| \chi |ij} = \braket{kl|v|ij} + \frac{1}{2} \sum_{cd}
   \braket{kl|v|cd} \braket{cd|t|ij} &\rightarrow v_{ij}^{kl}\left(
-  T\left( kl\right),T\left( ij\right)\right) +
+  T\left( kl\right),T\left( ij\right)\right)\\ \nonumber  &+ 
   \frac{1}{2}v_{cd}^{kl}\left( T\left( kl\right),T\left(
-  cd\right)\right)\cdot t_{ij}^{cd}\left( T\left( cd\right),T\left(
+  cd\right)\right) t_{ij}^{cd}\left( T\left( cd\right),T\left(
   ij\right)\right) \\ \braket{kb| \chi |cj} = \braket{kb|v|cj} +
   \frac{1}{2} \sum_{dl} \braket{kl|v|cd} \braket{db|t|lj} &\rightarrow
-  v_{cj}^{kb}\left( X\left( kc\right),X\left( jb\right)\right) +
+  v_{cj}^{kb}\left( X\left( kc\right),X\left( jb\right)\right)\\ \nonumber  &+
   \frac{1}{2}v_{cd}^{kl}\left( X\left( kc\right),X\left(
-  dl\right)\right)\cdot t_{lj}^{db}\left( X\left( dl\right),X\left(
+  dl\right)\right) t_{lj}^{db}\left( X\left( dl\right),X\left(
   jb\right)\right) \\ \braket{ab| \chi |cd} = \braket{ab|v|cd}
   &\rightarrow v_{cd}^{ab}\left( T\left( ab\right),T\left(
   cd\right)\right) \\ \sum_{c} \braket{b| \chi |c} \braket{ac| t |ij}
@@ -3780,8 +3774,8 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   kc\right)\right)\cdot \chi_{cj}^{kb}\left( X\left( kc\right),X\left(
   jb\right)\right)
   \end{align}
-
-
+Figure \ref{fig:fig1} displays the convergence of the energy per particle for pure neutron matter as function of number particles 
+for  the CCD approximation with the Minnesota potential for different with $\mathrm{N_{max}=20}$.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig1.pdf}
     \caption{Energy per particle of pure neutron matter computed in
@@ -3789,23 +3783,27 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
       numbers of particles with $\mathrm{N_{max}=20}$.}
     \label{fig:fig1}
   \end{figure}
-
+Similarly, Fig.~{fig:fig2} shows the convergence in terms of different model space sizes $\mathrm{N_{max}=20}$ with 
+a fixed number of neutrons $N=114$. 
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig2.pdf}
     \caption{Energy per particle of pure neutron matter computed in
       the CCD approximation with the Minnesota potential for different
-      model space sizes with $\mathrm{A=20}$.}
+      model space sizes with $\mathrm{A=114}$.}
     \label{fig:fig2}
   \end{figure}
+We see from the last figure that at the CCD level and neutron matter only there is a good convergence with  $\mathrm{N_{max}=25}$.
+This results depends however on the type of interaction and many-body approximation. 
 
-  We approximated our problem with periodic boundary conditions,
+In these calculations we
+approximated our problem with periodic boundary conditions,
   $\mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)}$, but we could have
   chosen anti-periodic boundary conditions,
   $\mathop{\phi(x_{i})}=-\mathop{\phi(x_{i}+L)}$. The difference
   between these two shows how the correlation energy contains
-  finite-size effects. One solution to this problem is by integrating
+  finite-size effects \cite{finitesize}. One solution to this problem is by integrating
   over solutions between periodic and anti-periodic conditions, known
-  as twist-averaging. First, we multiply the single-particle states by
+  as twist-averaging \cite{twistaverage}. First, we multiply the single-particle states by
   a phase for each direction, characterized by a twist-angle,
   $\theta_{i}$.
   \begin{equation}
@@ -3823,8 +3821,7 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   necessary to fill hole states separately for each
   $\vec{\theta}$. Integration over some quantitiy is approximated by a
   weighted sum, such as Gauss-Legendre quadrature, over the quantity
-  for each set of twist angles.
-
+  for each set of twist angles. The algorithm becomes then
   \begin{algorithmic}
     \State Build mesh points and weights for each direction $i$:
     $\{\theta_{i},w_{i}\}$ \State $E_{\text{twist}}=0$
@@ -3846,33 +3843,106 @@ Also, those block-matrix results still do not use dgemm. At this point, the savi
   energy per particle and the Hartree-Fock energy per particle, which
   avoids the full CCD calculation. These calculations can be compared
   to the exact values for infinite matter, which are calculated by
-  integrating the the relevent values up to the fermi surface.
-
+  integrating the the relevent values up to the fermi surface
   \begin{align}
     \text{T}_{\text{inf}}=\frac{3\hbar^{2}k_{f}^{2}}{10m}
     \\ \text{HF}_{\text{inf}}=\frac{1}{\mathop{(2\pi)^{6}}}\frac{L^{3}}{2\rho}\int_{0}^{k_{f}}d\vec{k}_{1}\int_{0}^{k_{f}}d\vec{k}_{2}\braket{\vec{k}_{1}\vec{k}_{2}|\hat{v}|\vec{k}_{1}\vec{k}_{2}}
   \end{align}
-
+Figure \ref{fig:fig3} shows the CCD kinetic energy of pure neutron
+      matter computed with the Minnesota potential as a function of
+      the number of particles for both periodic boundary conditions (PBC)
+      and twist-averaged boundary conditions (TABC5). We see clearly that the 
+twist-averaged boundary conditions soften the dependence on finite size effects. 
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig3.pdf}
     \caption{Finite-size effects in the kinetic energy of pure neutron
       matter computed with the Minnesota potential as a function of
-      the number of particles for both periodic boundary conditions
-      and twist-averaged boundary conditions.}
+      the number of particles for both periodic boundary conditions (PBC)
+      and twist-averaged boundary conditions (TABC5).}
     \label{fig:fig3}
   \end{figure}
-
+Similarly, Fig.~\ref{fig:fig4} displays the corresponding Hartree-Fock energy (the reference energy) 
+obtained with Minnesota interaction using both periodic and twist-average boundary conditions.  
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig4.pdf}
     \caption{Finite-size effects in the Hartree-Fock energy of pure
       neutron matter computed with the Minnesota potential as a
-      function of the number of particles for both periodic boundary
-      conditions and twist-averaged boundary conditions.}
+      function of the number of particles for both periodic boundary (PBC)
+      conditions and twist-averaged boundary conditions (TABC5).}
     \label{fig:fig4}
   \end{figure}
+The results show again a weaker dependence on finite size effects.
+
+The codes we have developed for obtaining these results, with
+benchmarks and selected computations, are discussed in more detail in
+the appendix.  The discussions hitherto have focused on the
+development of an efficient and flexible many-body code. As discussed
+in the appendix, the codes have been structured in a very flexible
+way, allowing the user to study and add different physical systems,
+spanning from the simple pairing model to quantum dots and infinite
+nuclear matter. Structuring the codes in for a example an abstract
+system class and a solver class allows an eventual user to study
+different physical systems and add new many-body solvers without
+having to write a totally new program. The structure of the program
+discussed in the appendix of this chapter adhere to this philosophy, and as demonstrated in chapter 11, 
+with few additions one can add 
+the widely popular similarity renormalization group method. We discuss this in more detail in chapter 11. 
+
+Till now we have limited our discussion to the construction of a
+many-body code, including elements like how to structure a code in
+terms of functions, how to modularize the code, how to develop classes
+(see the appendix) and how to verify and validate our computations
+(our checks provided by the simple pairing model and many-body
+perturbation theory to second order) against known results.  With the
+rewriting of our equations in terms of efficient matrix and vector
+operations we have also shown how to make our code more efficient.
+Matrix and vector operations can easily be parallelized. Such
+algorithmic improvements are necessary in order to be able to study
+complicated physical systems.  Our codes can also be easily parallelized in order to run on shared memory architectures using either OpenMP \cite{openmp} and/or MPI/OpenMPI \cite{mpi,openmpi}.
+However, we have till now not touched
+upon topics like an efficient utilization of exisiting and future
+high-performance facility and possible improvements and bottlenecks which our codes can face. We end thus this section with a brief discussion
+of high-performance computing topics of relevance for wave function based methods like coupled cluster theory and the similarity renormalization
+group approach. 
+
+\subsection{High-performance computing}
 
 
-  \section{Conclusions}
+\section{Conclusions}
+In this chapter we have presented many of the basic ingredients that
+enter theoretical studies of infinite nuclear matter, with possible
+extensions to the homogeneous electron gas in two and three dimensions
+or other quantum mechanical systems.  We have focused on the
+construction of a single-particle and many-body basis appropriate for
+such systems, as well as introducing post Hartree-Fock many-body
+methods like full configuration interaction theory, many-body
+perturbation theory and coupled cluster theory. The results here,
+albeit being obtained with a simpler model for the nuclear forces, can
+easily be extended to more complicated and realistic models for
+nuclear interactions and to include other many-body methods. We have
+however, for pedagogical reasons, tried to keep the theoretical inputs
+to the various many-body methods as simple as possible. The reader
+should however, with the inputs from chapters 2-6, be able to have a
+better of understanding of nuclear forces and how these can be derived
+from the underlying theory for the strong force and effective field
+theory.  The last exercise in this chapter replaces the simple Minnesota potential with
+realistic interaction from effective field theory. 
+
+The subsequent chapters 9, 10 and 11 show how many of the theoretical
+concepts and code elements discussed in this chapter can be used to
+add other many-body methods, without having to develop a new numerical
+project.  With a proper modularization and flexible classes, we can
+add new physical systems as well as new many-body methods.  The codes
+which have been developed in this chapter are reused in the
+development and analysis of the in-medium similarity renormalizaton
+group approach of chapter 11. Similarly, the theoretical concepts we
+have developed in this chapter, such as the definition of a
+single-particle basis using plane wave functions and correlations from
+many-body perturbation theory or coupled cluster theory, can be used
+in chapter 9, 10 and 11 as well. Chapter 9 for example, uses results
+from coupled cluster theory in order to provide better ways to constrain
+the Jastrow factor, which accounts for correlations beyond a mean-field picture, 
+in Monte Carlo calculations.
 
 
   \section{Exercises}
@@ -4727,7 +4797,7 @@ for n in range(nshell):
   Wick's theorem provides us with an algebraic method for easy
   determination of the terms that contribute to the matrix element.
 
-
+  \section*{Code structure with benchmark calculations}
 
 
   \begin{acknowledgement}

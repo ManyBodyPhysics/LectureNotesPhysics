@@ -32,45 +32,51 @@ Warning--I didn't find a database entry for "hagen2016"
 Warning--I didn't find a database entry for "hagen2014"
 Warning--I didn't find a database entry for "jansen2015"
 Warning--I didn't find a database entry for "hagen2007"
-You've used 34 entries,
+Warning--I didn't find a database entry for "blas"
+Warning--I didn't find a database entry for "finitesize"
+Warning--I didn't find a database entry for "twistaverage"
+Warning--I didn't find a database entry for "openmp"
+Warning--I didn't find a database entry for "mpi"
+Warning--I didn't find a database entry for "openmpi"
+You've used 33 entries,
             2812 wiz_defined-function locations,
-            852 strings with 11377 characters,
-and the built_in function-call counts, 12417 in all, are:
-= -- 789
-> -- 397
+            851 strings with 11204 characters,
+and the built_in function-call counts, 12008 in all, are:
+= -- 761
+> -- 384
 < -- 0
-+ -- 155
-- -- 121
-* -- 794
-:= -- 1478
-add.period$ -- 35
-call.type$ -- 34
++ -- 150
+- -- 117
+* -- 766
+:= -- 1429
+add.period$ -- 33
+call.type$ -- 33
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 1296
-empty$ -- 1253
-format.name$ -- 149
-if$ -- 2814
+cite$ -- 33
+duplicate$ -- 1256
+empty$ -- 1214
+format.name$ -- 144
+if$ -- 2721
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 355
-newline$ -- 145
-num.names$ -- 34
-pop$ -- 486
+int.to.str$ -- 33
+missing$ -- 344
+newline$ -- 140
+num.names$ -- 33
+pop$ -- 473
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 322
+skip$ -- 311
 stack$ -- 0
-substring$ -- 463
-swap$ -- 781
+substring$ -- 444
+swap$ -- 756
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 65
-width$ -- 36
-write$ -- 346
-(There were 29 warnings)
+while$ -- 63
+width$ -- 35
+write$ -- 334
+(There were 35 warnings)

@@ -158,64 +158,65 @@
 \BOOKMARK [2][-]{subsection.8.6.3}{Approximations to the full CCD equations.}{section.8.6}% 158
 \BOOKMARK [1][-]{section.8.7}{Developing a numerical project}{section*.28}% 159
 \BOOKMARK [2][-]{subsection.8.7.1}{Developing a CCD code for infinite matter}{section.8.7}% 160
-\BOOKMARK [1][-]{section.8.8}{Conclusions}{section*.28}% 161
-\BOOKMARK [1][-]{section.8.9}{Exercises}{section*.28}% 162
-\BOOKMARK [1][-]{section.8.10}{Solutions to selected exercises}{section*.28}% 163
-\BOOKMARK [1][-]{section*.29}{Appendix}{section*.28}% 164
-\BOOKMARK [1][-]{section*.30}{References}{section*.28}% 165
-\BOOKMARK [0][-]{section*.31}{Variational and Diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 166
-\BOOKMARK [0][-]{section*.31}{Francesco Pederiva, Alessandro Roggero, Kevin E. Schmidt}{}% 167
-\BOOKMARK [1][-]{section.9.1}{Monte Carlo methods in quantum many-body physics}{section*.31}% 168
-\BOOKMARK [2][-]{subsection.9.1.1}{Expectations in Quantum Mechanics}{section.9.1}% 169
-\BOOKMARK [1][-]{section.9.2}{Variational wavefunctions and VMC for central potentials}{section*.31}% 170
-\BOOKMARK [2][-]{subsection.9.2.1}{Coordinate space formulation}{section.9.2}% 171
-\BOOKMARK [2][-]{subsection.9.2.2}{Variational principle and variational wavefunctions}{section.9.2}% 172
-\BOOKMARK [2][-]{subsection.9.2.3}{Monte Carlo evaluation of integrals}{section.9.2}% 173
-\BOOKMARK [2][-]{subsection.9.2.4}{Wave function optimization}{section.9.2}% 174
-\BOOKMARK [2][-]{subsection.9.2.5}{Example}{section.9.2}% 175
-\BOOKMARK [1][-]{section.9.3}{Projection Monte Carlo Methods in coordinate space}{section*.31}% 176
-\BOOKMARK [2][-]{subsection.9.3.1}{Propagation in imaginary time}{section.9.3}% 177
-\BOOKMARK [2][-]{subsection.9.3.2}{General formulation}{section.9.3}% 178
-\BOOKMARK [2][-]{subsection.9.3.3}{Imaginary time propagator in coordinate representation}{section.9.3}% 179
-\BOOKMARK [2][-]{subsection.9.3.4}{Application to the harmonic oscillator}{section.9.3}% 180
-\BOOKMARK [2][-]{subsection.9.3.5}{Importance sampling}{section.9.3}% 181
-\BOOKMARK [2][-]{subsection.9.3.6}{The fermion sign problem}{section.9.3}% 182
-\BOOKMARK [1][-]{section.9.4}{Quantum Monte Carlo for Nuclear Hamiltonians in coordinate space}{section*.31}% 183
-\BOOKMARK [2][-]{subsection.9.4.1}{Green's Function Monte Carlo}{section.9.4}% 184
-\BOOKMARK [2][-]{subsection.9.4.2}{General Auxiliary Field Formalism}{section.9.4}% 185
-\BOOKMARK [2][-]{subsection.9.4.3}{Operator expectations and importance sampling}{section.9.4}% 186
-\BOOKMARK [2][-]{subsection.9.4.4}{Application to standard diffusion Monte Carlo}{section.9.4}% 187
-\BOOKMARK [2][-]{subsection.9.4.5}{Fixed-phase importance-sampled Diffusion Monte Carlo}{section.9.4}% 188
-\BOOKMARK [2][-]{subsection.9.4.6}{Application to quadratic forms}{section.9.4}% 189
-\BOOKMARK [2][-]{subsection.9.4.7}{Auxiliary Field Breakups}{section.9.4}% 190
-\BOOKMARK [2][-]{subsection.9.4.8}{AFDMC with the v6' potential for nuclear matter}{section.9.4}% 191
-\BOOKMARK [2][-]{subsection.9.4.9}{Isospin-independent spin-orbit interaction}{section.9.4}% 192
-\BOOKMARK [1][-]{section.9.5}{General projection algorithms in Fock space and non-local interactions}{section*.31}% 193
-\BOOKMARK [2][-]{subsection.9.5.1}{Fock space formulation of Diffusion Monte Carlo}{section.9.5}% 194
-\BOOKMARK [2][-]{subsection.9.5.2}{Importance sampling and fixed-node approximation}{section.9.5}% 195
-\BOOKMARK [2][-]{subsection.9.5.3}{Trial wave\205functions from Coupled Cluster}{section.9.5}% 196
-\BOOKMARK [2][-]{subsection.9.5.4}{Propagator sampling with no time-step error}{section.9.5}% 197
-\BOOKMARK [0][-]{section*.32}{In-medium SRG approaches to infinite nuclear matter}{}% 198
-\BOOKMARK [0][-]{section*.32}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 199
-\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.32}% 200
-\BOOKMARK [1][-]{section.10.2}{IM-SRG Flow Equations}{section*.32}% 201
-\BOOKMARK [2][-]{subsection.10.2.1}{Preliminaries}{section.10.2}% 202
-\BOOKMARK [2][-]{subsection.10.2.2}{Normal Ordering and Wick's Theorem}{section.10.2}% 203
-\BOOKMARK [2][-]{subsection.10.2.3}{Normal-Ordered Hamiltonian}{section.10.2}% 204
-\BOOKMARK [2][-]{subsection.10.2.4}{M-Scheme Flow Equations}{section.10.2}% 205
-\BOOKMARK [2][-]{subsection.10.2.5}{J-Scheme Flow Equations}{section.10.2}% 206
-\BOOKMARK [2][-]{subsection.10.2.6}{General Observables}{section.10.2}% 207
-\BOOKMARK [1][-]{section.10.3}{Choice of Generator}{section*.32}% 208
-\BOOKMARK [2][-]{subsection.10.3.1}{Decoupling}{section.10.3}% 209
-\BOOKMARK [2][-]{subsection.10.3.2}{White Generators}{section.10.3}% 210
-\BOOKMARK [2][-]{subsection.10.3.3}{Imaginary-Time Generators}{section.10.3}% 211
-\BOOKMARK [2][-]{subsection.10.3.4}{Wegner Generators}{section.10.3}% 212
-\BOOKMARK [2][-]{subsection.10.3.5}{Decay Scales}{section.10.3}% 213
-\BOOKMARK [1][-]{section.10.4}{In-medium SRG studies of infinite matter}{section*.32}% 214
-\BOOKMARK [0][-]{section*.33}{Green's function approaches}{}% 215
-\BOOKMARK [0][-]{section*.33}{Carlo Barbieri and Adriana Carbone}{}% 216
-\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{section*.33}% 217
-\BOOKMARK [0][-]{section*.34}{Concluding remarks and perspectives}{}% 218
-\BOOKMARK [0][-]{section*.34}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 219
-\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.34}% 220
-\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.34}% 221
+\BOOKMARK [2][-]{subsection.8.7.2}{High-performance computing}{section.8.7}% 161
+\BOOKMARK [1][-]{section.8.8}{Conclusions}{section*.28}% 162
+\BOOKMARK [1][-]{section.8.9}{Exercises}{section*.28}% 163
+\BOOKMARK [1][-]{section.8.10}{Solutions to selected exercises}{section*.28}% 164
+\BOOKMARK [1][-]{section*.29}{Appendix}{section*.28}% 165
+\BOOKMARK [1][-]{section*.31}{References}{section*.28}% 166
+\BOOKMARK [0][-]{section*.32}{Variational and Diffusion Monte Carlo approaches to the nuclear few- and many-body problem}{}% 167
+\BOOKMARK [0][-]{section*.32}{Francesco Pederiva, Alessandro Roggero, Kevin E. Schmidt}{}% 168
+\BOOKMARK [1][-]{section.9.1}{Monte Carlo methods in quantum many-body physics}{section*.32}% 169
+\BOOKMARK [2][-]{subsection.9.1.1}{Expectations in Quantum Mechanics}{section.9.1}% 170
+\BOOKMARK [1][-]{section.9.2}{Variational wavefunctions and VMC for central potentials}{section*.32}% 171
+\BOOKMARK [2][-]{subsection.9.2.1}{Coordinate space formulation}{section.9.2}% 172
+\BOOKMARK [2][-]{subsection.9.2.2}{Variational principle and variational wavefunctions}{section.9.2}% 173
+\BOOKMARK [2][-]{subsection.9.2.3}{Monte Carlo evaluation of integrals}{section.9.2}% 174
+\BOOKMARK [2][-]{subsection.9.2.4}{Wave function optimization}{section.9.2}% 175
+\BOOKMARK [2][-]{subsection.9.2.5}{Example}{section.9.2}% 176
+\BOOKMARK [1][-]{section.9.3}{Projection Monte Carlo Methods in coordinate space}{section*.32}% 177
+\BOOKMARK [2][-]{subsection.9.3.1}{Propagation in imaginary time}{section.9.3}% 178
+\BOOKMARK [2][-]{subsection.9.3.2}{General formulation}{section.9.3}% 179
+\BOOKMARK [2][-]{subsection.9.3.3}{Imaginary time propagator in coordinate representation}{section.9.3}% 180
+\BOOKMARK [2][-]{subsection.9.3.4}{Application to the harmonic oscillator}{section.9.3}% 181
+\BOOKMARK [2][-]{subsection.9.3.5}{Importance sampling}{section.9.3}% 182
+\BOOKMARK [2][-]{subsection.9.3.6}{The fermion sign problem}{section.9.3}% 183
+\BOOKMARK [1][-]{section.9.4}{Quantum Monte Carlo for Nuclear Hamiltonians in coordinate space}{section*.32}% 184
+\BOOKMARK [2][-]{subsection.9.4.1}{Green's Function Monte Carlo}{section.9.4}% 185
+\BOOKMARK [2][-]{subsection.9.4.2}{General Auxiliary Field Formalism}{section.9.4}% 186
+\BOOKMARK [2][-]{subsection.9.4.3}{Operator expectations and importance sampling}{section.9.4}% 187
+\BOOKMARK [2][-]{subsection.9.4.4}{Application to standard diffusion Monte Carlo}{section.9.4}% 188
+\BOOKMARK [2][-]{subsection.9.4.5}{Fixed-phase importance-sampled Diffusion Monte Carlo}{section.9.4}% 189
+\BOOKMARK [2][-]{subsection.9.4.6}{Application to quadratic forms}{section.9.4}% 190
+\BOOKMARK [2][-]{subsection.9.4.7}{Auxiliary Field Breakups}{section.9.4}% 191
+\BOOKMARK [2][-]{subsection.9.4.8}{AFDMC with the v6' potential for nuclear matter}{section.9.4}% 192
+\BOOKMARK [2][-]{subsection.9.4.9}{Isospin-independent spin-orbit interaction}{section.9.4}% 193
+\BOOKMARK [1][-]{section.9.5}{General projection algorithms in Fock space and non-local interactions}{section*.32}% 194
+\BOOKMARK [2][-]{subsection.9.5.1}{Fock space formulation of Diffusion Monte Carlo}{section.9.5}% 195
+\BOOKMARK [2][-]{subsection.9.5.2}{Importance sampling and fixed-node approximation}{section.9.5}% 196
+\BOOKMARK [2][-]{subsection.9.5.3}{Trial wave\205functions from Coupled Cluster}{section.9.5}% 197
+\BOOKMARK [2][-]{subsection.9.5.4}{Propagator sampling with no time-step error}{section.9.5}% 198
+\BOOKMARK [0][-]{section*.33}{In-medium SRG approaches to infinite nuclear matter}{}% 199
+\BOOKMARK [0][-]{section*.33}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 200
+\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.33}% 201
+\BOOKMARK [1][-]{section.10.2}{IM-SRG Flow Equations}{section*.33}% 202
+\BOOKMARK [2][-]{subsection.10.2.1}{Preliminaries}{section.10.2}% 203
+\BOOKMARK [2][-]{subsection.10.2.2}{Normal Ordering and Wick's Theorem}{section.10.2}% 204
+\BOOKMARK [2][-]{subsection.10.2.3}{Normal-Ordered Hamiltonian}{section.10.2}% 205
+\BOOKMARK [2][-]{subsection.10.2.4}{M-Scheme Flow Equations}{section.10.2}% 206
+\BOOKMARK [2][-]{subsection.10.2.5}{J-Scheme Flow Equations}{section.10.2}% 207
+\BOOKMARK [2][-]{subsection.10.2.6}{General Observables}{section.10.2}% 208
+\BOOKMARK [1][-]{section.10.3}{Choice of Generator}{section*.33}% 209
+\BOOKMARK [2][-]{subsection.10.3.1}{Decoupling}{section.10.3}% 210
+\BOOKMARK [2][-]{subsection.10.3.2}{White Generators}{section.10.3}% 211
+\BOOKMARK [2][-]{subsection.10.3.3}{Imaginary-Time Generators}{section.10.3}% 212
+\BOOKMARK [2][-]{subsection.10.3.4}{Wegner Generators}{section.10.3}% 213
+\BOOKMARK [2][-]{subsection.10.3.5}{Decay Scales}{section.10.3}% 214
+\BOOKMARK [1][-]{section.10.4}{In-medium SRG studies of infinite matter}{section*.33}% 215
+\BOOKMARK [0][-]{section*.34}{Green's function approaches}{}% 216
+\BOOKMARK [0][-]{section*.34}{Carlo Barbieri and Adriana Carbone}{}% 217
+\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{section*.34}% 218
+\BOOKMARK [0][-]{section*.35}{Concluding remarks and perspectives}{}% 219
+\BOOKMARK [0][-]{section*.35}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 220
+\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.35}% 221
+\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.35}% 222
