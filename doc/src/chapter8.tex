@@ -3900,13 +3900,16 @@ Matrix and vector operations can easily be parallelized. Such
 algorithmic improvements are necessary in order to be able to study
 complicated physical systems.  Our codes can also be easily parallelized in order to run on shared memory architectures using either OpenMP \cite{openmp} and/or MPI/OpenMPI \cite{mpi,openmpi}.
 However, we have till now not touched
-upon topics like an efficient utilization of exisiting and future
+upon topics like parallelization and an efficient utilization of exisiting and future
 high-performance facility and possible improvements and bottlenecks which our codes can face. We end thus this section with a brief discussion
-of high-performance computing topics of relevance for wave function based methods like coupled cluster theory and the similarity renormalization
-group approach. 
+of high-performance computing topics of relevance for wave function based methods. We will focus on many-body perturbation theory to second order and the two algorithms discussed in Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}). This is the aim of our final subsection. 
+
 
 \subsection{High-performance computing}
-
+The aim of this subsection is to discuss in more detail how we can make the computations discussed in connection with equations 
+Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient. 
+The codes can be found at the link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/c%2B%2B/MBPT2/src}.
+We start by discussing the basic structure of these codes. 
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that

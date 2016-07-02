@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUL 2016 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUL 2016 23:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1604,7 +1604,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 224
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 225
- []\T1/fve/m/n/10 286
+ []\T1/fve/m/n/10 287
  []
 
 
@@ -8174,29 +8174,30 @@ LaTeX Warning: Citation `openmpi' on page 285 undefined on input line 3901.
 [285 <./Chapter8-figures/fig3.pdf>] [286 <./Chapter8-figures/fig4.pdf>]
 [287]
 
-LaTeX Warning: Citation `minnesota' on page 288 undefined on input line 4029.
+LaTeX Warning: Citation `minnesota' on page 288 undefined on input line 4032.
 
 [288] [289] [290]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 4251--4256
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 4254--4259
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
 [291]
 
-LaTeX Warning: Reference `fig:diagrams' on page 292 undefined on input line 437
-8.
+LaTeX Warning: Reference `fig:diagrams' on page 292 undefined on input line 438
+1.
 
 
 LaTeX Warning: Reference `fig:diagrams' on page 292 undefined on input line 438
-6.
-
-
-LaTeX Warning: Reference `fig:diagrams' on page 292 undefined on input line 439
 9.
 
-[292] [293] [294] [295]
-Overfull \hbox (10.71318pt too wide) in paragraph at lines 4669--4674
+[292]
+
+LaTeX Warning: Reference `fig:diagrams' on page 293 undefined on input line 440
+2.
+
+[293] [294] [295]
+Overfull \hbox (10.71318pt too wide) in paragraph at lines 4672--4677
 \T1/fve/m/n/10 Wick's the-o-rem is based on two fun-da-men-tal con-cepts, namel
 y $[]$ and $[]$.
  []
@@ -8883,7 +8884,7 @@ LaTeX Warning: Reference `sec:numerics' on page 354 undefined on input line 724
 
 ]) [357]
 
-! LaTeX Error: \begin{prob} on input line 4468 ended by \end{document}.
+! LaTeX Error: \begin{prob} on input line 4471 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -8919,7 +8920,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 4468 (\begingroup)
+### semi simple group (level 1) entered at line 4471 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  25083 strings out of 493089
@@ -8928,7 +8929,7 @@ Here is how much of TeX's memory you used:
  24877 multiletter control sequences out of 15000+600000
  157483 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,122p,1588b,1858s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,25n,122p,1588b,1854s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -8957,10 +8958,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (368 pages, 5639284 bytes).
+Output written on lnp.pdf (368 pages, 5639456 bytes).
 PDF statistics:
- 8389 PDF objects out of 8907 (max. 8388607)
- 7382 compressed objects within 74 object streams
+ 8395 PDF objects out of 8907 (max. 8388607)
+ 7388 compressed objects within 74 object streams
  3041 named destinations out of 3580 (max. 500000)
  2378 words of extra memory for PDF output out of 10000 (max. 10000000)
 
