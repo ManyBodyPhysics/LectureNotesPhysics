@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUL 2016 11:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUL 2016 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7691,24 +7691,19 @@ Package xcolor Warning: Incompatible color definition on input line 1359.
 Package xcolor Warning: Incompatible color definition on input line 1359.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
-[]|[]$\T1/fvm/m/n/8.5 https : / / github . com / ManyBodyPhysics / LectureNotes
-Physics / blob / master / doc / src /
+Overfull \hbox (5.75911pt too wide) in paragraph at lines 1360--1364
+\T1/fvm/m/n/10 master / doc / src / Chapter8-[]programs / python / hfnuclei . p
+y$[] \T1/fve/m/n/10 for full code and ma-trix el-e-ments. 
  []
 
-[245]
-Overfull \hbox (41.71066pt too wide) in paragraph at lines 1401--1402
-[][][][][][][][][][][][][][][][][]  
- []
-
-[246] [247] [248] [249]
+[245] [246] [247] [248] [249]
 
 LaTeX Warning: Reference `prob:hamiltoniansetup' on page 250 undefined on input
- line 1716.
+ line 1717.
 
 
 LaTeX Warning: Citation `barrettmusial2007' on page 250 undefined on input line
- 1761.
+ 1762.
 
 [250]
 
@@ -7718,7 +7713,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1769   \end{itemize}
+l.1770   \end{itemize}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7727,80 +7722,80 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.1769   \end{itemize}
+l.1770   \end{itemize}
                       
 Things are pretty mixed up, but I think the worst is over.
 
 
 LaTeX Warning: Reference `prob:hamiltoniansetup' on page 251 undefined on input
- line 1794.
+ line 1795.
 
 [251]
 
-LaTeX Warning: Citation `krylov' on page 252 undefined on input line 1906.
+LaTeX Warning: Citation `krylov' on page 252 undefined on input line 1907.
 
 
-LaTeX Warning: Citation `lanczos' on page 252 undefined on input line 1906.
+LaTeX Warning: Citation `lanczos' on page 252 undefined on input line 1907.
 
 
-LaTeX Warning: Citation `davidson' on page 252 undefined on input line 1906.
+LaTeX Warning: Citation `davidson' on page 252 undefined on input line 1907.
 
 
-LaTeX Warning: Citation `golubvanloan' on page 252 undefined on input line 1907
+LaTeX Warning: Citation `golubvanloan' on page 252 undefined on input line 1908
 .
 
 [252] [253] [254]
 
-LaTeX Warning: Citation `haxton' on page 255 undefined on input line 2087.
+LaTeX Warning: Citation `haxton' on page 255 undefined on input line 2088.
 
 [255]
 
 LaTeX Warning: Citation `svavittbartlett2009' on page 256 undefined on input li
-ne 2185.
+ne 2186.
 
 
-Overfull \hbox (33.07074pt too wide) in paragraph at lines 2193--2196
+Overfull \hbox (33.07074pt too wide) in paragraph at lines 2194--2197
 []\T1/fve/m/n/10 Extract ma-trix el-e-ments from di-a-grams as fol-lows: $\OML/
 ztmcm/m/it/10 f[]$ \T1/fve/m/n/10 or $\OMS/ztmcm/m/n/10 h[]j\OML/ztmcm/m/it/10 
 f\OMS/ztmcm/m/n/10 j[]i$\T1/fve/m/n/10 , $[] [] []$) 
  []
 
-[256] <Chapter8-figures/mbpt.pdf, id=6069, 614.295pt x 794.97pt>
+[256] <Chapter8-figures/mbpt.pdf, id=6068, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
-Package pdftex.def Info: Chapter8-figures/mbpt.pdf used on input line 2203.
+Package pdftex.def Info: Chapter8-figures/mbpt.pdf used on input line 2204.
 (pdftex.def)             Requested size: 424.58624pt x 549.46393pt.
 
 
-LaTeX Warning: Reference `sec:cc' on page 257 undefined on input line 2265.
+LaTeX Warning: Reference `sec:cc' on page 257 undefined on input line 2266.
 
 [257] [258 <./Chapter8-figures/mbpt.pdf>] [259]
 
-LaTeX Warning: Citation `ripkablaizot' on page 260 undefined on input line 2368
+LaTeX Warning: Citation `ripkablaizot' on page 260 undefined on input line 2369
 .
 
 
-LaTeX Warning: Citation `GB1957' on page 260 undefined on input line 2391.
+LaTeX Warning: Citation `GB1957' on page 260 undefined on input line 2392.
 
 
 LaTeX Warning: Citation `Bart_silver74' on page 260 undefined on input line 239
-3.
+4.
 
 
 LaTeX Warning: Citation `Bart_silver76' on page 260 undefined on input line 239
-3.
+4.
 
 
 LaTeX Warning: Citation `papenbrock2014' on page 260 undefined on input line 24
-05.
+06.
 
 
-LaTeX Warning: Citation `hagen2016' on page 260 undefined on input line 2405.
+LaTeX Warning: Citation `hagen2016' on page 260 undefined on input line 2406.
 
 [260] [261]
 ! Undefined control sequence.
-l.2529             \bra{\Psi_0} \op
+l.2530             \bra{\Psi_0} \op
                                    {H}_N \ket{\Psi_0} = 0.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7811,7 +7806,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...\dagger a_i a_p^\dagger a_q} \pause 
                                                   = \normord {a_p^\dagger a_...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7822,7 +7817,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...gger a_q a_a^\dagger a_i} \\ \pause 
                                                   \normord {a_p^\dagger a_q}...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7833,7 +7828,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...gger a_q a_a^\dagger a_i} \\ \pause 
                                                   & \quad + \normord { \cont...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7844,7 +7839,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... _p a_q a^\dagger _a a_i} \\ \pause 
                                                   & \quad + \normord { \cont...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7855,7 +7850,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... _p a_q a^\dagger _a a_i} \\ \pause 
                                                   &= \normord {a_p^\dagger a...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7866,7 +7861,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...\dagger a_i a_p^\dagger a_q} \pause 
                                                   = \normord {a_p^\dagger a_...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7877,7 +7872,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...gger a_q a_a^\dagger a_i} \\ \pause 
                                                   \normord {a_p^\dagger a_q}...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7888,7 +7883,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...gger a_q a_a^\dagger a_i} \\ \pause 
                                                   & \quad + \normord { \cont...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7899,7 +7894,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... _p a_q a^\dagger _a a_i} \\ \pause 
                                                   & \quad + \normord { \cont...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7910,7 +7905,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... _p a_q a^\dagger _a a_i} \\ \pause 
                                                   &= \normord {a_p^\dagger a...
-l.2564         \end{align*}
+l.2565         \end{align*}
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7922,7 +7917,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...agger _b a_j a_i\right \} \\ \pause 
                                                   &= \normord {a^\dagger _p ...
-l.2641     \end{align*}
+l.2642     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7933,7 +7928,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...agger _b a_j a_i\right \} \\ \pause 
                                                   &= \normord {a^\dagger _p ...
-l.2641     \end{align*}
+l.2642     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7945,7 +7940,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \left [ \op 
                         {F}_N, \op {T}_2 \right ] &= \frac {1}{4} \sum _{\su...
-l.2667     \end{align*}
+l.2668     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7956,7 +7951,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \left [ \op {F}_N, \op 
                                    {T}_2 \right ] &= \frac {1}{4} \sum _{\su...
-l.2667     \end{align*}
+l.2668     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7967,7 +7962,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \left [ \op 
                         {F}_N, \op {T}_2 \right ] &= \frac {1}{4} \sum _{\su...
-l.2667     \end{align*}
+l.2668     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7978,7 +7973,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \left [ \op {F}_N, \op 
                                    {T}_2 \right ] &= \frac {1}{4} \sum _{\su...
-l.2667     \end{align*}
+l.2668     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7987,7 +7982,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2670         \left[ \op
+l.2671         \left[ \op
                          {F}_N, \op{T}_2 \right]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7996,7 +7991,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2670         \left[ \op{F}_N, \op
+l.2671         \left[ \op{F}_N, \op
                                    {T}_2 \right]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8008,7 +8003,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... {\Phi _0} \frac {1}{2} \left ( \op 
                                                   {V}_N \op {T}_1^2 \right )...
-l.2767     \end{align*}
+l.2768     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8019,7 +8014,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... \frac {1}{2} \left ( \op {V}_N \op 
                                                   {T}_1^2 \right ) \ket {\Ph...
-l.2767     \end{align*}
+l.2768     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8030,7 +8025,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...\} \Bigr ) \ket {\Phi _0} \\ \pause 
                                                   &= \frac {1}{2} \sum _{ija...
-l.2767     \end{align*}
+l.2768     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8041,7 +8036,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... {\Phi _0} \frac {1}{2} \left ( \op 
                                                   {V}_N \op {T}_1^2 \right )...
-l.2767     \end{align*}
+l.2768     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8052,7 +8047,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ... \frac {1}{2} \left ( \op {V}_N \op 
                                                   {T}_1^2 \right ) \ket {\Ph...
-l.2767     \end{align*}
+l.2768     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8063,7 +8058,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...\} \Bigr ) \ket {\Phi _0} \\ \pause 
                                                   &= \frac {1}{2} \sum _{ija...
-l.2767     \end{align*}
+l.2768     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8072,193 +8067,195 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `hagen2014' on page 265 undefined on input line 2787.
+LaTeX Warning: Citation `hagen2014' on page 265 undefined on input line 2788.
 
 
-LaTeX Warning: Citation `jansen2015' on page 265 undefined on input line 2790.
+LaTeX Warning: Citation `jansen2015' on page 265 undefined on input line 2791.
 
 [265] [266]
 
-LaTeX Warning: Citation `hagen2007' on page 267 undefined on input line 2888.
+LaTeX Warning: Citation `hagen2007' on page 267 undefined on input line 2889.
 
 [267] [268] [269]
 
-Package xcolor Warning: Incompatible color definition on input line 3101.
+Package xcolor Warning: Incompatible color definition on input line 3102.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3108--3110
+Underfull \hbox (badness 10000) in paragraph at lines 3109--3111
 [] $[] \OMS/ztmcm/m/n/10   [] \OT1/ztmcm/m/n/10 + 0\OML/ztmcm/m/it/10 :\OT1/ztm
 cm/m/n/10 5 \OMS/ztmcm/m/n/10 ^^B []\OT1/ztmcm/m/n/10 [[](\OML/ztmcm/m/it/10 a;
  b; c; d\OT1/ztmcm/m/n/10 )] \OMS/ztmcm/m/n/10 ^^B
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3117.
+Package xcolor Warning: Incompatible color definition on input line 3118.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3117.
+Package xcolor Warning: Incompatible color definition on input line 3118.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3130.
+Package xcolor Warning: Incompatible color definition on input line 3131.
 
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 3132.
+(Font)              using `T1/fve/m/n' instead on input line 3133.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3135.
+Package xcolor Warning: Incompatible color definition on input line 3136.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3135.
+Package xcolor Warning: Incompatible color definition on input line 3136.
 
 [270]
 
-Package xcolor Warning: Incompatible color definition on input line 3160.
+Package xcolor Warning: Incompatible color definition on input line 3161.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3169.
+Package xcolor Warning: Incompatible color definition on input line 3170.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3169.
+Package xcolor Warning: Incompatible color definition on input line 3170.
 
-[271] [272]
-Underfull \hbox (badness 10000) in paragraph at lines 3266--3266
-[]|[]$\T1/fvm/m/n/8.5 https : / / github . com / ManyBodyPhysics / LectureNotes
-Physics / blob / master / doc / src /
+[271]
+Overfull \hbox (7.63506pt too wide) in paragraph at lines 3263--3267
+\T1/fve/m/n/10 por-tant test of our codes. See []$\T1/fvm/m/n/10 https : / / gi
+thub . com / ManyBodyPhysics / LectureNotesPhysics /
  []
 
-[273]
-Overfull \hbox (33.80106pt too wide) in paragraph at lines 3337--3339
+
+Overfull \hbox (4.76913pt too wide) in paragraph at lines 3263--3267
+\T1/fvm/m/n/10 blob / master / doc / src / Chapter8-[]programs / python / mbpt 
+. py$[] \T1/fve/m/n/10 for the Python code shown here. 
+ []
+
+[272] [273]
+Overfull \hbox (33.80106pt too wide) in paragraph at lines 3338--3340
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (64.87512pt too wide) in paragraph at lines 3347--3349
+Overfull \hbox (64.87512pt too wide) in paragraph at lines 3348--3350
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (64.87512pt too wide) in paragraph at lines 3357--3359
+Overfull \hbox (64.87512pt too wide) in paragraph at lines 3358--3360
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (5.05264pt too wide) in paragraph at lines 3366--3368
+Overfull \hbox (5.05264pt too wide) in paragraph at lines 3367--3369
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (5.05264pt too wide) in paragraph at lines 3375--3377
+Overfull \hbox (5.05264pt too wide) in paragraph at lines 3376--3378
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][]  
  []
 
-[274] <Chapter8-figures/perturbationtheory.pdf, id=6349, 578.16pt x 433.62pt>
+[274] <Chapter8-figures/perturbationtheory.pdf, id=6348, 578.16pt x 433.62pt>
 File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
 Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input 
-line 3409.
+line 3410.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
 
-<Chapter8-figures/CCDMBPT4theory.pdf, id=6355, 578.16pt x 433.62pt>
+<Chapter8-figures/CCDMBPT4theory.pdf, id=6354, 578.16pt x 433.62pt>
 File: Chapter8-figures/CCDMBPT4theory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/CCDMBPT4theory.pdf>
 Package pdftex.def Info: Chapter8-figures/CCDMBPT4theory.pdf used on input line
- 3438.
+ 3439.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
  [275] [276 <./Chapter8-figures/perturbationtheory.pdf>] [277 <./Chapter8-figur
-es/CCDMBPT4theory.pdf>] [278]
+es/CCDMBPT4theory.pdf>]
 
-LaTeX Warning: Citation `blas' on page 279 undefined on input line 3588.
+LaTeX Warning: Citation `blas' on page 278 undefined on input line 3589.
 
-<Chapter8-figures/blockvsfull_log.png, id=6513, 578.16pt x 433.62pt>
+[278] <Chapter8-figures/blockvsfull_log.png, id=6511, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
 Package pdftex.def Info: Chapter8-figures/blockvsfull_log.png used on input lin
-e 3611.
+e 3612.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
  [279]
 
-Package xcolor Warning: Incompatible color definition on input line 3655.
+Package xcolor Warning: Incompatible color definition on input line 3656.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3669.
+Package xcolor Warning: Incompatible color definition on input line 3670.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3669.
+Package xcolor Warning: Incompatible color definition on input line 3670.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3669.
+Package xcolor Warning: Incompatible color definition on input line 3670.
 
 [280 <./Chapter8-figures/blockvsfull_log.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3669.
+Package xcolor Warning: Incompatible color definition on input line 3670.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3669.
+Package xcolor Warning: Incompatible color definition on input line 3670.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3700.
+Package xcolor Warning: Incompatible color definition on input line 3701.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3713.
+Package xcolor Warning: Incompatible color definition on input line 3714.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3713.
+Package xcolor Warning: Incompatible color definition on input line 3714.
 
 
-Overfull \vbox (1.45383pt too high) detected at line 3713
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 3713.
+Package xcolor Warning: Incompatible color definition on input line 3714.
 
 [281]
 
-Package xcolor Warning: Incompatible color definition on input line 3713.
+Package xcolor Warning: Incompatible color definition on input line 3714.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3713.
+Package xcolor Warning: Incompatible color definition on input line 3714.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3722.
+Package xcolor Warning: Incompatible color definition on input line 3723.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3730.
+Package xcolor Warning: Incompatible color definition on input line 3731.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3730.
+Package xcolor Warning: Incompatible color definition on input line 3731.
 
-[282] <Chapter8-figures/fig1.pdf, id=6544, 500.87437pt x 400.11984pt>
+[282] <Chapter8-figures/fig1.pdf, id=6542, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3785.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3786.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=6545, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=6543, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3794.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3795.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
 
-LaTeX Warning: Citation `finitesize' on page 283 undefined on input line 3809.
+LaTeX Warning: Citation `finitesize' on page 283 undefined on input line 3810.
 
 
-LaTeX Warning: Citation `twistaverage' on page 283 undefined on input line 3811
+LaTeX Warning: Citation `twistaverage' on page 283 undefined on input line 3812
 .
 
 
-Overfull \hbox (6.54861pt too wide) in paragraph at lines 3803--3814
+Overfull \hbox (6.54861pt too wide) in paragraph at lines 3804--3815
 [] \OT1/ztmcm/m/n/10 = []$\T1/fve/m/n/10 , but we could have cho-sen anti-perio
 dic bound-ary con-di-tions, $[] \OT1/ztmcm/m/n/10 = \OMS/ztmcm/m/n/10 ^^@ []$\T
 1/fve/m/n/10 .
@@ -8266,122 +8263,105 @@ dic bound-ary con-di-tions, $[] \OT1/ztmcm/m/n/10 = \OMS/ztmcm/m/n/10 ^^@ []$\T
 
 [283]
 
-Package xcolor Warning: Incompatible color definition on input line 3830.
+Package xcolor Warning: Incompatible color definition on input line 3831.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3843.
+Package xcolor Warning: Incompatible color definition on input line 3844.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3843.
+Package xcolor Warning: Incompatible color definition on input line 3844.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3843.
+Package xcolor Warning: Incompatible color definition on input line 3844.
 
 [284 <./Chapter8-figures/fig1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 3843.
+Package xcolor Warning: Incompatible color definition on input line 3844.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3843.
+Package xcolor Warning: Incompatible color definition on input line 3844.
 
-<Chapter8-figures/fig3.pdf, id=6626, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=6624, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3863.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3864.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=6628, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=6626, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3873.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3874.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
  [285 <./Chapter8-figures/fig2.pdf>]
 
-LaTeX Warning: Citation `openmp' on page 286 undefined on input line 3907.
+LaTeX Warning: Citation `openmp' on page 286 undefined on input line 3908.
 
 
-LaTeX Warning: Citation `mpi' on page 286 undefined on input line 3907.
+LaTeX Warning: Citation `mpi' on page 286 undefined on input line 3908.
 
 
-LaTeX Warning: Citation `openmpi' on page 286 undefined on input line 3907.
+LaTeX Warning: Citation `openmpi' on page 286 undefined on input line 3908.
 
 [286 <./Chapter8-figures/fig3.pdf>] [287 <./Chapter8-figures/fig4.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 3938--3938
-[]|[]$\T1/fvm/m/n/8.5 https : / / github . com / ManyBodyPhysics / LectureNotes
-Physics / blob / master / doc / src /
- []
-
-
-Overfull \hbox (62.82568pt too wide) in paragraph at lines 3953--3954
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
 [288]
-Overfull \hbox (60.50003pt too wide) in paragraph at lines 3971--3972
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
 
-
-Package xcolor Warning: Incompatible color definition on input line 3983.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4014.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4014.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4014.
+Package xcolor Warning: Incompatible color definition on input line 3986.
 
 
 Package xcolor Warning: Incompatible color definition on input line 4017.
 
+
+Package xcolor Warning: Incompatible color definition on input line 4017.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4020.
+
 [289]
 
-Package xcolor Warning: Incompatible color definition on input line 4047.
+Package xcolor Warning: Incompatible color definition on input line 4050.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4047.
+Package xcolor Warning: Incompatible color definition on input line 4050.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4051.
+Package xcolor Warning: Incompatible color definition on input line 4054.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4065.
+Package xcolor Warning: Incompatible color definition on input line 4068.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4065.
+Package xcolor Warning: Incompatible color definition on input line 4068.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4065.
+Package xcolor Warning: Incompatible color definition on input line 4068.
 
 [290]
 
-Package xcolor Warning: Incompatible color definition on input line 4065.
+Package xcolor Warning: Incompatible color definition on input line 4068.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4065.
+Package xcolor Warning: Incompatible color definition on input line 4068.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4067.
+Package xcolor Warning: Incompatible color definition on input line 4070.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4081.
+Package xcolor Warning: Incompatible color definition on input line 4084.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4081.
+Package xcolor Warning: Incompatible color definition on input line 4084.
 
 
-LaTeX Warning: Citation `strassen' on page 291 undefined on input line 4101.
+LaTeX Warning: Citation `strassen' on page 291 undefined on input line 4104.
 
 [291] [292]
 
-LaTeX Warning: Citation `minnesota' on page 293 undefined on input line 4232.
+LaTeX Warning: Citation `minnesota' on page 293 undefined on input line 4235.
 
 [293] [294] [295]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 4454--4459
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 4457--4462
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
@@ -8389,34 +8369,28 @@ mil-to-nian con-tains anti-symmetrized
 [296]
 
 LaTeX Warning: Reference `fig:diagrams' on page 297 undefined on input line 458
-1.
+4.
 
 
-LaTeX Warning: Reference `fig:diagrams' on page 297 undefined on input line 458
-9.
+LaTeX Warning: Reference `fig:diagrams' on page 297 undefined on input line 459
+2.
 
 
 LaTeX Warning: Reference `fig:diagrams' on page 297 undefined on input line 460
-2.
+5.
 
 [297]
 
-LaTeX Warning: Citation `ekstromPRX' on page 298 undefined on input line 4681.
+LaTeX Warning: Citation `ekstromPRX' on page 298 undefined on input line 4683.
 
 
-Overfull \hbox (31.02185pt too wide) in paragraph at lines 4679--4684
+Overfull \hbox (31.02185pt too wide) in paragraph at lines 4681--4686
 \T1/fvm/m/n/10 ManyBodyPhysics / LectureNotesPhysics / blob / master / doc / sr
 c / Chapter8-[]programs / cpp / MBPT2 /
  []
 
-[298] [299]
-Underfull \hbox (badness 10000) in paragraph at lines 4829--4829
-[]|[]$\T1/fvm/m/n/8.5 https : / / github . com / ManyBodyPhysics / LectureNotes
-Physics / blob / master / doc / src /
- []
-
-[300]
-Overfull \hbox (10.71318pt too wide) in paragraph at lines 4880--4885
+[298] [299] [300]
+Overfull \hbox (10.71318pt too wide) in paragraph at lines 4882--4887
 \T1/fve/m/n/10 Wick's the-o-rem is based on two fun-da-men-tal con-cepts, namel
 y $[]$ and $[]$.
  []
@@ -9103,7 +9077,7 @@ LaTeX Warning: Reference `sec:numerics' on page 358 undefined on input line 724
 
 ]) [361]
 
-! LaTeX Error: \begin{prob} on input line 4671 ended by \end{document}.
+! LaTeX Error: \begin{prob} on input line 4674 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -9139,16 +9113,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 4671 (\begingroup)
+### semi simple group (level 1) entered at line 4674 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 25218 strings out of 493089
- 400005 string characters out of 6134842
- 571571 words of memory out of 5000000
+ 25220 strings out of 493089
+ 400037 string characters out of 6134842
+ 570571 words of memory out of 5000000
  24957 multiletter control sequences out of 15000+600000
  157483 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,122p,1588b,1875s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,25n,122p,1588b,1823s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -9177,10 +9151,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on lnp.pdf (372 pages, 5653955 bytes).
+Output written on lnp.pdf (372 pages, 5648662 bytes).
 PDF statistics:
- 8496 PDF objects out of 8907 (max. 8388607)
- 7480 compressed objects within 75 object streams
- 3096 named destinations out of 3580 (max. 500000)
+ 8494 PDF objects out of 8907 (max. 8388607)
+ 7482 compressed objects within 75 object streams
+ 3098 named destinations out of 3580 (max. 500000)
  2378 words of extra memory for PDF output out of 10000 (max. 10000000)
 

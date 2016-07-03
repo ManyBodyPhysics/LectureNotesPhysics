@@ -1359,8 +1359,9 @@ energies and $m$ is the number of single-particle states.
 \end{svgraybox}
 The following simple Python program implements the above algorithm using the density matrix formalism outlined above.
 We have omitted the functions that set up the single-particle basis and the anti-symmetrized two-body interaction matrix elements.
-These have to be provided. 
-\begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/hfnuclei.py}}]
+These have to be provided, see \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/hfnuclei.py}
+for full code and matrix elements.
+\begin{lstlisting}
 # We skip here functions that set up the one- and two-body parts of the Hamiltonian 
 # These functions need to be defined by the user. The two-body interaction below is
 # calculated by calling the function TwoBodyInteraction(alpha,gamma,beta,delta)
@@ -1390,7 +1391,6 @@ if __name__ == '__main__':
 	oldenergies = np.zeros(spOrbitals)
 	newenergies = np.zeros(spOrbitals)
 	while hf_count < maxHFiter and difference > epsilon:
-		print "############### Iteration %i ###############" % hf_count
    	        HFmatrix = np.zeros([spOrbitals,spOrbitals])		
 		for alpha in range(spOrbitals):
 			for beta in range(spOrbitals):
@@ -1398,7 +1398,8 @@ if __name__ == '__main__':
      		            sumFockTerm = 0.0
                             for gamma in range(spOrbitals):
                                 for delta in range(spOrbitals):
-                                    sumFockTerm += DensityMatrix[gamma][delta]*TwoBodyInteraction(alpha,gamma,beta,delta)
+                                    sumFockTerm += DensityMatrix[gamma][delta]*
+                                                   TwoBodyInteraction(alpha,gamma,beta,delta)
                             HFmatrix[alpha][beta] = Decimal(sumFockTerm)
                             """  Adding the one-body term """
                             if beta == alpha:   HFmatrix[alpha][alpha] += singleparticleH(alpha)
@@ -3262,8 +3263,8 @@ which translates into
   \]
  This expression can be used to check the results
   for any value of $g$ and provides thereby an important test of  our codes.
-
-\begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py}}]
+See \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} for the Python code shown here.
+\begin{lstlisting}
 #!/usr/bin/python
 from sympy import *
 from pylab import *
@@ -3935,7 +3936,7 @@ written as
    }
 \end{lstlisting}
 while the second function implements the brute force formula with sums running over all possible single-particle states. 
-\begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/MBPT2/src/main.cpp}}]
+\begin{lstlisting}
 // calculate the 2nd Order Many-Body Perturbation Theory correlation energy 
 double MBPT2corr(TB_OpChannels &vnn, int numChannels, abstractSPbasis * SPbasis)
 {
@@ -3950,7 +3951,8 @@ double MBPT2corr(TB_OpChannels &vnn, int numChannels, abstractSPbasis * SPbasis)
 	p1 = vnn.hhpp[ichan].colMap[ppIndex][0];
 	p2 = vnn.hhpp[ichan].colMap[ppIndex][1];
 	energyDenom = SPbasis->spEnergy[h1] + SPbasis->spEnergy[h2] - SPbasis->spEnergy[p1] - SPbasis->spEnergy[p2];
-	corr += vnn.hhpp[ichan].getElement(hhIndex,ppIndex)*vnn.hhpp[ichan].getElement(hhIndex,ppIndex)/energyDenom;	
+	corr += vnn.hhpp[ichan].getElement(hhIndex,ppIndex)*
+                vnn.hhpp[ichan].getElement(hhIndex,ppIndex)/energyDenom;	
       }
     }
   }
@@ -3968,7 +3970,8 @@ double mbpt2_full_hhpp(double * vnn_full_hhpp, abstractSPbasis * SPbasis)
       for(int a=0; a<NparticleStates; a++){
 	for(int b=0; b<NparticleStates; b++){	
 	  energyDenom = SPbasis->spEnergy[i] + SPbasis->spEnergy[j] - SPbasis->spEnergy[fermiLevel+a] - SPbasis->spEnergy[fermiLevel+b];
-	  corr += vnn_full_hhpp[hhpp_index(i,j,a,b,SPbasis)]*vnn_full_hhpp[hhpp_index(i,j,a,b,SPbasis)]/energyDenom;
+	  corr += vnn_full_hhpp[hhpp_index(i,j,a,b,SPbasis)]*
+                  vnn_full_hhpp[hhpp_index(i,j,a,b,SPbasis)]/energyDenom;
 	}
       }
     }
@@ -4091,7 +4094,7 @@ $100$ major shells, more time is now spent on setting up the
 Hamiltonian matrix. In our codes we set up the Hamiltonian matrix
 before performing the computations. The total time spent on loading
 the block-structured Hamiltonian for $10^4$ single-particle states is now reduced to $82\%$ of the total
-time.  Increasing to $200$ shells, or $3\times 10^4$ basis states, the percentage of time spent on loading matrix elements for the matrix-matrix multiplication is now reduced to $59\%$. 
+time.  Increasing to $150$ shells, or $2\times 10^4$ basis states, the percentage of time spent on loading matrix elements for the matrix-matrix multiplication is now reduced to $71\%$. 
 This has important consequences for efficient implementations
 of coupled cluster theory. As we demonstrated above, the CCD equations
 can all be rewritten in terms of matrix-matrix multiplications. The
@@ -4103,7 +4106,7 @@ most of the time is actually spent and loading matrices and setting up the
 Hamiltonian matrices.  For coupled cluster calculations this has
 important consequences. It means that developing efficient parallel
 algorithms for setting up, storing and fetching matrix elements becomes
-increasingly important.  With increasing number of particles and single-particle states, one may consider computing matrix elements on the fly.
+increasingly important.  With increasing number of particles and single-particle states, one may even consider computing matrix elements on the fly.
 
 We discuss now different  high-performance strategies, limiting ourselves to the basic matrix-matrix multiplication of MBPT2. 
 {\bf Gustav's part}
@@ -4674,7 +4677,6 @@ Derive the amplitude equations of Eq.~(\ref{eq:ccd}) starting with
           0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
           \overline{H}\vert \Phi_0\rangle.
  \]
-
   \begin{prob}\label{problem:realisticforces}
 Replace the Minnesota interaction model with realistic models for nuclear forces based on effective field theory. In particular 
 replace the Minnesota interaction with the low-order (LO) contribution which includes a contact term and a one-pion exchange
@@ -4825,8 +4827,8 @@ When adding realistic interaction models we recommend that you use the many-body
   \begin{sol}{problem:spbasissetup}
   The following python code sets up the quantum numbers for both
   infinite nuclear matter and neutron matter employing a cutoff in
-  the value of $n$.
-  \begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/spstatescc.py}}]
+  the value of $n$. The full code can be found at  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/spstatescc.py}.
+  \begin{lstlisting}
 from numpy import *
 
 nmax =2
