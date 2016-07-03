@@ -861,12 +861,12 @@ work are listed in Table \ref{tab:minnesotatab}.
 
 \subsection{Models from Effective field theory for the two- and three-nucleon interactions}\label{subsec:forcemodels}
 
-During the past two decades, it has been demonstrated that chiral
+During the past two decades it has been demonstrated that chiral
 effective field theory represents a powerful tool to deal with
 hadronic interactions at low energy in a systematic and
 model-independent way (see
-Refs.~\cite{weinberg1990,weinberg1991,ordonez1992,ordonez1994,ordonez1996,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013}).
-EFTs are defined in terms of effective Lagrangians which are given by
+Refs.~\cite{weinberg1990,weinberg1991,ordonez1992,ordonez1994,ordonez1996,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,ekstromPRX}).
+Effective field theories (EFTs) are defined in terms of effective Lagrangians which are given by
 an infinite series of terms with increasing number of derivatives
 and/or nucleon fields, with the dependence of each term on the pion
 field prescribed by the rules of broken chiral symmetry.  Applying
@@ -903,7 +903,7 @@ we will focus on optimized two- and three-nucleon forces at order
 NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.  
 
 Below we revisit briefly the formalism and results presented in
-Refs.~\cite{carlsson2016}. For further details on chiral effective
+Refs.~\cite{ekstromPRX}. For further details on chiral effective
 field theory and nuclear interactions, see for example
 Refs.~\cite{machleidt2011,epelbaum2009,ekstrom2013}
 \begin{figure}[t]\centering
@@ -961,7 +961,7 @@ renormalizations and since, on shell, there are no relativistic
 corrections, the on-shell 1PE has the form of Eq.~(\ref{eq:eq_1PEci})
 to all orders.
 
-It is well known that, for high-precision $NN$ potentials, charge
+It is well known that for high-precision $NN$ potentials, charge
 dependence is important.  Therefore, we will take the charge
 dependence of the 1PE into account.  Defining a pion-mass dependent
 1PE by
@@ -985,7 +985,7 @@ V_{1\pi}^{(np)} ({\vec k}~', \vec k) = -V_{1\pi} (m_{\pi^0}) +
 where $T$ denotes the isospin of the two-nucleon system.  We use
 $m_{\pi^0}=134.9766$ MeV and $m_{\pi^\pm}=139.5702$ MeV.  For the
 leading-order, next-to-leading order and NNLO, we refer the reader to
-Refs.~\cite{machleidt2011,carlsson2014}.  The final interaction at
+Refs.~\cite{machleidt2011,ekstromPRX}.  The final interaction at
 order NNLO is multiplied with the following factors
 \cite{machleidt2011},
 \begin{equation}
@@ -1020,7 +1020,7 @@ M_N &=& \frac{2M_pM_n}{M_p+M_n} = 938.9182 \mbox{ MeV, and} \\ p^2 & =
 \end{eqnarray}
 which is based upon relativistic kinematics.
 
-Iteration of $\widehat V$ in the LS equation, Eq.~(\ref{eq_LS}),
+Iteration of $\widehat V$ in the Lippman-Schwinger equation, Eq.~(\ref{eq_LS}),
 requires cutting $\widehat V$ off for high momenta to avoid
 infinities.  This is consistent with the fact that ChPT is a
 low-momentum expansion which is valid only for momenta $Q \ll
@@ -1091,9 +1091,6 @@ regulator depending on the momentum-transfer $q$,
 f(q) = \exp[-q^4/\Lambda]
 \end{equation}
 and thus obtain a local three-body force.
-
-
-
 
 \section{Hartree-Fock theory}
 
@@ -1328,6 +1325,8 @@ iterative way, starting with a guess for the coefficients
 $C_{i\alpha}$. We label the coefficients as $C_{i\alpha}^{(n)}$, where
 the superscript $n$ stands for iteration $n$.  To set up the algorithm
 we can proceed as follows.
+
+\begin{svgraybox}
 \begin{enumerate}
 \item We start with a guess
   $C_{i\alpha}^{(0)}=\delta_{i,\alpha}$. Alternatively, we could have
@@ -1357,10 +1356,11 @@ where $\lambda$ is a small number defined by the user ($\lambda \sim
 energies and $m$ is the number of single-particle states.
 
 \end{enumerate}
+\end{svgraybox}
 The following simple Python program implements the above algorithm using the density matrix formalism outlined above.
 We have omitted the functions that set up the single-particle basis and the anti-symmetrized two-body interaction matrix elements.
 These have to be provided. 
-\begin{lstlisting}
+\begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/hfnuclei.py}}]
 # We skip here functions that set up the one- and two-body parts of the Hamiltonian 
 # These functions need to be defined by the user. The two-body interaction below is
 # calculated by calling the function TwoBodyInteraction(alpha,gamma,beta,delta)
@@ -3098,6 +3098,7 @@ When building up a numerical project there are several elements you should think
   assume convergence. In pseudocode, the function that updates the $t$
   amplitudes looks like
 
+\begin{svgraybox}
   \begin{algorithmic} 
   \State CCD\_Update() \For{$i \in \{0,N_{fermi}-1\}$ } \For{$j \in
     \{0,N_{fermi}-1\}$ } \For{$a \in \{N_{fermi},N_{sp}-1\}$ } \For{$b
@@ -3113,7 +3114,8 @@ When building up a numerical project there are several elements you should think
   \State t\_amplitudes[index($a,b,i,j$)] = sum/energy\_denom \EndFor
   \EndFor \EndFor \EndFor
   \end{algorithmic}
-  Where $N_{fermi}$ is the fermi level and $N_{sp}$ is the total
+\end{svgraybox} 
+ Where $N_{fermi}$ is the fermi level and $N_{sp}$ is the total
   number of single particle (s.p.) states, indexed from 0 to
   $N_{sp}-1$. At the most basic level, the CCD equations are just the
   addition of many products containing $t_{ij}^{ab}$ amplitudes and
@@ -3125,10 +3127,12 @@ When building up a numerical project there are several elements you should think
   one-dimensional arrays instead. The function $index()$ maps the four
   indices onto one index so that a one-dimensional array can be used. An example
   of such a function is
-  \begin{algorithmic}
+\begin{svgraybox} 
+ \begin{algorithmic}
   \Function{index}{$p,q,r,s$} \State \textbf{return} $p\times N_{sp}^3 +
   q\times N_{sp}^2 + r\times N_{sp} + s$ \EndFunction
   \end{algorithmic}
+\end{svgraybox}
   Because elements with repeated indices vanish,
   $t_{ii}^{ab}=t_{ij}^{aa}=0$ and
   $\braket{pp|\hat{v}|rs}=\braket{pq|\hat{v}|rr}=0$, data structures
@@ -3137,7 +3141,7 @@ When building up a numerical project there are several elements you should think
   strategies later. Notice also that we are looping over all
   indices $i,j,a,b$, rather than the restricted indices. This means that we
   are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow. However It is  often less error prone and simpler to code in this way. 
-Below we will however unrestrict these indices in order to achieve a better speed-up of our code. 
+Below we will however unrestrict these indices in order to achieve a better speed up of our code. 
 
    The goal of our code is to calculate the correlation energy,
    $\Delta E_{CCD}$, meaning that after each iteration of our equations, we use
@@ -3153,6 +3157,7 @@ Below we will however unrestrict these indices in order to achieve a better spee
   \eta > | \Delta E_{CCD}^{(n+1)} - \Delta E_{CCD}^{(n)} |.
   \end{equation}
   The basic structure of the iterative process will look like
+\begin{svgraybox}
   \begin{algorithmic}
     \While {(abs(energy\_Diff) $>$ tolerance)} \State CCD\_Update()
     \State correlation\_Energy $\gets$ CCD\_Corr\_Energy() \State
@@ -3161,7 +3166,7 @@ Below we will however unrestrict these indices in order to achieve a better spee
     correlation\_Energy \State t\_amplitudes\_old $\gets$
     t\_amplitudes \EndWhile
   \end{algorithmic}
-
+\end{svgraybox}
   Prior to this algorithm, the $t$ amplitudes should be initalized,
   $t_{ij}^{ab}{}^{(0)}$. A particularly convenient choice, as discussed above, is to set
   $t_{ij}^{ab}{}^{(0)} = 0$. Notice that if this starting point is
@@ -3258,7 +3263,7 @@ which translates into
  This expression can be used to check the results
   for any value of $g$ and provides thereby an important test of  our codes.
 
-  \begin{lstlisting}
+\begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py}}]
 #!/usr/bin/python
 from sympy import *
 from pylab import *
@@ -3584,7 +3589,7 @@ like a matrix-matrix multiplication. This is
   matrix-matrix multiplication.
   The simplest example to consider is the expression for the correlation energy from MBPT2. We rewrite 
   \begin{equation}\label{eq:bruteforceMBPT}
-  \Delta E_{MBPT2} = \sum_{a< b, i< j} \frac{\braket{ij|\hat{v}|ab}\braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}},
+  \Delta E_{MBPT2} = \frac{1}{4}\sum_{abij} \frac{\braket{ij|\hat{v}|ab}\braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}},
 \end{equation}
 by defining the matrices $\hat{A}$ and $\hat{B}$ with new indices $I=(ij)$ and $A=(ab)$. The individual matrix elements of these matrices are 
 \[
@@ -3596,7 +3601,7 @@ B_{AI} = \frac{\langle A \vert \hat{v} \vert I \rangle}{\epsilon^A_I}.
 \]
 We can then rewrite the correlation energy from MBPT2 as
 \begin{equation}\label{eq:smartMBPT}
-  \Delta E_{MBPT2} = \hat{A}\times \hat{B}.
+  \Delta E_{MBPT2} = \frac{1}{4}\hat{A}\times \hat{B}.
 \end{equation}
 Figure \ref{fig:speedup1} shows the difference between the brute force summation over single-particle states
 of Eq.~(\ref{eq:bruteforceMBPT}) and the smarter matrix-matrix multiplication of Eq.~(\ref{eq:smartMBPT}) for a given number  of basis states.
@@ -3608,8 +3613,8 @@ $1600$ single-particle basis states. The Minnesota interaction model has been us
     \label{fig:speedup1}
   \end{figure}
 With $40$ single-particle shells, see Table \ref{tab:table1} for example, we have in total  $2713$ single-particle states. 
-Using the matrix-matrix algorithm the final calculation time is $2.4$ s (this is the average time after ten numerical experiments).
-The total time using the brute force is $100.6$ s (again the average of ten numerical experiments), resulting in a speed-up of 42. It is useful to dissect the final time in terms of different operations.
+Using the matrix-matrix algorithm the final calculation time is $2.4$ s (this is the average time from ten numerical experiments).
+The total time using the brute force is $100.6$ s (again the average of ten numerical experiments), resulting in a speed up of 42. It is useful to dissect the final time in terms of different operations.
 For the matrix-matrix multiplication most of the time is spent setting up the matrix elements for the two-body channels and to load the matrix elements. The final matrix-matrix multiplication takes only $1\%$ of the total time. For the brute force algorithm, the multiplication and summation over the various single-particle states takes almost half of the total time. In our discussion on high-performance computing below, we will discuss in more detail the program used to obtain these results.
 
 
@@ -3647,7 +3652,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
   as holes. The following loop is for pure neutron matter and requires
   the number of neutrons, $N$ and density, $\rho=N/L^{3}$, as
   input. Symmetric nuclear matter requires an extra loop over isospin.
-
+\begin{svgraybox}
   \begin{algorithmic}
     \State $n=0$ \For{$\text{shell}\in\{ 0,...,N_{\text{max}}\}$}
     \For{$-\sqrt{N_{\text{max}}}\leq n_{x}\leq\sqrt{N_{\text{max}}}$}
@@ -3661,7 +3666,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
     ($n$, $n_{x}$, $n_{y}$, $n_{z}$, $s_{z}$, Energy, type) \State
     $n\gets n+1$ \EndIf \EndFor \EndFor \EndFor \EndFor \EndFor
   \end{algorithmic}
-
+\end{svgraybox}
   The next step is to build every two-body state in the model space
   and separate them by their particle/hole character and combined
   quantum numbers. While each single-particle state is unique,
@@ -3692,7 +3697,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
   in either case. An additional restriction for two-body states is
   that they must be composed of two different states to satisfy the
   Pauli-exclusion principle.
-
+\begin{svgraybox}
   \begin{algorithmic}
     \For{$\text{sp1}\in STATES$} \For{$\text{sp2}\in STATES$}
     \If{$sp1\neq sp2$} \State $N_{i}\gets n_{i,1}+n_{i,2}$ \State
@@ -3705,7 +3710,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
     $\text{i\_cross}\gets\text{Ind}\left(N'_{x},N'_{y},N'_{z},S'_{z},T'_{z}\right)$
     \State $X\gets$ (sp1, sp2, i\_cross) \EndIf \EndFor \EndFor
   \end{algorithmic}
-
+\end{svgraybox}
   From the cross channels, one can construct the cross channel
   complements, $X'$, where $X\left( pq\right)\equiv X'\left(
   qp\right)$. Also from the direct channels, one can construct
@@ -3714,7 +3719,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
   two-body states within a direct channel that contains that single
   particle state, $T\left( pq\right)=T\left( rs\right)\Rightarrow
   K_{p}\gets\left( qrs\right)$.
-
+\begin{svgraybox}
   \begin{algorithmic}
     \For{$\text{Chan}\in T$} \For{$\text{tb1}\in\text{Chan}$}
     \For{$\text{tb2}\in\text{Chan}$} \State $K\gets\text{tb1}_{1}$
@@ -3722,7 +3727,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
     $K_{\text{tb1}_{1}}\gets\mathop{\text{tb1}_{2},\text{tb2}_{1},\text{tb2}_{2}}$
     \EndFor \EndFor \EndFor
   \end{algorithmic}
-
+\end{svgraybox}
   These different structures can be further categorized by a two-body
   state's particle-hole character, $\braket{pp| t |hh}, \braket{hh| v
     |hh}, \braket{pp| v |pp}, \braket{hh| v |pp}$, and $\braket{hp| v
@@ -3822,6 +3827,7 @@ approximated our problem with periodic boundary conditions,
   $\vec{\theta}$. Integration over some quantitiy is approximated by a
   weighted sum, such as Gauss-Legendre quadrature, over the quantity
   for each set of twist angles. The algorithm becomes then
+\begin{svgraybox}
   \begin{algorithmic}
     \State Build mesh points and weights for each direction $i$:
     $\{\theta_{i},w_{i}\}$ \State $E_{\text{twist}}=0$
@@ -3834,7 +3840,7 @@ approximated our problem with periodic boundary conditions,
     $E_{\text{twist}}=E_{\text{twist}}+\frac{1}{\pi^{3}}w_{x}w_{y}w_{z}E$
     \EndFor \EndFor \EndFor
   \end{algorithmic}
-
+\end{svgraybox}
   This technique gives results which depend much less on the particle
   number, but requires a full calculation for each set of twist
   angles, which can grow very quickly. For example, using 10 twist
@@ -3902,14 +3908,205 @@ complicated physical systems.  Our codes can also be easily parallelized in orde
 However, we have till now not touched
 upon topics like parallelization and an efficient utilization of exisiting and future
 high-performance facility and possible improvements and bottlenecks which our codes can face. We end thus this section with a brief discussion
-of high-performance computing topics of relevance for wave function based methods. We will focus on many-body perturbation theory to second order and the two algorithms discussed in Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}). This is the aim of our final subsection. 
+of high-performance computing topics of relevance for wave function based methods. We will focus on many-body perturbation theory to second order and the two algorithms discussed in Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}). 
 
 
-\subsection{High-performance computing}
+\subsection{High-performance computing and analysis of the MBPT program}
 The aim of this subsection is to discuss in more detail how we can make the computations discussed in connection with equations 
-Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient. 
-The codes can be found at the link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/c%2B%2B/MBPT2/src}.
-We start by discussing the basic structure of these codes. 
+Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient. For pedagocical reasons, we will use the MBPT2 part of the program
+due to its simplicity. 
+The codes can be found at the github link 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT2/src}.
+We start by discussing the basic structure of these codes by looking at the main program. A shortened version is presented here. The full version can be obtained by accessing the link below.   In the listing here we display only the two functions which compute
+the above two equations. The first function performs a standard matrix-matrix multiplication
+\begin{equation}
+\hat{A}=\hat{B}\hat{C}   \Longrightarrow a_{ij} = \sum_{k=1}^{n} b_{ik}c_{kj},
+\label{eq:mtxmtx}
+\end{equation}
+written as 
+\lstset{language=c++}
+\begin{lstlisting}
+   for(i=0 ; i < n ; i++) {
+      for(j=0 ; j < n ; j++) {
+         for(k=0 ; k < n ; k++) {
+            a[i][j]+=b[i][k]*c[k][j]
+         }
+      }
+   }
+\end{lstlisting}
+while the second function implements the brute force formula with sums running over all possible single-particle states. 
+\begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/MBPT2/src/main.cpp}}]
+// calculate the 2nd Order Many-Body Perturbation Theory correlation energy 
+double MBPT2corr(TB_OpChannels &vnn, int numChannels, abstractSPbasis * SPbasis)
+{
+  double corr = 0.;  
+  double energyDenom;
+  int h1,h2,p1,p2;
+  for(int ichan = 0; ichan < numChannels; ichan++){    
+    for(int hhIndex = 0; hhIndex < vnn.hhpp[ichan].getRowNum(); hhIndex++){
+      for(int ppIndex = 0; ppIndex < vnn.hhpp[ichan].getColNum(); ppIndex++){
+	h1 = vnn.hhpp[ichan].rowMap[hhIndex][0];
+	h2 = vnn.hhpp[ichan].rowMap[hhIndex][1];
+	p1 = vnn.hhpp[ichan].colMap[ppIndex][0];
+	p2 = vnn.hhpp[ichan].colMap[ppIndex][1];
+	energyDenom = SPbasis->spEnergy[h1] + SPbasis->spEnergy[h2] - SPbasis->spEnergy[p1] - SPbasis->spEnergy[p2];
+	corr += vnn.hhpp[ichan].getElement(hhIndex,ppIndex)*vnn.hhpp[ichan].getElement(hhIndex,ppIndex)/energyDenom;	
+      }
+    }
+  }
+  corr = 0.25*corr;
+  return corr;
+} // end MBPT2corr
+
+double mbpt2_full_hhpp(double * vnn_full_hhpp, abstractSPbasis * SPbasis)
+{
+  double energyDenom,corr;
+  int fermiLevel = SPbasis->Nparticles;
+  int NparticleStates = SPbasis->Nspstates - SPbasis->Nparticles;
+  for(int i=0; i<fermiLevel; i++){
+    for(int j=0; j<fermiLevel; j++){
+      for(int a=0; a<NparticleStates; a++){
+	for(int b=0; b<NparticleStates; b++){	
+	  energyDenom = SPbasis->spEnergy[i] + SPbasis->spEnergy[j] - SPbasis->spEnergy[fermiLevel+a] - SPbasis->spEnergy[fermiLevel+b];
+	  corr += vnn_full_hhpp[hhpp_index(i,j,a,b,SPbasis)]*vnn_full_hhpp[hhpp_index(i,j,a,b,SPbasis)]/energyDenom;
+	}
+      }
+    }
+  }
+  corr = 0.25*corr;
+  return corr;
+} // end load_full_hhpp
+\end{lstlisting}
+
+In order to analyze our results we present here two sets of calculations for  neutron matter with density $n=1.0$ fm$^{-3}$. 
+We use 20 major shells to define our effective Hilbert space, amounting thus to $921$ plane wave single-particle states with periodic boundary conditions. The first calculation employing  Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) is obtained using $N=14$ neutrons  to define the Fermi level. The time below is in seconds.
+\begin{svgraybox}
+\begin{verbatim}}
+./main.exe 1 1.0 1 20 14
+mass*c^2: 939.565MeV
+hbar^2/(2m) = 20.7213MeV*fm^2
+L = 2.41014fm V= 14fm^3
+k_fermi 3.093667726280136fm^-1
+SPBasis:
+i nx ny nz sz tz E
+0 0 0 0 -1 -1 0
+1 0 0 0 1 -1 0
+2 -1 0 0 -1 -1 140.8284783563085
+3 -1 0 0 1 -1 140.8284783563085
+....
+....
+921 3 3 2 1 -1 2848.528061166434
+
+CHANNELS
+NumChannels: 14739
+Two Body Channels setup time: 0.1424539089202881
+Block matrix Load time: 0.3275527954101562
+Block matrix mult time: 0.003997087478637695
+Total Block calc time: 0.4740951061248779
+MBPT2corr/A = -2.391665703622324
+
+full matrix load time: 8.278779029846191
+full struct mult time: 3.508285999298096
+Total full struct calc time: 11.78709602355957
+corrMBPT2_full/a = -2.3916657036224
+
+\end{verbatim}
+\end{svgraybox}
+
+
+\begin{svgraybox}
+\begin{verbatim}
+./main.exe 1 1.0 1 20 38
+mass*c^2: 939.565MeV
+hbar^2/(2m) = 20.7213MeV*fm^2
+L = 3.36198fm V= 38fm^3
+k_fermi 3.093667726280136fm^-1
+SPBasis:
+i nx ny nz sz tz E
+0 0 0 0 -1 -1 0
+1 0 0 0 1 -1 0
+2 -1 0 0 -1 -1 72.37470049053114
+3 -1 0 0 1 -1 72.37470049053114
+....
+....
+921 3 3 2 1 -1 1342.557267007174
+
+CHANNELS
+NumChannels: 14739
+Two Body Channels setup time: 0.1530601978302002
+Block matrix Load time: 1.729802846908569
+Block matrix mult time: 0.01892781257629395
+Total Block calc time: 1.901870012283325
+MBPT2corr/A = -1.461098136683107
+
+full matrix load time: 60.36804699897766
+full struct mult time: 33.2056519985199
+Total full struct calc time: 93.573725938797
+corrMBPT2_full/a = -1.461098136683009
+\end{verbatim}
+\end{svgraybox}
+Both calculations were performed on a MacBook Pro laptop with a 3GHz Intel Core i7 and an 8GB 1600 MHx DDR3 memory.  Due to memory limitations, larger calculations cannot be performed for  Eq.~(\ref{eq:bruteforceMBPT}) on a standard laptop. 
+There are several important observations to be made here. For Eq.~(\ref{eq:bruteforceMBPT}) almost $2/3$ of the total time is spent setting up and loading the full matrix. The summation over the individual single-particle levels accounts for the remaining $1/3$ of the time. Using the decomposition into two-body channels in Eq.~(\ref{eq:smartMBPT}), the largest fraction of the computations are spent on loading the matrix elements, while the matrix-matrix multiplication (implemented in the simplest possible way) accounts for less than $1\%$. This time increases however when we move from $N=14$ to $N=38$. 
+For Eq.~(\ref{eq:smartMBPT}) we can easily run much larger systems, as seen here for $N=114$ and $30$ and $40$ shells. For $N=30$ we have  
+\begin{svgraybox}
+\begin{verbatim}
+./main.exe 1 1.0 1 30 114
+....
+1789 5 3 1 1 -1 968.2347088363201
+
+CHANNELS
+NumChannels: 27783
+Two Body Channels setup time: 0.5911049842834473
+Block matrix Load time: 25.70273399353027
+Block matrix mult time: 0.2907769680023193
+Total Block calc time: 26.5846860408783
+MBPT2corr/A = -1.899977657908343
+\end{verbatim}
+\end{svgraybox}
+For $40$ shells we obtain
+\begin{svgraybox}
+\begin{verbatim}
+./main.exe 1 1.0 1 40 114
+....
+2713 6 3 1 1 -1 1350.847359528065
+
+CHANNELS
+NumChannels: 46875
+Two Body Channels setup time: 1.432629823684692
+Block matrix Load time: 43.99419498443604
+Block matrix mult time: 0.4821138381958008
+Total Block calc time: 45.90901184082031
+MBPT2corr/A = -1.900268075095771
+\end{verbatim}
+\end{svgraybox}
+First we note that the MBPT2 contribution to the correlation energy is
+more or less converged with $40$ shells. Most of the computational
+time, more than $95\%$, is spent on loading the block decomposed
+matrix elements. Even with $N=114$ single-particle states and $40$
+major shells, the matrix-matrix multiplication is a mere $1\%$ of the
+total time.  Increasing to $100$ major shells, with $10^4$
+single-particle states and $N=114$ neutrons defining the Fermi level
+barely changes the time spent on the matrix-matrix multiplication. For
+$100$ major shells, more time is now spent on setting up the
+Hamiltonian matrix. In our codes we set up the Hamiltonian matrix
+before performing the computations. The total time spent on loading
+the block-structured Hamiltonian for $10^4$ single-particle states is now reduced to $82\%$ of the total
+time.  Increasing to $200$ shells, or $3\times 10^4$ basis states, the percentage of time spent on loading matrix elements for the matrix-matrix multiplication is now reduced to $59\%$. 
+This has important consequences for efficient implementations
+of coupled cluster theory. As we demonstrated above, the CCD equations
+can all be rewritten in terms of matrix-matrix multiplications. The
+above matrix-matrix multiplication accounts only for a tiny fraction
+of the computational time expenditure. Even with efficient
+matrix-matrix multiplication algorithms like Strassen's algorithm
+\cite{strassen} and optimized parallel matrix-matrix implementations,
+most of the time is actually spent and loading matrices and setting up the
+Hamiltonian matrices.  For coupled cluster calculations this has
+important consequences. It means that developing efficient parallel
+algorithms for setting up, storing and fetching matrix elements becomes
+increasingly important.  With increasing number of particles and single-particle states, one may consider computing matrix elements on the fly.
+
+We discuss now different  high-performance strategies, limiting ourselves to the basic matrix-matrix multiplication of MBPT2. 
+{\bf Gustav's part}
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that
@@ -3931,6 +4128,8 @@ from the underlying theory for the strong force and effective field
 theory.  The last exercise in this chapter replaces the simple Minnesota potential with
 realistic interaction from effective field theory. 
 
+
+
 The subsequent chapters 9, 10 and 11 show how many of the theoretical
 concepts and code elements discussed in this chapter can be used to
 add other many-body methods, without having to develop a new numerical
@@ -3946,6 +4145,7 @@ in chapter 9, 10 and 11 as well. Chapter 9 for example, uses results
 from coupled cluster theory in order to provide better ways to constrain
 the Jastrow factor, which accounts for correlations beyond a mean-field picture, 
 in Monte Carlo calculations.
+
 
 
   \section{Exercises}
@@ -4475,6 +4675,14 @@ Derive the amplitude equations of Eq.~(\ref{eq:ccd}) starting with
           \overline{H}\vert \Phi_0\rangle.
  \]
 
+  \begin{prob}\label{problem:realisticforces}
+Replace the Minnesota interaction model with realistic models for nuclear forces based on effective field theory. In particular 
+replace the Minnesota interaction with the low-order (LO) contribution which includes a contact term and a one-pion exchange
+term only. The expressions are discussed in section  \ref{subsec:forcemodels} and Eq.~(\ref{eq:eq_1PEci}). Reference \cite{ekstromPRX} contains a
+detailed compilation of all terms up to order NNLO, with tabulated values for all constants. 
+When adding realistic interaction models we recommend that you use the many-body perturbation theory codes to second order in the interaction, see the code link at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/MBPT2/src/}. 
+\end{prob}
+
   \section{Solutions to selected exercises}
   \begin{sol}{problem:prob8.1}
   To solve this problem, we start by introducing the shorthand label
@@ -4618,7 +4826,7 @@ Derive the amplitude equations of Eq.~(\ref{eq:ccd}) starting with
   The following python code sets up the quantum numbers for both
   infinite nuclear matter and neutron matter employing a cutoff in
   the value of $n$.
-  \begin{lstlisting}
+  \begin{lstlisting}[title={\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/spstatescc.py}}]
 from numpy import *
 
 nmax =2

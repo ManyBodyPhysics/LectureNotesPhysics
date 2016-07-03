@@ -14,8 +14,7 @@ Warning--I didn't find a database entry for "ordonez1992"
 Warning--I didn't find a database entry for "ordonez1994"
 Warning--I didn't find a database entry for "ordonez1996"
 Warning--I didn't find a database entry for "vankolck1999"
-Warning--I didn't find a database entry for "carlsson2016"
-Warning--I didn't find a database entry for "carlsson2014"
+Warning--I didn't find a database entry for "ekstromPRX"
 Warning--I didn't find a database entry for "barrettmusial2007"
 Warning--I didn't find a database entry for "krylov"
 Warning--I didn't find a database entry for "lanczos"
@@ -38,9 +37,10 @@ Warning--I didn't find a database entry for "twistaverage"
 Warning--I didn't find a database entry for "openmp"
 Warning--I didn't find a database entry for "mpi"
 Warning--I didn't find a database entry for "openmpi"
+Warning--I didn't find a database entry for "strassen"
 You've used 33 entries,
             2812 wiz_defined-function locations,
-            851 strings with 11204 characters,
+            852 strings with 11208 characters,
 and the built_in function-call counts, 12008 in all, are:
 = -- 761
 > -- 384
