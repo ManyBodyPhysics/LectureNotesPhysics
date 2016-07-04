@@ -12,10 +12,6 @@ J.M. Lattimer, M.~Prakash, Phys. Rep. \textbf{442}, 109 (2007)
 \bibitem{lattimer2012}
 J.M. Lattimer, Ann. Rev. Nucl. Part. Science \textbf{62}, 485 (2012)
 
-\bibitem{hebeler2012f}
-K.~Hebeler, J.M. Lattimer, C.J. Pethick, A.~Schwenk, Astrophys. J.
-  \textbf{773}, 11 (2013)
-
 \bibitem{weber1999}
 F.~Weber, \emph{Pulsars as Astrophysical Laboratories for Nuclear and Particle
   Physics} (Institute of Physics Publishing, London, 1999)
@@ -24,77 +20,51 @@ F.~Weber, \emph{Pulsars as Astrophysical Laboratories for Nuclear and Particle
 H.~Heiselberg, M.~Hjorth-Jensen, Phys. Rep. \textbf{328}, 237 (2000)
 
 \bibitem{vankolck1994}
-U.~van Kolck, Phys. Rev. C \textbf{49}, 2932 (1994).
-\newblock \doi{10.1103/PhysRevC.49.2932}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.49.2932}
+U.~van Kolck, Phys. Rev. C \textbf{49}, 2932 (1994)
 
 \bibitem{machleidt2011}
-R.~Machleidt, D.~Entem, Physics Reports \textbf{503}(1), 1  (2011).
-\newblock \doi{10.1016/j.physrep.2011.02.001}.
-\newblock
-  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370157311000457}
+Physics Reports \textbf{503}(1), 1  (2011)
 
 \bibitem{epelbaum2009}
 E.~Epelbaum, H.W. Hammer, U.G. Mei\ss{}ner, Rev. Mod. Phys. \textbf{81}, 1773
-  (2009).
-\newblock \doi{10.1103/RevModPhys.81.1773}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.81.1773}
-
-\bibitem{hammer2013}
-H.W. Hammer, A.~Nogga, A.~Schwenk, Rev. Mod. Phys. \textbf{85}, 197 (2013)
+  (2009)
 
 \bibitem{binder2013}
 S.~{Binder}, P.~{Piecuch}, A.~{Calci}, J.~{Langhammer}, P.~{Navr{\'a}til},
-  R.~{Roth}, ArXiv e-prints  (2013)
+  R.~{Roth}, ArXiv e-prints
 
 \bibitem{hergert2013}
 H.~Hergert, S.~Binder, A.~Calci, J.~Langhammer, R.~Roth, Phys. Rev. Lett.
-  \textbf{110}, 242501 (2013).
-\newblock \doi{10.1103/PhysRevLett.110.242501}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.110.242501}
+  \textbf{110}, 242501 (2013)
 
 \bibitem{roth2012}
 R.~Roth, S.~Binder, K.~Vobig, A.~Calci, J.~Langhammer, P.~Navr\'atil, Phys.
-  Rev. Lett. \textbf{109}, 052501 (2012).
-\newblock \doi{10.1103/PhysRevLett.109.052501}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.109.052501}
+  Rev. Lett. \textbf{109}, 052501 (2012)
 
 \bibitem{hagen2012a}
 G.~Hagen, M.~Hjorth-Jensen, G.R. Jansen, R.~Machleidt, T.~Papenbrock, Phys.
-  Rev. Lett. \textbf{108}, 242501 (2012).
-\newblock \doi{10.1103/PhysRevLett.108.242501}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.108.242501}
+  Rev. Lett. \textbf{108}, 242501 (2012)
 
 \bibitem{hagen2012b}
 G.~Hagen, M.~Hjorth-Jensen, G.R. Jansen, R.~Machleidt, T.~Papenbrock, Phys.
-  Rev. Lett. \textbf{109}, 032502 (2012).
-\newblock \doi{10.1103/PhysRevLett.109.032502}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.109.032502}
+  Rev. Lett. \textbf{109}, 032502 (2012)
 
 \bibitem{cipollone2013}
 A.~Cipollone, C.~Barbieri, P.~Navr\'atil, Phys. Rev. Lett. \textbf{111}, 062501
   (2013)
 
 \bibitem{hebeler2010b}
-K.~Hebeler, A.~Schwenk, Phys. Rev. C \textbf{82}, 014314 (2010).
-\newblock \doi{10.1103/PhysRevC.82.014314}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.82.014314}
+K.~Hebeler, A.~Schwenk, Phys. Rev. C \textbf{82}, 014314 (2010)
 
 \bibitem{carbone2013}
 A.~Carbone, A.~Polls, A.~Rios, Phys. Rev. C \textbf{88}, 044302 (2013)
 
 \bibitem{tetsuo2013}
-T.~Inoue, S.~Aoki, T.~Doi, T.~Hatsuda, Y.~Ikeda, N.~Ishii, K.~Murano,
+T.~Inoue, S.~Aoki, T.~%%Doi, T.~Hatsuda, Y.~Ikeda, N.~Ishii, K.~Murano,
   H.~Nemura, K.~Sasaki, Phys. Rev. Lett. \textbf{111}, 112503 (2013)
 
 \bibitem{day1967}
-B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967).
-\newblock \doi{10.1103/RevModPhys.39.719}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.39.719}
+B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967)
 
 \bibitem{brueckner1954}
 K.A. Brueckner, C.A. Levinson, H.M. Mahmoud, Phys. Rev. \textbf{95}, 217 (1954)
@@ -108,9 +78,7 @@ M.~Baldo, G.F. Burgio, Reports on Progress in Physics \textbf{75}, 026301
 
 \bibitem{baldo2012a}
 M.~Baldo, A.~Polls, A.~Rios, H.J. Schulze, I.~Vida\~na, Phys. Rev. C
-  \textbf{86}, 064001 (2012).
-\newblock \doi{10.1103/PhysRevC.86.064001}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.86.064001}
+  \textbf{86}, 064001 (2012)
 
 \bibitem{bartlett2007}
 R.J. Bartlett, M.~Musia\l{}, Rev. Mod. Phys. \textbf{79}, 291 (2007)
@@ -121,22 +89,14 @@ I.~Shavitt, R.J. Bartlett, \emph{Many-body Methods in Chemistry and Physics}
 
 \bibitem{gandolfi2009}
 S.~Gandolfi, A.Y. Illarionov, K.E. Schmidt, F.~Pederiva, S.~Fantoni, Phys. Rev.
-  C \textbf{79}, 054005 (2009).
-\newblock \doi{10.1103/PhysRevC.79.054005}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.79.054005}
+  C \textbf{79}, 054005 (2009)
 
 \bibitem{lovato2012}
 A.~Lovato, O.~Benhar, S.~Fantoni, K.E. Schmidt, Phys. Rev. C \textbf{85},
-  024003 (2012).
-\newblock \doi{10.1103/PhysRevC.85.024003}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.024003}
+  024003 (2012)
 
 \bibitem{dickhoff2004}
-W.~Dickhoff, C.~Barbieri, Progress in Particle and Nuclear Physics
-  \textbf{52}(2), 377  (2004).
-\newblock \doi{http://dx.doi.org/10.1016/j.ppnp.2004.02.038}.
-\newblock
-  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0146641004000535}
+Progress in Particle and Nuclear Physics \textbf{52}(2), 377  (2004)
 
 \bibitem{erler2013}
 J.~Erler, C.J. Horowitz, W.~Nazarewicz, M.~Rafalski, P.G. Reinhard, Phys. Rev.
@@ -145,25 +105,17 @@ J.~Erler, C.J. Horowitz, W.~Nazarewicz, M.~Rafalski, P.G. Reinhard, Phys. Rev.
 \bibitem{ekstrom2013}
 A.~Ekstr\"om, G.~Baardsen, C.~Forss\'en, G.~Hagen, M.~Hjorth-Jensen, G.R.
   Jansen, R.~Machleidt, W.~Nazarewicz, T.~Papenbrock, J.~Sarich, S.M. Wild,
-  Phys. Rev. Lett. \textbf{110}, 192502 (2013).
-\newblock \doi{10.1103/PhysRevLett.110.192502}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.110.192502}
+  Phys. Rev. Lett. \textbf{110}, 192502 (2013)
 
 \bibitem{epelbaum2002}
 E.~Epelbaum, A.~Nogga, W.~Gl\"ockle, H.~Kamada, U.G. Mei\ss{}ner, H.~Wita\l{}a,
-  Phys. Rev. C \textbf{66}, 064001 (2002).
-\newblock \doi{10.1103/PhysRevC.66.064001}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.66.064001}
+  Phys. Rev. C \textbf{66}, 064001 (2002)
 
 \bibitem{navratil2007}
-P.~Navr{\'a}til, Few-Body Systems \textbf{41}(3-4), 117 (2007).
-\newblock \doi{10.1007/s00601-007-0193-3}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1007/s00601-007-0193-3}
+Few-Body Systems \textbf{41}(3-4) (2007)
 
 \bibitem{navratil2009}
 P.~Navr{\'a}til, S.~Quaglioni, I.~Stetcu, B.R. Barrett, Journal of Physics G:
-  Nuclear and Particle Physics \textbf{36}(8), 083101 (2009).
-\newblock \urlprefix\url{http://stacks.iop.org/0954-3899/36/i=8/a=083101}
+  Nuclear and Particle Physics \textbf{36}(8), 083101
 
 \end{thebibliography}

@@ -21,7 +21,7 @@
   Physics and Astronomy and National Superconducting Cyclotron
   Laboratory, Michigan State University, East Lansing, Michigan, USA
   and Department of Physics, University of Oslo, Oslo, Norway,
-  \email{hjensen@msu.edu}}
+\email{hjensen@msu.edu}}
 
 \maketitle 
 \abstract{We present a computational approach to infinite
@@ -40,7 +40,7 @@
 
 %\maketile
 
-\section{Introduction}
+\section{Introduction}\label{sec:chap8intro}
 
 
 Studies of dense baryonic matter are of central importance to our
@@ -52,7 +52,7 @@ and astrophysical observables, spanning many orders of magnitude in
 density and several possible compositions of matter, from the crust of
 the star to a possible quark matter phase in its interior, see for
 example
-Refs.~\cite{lattimer2007,lattimer2012,hebeler2012f,weber1999,hh2000}
+Refs.~\cite{lattimer2007,lattimer2012,weber1999,hh2000}
 for discussions.  A central issue in studies of infinite nuclear
 matter is the determination of the equation of state (EoS), which can
 in turn be used to determine properties like the mass range, the
@@ -77,7 +77,7 @@ different levels of approximation.  The nuclear Hamiltonians which are
 now used routinely in nuclear structure and nuclear matter
 calculations, include both nucleon-nucleon ($NN$) and three-nucleon forces (3NFs) derived from EFT, see for
 example
-Refs.~\cite{hammer2013,binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,carbone2013}.
+Refs.~\cite{binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,carbone2013}.
 Parallel to the development of nuclear forces from EFT, which employs
 symmetries of quantum chromodynamics, there are recent and promising
 approaches to derive the EoS using forces constrained from lattice
@@ -159,7 +159,7 @@ first chapters of this book, bridging thereby the gap between the
 theory of nuclear Hamiltonians and many-body methods.
 
 
-\section{Single-particle basis, Hamiltonians and models for the nuclear force}
+\section{Single-particle basis, Hamiltonians and models for the nuclear force}\label{sec:chap8forces}
 
 \subsection{Introduction to nuclear matter and Hamiltonians}
 
@@ -1092,7 +1092,7 @@ f(q) = \exp[-q^4/\Lambda]
 \end{equation}
 and thus obtain a local three-body force.
 
-\section{Hartree-Fock theory}
+\section{Hartree-Fock theory}\label{sec:chap8hf}
 
 Hartree-Fock (HF) theory is an algorithm for finding an approximative
 expression for the ground state of a given Hamiltonian. The basic
@@ -1463,7 +1463,7 @@ if __name__ == '__main__':
   This equation demonstrates that the total energy is not given as the
   sum of the individual single-particle energies.
 
-  \section{Full Configuration Interaction Theory}\label{sec:fci}
+  \section{Full Configuration Interaction Theory}\label{sec:chap8fci}
 
   Full configuration theory (FCI), which represents a discretized
   variant of the continuous eigenvalue problem, allows for, in
@@ -1855,7 +1855,7 @@ energy of Eq.~(\ref{eq:correlationenergy}).  These
   equations are normally solved iteratively, that is we  start
   with a guess for the coefficients $C_i^a$. A common choice is to
   use perturbation theory as a starting point for the unknown coefficients. For the one-particle-one-hole coefficients, the wave operator
-(see section \ref{sec:mbpt}) to first order in the interaction is given by
+(see section \ref{sec:chap8mbpt}) to first order in the interaction is given by
   \[
    C_{i}^{a}=\frac{\langle i | \hat{f}|
      a\rangle}{\epsilon_i-\epsilon_a}.
@@ -1929,7 +1929,7 @@ where $E_{\mathrm{Ref}}$ is the reference energy.
   these possible approximative methods, namely many-body perturbation
   theory.
 
-  \section{Many-body perturbation theory}\label{sec:mbpt}
+  \section{Many-body perturbation theory}\label{sec:chap8mbpt}
 
   We assume here that we are only interested in the non-degenerate
   ground state of a given system and expand the exact wave function in
@@ -2269,7 +2269,7 @@ a selected class of diagrams. We discuss such possibilities in section \ref{sec:
 
   \subsection{Interpreting the correlation energy and the wave operator}
 
-  In section \ref{sec:fci} we showed that we could rewrite the exact state
+  In section \ref{sec:chap8fci} we showed that we could rewrite the exact state
   function for the ground state as a linear expansion in terms of all
   possible Slater determinants.  We expanded then (as an example) our
   exact state function for the ground state as
@@ -2372,11 +2372,11 @@ resummation of two-particle correlations only, these lead us to the
 so-called $G$-matrix resummation of diagrams, see for example Ref.~\cite{day1967}.
 There are however computational inexpensive methods which
 sum larger classes of correlations to infinite order in the
-interaction. This leads us to section \ref{sec:cctheory} and the final
+interaction. This leads us to section \ref{sec:chap8cctheory} and the final
 many-body method of this chapter, coupled cluster theory. 
 
 
-\section{Coupled cluster theory}\label{sec:cctheory}
+\section{Coupled cluster theory}\label{sec:chap8cctheory}
   
 Coester and Kummel developed the ideas that led to coupled cluster
 theory in the late 1950s. The basic idea is that the correlated wave function
@@ -2486,7 +2486,7 @@ The coupled cluster wavefunction is now given by
   If we truncate our equations at the CCSD level, it corresponds to
   performing a transformation of the Hamiltonian matrix of the
   following type for the six particle problem (with a two-body
-  Hamiltonian) discussed in section \ref{sec:fci}
+  Hamiltonian) discussed in section \ref{sec:chap8fci}
   \begin{table}
 \caption{Schematic representation of blocks of matrix elements which are set to zero using the CCSD approximation.}
   \begin{center}
@@ -2988,7 +2988,7 @@ The standard method for solving these equations is to
   Eq. (\ref{eq:ccd1}). The final step is then to include all terms in
   Eq. (\ref{eq:ccd}).
 
-  \section{Developing a numerical project}
+\section{Developing a numerical project}\label{sec:chap8numproject}
 
 When developing numerical projects we would like to emphasize some
 topics we feel can help in structuring a large computational project.
@@ -3227,14 +3227,13 @@ Table \ref{tab:pairingmodelsp}.
 \end{table}
 The Hamiltonian matrix for this   four-particle problem with no broken pairs is 
   \[
-  H = \left (
-  \begin{array}{cccccc}
+  H = \begin{bmatrix}
   2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\ -g/2 & 4\delta -g &
   -g/2 & -g/2 & -0 & -g/2 \\ -g/2 & -g/2 & 6\delta -g & 0 & -g/2 &
   -g/2 \\ -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\ -g/2 & 0 & -g/2
   & -g/2 & 8\delta-g & -g/2 \\ 0 & -g/2 & -g/2 & -g/2 & -g/2 &
   10\delta -g
-  \end{array} \right )
+  \end{bmatrix}
   \]
   The following python program diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
@@ -3335,7 +3334,8 @@ for a in above_fermi:
            for i in below_fermi:
                for j in below_fermi:
                    for k in below_fermi:
-                       s3 += assym(i,j,a,b)*assym(a,c,j,k)*assym(b,k,c,i)/eps((i,j),(a,b))/eps((k,j),(a,c))
+                       s3 += assym(i,j,a,b)*assym(a,c,j,k)*assym(b,k,c,i)
+                             /eps((i,j),(a,b))/eps((k,j),(a,c))
 
 # Diagram 4
 s4 = 0
@@ -3345,7 +3345,8 @@ for a in above_fermi:
             for d in above_fermi:
                 for i in below_fermi:
                     for j in below_fermi:
-                        s4 += 0.125*assym(i,j,a,b)*assym(a,b,c,d)*assym(c,d,i,j)/eps((i,j),(a,b))/eps((i,j),(c,d))
+                        s4 += 0.125*assym(i,j,a,b)*assym(a,b,c,d)*assym(c,d,i,j)
+                               /eps((i,j),(a,b))/eps((i,j),(c,d))
 
 # Diagram 5
 s5 = 0
@@ -3355,7 +3356,8 @@ for a in above_fermi:
             for j in below_fermi:
                 for k in below_fermi:
                     for l in below_fermi:
-                        s5 += 0.125*assym(i,j,a,b)*assym(k,l,i,j)*assym(a,b,k,l)/eps((i,j),(a,b))/eps((k,l),(a,b))
+                        s5 += 0.125*assym(i,j,a,b)*assym(k,l,i,j)*assym(a,b,k,l)
+                              /eps((i,j),(a,b))/eps((k,l),(a,b))
 
 # Diagram 8 
 s8 = 0
@@ -3364,7 +3366,8 @@ for a in above_fermi:
         for i in below_fermi:
             for j in below_fermi:
                 for k in below_fermi:
-                    s8 -= 0.5*assym(i,j,a,b)*assym(a,b,i,k)*f(k,j)/eps((i,j),(a,b))/eps((i,k),(a,b))
+                    s8 -= 0.5*assym(i,j,a,b)*assym(a,b,i,k)*f(k,j)
+                            /eps((i,j),(a,b))/eps((i,k),(a,b))
 
 # Diagram 9 
 s9 = 0
@@ -3373,7 +3376,8 @@ for a in above_fermi:
         for c in above_fermi:
             for i in below_fermi:
                 for j in below_fermi:
-                    s9 += 0.5*assym(i,j,a,b)*assym(a,c,i,j)*f(b,c)/eps((i,j),(a,b))/eps((i,j),(a,c))
+                    s9 += 0.5*assym(i,j,a,b)*assym(a,c,i,j)*f(b,c)
+                        /eps((i,j),(a,b))/eps((i,j),(a,c))
 
 ga = linspace(-1,1,20)
 e1 = []
@@ -5011,15 +5015,125 @@ for n in range(nshell):
   determination of the terms that contribute to the matrix element.
 
   \section*{Code structure with benchmark calculations}
+In section \ref{sec:chap8numproject} we emphasized several elements we
+feel are important during the various development stages of a
+numerical project. Here we would like to reiterate some of these. In
+particular we would like to stress modularization of code and
+refactoring into general classes which can easily be extended upon in
+order to accomodate new physical systems and/or many-methods.
 
+The codes of this chapter, listed at the link
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/CCD/src},
+abide to this general philosophy via two major general classes, one
+for the physical systems under study and one for the specific
+many-body methods. The latter allows us, in a fairly straightforward
+way to add new many-body methods like the in-medium similarity
+renormalization group approach of chapter 10 or to extend our nuclear
+matter calculations to systems like the homogenous electron gas in two
+or three dimensions.
+
+To be more explicit, the general class  {\em abstractSPbasis} allows easily for extensions the homogenous electron gas or systems like quantum dots.  The abstract class is defined as (for the complete code see the above link)
+\begin{lstlisting}
+#ifndef ABSTRACTSPBASIS_HPP
+#define ABSTRACTSPBASIS_HPP
+
+class abstractSPbasis{
+public:
+  // double g;
+  // double density;
+  // double r_s;
+  // int tzMax;
+  // int nMax;
+  // int shellMax;
+  int Nspstates;
+  int Nparticles;
+  int Nchannels;
+  int ** indexMap;
+  double * spEnergy;
+  channelBundle * chanValue;
+  channelBundle * chanModValue;
+
+  abstractSPbasis() {}
+  // abstractSPbasis(double densityIn, int tzMaxIn, int shellMaxIn, int NparticlesIn);
+  virtual void generateIndexMap() = 0;
+  virtual void generateBasis() = 0;
+  virtual int checkSympqrs(int p, int q, int r, int s) = 0;
+  virtual int checkModSympqrs(int p, int q, int r, int s) = 0;
+  virtual int checkChanSym(int p, int q, int ichan) = 0;  
+  virtual int checkChanModSym(int p, int q, int ichan) = 0;  
+  virtual void setUpTwoStateChannels() = 0;
+  virtual void printBasis() = 0;
+  virtual void deallocate() = 0;  
+
+  virtual double calc_TBME(int p, int q, int r, int s) = 0;
+};
+#endif /*ABSTRACTSPBASIS_HPP*/
+\end{lstlisting} 
+This class defines general quantum numbers and functions that can in turn be inhereted by other systems.
+The inheritance diagram for this specific class is shown in Fig.~\ref{fig:absinherit}.
+\begin{figure}
+\caption{Inheritance diagram for the abstract class.} \label{fig:absinherit}
+\begin{center}
+\includegraphics{Chapter8-figures/classabstractspbasis.pdf}
+\end{center}
+\end{figure}
+As an example, the class that is used in the infinite matter calculations is shown here.
+\begin{lstlisting}
+#ifndef INFMATTER_HPP
+#define INFMATTER_HPP
+
+#include "abstractSPbasis.hpp"
+
+// struct channelBundle{
+//   int chanNx;
+//   int chanNy;
+//   int chanNz;
+//   int chanSz;
+//   int chanTz; 
+// };
+
+class infMatterSPBasis: public abstractSPbasis{
+public:
+   double density;
+   int tzMax;
+   int nMax;
+   int shellMax;
+  // int Nspstates;
+  // int Nparticles;
+  // int Nchannels;
+  // int ** indexMap;
+  // double * spEnergy;
+  // channelBundle * chanValue;
+  // channelBundle * chanModValue;
+
+  infMatterSPBasis(double densityIn, int tzMaxIn, int shellMaxIn, int NparticlesIn);// : abstractSPbasis(densityIn, tzMaxIn, shellMaxIn, NparticlesIn) {}
+  void generateIndexMap();
+  void generateBasis();
+  int checkSympqrs(int p, int q, int r, int s);
+  int checkModSympqrs(int p, int q, int r, int s);
+  int checkChanSym(int p, int q, int ichan);
+  int checkChanSym2(int p, int q, int chanNx, int chanNy, int chanNz, int chanSz, int chanTz);
+int checkChanModSym2(int p, int q, int chanNx, int chanNy, int chanNz, int chanSz, int chanTz);
+  int checkChanModSym(int p, int q, int ichan);  
+  void setUpTwoStateChannels();
+  void printBasis();
+  void deallocate();
+
+  double calc_TBME(int p, int q, int r, int s);
+  int spinExchangeMtxEle(int i, int j, int k, int l);
+  int kron_del(int i, int j);
+
+};
+
+#endif /* INFMATTER_HPP */
+\end{lstlisting}
 
   \begin{acknowledgement}
   We are much indebted to Thomas Papenbrock for many discussions on
-  many-body physics.  Computational resources were provided by
+  many-body theory.  Computational resources were provided by
   Michigan State University and the Research Council of Norway via the
   Notur project (Supercomputing grant NN2977K).  This work was
-  supported by NSF Grant No. PHY-1404159 (Michigan State University)
-  and the Research Council of Norway under contract ISP-Fysikk/216699.
+  supported by NSF Grant No.~PHY-1404159 (Michigan State University).
   \end{acknowledgement}
 
 

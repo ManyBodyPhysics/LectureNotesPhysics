@@ -142,25 +142,25 @@
 \author{Scott K.~Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}
 \institute{Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and Heiko Hergert  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{hergert@nscl.msu.edu}, \and Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Titus Morris  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{morrist@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
 \maketitle
-\abstract{We present a comprehensive review of the In-Medium Similarity
-Renormalization Group (IM-SRG), a novel \emph{ab inito} method for
-nuclei. The IM-SRG employs a continuous unitary transformation of the
+\abstract{We present applications  of the In-Medium Similarity
+Renormalization Group (IM-SRG) to studies of infinite nuclear matter, extending the codes discussed in chapter 8. 
+The IM-SRG employs a continuous unitary transformation of the
 many-body Hamiltonian to decouple the ground state from all
 excitations, thereby solving the many-body problem. Starting from a
 pedagogical introduction of the underlying concepts, the IM-SRG flow 
-equations are developed for systems with and without explicit spherical
+equations are developed for various physical systems
 symmetry. We study different IM-SRG generators that
-achieve the desired decoupling, and how they affect the details of the IM-SRG
-flow. Based on calculations of closed-shell nuclei, we assess possible
-truncations for closing the system of flow equations in practical
-applications, as well as choices of the reference state.}
+achieve the desired decoupling, and how they affect the details of the IM-SRG and how the results compare with the coupled cluster theory results of
+chapter 8.}
 
 \section{Introduction}
 
-\section{\label{sec:floweq}IM-SRG Flow Equations}
-
-\subsection{\label{sec:floweq_prelim}Preliminaries}
-The Similarity Renormalization Group (SRG) was first formulated by Wegner \cite{Wegner:1994dk} and Glazek and Wilson \cite{Glazek:1993il} to study condensed matter systems and light-front quantum field theories, respectively.  From a mathematical point of view, the philosophy behind the SRG is to render the Hamiltonian $\HO(s)$ diagonal via a continuous unitary transformation 
+The Similarity Renormalization Group (SRG) was first formulated by
+Wegner \cite{Wegner:1994dk} and Glazek and Wilson \cite{Glazek:1993il}
+to study condensed matter systems and light-front quantum field
+theories, respectively.  From a mathematical point of view, the
+philosophy behind the SRG is to render the Hamiltonian $\HO(s)$
+diagonal via a continuous unitary transformation
 \begin{equation}\label{eq:cut}
   \HO(s)=\UO(s)\HO(0)\UUO(s)\,,
 \end{equation}
