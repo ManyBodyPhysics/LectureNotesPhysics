@@ -17,7 +17,9 @@ J.J. Shepherd, G.H. Booth, A.~Gr\"uneis, A.~Alavi, Phys. Rev. B \textbf{85},
   081103 (2012)
 
 \bibitem{day1967}
-B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967)
+B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967).
+\newblock \doi{10.1103/RevModPhys.39.719}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.39.719}
 
 \bibitem{shapiro}
 S.L. Shapiro, S.A. Teukolsky, \emph{Black holes, white dwarfs, and neutron

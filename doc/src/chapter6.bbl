@@ -7,10 +7,12 @@
   \urlstyle{rm}\Url}\fi
 
 \bibitem{Weinberg:1990rz}
-S.~Weinberg, Phys. Lett. \textbf{B251}, 288 (1990)
+S.~Weinberg, Phys. Lett. \textbf{B251}, 288 (1990).
+\newblock \doi{10.1016/0370-2693(90)90938-3}
 
 \bibitem{Weinberg:1991um}
-S.~Weinberg, Nucl. Phys. \textbf{B363}, 3 (1991)
+S.~Weinberg, Nucl. Phys. \textbf{B363}, 3 (1991).
+\newblock \doi{10.1016/0550-3213(91)90231-L}
 
 \bibitem{Ordonez:1992xp}
 C.~Ordonez, U.~van Kolck, Phys. Lett. \textbf{B291}, 459 (1992)
@@ -22,23 +24,29 @@ C.~Ordonez, L.~Ray, U.~van Kolck, Phys. Rev. Lett. \textbf{72}, 1982 (1994)
 U.~van Kolck, Phys. Rev. \textbf{C49}, 2932 (1994)
 
 \bibitem{Epelbaum:1998hg}
-E.~Epelbaum, W.~Gl{\"o}ckle, U.G. Mei{\ss}ner,
+E.~Epelbaum, W.~Gl{\"o}ckle, U.G. Mei{\ss}ner, Phys. Lett. \textbf{B439}, 1
+  (1998)
 
 \bibitem{Epelbaum:1998ka}
-E.~Epelbaum, W.~Gl{\"o}ckle, U.G. Mei{\ss}ner,
+E.~Epelbaum, W.~Gl{\"o}ckle, U.G. Mei{\ss}ner, Nucl. Phys. \textbf{A637}, 107
+  (1998)
 
 \bibitem{Bedaque:2002mn}
-P.F. Bedaque, U.~van Kolck,
+P.F. Bedaque, U.~van Kolck, Ann. Rev. Nucl. Part. Sci. \textbf{52}, 339 (2002)
 
 \bibitem{Epelbaum:2008ga}
 E.~Epelbaum, H.W. Hammer, U.G. Meissner, Rev. Mod. Phys. \textbf{81}, 1773
-  (2009)
+  (2009).
+\newblock \doi{10.1103/RevModPhys.81.1773}
 
 \bibitem{Lee:2008fa}
-D.~Lee, Prog. Part. Nucl. Phys. \textbf{63}, 117 (2009)
+D.~Lee, Prog. Part. Nucl. Phys. \textbf{63}, 117 (2009).
+\newblock \doi{10.1016/j.ppnp.2008.12.001}
 
 \bibitem{Drut:2012a}
-
+J.E. {Drut}, A.N. {Nicholson}, J. Phys. G: Nucl. Part. Phys. \textbf{40}(4),
+  043101 (2013).
+\newblock \doi{10.1088/0954-3899/40/4/043101}
 
 \bibitem{Hubbard:1959ub}
 J.~Hubbard, Phys. Rev. Lett. \textbf{3}, 77 (1959)
@@ -62,112 +70,138 @@ S.~Duane, A.D. Kennedy, B.J. Pendleton, D.~Roweth, Phys. Lett. \textbf{B195},
   216 (1987)
 
 \bibitem{Muller:1999cp}
-H.M. M{\"u}ller, S.E. Koonin, R.~Seki, U.~van Kolck,
+H.M. M{\"u}ller, S.E. Koonin, R.~Seki, U.~van Kolck, Phys. Rev. \textbf{C61},
+  044320 (2000)
 
 \bibitem{Lee:2004si}
-D.~Lee, B.~Borasoy, T.~Sch{\"a}fer,
+D.~Lee, B.~Borasoy, T.~Sch{\"a}fer, Phys. Rev. \textbf{C70}, 014007 (2004)
 
 \bibitem{Lee:2004qd}
-D.~Lee, T.~Sch{\"a}fer,
+D.~Lee, T.~Sch{\"a}fer, Phys. Rev. \textbf{C72}, 024006 (2005)
 
 \bibitem{Lee:2005is}
-D.~Lee, T.~Sch{\"a}fer,
+D.~Lee, T.~Sch{\"a}fer, Phys. Rev. \textbf{C73}, 015201 (2006)
 
 \bibitem{Lee:2005it}
-D.~Lee, T.~Sch{\"a}fer,
+D.~Lee, T.~Sch{\"a}fer, Phys. Rev. \textbf{C73}, 015202 (2006)
 
 \bibitem{Borasoy:2005yc}
-B.~Borasoy, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner,
+B.~Borasoy, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Nucl. Phys. \textbf{A768}, 179
+  (2006)
 
 \bibitem{Borasoy:2006qn}
 B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Meissner, Eur. Phys. J.
-  \textbf{A31}, 105 (2007)
+  \textbf{A31}, 105 (2007).
+\newblock \doi{10.1140/epja/i2006-10154-1}
 
 \bibitem{Borasoy:2007vi}
-B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner,
+B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Eur. Phys. J.
+  \textbf{A35}, 343 (2008)
 
 \bibitem{Borasoy:2007vk}
-B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner,
+B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Eur. Phys. J.
+  \textbf{A35}, 357 (2008)
 
 \bibitem{Wlazlowski:2014jna}
-
+G.~Wlaz{\l}owski, J.W. Holt, S.~Moroz, A.~Bulgac, K.J. Roche, Phys. Rev. Lett.
+  \textbf{113}(18), 182503 (2014).
+\newblock \doi{10.1103/PhysRevLett.113.182503}
 
 \bibitem{Epelbaum:2009zs}
-
+E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Eur. Phys. J. \textbf{A41},
+  125 (2009)
 
 \bibitem{Epelbaum:2009pd}
 E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Meissner, Phys. Rev. Lett. \textbf{104},
-  142501 (2010)
+  142501 (2010).
+\newblock \doi{10.1103/PhysRevLett.104.142501}
 
 \bibitem{Epelbaum:2011md}
 E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Meissner, Phys. Rev. Lett. \textbf{106},
-  192501 (2011)
+  192501 (2011).
+\newblock \doi{10.1103/PhysRevLett.106.192501}
 
 \bibitem{Epelbaum:2012qn}
 E.~Epelbaum, H.~Krebs, T.A. Lahde, D.~Lee, U.G. Meissner, Phys. Rev. Lett.
-  \textbf{109}, 252501 (2012)
+  \textbf{109}, 252501 (2012).
+\newblock \doi{10.1103/PhysRevLett.109.252501}
 
 \bibitem{Epelbaum:2012iu}
 E.~Epelbaum, H.~Krebs, T.A. Lahde, D.~Lee, U.G. Meiﬂner, Phys. Rev. Lett.
-  \textbf{110}(11), 112502 (2013)
+  \textbf{110}(11), 112502 (2013).
+\newblock \doi{10.1103/PhysRevLett.110.112502}
 
 \bibitem{Lahde:2013uqa}
 T.A. Lahde, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Meiﬂner, G.~Rupak, Phys. Lett.
-  \textbf{B732}, 110 (2014)
+  \textbf{B732}, 110 (2014).
+\newblock \doi{10.1016/j.physletb.2014.03.023}
 
 \bibitem{Epelbaum:2013paa}
 E.~Epelbaum, H.~Krebs, T.A. Lahde, D.~Lee, U.G. Meiﬂner, G.~Rupak, Phys. Rev.
-  Lett. \textbf{112}(10), 102501 (2014)
+  Lett. \textbf{112}(10), 102501 (2014).
+\newblock \doi{10.1103/PhysRevLett.112.102501}
 
 \bibitem{Elhatisari:2016owd}
 S.~Elhatisari, et~al.,   (2016)
 
 \bibitem{Rupak:2013aue}
-
+G.~Rupak, D.~Lee, Phys. Rev. Lett. \textbf{111}(3), 032502 (2013).
+\newblock \doi{10.1103/PhysRevLett.111.032502}
 
 \bibitem{Rupak:2014xza}
-
+G.~Rupak, P.~Ravi, Phys. Lett. \textbf{B741}, 301 (2014).
+\newblock \doi{10.1016/j.physletb.2014.12.055}
 
 \bibitem{Elhatisari:2015iga}
 S.~Elhatisari, D.~Lee, G.~Rupak, E.~Epelbaum, H.~Krebs, T.A. L{\"a}hde, T.~Luu,
-  U.G. Mei{\ss}ner, Nature \textbf{528}, 111 (2015)
+  U.G. Mei{\ss}ner, Nature \textbf{528}, 111 (2015).
+\newblock \doi{10.1038/nature16067}
 
 \bibitem{Luscher:1985dn}
 M.~L{\"u}scher, Commun. Math. Phys. \textbf{104}, 177 (1986)
 
 \bibitem{Luscher:1986pf}
-M.~L{\"u}scher, Commun. Math. Phys. \textbf{105}, 153 (1986)
+M.~L{\"u}scher, Commun. Math. Phys. \textbf{105}, 153 (1986).
+\newblock \doi{10.1007/BF01211097}
 
 \bibitem{Luscher:1991ux}
 M.~L{\"u}scher, Nucl. Phys. \textbf{B354}, 531 (1991)
 
 \bibitem{Borasoy:2007vy}
 B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Meissner, Eur.Phys.J.
-  \textbf{A34}, 185
+  \textbf{A34}, 185 (2007).
+\newblock \doi{10.1140/epja/i2007-10500-9}
 
 \bibitem{Carlson:1984}
-J.~Carlson, V.~Pandharipande, R.~Wiringa,
+J.~Carlson, V.~Pandharipande, R.~Wiringa, Nucl. Phys. A \textbf{424}(1), 47
+  (1984).
+\newblock \doi{http://dx.doi.org/10.1016/0375-9474(84)90127-1}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0375947484901271}
 
 \bibitem{Lu:2015riz}
-
+B.N. Lu, T.A. L{\"a}hde, D.~Lee, U.G. Mei{\ss}ner,   (2015)
 
 \bibitem{Pine:2013zja}
-
+M.~Pine, D.~Lee, G.~Rupak, Eur. Phys. J. \textbf{A49}, 151 (2013).
+\newblock \doi{10.1140/epja/i2013-13151-3}
 
 \bibitem{Elhatisari:2014lka}
-
+S.~Elhatisari, D.~Lee, Phys. Rev. \textbf{C90}(6), 064001 (2014).
+\newblock \doi{10.1103/PhysRevC.90.064001}
 
 \bibitem{Rokash:2015hra}
-
+A.~Rokash, M.~Pine, S.~Elhatisari, D.~Lee, E.~Epelbaum, et~al.,   (2015)
 
 \bibitem{Creutz:1988wv}
 M.~Creutz, Phys. Rev. \textbf{D38}, 1228 (1988)
 
 \bibitem{Creutz:1999zy}
-M.~Creutz,
+M.~Creutz, Found. Phys. \textbf{30}, 487 (2000)
 
 \bibitem{Carlson:2014vla}
 J.~Carlson, S.~Gandolfi, F.~Pederiva, S.C. Pieper, R.~Schiavilla, K.E. Schmidt,
-  R.B. Wiringa, Rev. Mod. Phys. \textbf{87}, 1067 (2015)
+  R.B. Wiringa, Rev. Mod. Phys. \textbf{87}, 1067 (2015).
+\newblock \doi{10.1103/RevModPhys.87.1067}
 
 \end{thebibliography}

@@ -11,13 +11,14 @@ K.G. Wilson, Rev. Mod. Phys. \textbf{55}, 583 (1983)
 
 \bibitem{Lepage-89}
 G.P. Lepage, \emph{From Actions to Answers (TASI-89)} (World Scientific,
-  Singapore, 1989), chap. What is Renormalization?, pp. 133--269
+  Singapore, 1989), chap. What is Renormalization?, p. 133
 
 \bibitem{Weinberg:1978kz}
 S.~Weinberg, Physica A \textbf{96}, 327 (1979)
 
 \bibitem{Kaplan:1995uv}
-D.B. Kaplan,   (1995)
+D.B. Kaplan,   (1995).
+\newblock \urlprefix\url{http://arxiv.org/abs/nucl-th/9506035}
 
 \bibitem{Kaplan:2005es}
 D.B. Kaplan,  (2005)
@@ -36,7 +37,8 @@ P.R. Hagen, Effective field theory for halo nuclei.
 \newblock Ph.D. thesis, Bonn University (2014)
 
 \bibitem{Braaten:2004rn}
-E.~Braaten, H.W. Hammer, Phys. Rept. \textbf{428}, 259 (2006)
+E.~Braaten, H.W. Hammer, Phys. Rept. \textbf{428}, 259 (2006).
+\newblock \doi{10.1016/j.physrep.2006.03.001}
 
 \bibitem{Beane:2000fx}
 S.R. Beane, P.F. Bedaque, W.C. Haxton, D.R. Phillips, M.J. Savage, \emph{At The
@@ -54,7 +56,8 @@ P.F. Bedaque, H.W. Hammer, U.~van Kolck, Phys. Lett. B \textbf{569}, 159 (2003)
 U.~van Kolck, Nucl. Phys. A \textbf{645}, 273 (1999)
 
 \bibitem{Kaplan:1998we}
-D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. \textbf{B534}, 329 (1998)
+D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. \textbf{B534}, 329 (1998).
+\newblock \doi{10.1016/S0550-3213(98)00440-4}
 
 \bibitem{Kaplan:1996nv}
 D.B. Kaplan, Nucl. Phys. B \textbf{494}, 471 (1997)
@@ -70,7 +73,8 @@ V.F. Kharchenko, Sov. J. Nucl. Phys. \textbf{16}, 173 (1973)
 
 \bibitem{Bedaque:1998kg}
 P.F. Bedaque, H.W. Hammer, U.~van Kolck, Phys. Rev. Lett. \textbf{82}, 463
-  (1999)
+  (1999).
+\newblock \doi{10.1103/PhysRevLett.82.463}
 
 \bibitem{Efimov:1970aa}
 V.~Efimov, Phys. Lett. B \textbf{33}(8), 563 (1970)
@@ -86,7 +90,8 @@ J.~Ulmanis, S.~H\"afner, R.~Pires, F.~Werner, D.S. Petrov, E.D. Kuhnle,
   M.~Weidem\"uller, Phys. Rev. A \textbf{93}, 022707 (2016)
 
 \bibitem{Bedaque:1998km}
-P.F. Bedaque, H.W. Hammer, U.~van Kolck, Nucl. Phys. \textbf{A646}, 444 (1999)
+P.F. Bedaque, H.W. Hammer, U.~van Kolck, Nucl. Phys. \textbf{A646}, 444 (1999).
+\newblock \doi{10.1016/S0375-9474(98)00650-2}
 
 \bibitem{Konig:2014ufa}
 S.~K{\"o}nig, H.W. Grie{\ss}hammer, H.W. Hammer, J. Phys. G \textbf{42}, 045101
@@ -100,22 +105,27 @@ M.E. Peskin, D.V. Schroeder, \emph{An Introduction to Quantum Field Theory}
   (Westview Press, 1995)
 
 \bibitem{Weinberg:1990rz}
-S.~Weinberg, Phys. Lett. \textbf{B251}, 288 (1990)
+S.~Weinberg, Phys. Lett. \textbf{B251}, 288 (1990).
+\newblock \doi{10.1016/0370-2693(90)90938-3}
 
 \bibitem{Weinberg:1991um}
-S.~Weinberg, Nucl. Phys. \textbf{B363}, 3 (1991)
+S.~Weinberg, Nucl. Phys. \textbf{B363}, 3 (1991).
+\newblock \doi{10.1016/0550-3213(91)90231-L}
 
 \bibitem{Kaplan:1996xu}
-D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. \textbf{B478}, 629 (1996)
+D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. \textbf{B478}, 629 (1996).
+\newblock \doi{10.1016/0550-3213(96)00357-4}
 
 \bibitem{Kaplan:1998tg}
-D.B. Kaplan, M.J. Savage, M.B. Wise, Phys. Lett. \textbf{B424}, 390 (1998)
+D.B. Kaplan, M.J. Savage, M.B. Wise, Phys. Lett. \textbf{B424}, 390 (1998).
+\newblock \doi{10.1016/S0370-2693(98)00210-X}
 
 \bibitem{Fleming:1999ee}
-S.~Fleming, T.~Mehen, I.W. Stewart, Nucl. Phys. \textbf{A677}, 313 (2000)
+S.~Fleming, T.~Mehen, I.W. Stewart, Nucl. Phys. \textbf{A677}, 313 (2000).
+\newblock \doi{10.1016/S0375-9474(00)00221-9}
 
 \bibitem{Bedaque:2002mn}
-P.F. Bedaque, U.~van Kolck,
+P.F. Bedaque, U.~van Kolck, Ann. Rev. Nucl. Part. Sci. \textbf{52}, 339 (2002)
 
 \bibitem{Nogga:2005hy}
 A.~Nogga, R.G.E. Timmermans, U.~van Kolck, Phys. Rev. C \textbf{72}, 054006
@@ -126,10 +136,12 @@ M.C. Birse, Phys. Rev. C \textbf{74}, 014003 (2006)
 
 \bibitem{Epelbaum:2008ga}
 E.~Epelbaum, H.W. Hammer, U.G. Meissner, Rev. Mod. Phys. \textbf{81}, 1773
-  (2009)
+  (2009).
+\newblock \doi{10.1103/RevModPhys.81.1773}
 
 \bibitem{Machleidt:2011zz}
-R.~Machleidt, D.R. Entem, Phys. Rept. \textbf{503}, 1 (2011)
+R.~Machleidt, D.R. Entem, Phys. Rept. \textbf{503}, 1 (2011).
+\newblock \doi{10.1016/j.physrep.2011.02.001}
 
 \bibitem{Epelbaum:2006pt}
 E.~Epelbaum, U.G. Mei{\ss}ner, Few Body Syst. \textbf{54}, 2175 (2013)
