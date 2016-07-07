@@ -4084,7 +4084,30 @@ increasingly important.  With increasing number of particles and single-particle
 
 We discuss now different  high-performance strategies, limiting ourselves to the basic matrix-matrix multiplication of MBPT2. 
 The simplest possible extension to our algorithm is to implement efficient algorithms for matrix-matrix multiplications. 
-In our code above we have implemented the matrix-matrix multiplication using a straightforward implementation, fetching each matrix elements when needed. Furthermore, we include an explicit evaluation of the energy denominators as well. 
+In our code above we have implemented the matrix-matrix multiplication using a straightforward implementation, fetching each matrix elements when needed. Furthermore, we include an explicit evaluation of the energy denominators as well. A first possible improvement would be to replace the smarter algorithm with efficient matrix-matrix and/or matrix-vector multiplication functions from for example BLAS \cite{blas}. 
+In order to do so, it is convenient to set up the matrices as follows (here we use {\em armadillo} \cite{armadillo} for declaring and setting up matrices)
+\begin{lstlisting}
+// calculate the 2nd Order Many-Body Perturbation Theory correlation energy 
+double MBPT2MatrixMatrix(int numChannels)
+{
+  double corr = 0.;  
+  for(int ichan = 0; ichan < numChannels; ichan++){    
+    int hh = getHoleConfigs(ichan);
+    int pp = getParticleConfigs(ichan);
+    mat V(hh,pp), T(pp,hh);
+    //  Here we fetch the interaction matrix V and the matrix T that includes the 
+   //   interaction and the energy denominator
+    FetchMatrices(ichan, V, T);
+    for(int hhIndex = 0; hhIndex < hh; hhIndex++){
+	corr += sum(V(hhIndex,:)*T(:,hhIndex);
+      }
+    }
+  }
+  corr = 0.25*corr;
+  return corr;
+} // end MBPT2corr
+\end{lstlisting}
+
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that

@@ -214,14 +214,14 @@
 \contentsline {subsection}{\numberline {8.4.1}A non-practical way of solving the eigenvalue problem}{251}{subsection.8.4.1}
 \contentsline {subsection}{\numberline {8.4.2}Short summary}{252}{subsection.8.4.2}
 \contentsline {section}{\numberline {8.5}Many-body perturbation theory}{253}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}Interpreting the correlation energy and the wave operator}{257}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.1}Interpreting the correlation energy and the wave operator}{258}{subsection.8.5.1}
 \contentsline {section}{\numberline {8.6}Coupled cluster theory}{260}{section.8.6}
 \contentsline {subsection}{\numberline {8.6.1}A quick tour of Coupled Cluster theory}{260}{subsection.8.6.1}
-\contentsline {subsection}{\numberline {8.6.2}The CCD approximation}{266}{subsection.8.6.2}
-\contentsline {subsection}{\numberline {8.6.3}Approximations to the full CCD equations.}{267}{subsection.8.6.3}
-\contentsline {section}{\numberline {8.7}Developing a numerical project}{268}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}Developing a CCD code for infinite matter}{269}{subsection.8.7.1}
-\contentsline {subsection}{\numberline {8.7.2}High-performance computing and analysis of the MBPT program}{288}{subsection.8.7.2}
+\contentsline {subsection}{\numberline {8.6.2}The CCD approximation}{265}{subsection.8.6.2}
+\contentsline {subsection}{\numberline {8.6.3}Approximations to the full CCD equations.}{266}{subsection.8.6.3}
+\contentsline {section}{\numberline {8.7}Developing a numerical project}{267}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Developing a CCD code for infinite matter}{268}{subsection.8.7.1}
+\contentsline {subsection}{\numberline {8.7.2}High-performance computing and analysis of the MBPT program}{287}{subsection.8.7.2}
 \contentsline {section}{\numberline {8.8}Conclusions}{291}{section.8.8}
 \contentsline {section}{\numberline {8.9}Exercises}{292}{section.8.9}
 \contentsline {section}{\numberline {8.10}Solutions to selected exercises}{298}{section.8.10}

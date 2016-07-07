@@ -52,9 +52,10 @@ Warning--I didn't find a database entry for "openmp"
 Warning--I didn't find a database entry for "mpi"
 Warning--I didn't find a database entry for "openmpi"
 Warning--I didn't find a database entry for "strassen"
+Warning--I didn't find a database entry for "armadillo"
 You've used 31 entries,
             2812 wiz_defined-function locations,
-            842 strings with 10888 characters,
+            843 strings with 10897 characters,
 and the built_in function-call counts, 11345 in all, are:
 = -- 722
 > -- 361
