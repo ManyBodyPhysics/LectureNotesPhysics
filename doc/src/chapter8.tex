@@ -493,7 +493,7 @@ with the anti-symmetrized matrix element
 In this and the forthcoming chapters we will limit ourselves to
 two-body interactions at most.  Throughout this chapter and the subsequent three we will drop the subscript $AS$ and use only anti-symmetrized matrix elements.
 
-Using the ansatz for the ground state $\vert \Phi_0$ as new reference
+Using the ansatz for the ground state $\vert \Phi_0\rangle$ as new reference
 vacuum state, we need to redefine the anticommutation relations to
 \[
 \left\{a_p^\dagger, a_q \right\}= \delta_{pq}, p, q \leq F,
@@ -582,7 +582,7 @@ k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm
 The operator for the kinetic energy can be written as, see problem
 \ref{problem:prob8kinetic},
 \[
-\hat{T}=\sum_{\mathbf{p}\sigma_p}\frac{\hbar^2k_P^2}{2m}a_{\mathbf{p}\sigma}^{\dagger}a_{\mathbf{p}\sigma_p}.
+\hat{T}=\sum_{\mathbf{p}\sigma_p}\frac{\hbar^2k_P^2}{2m}a_{\mathbf{p}\sigma_p}^{\dagger}a_{\mathbf{p}\sigma_p}.
 \]
 When using periodic boundary conditions, the discrete-momentum
 single-particle basis functions (excluding spin and/or isospin degrees
@@ -665,7 +665,7 @@ relation
 \[
   V= L^3= \frac{A}{n}.
 \]
-Wit $L$ we can to define the spacing between various
+With $L$ we can to define the spacing between various
 $k$-values given by
 \[
   \Delta k = \frac{2\pi}{L}.
@@ -820,7 +820,7 @@ equation.
 The interaction we will use for these calculations is a semirealistic
 nucleon-nucleon potential known as the Minnesota potential
 \cite{minnesota} which has the form, $V_{\alpha}\left(
-r\right)=V_{\alpha}\exp{-(\alpha r^{2})}$. The spin and isospin
+r\right)=V_{\alpha}\exp{(-\alpha r^{2})}$. The spin and isospin
 dependence of the Minnesota potential is given by,
 \begin{equation}
 V\left( r\right)=\frac{1}{2}\left( V_{R}+\frac{1}{2}\left(
@@ -893,7 +893,7 @@ with
 \Delta_i \equiv d_i + \frac{n_i}{2} - 2 \, ,
 \label{eq_Deltai}
 \end{equation}
-where $C$ denotes the number of separately connected pieces and $L$
+where $A$ labels the number of nucleons, $C$ denotes the number of separately connected pieces and $L$
 the number of loops in the diagram; $d_i$ is the number of derivatives
 or pion-mass insertions and $n_i$ the number of nucleon fields
 (nucleon legs) involved in vertex $i$; the sum runs over all vertices
@@ -1186,12 +1186,7 @@ overlap
    \phi_{\lambda}({\bf r}) = \langle {\bf r} | \lambda \rangle .
 \]
 In our discussions we will use our definitions of single-particle
-states above and below the Fermi ($F$).  Levels given by the labels
-$ijkl\dots \le F$ refer to single-hole states and $abcd\dots > F$ for
-so-called particle states.  For general single-particle states we
-employ the labels $pqrs\dots$.
-
-
+states above and below the Fermi ($F$).  
 
 
 We use greek letters to refer to our original single-particle
@@ -1442,10 +1437,8 @@ if __name__ == '__main__':
   which results in
   \[
     E_0^{HF} = \sum_{i\le F}^A \varepsilon_i^{HF} +
-    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij
-      |\hat{v}|ij \rangle-\langle
-      ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i
-    |\hat{u}^{HF}| i\rangle.
+    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left\langle ij\vert
+      \hat{v}\vert ij \rangle-\langle-\sum_{i\le F}^A \langle i\vert\hat{u}^{HF}\vert i\rangle.
   \]
   Our single-particle states $ijk\dots$ are now single-particle states
   obtained from the solution of the Hartree-Fock equations.
@@ -1507,7 +1500,7 @@ if __name__ == '__main__':
   possible Slater determinants. Multiplying this with the number of
   proton Slater determinants we end up with approximately $d\sim 10^{15}$ 
   possible Slater determinants and a Hamiltonian matrix of
-  dimension $10^{15}\times 10^{15}$, and intractable problem if we wish to diagonalize the Hamiltonian matrix. The
+  dimension $10^{15}\times 10^{15}$, an intractable problem if we wish to diagonalize the Hamiltonian matrix. The
   dimensionality can be reduced if we look at specific symmetries,
   however these symmetries will never reduce the problem to
   dimensionalities which can be handled by standard eigenvalue
@@ -1714,11 +1707,11 @@ A given
   \end{center}
   \end{table}
   if the Hamiltonian contains at most a two-body interaction, as
-  demonstrated in problem \ref{prob:hamiltoniansetup}.  If we use a
-  Hartree-Fock basis, this corresponds to a particular unitary
-  transformation where matrix elements of the type $\langle 0p-0h
-  \vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 |
-  \hat{H}|\Phi_{i}^{a}\rangle=0$ and our Hamiltonian matrix becomes
+  demonstrated in problem \ref{problem:hamiltoniansetup}.  If we use a
+  so-called canonical Hartree-Fock basis \cite{shavittbartlett2009}, this corresponds to a particular unitary
+  transformation where matrix elements of the type 
+$\langle 0p-0h\vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 |\hat{H}|\Phi_{i}^{a}\rangle=0$.
+With a canonical Hartree-Fock basis our Hamiltonian matrix reads
   \begin{table}[h]
   \begin{center}
   \begin{tabular}{cccccccc}
@@ -1792,7 +1785,7 @@ If we do not define a core, this defines normally what is
   \]
   If we assume that we have a two-body operator at most, the
   Slater-Condon rule for a two-body interaction, see problem
-  \ref{prob:hamiltoniansetup}, results in an expression for the
+  \ref{problem:hamiltoniansetup}, results in an expression for the
   correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only, namely
   \[
   \langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0
@@ -1897,7 +1890,7 @@ energy of Eq.~(\ref{eq:correlationenergy}).  These
   \subsection{Short summary}
 
 
-  If we can diagonalize directly large matrices, full configuration interaction
+  If we can directly diagonalize large matrices, full configuration interaction
   theory is the method of choice since  we obtain all  eigenvectors and eigenvalues. 
   The eigenvectors are obtained directly from the coefficients
     $C_H^P$ which result from the diagonalization.  We can then
@@ -2182,25 +2175,9 @@ where the reference energy is given by
   perturbation expansion for the ground state energy of a many-body
   system, and applies equally well to both nuclear matter and
   closed-shell nuclei such as the doubly magic nucleus $^{40}$Ca.  
-We will also assume the reader is familiar 
+We assume the reader is familiar 
 with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{svavittbartlett2009}.
-Here we simply list the standard diagram rules
- \begin{itemize}
-        \item Label all lines.
-        \item Sum over all indices. 
-        \item For two-body operators draw dotted lines for the operator from endpoint to endpoint. 
-Keep only topologically distinct diagrams and draw incoming and outgoing lines at every endpoint.
-\item Mark the lines as either holes or particles. 
-        \item Extract matrix elements from diagrams as follows: $f_{\mathrm{in}}^{\mathrm{out}}$ or 
-$\langle \mathrm{out}|f|\mathrm{in}\rangle$, 
-            $\bra{\mathrm{leftout, rightout}}\hat{v}\ket{\mathrm{leftin, rightin}}$)
-\item For the two-body operators, crossing lines (below or above the interaction line) 
-give rise to a minus sign.
-\item For hole states, a hole line which goes through the whole diagram adds a minus sign.  
-\item All closed fermion loops add also a minus sign.
-\item For every pair of equivalent lines (that is lines that start at the same vertex and end at the same vertex), there is  a factor $1/2$.
-    \end{itemize}
-\begin{figure}
+\begin{figure}[hbtp]
     \includegraphics[width=\linewidth]{Chapter8-figures/mbpt.pdf}
       \caption{Diagrams which enter the definition of the ground-state
       correlation energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
@@ -2263,7 +2240,7 @@ have an even number of hole lines and closed loops, resulting thus in a positive
   $V(|{\mathbf r}|)$ becomes meaningless. A perturbative expansion in terms of
 such interaction matrix elements may thus lead to a slowly converging expansion.
 A standard recipe to circumvent such problems has been to sum up 
-a selected class of diagrams. We discuss such possibilities in section \ref{sec:cc}.  
+a selected class of correlations. We discuss such possibilities in section \ref{sec:cc}.  
 
 
 
@@ -2370,7 +2347,7 @@ RPA class of diagrams \cite{ripkablaizot}, as well as the resummation
 of two-particle-two-hole correlations discussed in chapter 11. If we limit ourselves to the
 resummation of two-particle correlations only, these lead us to the
 so-called $G$-matrix resummation of diagrams, see for example Ref.~\cite{day1967}.
-There are however computational inexpensive methods which
+There are however computationally inexpensive methods which
 sum larger classes of correlations to infinite order in the
 interaction. This leads us to section \ref{sec:chap8cctheory} and the final
 many-body method of this chapter, coupled cluster theory. 
@@ -2523,8 +2500,7 @@ Using Eq.~(\ref{eq:bch}) we can write the expression for the coupled cluster  gr
         \end{align*}
 One can show that this infinite series truncates naturally at a given order of nested commutators \cite{shavittbartlett2009}. 
 Let us demonstrate briefly how we can construct the expressions for the correlation 
-energy by approximating $\hat{T}\approx \hat{T}_1+\hat{T}_2$, that is at the level of
-one-particle-one-hole and two-particle-two-hole excitations (the so-called singles and doubles approximation CCSD).
+energy by approximating $\hat{T}$ at the CCSD level, that is $\hat{T}\approx \hat{T}_1+\hat{T}_2$.
         The first term is zero by construction
         \begin{equation*}
             \bra{\Psi_0} \op{H}_N \ket{\Psi_0} = 0.
@@ -2585,8 +2561,6 @@ Let us next look at the term $\left[ \hat{F}_N, \hat{T}_2 \right]$. We have
         \left[ \hat{F}_N, \hat{T}_2 \right] 
         &= \left[\sum_{pq} f_q^p \normord{a^\dagger_p a_q},
             \frac{1}{4}\sum_{ijab} t_{ij}^{ab} \normord{a^\dagger_a a^\dagger_b a_j a_i} \right] \\
-        &= \frac{1}{4}\sum_{\substack{pq\\ijab}}
-        \left[ \normord{a^\dagger_p a_q}, \normord{a^\dagger_a a^\dagger_b a_j a_i} \right] \\
         &= \frac{1}{4}\sum_{\substack{pq\\ijab}}
             f_q^p t_{ij}^{ab}
         \left( \normord{a^\dagger_p a_q} \normord{a^\dagger_a a^\dagger_b a_j a_i}
@@ -2832,14 +2806,14 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   \]
   where the latter is the correlation energy from this level of
   approximation of coupled cluster  theory.  Similarly, the expression for the
-  amplitudes reads (see problem \ref{prob:amplitudes})
+  amplitudes reads (see problem \ref{problem:amplitudes})
   \[
   \langle \Phi_{ij}^{ab} \vert
-  \exp{-\left(\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
+  \exp{\left(-\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
   \Phi_0\rangle = 0.
   \]
   These equations can be reduced to (after several applications of
-  Wick's theorem) to, for all $i > j$ and all $a > b$,
+  Wick's theorem), for all $i > j$ and all $a > b$,
   \begin{align}
   0 = \langle ab \vert \hat{v} \vert ij \rangle +
   \left(\epsilon_a+\epsilon_b-\epsilon_i-\epsilon_j\right)t_{ij}^{ab}
@@ -3141,7 +3115,7 @@ When building up a numerical project there are several elements you should think
   automatically zero. This means that we need to discuss more efficient storage
   strategies later. Notice also that we are looping over all
   indices $i,j,a,b$, rather than the restricted indices. This means that we
-  are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow. However It is  often less error prone and simpler to code in this way. 
+  are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow. However It is  often less error-prone and simpler to code in this way. 
 Below we will however unrestrict these indices in order to achieve a better speed up of our code. 
 
    The goal of our code is to calculate the correlation energy,
@@ -3178,14 +3152,9 @@ Below we will however unrestrict these indices in order to achieve a better spee
   \end{equation}
 resulting in the correlation energy
   \begin{equation}
-  \Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ab \vert
-    \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}},
+  \Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ij \vert \hat{v} \vert ab \rangle\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}},
   \end{equation}
-  which is the result from many-body perturbation theory to second order (MBPT2). Here we have defined the shorthand
-\[
-\epsilon^{ab}_{ij}=\varepsilon_i+\varepsilon_j-\varepsilon_a-\varepsilon_b.
-\]
-The above is a very useful result, as one iteration
+  which is the result from many-body perturbation theory to second order (MBPT2).  This is a very useful result, as one iteration
   of the CCD equations can be ran, and checked against MBPT2 to give
   some confidence that everything is working correctly. To check that
   everything is working, it is useful to run the code using a minimal
@@ -3201,7 +3170,7 @@ The above is a very useful result, as one iteration
   which represents a basic pairing model with $p$ levels, each having a
   spin degeneracy of 2. The form of the coupled cluster equations 
   uses single-particle states that are eigenstates of the
-  Hartree-Fock operator, $\left(\hat{u}+\hat{u}_{\text{HF}}\right\vert
+  Hartree-Fock operator, $\left(\hat{u}+\hat{u}_{\text{HF}}\right)\vert
   p\rangle=\epsilon_{p}\vert p\rangle$. In the pairing model, this
   condition is already fulfilled. All we have to do is define the
   lowest $N_{\mathrm{Fermi}}$ states as holes and  redefine the single-particle
@@ -3225,7 +3194,8 @@ Table \ref{tab:pairingmodelsp}.
       \end{tabular}
   \end{center}
 \end{table}
-The Hamiltonian matrix for this   four-particle problem with no broken pairs is 
+The Hamiltonian matrix for this   four-particle problem with no broken pairs is defined by six possible Slater determinants,
+one representing the ground state and zero-particle-zero-hole excitations $0p-0h$, four representing various $2p-2h$ excitations and finally one representing a $4p-4h$ excitation. Problem \ref{problem:pairingmodel} gives us for this specific problem
   \[
   H = \begin{bmatrix}
   2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\ -g/2 & 4\delta -g &
@@ -3237,12 +3207,12 @@ The Hamiltonian matrix for this   four-particle problem with no broken pairs is
   \]
   The following python program diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
-  a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation to second order (MBPT2)
+  a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-while MBPT3 includes diagrams (3), (4), (4), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
+while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
   In the case of the simple pairing model it is easy to calculate
   $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
-We restate this expression here but including a restriction on the sums over single-particle states
+We restate this expression here but restrict the sums over single-particle states
   \[
   \Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij|\hat{v}|ab}
     \braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}} = \sum_{a<b,i<j}
@@ -3517,7 +3487,7 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
 
   It is more efficient to use two-dimensional array data
   structures, where the first index refers to the channel number and
-  the second refers to the element withing that channel. So to access
+  the second refers to the element within that channel. So to access
   matrix elements or $t$ amplitudes, you can loop over the channels
   first, then the indices within that channel. To get an idea of the
   savings using this block diagonal structure, let's look at a case
@@ -3525,13 +3495,13 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   numbers, with an interaction that conserves linear momentum in all
   three dimensions, as well as the total spin projection. Using 502
   basis states, the TBME's require about 0.23 Gb of memory in block
-  diagonal form, which is an enormous saving from the 500 Gb mentions
+  diagonal form, which is an enormous saving from the 500 Gb mentioned
   earlier in the na\"ive storage scheme.
 
 
   Since the calculation of all  zeros can now be avoided,
-  improvements in speed as memory will now follow. To get a handle on
-  how these CCD calculations are we need only to look at the
+  improvements in speed and memory will now follow. To get a handle on
+  how these CCD calculations are implemented we need only to look at the
   most expensive sum in equation \ref{eq:ccd2}. This corresponds to
   the sum over $klcd$. Since this sum is repeated for all $i < j$ and
   $a < b$, it means that these equations will scale as
@@ -3675,7 +3645,7 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
   The next step is to build every two-body state in the model space
   and separate them by their particle/hole character and combined
   quantum numbers. While each single-particle state is unique,
-  two-body states can share quantum numbers with members of a
+  two-body states can share quantum numbers with other members of a
   particular two-body channel. These channels allow us to remove
   matrix elements and cluster amplitudes that violate the symmetries
   of the interaction. This reduces greatly the size and speed of the
@@ -3738,8 +3708,8 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
     |hh}, \braket{pp| v |pp}, \braket{hh| v |pp}$, and $\braket{hp| v
     |hp}$, which greatly simplifies the matrix-matrix multiplications
   of the CCD iterations by indexing the summed variables in a
-  systematic way. Summations are constructed by placeing two
-  structures next to each other in such a way that the inner, summed
+  systematic way. Summations are constructed by placing two
+  structures next to each other in such a way that the inner summed
   indices are of the same channel. The resulting structure is indexed
   by the outer channels as shown here
   \begin{align}
@@ -4113,7 +4083,8 @@ algorithms for setting up, storing and fetching matrix elements becomes
 increasingly important.  With increasing number of particles and single-particle states, one may even consider computing matrix elements on the fly.
 
 We discuss now different  high-performance strategies, limiting ourselves to the basic matrix-matrix multiplication of MBPT2. 
-{\bf Gustav's part}
+The simplest possible extension to our algorithm is to implement efficient algorithms for matrix-matrix multiplications. 
+In our code above we have implemented the matrix-matrix multiplication using a straightforward implementation, fetching each matrix elements when needed. Furthermore, we include an explicit evaluation of the energy denominators as well. 
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that
@@ -4675,12 +4646,13 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   \end{enumerate}
   \end{prob}
 
-\begin{prob} \label{prob:amplitudes}
+\begin{prob} \label{problem:amplitudes}
 Derive the amplitude equations of Eq.~(\ref{eq:ccd}) starting with 
  \[
           0 = \langle\Phi_{i_1 \ldots i_n}^{a_1 \ldots a_n}\vert
           \overline{H}\vert \Phi_0\rangle.
  \]
+\end{prob}
   \begin{prob}\label{problem:realisticforces}
 Replace the Minnesota interaction model with realistic models for nuclear forces based on effective field theory. In particular 
 replace the Minnesota interaction with the low-order (LO) contribution which includes a contact term and a one-pion exchange
