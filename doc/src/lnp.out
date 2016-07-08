@@ -202,38 +202,38 @@
 \BOOKMARK [0][-]{section*.35}{In-medium SRG approaches to infinite nuclear matter}{}% 202
 \BOOKMARK [0][-]{section*.35}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 203
 \BOOKMARK [1][-]{section.10.1}{Introduction}{section*.35}% 204
-\BOOKMARK [2][-]{subsection.10.1.1}{Normal Ordering and Wick's Theorem}{section.10.1}% 205
-\BOOKMARK [2][-]{subsection.10.1.2}{Normal-Ordered Hamiltonian}{section.10.1}% 206
-\BOOKMARK [2][-]{subsection.10.1.3}{M-Scheme Flow Equations}{section.10.1}% 207
-\BOOKMARK [2][-]{subsection.10.1.4}{J-Scheme Flow Equations}{section.10.1}% 208
-\BOOKMARK [2][-]{subsection.10.1.5}{General Observables}{section.10.1}% 209
-\BOOKMARK [1][-]{section.10.2}{Choice of Generator}{section*.35}% 210
-\BOOKMARK [2][-]{subsection.10.2.1}{Decoupling}{section.10.2}% 211
-\BOOKMARK [2][-]{subsection.10.2.2}{White Generators}{section.10.2}% 212
-\BOOKMARK [2][-]{subsection.10.2.3}{Imaginary-Time Generators}{section.10.2}% 213
-\BOOKMARK [2][-]{subsection.10.2.4}{Wegner Generators}{section.10.2}% 214
-\BOOKMARK [2][-]{subsection.10.2.5}{Decay Scales}{section.10.2}% 215
-\BOOKMARK [1][-]{section.10.3}{In-medium SRG studies of infinite matter}{section*.35}% 216
-\BOOKMARK [0][-]{section*.36}{Self-consistent Green's function approaches}{}% 217
-\BOOKMARK [0][-]{section*.36}{Carlo Barbieri and Arianna Carbone}{}% 218
-\BOOKMARK [1][-]{section.11.1}{Introduction}{section*.36}% 219
-\BOOKMARK [1][-]{section.11.2}{Many-body Green's function theory}{section*.36}% 220
+\BOOKMARK [2][-]{subsection.10.1.1}{Normal-Ordered Hamiltonian}{section.10.1}% 205
+\BOOKMARK [2][-]{subsection.10.1.2}{M-Scheme Flow Equations}{section.10.1}% 206
+\BOOKMARK [2][-]{subsection.10.1.3}{J-Scheme Flow Equations}{section.10.1}% 207
+\BOOKMARK [2][-]{subsection.10.1.4}{General Observables}{section.10.1}% 208
+\BOOKMARK [1][-]{section.10.2}{Choice of Generator}{section*.35}% 209
+\BOOKMARK [2][-]{subsection.10.2.1}{Decoupling}{section.10.2}% 210
+\BOOKMARK [2][-]{subsection.10.2.2}{White Generators}{section.10.2}% 211
+\BOOKMARK [2][-]{subsection.10.2.3}{Imaginary-Time Generators}{section.10.2}% 212
+\BOOKMARK [2][-]{subsection.10.2.4}{Wegner Generators}{section.10.2}% 213
+\BOOKMARK [2][-]{subsection.10.2.5}{Decay Scales}{section.10.2}% 214
+\BOOKMARK [1][-]{section.10.3}{In-medium SRG studies of infinite matter}{section*.35}% 215
+\BOOKMARK [1][-]{section*.36}{Appendix}{section*.35}% 216
+\BOOKMARK [0][-]{section*.37}{Self-consistent Green's function approaches}{}% 217
+\BOOKMARK [0][-]{section*.37}{Carlo Barbieri and Arianna Carbone}{}% 218
+\BOOKMARK [1][-]{section.11.1}{Introduction}{section*.37}% 219
+\BOOKMARK [1][-]{section.11.2}{Many-body Green's function theory}{section*.37}% 220
 \BOOKMARK [2][-]{subsection.11.2.1}{Spectral function and relation to experimental observations}{section.11.2}% 221
 \BOOKMARK [2][-]{subsection.11.2.2}{Perturbation expansion of the Green 's function}{section.11.2}% 222
-\BOOKMARK [1][-]{section.11.3}{The Algebraic Diagrammatic Construction method}{section*.36}% 223
+\BOOKMARK [1][-]{section.11.3}{The Algebraic Diagrammatic Construction method}{section*.37}% 223
 \BOOKMARK [2][-]{subsection.11.3.1}{The algebraic diagrammatic construction method}{section.11.3}% 224
 \BOOKMARK [2][-]{subsection.11.3.2}{Solving the Dyson equation}{section.11.3}% 225
 \BOOKMARK [2][-]{subsection.11.3.3}{A simple pairing model}{section.11.3}% 226
-\BOOKMARK [1][-]{section.11.4}{A computational project in infinite matter}{section*.36}% 227
-\BOOKMARK [1][-]{section.11.5}{Self-consistenft GF at finite temperatures in the thermodynamic limit}{section*.36}% 228
+\BOOKMARK [1][-]{section.11.4}{A computational project in infinite matter}{section*.37}% 227
+\BOOKMARK [1][-]{section.11.5}{Self-consistenft GF at finite temperatures in the thermodynamic limit}{section*.37}% 228
 \BOOKMARK [2][-]{subsection.11.5.1}{Numerical implementation at finite temperature}{section.11.5}% 229
 \BOOKMARK [2][-]{subsection.11.5.2}{Calculations of neutron matter at finite temperatures.}{section.11.5}% 230
 \BOOKMARK [2][-]{subsection.11.5.3}{Numerical calculation when including three-body forces.}{section.11.5}% 231
-\BOOKMARK [1][-]{section.11.6}{Concluding remarks}{section*.36}% 232
-\BOOKMARK [1][-]{section*.37}{Appendix 1: Chiral NNLO three-nucleon forces}{section*.36}% 233
-\BOOKMARK [1][-]{section*.38}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{section*.36}% 234
-\BOOKMARK [1][-]{section*.39}{References}{section*.36}% 235
-\BOOKMARK [0][-]{section*.40}{Concluding remarks and perspectives}{}% 236
-\BOOKMARK [0][-]{section*.40}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 237
-\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.40}% 238
-\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.40}% 239
+\BOOKMARK [1][-]{section.11.6}{Concluding remarks}{section*.37}% 232
+\BOOKMARK [1][-]{section*.38}{Appendix 1: Chiral NNLO three-nucleon forces}{section*.37}% 233
+\BOOKMARK [1][-]{section*.39}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{section*.37}% 234
+\BOOKMARK [1][-]{section*.40}{References}{section*.37}% 235
+\BOOKMARK [0][-]{section*.41}{Concluding remarks and perspectives}{}% 236
+\BOOKMARK [0][-]{section*.41}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 237
+\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.41}% 238
+\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.41}% 239
