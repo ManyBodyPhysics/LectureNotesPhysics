@@ -109,7 +109,7 @@ int main()
   int start = evo_arg.start;
   int unload_period = evo_arg.unload_period;
   int configurations = evo_arg.configurations;
-  complex<double> corr[GJP.Tsites()];
+  vector<complex<double> > corr(GJP.Tsites());
   for (int t=0; t<GJP.Tsites(); t++) { corr[t]=0.0; }
 
   //---- Instantiate propagator classes
