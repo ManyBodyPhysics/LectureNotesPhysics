@@ -166,13 +166,21 @@ diagonal via a continuous unitary transformation
 where $H(s=0)$ is the starting Hamiltonian and $s$ denotes the so-called flow
 parameter, for reasons that will become apparent shortly. In practice, the demand 
 for strict diagonality is usually relaxed to requiring band- or block-diagonality 
-of the Hamiltonian matrix in a chosen basis, e.g., in relative momentum or harmonic
-oscillator (HO) spaces. These specific cases are realized in nuclear
+of the Hamiltonian matrix in a chosen basis
+These specific cases are realized in nuclear
 physics applications, where the SRG is used to decouple momentum or
 energy scales, and thereby render the nuclear Hamiltonian more
 suitable for \emph{ab initio} many-body calculations \cite{bogner2007,bogner2010,morris2015,bogner2016}.
 
-With the IM-SRG method, we want to use this strategy to solve the many-body problem directly. Taking the derivative of Eq.~\eqref{eq:cut}
+In the following sections we outline the basic ingredients behind the SRG method, with an emphasis on applications to infinite nuclear matter, 
+coupling our final results with those of chapter 8, 9 and 11. The next section presents the essential philosophy of the method, which in practice means to solve Schr\"odinger's equation for a many-body system in terms of coupled ordinary differential equations (ODEs). We present also two simple demonstrations
+of the method before presenting our applications to infinite neutron matter with a cartesian basis. In the final section, we point to further perspectives.
+
+\section{Similarity Renormalization Group method}
+
+We give here a brief overview of the SRG method applied to two simple systems, one given by a $2\times 2$ matrix and its pertinent eigenvalue problem and finally applying the method to a simple extension of the so-called Lipkin model \cite{lipkin,ellis2007}. 
+
+Taking the derivative of Eq.~\eqref{eq:cut}
 with respect to the flow parameter $s$, we obtain the operator flow equation
 \begin{equation}\label{eq:opflow}
   \totd{}{s}\HO(s) = \comm{\etaO(s)}{\HO(s)}\,,
@@ -200,47 +208,7 @@ state-of-the-art, large-scale Lanczos approaches like the
 
 For the IM-SRG, we follow a different route, and formulate the flow equation as well as the decoupling conditions underlying the definition of $\etaO(s)$ in the language of second quantization. This approach has been very successful in producing powerful and numerically efficient many-body schemes, chief among them the coupled cluster method discussed in chapter 8.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Normal-Ordered Hamiltonian}
-Let us now consider an intrinsic nuclear $A$-body Hamiltonian containing both NN and 3N interactions,
-\begin{equation}\label{eq:def_Hint}
-  H = \left(1-\frac{1}{A}\right)T + T^{(2)} + V^{(2)} +V^{(3)}\,,
-\end{equation}
-where the one- and two-body kinetic energy terms are
-\begin{align}
-  T &\equiv \sum\frac{\pOV^2_i}{2m}\,,\\
-  T^{(2)} &\equiv -\frac{1}{Am}\sum_{i<j}\pOV_i\cdot\pOV_j
-\end{align}
-(see Sec.~\ref{sec:com} and Ref.~\cite{Hergert:2009wh}). Choosing a single Slater determinant $\ket{\Phi}$ as the reference state, we can rewrite the Hamiltonian \emph{exactly} in terms of normal-ordered operators,
-\begin{align}\label{eq:Hno}
-  \HO &= E + \sum_{ij}f_{ij}\nord{\aaO_{i}\aO_{j}} + \frac{1}{4}\sum_{ijkl}\Gamma_{ijkl}\nord{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}
-    + \frac{1}{36}\sum_{ijklmn}W_{ijklmn}\nord{\aaO_{i}\aaO_{j}\aaO_{k}\aO_{n}\aO_{m}\aO_{l}}\,,
-\end{align}
-where the labels for the individual contributions have been chosen for historical reasons. For convenience, we will work in the eigenbasis of the one-body density matrix in the following, so that
-\begin{equation}\label{eq:def_natorb}
-  \rho_{ab}=n_{a}\delta_{ab}\,,\quad n_{a}\in\{0,1\}\,.
-\end{equation}
-The individual normal-ordered contributions in Eq.~\eqref{eq:Hno} are then given by
-\begin{align}
-  E &= \left(1-\frac{1}{A}\right)\sum_{a}\matrixe{a}{T}{a}n_{a}
-  		+ \frac{1}{2}\sum_{ab}\matrixe{ab}{T^{(2)}\!+\!V^{(2)}}{ab}n_{a}n_{b}\notag\\
-  		&\hphantom{=}+ \frac{1}{6}\sum_{abc}\matrixe{abc}{V^{(3)}}{abc}n_{a}n_{b}n_{c}\,,\label{eq:E0}\\
-%
-  f_{12} &= \left(1-\frac{1}{A}\right)\matrixe{1}{T}{2} 
-  		+ \sum_{a}\matrixe{1a}{T^{(2)}\!+\!V^{(2)}}{2a}n_{a}\notag\\
-  		&\hphantom{=}+ \frac{1}{2}\sum_{ab}\matrixe{1ab}{V^{(3)}}{2ab}n_{a}n_{b}\,,\label{eq:f}		\\
-  \Gamma_{1234} &= \matrixe{12}{T^{(2)}\!+\!V^{(2)}}{34} + \sum_{a}\matrixe{12a}{V^{(3)}}{34a}n_{a}\,,\label{eq:Gamma}\\
-  W_{123456}&=\matrixe{123}{V^{(3)}}{456}\,.
-\end{align}
-Due to the occupation numbers in Eqs.~\eqref{eq:E0}--\eqref{eq:Gamma}, the sums run over occupied (hole) states only. Note that the zero-, one-, and two-body parts of the Hamiltonian all contain in-medium contributions from the free-space 3N interaction. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\texorpdfstring{$M$}{M}-Scheme Flow Equations}
-After discussing normal ordering and Wick's theorem in the previous sections, we are now ready to turn back to the operator flow equation, Eq.~\eqref{eq:opflow}. 
+\section{In-medium SRG and flow equations}
 
 When carried out exactly, the IM-SRG is a continuous unitary transformation in $A$-body space, and consequently, $\eta(s)$ and $\HO(s)$ are $A$-body operators even if they initially have a lower rank at $s=0$. From the discussion of the previous sections, we see that every evaluation of the commutator on the right-hand side of Eq.~\eqref{eq:opflow} increases the particle rank of $\HO(s)$, e.g.,
 \begin{equation}\label{eq:induced}
@@ -258,8 +226,6 @@ We introduce the permutation symbol $P_{ij}$ to interchange the attached indices
   P_{ij} g(\ldots,i,\ldots,j) \equiv g(\ldots,j,\ldots,i)\,,
 \end{equation}
 and use the fundamental commutators from Appendix \ref{app:commutators} to obtain
-% \begin{widetext}
-%
 \begin{align}
   \totd{E}{s}&= \sum_{ab}(n_a-n_b)\eta_{ab} f_{ba} 
     + \frac{1}{2} \sum_{abcd}\eta_{abcd}\Gamma_{cdab} n_a n_b\bar{n}_c\bar{n}_d
@@ -305,63 +271,44 @@ is preserved even if the commutators are truncated at a given operator rank, as 
 
 From Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}, it is clear that the computational effort for solving the IM-SRG(2) flow equations is dominated by the two-body flow equation, which scales polynomially like $\OC(N^6)$ with the single-particle basis size $N$. This puts the IM-SRG(2) in the same category as other numerically efficient non-perturbative methods\footnote{The mentioned methods can make use of the distinction between particle and hole states in the single-particle basis to further reduce the effort. For instance, the amplitude equations of CCSD can be solved at $\OC(N_h^2N_p^4)$ cost, where typically the number of hole states $N_h$ is much smaller than the number of particle states $N_p\sim N$. Note that the construction of the CCSD effective Hamiltonian from the amplitudes requires $\OC(N^6)$ effort. In the IM-SRG(2), we are working directly with the analogous effective Hamiltonian.} like Coupled Cluster with Singles and Doubles (CCSD) \cite{Shavitt:2009,Hagen:2014ve}, the Self-Consistent Green's Function Approach (SCGF) \cite{Dickhoff:2004fk,Barbieri:2007fk,Cipollone:2013uq}, or canonical transformation theory \cite{White:2002fk,Yanai:2006uq}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\texorpdfstring{$J$}{J}-Scheme Flow Equations\label{sec:flow_jscheme}}
-When the nuclear Hamiltonian is normal-ordered with respect to a general reference state, its manifest symmetries may become hidden and implicitly reliant on cancellations which are spoiled by the introduction of finite bases or other truncations. For systems with explicit spherical symmetry, e.g., for closed-shell nuclei, we can use a spherically symmetric $\ket{\Phi}$, and preserve the manifest rotational symmetry of $\HO$ on a term-by-term basis. In this case, the flow equations become block-diagonal in angular momentum, and independent of the angular momentum projection quantum numbers, which leads to a significant reduction in numerical effort.
-
-In the following, the single-particle indices collectively represent the radial, angular momentum, and isospin quantum numbers $i=(k_{i}l_{i}j_{i}\tau_{i})$. Then the matrix elements of single-particle operators are diagonal in all but the radial quantum numbers, e.g.,
-\begin{equation}
-  f_{12}=f^{l_{1}j_{1}\tau_{1}}_{k_{1}k_{2}}\delta_{l_{1}l_{2}}\delta_{j_{1}j_{2}}\delta_{\tau_{1}\tau_{2}}\,.
-\end{equation}
-Likewise, two-body matrix elements are diagonal in total two-body angular momentum $J$ and independent of $M$. In this case, the IM-SRG(2) flow equations reduce to
-% \begin{widetext}
-\begin{align}
-  \label{eq:imsrg2_j0b}
-  \totd{E}{s}&=\sum_{ab}\hat{j}_{a}^{2}\eta_{ab}f_{ba}(n_{a}-n_{b})
-          +\frac{1}{2}\sum_{abcdJ}\hJ^{2}\eta^{J}_{abcd}\Gamma^{J}_{cdab}n_{a}n_{b}\nn_{c}\nn_{d}\,,\\
-%
-  \label{eq:imsrg2_j1b}
-  \totd{f_{12}}{s}&=\sum_{a}(1+P_{12})\eta_{1a}f_{a2}
-            +\frac{1}{\hat{j}^{2}_{1}}\sum_{abJ}\hJ^{2}(n_{a}-n_{b})\left(\eta_{ab}\Gamma^{J}_{b1a2}-f_{ab}\eta^{J}_{b1a2}\right)\notag\\                 
-           &\hphantom{=}+\frac{1}{2\hat{j}^{2}_{1}}
-          \frac{1}{2}\sum_{abcJ}\hJ^{2}\big(n_{a}n_{b}\nn_{c}+\nn_{a}\nn_{b}n_{c}\big)
-            \left(1+P_{12}\right)\eta^{J}_{c1ab}\Gamma^{J}_{abc2}
-          \,,\\                 
-%
-  \label{eq:imsrg2_j2b}
- \totd{\Gamma^{J}_{1234}}{s}
-        &=\sum_{a}\Big(\left(1-(-1)^{J-j_{1}-j_{2}}P_{12}\right)
-                       \left(\eta_{1a}\Gamma^{J}_{a234}-f_{1a}\eta^{J}_{a234}\right)\notag\\
-        &\hphantom{=\sum_a}- \left(1-(-1)^{J-j_{3}-j_{4}}P_{34}\right)
-                    \left(\eta_{a3}\Gamma^{J}_{12a4}-f_{a3}\eta^{J}_{12a4}\right)\Big)\notag\\
-        &\hphantom{=}+\frac{1}{2}\sum_{ab}\left(\eta^{J}_{12ab}\Gamma^{J}_{ab34}-\Gamma^{J}_{12ab}\eta^{J}_{ab34}\right)\left(1-n_{a}-n_{b}\right)\notag\\
-        &\hphantom{=}+\sum_{abJ'}\left(n_{a}-n_{b}\right)\left(1-(-1)^{J-j_{1}-j_{2}}P_{12}\right)\notag\\
-        &\hphantom{=}\qquad\times
-          \widehat{J'}^2\sixj{j_{1} & j_{2} & J \\ j_{3} & j_{4} & J'}\left(\overline\eta^{J'}_{1\bar{4}a\bar{b}}\overline\Gamma^{J'}_{a\bar{b}3\bar{2}}-\overline\Gamma^{J'}_{1\bar{4}a\bar{b}}\overline\eta^{J'}_{a\bar{b}3\bar{2}}\right)\,,
-\end{align}
-% \end{widetext}
-where $\hat{j}\equiv\sqrt{2j+1}$, indices with a bar indicate time-reversed states, and the $\overline{\eta}$ and $\overline{\Gamma}$ matrix elements in the last line of Eq.~\eqref{eq:imsrg2_j2b} are obtained by a generalized Pandya transform (see, e.g., \cite{Suhonen:2007wo}),
-\begin{equation}
-  \overline\OO^{J}_{1\bar{2}3\bar{4}} = - \sum_{J'}\hat{J'}^{2}\sixj{j_{1} & j_{2} & J \\ j_{3} & j_{4} & J'} O^{J'}_{1432}\,.
-\end{equation}
-Alternatively, the particle-hole terms in the last line of Eq.~\eqref{eq:imsrg2_j2b}
-can also be expressed in terms of the cross-coupled matrix elements introduced in
-Ref.~\cite{Kuo:1981fk}. If the same angular-momentum coupling order is used, the
-two types of matrix elements are related by a trivial phase factor $(-1)$.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{General Observables\label{sec:observables}}
-In principle, the evaluation of observables other than the Hamiltonian is a straightforward task: We need to normal-order the operator $\OO(s)$ with respect to the same reference state as the Hamiltonian, and then plug it into the flow equation
+In principle, the evaluation of observables other than the Hamiltonian
+is a straightforward task: We need to normal-order the operator
+$\OO(s)$ with respect to the same reference state as the Hamiltonian,
+and then plug it into the flow equation
 \begin{equation}\label{eq:obsflow}
   \totd{}{s}\OO(s) = \comm{\etaO(s)}{\OO(s)}\,,
 \end{equation} 
-with $\etaO(s)$ the same as in the Hamiltonian flow equation. For consistency with the overall IM-SRG(2) scheme, $\OO(s)$ is truncated at the two-body level. We then obtain an additional set of flow equations for the normal-ordered zero-, one- and two-body parts of $\OO(s)$ which need to be solved alongside Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. We will follow this route in later sections of this work to investigate radii (Sec.~\ref{sec:numerics_radii}) and the center-of-mass separation in the IM-SRG(2) ground-state wave function (Sec.~\ref{sec:com}). Due to the size of the system of flow equations, and the associated storage needs of numerical differential equation solvers, this procedure becomes unfeasible if we are interested in more than one or two additional operators.
+with $\etaO(s)$ the same as in the Hamiltonian flow equation. For
+consistency with the overall IM-SRG(2) scheme, $\OO(s)$ is truncated
+at the two-body level. We then obtain an additional set of flow
+equations for the normal-ordered zero-, one- and two-body parts of
+$\OO(s)$ which need to be solved alongside
+Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. We will follow this
+route in later sections of this work to investigate radii
+(Sec.~\ref{sec:numerics_radii}) and the center-of-mass separation in
+the IM-SRG(2) ground-state wave function (Sec.~\ref{sec:com}). Due to
+the size of the system of flow equations, and the associated storage
+needs of numerical differential equation solvers, this procedure
+becomes unfeasible if we are interested in more than one or two
+additional operators.
 
-Unfortunately, we cannot resort to the same strategy as in the free-space SRG case \cite{Anderson:2010br,Bogner:2010pq}, where the unitary transformation can be reconstructed from the eigenvectors of the initial and final Hamiltonians in the two-nucleon, three-nucleon,\ldots system. To do so, we would have to solve the eigenvalue problem of the Hamiltonian in the $A$-body system through exact diagonalization, and we could not even resort to large-scale NCSM machinery because it does not provide the full eigenbasis, but only the lowest eigenvalues and eigenvectors via Lanczos methods. The cost for exact diagonalization increases factorially with the single-particle basis, and it is precisely this high computational effort that motivated the development of mildly scaling methods like CC or the IM-SRG. A more efficient alternative for the evaluation of observables exists in the form of the so-called Magnus expansion \cite{Blanes:2009fk,Morris:2015ve}, which we briefly discuss in Sec.~\ref{sec:magnus}.
+Unfortunately, we cannot resort to the same strategy as in the
+free-space SRG case \cite{Anderson:2010br,Bogner:2010pq}, where the
+unitary transformation can be reconstructed from the eigenvectors of
+the initial and final Hamiltonians in the two-nucleon,
+three-nucleon,\ldots system. To do so, we would have to solve the
+eigenvalue problem of the Hamiltonian in the $A$-body system through
+exact diagonalization, and we could not even resort to large-scale
+NCSM machinery because it does not provide the full eigenbasis, but
+only the lowest eigenvalues and eigenvectors via Lanczos methods. The
+cost for exact diagonalization increases factorially with the
+single-particle basis, and it is precisely this high computational
+effort that motivated the development of mildly scaling methods like
+CC or the IM-SRG. A more efficient alternative for the evaluation of
+observables exists in the form of the so-called Magnus expansion
+\cite{Blanes:2009fk,Morris:2015ve}, which we briefly discuss in
+Sec.~\ref{sec:magnus}.
 
 
 
@@ -372,8 +319,8 @@ Unfortunately, we cannot resort to the same strategy as in the free-space SRG ca
 \setlength{\unitlength}{0.8\columnwidth}
   \begin{center}
   \begin{picture}(1.0000,0.5500)
-   \put(0.0350,0.0450){\includegraphics[width=0.46\unitlength]{fig/H_initial.eps}}
-   \put(0.5400,0.0450){\includegraphics[width=0.46\unitlength]{fig/H_IMSRG_3ph_decoupling.eps}}
+   \put(0.0350,0.0450){\includegraphics[width=0.46\unitlength]{Chapter10-figures/H_initial.eps}}
+   \put(0.5400,0.0450){\includegraphics[width=0.46\unitlength]{Chapter10-figures/H_IMSRG_3ph_decoupling.eps}}
    \put(0.0100,0.0000){\parbox{0.5\unitlength}{\centering$\matrixe{i}{\HO(0)}{j}$}}
    \put(0.5200,0.0000){\parbox{0.5\unitlength}{\centering$\matrixe{i}{\HO(\infty)}{j}$}}
    
@@ -400,7 +347,26 @@ Unfortunately, we cannot resort to the same strategy as in the free-space SRG ca
   \caption{\label{fig:schematic}Schematic representation of the initial and final Hamiltonians, $\HO(0)$ and $\HO(\infty)$, in the many-body Hilbert space spanned by particle-hole excitations of the reference state.}
 \end{figure}
 
-After setting up the general IM-SRG flow equation framework in Sec.~\ref{sec:floweq}, we have to specify the generator $\etaO$. To this end, we first need to identify the off-diagonal parts of the Hamiltonian that the IM-SRG transformation is supposed to suppress for $s\to\infty$. The freedom to partition the Hamiltonian into suitably defined diagonal and off-diagonal pieces gives the IM-SRG flexibility to target different states, and is key to extending the method to open-shell nuclei, see Secs.~\ref{sec:mrimsrg} and \ref{sec:shell_model}. To illustrate the general idea of a targeted decoupling, let us assume our goal is to extract the ground-state energy of a closed-shell nucleus, i.e., the lowest eigenvalue of the nuclear many-body Hamiltonian. In the left panel of Fig.~\ref{fig:schematic}, we show a schematic representation of the initial Hamiltonian $\HO(0)$, in a basis consisting of $A$-particle-$A$-hole ($A$p$A$h) excitations of the reference state $\ket{\Phi}$. For the following illustration of the IM-SRG's basic concept, we assume that $\HO(0)$ has been truncated to two-body operators, that is, it can at most couple $n$p$n$h to $(n\pm2)$p$(n\pm2)$h states. The extension to three-body operators is straightforward. 
+After setting up the general IM-SRG flow equation framework in
+Sec.~\ref{sec:floweq}, we have to specify the generator $\etaO$. To
+this end, we first need to identify the off-diagonal parts of the
+Hamiltonian that the IM-SRG transformation is supposed to suppress for
+$s\to\infty$. The freedom to partition the Hamiltonian into suitably
+defined diagonal and off-diagonal pieces gives the IM-SRG flexibility
+to target different states, and is key to extending the method to
+open-shell nuclei, see Secs.~\ref{sec:mrimsrg} and
+\ref{sec:shell_model}. To illustrate the general idea of a targeted
+decoupling, let us assume our goal is to extract the ground-state
+energy of a closed-shell nucleus, i.e., the lowest eigenvalue of the
+nuclear many-body Hamiltonian. In the left panel of
+Fig.~\ref{fig:schematic}, we show a schematic representation of the
+initial Hamiltonian $\HO(0)$, in a basis consisting of
+$A$-particle-$A$-hole ($A$p$A$h) excitations of the reference state
+$\ket{\Phi}$. For the following illustration of the IM-SRG's basic
+concept, we assume that $\HO(0)$ has been truncated to two-body
+operators, that is, it can at most couple $n$p$n$h to
+$(n\pm2)$p$(n\pm2)$h states. The extension to three-body operators is
+straightforward.
 
 The 0p0h reference state is coupled to 1p1h and 2p2h excitations by the matrix elements
 \begin{align}
