@@ -172,9 +172,16 @@ physics applications, where the SRG is used to decouple momentum or
 energy scales, and thereby render the nuclear Hamiltonian more
 suitable for \emph{ab initio} many-body calculations \cite{bogner2007,bogner2010,morris2015,bogner2016}.
 
-In the following sections we outline the basic ingredients behind the SRG method, with an emphasis on applications to infinite nuclear matter, 
-coupling our final results with those of chapter 8, 9 and 11. The next section presents the essential philosophy of the method, which in practice means to solve Schr\"odinger's equation for a many-body system in terms of coupled ordinary differential equations (ODEs). We present also two simple demonstrations
-of the method before presenting our applications to infinite neutron matter with a cartesian basis. In the final section, we point to further perspectives.
+In the following sections we outline the basic ingredients behind the
+SRG method, with an emphasis on applications to infinite nuclear
+matter, coupling our final results with those of chapter 8, 9 and
+11. The next section presents the essential philosophy of the method,
+which in practice means to solve Schr\"odinger's equation for a
+many-body system in terms of coupled ordinary differential equations
+(ODEs). We present also two simple demonstrations of the method before
+presenting our applications to infinite neutron matter with a
+cartesian basis. In the final section, we point to further
+perspectives.
 
 \section{Similarity Renormalization Group method}
 
@@ -204,7 +211,7 @@ Hamiltonian. To make matters worse, implementing the flow means we
 would deal with the Hamiltonian's full spectrum rather than just some
 extremal eigenvalues that can be extracted efficiently in
 state-of-the-art, large-scale Lanczos approaches like the 
-\cite{Navratil:2000hf,Barrett:2013oq}.
+\cite{navratil2000,barrett2013}.
 
 \subsection{Simple demonstration of the SRG method}
 Let us study a simple $2\times 2$ matrix and use Jacobi's rotation method \cite{golubvanloan1996} to find its eigenvalues. 
@@ -236,15 +243,17 @@ Note that  $k=0$ gives a diagonal matrix on the form
 while  $k=1$ changes the diagonal elements  
 \begin{equation} H'_{k=1} = \begin{bmatrix} \lambda_2 & 0 \\ 0 & \lambda_1 \end{bmatrix}.
 \label{eq:2}\end{equation}
-Let $H(s) = T + V(s)$, where $T= \diag(E_1,E_2)$ is diagonal. We want to solve the ODE 
-for $U(s)$. 
 
+We switch now to the SRG method and 
+let $H(s) = T + V(s)$, where $T= \diag(E_1,E_2)$ is diagonal. We want to solve the ordinary differential equations (ODEs) 
+for $U(s)$ using the flow parameter $s$. 
+We have not
 \[ H(s) = U(s)H(0)U(s)^T, \]
 and we have
 \[ \dds H(s) = [\eta(s),H(s)],  \quad \eta(s) = [T,H(s)], \]
 which gives
 \[ \dds U(s) = \eta(s) U(s). \]
-Note that $\eta(s)^T = -\eta(s)$, viz.,
+Note that $\eta(s)^T = -\eta(s)$, that is
 \[ \eta(s) = \begin{bmatrix} 0 & a(s) \\ -a(s) & 0 \end{bmatrix}. \]
 
 To make the link with the Jacobi rotation
@@ -304,7 +313,7 @@ Using (\ref{eq:5}) results in
 \[ \gamma(s) \rightarrow \frac{1}{2}\theta(0) -
 \frac{\pi}{2}\vartheta(E_2-E_1). \]
 
-From this we see that the flow equation chooses the solution of (\ref{eq:0}) with
+From this we see that the flow equation selects the solution of (\ref{eq:0}) with
 $k=0$ and $k=-1$, depending on whether  $E_1<E_2$ or
 $E_2<E_1$.
 
@@ -312,7 +321,8 @@ The flow equation yields $H(s)$ as a continuous function of $s$ and the solution
 $H(\infty)$ results in the eigenvalues sorted the same way as
 $T = \diag(E_1,E_2)$. The shift $\pi/2$ is connected with this; if $k=0$ in 
 (\ref{eq:0}) gives the wrong sequence, we choose $k=-1$ instead!
-    \begin{enumerate}
+
+\begin{enumerate}
 \item The $2\times 2$ case is trivial, the decoupling condition $QHP=0$  is trivially implemented and 
 unique.  
 \item For larger systems there are many different choices. Lee-Suzuki is one.
@@ -320,18 +330,160 @@ unique.
 \item Next, need to investigate the relationship between two subspaces, how close are they, do they 
 intersect, can one be rotated into another etc?  
     \end{enumerate}
+\subsection{Another simple example, the Lipkin model}
+
+The Lipkin model consists of two single-particle levels
+labelled by $\sigma=-$ and $+$, each of which has a degeneracy $p$. We write
+the Hamiltonian
+\begin{eqnarray}
+H&=& H_0+{\cal V}\;,\quad{\rm where}\nonumber\\
+H_0&=&\thalf\xi\sum_{p\sigma}{\sigma}a_{p\sigma}^{\dagger}a_{p\sigma}\;,
+\quad{\rm and}\nonumber\\
+{\cal V}&=&\thalf V\sum_{pp'\sigma}a^{\dagger}_{p\sigma}
+a^{\dagger}_{p'\sigma}a_{p'-\sigma}a_{p-\sigma}+ 
+\thalf W\sum_{pp'\sigma}a^{\dagger}_{p\sigma}a_{p'-\sigma}^{\dagger}
+a_{p'\sigma}a_{p-\sigma}  \nonumber\\
+&+&\thalf U\sum_{pp'\sigma}\left[a^{\dagger}_{p\sigma}
+a_{p'\sigma}^{\dagger}
+a_{p'-\sigma}a_{p\sigma}+a^{\dagger}_{p\sigma}a_{p'-\sigma}^{\dagger}
+a_{p'\sigma}a_{p\sigma}\right].\nonumber
+\end{eqnarray}
+Here $H_0$ is the unperturbed  Hamiltonian with single particle energies
+$\pm\thalf\xi$. The two-body interaction, ${\cal V}$, has three terms. The
+interaction $V$ acts between a pair of particles with parallel spins and
+changes the spins from $++$ to $--$, or vice versa. The interaction $W$
+is a spin-exchange interaction and $U$ flips the spin of one particle.
+It is of interest to note that the interaction does not change the value of
+the degeneracy labels $pp'$.
+
+The
+quasi-spin operators obey angular momentum commutation relations and are
+defined by
+\[
+J_z=\thalf\sum_{p\sigma}\!{\sigma}a^{\dagger}_{p\sigma}a_{p\sigma}\,,\,
+J_+=\sum_p\!a_{p+}^{\dagger}a_{p-}\,,\,J_-=\sum_p\!a_{p-}^{\dagger}a_{p+}\,.
+\]
+The Hamiltonian can then be compactly expressed in the form
+\begin{eqnarray}
+H&=&{\xi}J_z+\thalf V(J_+^2+J_-^2)+\thalf W(J_+J_-+J_-J_+-n)\nonumber\\
+&&+\thalf U(J_++J_-)(n-1)\nonumber \;,
+\end{eqnarray}
+where the number operator $n=\sum_{p\sigma}a^{\dagger}_{p\sigma}a_{p\sigma}$.
+The operator $J^2=\frac{1}{2}(J_+J_-+J_-J_+)+J_z^2$ commutes with the
+Hamiltonian so the Hamiltonian matrix breaks up into
+submatrices of dimension $2J+1$, each associated with different values of
+$J$; for a given number of particles $N$ the largest angular momentum
+corresponds to $J=\thalf N$. 
+
+Here we need the case $N=3$ and for our purposes it is sufficient
+to consider $J=\threehalf$.
+We denote the basis state for three particles by
+\[
+|p_1\pm,p_2\pm,p_3\pm\rangle=a^\dagger_{p_1\pm}a^\dagger_{p_2\pm}
+a^\dagger_{p_3\pm}|0\rangle\;,
+\]
+where $p_i$ refers to the degeneracy label and $|0\rangle$ is the 
+vacuum state. Then the basis states for the $J=\threehalf$ matrix are:
+\begin{eqnarray}
+|1\rangle\equiv|J=\threehalf J_z=-\threehalf\rangle
+&=&|p_1-,p_2-,p_3-\rangle\;,\nonumber\\
+|2\rangle\equiv|J=\threehalf J_z=-\thalf\rangle
+&=&\bigl\{|p_1-,p_2-,p_3+\rangle
++|p_1-,p_2+,p_3-\rangle+|p_1+,p_2-,p_3-\rangle\bigr\}/\sqrt{3}
+\;,\nonumber\\
+|3\rangle\equiv|J=\threehalf J_z=+\thalf\rangle
+&=&\bigl\{|p_1-,p_2+,p_3+\rangle
++|p_1+,p_2-,p_3+\rangle+|p_1+,p_2+,p_3-\rangle\bigr\}/\sqrt{3}
+\;,\nonumber\\
+|4\rangle\equiv|J=\threehalf J_z=+\threehalf\rangle
+&=&|p_1+,p_2+,p_3+\rangle\nonumber \;.\
+\end{eqnarray}
+
+In this basis the Hamiltonian matrix is 
+\[
+\left(\begin{array}{cccc}
+-\threehalf\xi&\sqrt{3}U&\sqrt{3}V&0\\[0.5mm]
+\sqrt{3}U&-\thalf\xi+2W&2U&\sqrt{3}V\\
+\sqrt{3}V&2U&\thalf\xi+2W&\sqrt{3}U\\
+0&\sqrt{3}V&\sqrt{3}U&\threehalf\xi
+\end{array}\right)\;. \label{mat44}
+\]
+Lee Suzuki, three-body results, effective interaction
+for states $1$ and $2$. 
+$w=v=-0.4$, $u=-0.15$ and $\xi=2.0$. 
+First set two numbers is LS with three-body, second is LS
+with two-body interaction used in three-body calculations.
+\begin{center}
+\begin{tabular}{rlrc}\\\hline
+LS& & & \\ \hline
+-.135403E+00 &   -.333133E+00 & -.117467E+00  &  -.291723E+00\\
+-.333133E+00  &  -.939797E+00&  -.291723E+00  &  -.847473E+00  \\
+& &  & \\ \hline
+\end{tabular} 
+\end{center} 
+Exact Eigenvalues are $\lambda_1=-3.221958$  and $\lambda_2=-1.85324$. Approximate are 
+$-3.18127$ and $-1.783668$.
+
+Flow equations and Lee Suzuki, three-body results. 
+$w=v=-0.4$, $u=-0.15$ and $\xi=1.0$. Full matrix for flow equations, $s=4$ or $\lambda=0.5$. 
+\begin{center}
+\begin{tabular}{rlrc}\\\hline
+FLOW& & & \\ \hline
+ -.561104E+00 &   -.227218E-01 &   -.698344E-07 &   -.184620E-07\\
+    -.227218E-01 &   -.749813E+00 &   -.442461E-03  &  -.298454E-09\\
+    -.698344E-07 &   -.442461E-03  &  -.473747E+00 &   -.211362E-03\\
+    -.184620E-07  &  -.298454E-09  &  -.211362E-03 &   0.184665E+00\\
+LS& & & \\ \hline
+-.292119E+00  &  -.382607E+00 &  &   \\
+-.382607E+00  &  -.101880E+01 &  &    \\
+& &  & \\ \hline
+\end{tabular} 
+\end{center} 
+Flow equations and Lee Suzuki, three-body results. 
+$w=v=-0.4$, $u=-0.15$ and $\xi=1.0$. Full matrix for flow equations, $s=1$ or $\lambda=1$. 
+\begin{center}
+\begin{tabular}{rlrc}\\\hline
+FLOW& & & \\ \hline
+   -.486001E+00 &   -.235835E+00 &   -.174888E-01 &   -.163406E-04\\
+    -.235835E+00 &   -.824369E+00 &   -.248778E-01  &  -.156045E-02\\
+    -.174888E-01 &   -.248778E-01 &   -.473729E+00 &   -.306157E-01\\
+    -.163406E-04 &   -.156045E-02 &   -.306157E-01 &   0.184099E+00\\
+LS& & & \\ \hline
+-.292119E+00  &  -.382607E+00 &  &   \\
+-.382607E+00  &  -.101880E+01 &  &    \\
+& &  & \\ \hline
+\end{tabular} 
+\end{center} 
 
 
 
-For the IM-SRG, we follow a different route, and formulate the flow equation as well as the decoupling conditions underlying the definition of $\etaO(s)$ in the language of second quantization. This approach has been very successful in producing powerful and numerically efficient many-body schemes, chief among them the coupled cluster method discussed in chapter 8.
+
 
 \section{In-medium SRG and flow equations}
+
+For the IM-SRG, we follow a different route, and formulate the flow equation as well as the decoupling conditions underlying the definition of $\etaO(s)$ in the language of second quantization. This approach has been very successful in producing powerful and numerically efficient many-body schemes, chief among them the coupled cluster method discussed in chapter 8.
 
 When carried out exactly, the IM-SRG is a continuous unitary transformation in $A$-body space, and consequently, $\eta(s)$ and $\HO(s)$ are $A$-body operators even if they initially have a lower rank at $s=0$. From the discussion of the previous sections, we see that every evaluation of the commutator on the right-hand side of Eq.~\eqref{eq:opflow} increases the particle rank of $\HO(s)$, e.g.,
 \begin{equation}\label{eq:induced}
   \comm{\nord{\aaO_{a}\aaO_{b}\aO_{d}\aO_{c}}}{\nord{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}}= \delta_{ci}\nord{\aaO_{a}\aaO_{b}\aaO_{j}\aO_{l}\aO_{k}\aO_{d}}+\ldots.
 \end{equation}
-All of these induced contributions will in turn contribute to the parts of $\HO(s)$ with lower particle rank in subsequent integration steps. Because an explicit treatment of all contributions up to the $A$-body level is clearly not feasible, we have to introduce a truncation to close the system of IM-SRG flow equations. We follow a simple approach, and truncate $\etaO(s)$ and $\HO(s)$ at a given particle rank $n\leq A$, which is motivated by the cluster decomposition principle for short-range interactions (see, e.g., \cite{Weinberg:1996uf}). For $n=2$, this yields the so-called IM-SRG(2) truncation, our primary truncation scheme in past works \cite{Tsukiyama:2011uq,Tsukiyama:2012fk,Hergert:2013mi}, which will serve as the basis of the discussion in the remainder of this work. On occasion, we will also consider the next truncation in the hierarchy, denoted IM-SRG(3). The corresponding flow equations are given in Appendix \ref{app:imsrg3}, but they have not been used in numerical calculations because of the computational demands associated with handling three-body operators.
+All of these induced contributions will in turn contribute to the
+parts of $\HO(s)$ with lower particle rank in subsequent integration
+steps. Because an explicit treatment of all contributions up to the
+$A$-body level is clearly not feasible, we have to introduce a
+truncation to close the system of IM-SRG flow equations. We follow a
+simple approach, and truncate $\etaO(s)$ and $\HO(s)$ at a given
+particle rank $n\leq A$, which is motivated by the cluster
+decomposition principle for short-range interactions (see, e.g.,
+\cite{Weinberg:1996uf}). For $n=2$, this yields the so-called
+IM-SRG(2) truncation, our primary truncation scheme in past works
+\cite{Tsukiyama:2011uq,Tsukiyama:2012fk,Hergert:2013mi}, which will
+serve as the basis of the discussion in the remainder of this work. On
+occasion, we will also consider the next truncation in the hierarchy,
+denoted IM-SRG(3). The corresponding flow equations are given in
+Appendix \ref{app:imsrg3}, but they have not been used in numerical
+calculations because of the computational demands associated with
+handling three-body operators.
 
 Let us assume, then, that for each flow parameter $s$
 \begin{align}
@@ -386,7 +538,25 @@ the IM-SRG is size-extensive, and only connected diagrams are generated and
 re-summed by the IM-SRG flow \cite{Brandow:1967tg,Shavitt:2009}. This property
 is preserved even if the commutators are truncated at a given operator rank, as in the IM-SRG(2) case presented here. 
 
-From Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}, it is clear that the computational effort for solving the IM-SRG(2) flow equations is dominated by the two-body flow equation, which scales polynomially like $\OC(N^6)$ with the single-particle basis size $N$. This puts the IM-SRG(2) in the same category as other numerically efficient non-perturbative methods\footnote{The mentioned methods can make use of the distinction between particle and hole states in the single-particle basis to further reduce the effort. For instance, the amplitude equations of CCSD can be solved at $\OC(N_h^2N_p^4)$ cost, where typically the number of hole states $N_h$ is much smaller than the number of particle states $N_p\sim N$. Note that the construction of the CCSD effective Hamiltonian from the amplitudes requires $\OC(N^6)$ effort. In the IM-SRG(2), we are working directly with the analogous effective Hamiltonian.} like Coupled Cluster with Singles and Doubles (CCSD) \cite{Shavitt:2009,Hagen:2014ve}, the Self-Consistent Green's Function Approach (SCGF) \cite{Dickhoff:2004fk,Barbieri:2007fk,Cipollone:2013uq}, or canonical transformation theory \cite{White:2002fk,Yanai:2006uq}.
+From Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}, it is clear
+that the computational effort for solving the IM-SRG(2) flow equations
+is dominated by the two-body flow equation, which scales polynomially
+like $\OC(N^6)$ with the single-particle basis size $N$. This puts the
+IM-SRG(2) in the same category as other numerically efficient
+non-perturbative methods\footnote{The mentioned methods can make use
+  of the distinction between particle and hole states in the
+  single-particle basis to further reduce the effort. For instance,
+  the amplitude equations of CCSD can be solved at $\OC(N_h^2N_p^4)$
+  cost, where typically the number of hole states $N_h$ is much
+  smaller than the number of particle states $N_p\sim N$. Note that
+  the construction of the CCSD effective Hamiltonian from the
+  amplitudes requires $\OC(N^6)$ effort. In the IM-SRG(2), we are
+  working directly with the analogous effective Hamiltonian.} like
+Coupled Cluster with Singles and Doubles (CCSD)
+\cite{Shavitt:2009,Hagen:2014ve}, the Self-Consistent Green's Function
+Approach (SCGF)
+\cite{Dickhoff:2004fk,Barbieri:2007fk,Cipollone:2013uq}, or canonical
+transformation theory \cite{White:2002fk,Yanai:2006uq}.
 
 \subsection{General Observables\label{sec:observables}}
 In principle, the evaluation of observables other than the Hamiltonian
@@ -748,226 +918,6 @@ in the IM-SRG flow equations.
 
 
 
-The Lipkin model consists of two single-particle levels
-labelled by $\sigma=-$ and $+$, each of which has a degeneracy $p$. We write
-the Hamiltonian
-\begin{eqnarray}
-H&=& H_0+{\cal V}\;,\quad{\rm where}\nonumber\\
-H_0&=&\thalf\xi\sum_{p\sigma}{\sigma}a_{p\sigma}^{\dagger}a_{p\sigma}\;,
-\quad{\rm and}\nonumber\\
-{\cal V}&=&\thalf V\sum_{pp'\sigma}a^{\dagger}_{p\sigma}
-a^{\dagger}_{p'\sigma}a_{p'-\sigma}a_{p-\sigma}+ 
-\thalf W\sum_{pp'\sigma}a^{\dagger}_{p\sigma}a_{p'-\sigma}^{\dagger}
-a_{p'\sigma}a_{p-\sigma}  \nonumber\\
-&+&\thalf U\sum_{pp'\sigma}\left[a^{\dagger}_{p\sigma}
-a_{p'\sigma}^{\dagger}
-a_{p'-\sigma}a_{p\sigma}+a^{\dagger}_{p\sigma}a_{p'-\sigma}^{\dagger}
-a_{p'\sigma}a_{p\sigma}\right].\nonumber
-\end{eqnarray}
-Here $H_0$ is the unperturbed  Hamiltonian with single particle energies
-$\pm\thalf\xi$. The two-body interaction, ${\cal V}$, has three terms. The
-interaction $V$ acts between a pair of particles with parallel spins and
-changes the spins from $++$ to $--$, or vice versa. The interaction $W$
-is a spin-exchange interaction and $U$, it flips the spin of one particle.
-It is of interest to note that the interaction does not change the value of
-the degeneracy labels $pp'$.
-
-The
-quasi-spin operators obey angular momentum commutation relations and are
-defined by
-\[
-J_z=\thalf\sum_{p\sigma}\!{\sigma}a^{\dagger}_{p\sigma}a_{p\sigma}\,,\,
-J_+=\sum_p\!a_{p+}^{\dagger}a_{p-}\,,\,J_-=\sum_p\!a_{p-}^{\dagger}a_{p+}\,.
-\]
-The Hamiltonian can then be compactly expressed in the form
-\begin{eqnarray}
-H&=&{\xi}J_z+\thalf V(J_+^2+J_-^2)+\thalf W(J_+J_-+J_-J_+-n)\nonumber\\
-&&+\thalf U(J_++J_-)(n-1)\nonumber \;,
-\end{eqnarray}
-where the number operator $n=\sum_{p\sigma}a^{\dagger}_{p\sigma}
-a_{p\sigma}$.
-The operator $J^2=\frac{1}{2}(J_+J_-+J_-J_+)+J_z^2$ commutes with the
-Hamiltonian so the Hamiltonian matrix breaks up into
-submatrices of dimension $2J+1$, each associated with different values of
-$J$; for a given number of particles $N$ the largest angular momentum
-corresponds to $J=\thalf N$. 
-
-Here we need the case $N=3$ and for our purposes it is sufficient
-to consider $J=\threehalf$.
-We denote the basis state for three particles by
-\[
-|p_1\pm,p_2\pm,p_3\pm\rangle=a^\dagger_{p_1\pm}a^\dagger_{p_2\pm}
-a^\dagger_{p_3\pm}|0\rangle\;,
-\]
-where $p_i$ refers to the degeneracy label and $|0\rangle$ is the 
-vacuum state. Then the basis states for the $J=\threehalf$ matrix are:
-\begin{eqnarray}
-|1\rangle\equiv|J=\threehalf J_z=-\threehalf\rangle
-&=&|p_1-,p_2-,p_3-\rangle\;,\nonumber\\
-|2\rangle\equiv|J=\threehalf J_z=-\thalf\rangle
-&=&\bigl\{|p_1-,p_2-,p_3+\rangle
-+|p_1-,p_2+,p_3-\rangle+|p_1+,p_2-,p_3-\rangle\bigr\}/\sqrt{3}
-\;,\nonumber\\
-|3\rangle\equiv|J=\threehalf J_z=+\thalf\rangle
-&=&\bigl\{|p_1-,p_2+,p_3+\rangle
-+|p_1+,p_2-,p_3+\rangle+|p_1+,p_2+,p_3-\rangle\bigr\}/\sqrt{3}
-\;,\nonumber\\
-|4\rangle\equiv|J=\threehalf J_z=+\threehalf\rangle
-&=&|p_1+,p_2+,p_3+\rangle\nonumber \;.\
-\end{eqnarray}
-
-In this basis the Hamiltonian matrix is 
-\[
-\left(\begin{array}{cccc}
--\threehalf\xi&\sqrt{3}U&\sqrt{3}V&0\\[0.5mm]
-\sqrt{3}U&-\thalf\xi+2W&2U&\sqrt{3}V\\
-\sqrt{3}V&2U&\thalf\xi+2W&\sqrt{3}U\\
-0&\sqrt{3}V&\sqrt{3}U&\threehalf\xi
-\end{array}\right)\;. \label{mat44}
-\]
-
-We can define the exact $\hat{Q}$-box (all linked non-folded diagrams summed to infinite order) 
-for a model space comprising states
-$1$ and $2$
-\begin{eqnarray}
-&&\langle1|\hat{Q}|1\rangle=\frac{3V^2}{-2\xi-2W+U^2/\xi}\;,\nonumber\\
-&&\langle2|\hat{Q}|1\rangle=\langle1|\hat{Q}|2\rangle=\sqrt{3}U+
-\frac{2\sqrt{3}UV}{-2\xi-2W+U^2/\xi}\nonumber\\
-&&\qquad\qquad\qquad\qquad\ \ +\frac{\sqrt{3}UV^2}{2\xi(\xi+W)-U^2}
-\;,\nonumber\\
-&&\langle2|\hat{Q}|2\rangle=\xi+2W+\frac{4U^2}{-2\xi-2W+U^2/\xi}
-\nonumber\\
-&&\quad+\frac{V^2}{-\xi+U^2/(2\xi+2W)}+\frac{4VU^2}{2\xi(\xi+W)-U^2}\nonumber \;.
-\end{eqnarray}
-and then obtain the exact eigenvalues  for $1$ and $2$.
-
-The previous analysis necessarily includes effective three-body interactions and we 
-would like to assess the effect of their removal. To that end consider first 
-the two-body problem. We only need to consider the $J=1$ matrix which is
-\[
-\left(\begin{array}{ccc}
--\xi&U/\sqrt{2}&V\\
-U/\sqrt{2}&W&U/\sqrt{2}\\
-V&U/\sqrt{2}&\xi
-\end{array}\right)\;, \label{mat33}
-\]
-in the basis
-\begin{eqnarray}
-|a\rangle&\equiv&|J=1 J_z=-1\rangle=|p_1-,p_2-\rangle\;,\nonumber\\
-|b\rangle&\equiv&|J=1 J_z=0\rangle=\bigl\{|p_1-,p_2+\rangle
-+|p_1+,p_2-\rangle\bigr\}/\sqrt{2}\;,\nonumber\\
-|c\rangle&\equiv&|J=1 J_z=+1\rangle
-=|p_1+,p_2+\rangle\nonumber\;.\label{2basis}
-\end{eqnarray}
-
-Taking the model space to comprise states $|a\rangle$ and $|b\rangle$
-and choosing degenerate unperturbed energies of $-\xi$, the exact
-$\hat{Q}$-box is
-\begin{eqnarray}
-\langle a|\hat{Q}|a\rangle&=&-\frac{V^2}{2\xi}\;,\nonumber\\
-\langle b|\hat{Q}|a\rangle&=&\langle a|\hat{Q}|b\rangle=\frac{U}{\sqrt{2}}
--\frac{VU}{2\sqrt{2}\xi}\;,\nonumber\\
-\langle b|\hat{Q}|b\rangle&=&\xi+W-\frac{U^2}{4\xi}\nonumber\;.
-\end{eqnarray}
-In this way the one- plus 
-two-body contribution to the three-body $\hat{Q}$-box is found to be
-\begin{eqnarray}
-\langle1|\hat{Q}|1\rangle&=&-\frac{3V^2}{2\xi}\;,\nonumber\\
-\langle2|\hat{Q}|1\rangle&=&\langle1|\hat{Q}|2\rangle=\sqrt{3}U-
-\frac{\sqrt{3}VU}{2\xi} \;,\nonumber\\
-\langle2|\hat{Q}|2\rangle&=&\xi+2W-\frac{U^2}{2\xi}
--\frac{V^2}{3\xi}\;. \label{q2u}
-\end{eqnarray}
-We miss three-body diagrams.  There are important ones with one-body insertions that do not arise
-in the two-body approximations. The results will in particular be sensitive to the 
-role of the single-particle field.
-The final effective interaction is obtained via for example the Kuo-Krenciglowa resummation.
-
-The effective interaction also 
-requires that folded diagrams be included to all orders and this can 
-be formally written
-\[
-V=\lim_{n\rightarrow\infty}V(n)\;, \label{veff}  %pje moved label
-\]
-where
-\[
-V(n)=\hat{Q}(\omega)+\sum_{m=1}^\infty\frac{1}{m!}\frac{d^m\hat{Q}}
-{d\omega^m}\bigl\{V(n-1)\bigr\}^m\;, \label{veff2}  %pje new label
-\]
-with $V(0)\equiv\hat{Q}$ and matrix multiplication implied.
-Here $\omega$ is the unperturbed energy of the initial state. In order
-to perform calculations with $N$ particles in the model space it is
-necessary to separate the effective interaction $V$ into its one-, two-
-and three-body components (in principle up to $N$-body interactions are
-needed).
-
-
-Many-Body perturbation theory and Lee Suzuki, three-body results, effective interaction
-for states $1$ and $2$. Degenerate perturbation theory has been used for MBPT.
-$w=v=-0.4$, $u=-0.15$ and $\xi=1.0$. Need to add $-3/2\xi$ to MBPT int.  Eigenvalues almost the same
-after 6 folds.
-First set two numbers is MBPT/LS with three-body, second is MBPT/LS
-with two-body interaction used in three-body calculations.
-\begin{center}
-\begin{tabular}{rlrc}\\\hline
-MBPT& & & \\ \hline
--.292907E+00& -.389867E+00 & -.213665E+00& -.300785E+00\\
--.376862E+00& -.193965E-01 &-.283137E+00  & 0.138512E+00\\
-LS& & & \\ \hline
--.292119E+00  &  -.382607E+00 &-.226993E+00  &  -.312846E+00 \\
--.382607E+00  &  -.101880E+01 & -.312846E+00 &   -.887993E+00 \\
-& &  & \\ \hline
-\end{tabular} 
-\end{center} 
-Exact Eigenvalues are $\lambda_1=-2.06174$  and $\lambda_2=-1.24918$. Approximate are 
-$-1.91330$ and $-1.20168$.
-
-Lee Suzuki, three-body results, effective interaction
-for states $1$ and $2$. 
-$w=v=-0.4$, $u=-0.15$ and $\xi=2.0$. 
-First set two numbers is LS with three-body, second is LS
-with two-body interaction used in three-body calculations.
-\begin{center}
-\begin{tabular}{rlrc}\\\hline
-LS& & & \\ \hline
--.135403E+00 &   -.333133E+00 & -.117467E+00  &  -.291723E+00\\
--.333133E+00  &  -.939797E+00&  -.291723E+00  &  -.847473E+00  \\
-& &  & \\ \hline
-\end{tabular} 
-\end{center} 
-Exact Eigenvalues are $\lambda_1=-3.221958$  and $\lambda_2=-1.85324$. Approximate are 
-$-3.18127$ and $-1.783668$.
-
-Flow equations and Lee Suzuki, three-body results. 
-$w=v=-0.4$, $u=-0.15$ and $\xi=1.0$. Full matrix for flow equations, $s=4$ or $\lambda=0.5$. 
-\begin{center}
-\begin{tabular}{rlrc}\\\hline
-FLOW& & & \\ \hline
- -.561104E+00 &   -.227218E-01 &   -.698344E-07 &   -.184620E-07\\
-    -.227218E-01 &   -.749813E+00 &   -.442461E-03  &  -.298454E-09\\
-    -.698344E-07 &   -.442461E-03  &  -.473747E+00 &   -.211362E-03\\
-    -.184620E-07  &  -.298454E-09  &  -.211362E-03 &   0.184665E+00\\
-LS& & & \\ \hline
--.292119E+00  &  -.382607E+00 &  &   \\
--.382607E+00  &  -.101880E+01 &  &    \\
-& &  & \\ \hline
-\end{tabular} 
-\end{center} 
-Flow equations and Lee Suzuki, three-body results. 
-$w=v=-0.4$, $u=-0.15$ and $\xi=1.0$. Full matrix for flow equations, $s=1$ or $\lambda=1$. 
-\begin{center}
-\begin{tabular}{rlrc}\\\hline
-FLOW& & & \\ \hline
-   -.486001E+00 &   -.235835E+00 &   -.174888E-01 &   -.163406E-04\\
-    -.235835E+00 &   -.824369E+00 &   -.248778E-01  &  -.156045E-02\\
-    -.174888E-01 &   -.248778E-01 &   -.473729E+00 &   -.306157E-01\\
-    -.163406E-04 &   -.156045E-02 &   -.306157E-01 &   0.184099E+00\\
-LS& & & \\ \hline
--.292119E+00  &  -.382607E+00 &  &   \\
--.382607E+00  &  -.101880E+01 &  &    \\
-& &  & \\ \hline
-\end{tabular} 
-\end{center} 
 
 
 
