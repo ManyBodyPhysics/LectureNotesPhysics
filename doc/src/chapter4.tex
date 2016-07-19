@@ -21,8 +21,6 @@
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\conj}[1]{\overline{#1}}
 
-\newcommand{\gsim}{\gtrsim}
-\newcommand{\lsim}{\lesssim}
 
 % derivatives
 \newcommand{\dd}{\mathrm{d}}
@@ -32,14 +30,13 @@
 \newcommand{\dAlem}{\Box}
 
 % three-vectors
-\newcommand{\vx}{\mathbf{x}}
-\newcommand{\vy}{\mathbf{y}}
+%\newcommand{\vx}{\mathbf{x}}
+%\newcommand{\vy}{\mathbf{y}}
 
-\newcommand{\vk}{\mathbf{k}}
-\newcommand{\vp}{\mathbf{p}}
-\newcommand{\vq}{\mathbf{q}}
+%\newcommand{\vk}{\mathbf{k}}
+%\newcommand{\vq}{\mathbf{q}}
 
-\newcommand{\vA}{\mathbf{A}}
+%\newcommand{\vA}{\mathbf{A}}
 
 \newcommand{\vZero}{\mathbf{0}}
 
@@ -85,24 +82,24 @@
 \newcommand{\fpi}{f_\pi}
 
 \newcommand{\gamt}{\gamma_t}
-\newcommand{\at}{a_t}
+%\newcommand{\at}{a_t}
 \newcommand{\rt}{r_t}
 \newcommand{\rhot}{\rho_t}
 
 \newcommand{\gamd}{\gamt}
 
 % matrices
-\NewEnviron{skmattwod}{%
-\left(\begin{array}{cc}
-  \BODY
-\end{array}\right)
-}
+%\NewEnviron{skmattwod}{%
+%\left(\begin{array}{cc}
+%  \BODY
+%\end{array}\right)
+%}
 
-\NewEnviron{skvectwod}{%
-\left(\begin{array}{c}
-  \BODY
-\end{array}\right)
-}
+%\NewEnviron{skvectwod}{%
+%\left(\begin{array}{c}
+%  \BODY
+%\end{array}\right)
+%}
 
 \newcommand{\twodmat}[1]{\begin{skmattwod}#1\end{skmattwod}}
 \newcommand{\twodvec}[1]{\begin{skvectwod}#1\end{skvectwod}}
@@ -126,15 +123,15 @@
 \newcommand{\OO}{\mathcal{O}}
 
 % QM
-\newcommand{\bra}[1]{\langle #1|}
+%\newcommand{\bra}[1]{\langle #1|}
 \newcommand{\braauto}[1]{\left\langle #1\right|}
 \newcommand{\brabig}[1]{\big\langle #1\big|}
 
-\newcommand{\ket}[1]{|#1\rangle}
+%\newcommand{\ket}[1]{|#1\rangle}
 \newcommand{\ketauto}[1]{\left|#1\right\rangle}
 \newcommand{\ketbig}[1]{\big|#1\big\rangle}
 
-\newcommand{\braket}[2]{\langle #1|#2\rangle}
+%\newcommand{\braket}[2]{\langle #1|#2\rangle}
 \newcommand{\braketauto}[2]{\left\langle #1\middle|#2\right\rangle}
 \newcommand{\braketbig}[2]{\big\langle #1\big|#2\big\rangle}
 
@@ -151,17 +148,17 @@
 \newcommand{\acommbig}[2]{\big\{#1,#2\big\}}
 
 % custom environments and boxes
-\NewEnviron{subalign}[1][]{%
-\begin{subequations}\begin{align}
-  \BODY
-\end{align}\label{#1}\end{subequations}
-}
+%\NewEnviron{subalign}[1][]{%
+%\begin{subequations}\begin{align}
+%  \BODY
+%\end{align}\label{#1}\end{subequations}
+%}
 
-\NewEnviron{spliteq}{%
-\begin{equation}\begin{split}
-  \BODY
-\end{split}\end{equation}
-}
+%\NewEnviron{spliteq}{%
+%\begin{equation}\begin{split}
+%  \BODY
+%\end{split}\end{equation}
+%}
 
 \newcommand*{\vcenteredhbox}[1]
 {\begingroup\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
@@ -355,7 +352,7 @@ strictures of the spontaneous and explicit chiral symmetry breaking
 in QCD~\cite{Gasser:1983yg,Gasser:1984gg}.  Here, the light degrees
 of freedom are the pions, that are generated through the symmetry violation.
 Heavier particles like \eg vector mesons only appear indirectly
-as they generate local four-pion interactions with four, six, \etc
+as they generate local four-pion interactions with four, six, etc
 derivatives.
 
 In these lectures, we also consider EFTs with bound states, where 
@@ -418,7 +415,7 @@ enter in the effective description).
 
 Let us illustrate this by showing how integrating out a ``heavy'' 
 particle gives rise to contact interactions between the remaining degrees 
-of freedom (\cf~ the example in section \ref{sec:EFT-Intro}).  We 
+of freedom (see the example in section \ref{sec:EFT-Intro}).  We 
 stress that the particles which are integrated out can in fact be lighter than 
 what is left (like it is the case in pionless EFT)---what really matters for 
 the procedure is which particles are assumed to appear in \emph{asymptotic} 
@@ -649,17 +646,17 @@ fields, \eg,
 for a free scalar particle, where $\phi^\dagger(t,\vx)$ is the field operator 
 that creates a particle at time $t$ and position $\vx$, and $\phi(t,\vx)$)
 correspondingly destroys it.  Written in terms of momentum-space ladder 
-operators $\hat{a}_\vp$,$\hat{a}^\dagger_\vp$ (as they appear in standard 
+operators $\hat{a}_{\mathbf{p}}$,$\hat{a}^\dagger_{\mathbf{p}}$ (as they appear in standard 
 many-body quantum mechanics), we have
 %
 \begin{equation}
  \phi(t,\vx)
- = \int\!\frac{\dd^3p}{(2\pi)^3} \hat{a}_\vp \,\eex^{-\ii E_\vp t} 
- \eex^{\ii\vp\cdot\vx} \,,
+ = \int\!\frac{\dd^3p}{(2\pi)^3} \hat{a}_{\mathbf{p}} \,\eex^{-\ii E_{\mathbf{p}} t} 
+ \eex^{\ii{\mathbf{p}}\cdot\vx} \,,
 \end{equation}
 %
-and analogously for $\phi^\dagger(t,\vx)$.  Note that here $E_\vp = 
-\vp^2/(2m)$ is the kinetic energy alone, and that creation and destruction 
+and analogously for $\phi^\dagger(t,\vx)$.  Note that here $E_{\mathbf{p}} = 
+{\mathbf{p}}^2/(2m)$ is the kinetic energy alone, and that creation and destruction 
 operators are completely separated.  Intuitively, this makes perfect sense: 
 At low energies, virtual particle-antiparticle pairs would be highly 
 off-shell, thus giving rise to very short-range effects that we can 
@@ -695,20 +692,20 @@ This implies the Klein--Gordon equation for the field operator,
 \end{equation}
 %
 the most general solution of which is typically written as (with a 
-four-vectors $x=(t,\vx)$, $p=(p_0,\vp)$, and a Lorentz-invariant integration 
+four-vectors $x=(t,\vx)$, $p=(p_0,{\mathbf{p}})$, and a Lorentz-invariant integration 
 measure)
 %
 \begin{equation}
  \varphi(x)
- = \int\!\frac{\dd^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_\vp}}\left(
- \hat{a}_\vp\,\eex^{-\ii p\cdot x} + \hat{b}^\dagger_\vp\,\eex^{\ii p\cdot x}
- \right)\Bigg|_{p_0=\omega_\vp} \,,
+ = \int\!\frac{\dd^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_{\mathbf{p}}}}\left(
+ \hat{a}_{\mathbf{p}}\,\eex^{-\ii p\cdot x} + \hat{b}^\dagger_{\mathbf{p}}\,\eex^{\ii p\cdot x}
+ \right)\Bigg|_{p_0=\omega_{\mathbf{p}}} \,,
 \label{eq:Phi}
 \end{equation}
 %
-where $\omega_\vp = \sqrt{\vp^2+m^2}$.  With this convention where $p_0$ is 
-chosen positive, modes created by $\hat{a}^\dagger_\vp$ correspond to particles 
-(propagating forward in time), whereas $\hat{b}^\dagger_\vp$ creates an 
+where $\omega_{\mathbf{p}} = \sqrt{{\mathbf{p}}^2+m^2}$.  With this convention where $p_0$ is 
+chosen positive, modes created by $\hat{a}^\dagger_{\mathbf{p}}$ correspond to particles 
+(propagating forward in time), whereas $\hat{b}^\dagger_{\mathbf{p}}$ creates an 
 antiparticle (positive-energy state propagating backwards in time).  That we 
 have both stems from the fact that the complex scalar field corresponds to two 
 real ones (completely decoupled in the absence of interactions), each of which 
@@ -717,8 +714,8 @@ the nonrelativistic limit, we have to consider the particle and antiparticles
 separately.  Defining
 %
 \begin{equation}
- \varphi_a(x) = \int\!\frac{\dd^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_\vp}}
- \hat{a}_\vp\,\eex^{-\ii p\cdot x}\Bigg|_{p_0=\omega_\vp}
+ \varphi_a(x) = \int\!\frac{\dd^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_{\mathbf{p}}}}
+ \hat{a}_{\mathbf{p}}\,\eex^{-\ii p\cdot x}\Bigg|_{p_0=\omega_{\mathbf{p}}}
  \equiv \eex^{-\ii m t} \phi_a(x) \,,
 \label{eq:Phi-phi-a}
 \end{equation}
@@ -736,11 +733,11 @@ where the quadratic mass term has canceled.  Since $\phi_a(x) = \eex^{\ii m t}
 transform each time derivative acting on $\phi_a(x)$ brings down a factor
 %
 \begin{equation}
- \omega_p - m = \sqrt{\vp^2 + m^2} - m \approx \vp^2/(2m) \,,
+ \omega_p - m = \sqrt{{\mathbf{p}}^2 + m^2} - m \approx {\mathbf{p}}^2/(2m) \,,
 \end{equation}
 %
-\ie, just the kinetic energy $E_\vp$ up to corrections of higher order in 
-$1/m$.  In the nonrelativistic limit, $E_\vp \ll m$, so we see that we can 
+\ie, just the kinetic energy $E_{\mathbf{p}}$ up to corrections of higher order in 
+$1/m$.  In the nonrelativistic limit, $E_{\mathbf{p}} \ll m$, so we see that we can 
 neglect the quadratic time derivative in Eq.~\eqref{eq:KG-phi-a} compared to the 
 other two terms in Eq.~\eqref{eq:KG-phi-a}, and then recover the Schr\"odinger 
 equation for $\phi_a$:
@@ -1150,22 +1147,22 @@ times
 %
 \begin{equation}
  \int\dd^4y \int\frac{\dd^4p}{(2\pi)^4} \eex^{{-}\ii p\cdot(x-y)}
- \frac{\ii\vp^2}{p^2-\mpi^2 + \ii\eps} \\
+ \frac{\ii{\mathbf{p}}^2}{p^2-\mpi^2 + \ii\eps} \\
  = \int\dd^4y \int\frac{\dd^3p}{(3\pi)^4} \int\frac{\dd p_0}{2\pi} \,
  \eex^{{-}\ii p(x-y)}
- \frac{\ii\vp^2}{p_0^2 - \vp^2 - \mpi^2 + \ii\eps} \,.
+ \frac{\ii{\mathbf{p}}^2}{p_0^2 - {\mathbf{p}}^2 - \mpi^2 + \ii\eps} \,.
 \end{equation}
 %
 The integral over $p_0$ can be solved via contour integration.  Defining
-$\omega_\vp = \sqrt{\vp^2+\mpi^2}$, we get
+$\omega_{\mathbf{p}} = \sqrt{{\mathbf{p}}^2+\mpi^2}$, we get
 %
 \begin{equation}
  \int\frac{\dd p_0}{2\pi} \, \eex^{{-}\ii p_0(x_0-y_0)}
- \frac{\ii}{p_0^2 - \vp^2 - \mpi^2 + \ii\eps}
- = \frac{\eex^{-\ii\omega'_\vp\abs{x_0-y_0}}}{2\omega'_\vp}
+ \frac{\ii}{p_0^2 - {\mathbf{p}}^2 - \mpi^2 + \ii\eps}
+ = \frac{\eex^{-\ii\omega'_{\mathbf{p}}\abs{x_0-y_0}}}{2\omega'_{\mathbf{p}}}
  \mathtext{with}
- \omega'_\vp = \omega_\vp - \frac{\ii\eps}{2\omega_\vp}
- \equiv \omega_\vp - \ii\eps' \,.
+ \omega'_{\mathbf{p}} = \omega_{\mathbf{p}} - \frac{\ii\eps}{2\omega_{\mathbf{p}}}
+ \equiv \omega_{\mathbf{p}} - \ii\eps' \,.
 \end{equation}
 %
 It is important here to keep track of the small imaginary part, as it allows us 
@@ -1173,10 +1170,10 @@ to write
 %
 \begin{equation}
  \int_{{-}\infty}^\infty \dd y_0 \,
- \frac{\eex^{-\ii\omega_\vp'\abs{x_0-y_0}}}{2\omega'_\vp}
+ \frac{\eex^{-\ii\omega_{\mathbf{p}}'\abs{x_0-y_0}}}{2\omega'_{\mathbf{p}}}
  = \int_{0}^\infty \dd y_0
- \frac{\eex^{-\ii\omega'_\vp\abs{y_0}}}{\omega'_\vp}
- = {-}\ii / {(\omega'_\vp)^2} \,.
+ \frac{\eex^{-\ii\omega'_{\mathbf{p}}\abs{y_0}}}{\omega'_{\mathbf{p}}}
+ = {-}\ii / {(\omega'_{\mathbf{p}})^2} \,.
 \end{equation}
 %
 Collecting the results up to this point, we arrive 
@@ -1185,20 +1182,20 @@ at
 \begin{equation}
  \int\dd^4y \int\frac{\dd^4p}{(2\pi)^4}
  \, \eex^{{-}\ii p(x-y)}
- \dfrac{\ii\vp^2}{\strut p^2 - \mpi^2 + \ii\eps}
+ \dfrac{\ii{\mathbf{p}}^2}{\strut p^2 - \mpi^2 + \ii\eps}
  = {-}\!\int\dd^3y \int\frac{\dd^3p}{(2\pi)^3}
- \, \eex^{\ii \vp\cdot(\vx-\vy)}
- \frac{\vp^2}{\strut\vp^2+\mpi^2} \,.
+ \, \eex^{\ii {\mathbf{p}}\cdot(\vx-\vy)}
+ \frac{{\mathbf{p}}^2}{\strut{\mathbf{p}}^2+\mpi^2} \,.
 \end{equation}
 %
 We finally obtain the desired contact interaction by expanding
 %
 \begin{equation}
- \frac{\vp^2}{\strut\vp^2+\mpi^2}
- = \frac{\vp^2}{\mpi^2} \left(1 - \frac{\vp^2}{\mpi^2} + \cdots\right) \,,
+ \frac{{\mathbf{p}}^2}{\strut{\mathbf{p}}^2+\mpi^2}
+ = \frac{{\mathbf{p}}^2}{\mpi^2} \left(1 - \frac{{\mathbf{p}}^2}{\mpi^2} + \cdots\right) \,,
 \end{equation}
 %
-with a leading term $\sim\vp^2$, generating a contact interaction $\sim 
+with a leading term $\sim{\mathbf{p}}^2$, generating a contact interaction $\sim 
 (N^\dagger N)\Laplace(N^\dagger N)$.  This is of course not surprising: after 
 all, the original interaction term in Eq.~\eqref{eq:L-pi-N-nonrel} generating 
 the contact operator had a single derivative $\vNabla$.  Considering other 
@@ -1206,7 +1203,7 @@ terms coming from Eq.~\eqref{eq:NN-Fierz}, one can also find operators like
 $(N^\dagger \skvec{\sigma}\cdot\vNabla N)(N^\dagger \skvec{\sigma}\cdot\vNabla 
 N)$, and it is a useful exercise to work this out in detail.  But already from 
 our qualitative discussion here we can infer that the resulting effective 
-theory is an expansion in $\vp^2/\mpi^2$, \ie, its range of validity is 
+theory is an expansion in ${\mathbf{p}}^2/\mpi^2$, \ie, its range of validity is 
 determined by three-momenta---rather than the energies---being small 
 compared to $\mpi$.\footnote{This is assuming $\mpi<\msigma$.}
 
@@ -1252,7 +1249,7 @@ define the propagator
 \begin{equation}
  D_\phi(x-y)
  = \int\frac{\dd^4q}{(2\pi)^4} \, \eex^{{-}\ii p(x-y)}
- \frac{\ii}{p_0-\frac{\vp^2}{2m} + \ii\eps} \,,
+ \frac{\ii}{p_0-\frac{{\mathbf{p}}^2}{2m} + \ii\eps} \,,
 \label{eq:D-phi}
 \end{equation}
 %
@@ -1266,7 +1263,7 @@ satisfying
 Up to a conventional factor $\ii$, this is precisely the (retarded) Green's 
 function\footnote{Note that in the nonrelativistic case there is no ``Feynman 
 propagator.''  Particles and particles are decoupled, and the denominator in 
-Eq.~\eqref{eq:D-phi} only has a single pole at $p_0=\vec{\vp^2}/(2m)-\ii\eps$.  
+Eq.~\eqref{eq:D-phi} only has a single pole at $p_0=\vec{{\mathbf{p}}^2}/(2m)-\ii\eps$.  
 Flipping the sign of the $\ii\eps$ term gives the advanced Green's function.} 
 familiar, for example, from non-relativistic scattering theory (then typically 
 denoted $G_0$).  This will appear again when the Lippmann--Schwinger equation 
@@ -1366,7 +1363,7 @@ linear combinations, but a separation by partial waves is typically a good
 choice for systems with rotational invariance.  It is a useful exercise to work 
 out how the structure for the derivative interactions gives the desired result, 
 working in momentum space and considering contractions with external in and out 
-states that have center-of-mass momenta $\pm\vk^2$ and $\pm\vp/2$, respectively.
+states that have center-of-mass momenta $\pm\vk^2$ and $\pm{\mathbf{p}}/2$, respectively.
 The structure of the individual terms is determined by the requirement of 
 Galilean invariance,\footnote{See for example Ref.~\cite{Hagen:2014}, 
 Sec.~2.1.1 for a rigorous discussion of the required transformation 
@@ -2882,17 +2879,17 @@ this feature.
 Omitting spin-isospin factors for simplicity, the resummed propagators are
 %
 \begin{equation}
- \ii\Delta_{\st}(p_0,\vp)
- = \frac{-\ii}{\sigst + \yst^2 I_0(p_0,\vp)} \,,
+ \ii\Delta_{\st}(p_0,{\mathbf{p}})
+ = \frac{-\ii}{\sigst + \yst^2 I_0(p_0,{\mathbf{p}})} \,,
 \end{equation}
 %
 where
 %
 \begin{multline}
- I_0(p_0,\vp) = \MN\int^\Lambda \frac{\dd^3q}{(2\pi)^3}
- \frac{1}{\MN p_0 - \vp^2/4 - \vq^2 + \ii\eps}
+ I_0(p_0,{\mathbf{p}}) = \MN\int^\Lambda \frac{\dd^3q}{(2\pi)^3}
+ \frac{1}{\MN p_0 - {\mathbf{p}}^2/4 - \vq^2 + \ii\eps}
  = {-}\frac{\MN}{4\pi}
- \left(\frac{2\Lambda}{\pi} - \sqrt{\frac{\vp^2}{4}-\MN p_0-\ii\eps}\right)
+ \left(\frac{2\Lambda}{\pi} - \sqrt{\frac{{\mathbf{p}}^2}{4}-\MN p_0-\ii\eps}\right)
  +\OO(1/\Lambda)
 \label{eq:I0-cutoff}
 \end{multline}
@@ -2904,7 +2901,7 @@ T-matrix,
 %
 \begin{equation}
  \ii T_\st(k)
- = (\ii \yst)^2\, \ii\Delta_\st\!\left(p_0=k^2/\MN,\vp=\vZero\right)
+ = (\ii \yst)^2\, \ii\Delta_\st\!\left(p_0=k^2/\MN,{\mathbf{p}}=\vZero\right)
  = \frac{4\pi}{M_N}\frac{\ii}{k\cot\delta_\st(k) - \ii k}\,,
 \label{eq:Tnd}
 \end{equation}
@@ -2948,7 +2945,7 @@ renormalization.  We find
 %
 \begin{equation}
  Z_t^{-1} = \ii\frac{\partial}{\partial p_0}
- \left.\frac{1}{\ii\Delta_t(p_0,\vp)}\right|_{p_0=-\frac{\gamt^2}{\MN},\,\vp=0}
+ \left.\frac{1}{\ii\Delta_t(p_0,{\mathbf{p}})}\right|_{p_0=-\frac{\gamt^2}{\MN},\,{\mathbf{p}}=0}
  = \frac{\MN^2 \yt^2}{8\pi\gamt}
  \;\Rightarrow\;
  \sqrt{Z_t} = \frac{1}{\yt} \frac{\sqrt{8\pi\gamt\mathstrut}}{\MN}
@@ -3023,7 +3020,7 @@ the $Nd$ T-matrix is shown diagrammatically in Fig.~\ref{fig:nd-IntEq-Q}.
 Compared to Fig.~\ref{fig:inteq12}, we use a different convention here were the 
 T-matrix blob is drawn to the left of the nucleon exchange, and we denote in- 
 and outgoing momenta (in the $Nd$ center-of-mass frame) by $\pm\vk$ and 
-$\pm\vp$, respectively.\footnote{Unlike what is done in 
+$\pm{\mathbf{p}}$, respectively.\footnote{Unlike what is done in 
 Sec.~\ref{sec:EFT-Bosons}, we also read diagrams from left (incoming particles) 
 to right (outgoing particles).  Both conventions can be found in the 
 literature.}  The energy and momentum dependence are exactly the same as for 
@@ -3031,15 +3028,15 @@ bosons, but we have to include the additional spin-isospin structure from the
 vertices.  Doing this, the result in its full glory reads:
 %
 \begin{multline}
- \idxx{\ii T_q^{ij}}{\beta b}{\alpha a}(\vk,\vp;E)
+ \idxx{\ii T_q^{ij}}{\beta b}{\alpha a}(\vk,{\mathbf{p}};E)
  = -\frac{\ii\MN\yt^2}{2}\,\idxx{\sigma^j\sigma^i}\beta\alpha\delta^b_a
- \,\frac{1}{\vk^2+\vk\cdot\vp+\vp^2-\MN E-\ii\eps}\\
+ \,\frac{1}{\vk^2+\vk\cdot{\mathbf{p}}+{\mathbf{p}}^2-\MN E-\ii\eps}\\
  +\int\frac{\dd^3 q}{(2\pi)^3} \,
  \Delta_t\left(E-\frac{\vq^2}{2\MN},\vq\right)
  \idxx{\ii T_q^{ik}}{\gamma c}{\alpha a}(E;\vk,\vq)\\
  \times\frac{\MN\yt^2}{2}
  \frac{\idxx{\sigma^j\sigma^k}\beta\gamma\delta^b_c}
- { \vq^2+\vq\cdot\vp+\vp^2-\MN E-\ii\eps} \,.
+ { \vq^2+\vq\cdot{\mathbf{p}}+{\mathbf{p}}^2-\MN E-\ii\eps} \,.
 \label{eq:nd-IntEq-Q-raw}
 \end{multline}
 %
@@ -3069,7 +3066,7 @@ fully projected quartet-channel amplitude is
 
 Finally, the S-wave projection of Eq.~\eqref{eq:nd-IntEq-Q-raw} is done by 
 applying the operator $\frac12\int_{-1}^{1}\dd\cos\theta$, where $\theta$ is 
-the angle between $\vk$ and $\vp$.  Introducing a momentum cutoff $\Lambda$, 
+the angle between $\vk$ and ${\mathbf{p}}$.  Introducing a momentum cutoff $\Lambda$, 
 the resulting equation can be solved numerically by discretizing the 
 remaining one-dimensional integral.  From the result, which we denote by 
 $T_q^0$, we can calculate observables like scattering phase shifts,
@@ -3652,9 +3649,9 @@ we get
  \ii\mathcal{M}_{\text{E1}} \\
  = 2 \times \frac{{-}e}{\MN}
  \idxxx{\frac{\one + \tau^3}{2}}ca
- \delta^\gamma_\alpha\,\ii(\vp-\vk)^j
+ \delta^\gamma_\alpha\,\ii({\mathbf{p}}-\vk)^j
  \dfrac{\ii}{{-}\dfrac{k_0}{2}-\dfrac{\gamd^2}{2\MN}+\dfrac{k^2}{8\MN}
- -\dfrac{(\vp-\vk)^2}{2\MN}+\ii\eps} \,
+ -\dfrac{({\mathbf{p}}-\vk)^2}{2\MN}+\ii\eps} \,
  \, \frac{\ii}{\sqrt8}\frac{\sqrt{8\pi\gamd}}{\MN}
  \idxx{\sigma^2\sigma^i}\beta\gamma
  \idxx{\tau_2}bc \\

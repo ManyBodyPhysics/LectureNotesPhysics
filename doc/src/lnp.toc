@@ -82,7 +82,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Symmetries and power counting}{87}{subsection.4.2.3}
 \contentsline {subsubsection}{\numberline {4.2.3.1}The breakdown scale}{88}{subsubsection.4.2.3.1}
 \contentsline {subsubsection}{\numberline {4.2.3.2}Na\"ive dimensional analysis}{89}{subsubsection.4.2.3.2}
-\contentsline {subsubsection}{\numberline {4.2.3.3}Fine tuning}{91}{subsubsection.4.2.3.3}
+\contentsline {subsubsection}{\numberline {4.2.3.3}Fine tuning}{90}{subsubsection.4.2.3.3}
 \contentsline {subsubsection}{\numberline {4.2.3.4}Loops and renormalization}{91}{subsubsection.4.2.3.4}
 \contentsline {paragraph}{The cutoff}{92}{section*.17}
 \contentsline {subsection}{\numberline {4.2.4}Matching}{92}{subsection.4.2.4}
@@ -92,28 +92,28 @@
 \contentsline {subsection}{\numberline {4.3.3}Three-body system}{98}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}Three-body observables}{100}{subsection.4.3.4}
 \contentsline {subsection}{\numberline {4.3.5}Renormalization group limit cycle}{102}{subsection.4.3.5}
-\contentsline {section}{\numberline {4.4}Effective field theory for nuclear few-body systems}{105}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Overview}{105}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.4}Effective field theory for nuclear few-body systems}{104}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Overview}{104}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Pionless effective field theory}{105}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}The two-nucleon S-wave system}{106}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.3}The two-nucleon S-wave system}{105}{subsection.4.4.3}
 \contentsline {subsubsection}{\numberline {4.4.3.1}Spin and isospin projection}{106}{subsubsection.4.4.3.1}
-\contentsline {subsubsection}{\numberline {4.4.3.2}Dibaryon fields}{107}{subsubsection.4.4.3.2}
+\contentsline {subsubsection}{\numberline {4.4.3.2}Dibaryon fields}{106}{subsubsection.4.4.3.2}
 \contentsline {paragraph}{Wavefunction renormalization}{108}{section*.18}
 \contentsline {subsection}{\numberline {4.4.4}Three nucleons: scattering and bound states}{108}{subsection.4.4.4}
-\contentsline {subsubsection}{\numberline {4.4.4.1}Quartet channel}{109}{subsubsection.4.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.4.2}Doublet channel}{110}{subsubsection.4.4.4.2}
-\contentsline {paragraph}{Leading-order three-nucleon force}{111}{section*.19}
+\contentsline {subsubsection}{\numberline {4.4.4.1}Quartet channel}{108}{subsubsection.4.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.4.2}Doublet channel}{109}{subsubsection.4.4.4.2}
+\contentsline {paragraph}{Leading-order three-nucleon force}{110}{section*.19}
 \contentsline {paragraph}{The Phillips line}{111}{section*.20}
-\contentsline {section}{\numberline {4.5}Beyond short-range interactions: adding photons and pions}{112}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Electromagnetic interactions}{112}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.5}Beyond short-range interactions: adding photons and pions}{111}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Electromagnetic interactions}{111}{subsection.4.5.1}
 \contentsline {subsubsection}{\numberline {4.5.1.1}The Coulomb force}{113}{subsubsection.4.5.1.1}
-\contentsline {subsubsection}{\numberline {4.5.1.2}Coulomb enhancement and divergences}{114}{subsubsection.4.5.1.2}
-\contentsline {subsubsection}{\numberline {4.5.1.3}Transverse photons}{115}{subsubsection.4.5.1.3}
+\contentsline {subsubsection}{\numberline {4.5.1.2}Coulomb enhancement and divergences}{113}{subsubsection.4.5.1.2}
+\contentsline {subsubsection}{\numberline {4.5.1.3}Transverse photons}{114}{subsubsection.4.5.1.3}
 \contentsline {subsubsection}{\numberline {4.5.1.4}Other external currents}{115}{subsubsection.4.5.1.4}
 \contentsline {subsection}{\numberline {4.5.2}Example: deuteron breakup}{116}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Chiral effective field theory}{117}{subsection.4.5.3}
 \contentsline {subsubsection}{\numberline {4.5.3.1}Leading-order pion-nucleon Lagrangian}{118}{subsubsection.4.5.3.1}
-\contentsline {section}{References}{119}{section*.21}
+\contentsline {section}{References}{118}{section*.21}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-6}
 \contentsline {titlech}{\numberline {5}Lattice methods and effective field theory}{121}{section*.22}
@@ -283,45 +283,45 @@
 \authcount {1}
 \contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{363}{section*.35}
 \contentsline {section}{\numberline {10.1}Introduction}{363}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Normal-Ordered Hamiltonian}{364}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}$M$-Scheme Flow Equations}{365}{subsection.10.1.2}
-\contentsline {subsection}{\numberline {10.1.3}$J$-Scheme Flow Equations}{367}{subsection.10.1.3}
-\contentsline {subsection}{\numberline {10.1.4}General Observables}{368}{subsection.10.1.4}
-\contentsline {section}{\numberline {10.2}Choice of Generator}{368}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Decoupling}{368}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}White Generators}{370}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Imaginary-Time Generators}{371}{subsection.10.2.3}
-\contentsline {subsection}{\numberline {10.2.4}Wegner Generators}{372}{subsection.10.2.4}
-\contentsline {subsection}{\numberline {10.2.5}Decay Scales}{373}{subsection.10.2.5}
-\contentsline {section}{\numberline {10.3}In-medium SRG studies of infinite matter}{374}{section.10.3}
-\contentsline {section}{Appendix}{374}{section*.36}
+\contentsline {section}{\numberline {10.2}Similarity Renormalization Group method}{364}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Simple demonstration of the SRG method}{365}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Another simple example, the Lipkin model}{367}{subsection.10.2.2}
+\contentsline {section}{\numberline {10.3}In-medium SRG and flow equations}{369}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}General Observables}{370}{subsection.10.3.1}
+\contentsline {section}{\numberline {10.4}Choice of Generator}{371}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Decoupling}{371}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}White Generators}{373}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {10.4.3}Imaginary-Time Generators}{374}{subsection.10.4.3}
+\contentsline {subsection}{\numberline {10.4.4}Wegner Generators}{375}{subsection.10.4.4}
+\contentsline {subsection}{\numberline {10.4.5}Decay Scales}{376}{subsection.10.4.5}
+\contentsline {section}{\numberline {10.5}In-medium SRG studies of infinite matter}{377}{section.10.5}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-12}
-\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{381}{section*.37}
+\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{379}{section*.36}
 \authcount {1}
-\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{381}{section*.37}
-\contentsline {section}{\numberline {11.1}Introduction}{381}{section.11.1}
-\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{382}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{383}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{383}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{383}{section.11.3}
-\contentsline {subsection}{\numberline {11.3.1}The algebraic diagrammatic construction method}{385}{subsection.11.3.1}
-\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{387}{subsection.11.3.2}
-\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{387}{subsection.11.3.3}
-\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{388}{section.11.4}
-\contentsline {section}{\numberline {11.5}Self-consistenft GF at finite temperatures in the thermodynamic limit}{389}{section.11.5}
-\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{393}{subsection.11.5.1}
-\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{396}{subsection.11.5.2}
-\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{396}{subsection.11.5.3}
-\contentsline {section}{\numberline {11.6}Concluding remarks}{397}{section.11.6}
-\contentsline {section}{Appendix 1: Chiral NNLO three-nucleon forces}{397}{section*.38}
-\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{401}{section*.39}
-\contentsline {section}{References}{401}{section*.40}
+\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{379}{section*.36}
+\contentsline {section}{\numberline {11.1}Introduction}{379}{section.11.1}
+\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{380}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{381}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{381}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{381}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}The algebraic diagrammatic construction method}{383}{subsection.11.3.1}
+\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{385}{subsection.11.3.2}
+\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{385}{subsection.11.3.3}
+\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{386}{section.11.4}
+\contentsline {section}{\numberline {11.5}Self-consistenft GF at finite temperatures in the thermodynamic limit}{387}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{391}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{394}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{394}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Concluding remarks}{395}{section.11.6}
+\contentsline {section}{Appendix 1: Chiral NNLO three-nucleon forces}{395}{section*.37}
+\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{399}{section*.38}
+\contentsline {section}{References}{399}{section*.39}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-13}
-\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{403}{section*.41}
+\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{401}{section*.40}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{403}{section*.41}
-\contentsline {section}{\numberline {12.1}Concluding remarks}{403}{section.12.1}
-\contentsline {section}{\numberline {12.2}Perspectives}{403}{section.12.2}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{401}{section*.40}
+\contentsline {section}{\numberline {12.1}Concluding remarks}{401}{section.12.1}
+\contentsline {section}{\numberline {12.2}Perspectives}{401}{section.12.2}
 \gdef \the@ipfilectr {}

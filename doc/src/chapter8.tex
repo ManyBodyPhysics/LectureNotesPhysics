@@ -1437,8 +1437,7 @@ if __name__ == '__main__':
   which results in
   \[
     E_0^{HF} = \sum_{i\le F}^A \varepsilon_i^{HF} +
-    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left\langle ij\vert
-      \hat{v}\vert ij \rangle-\langle-\sum_{i\le F}^A \langle i\vert\hat{u}^{HF}\vert i\rangle.
+    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\langle ij\vert\hat{v}\vert ij \rangle-\sum_{i\le F}^A \langle i\vert\hat{u}^{HF}\vert i\rangle.
   \]
   Our single-particle states $ijk\dots$ are now single-particle states
   obtained from the solution of the Hartree-Fock equations.
@@ -1760,7 +1759,7 @@ A commonly used basis in nuclear physics is the harmonic oscillator. The
 cutoff in energy is then defined by the maximum number of harmonic oscillator excitations.
 If we do not define a core, this defines normally what is
   called the no-core shell-model approach \cite{navratil2009}.
-  \end{itemize}
+
 
   \subsection{A non-practical way of solving the eigenvalue problem}
 
@@ -1778,8 +1777,7 @@ If we do not define a core, this defines normally what is
   \[
   \langle \Phi_H^P | = \langle \Phi_0|
   \]
-  in Eq.~(\ref{eq:fullci}), that is we multiply with $\langle \Phi_0
-  |$ from the left in
+  in Eq.~(\ref{eq:fullci}), that is we multiply with $\langle \Phi_0|$ from the left in
   \[
   (\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0.
   \]
@@ -2503,7 +2501,7 @@ Let us demonstrate briefly how we can construct the expressions for the correlat
 energy by approximating $\hat{T}$ at the CCSD level, that is $\hat{T}\approx \hat{T}_1+\hat{T}_2$.
         The first term is zero by construction
         \begin{equation*}
-            \bra{\Psi_0} \op{H}_N \ket{\Psi_0} = 0.
+            \bra{\Psi_0} \hat{H}_N \ket{\Psi_0} = 0.
         \end{equation*}       
      The second term can be split into the following contributions
         \begin{align*}
@@ -2523,19 +2521,19 @@ We write out the commutator  as
 We have skipped here the curly brackets that indicate that the chains of operators are normal ordered with respect to the new reference state. 
 If we consider the second set of operators and rewrite them with curly brackets (bringing back the normal ordering) we have
         \begin{align*}
-            \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \normord{a_a^\dagger a_i a_p^\dagger a_q} \pause
-                = \normord{a_p^\dagger a_q a_a^\dagger a_i} \\ \pause
-        \normord{a_p^\dagger a_q}\normord{a_a^\dagger a_i} &= \normord{a_p^\dagger a_q a_a^\dagger a_i}  \\ \pause
+            \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \normord{a_a^\dagger a_i a_p^\dagger a_q}
+                = \normord{a_p^\dagger a_q a_a^\dagger a_i} \\ 
+        \normord{a_p^\dagger a_q}\normord{a_a^\dagger a_i} &= \normord{a_p^\dagger a_q a_a^\dagger a_i}  \\
             & \quad + \normord{
                \contraction{}{a}{{}^\dagger_pa_q a^\dagger_a}{a}
                 a^\dagger_p a_q a^\dagger_a a_i} +
             \normord{
                 \contraction{a^\dagger_p}{a}{{}_q}{a}
-                a^\dagger_p a_q a^\dagger_a a_i} \\ \pause
+                a^\dagger_p a_q a^\dagger_a a_i} \\ 
             & \quad + \normord{
                 \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a}{a}
                 \contraction{a^\dagger_p}{a}{{}_q}{a}
-                a^\dagger_p a_q a^\dagger_a a_i} \\ \pause
+                a^\dagger_p a_q a^\dagger_a a_i} \\ 
             &=  \normord{a_p^\dagger a_q a_a^\dagger a_i} + \delta_{qa} \normord{a_p^\dagger a_i} + \delta_{pi} \normord{a_q a_a^\dagger}
             + \delta_{qa}\delta_{pi}.
         \end{align*}
@@ -2603,7 +2601,7 @@ The last set of operators can be rewritten as
         + \left\{ 
         \contraction{a^\dagger_p}{a}{{}_q a^\dagger_a}{a}
         \contraction[1.5ex]{}{a}{{}^\dagger_pa_q a^\dagger_a a^\dagger_b a_j}{a}
-        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\} \\ \pause
+        a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i\right\} \\ 
         &= \normord{a^\dagger_p a_q a^\dagger_a a^\dagger_b a_j a_i}
         - \delta_{pj} \normord{a_q a^\dagger_a a^\dagger_b a_i}
         + \delta_{pi} \normord{a_q a^\dagger_a a^\dagger_b a_j} \\
@@ -2629,7 +2627,7 @@ The last set of operators can be rewritten as
     \end{align*}
 which, when    inserted into the original expression gives us
     \begin{align*}
-        \left[ \op{F}_N, \op{T}_2 \right]
+        \left[ \hat{F}_N, \hat{T}_2 \right]
         &= \frac{1}{4} \sum_{\substack{pq\\abij}} f_q^p t_{ij}^{ab} \Bigl(
         - \delta_{pj} \normord{a_q a^\dagger_a a^\dagger_b a_i}
         + \delta_{pi} \normord{a_q a^\dagger_a a^\dagger_b a_j} \\
@@ -2642,7 +2640,7 @@ which, when    inserted into the original expression gives us
     \end{align*}
     After renaming indices and changing the order of operators, we arrive at the explicit expression
     \[
-        \left[ \op{F}_N, \op{T}_2 \right]
+        \left[ \hat{F}_N, \hat{T}_2 \right]
         = \frac{1}{2} \sum_{qijab} f_q^i t_{ij}^{ab} \normord{a_q a^\dagger_a a^\dagger_b a_j}
         + \frac{1}{2} \sum_{pijab} f_a^p t_{ij}^{ab} \normord{a^\dagger_p a^\dagger_b a_j a_i}+ \sum_{ijab} f_a^i t_{ij}^{ab} \normord{a^\dagger_b a_j}. 
     \]
@@ -2707,7 +2705,7 @@ and
 The final contribution to the correlation energy comes from the non-linear terms with the amplitudes squared. 
 The contribution from the $\hat{T}^2$ is given by
     \begin{align*}
-        & \bra{\Phi_0} \frac{1}{2} \left( \op{V}_N \op{T}_1^2 \right) \ket{\Phi_0} = \\
+        & \bra{\Phi_0} \frac{1}{2} \left( \hat{V}_N \hat{T}_1^2 \right) \ket{\Phi_0} = \\
             & \quad \frac{1}{8} \sum_{pqrs} \sum_{ijab} \bra{pq}\hat{v}\ket{rs} t_i^a t_j^b 
             \bra{\Phi_0} \left(\normord{a^\dagger_p a^\dagger_q a_s  a_r} 
             \normord{a^\dagger_a a_i} \normord{a^\dagger_b a_j} \right)_c\ket{\Phi_0} \\ 
@@ -2737,7 +2735,7 @@ The contribution from the $\hat{T}^2$ is given by
         \contraction[1.5ex]{a^\dagger_p a^\dagger_q a_s}{a}{{}_r a^\dagger_a a_i}{a}
         \contraction[1.75ex]{a^\dagger_p}{a}{{}^\dagger_q a_s a_r a^\dagger_a a_i a^\dagger_b}{a}
         a^\dagger_p a^\dagger_q a_s  a_r a^\dagger_a a_i a^\dagger_b a_j \right\}
-        \Bigr) \ket{\Phi_0} \\ \pause
+        \Bigr) \ket{\Phi_0} \\ 
         &= \frac{1}{2} \sum_{ijab} \bra{ij}\hat{v}\ket{ab} t_i^a t_j^b.
     \end{align*}
  Collecting all terms we have   the final expression for the correlation energy with a two-body interaction given by
