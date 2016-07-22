@@ -1,10 +1,6 @@
 
-\newcommand{\ketbra}[2]{\ensuremath{|{#1}\rangle}\langle{#2}|}
 \newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
 \newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
-
-% norm in braket form
-\newcommand{\braketn}[1]{\ensuremath{\braket{#1}{#1}}}
 
 
 \newcommand{\comm}[2]{\ensuremath{[{#1},{#2}]}}
@@ -38,19 +34,7 @@
 \newcommand{\Gammat}{\ensuremath{\overline{\Gamma}^{[2]}}}
 \newcommand{\Gammath}{\ensuremath{\overline{\Gamma}^{[3]}}}
 \newcommand{\Wt}{\ensuremath{\overline{W}^{[2]}}}
-
-\newcommand{\OC}{\ensuremath{\mathcal{O}}}
-\newcommand{\QC}{\ensuremath{\mathcal{Q}}}
-
-%%%%% misc. shortcuts
-\newcommand{\Tint}{\ensuremath{\hat{T}_\text{int}}}
-\newcommand{\Hint}{\ensuremath{\hat{H}_\text{int}}}
-\newcommand{\Hcm}{\ensuremath{\hat{H}_\text{cm}}}
-\newcommand{\Ecm}{\ensuremath{E_\text{cm}}}
-\newcommand{\Rch}{\ensuremath{R_\text{ch}}}
-
-
-
+\newcommand{\diag}{\operatorname{diag}}
 
 
 \title{In-medium SRG approaches to infinite nuclear matter}
@@ -179,11 +163,11 @@ H(s) = U(s)H(0)U(s)^T,
 \]
 and we have
 \[ 
-\dds H(s) = [\eta(s),H(s)],  \quad \eta(s) = [T,H(s)], 
+\frac{d}{ds} H(s) = [\eta(s),H(s)],  \quad \eta(s) = [T,H(s)], 
 \]
 which gives
 \[ 
-\dds U(s) = \eta(s) U(s). 
+\frac{d}{ds} U(s) = \eta(s) U(s). 
 \]
 Note that $\eta(s)^T = -\eta(s)$, that is
 \[ 
@@ -195,9 +179,9 @@ we can parameterize $U(s)$ as
 \[ 
 U = \begin{bmatrix} \cos(\gamma(s)) & \sin(\gamma(s)) \\ -\sin(\gamma(s)) & \cos(\gamma(s)) \end{bmatrix}. 
 \]
-Setting up $\eta(s)U(s)$ og $\dds U(s)$ we arrive at 
+Setting up $\eta(s)U(s)$ og $\frac{d}{ds} U(s)$ we arrive at 
 \[ 
-\dds \gamma(s) = a(s). 
+\frac{d}{ds} \gamma(s) = a(s). 
 \]
 
 We rewrite $H(s)$ (and $T$ and $V(s)$)  via Pauli matrices
@@ -219,18 +203,18 @@ where we have used $\sigma_i\sigma_j = i\epsilon_{ijk}\sigma_k$.
 It results in
 \[ a(s) = 2\Omega \omega_x(s), \]
 and $\gamma(s)$,
-\begin{equation} \dds \gamma(s) = 2\Omega\omega_x(s). \label{eq:3}\end{equation}
+\begin{equation} \frac{d}{ds} \gamma(s) = 2\Omega\omega_x(s). \label{eq:3}\end{equation}
 
 We introduce next the  variables $\omega(s)$ and $\theta(s)$ instead of
 $\omega_x(s)$ and $\omega_y(s)$. 
 
 We obtain an ODE for $\theta(s)$ 
 \begin{equation} 
-\dds \theta(s) = -4\Omega\omega \sin(\theta(s)), \label{eq:4}
+\frac{d}{ds} \theta(s) = -4\Omega\omega \sin(\theta(s)), \label{eq:4}
 \end{equation}
 and noting that
 \[ 
-\ddx \ln \tan \frac{x}{2} = \frac{1}{\sin x}, 
+\frac{d}{dx} \ln \tan \frac{x}{2} = \frac{1}{\sin x}, 
 \]
 we get
 \[ 
@@ -253,7 +237,7 @@ to be linked with the Jacobi  rotation.
 
 Now comes the point: comparing the  ODE of (\ref{eq:3}) with 
 (\ref{eq:4}), we have
-\[ \dds \gamma(s) = -\frac{1}{2} \dds \theta(s). \]
+\[ \frac{d}{ds} \gamma(s) = -\frac{1}{2} \frac{d}{ds} \theta(s). \]
 The initial condition is 
 $\gamma(0) = 0$. Integrating we have
 \[ \gamma(s) = \frac{1}{2}\theta(0) - \frac{1}{2}\theta(s). \]
@@ -349,16 +333,16 @@ is preserved even if the commutators are truncated at a given operator rank, as 
 From Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}, it is clear
 that the computational effort for solving the IM-SRG(2) flow equations
 is dominated by the two-body flow equation, which scales polynomially
-like $\OC(N^6)$ with the single-particle basis size $N$. This puts the
+like $\mathcal{O}(N^6)$ with the single-particle basis size $N$. This puts the
 IM-SRG(2) in the same category as other numerically efficient
 non-perturbative methods\footnote{The mentioned methods can make use
   of the distinction between particle and hole states in the
   single-particle basis to further reduce the effort. For instance,
-  the amplitude equations of CCSD can be solved at $\OC(N_h^2N_p^4)$
+  the amplitude equations of CCSD can be solved at $\mathcal{O}(N_h^2N_p^4)$
   cost, where typically the number of hole states $N_h$ is much
   smaller than the number of particle states $N_p\sim N$. Note that
   the construction of the CCSD effective Hamiltonian from the
-  amplitudes requires $\OC(N^6)$ effort. In the IM-SRG(2), we are
+  amplitudes requires $\mathcal{O}(N^6)$ effort. In the IM-SRG(2), we are
   working directly with the analogous effective Hamiltonian.} like
 Coupled Cluster with Singles and Doubles (CCSD)
 \cite{Shavitt:2009,Hagen:2014ve}, the Self-Consistent Green's Function
@@ -559,7 +543,7 @@ in Eqs.~\eqref{eq:eden1b_en}--\eqref{eq:def_A}.
 
 The big advantage of White-type generators in practical calculations lies in the fact that they suppress \emph{all} off-diagonal matrix elements with a decay scale identical (or close to) 1 (see Sec.~\ref{sec:scales}). Thus, the flow is \emph{not} a proper RG flow that suppresses matrix elements between states with large energy differences first. This is inconsequential if we are only interested in $\hat{H}(\infty)$, because all unitary transformations which suppress $\hat{H}^{od}$ must must be equivalent up to differences caused by truncating the IM-SRG flow equations.
 
-The use of $\etaO^\text{A/B}$ has additional benefits in numerical applications: First, the effort for their construction scales as $\OC(N_h^2N_p^2)$, where $N_h\ll N$ and $N_p\sim N$ are the number of hole and particle states in a single-particle basis of dimension $N$. Second, because the generator's matrix elements are given by ratios of energies, $f$ and $\Gamma$ only contribute linearly to the magnitude of the right-hand side of the IM-SRG flow equations \eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. The flow equations are significantly less stiff than those for the canonical Wegner generator (Sec.~\ref{sec:generators_Wegner}), where third powers of $f$ and $\Gamma$ appear (see below). This greatly reduces the number of integration steps which are required to solve the IM-SRG flow equations. However, the White generators also have an obvious drawback: It is clear from Eq.~\eqref{eq:eta_white} that we might encounter problems with small energy denominators \cite{Tsukiyama:2012fk,Hergert:2013ij}. Fortunately, this is not the case if we deal with closed-shell nuclei, as in the present work. 
+The use of $\etaO^\text{A/B}$ has additional benefits in numerical applications: First, the effort for their construction scales as $\mathcal{O}(N_h^2N_p^2)$, where $N_h\ll N$ and $N_p\sim N$ are the number of hole and particle states in a single-particle basis of dimension $N$. Second, because the generator's matrix elements are given by ratios of energies, $f$ and $\Gamma$ only contribute linearly to the magnitude of the right-hand side of the IM-SRG flow equations \eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. The flow equations are significantly less stiff than those for the canonical Wegner generator (Sec.~\ref{sec:generators_Wegner}), where third powers of $f$ and $\Gamma$ appear (see below). This greatly reduces the number of integration steps which are required to solve the IM-SRG flow equations. However, the White generators also have an obvious drawback: It is clear from Eq.~\eqref{eq:eta_white} that we might encounter problems with small energy denominators \cite{Tsukiyama:2012fk,Hergert:2013ij}. Fortunately, this is not the case if we deal with closed-shell nuclei, as in the present work. 
 
 We conclude our discussion by remarking that the White-type generators $\etaO^\text{A/B}$ provide a manifest link between the IM-SRG and MBPT, which will be explored further in Section \ref{sec:mbpt}. 
 
@@ -573,7 +557,7 @@ A second class of generators which are used in our calculations are inspired by 
 \end{align}
 where $\Delta^\text{A/B}$ are the Epstein-Nesbet and M{\o}ller-Plesset energy denominators defined in Eqs.~\eqref{eq:eden1b_en}--\eqref{eq:eden2b_mp}. As we will see in Sec.~\ref{sec:scales}, the sign functions are necessary to ensure that off-diagonal matrix elements are suppressed instead of enhanced during the flow. The decay scale for these matrix elements is approximately given by the linear energy difference between the reference state and 1p1h or 2p2h excitations, respectively, which can be expressed via $\Delta^\text{A/B}$. Note that this implies that $\etaO^\text{IIA/B}$ generates a proper RG flow.
 
-For the imaginary-time generator, the IM-SRG(2) flow equations are quadratic in the Hamiltonian. While this leads to a mild increase in the stiffness compared to the use of White generators, the flow is not susceptible to small or vanishing energy denominators. Combined with the low $\OC(N_h^2N_p^2)$ effort for its construction, the imaginary-time generator is a robust numerical fallback option in cases where singular White generators stall the IM-SRG flow.
+For the imaginary-time generator, the IM-SRG(2) flow equations are quadratic in the Hamiltonian. While this leads to a mild increase in the stiffness compared to the use of White generators, the flow is not susceptible to small or vanishing energy denominators. Combined with the low $\mathcal{O}(N_h^2N_p^2)$ effort for its construction, the imaginary-time generator is a robust numerical fallback option in cases where singular White generators stall the IM-SRG flow.
 
 
 \subsection{\label{sec:generators_Wegner}Wegner Generators}

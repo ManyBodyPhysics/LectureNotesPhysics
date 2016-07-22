@@ -459,12 +459,15 @@ and impose the boundary condition that the function becomes a constant at a dist
 \tilde{f}(r)=e^{-b\log f(r_{ij})}
 \end{equation}
 The function $f$ is usually determined by numerically solving Eq.(\ref{EqJas}) with the Numerov or Runge-Kutta methods. One has to be careful that the resulting table has to be interpolated to compute the function at an arbitrary distance. Therefore it is important to choose an appropriate number of points (usually of the order of a few thousands).  
+\begin{figure}
+	\
+\end{figure}
 Single particle orbitals can also be either tabulated or computed analytically. Tabulation guarantees in general a faster computation at the price of a loss in numerical accuracy.
 
 In the code it is necessary to compute derivatives of the wavefunction in order to estimate the local energy. This can be done either numerically or analytically. A very good test for checking that there are no major mistakes either in the Monte Carlo evaluation of integrals or in the computation of the local energy is to use the so-called {\it Jackson-Feenberg} identity for the kinetic energy.
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/qvar.jpg}
+		\includegraphics[scale=0.5]{Chapter9-figures/qvar.eps}
 	\end{center}
 	\caption{An example of variational minimization of the energy. The estimate of the binding energy of a $^4$He nucleus described by the Minnesota potential is here plotted as a function of the quencher parameter $q$, for a fixed value of the healing distance $h$ (see text). The dotted line serves as a guide for the eye.}
 	\label{fig.var}
@@ -495,7 +498,7 @@ We can sum Eq.(\ref{T_PB}) and Eq. (\ref{T_JF1}), and divide by 2 in order to ob
 \end{equation}
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/jas.jpg}
+		\includegraphics[scale=0.5]{Chapter9-figures/jas.eps}
 	\end{center}
 	\caption{The central channel of the Minnesota potential (dashed-dotted line), and the corresponding numerical Jastrow function (solid line) evaluated for $h=3.1$, $q=1.4$, and $b=1$.}
 	\label{fig.var}
@@ -855,7 +858,7 @@ A very simple illustration of the sense of the algorithm can be made by implemen
 \end{equation}
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/hists.jpg}
+		\includegraphics[scale=0.5]{Chapter9-figures/hists.eps}
 	\end{center}
 	\caption{Histogram of the walker population after $N$ DMC imaginary time steps for the harmonic oscillator Hamiltonian described in text. Here we used $\Delta\tau=10^{-3}$, with a target population of 4000 walkers.}
 	\label{fig.hist}
@@ -863,7 +866,7 @@ A very simple illustration of the sense of the algorithm can be made by implemen
 The ground-state eigenvalue is $E_0=\tfrac{1}{2}$ and the ground-state eigenfunction is the Gaussian $\Psi_0(x)=\frac{1}{\pi^{1/4}}e^{-\frac{x^2}{2}}$. As we have illustrated in the previous section, the propagation can start from any distribution of points with a density not orthogonal to the ground state. A very simple choice in this case is a constant. In Fig.\ref{fig.hist} we can see how the histogram of the walkers evolves as a function of the imaginary time applying the algorithm described in the previous section, including population control. The initial uniform distribution of walkers in the interval $[-6,6]$ is transformed into the correct Gaussian density. The mechanism that leads to this result is easy to understand. Any walker finding itself after diffusion in a region where the potential is larger than the eigenvalue will tend to be suppressed, while walkers near the origin will tend to multiply themselves. This will result in a histogram peaked at the origin ad decaying fast to zero when moving away from it.
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/dmc_decay.jpg}
+		\includegraphics[scale=0.5]{Chapter9-figures/dmc_decay.eps}
 	\end{center}
 	\caption{Logarithm of the estimated energy averaged over a single generation as a function of the imaginary time in a run with a population target of 4000 walkers, and with an imaginary time step $\Delta\tau=10^{-4}$}
 	\label{fig.decay}
@@ -883,7 +886,7 @@ where the sums runs first over all the generations (i.e. the imaginary time step
 In Fig. \ref{fig.decay} we show the logarithm of the energy estimator averaged over each single generation as a function of the imaginary time. As we would expect from the general behavior of the coefficients of the excited states as function of the imaginary time, we see a clear exponential decay of the energy towards the exact eigenvalue. The figure clearly shows how the transient is not made up of a single exponential. The initial state needs includes a large number of excited states, that all need to be projected out before reaching the ground state.
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/walkers_dmc.jpg}
+		\includegraphics[scale=0.5]{Chapter9-figures/walkers_dmc.eps}
 	\end{center}
 	\caption{Typical fluctuations of the walker population in a DMC run for the one dimensional harmonic oscillator. The target population in this case is 2000. The imaginary time step is
 		set to $\Delta\tau=0.075$. }
@@ -892,7 +895,7 @@ In Fig. \ref{fig.decay} we show the logarithm of the energy estimator averaged o
 In Fig. \ref{fig.walkers}the typical behavior of the fluctuation in the walker number is reported. In the specific case the time step was set to $\Delta\tau=0.3$. Nevertheless, the walker number never departs from the target by more than 3\%. This is the effect of the population control procedure described in the previous subsection. Unfortunately population control alone is not sufficient to guarantee a stable calculation. In presence of particle-particle interactions that diverge at the origin fluctuations in the number of walkers become extremely wide. This is the reason why it is necessary to introduce the so-called importance sampling, that we will discuss in a later section.
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/dmc_extr.jpg}
+		\includegraphics[scale=0.5]{Chapter9-figures/dmc_extr.eps}
 	\end{center}
 	\caption{TIllustration of the imaginary time-step extrapolation procedure. The energy is computed for different values of $\Delta\tau$, and the results are fitted with a linear function. The intercept will give the correct prediction for the eigenvalue. Notice that the results should still be extrapolated for an infinite population. Here we use a target number of walkers equal to 2000, and the runs consist of $10^5$ generations each. Errorbars refer to one standard deviation. The plotted value for $\Delta\tau=0$ and the corresponding errorbar are obtained from the linear fit of the data. }
 	\label{fig.extr}
@@ -2714,7 +2717,29 @@ particle state $b$ allowed. An implementation like
 will take now only $O(N_{occ}^2{\cal N}_s)$ evaluations of the Hamiltonian at most, and with a reduced prefactor with respect to the previous version. The function $FourthState$ returns 
 the only single particle state allowed by simmetry. 
 
-In the case of nuclear hamiltonians the spin won't be conserved anymore, how will you modify EL\_calc2 to take that into account?
+\subsection{Results}
+Actual calculations with CIMC require a substantial amount of CPU time. Here we report some results obtained by making use of a simplified Hamiltonian in which the nucleon-nucleon interaction is described by the Minnesota interaction.
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.5]{Chapter9-figures/cimc_convergence.eps}
+	\end{center}
+	\caption{Convergence of the CIMC energies as a function of the number of shells used for a periodic cell of 66 neutrons at different densities.}
+	\label{fig.cimc_conv}
+\end{figure}
+The system under investigation is homogeneous pure neutron matter (PNM). In QMC calculations PNM is typically modeled as a periodic system containing A neutrons. The cell size is adjusted in such a way that the average density of the system is $\rho$.
+
+In Fig. \ref{fig.cimc_conv} we show how the computed energy depends on the number of plane wave shells included in the model space. As it can be seen, it is necessary to pay attention to the convergence of th results, which can strongly depend on the specific details of the system. In this case, for instance, on can easily see how convergence is faster when the density is increased. 
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.5]{Chapter9-figures/eos_MInn_cimc.eps}
+	\end{center}
+	\caption{Equation of state of neutron matter modeled as a periodic cell containing A=66 neutrons. }
+	\label{fig.cimc_eos}
+\end{figure}
+
+In Fig. \ref{fig.cimc_eos} the energy computed by CIMC shown for the same neutron matter model as a function of the density (the so called "Equation of State" of neutron matter). Comparison of the EoS of PNM  computed with different methods using a Minnesota potential will be compared in a later section. 
+
 
 \section{Problems}
  \begin{prob}
@@ -2758,8 +2783,9 @@ In the case of nuclear hamiltonians the spin won't be conserved anymore, how wil
   \label{prob:heatbath}
         Implement the function $HeatBath[P,\mathbf{n}]$ that appears in the algorithm EXP\_Move() in Sec.~\ref{sec:expprop}.
   \end{prob}
-
-
+\begin{prob}
+In the case of nuclear Hamiltonians spin is not a conserved quantity. Referring to the calculation of the local energy in Sec. 9.6.4, how would you modify the subroutine EL\_calc2 to take into account the non-conservation of spin?
+\end{prob}
   
 %\begin{acknowledgement}
 %If you want to include acknowledgments of assistance and the like at the end of an individual chapter please use the \verb|acknowledgement| environment -- it will automatically render Springer's preferred layout.

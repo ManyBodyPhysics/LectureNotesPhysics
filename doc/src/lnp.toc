@@ -240,8 +240,8 @@
 \contentsline {subsection}{\numberline {9.2.3}Monte Carlo evaluation of integrals}{309}{subsection.9.2.3}
 \contentsline {subsubsection}{\numberline {9.2.3.1}Autocorrelations}{313}{subsubsection.9.2.3.1}
 \contentsline {subsection}{\numberline {9.2.4}Construction of the wavefunction and computational procedures}{315}{subsection.9.2.4}
-\contentsline {subsection}{\numberline {9.2.5}Wave function optimization}{319}{subsection.9.2.5}
-\contentsline {subsubsection}{\numberline {9.2.5.1}Reweighting methods}{319}{subsubsection.9.2.5.1}
+\contentsline {subsection}{\numberline {9.2.5}Wave function optimization}{318}{subsection.9.2.5}
+\contentsline {subsubsection}{\numberline {9.2.5.1}Reweighting methods}{318}{subsubsection.9.2.5.1}
 \contentsline {subsubsection}{\numberline {9.2.5.2}Power method}{319}{subsubsection.9.2.5.2}
 \contentsline {section}{\numberline {9.3}Projection Monte Carlo Methods in coordinate space}{321}{section.9.3}
 \contentsline {subsection}{\numberline {9.3.1}Propagation in imaginary time}{321}{subsection.9.3.1}
@@ -249,7 +249,7 @@
 \contentsline {subsection}{\numberline {9.3.3}Imaginary time propagator in coordinate representation}{322}{subsection.9.3.3}
 \contentsline {subsection}{\numberline {9.3.4}Application to the harmonic oscillator}{326}{subsection.9.3.4}
 \contentsline {subsection}{\numberline {9.3.5}Importance sampling}{328}{subsection.9.3.5}
-\contentsline {subsection}{\numberline {9.3.6}The fermion sign problem}{332}{subsection.9.3.6}
+\contentsline {subsection}{\numberline {9.3.6}The fermion sign problem}{331}{subsection.9.3.6}
 \contentsline {subsubsection}{\numberline {9.3.6.1}Fixed-node approximation}{333}{subsubsection.9.3.6.1}
 \contentsline {section}{\numberline {9.4}Quantum Monte Carlo for Nuclear Hamiltonians in coordinate space}{334}{section.9.4}
 \contentsline {subsection}{\numberline {9.4.1}General Auxiliary Field Formalism}{334}{subsection.9.4.1}
@@ -257,25 +257,26 @@
 \contentsline {subsubsection}{\numberline {9.4.2.1}Mixed averages}{335}{subsubsection.9.4.2.1}
 \contentsline {subsubsection}{\numberline {9.4.2.2}Importance sampling}{336}{subsubsection.9.4.2.2}
 \contentsline {subsubsection}{\numberline {9.4.2.3}Importance sampling with a Hubbard-Stratonovich transformation}{337}{subsubsection.9.4.2.3}
-\contentsline {subsection}{\numberline {9.4.3}Application to standard diffusion Monte Carlo}{339}{subsection.9.4.3}
-\contentsline {subsubsection}{\numberline {9.4.3.1}Diffusion Monte Carlo without importance sampling}{339}{subsubsection.9.4.3.1}
-\contentsline {subsubsection}{\numberline {9.4.3.2}Importance sampled Diffusion Monte Carlo in the auxiliary field formulism}{340}{subsubsection.9.4.3.2}
-\contentsline {subsection}{\numberline {9.4.4}Fixed-phase importance-sampled Diffusion Monte Carlo}{341}{subsection.9.4.4}
-\contentsline {subsection}{\numberline {9.4.5}Application to quadratic forms}{342}{subsection.9.4.5}
+\contentsline {subsection}{\numberline {9.4.3}Application to standard diffusion Monte Carlo}{338}{subsection.9.4.3}
+\contentsline {subsubsection}{\numberline {9.4.3.1}Diffusion Monte Carlo without importance sampling}{338}{subsubsection.9.4.3.1}
+\contentsline {subsubsection}{\numberline {9.4.3.2}Importance sampled Diffusion Monte Carlo in the auxiliary field formulism}{339}{subsubsection.9.4.3.2}
+\contentsline {subsection}{\numberline {9.4.4}Fixed-phase importance-sampled Diffusion Monte Carlo}{340}{subsection.9.4.4}
+\contentsline {subsection}{\numberline {9.4.5}Application to quadratic forms}{341}{subsection.9.4.5}
 \contentsline {subsection}{\numberline {9.4.6}Auxiliary Field Breakups}{342}{subsection.9.4.6}
 \contentsline {subsection}{\numberline {9.4.7}AFDMC with the $v_6'$ potential for nuclear matter}{343}{subsection.9.4.7}
-\contentsline {subsubsection}{\numberline {9.4.7.1}The $v_6'$ Hamiltonian as a sum of operator squares}{344}{subsubsection.9.4.7.1}
-\contentsline {subsubsection}{\numberline {9.4.7.2}Complex auxiliary fields}{345}{subsubsection.9.4.7.2}
-\contentsline {subsubsection}{\numberline {9.4.7.3}The $v_6'$ algorithm}{345}{subsubsection.9.4.7.3}
-\contentsline {subsection}{\numberline {9.4.8}Isospin-independent spin-orbit interaction}{346}{subsection.9.4.8}
-\contentsline {section}{\numberline {9.5}GFMC with full spin-isospin summation}{347}{section.9.5}
-\contentsline {section}{\numberline {9.6}General projection algorithms in Fock space and non-local interactions}{348}{section.9.6}
-\contentsline {subsection}{\numberline {9.6.1}Fock space formulation of Diffusion Monte Carlo}{349}{subsection.9.6.1}
-\contentsline {subsection}{\numberline {9.6.2}Importance sampling and fixed-phase approximation}{351}{subsection.9.6.2}
+\contentsline {subsubsection}{\numberline {9.4.7.1}The $v_6'$ Hamiltonian as a sum of operator squares}{343}{subsubsection.9.4.7.1}
+\contentsline {subsubsection}{\numberline {9.4.7.2}Complex auxiliary fields}{344}{subsubsection.9.4.7.2}
+\contentsline {subsubsection}{\numberline {9.4.7.3}The $v_6'$ algorithm}{344}{subsubsection.9.4.7.3}
+\contentsline {subsection}{\numberline {9.4.8}Isospin-independent spin-orbit interaction}{345}{subsection.9.4.8}
+\contentsline {section}{\numberline {9.5}GFMC with full spin-isospin summation}{346}{section.9.5}
+\contentsline {section}{\numberline {9.6}General projection algorithms in Fock space and non-local interactions}{347}{section.9.6}
+\contentsline {subsection}{\numberline {9.6.1}Fock space formulation of Diffusion Monte Carlo}{348}{subsection.9.6.1}
+\contentsline {subsection}{\numberline {9.6.2}Importance sampling and fixed-phase approximation}{350}{subsection.9.6.2}
 \contentsline {subsection}{\numberline {9.6.3}Trial wave-functions from Coupled Cluster ansatz}{352}{subsection.9.6.3}
-\contentsline {subsection}{\numberline {9.6.4}Propagator sampling with no time-step error}{354}{subsection.9.6.4}
+\contentsline {subsection}{\numberline {9.6.4}Propagator sampling with no time-step error}{353}{subsection.9.6.4}
+\contentsline {subsection}{\numberline {9.6.5}Results}{357}{subsection.9.6.5}
 \contentsline {section}{\numberline {9.7}Problems}{358}{section.9.7}
-\contentsline {section}{Appendix}{358}{section*.33}
+\contentsline {section}{Appendix}{359}{section*.33}
 \contentsline {section}{References}{360}{section*.34}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-11}
@@ -285,43 +286,43 @@
 \contentsline {section}{\numberline {10.1}Introduction}{363}{section.10.1}
 \contentsline {section}{\numberline {10.2}Similarity Renormalization Group method}{364}{section.10.2}
 \contentsline {subsection}{\numberline {10.2.1}Simple demonstration of the SRG method}{365}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Another simple example, the Lipkin model}{367}{subsection.10.2.2}
-\contentsline {section}{\numberline {10.3}In-medium SRG and flow equations}{369}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}General Observables}{370}{subsection.10.3.1}
-\contentsline {section}{\numberline {10.4}Choice of Generator}{371}{section.10.4}
-\contentsline {subsection}{\numberline {10.4.1}Decoupling}{371}{subsection.10.4.1}
-\contentsline {subsection}{\numberline {10.4.2}White Generators}{373}{subsection.10.4.2}
-\contentsline {subsection}{\numberline {10.4.3}Imaginary-Time Generators}{374}{subsection.10.4.3}
-\contentsline {subsection}{\numberline {10.4.4}Wegner Generators}{375}{subsection.10.4.4}
-\contentsline {subsection}{\numberline {10.4.5}Decay Scales}{376}{subsection.10.4.5}
-\contentsline {section}{\numberline {10.5}In-medium SRG studies of infinite matter}{377}{section.10.5}
+\contentsline {subsection}{\numberline {10.2.2}The pairing model}{367}{subsection.10.2.2}
+\contentsline {section}{\numberline {10.3}In-medium SRG and flow equations}{367}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}General Observables}{368}{subsection.10.3.1}
+\contentsline {section}{\numberline {10.4}Choice of Generator}{369}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Decoupling}{369}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}White Generators}{371}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {10.4.3}Imaginary-Time Generators}{372}{subsection.10.4.3}
+\contentsline {subsection}{\numberline {10.4.4}Wegner Generators}{373}{subsection.10.4.4}
+\contentsline {subsection}{\numberline {10.4.5}Decay Scales}{374}{subsection.10.4.5}
+\contentsline {section}{\numberline {10.5}In-medium SRG studies of infinite matter}{375}{section.10.5}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-12}
-\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{379}{section*.36}
+\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{377}{section*.36}
 \authcount {1}
-\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{379}{section*.36}
-\contentsline {section}{\numberline {11.1}Introduction}{379}{section.11.1}
-\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{380}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{381}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{381}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{381}{section.11.3}
-\contentsline {subsection}{\numberline {11.3.1}The algebraic diagrammatic construction method}{383}{subsection.11.3.1}
-\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{385}{subsection.11.3.2}
-\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{385}{subsection.11.3.3}
-\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{386}{section.11.4}
-\contentsline {section}{\numberline {11.5}Self-consistenft GF at finite temperatures in the thermodynamic limit}{387}{section.11.5}
-\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{391}{subsection.11.5.1}
-\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{394}{subsection.11.5.2}
-\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{394}{subsection.11.5.3}
-\contentsline {section}{\numberline {11.6}Concluding remarks}{395}{section.11.6}
-\contentsline {section}{Appendix 1: Chiral NNLO three-nucleon forces}{395}{section*.37}
-\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{399}{section*.38}
-\contentsline {section}{References}{399}{section*.39}
+\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{377}{section*.36}
+\contentsline {section}{\numberline {11.1}Introduction}{377}{section.11.1}
+\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{378}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{379}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{379}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{379}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}The algebraic diagrammatic construction method}{381}{subsection.11.3.1}
+\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{383}{subsection.11.3.2}
+\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{383}{subsection.11.3.3}
+\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{384}{section.11.4}
+\contentsline {section}{\numberline {11.5}Self-consistenft GF at finite temperatures in the thermodynamic limit}{385}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{389}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{392}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{392}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Concluding remarks}{393}{section.11.6}
+\contentsline {section}{Appendix 1: Chiral NNLO three-nucleon forces}{393}{section*.37}
+\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{397}{section*.38}
+\contentsline {section}{References}{397}{section*.39}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-13}
-\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{401}{section*.40}
+\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{399}{section*.40}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{401}{section*.40}
-\contentsline {section}{\numberline {12.1}Concluding remarks}{401}{section.12.1}
-\contentsline {section}{\numberline {12.2}Perspectives}{401}{section.12.2}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{399}{section*.40}
+\contentsline {section}{\numberline {12.1}Concluding remarks}{399}{section.12.1}
+\contentsline {section}{\numberline {12.2}Perspectives}{399}{section.12.2}
 \gdef \the@ipfilectr {}
