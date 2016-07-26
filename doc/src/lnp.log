@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 JUL 2016 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 JUL 2016 13:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1004,6 +1004,12 @@ LaTeX Warning: Label `sec:fn' multiply defined.
 
 LaTeX Warning: Label `sec:observables' multiply defined.
 
+
+LaTeX Warning: Label `bogner2010@-11' multiply defined.
+
+
+LaTeX Warning: Label `morris2015@-11' multiply defined.
+
 ) (./chapter11.aux
 
 LaTeX Warning: Label `FTpart' multiply defined.
@@ -1692,27 +1698,27 @@ Overfull \hbox (3.22194pt too wide) detected at line 247
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 248
- []\T1/fve/m/n/10 321
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 249
  []\T1/fve/m/n/10 322
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 250
+Overfull \hbox (3.22194pt too wide) detected at line 249
  []\T1/fve/m/n/10 326
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 251
+Overfull \hbox (3.22194pt too wide) detected at line 250
  []\T1/fve/m/n/10 328
  []
 
-[12]
-Overfull \hbox (3.22194pt too wide) detected at line 252
+
+Overfull \hbox (3.22194pt too wide) detected at line 251
  []\T1/fve/m/n/10 331
+ []
+
+[12]
+Overfull \hbox (3.22194pt too wide) detected at line 253
+ []\T1/fve/m/n/10 334
  []
 
 
@@ -1722,22 +1728,22 @@ Overfull \hbox (3.22194pt too wide) detected at line 254
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 255
- []\T1/fve/m/n/10 334
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 256
  []\T1/fve/m/n/10 335
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 260
+Overfull \hbox (3.22194pt too wide) detected at line 259
  []\T1/fve/m/n/10 338
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 263
+Overfull \hbox (3.22194pt too wide) detected at line 262
  []\T1/fve/m/n/10 340
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 263
+ []\T1/fve/m/n/10 341
  []
 
 
@@ -1747,82 +1753,82 @@ Overfull \hbox (3.22194pt too wide) detected at line 264
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 265
- []\T1/fve/m/n/10 342
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 266
  []\T1/fve/m/n/10 343
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 270
+Overfull \hbox (3.22194pt too wide) detected at line 269
  []\T1/fve/m/n/10 345
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 271
+Overfull \hbox (3.22194pt too wide) detected at line 270
  []\T1/fve/m/n/10 346
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 272
+Overfull \hbox (3.22194pt too wide) detected at line 271
  []\T1/fve/m/n/10 347
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 273
+Overfull \hbox (3.22194pt too wide) detected at line 272
  []\T1/fve/m/n/10 348
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 274
+Overfull \hbox (3.22194pt too wide) detected at line 273
  []\T1/fve/m/n/10 350
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 275
+Overfull \hbox (3.22194pt too wide) detected at line 274
  []\T1/fve/m/n/10 352
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 276
+Overfull \hbox (3.22194pt too wide) detected at line 275
  []\T1/fve/m/n/10 353
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 277
+Overfull \hbox (3.22194pt too wide) detected at line 276
  []\T1/fve/m/n/10 357
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 278
+Overfull \hbox (3.22194pt too wide) detected at line 277
  []\T1/fve/m/n/10 358
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 279
+Overfull \hbox (3.22194pt too wide) detected at line 278
  []\T1/fve/m/n/10 359
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 280
+Overfull \hbox (3.22194pt too wide) detected at line 279
  []\T1/fve/m/n/10 360
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 286
+Overfull \hbox (3.22194pt too wide) detected at line 285
  []\T1/fve/m/n/10 363
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 287
+Overfull \hbox (3.22194pt too wide) detected at line 286
  []\T1/fve/m/n/10 364
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 288
+Overfull \hbox (3.22194pt too wide) detected at line 287
  []\T1/fve/m/n/10 365
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 288
+ []\T1/fve/m/n/10 367
  []
 
 
@@ -1832,12 +1838,12 @@ Overfull \hbox (3.22194pt too wide) detected at line 289
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 290
- []\T1/fve/m/n/10 367
+ []\T1/fve/m/n/10 369
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 291
- []\T1/fve/m/n/10 368
+ []\T1/fve/m/n/10 369
  []
 
 
@@ -1847,27 +1853,27 @@ Overfull \hbox (3.22194pt too wide) detected at line 292
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 293
- []\T1/fve/m/n/10 369
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 294
  []\T1/fve/m/n/10 371
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 295
+Overfull \hbox (3.22194pt too wide) detected at line 294
  []\T1/fve/m/n/10 372
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 296
+Overfull \hbox (3.22194pt too wide) detected at line 295
  []\T1/fve/m/n/10 373
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 297
+Overfull \hbox (3.22194pt too wide) detected at line 296
  []\T1/fve/m/n/10 374
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 297
+ []\T1/fve/m/n/10 375
  []
 
 
@@ -1876,18 +1882,18 @@ Overfull \hbox (3.22194pt too wide) detected at line 298
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 304
- []\T1/fve/m/n/10 377
+Overfull \hbox (3.22194pt too wide) detected at line 299
+ []\T1/fve/m/n/10 376
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 305
- []\T1/fve/m/n/10 378
+ []\T1/fve/m/n/10 377
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 306
- []\T1/fve/m/n/10 379
+ []\T1/fve/m/n/10 378
  []
 
 
@@ -1902,12 +1908,12 @@ Overfull \hbox (3.22194pt too wide) detected at line 308
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 309
- []\T1/fve/m/n/10 381
+ []\T1/fve/m/n/10 379
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 310
- []\T1/fve/m/n/10 383
+ []\T1/fve/m/n/10 381
  []
 
 
@@ -1917,22 +1923,22 @@ Overfull \hbox (3.22194pt too wide) detected at line 311
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 312
- []\T1/fve/m/n/10 384
+ []\T1/fve/m/n/10 383
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 313
- []\T1/fve/m/n/10 385
+ []\T1/fve/m/n/10 384
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 314
- []\T1/fve/m/n/10 389
+ []\T1/fve/m/n/10 385
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 315
- []\T1/fve/m/n/10 392
+ []\T1/fve/m/n/10 389
  []
 
 [13]
@@ -1942,7 +1948,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 316
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 317
- []\T1/fve/m/n/10 393
+ []\T1/fve/m/n/10 392
  []
 
 
@@ -1952,7 +1958,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 318
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 319
- []\T1/fve/m/n/10 397
+ []\T1/fve/m/n/10 393
  []
 
 
@@ -1961,12 +1967,17 @@ Overfull \hbox (3.22194pt too wide) detected at line 320
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 326
- []\T1/fve/m/n/10 399
+Overfull \hbox (3.22194pt too wide) detected at line 321
+ []\T1/fve/m/n/10 397
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 327
+ []\T1/fve/m/n/10 399
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 328
  []\T1/fve/m/n/10 399
  []
 
@@ -2036,7 +2047,7 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 209.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 218.
- [7] <Chapter2-figures/config1.pdf, id=1363, 478.78876pt x 412.54124pt>
+ [7] <Chapter2-figures/config1.pdf, id=1368, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
@@ -2048,7 +2059,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 365.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 365.
- [10] <Chapter2-figures/qcd_ms_high.pdf, id=1431, 588.1975pt x 534.99875pt>
+ [10] <Chapter2-figures/qcd_ms_high.pdf, id=1436, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
@@ -2069,7 +2080,7 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 844.
 
-[17] <Chapter2-figures/topology.pdf, id=1585, 361.35pt x 252.945pt>
+[17] <Chapter2-figures/topology.pdf, id=1590, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
@@ -2083,7 +2094,7 @@ Overfull \hbox (2.46152pt too wide) in paragraph at lines 1383--1391
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-<Chapter2-figures/hic_evol_schem.pdf, id=1713, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1718, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
@@ -2106,7 +2117,7 @@ arz_eta_w_txt-eps-converted-to.pdf Chapter2-figures/AdS5_Schwarz_eta_w_txt.eps>
 (epstopdf)             \includegraphics on input line 2224.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1960, 459.717
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1965, 459.717
 5pt x 287.0725pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2129,7 +2140,7 @@ btr_txt.eps>
 (epstopdf)             \includegraphics on input line 2225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1962, 4
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1967, 4
 59.7175pt x 262.9825pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2150,7 +2161,7 @@ File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
 LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2297.
 
-<Chapter2-figures/EnergyDensity.pdf, id=2027, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=2032, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
@@ -2194,7 +2205,7 @@ ne-eps-converted-to.pdf Chapter3-figures/wilson-line.eps>
 (epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2337, 325.215pt x 208.78
+<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2342, 325.215pt x 208.78
 pt>
 File: Chapter3-figures/wilson-line-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2221,7 +2232,7 @@ converted-to.pdf Chapter3-figures/cube.eps>
 (epstopdf)             \includegraphics on input line 250.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/cube-eps-converted-to.pdf, id=2349, 414.54875pt x 229.85875pt
+<Chapter3-figures/cube-eps-converted-to.pdf, id=2354, 414.54875pt x 229.85875pt
 >
 File: Chapter3-figures/cube-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/cube-eps-converted-to.pdf>
@@ -2241,7 +2252,7 @@ n-eps-converted-to.pdf Chapter3-figures/dispersion.eps>
 (epstopdf)             \includegraphics on input line 419.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2384, 332.24126pt x 206.7
+<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2389, 332.24126pt x 206.7
 725pt>
 File: Chapter3-figures/dispersion-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/dispersion-eps-converted-to.pdf>
@@ -2261,7 +2272,7 @@ ons-eps-converted-to.pdf Chapter3-figures/correlations.eps>
 (epstopdf)             \includegraphics on input line 605.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/correlations-eps-converted-to.pdf, id=2439, 1370.11874pt x 45
+<Chapter3-figures/correlations-eps-converted-to.pdf, id=2444, 1370.11874pt x 45
 3.695pt>
 File: Chapter3-figures/correlations-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -2281,7 +2292,7 @@ eps-converted-to.pdf Chapter3-figures/wilson-L.eps>
 (epstopdf)             \includegraphics on input line 626.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2440, 155.58125pt x 229.858
+<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2445, 155.58125pt x 229.858
 75pt>
 File: Chapter3-figures/wilson-L-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/wilson-L-eps-converted-to.pdf>
@@ -2301,7 +2312,7 @@ eps-converted-to.pdf Chapter3-figures/strong-c.eps>
 (epstopdf)             \includegraphics on input line 703.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2462, 171.64125pt x 171.641
+<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2467, 171.64125pt x 171.641
 25pt>
 File: Chapter3-figures/strong-c-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/strong-c-eps-converted-to.pdf>
@@ -2322,7 +2333,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 829.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/crossover-eps-converted-to.pdf, id=2485, 597.23125pt x 845.15
+<Chapter3-figures/crossover-eps-converted-to.pdf, id=2490, 597.23125pt x 845.15
 75pt>
 File: Chapter3-figures/crossover-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/crossover-eps-converted-to.pdf>
@@ -2342,7 +2353,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 898.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/running-g-eps-converted-to.pdf, id=2513, 578.16pt x 374.39874
+<Chapter3-figures/running-g-eps-converted-to.pdf, id=2518, 578.16pt x 374.39874
 pt>
 File: Chapter3-figures/running-g-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/running-g-eps-converted-to.pdf>
@@ -2371,7 +2382,7 @@ converted-to.pdf Chapter3-figures/auto.eps>
 (epstopdf)             \includegraphics on input line 1097.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/auto-eps-converted-to.pdf, id=2594, 974.64125pt x 406.51875pt
+<Chapter3-figures/auto-eps-converted-to.pdf, id=2599, 974.64125pt x 406.51875pt
 >
 File: Chapter3-figures/auto-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/auto-eps-converted-to.pdf>
@@ -2401,7 +2412,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1340.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2650, 475.7775pt x 394.473
+<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2655, 475.7775pt x 394.473
 75pt>
 File: Chapter3-figures/QQbar-pot-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/QQbar-pot-eps-converted-to.pdf>
@@ -2421,7 +2432,7 @@ ted-to.pdf>
 (epstopdf)             \includegraphics on input line 1415.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2672, 674.52pt x 477.
+<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2677, 674.52pt x 477.
 785pt>
 File: Chapter3-figures/effective-mass-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2441,7 +2452,7 @@ g-eps-converted-to.pdf Chapter3-figures/NO_scaling.eps>
 (epstopdf)             \includegraphics on input line 1416.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2673, 758.835pt x 509.905
+<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2678, 758.835pt x 509.905
 pt>
 File: Chapter3-figures/NO_scaling-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/NO_scaling-eps-converted-to.pdf>
@@ -2460,7 +2471,7 @@ ps-converted-to.pdf Chapter3-figures/pn-mass.eps>
 (epstopdf)             \includegraphics on input line 1445.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2678, 1165.35374pt x 731.733
+<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2683, 1165.35374pt x 731.733
 75pt>
 File: Chapter3-figures/pn-mass-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/pn-mass-eps-converted-to.pdf>
@@ -2482,7 +2493,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 1601.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2759, 361.35pt x 252.945p
+<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2764, 361.35pt x 252.945p
 t>
 File: Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf>
@@ -2501,7 +2512,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vc_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1602.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2760, 361.35pt x 252.945
+<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2765, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2521,7 +2532,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1603.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2761, 361.35pt x 252.945pt
+<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2766, 361.35pt x 252.945pt
 >
 File: Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf>
@@ -2540,7 +2551,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vt_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1604.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2762, 361.35pt x 252.945
+<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2767, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2563,7 +2574,7 @@ ft-eps-converted-to.pdf Chapter3-figures/phase-shift.eps>
 (epstopdf)             \includegraphics on input line 1644.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2833, 882.29625pt x 646.
+<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2838, 882.29625pt x 646.
 415pt>
 File: Chapter3-figures/phase-shift-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2583,7 +2594,7 @@ atter-eps-converted-to.pdf Chapter3-figures/neutron-matter.eps>
 (epstopdf)             \includegraphics on input line 1645.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2834, 592.2125pt x 71
+<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2839, 592.2125pt x 71
 5.67375pt>
 File: Chapter3-figures/neutron-matter-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2605,7 +2616,7 @@ s-converted-to.pdf Chapter3-figures/char-c.eps>
 (epstopdf)             \includegraphics on input line 2045.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/char-c-eps-converted-to.pdf, id=2921, 479.7925pt x 345.29pt>
+<Chapter3-figures/char-c-eps-converted-to.pdf, id=2926, 479.7925pt x 345.29pt>
 File: Chapter3-figures/char-c-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter3-figures/char-c-eps-converted-to.pdf>
@@ -2625,7 +2636,7 @@ eps-converted-to.pdf Chapter3-figures/leapfrog.eps>
 (epstopdf)             \includegraphics on input line 2102.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2941, 934.49126pt x 307.147
+<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2946, 934.49126pt x 307.147
 5pt>
 File: Chapter3-figures/leapfrog-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/leapfrog-eps-converted-to.pdf>
@@ -2650,7 +2661,7 @@ e/m/n/8.5 (2008) 1224
 
 
 ] [75]
-<Chapter4-figures/BosonContact-2body-simple.pdf, id=2996, 224.84pt x 58.2175pt>
+<Chapter4-figures/BosonContact-2body-simple.pdf, id=3002, 224.84pt x 58.2175pt>
 File: Chapter4-figures/BosonContact-2body-simple.pdf Graphic file (type pdf)
 <use Chapter4-figures/BosonContact-2body-simple.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
@@ -2660,7 +2671,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 505.
  [78]
-<Chapter4-figures/BosonContact-2body.pdf, id=3057, 249.93375pt x 62.2325pt>
+<Chapter4-figures/BosonContact-2body.pdf, id=3062, 249.93375pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-2body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-2body.pdf>
@@ -2668,7 +2679,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body.pdf used on input
 line 519.
 (pdftex.def)             Requested size: 318.43968pt x 79.29837pt.
  [79 <./Chapter4-figures/BosonContact-2body.pdf>]
-<Chapter4-figures/BosonContact-3body.pdf, id=3098, 334.24875pt x 62.2325pt>
+<Chapter4-figures/BosonContact-3body.pdf, id=3103, 334.24875pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-3body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-3body.pdf>
@@ -3205,7 +3216,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[93] <Chapter4-figures/fig_2bdypert.pdf, id=3324, 482.80376pt x 59.22125pt>
+[93] <Chapter4-figures/fig_2bdypert.pdf, id=3329, 482.80376pt x 59.22125pt>
 File: Chapter4-figures/fig_2bdypert.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_2bdypert.pdf>
@@ -3280,7 +3291,7 @@ and I'll forget about whatever was undefined.
                                                   \fi \fi 
 l.1844 \end{equation}
                       <./Chapter4-figures/fig_2bdypert.pdf>]
-<Chapter4-figures/fig_feynC0int.pdf, id=3374, 275.0275pt x 59.22125pt>
+<Chapter4-figures/fig_feynC0int.pdf, id=3379, 275.0275pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC0int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC0int.pdf>
@@ -3297,7 +3308,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[95] <Chapter4-figures/fig_feynC2int.pdf, id=3398, 470.75874pt x 59.22125pt>
+[95] <Chapter4-figures/fig_feynC2int.pdf, id=3403, 470.75874pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC2int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC2int.pdf>
@@ -3386,7 +3397,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 [96 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.pd
-f>] <Chapter4-figures/fig_feynDimer.pdf, id=3448, 460.72125pt x 88.33pt>
+f>] <Chapter4-figures/fig_feynDimer.pdf, id=3453, 460.72125pt x 88.33pt>
 File: Chapter4-figures/fig_feynDimer.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynDimer.pdf>
@@ -3419,7 +3430,7 @@ Overfull \hbox (13.88416pt too wide) in paragraph at lines 2156--2162
 ell-known Skorniakov-Ter-Martirosian
  []
 
-<Chapter4-figures/fig_feyn8c.pdf, id=3493, 359.3425pt x 151.56625pt>
+<Chapter4-figures/fig_feyn8c.pdf, id=3499, 359.3425pt x 151.56625pt>
 File: Chapter4-figures/fig_feyn8c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn8c.pdf>
@@ -3997,7 +4008,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[100] <Chapter4-figures/fig_feyn9c.pdf, id=3557, 432.61626pt x 61.22874pt>
+[100] <Chapter4-figures/fig_feyn9c.pdf, id=3562, 432.61626pt x 61.22874pt>
 File: Chapter4-figures/fig_feyn9c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn9c.pdf>
@@ -4035,7 +4046,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/B3LecNote.pdf, id=3623, 522.95375pt x 368.37625pt>
+<Chapter4-figures/B3LecNote.pdf, id=3628, 522.95375pt x 368.37625pt>
 File: Chapter4-figures/B3LecNote.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/B3LecNote.pdf>
@@ -4099,7 +4110,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/C0-Vertex.pdf, id=3677, 72.27pt x 58.2175pt>
+<Chapter4-figures/C0-Vertex.pdf, id=3682, 72.27pt x 58.2175pt>
 File: Chapter4-figures/C0-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/C0-Vertex.pdf>
@@ -4290,7 +4301,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<Chapter4-figures/nd-IntEq-Q.pdf, id=3717, 189.70876pt x 34.1275pt>
+<Chapter4-figures/nd-IntEq-Q.pdf, id=3722, 189.70876pt x 34.1275pt>
 File: Chapter4-figures/nd-IntEq-Q.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-Q.pdf>
@@ -4408,7 +4419,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/nd-IntEq-D.pdf, id=3746, 283.0575pt x 80.3pt>
+<Chapter4-figures/nd-IntEq-D.pdf, id=3751, 283.0575pt x 80.3pt>
 File: Chapter4-figures/nd-IntEq-D.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-D.pdf>
@@ -4888,7 +4899,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/Phillips.pdf, id=3799, 392.46625pt x 279.0425pt>
+<Chapter4-figures/Phillips.pdf, id=3804, 392.46625pt x 279.0425pt>
 File: Chapter4-figures/Phillips.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Phillips.pdf>
@@ -4952,7 +4963,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/Photon-Vertex-0.pdf, id=3839, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-0.pdf, id=3844, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-0.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-0.pdf>
@@ -4976,7 +4987,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [113 <./Chapter4-figures/Photon-Vertex-0.pdf>]
-<Chapter4-figures/OnePhotonExchange.pdf, id=3866, 30.1125pt x 29.10875pt>
+<Chapter4-figures/OnePhotonExchange.pdf, id=3871, 30.1125pt x 29.10875pt>
 File: Chapter4-figures/OnePhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/OnePhotonExchange.pdf>
@@ -4984,7 +4995,7 @@ Package pdftex.def Info: Chapter4-figures/OnePhotonExchange.pdf used on input l
 ine 3427.
 (pdftex.def)             Requested size: 47.4876pt x 45.89969pt.
 
-<Chapter4-figures/TwoPhotonExchange.pdf, id=3868, 50.1875pt x 29.10875pt>
+<Chapter4-figures/TwoPhotonExchange.pdf, id=3873, 50.1875pt x 29.10875pt>
 File: Chapter4-figures/TwoPhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/TwoPhotonExchange.pdf>
@@ -5014,7 +5025,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/SinglePhotonBubble.pdf, id=3870, 78.2925pt x 34.1275pt>
+<Chapter4-figures/SinglePhotonBubble.pdf, id=3875, 78.2925pt x 34.1275pt>
 File: Chapter4-figures/SinglePhotonBubble.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/SinglePhotonBubble.pdf>
@@ -5022,7 +5033,7 @@ Package pdftex.def Info: Chapter4-figures/SinglePhotonBubble.pdf used on input
 line 3456.
 (pdftex.def)             Requested size: 106.14656pt x 46.27058pt.
 
-<Chapter4-figures/Photon-Vertex-trans.pdf, id=3873, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-trans.pdf, id=3878, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-trans.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-trans.pdf>
@@ -5045,7 +5056,7 @@ and I'll forget about whatever was undefined.
 
 [114 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonEx
 change.pdf> <./Chapter4-figures/SinglePhotonBubble.pdf>]
-<Chapter4-figures/Photon-Prop-gauge.pdf, id=3895, 75.28125pt x 22.0825pt>
+<Chapter4-figures/Photon-Prop-gauge.pdf, id=3900, 75.28125pt x 22.0825pt>
 File: Chapter4-figures/Photon-Prop-gauge.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Prop-gauge.pdf>
@@ -5053,7 +5064,7 @@ Package pdftex.def Info: Chapter4-figures/Photon-Prop-gauge.pdf used on input l
 ine 3518.
 (pdftex.def)             Requested size: 69.74953pt x 20.46169pt.
 
-<Chapter4-figures/Photon-Vertex-mag.pdf, id=3896, 84.315pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-mag.pdf, id=3901, 84.315pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-mag.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-mag.pdf>
@@ -5062,7 +5073,7 @@ ine 3560.
 (pdftex.def)             Requested size: 71.99951pt x 46.28654pt.
  [115 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-P
 rop-gauge.pdf> <./Chapter4-figures/Photon-Vertex-mag.pdf>]
-<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3932, 176.66pt x 108.405pt>
+<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3937, 176.66pt x 108.405pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf>
@@ -5070,7 +5081,7 @@ Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf used on in
 put line 3586.
 (pdftex.def)             Requested size: 149.6064pt x 91.79938pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3934, 152.57pt x 103.38625pt>
+<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3939, 152.57pt x 103.38625pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf Graphic file (type pdf)
 <use Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf used on i
@@ -5146,7 +5157,7 @@ my insertion and my current dilemma will both disappear.
 LaTeX Warning: Reference `sec:Dibaryons' on page 116 undefined on input line 36
 33.
 
-<Chapter4-figures/Deuteron-Vertex.pdf, id=3939, 66.2475pt x 61.22874pt>
+<Chapter4-figures/Deuteron-Vertex.pdf, id=3944, 66.2475pt x 61.22874pt>
 File: Chapter4-figures/Deuteron-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Deuteron-Vertex.pdf>
@@ -5317,21 +5328,21 @@ or  <return>  to continue without it.
 
 
 ] [121] [122] [123]
-<Chapter5-figures/al0.png, id=4107, 385.44pt x 300.12125pt>
+<Chapter5-figures/al0.png, id=4112, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
 Package pdftex.def Info: Chapter5-figures/al0.png used on input line 147.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
-<Chapter5-figures/ae0.png, id=4109, 387.4475pt x 302.12875pt>
+<Chapter5-figures/ae0.png, id=4114, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
 Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 148.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
-<Chapter5-figures/ag0.png, id=4110, 383.4325pt x 300.12125pt>
+<Chapter5-figures/ag0.png, id=4115, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
@@ -5339,21 +5350,21 @@ Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 149.
 (pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
  [124 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-fig
 ures/ag0.png>] [125]
-<Chapter5-figures/simple1.png, id=4141, 788.9475pt x 95.35625pt>
+<Chapter5-figures/simple1.png, id=4146, 788.9475pt x 95.35625pt>
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
 Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 188.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
-<Chapter5-figures/loop1.png, id=4144, 893.3375pt x 191.71625pt>
+<Chapter5-figures/loop1.png, id=4149, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
 Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 193.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
-<Chapter5-figures/beta.pdf, id=4148, 481.8pt x 303.24593pt>
+<Chapter5-figures/beta.pdf, id=4153, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
@@ -5361,14 +5372,14 @@ Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 209.
 (pdftex.def)             Requested size: 212.29312pt x 133.6137pt.
  [126 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>] [127 <./
 Chapter5-figures/beta.pdf>] [128] [129] [130]
-[131] <Chapter5-figures/dimer.png, id=4252, 905.3825pt x 206.7725pt>
+[131] <Chapter5-figures/dimer.png, id=4257, 905.3825pt x 206.7725pt>
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
 Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 368.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
  [132 <./Chapter5-figures/dimer.png>]
-<Chapter5-figures/lattice.png, id=4262, 352.31625pt x 315.1775pt>
+<Chapter5-figures/lattice.png, id=4267, 352.31625pt x 315.1775pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
@@ -5376,7 +5387,7 @@ Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 386.
 (pdftex.def)             Requested size: 127.37717pt x 113.94954pt.
  [133 <./Chapter5-figures/lattice.png>]
 [134] [135] [136] [137] [138] [139] [140] [141] [142] [143]
-<Chapter5-figures/QCDbubble.pdf, id=4404, 424.58624pt x 370.38374pt>
+<Chapter5-figures/QCDbubble.pdf, id=4409, 424.58624pt x 370.38374pt>
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
@@ -5384,21 +5395,21 @@ Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 717.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
  [144 <./Chapter5-figures/QCDbubble.pdf>]
-<Chapter5-figures/overlap.pdf, id=4424, 481.8pt x 303.65443pt>
+<Chapter5-figures/overlap.pdf, id=4429, 481.8pt x 303.65443pt>
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
 Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 726.
 (pdftex.def)             Requested size: 212.29312pt x 133.79369pt.
  [145 <./Chapter5-figures/overlap.pdf>]
-[146] <Chapter5-figures/cumulant.png, id=4472, 491.8375pt x 321.2pt>
+[146] <Chapter5-figures/cumulant.png, id=4477, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
 Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 788.
 (pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
  [147] [148 <./Chapter5-figures/cumulant.png>] <Chapter5-figures/twobody.png, i
-d=4499, 800.9925pt x 530.98375pt>
+d=4504, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
@@ -5409,7 +5420,7 @@ Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 848.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [150 <./Chapter5-figures/twobody.png>] [151] [152] [153] [154] [155] [156]
-<Chapter5-figures/dispersion.png, id=4620, 737.75626pt x 509.905pt>
+<Chapter5-figures/dispersion.png, id=4625, 737.75626pt x 509.905pt>
 File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
@@ -5417,14 +5428,14 @@ Package pdftex.def Info: Chapter5-figures/dispersion.png used on input line 108
 2.
 (pdftex.def)             Requested size: 382.12502pt x 264.10953pt.
  [157 <./Chapter5-figures/dispersion.png>] [158] [159] <Chapter5-figures/lusche
-r.pdf, id=4699, 755.82375pt x 493.845pt>
+r.pdf, id=4704, 755.82375pt x 493.845pt>
 File: Chapter5-figures/luscher.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/luscher.pdf>
 Package pdftex.def Info: Chapter5-figures/luscher.pdf used on input line 1176.
 (pdftex.def)             Requested size: 212.29312pt x 138.70517pt.
  [160]
-<Chapter5-figures/interaction.png, id=4745, 658.46pt x 512.91624pt>
+<Chapter5-figures/interaction.png, id=4750, 658.46pt x 512.91624pt>
 File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
@@ -5432,7 +5443,7 @@ Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 11
 96.
 (pdftex.def)             Requested size: 382.12502pt x 297.6638pt.
 
-<Chapter5-figures/tuning.png, id=4752, 466.74374pt x 294.09875pt>
+<Chapter5-figures/tuning.png, id=4757, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
@@ -5440,7 +5451,7 @@ Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1203.
 (pdftex.def)             Requested size: 212.29312pt x 133.76576pt.
  [161 <./Chapter5-figures/luscher.pdf>]
 [162 <./Chapter5-figures/interaction.png> <./Chapter5-figures/tuning.png>]
-[163] [164] <Chapter5-figures/dimer2.png, id=4803, 748.7975pt x 110.4125pt>
+[163] [164] <Chapter5-figures/dimer2.png, id=4808, 748.7975pt x 110.4125pt>
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
@@ -5448,21 +5459,21 @@ Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1276.
 (pdftex.def)             Requested size: 424.58624pt x 62.60724pt.
  [165 <./Chapter5-figures/dimer2.png>]
 [166] [167] [168] [169] [170] [171]
-<Chapter5-figures/tree.png, id=4905, 112.42pt x 74.2775pt>
+<Chapter5-figures/tree.png, id=4910, 112.42pt x 74.2775pt>
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
 Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1500.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
 
-<Chapter5-figures/box.png, id=4906, 118.4425pt x 73.27374pt>
+<Chapter5-figures/box.png, id=4911, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
 Package pdftex.def Info: Chapter5-figures/box.png used on input line 1506.
 (pdftex.def)             Requested size: 42.46121pt x 26.26782pt.
  [172 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
-<Chapter5-figures/sunset.png, id=4923, 787.94376pt x 73.27374pt> [173]
+<Chapter5-figures/sunset.png, id=4928, 787.94376pt x 73.27374pt> [173]
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
@@ -5473,7 +5484,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 1537--1538
 [][] 
  []
 
-<Chapter5-figures/dresseddimer.png, id=4935, 858.20625pt x 60.225pt>
+<Chapter5-figures/dresseddimer.png, id=4940, 858.20625pt x 60.225pt>
 File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
@@ -5481,14 +5492,14 @@ Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
 555.
 (pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
  [174 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
-<Chapter5-figures/3body.png, id=4950, 821.0675pt x 84.315pt>
+<Chapter5-figures/3body.png, id=4955, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
 Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1577.
 (pdftex.def)             Requested size: 424.58624pt x 43.5996pt.
 
-<Chapter5-figures/HLambda.pdf, id=4956, 481.8pt x 319.76967pt>
+<Chapter5-figures/HLambda.pdf, id=4961, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
@@ -5541,7 +5552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
-[185] <Chapter6-figures/formalism.png, id=5220, 439.8834pt x 249.5724pt>
+[185] <Chapter6-figures/formalism.png, id=5225, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
@@ -5549,7 +5560,7 @@ Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 209.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
  [186 <./Chapter6-figures/formalism.png>]
-[187] <Chapter6-figures/worldlines.png, id=5254, 579.6054pt x 495.7722pt>
+[187] <Chapter6-figures/worldlines.png, id=5259, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
@@ -5557,7 +5568,7 @@ Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 371
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [188] [189 <./Chapter6-figures/worldlines.png>] [190] [191]
-<Chapter6-figures/HSworldlines.png, id=5312, 579.6054pt x 495.7722pt>
+<Chapter6-figures/HSworldlines.png, id=5317, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -5565,7 +5576,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 11.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=5316, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=5321, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -5576,7 +5587,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 631.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 631.
 
-<Chapter6-figures/getzdualvecs.png, id=5317, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=5322, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -5588,7 +5599,7 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 645.
 
-<Chapter6-figures/call_getzvecs.png, id=5318, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=5323, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
@@ -5611,21 +5622,21 @@ ed, duplicate ignored
 l.713 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=5346, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=5351, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 786.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
  [195]
-<Chapter6-figures/dVds.png, id=5363, 507.8975pt x 367.3725pt>
+<Chapter6-figures/dVds.png, id=5368, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 809.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=5365, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=5370, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
@@ -5991,7 +6002,7 @@ converted-to.pdf Chapter7-figures/fig1.eps>
 (epstopdf)             \includegraphics on input line 433.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig1-eps-converted-to.pdf, id=5533, 619.31375pt x 435.6275pt>
+<Chapter7-figures/fig1-eps-converted-to.pdf, id=5538, 619.31375pt x 435.6275pt>
 File: Chapter7-figures/fig1-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig1-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig1-eps-converted-to.pdf used on inp
@@ -6042,7 +6053,7 @@ converted-to.pdf Chapter7-figures/fig2.eps>
 (epstopdf)             \includegraphics on input line 570.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig2-eps-converted-to.pdf, id=5591, 936.49875pt x 696.6025pt>
+<Chapter7-figures/fig2-eps-converted-to.pdf, id=5596, 936.49875pt x 696.6025pt>
 File: Chapter7-figures/fig2-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig2-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig2-eps-converted-to.pdf used on inp
@@ -6720,7 +6731,7 @@ converted-to.pdf Chapter7-figures/fig3.eps>
 (epstopdf)             \includegraphics on input line 824.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig3-eps-converted-to.pdf, id=5648, 671.50874pt x 491.8375pt>
+<Chapter7-figures/fig3-eps-converted-to.pdf, id=5653, 671.50874pt x 491.8375pt>
 File: Chapter7-figures/fig3-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig3-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig3-eps-converted-to.pdf used on inp
@@ -6899,7 +6910,7 @@ LaTeX Warning: Citation `ekstromPRX' on page 236 undefined on input line 868.
 
 LaTeX Warning: Citation `ekstromPRX' on page 237 undefined on input line 906.
 
-<Chapter8-figures/diagNNLO.pdf, id=5933, 1803.73875pt x 1574.88374pt>
+<Chapter8-figures/diagNNLO.pdf, id=5938, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
@@ -6972,7 +6983,7 @@ LaTeX Warning: Citation `haxton' on page 253 undefined on input line 2079.
 LaTeX Warning: Citation `svavittbartlett2009' on page 254 undefined on input li
 ne 2177.
 
-<Chapter8-figures/mbpt.pdf, id=6153, 614.295pt x 794.97pt>
+<Chapter8-figures/mbpt.pdf, id=6158, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
@@ -7070,7 +7081,7 @@ Overfull \hbox (4.76913pt too wide) in paragraph at lines 3230--3234
  []
 
 [270] [271]
-<Chapter8-figures/perturbationtheory.pdf, id=6421, 578.16pt x 433.62pt>
+<Chapter8-figures/perturbationtheory.pdf, id=6426, 578.16pt x 433.62pt>
 File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
@@ -7078,7 +7089,7 @@ Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input
 line 3382.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
 
-<Chapter8-figures/CCDMBPT4theory.pdf, id=6427, 578.16pt x 433.62pt>
+<Chapter8-figures/CCDMBPT4theory.pdf, id=6432, 578.16pt x 433.62pt>
 File: Chapter8-figures/CCDMBPT4theory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/CCDMBPT4theory.pdf>
@@ -7090,7 +7101,7 @@ es/CCDMBPT4theory.pdf>] [275]
 
 LaTeX Warning: Citation `blas' on page 276 undefined on input line 3561.
 
-<Chapter8-figures/blockvsfull_log.png, id=6601, 578.16pt x 433.62pt>
+<Chapter8-figures/blockvsfull_log.png, id=6606, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
@@ -7126,14 +7137,14 @@ Package xcolor Warning: Incompatible color definition on input line 3703.
 
 Package xcolor Warning: Incompatible color definition on input line 3703.
 
-[279] <Chapter8-figures/fig1.pdf, id=6637, 500.87437pt x 400.11984pt>
+[279] <Chapter8-figures/fig1.pdf, id=6642, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
 Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3758.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=6638, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=6643, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
@@ -7174,14 +7185,14 @@ Package xcolor Warning: Incompatible color definition on input line 3816.
 
 Package xcolor Warning: Incompatible color definition on input line 3816.
 
-<Chapter8-figures/fig3.pdf, id=6717, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=6722, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
 Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3836.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=6719, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=6724, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
@@ -7300,7 +7311,7 @@ Overfull \hbox (10.18704pt too wide) in paragraph at lines 5018--5027
 grams / cpp / CCD / src$[]\T1/fve/m/n/10 , abide to this
  []
 
-<Chapter8-figures/classabstractspbasis.pdf, id=7144, 501.875pt x 74.90987pt>
+<Chapter8-figures/classabstractspbasis.pdf, id=7149, 501.875pt x 74.90987pt>
 File: Chapter8-figures/classabstractspbasis.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/classabstractspbasis.pdf>
@@ -7347,7 +7358,7 @@ converted-to.pdf Chapter9-figures/qvar.eps>
 (epstopdf)             \includegraphics on input line 470.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/qvar-eps-converted-to.pdf, id=7418, 667.49374pt x 473.77pt>
+<Chapter9-figures/qvar-eps-converted-to.pdf, id=7423, 667.49374pt x 473.77pt>
 File: Chapter9-figures/qvar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/qvar-eps-converted-to.pdf>
@@ -7367,7 +7378,7 @@ onverted-to.pdf Chapter9-figures/jas.eps>
 (epstopdf)             \includegraphics on input line 501.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/jas-eps-converted-to.pdf, id=7432, 699.61375pt x 487.8225pt>
+<Chapter9-figures/jas-eps-converted-to.pdf, id=7437, 699.61375pt x 487.8225pt>
 File: Chapter9-figures/jas-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/jas-eps-converted-to.pdf>
@@ -7389,7 +7400,7 @@ f>
 (epstopdf)             \includegraphics on input line 861.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/hists-eps-converted-to.pdf, id=7556, 682.55pt x 465.74pt>
+<Chapter9-figures/hists-eps-converted-to.pdf, id=7561, 682.55pt x 465.74pt>
 File: Chapter9-figures/hists-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/hists-eps-converted-to.pdf>
@@ -7408,7 +7419,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7558, 669.50125pt x 466.74
+<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7563, 669.50125pt x 466.74
 374pt>
 File: Chapter9-figures/dmc_decay-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_decay-eps-converted-to.pdf>
@@ -7428,7 +7439,7 @@ mc-eps-converted-to.pdf Chapter9-figures/walkers_dmc.eps>
 (epstopdf)             \includegraphics on input line 889.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7580, 692.5875pt x 485.8
+<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7585, 692.5875pt x 485.8
 15pt>
 File: Chapter9-figures/walkers_dmc-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -7448,7 +7459,7 @@ eps-converted-to.pdf Chapter9-figures/dmc_extr.eps>
 (epstopdf)             \includegraphics on input line 898.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7582, 701.62125pt x 475.777
+<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7587, 701.62125pt x 475.777
 5pt>
 File: Chapter9-figures/dmc_extr-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_extr-eps-converted-to.pdf>
@@ -7523,7 +7534,7 @@ ergence-eps-converted-to.pdf Chapter9-figures/cimc_convergence.eps>
 (epstopdf)             \includegraphics on input line 2724.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8027, 726.715pt x 5
+<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8032, 726.715pt x 5
 05.89pt>
 File: Chapter9-figures/cimc_convergence-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -7543,7 +7554,7 @@ cimc-eps-converted-to.pdf Chapter9-figures/eos_MInn_cimc.eps>
 (epstopdf)             \includegraphics on input line 2735.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/eos_MInn_cimc-eps-converted-to.pdf, id=8029, 661.47125pt x 48
+<Chapter9-figures/eos_MInn_cimc-eps-converted-to.pdf, id=8034, 661.47125pt x 48
 4.81125pt>
 File: Chapter9-figures/eos_MInn_cimc-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -7564,7 +7575,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 ...command{\comm}[2]{\ensuremath{[{#1},{#2}]}}
+l.5 ...command{\comm}[2]{\ensuremath{[{#1},{#2}]}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7578,7 +7589,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 ...2]{\ensuremath{ \big\{ {#1}, {#2} \big\} }}
+l.6 ...2]{\ensuremath{ \big\{ {#1}, {#2} \big\} }}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7592,7 +7603,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 \newcommand{\diag}{\operatorname{diag}}
+l.36 \newcommand{\diag}{\operatorname{diag}}
                                             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7607,143 +7618,98 @@ or  <return>  to continue without it.
 ]
 Names of authors too long for running head. Please supply
 a shorter form with \authorrunning prior to \maketitle
-
-LaTeX Warning: Citation `wegner1994' on page 363 undefined on input line 57.
-
-
-LaTeX Warning: Citation `glazek1993' on page 363 undefined on input line 57.
-
 [363]
 
-LaTeX Warning: Citation `bogner2007' on page 364 undefined on input line 72.
+LaTeX Warning: Citation `golubvaloan1996' on page 364 undefined on input line 1
+13.
+
+[364] [365] [366] [367]
+
+LaTeX Warning: Reference `app:commutators' on page 368 undefined on input line 
+306.
 
 
-LaTeX Warning: Citation `bogner2010' on page 364 undefined on input line 72.
+LaTeX Warning: Reference `eq:E0' on page 368 undefined on input line 333.
 
 
-LaTeX Warning: Citation `morris2015' on page 364 undefined on input line 72.
+LaTeX Warning: Reference `eq:Gamma' on page 368 undefined on input line 333.
 
 
-LaTeX Warning: Citation `bogner2016' on page 364 undefined on input line 72.
+LaTeX Warning: Reference `sec:mbpt' on page 368 undefined on input line 335.
 
 
-LaTeX Warning: Citation `navratil2000' on page 364 undefined on input line 113.
+LaTeX Warning: Citation `Day:1967zl' on page 368 undefined on input line 344.
 
 
-
-LaTeX Warning: Citation `barrett2013' on page 364 undefined on input line 113.
-
-
-LaTeX Warning: Citation `golubvanloan1996' on page 364 undefined on input line 
-116.
+LaTeX Warning: Citation `Brandow:1967tg' on page 368 undefined on input line 34
+4.
 
 
-LaTeX Warning: Citation `golubvanloan1996' on page 364 undefined on input line 
-118.
-
-[364] [365] [366]
-
-LaTeX Warning: Citation `weinberg1996' on page 367 undefined on input line 275.
-
-
-
-LaTeX Warning: Citation `tsukiyama2011' on page 367 undefined on input line 277
+LaTeX Warning: Citation `Fetter:2003ve' on page 368 undefined on input line 344
 .
 
 
-LaTeX Warning: Citation `tsukiyama2012' on page 367 undefined on input line 277
-.
-
-
-LaTeX Warning: Citation `hergert2013' on page 367 undefined on input line 277.
-
-
-LaTeX Warning: Reference `app:commutators' on page 367 undefined on input line 
-289.
-
-[367]
-
-LaTeX Warning: Reference `eq:E0' on page 368 undefined on input line 316.
-
-
-LaTeX Warning: Reference `eq:Gamma' on page 368 undefined on input line 316.
-
-
-LaTeX Warning: Reference `sec:mbpt' on page 368 undefined on input line 318.
-
-
-LaTeX Warning: Citation `Day:1967zl' on page 368 undefined on input line 327.
-
-
-LaTeX Warning: Citation `Brandow:1967tg' on page 368 undefined on input line 32
+LaTeX Warning: Citation `Brandow:1967tg' on page 368 undefined on input line 34
 7.
 
 
-LaTeX Warning: Citation `Fetter:2003ve' on page 368 undefined on input line 327
-.
-
-
-LaTeX Warning: Citation `Brandow:1967tg' on page 368 undefined on input line 33
-0.
-
-
-LaTeX Warning: Citation `Shavitt:2009' on page 368 undefined on input line 330.
+LaTeX Warning: Citation `Shavitt:2009' on page 368 undefined on input line 347.
 
 
 
-LaTeX Warning: Citation `Shavitt:2009' on page 368 undefined on input line 348.
+LaTeX Warning: Citation `Shavitt:2009' on page 368 undefined on input line 365.
 
 
 
-LaTeX Warning: Citation `Hagen:2014ve' on page 368 undefined on input line 348.
+LaTeX Warning: Citation `Hagen:2014ve' on page 368 undefined on input line 365.
 
 
 
 LaTeX Warning: Citation `Dickhoff:2004fk' on page 368 undefined on input line 3
-50.
+67.
 
 
 LaTeX Warning: Citation `Barbieri:2007fk' on page 368 undefined on input line 3
-50.
+67.
 
 
 LaTeX Warning: Citation `Cipollone:2013uq' on page 368 undefined on input line 
-350.
+367.
 
 
-LaTeX Warning: Citation `White:2002fk' on page 368 undefined on input line 351.
-
-
-
-LaTeX Warning: Citation `Yanai:2006uq' on page 368 undefined on input line 351.
+LaTeX Warning: Citation `White:2002fk' on page 368 undefined on input line 368.
 
 
 
-LaTeX Warning: Reference `sec:numerics_radii' on page 368 undefined on input li
-ne 368.
+LaTeX Warning: Citation `Yanai:2006uq' on page 368 undefined on input line 368.
 
-
-LaTeX Warning: Reference `sec:com' on page 368 undefined on input line 369.
 
 [368]
 
+LaTeX Warning: Reference `sec:numerics_radii' on page 369 undefined on input li
+ne 385.
+
+
+LaTeX Warning: Reference `sec:com' on page 369 undefined on input line 386.
+
+
 LaTeX Warning: Citation `Anderson:2010br' on page 369 undefined on input line 3
-76.
+93.
 
 
-LaTeX Warning: Citation `Bogner:2010pq' on page 369 undefined on input line 376
+LaTeX Warning: Citation `Bogner:2010pq' on page 369 undefined on input line 393
 .
 
 
-LaTeX Warning: Citation `Blanes:2009fk' on page 369 undefined on input line 389
+LaTeX Warning: Citation `Blanes:2009fk' on page 369 undefined on input line 406
 .
 
 
-LaTeX Warning: Citation `Morris:2015ve' on page 369 undefined on input line 389
+LaTeX Warning: Citation `Morris:2015ve' on page 369 undefined on input line 406
 .
 
 
-LaTeX Warning: Reference `sec:magnus' on page 369 undefined on input line 390.
+LaTeX Warning: Reference `sec:magnus' on page 369 undefined on input line 407.
 
 Package epstopdf Info: Source file: <Chapter10-figures/H_initial.eps>
 (epstopdf)                    date: 2013-09-20 23:53:22
@@ -7754,15 +7720,15 @@ to.pdf>
 (epstopdf)                    size: 2746 bytes
 (epstopdf)             Command: <repstopdf --outfile=Chapter10-figures/H_initia
 l-eps-converted-to.pdf Chapter10-figures/H_initial.eps>
-(epstopdf)             \includegraphics on input line 401.
+(epstopdf)             \includegraphics on input line 418.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter10-figures/H_initial-eps-converted-to.pdf, id=8179, 706.64pt x 706.64pt
+<Chapter10-figures/H_initial-eps-converted-to.pdf, id=8210, 706.64pt x 706.64pt
 >
 File: Chapter10-figures/H_initial-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter10-figures/H_initial-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter10-figures/H_initial-eps-converted-to.pdf used 
-on input line 401.
+on input line 418.
 (pdftex.def)             Requested size: 156.25061pt x 156.2484pt.
 Package epstopdf Info: Source file: <Chapter10-figures/H_IMSRG_3ph_decoupling.e
 ps>
@@ -7775,153 +7741,109 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Chapter10-figures/H_IMSRG_
 3ph_decoupling-eps-converted-to.pdf Chapter10-figures/H_IMSRG_3ph_decoupling.ep
 s>
-(epstopdf)             \includegraphics on input line 402.
+(epstopdf)             \includegraphics on input line 419.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter10-figures/H_IMSRG_3ph_decoupling-eps-converted-to.pdf, id=8180, 706.64
+<Chapter10-figures/H_IMSRG_3ph_decoupling-eps-converted-to.pdf, id=8211, 706.64
 pt x 707.64375pt>
 File: Chapter10-figures/H_IMSRG_3ph_decoupling-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Chapter10-figures/H_IMSRG_3ph_decoupling-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter10-figures/H_IMSRG_3ph_decoupling-eps-converted
--to.pdf used on input line 402.
+-to.pdf used on input line 419.
 (pdftex.def)             Requested size: 156.25061pt x 156.47034pt.
 
 
-LaTeX Warning: Reference `sec:floweq' on page 369 undefined on input line 430.
+LaTeX Warning: Reference `sec:floweq' on page 369 undefined on input line 446.
 
 
-LaTeX Warning: Reference `sec:mrimsrg' on page 369 undefined on input line 436.
+LaTeX Warning: Reference `sec:mrimsrg' on page 369 undefined on input line 452.
 
 
 
 LaTeX Warning: Reference `sec:shell_model' on page 369 undefined on input line 
-437.
+453.
 
-[369 <./Chapter10-figures/H_initial-eps-converted-to.pdf> <./Chapter10-figures/
+[369]
+
+LaTeX Warning: Citation `jurgenson2009' on page 370 undefined on input line 481
+.
+
+[370 <./Chapter10-figures/H_initial-eps-converted-to.pdf> <./Chapter10-figures/
 H_IMSRG_3ph_decoupling-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `Bogner:2010pq' on page 370 undefined on input line 465
+LaTeX Warning: Reference `sec:refstate' on page 371 undefined on input line 513
 .
 
 
-LaTeX Warning: Citation `Jurgenson:2009bs' on page 370 undefined on input line 
-465.
+LaTeX Warning: Reference `sec:numerics_decoupling' on page 371 undefined on inp
+ut line 519.
 
 
-LaTeX Warning: Citation `Hebeler:2012ly' on page 370 undefined on input line 46
-5.
+LaTeX Warning: Reference `fig:decoupling' on page 371 undefined on input line 5
+25.
 
 
-LaTeX Warning: Reference `sec:refstate' on page 370 undefined on input line 490
-.
-
-
-LaTeX Warning: Reference `sec:numerics_decoupling' on page 370 undefined on inp
-ut line 496.
-
-
-LaTeX Warning: Reference `fig:decoupling' on page 370 undefined on input line 5
-02.
-
-
-LaTeX Warning: Citation `Shavitt:2009' on page 370 undefined on input line 507.
-
-
-[370]
-
-LaTeX Warning: Citation `White:2002fk' on page 371 undefined on input line 511.
-
-
-
-LaTeX Warning: Citation `Tsukiyama:2011uq' on page 371 undefined on input line 
-511.
-
-
-LaTeX Warning: Citation `Shavitt:2009' on page 371 undefined on input line 519.
-
-
-
-LaTeX Warning: Citation `White:2002fk' on page 371 undefined on input line 519.
-
-
-
-LaTeX Warning: Reference `eq:imsrg2_j0b' on page 371 undefined on input line 53
-8.
-
-
-LaTeX Warning: Reference `eq:imsrg2_j2b' on page 371 undefined on input line 53
-8.
+LaTeX Warning: Citation `white200' on page 371 undefined on input line 542.
 
 [371]
 
-LaTeX Warning: Citation `Tsukiyama:2012fk' on page 372 undefined on input line 
-546.
-
-
-LaTeX Warning: Citation `Hergert:2013ij' on page 372 undefined on input line 54
-6.
-
-
-LaTeX Warning: Reference `sec:mbpt' on page 372 undefined on input line 548.
-
-
-LaTeX Warning: Citation `Carlson:2015lq' on page 372 undefined on input line 55
-1.
-
-
-LaTeX Warning: Citation `Wegner:1994dk' on page 372 undefined on input line 564
-.
+LaTeX Warning: Citation `carlson2015' on page 372 undefined on input line 598.
 
 [372]
 
 LaTeX Warning: Reference `app:commutators' on page 373 undefined on input line 
-568.
+633.
 
 
-LaTeX Warning: Reference `eq:imsrg2_j1b' on page 373 undefined on input line 58
-4.
+LaTeX Warning: Reference `eq:imsrg2_j1b' on page 373 undefined on input line 65
+5.
 
 
-LaTeX Warning: Reference `eq:imsrg2_j2b' on page 373 undefined on input line 58
-4.
-
-
-LaTeX Warning: Citation `Wegner:1994dk' on page 373 undefined on input line 586
-.
-
-
-LaTeX Warning: Citation `Kehrein:2006kx' on page 373 undefined on input line 58
+LaTeX Warning: Reference `eq:imsrg2_j2b' on page 373 undefined on input line 65
 6.
 
 
-LaTeX Warning: Citation `Anderson:2008hx' on page 373 undefined on input line 6
-16.
-
-
-LaTeX Warning: Citation `Bogner:2010pq' on page 373 undefined on input line 616
-.
+LaTeX Warning: Citation `kehrein2006' on page 373 undefined on input line 664.
 
 [373]
 
-LaTeX Warning: Reference `sec:mbpt' on page 374 undefined on input line 657.
+LaTeX Warning: Citation `anderson2008' on page 374 undefined on input line 694.
+
 
 [374]
 
-LaTeX Warning: Reference `sec:numerics' on page 375 undefined on input line 699
+LaTeX Warning: Reference `sec:mbpt' on page 375 undefined on input line 746.
+
+
+LaTeX Warning: Reference `sec:numerics' on page 375 undefined on input line 791
 .
 
-) [375]
+[375]) [376pdfTeX warning (ext4): destination with the same identifier (name{ci
+te.bogner2010@-11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 \include{chapter10}
+                         \label{chap:chapter10}pdfTeX warning (ext4): destinati
+on with the same identifier (name{cite.morris2015@-11}) has been already used, 
+duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 \include{chapter10}
+                         \label{chap:chapter10}]
 \openout2 = `chapter11.aux'.
 
- (./chapter11.tex [376
+ (./chapter11.tex [377
 
 
 
 
 
-] [377] [378]
+]
+[378]
 
 LaTeX Warning: Reference `' on page 379 undefined on input line 77.
 
@@ -8564,7 +8486,7 @@ LaTeX Warning: Reference `eq:Dyson' on page 383 undefined on input line 339.
 LaTeX Warning: Reference `eq:???' on page 383 undefined on input line 339.
 
 
-<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=8356, 682.55pt x 582.175pt>
+<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=8410, 682.55pt x 582.175pt>
 File: Chapter11-figures/Pairing_model_CI_ADC_CC.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>
@@ -8573,7 +8495,7 @@ input line 363.
 (pdftex.def)             Requested size: 339.67029pt x 289.71877pt.
  [383] [384 <./Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>] [385] [386] [387
 ] [388]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8463, 1027.84pt x 770.88pt>
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8517, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
@@ -8620,7 +8542,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: D7865D6D21FC97CE1C57199D21566D27;20018.
+(rerunfilecheck)             Checksum: E9117994ABEB211585F57A3EF675BFCF;20103.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -8634,10 +8556,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 203.
  ) 
 Here is how much of TeX's memory you used:
- 25838 strings out of 493089
- 411426 string characters out of 6134842
- 585673 words of memory out of 5000000
- 25244 multiletter control sequences out of 15000+600000
+ 25878 strings out of 493089
+ 412151 string characters out of 6134842
+ 586725 words of memory out of 5000000
+ 25257 multiletter control sequences out of 15000+600000
  158847 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,25n,122p,1588b,1758s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -8671,10 +8593,10 @@ e/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on lnp.pdf (410 pages, 6128403 bytes).
+Output written on lnp.pdf (410 pages, 6143245 bytes).
 PDF statistics:
- 9535 PDF objects out of 10688 (max. 8388607)
- 8389 compressed objects within 84 object streams
- 3414 named destinations out of 3580 (max. 500000)
- 2592 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9595 PDF objects out of 10688 (max. 8388607)
+ 8448 compressed objects within 85 object streams
+ 3441 named destinations out of 3580 (max. 500000)
+ 2600 words of extra memory for PDF output out of 10000 (max. 10000000)
 

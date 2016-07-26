@@ -1,4 +1,3 @@
-
 \newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
 \newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
 
@@ -77,14 +76,15 @@ matter, coupling our final results with those of chapter 8, 9 and
 11. The next section presents the essential philosophy of the method,
 which in practice means to solve Schr\"odinger's equation for a
 many-body system in terms of coupled ordinary differential equations
-(ODEs). We present also two simple demonstrations of the method before
-presenting our applications to infinite neutron matter with a
-cartesian basis. In the final section, we point to further
-perspectives.
+(ODEs). We present also two simple demonstrations of the SRG method with the true vacuum as reference state before
+we move on to the in-medium SRG (IM-SRG) approach. 
+We apply thereafter the IM-SRG approach to the simplified pairing  model (presented in chapter 8) and 
+to pure neutron matter. We compare our IM-SRG results to those obtained from coupled cluster theory and many-body perturbation theory of  chapter 8 and quantum Monte Carlo of the previous chapter.  In the final section, we present our conclusions and point  to further
+perspectives and research directions.
 
 \section{Similarity Renormalization Group method}
 
-We give here a brief overview of the SRG method applied to two simple systems, one given by a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8. 
+We give here a brief overview of the SRG method applied to two simple systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8. 
 
 Taking the derivative of Eq.~\eqref{eq:cut}
 with respect to the flow parameter $s$, we obtain the operator flow equation
@@ -109,11 +109,12 @@ approach would ultimately amount to a diagonalization of the many-body
 Hamiltonian. To make matters worse, implementing the flow means we
 would deal with the Hamiltonian's full spectrum rather than just some
 extremal eigenvalues that can be extracted efficiently in
-state-of-the-art, large-scale Lanczos approaches like the 
-\cite{navratil2000,barrett2013}.
+state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
+\cite{golubvaloan1996,navratil2000,barrett2013}.
 
 \subsection{Simple demonstration of the SRG method}
-Let us study a simple $2\times 2$ matrix and use Jacobi's rotation method \cite{golubvanloan1996} to find its eigenvalues. 
+In order to get a better understanding of the SRG method, let us first consider  
+a simple $2\times 2$ matrix and use Jacobi's rotation method to find its eigenvalues. 
 We will thereafter link the flow equations
 with the results obtained with the simple Jacobi method, see for example Ref.~\cite{golubvanloan1996}.
 
@@ -129,7 +130,7 @@ $\mathbf{U}$
 \]
 with $c = \cos \gamma$ and $s = \sin \gamma$. We have then that  $H' = UHU^T$ is diagonal. 
 
-To have non-zero nondiagonal matrix $H'$ we need to solve
+To transform the matrix into one with zero  nondiagonal matrix $H'$ we need to solve
 \[ 
 (H_{22} - H_{11})cs + H_{12}(c^2 - s^2) = 0, 
 \]
@@ -157,7 +158,7 @@ H'_{k=1} = \begin{bmatrix} \lambda_2 & 0 \\ 0 & \lambda_1 \end{bmatrix}.
 We switch now to the SRG method and 
 let $H(s) = T + V(s)$, where $T= \diag(E_1,E_2)$ is diagonal. We want to solve the ordinary differential equations (ODEs) 
 for $U(s)$ using the flow parameter $s$. 
-We have not
+We are searching for a transformation 
 \[ 
 H(s) = U(s)H(0)U(s)^T, 
 \]
@@ -183,32 +184,27 @@ Setting up $\eta(s)U(s)$ og $\frac{d}{ds} U(s)$ we arrive at
 \[ 
 \frac{d}{ds} \gamma(s) = a(s). 
 \]
-
-We rewrite $H(s)$ (and $T$ and $V(s)$)  via Pauli matrices
+We apply this to a simple Hamiltonian $H(s)$ (and $T$ and $V(s)$)  defined in term of Pauli matrices  as
 \[ 
-T = \mathcal{E} I + \Omega \sigma_z, \quad \mathcal{E} = \frac{E_1
-  + E_2}{2}, \; \Omega = \frac{E_1-E_2}{2}, 
+T = \mathcal{E} I + \Omega \sigma_z, \quad \mathcal{E} = \frac{E_1+ E_2}{2}, \; \Omega = \frac{E_1-E_2}{2}, 
 \]
 and
 \[ 
 V(s) = c I \omega_z(s)\sigma_z + \omega_x(s)\sigma_x, 
 \]
-with $c = (V_{11}+V_{22})/2$, $\omega_z(s) = (V_{11}-V_{22})/2$,
-$\omega_x(s) = V_12$. The quantities depend on
+with $c = (V_{11}+V_{22})/2$, $\omega_z(s) = (V_{11}-V_{22})/2$ and $\omega_x(s) = V_12$. The quantities depend on
 $s$. 
 
-We obtain
+We obtain then
 \[ \eta(s) = [T, H(s)] = 2\Omega\omega_x(s)\sigma_y, \]
 where we have used $\sigma_i\sigma_j = i\epsilon_{ijk}\sigma_k$.
 It results in
 \[ a(s) = 2\Omega \omega_x(s), \]
 and $\gamma(s)$,
 \begin{equation} \frac{d}{ds} \gamma(s) = 2\Omega\omega_x(s). \label{eq:3}\end{equation}
-
 We introduce next the  variables $\omega(s)$ and $\theta(s)$ instead of
-$\omega_x(s)$ and $\omega_y(s)$. 
-
-We obtain an ODE for $\theta(s)$ 
+$\omega_x(s)$ and $\omega_y(s)$. This allows us to write the ODE 
+for $\theta(s)$ as
 \begin{equation} 
 \frac{d}{ds} \theta(s) = -4\Omega\omega \sin(\theta(s)), \label{eq:4}
 \end{equation}
@@ -222,20 +218,17 @@ we get
   \frac{\theta(0)}{2}\right). 
 \]
 If $\Omega<0$ ($E_1-E_2<0$) we obtain  $\theta(s)\rightarrow \pi$, and if 
-$\Omega>0$ we get  $\theta(s)\rightarrow 0$. 
-
-Exponential convergence. In a compact form
+$\Omega>0$ we get  $\theta(s)\rightarrow 0$ and exponential convergence. In a more 
+compact form we have
 \begin{equation} \theta(s) \rightarrow \pi \vartheta(E_2 - E_1),
   \label{eq:5} \end{equation}
 where $\vartheta(x)$ is the  step function.
 
-Recall also that 
+If we now recall that 
 \[ \tan \theta(0) = \frac{2 V_{12}(0) }{[E_1 + V_{11}(0)]- [E_2 +
   V_{22}(0)]},
 \]
-to be linked with the Jacobi  rotation.
-
-Now comes the point: comparing the  ODE of (\ref{eq:3}) with 
+we can make the link the Jacobi rotation method. Comparing the  ODE of (\ref{eq:3}) with 
 (\ref{eq:4}), we have
 \[ \frac{d}{ds} \gamma(s) = -\frac{1}{2} \frac{d}{ds} \theta(s). \]
 The initial condition is 
@@ -246,18 +239,42 @@ Using (\ref{eq:5}) results in
 \frac{\pi}{2}\vartheta(E_2-E_1). \]
 
 From this we see that the flow equation selects the solution of (\ref{eq:0}) with
-$k=0$ and $k=-1$, depending on whether  $E_1<E_2$ or
-$E_2<E_1$.
+$k=0$ and $k=-1$, depending on whether  $E_1<E_2$ or $E_2<E_1$.
 
 The flow equation yields $H(s)$ as a continuous function of $s$ and the solution
 $H(\infty)$ results in the eigenvalues sorted the same way as
 $T = \diag(E_1,E_2)$. The shift $\pi/2$ is connected with this; if $k=0$ in 
 (\ref{eq:0}) gives the wrong sequence, we choose $k=-1$ instead!
 
+Let us now apply the above flow equations to the simple pairing model discussed in chapter 8. 
+
 \subsection{The pairing model}
+In chapter 8 we presented a simple pairing model, which for the case of four doubly degenerate single-particle states and 
+four fermions resulting in the following Hamiltonian matrix
+ \[
+  H = \begin{bmatrix}
+  2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\ -g/2 & 4\delta -g &
+  -g/2 & -g/2 & -0 & -g/2 \\ -g/2 & -g/2 & 6\delta -g & 0 & -g/2 &
+  -g/2 \\ -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\ -g/2 & 0 & -g/2
+  & -g/2 & 8\delta-g & -g/2 \\ 0 & -g/2 & -g/2 & -g/2 & -g/2 &
+  10\delta -g
+  \end{bmatrix}
+  \]
+where $g$ represents the strength of the two-body interaction and $\delta$ is a constant that defines the single-particle energies, see Eqs.~(\ref{eq:sppairing}) and 
+(\ref{eq:intpairing}) and problem \ref{problem:pairingmodel}. 
+We restate these equations here
+ \[
+  \hat{H}_0 = \xi \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p\sigma},
+  \]
+and 
+  \[
+  \hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+}.
+  \]
+The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
+
+
 
 \section{In-medium SRG and flow equations}
-
 For the IM-SRG, we follow a different route, and formulate the flow equation as well as the decoupling conditions underlying the definition of $\etaO(s)$ in the language of second quantization. This approach has been very successful in producing powerful and numerically efficient many-body schemes, chief among them the coupled cluster method discussed in chapter 8.
 
 When carried out exactly, the IM-SRG is a continuous unitary transformation in $A$-body space, and consequently, $\eta(s)$ and $\hat{H}(s)$ are $A$-body operators even if they initially have a lower rank at $s=0$. From the discussion of the previous sections, we see that every evaluation of the commutator on the right-hand side of Eq.~\eqref{eq:opflow} increases the particle rank of $\hat{H}(s)$, e.g.,
@@ -425,7 +442,6 @@ Sec.~\ref{sec:magnus}.
   \end{center}
   \caption{\label{fig:schematic}Schematic representation of the initial and final Hamiltonians, $\hat{H}(0)$ and $\hat{H}(\infty)$, in the many-body Hilbert space spanned by particle-hole excitations of the reference state.}
 \end{figure}
-
 After setting up the general IM-SRG flow equation framework in
 Sec.~\ref{sec:floweq}, we have to specify the generator $\etaO$. To
 this end, we first need to identify the off-diagonal parts of the
@@ -449,20 +465,20 @@ straightforward.
 
 The 0p0h reference state is coupled to 1p1h and 2p2h excitations by the matrix elements
 \begin{align}
-  \matrixe{\Phi}{\hat{H}(0)\nord{\aaO_{p}\aO_{h}}}{\Phi}&=f_{ph}\,,\label{eq:fod}\\
-  \matrixe{\Phi}{\hat{H}(0)\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}}{\Phi}&=\Gamma_{pp'hh'}\label{eq:Gammaod}\,,
+  \matrixe{\Phi}{\hat{H}(0)\{\aaO_{p}\aO_{h}}\}{\Phi}&=f_{ph}\,,\label{eq:fod}\\
+  \matrixe{\Phi}{\hat{H}(0)\{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}\}{\Phi}&=\Gamma_{pp'hh'}\label{eq:Gammaod}\,,
 \end{align}
 and their Hermitian conjugates. Thus, we define the off-diagonal part of the Hamiltonian as
 \begin{equation}
-  \hat{H}^{od}(s) = \sum_{ph}f_{ph}\nord{\aaO_p\aO_h} + \frac{1}{4}\sum_{pp'hh'}\Gamma_{pp'hh'}\nord{\aaO_p\aaO_{p'}\aO_{h'}\aO_h}
+  \hat{H}^{od}(s) = \sum_{ph}f_{ph}\nord{\aaO_p\aO_h} + \frac{1}{4}\sum_{pp'hh'}\Gamma_{pp'hh'}\{\aaO_p\aaO_{p'}\aO_{h'}\aO_h\}
                 +\; \text{H.c.}\label{eq:def_Hod}\,.
 \end{equation}
 During the flow, matrix elements between the reference state and higher excitations acquire non-zero values,
 \begin{equation}\label{eq:induced_od}
-  \matrixe{\Phi}{\hat{H}(s)\nord{\aaO_{p_1}\ldots\aaO_{p_A}\aO_{h_{A}}\ldots\aO_{h_1}}}{\Phi}\neq 0\,,
+  \matrixe{\Phi}{\hat{H}(s)\{\aaO_{p_1}\ldots\aaO_{p_A}\aO_{h_{A}}\ldots\aO_{h_1}}\}{\Phi}\neq 0\,,
 \end{equation}
 because $\hat{H}(s>0)$ has induced $3-,\ldots,A-$body contributions (cf.~Eq.~\eqref{eq:induced}), just as in a 
-free-space SRG evolution \cite{Bogner:2010pq,Jurgenson:2009bs,Hebeler:2012ly}. By truncating operators to 
+free-space SRG evolution \cite{bogner2010,jurgenson2009,hebeler2012}. By truncating operators to 
 two-body rank in the IM-SRG(2) (or any rank $n\leq A$ in a higher truncation), we force these (and other) 
 matrix elements to vanish, at the cost of violating unitarity. We will have to check that this violation 
 remains sufficiently small in practical calculations.
@@ -474,15 +490,22 @@ states, and therefore an eigenspace of $\hat{H}(\infty)$, with the eigenvalue gi
 matrix element. In essence, this means that the IM-SRG provides a mapping between the reference 
 state $\ket{\Phi}$ and an exact eigenstate $\ket{\Psi}$ of the nucleus. 
 
-At this point, a few remarks are in order. In a finite system, i.e., in the absence of phase transitions, 
-it is always possible to obtain a mapping between the reference state $\ket{\Phi}$ and an exact bound 
-eigenstate $\ket{\Psi}$ of $\hat{H}$ by performing a diagonalization, provided there are no symmetry or other 
-restrictions on the $A$p$A$h basis built from $\ket{\Phi}$. Thus, the IM-SRG is guaranteed to yield an 
-exact energy and wave function for the $A$-body system if the IM-SRG flow equations are not truncated. 
-Induced couplings between the 0p0h reference state and excited 3p3h,\ldots,$A$p$A$h states 
-(Eq.~\eqref{eq:induced_od}) are included in $\hat{H}^{od}(s)$, and consequently suppressed for $s\to\infty$. 
-By truncating the flow equations, we only obtain an approximation to an exact eigenvalue and eigenstate, 
-of course. Similarly, we note that eigenvalue spectrum of $\hat{H}(s)$ is variational only if the IM-SRG equations are solved without truncation, since the unitary equivalence with $\hat{H}$ is otherwise only approximate. 
+At this point, a few remarks are in order. In a finite system, i.e.,
+in the absence of phase transitions, it is always possible to obtain a
+mapping between the reference state $\ket{\Phi}$ and an exact bound
+eigenstate $\ket{\Psi}$ of $\hat{H}$ by performing a diagonalization,
+provided there are no symmetry or other restrictions on the $A$p$A$h
+basis built from $\ket{\Phi}$. Thus, the IM-SRG is guaranteed to yield
+an exact energy and wave function for the $A$-body system if the
+IM-SRG flow equations are not truncated.  Induced couplings between
+the 0p0h reference state and excited 3p3h,\ldots,$A$p$A$h states
+(Eq.~\eqref{eq:induced_od}) are included in $\hat{H}^{od}(s)$, and
+consequently suppressed for $s\to\infty$.  By truncating the flow
+equations, we only obtain an approximation to an exact eigenvalue and
+eigenstate, of course. Similarly, we note that eigenvalue spectrum of
+$\hat{H}(s)$ is variational only if the IM-SRG equations are solved
+without truncation, since the unitary equivalence with $\hat{H}$ is
+otherwise only approximate.
 
 In general, we cannot guarantee that the IM-SRG will necessarily extract the lowest eigenstate 
 of $\hat{H}$. As in other methods which make use of a reference state, we expect to be able to reach 
@@ -504,19 +527,19 @@ and (approximate) ground and excited-state energies during the flow, because we 
 three- and higher-body operators that feed back into the flow of the zero-, one-, and two-body operators that
 we do track in the IM-SRG(2) scheme. To avoid these complications in our ground-state calculations, we 
 restrict ourselves to decoupling the 0p0h block, similar to the CC method (see, e.g., 
-\cite{Shavitt:2009}). We refer to this as the \emph{minimal decoupling} scheme. 
+\cite{shavittbartlett2009}). We refer to this as the \emph{minimal decoupling} scheme. 
 
 
 \subsection{\label{sec:white}White Generators}
-Starting from the off-diagonal Hamiltonian, Eq.~\eqref{eq:def_Hod}, we can define several classes of generators which will suppress the matrix elements of $\hat{H}^{od}$ as we integrate the IM-SRG flow equations for $s\to\infty$. Our standard choice is motivated by the work of White on canonical transformation theory in quantum chemistry \cite{White:2002fk,Tsukiyama:2011uq}:
+Starting from the off-diagonal Hamiltonian, Eq.~\eqref{eq:def_Hod}, we can define several classes of generators which will suppress the matrix elements of $\hat{H}^{od}$ as we integrate the IM-SRG flow equations for $s\to\infty$. Our standard choice is motivated by the work of White on canonical transformation theory in quantum chemistry \cite{white2002,tsukiyama2011}:
 \begin{align}
   \etaO^\text{IA/B}(s)
-  &\equiv\sum_{ph}\frac{f_{ph}(s)}{\Delta^\text{A/B}_{ph}(s)}\nord{\aaO_{p}\aO_{h}\!}
-  +\sum_{pp'hh'}\frac{\Gamma_{pp'hh'}(s)}{\Delta^\text{A/B}_{pp'hh'}(s)}\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}-\;\text{H.c.}\,.\label{eq:eta_white}
+  &\equiv\sum_{ph}\frac{f_{ph}(s)}{\Delta^\text{A/B}_{ph}(s)}{\aaO_{p}\aO_{h}\!}
+  +\sum_{pp'hh'}\frac{\Gamma_{pp'hh'}(s)}{\Delta^\text{A/B}_{pp'hh'}(s)}{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}-\;\text{H.c.}\,.\label{eq:eta_white}
 \end{align}
 The generalization to three-body or higher rank is obvious. Note that the energy denominators must cause a sign change under transposition in Eq.~\eqref{eq:eta_white} to ensure the anti-Hermiticity of $\etaO(s)$, because $f$ and $\Gamma$ are Hermitian.
 
-The superscripts in \eqref{eq:eta_white} distinguish two different choices for the energy denominators which we will be studying in the following. They correspond to the Epstein-Nesbet and M{\o}ller-Plesset partitionings used in MBPT (see, e.g., \cite{Shavitt:2009}). A straightforward application of White's construction described in Ref.~\cite{White:2002fk} leads to the Epstein-Nesbet case, with energy denominators which are defined in terms of the diagonal matrix elements of the Hamiltonian in our chosen $n$p$n$h-representation (Fig.~\ref{fig:schematic}):
+The superscripts in \eqref{eq:eta_white} distinguish two different choices for the energy denominators which we will be studying in the following. They correspond to the Epstein-Nesbet and M{\o}ller-Plesset partitionings used in MBPT (see, e.g., \cite{shavittbartlett2009}). A straightforward application of White's construction described in Ref.~\cite{white200} leads to the Epstein-Nesbet case, with energy denominators which are defined in terms of the diagonal matrix elements of the Hamiltonian in our chosen $n$p$n$h-representation (Fig.~\ref{fig:schematic}):
 \begin{align}
   \Delta^\text{A}_{ph} &\equiv \matrixe{ph}{\hat{H}}{ph} - \matrixe{\Phi}{\hat{H}}{\Phi}
                   = f_p - f_h + \Gamma_{phph} = - \Delta^\text{A}_{hp} \,,\label{eq:eden1b_en}\\  
@@ -533,39 +556,83 @@ In the M{\o}ller-Plesset case, on the other hand,
   \Delta^\text{B}_{ph}     &\equiv f_p - f_h \equiv - \Delta^\text{B}_{hp} \,, \label{eq:eden1b_mp}\\  
   \Delta^\text{B}_{pp'hh'} &\equiv f_p + f_{p'} - f_h - f_{h'} \equiv - \Delta^\text{B}_{hh'pp'}\,.\label{eq:eden2b_mp}
 \end{align}
-By expanding the Epstein-Nesbet denominators in Eq.~\eqref{eq:eta_white} in terms of geometric series, we see that $\eta^\text{A}$ corresponds to a generator with M{\o}ller-Plesset denominators where certain MBPT diagrams have been summed to all orders.
+By expanding the Epstein-Nesbet denominators in
+Eq.~\eqref{eq:eta_white} in terms of geometric series, we see that
+$\eta^\text{A}$ corresponds to a generator with M{\o}ller-Plesset
+denominators where certain MBPT diagrams have been summed to all
+orders.
 
-If we want to work with the $J$-scheme flow equations \eqref{eq:imsrg2_j0b}--\eqref{eq:imsrg2_j2b}, it is not unambiguously clear how to treat the two-body matrix elements in the Epstein-Nesbet denominators \eqref{eq:eden1b_en}, \eqref{eq:eden2b_en} in the angular momentum coupling process. As a pragmatic solution to this issue, we use the monopole matrix elements
-\begin{equation}
-  \Gamma^{(0)}_{abcd}\equiv\frac{\sum_J(2J+1)\Gamma^J_{abcd}}{\sum_{J}(2J+1)}
-\end{equation}
-in Eqs.~\eqref{eq:eden1b_en}--\eqref{eq:def_A}. 
 
-The big advantage of White-type generators in practical calculations lies in the fact that they suppress \emph{all} off-diagonal matrix elements with a decay scale identical (or close to) 1 (see Sec.~\ref{sec:scales}). Thus, the flow is \emph{not} a proper RG flow that suppresses matrix elements between states with large energy differences first. This is inconsequential if we are only interested in $\hat{H}(\infty)$, because all unitary transformations which suppress $\hat{H}^{od}$ must must be equivalent up to differences caused by truncating the IM-SRG flow equations.
+The big advantage of White-type generators in practical calculations
+lies in the fact that they suppress \emph{all} off-diagonal matrix
+elements with a decay scale identical (or close to) 1 (see
+Sec.~\ref{sec:scales}). Thus, the flow is \emph{not} a proper RG flow
+that suppresses matrix elements between states with large energy
+differences first. This is inconsequential if we are only interested
+in $\hat{H}(\infty)$, because all unitary transformations which
+suppress $\hat{H}^{od}$ must must be equivalent up to differences
+caused by truncating the IM-SRG flow equations.
 
-The use of $\etaO^\text{A/B}$ has additional benefits in numerical applications: First, the effort for their construction scales as $\mathcal{O}(N_h^2N_p^2)$, where $N_h\ll N$ and $N_p\sim N$ are the number of hole and particle states in a single-particle basis of dimension $N$. Second, because the generator's matrix elements are given by ratios of energies, $f$ and $\Gamma$ only contribute linearly to the magnitude of the right-hand side of the IM-SRG flow equations \eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. The flow equations are significantly less stiff than those for the canonical Wegner generator (Sec.~\ref{sec:generators_Wegner}), where third powers of $f$ and $\Gamma$ appear (see below). This greatly reduces the number of integration steps which are required to solve the IM-SRG flow equations. However, the White generators also have an obvious drawback: It is clear from Eq.~\eqref{eq:eta_white} that we might encounter problems with small energy denominators \cite{Tsukiyama:2012fk,Hergert:2013ij}. Fortunately, this is not the case if we deal with closed-shell nuclei, as in the present work. 
-
-We conclude our discussion by remarking that the White-type generators $\etaO^\text{A/B}$ provide a manifest link between the IM-SRG and MBPT, which will be explored further in Section \ref{sec:mbpt}. 
+The use of $\etaO^\text{A/B}$ has additional benefits in numerical
+applications: First, the effort for their construction scales as
+$\mathcal{O}(N_h^2N_p^2)$, where $N_h\ll N$ and $N_p\sim N$ are the
+number of hole and particle states in a single-particle basis of
+dimension $N$. Second, because the generator's matrix elements are
+given by ratios of energies, $f$ and $\Gamma$ only contribute linearly
+to the magnitude of the right-hand side of the IM-SRG flow equations
+\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. The flow equations are
+significantly less stiff than those for the canonical Wegner generator
+(Sec.~\ref{sec:generators_Wegner}), where third powers of $f$ and
+$\Gamma$ appear (see below). This greatly reduces the number of
+integration steps which are required to solve the IM-SRG flow
+equations. However, the White generators also have an obvious
+drawback: It is clear from Eq.~\eqref{eq:eta_white} that we might
+encounter problems with small energy denominators
+\cite{tsukiyama2012,hergert2013}. Fortunately, this is not the case if
+we deal with closed-shell nuclei, as in the present work.
 
 \subsection{\label{sec:generators_ImTime}Imaginary-Time Generators}
-A second class of generators which are used in our calculations are inspired by imaginary-time evolution techniques that are frequently used in Quantum Monte Carlo methods, for instance (see, e.g., \cite{Carlson:2015lq} and references therein). Using the off-diagonal Hamiltonian, Eq.~\eqref{eq:def_Hod}, we define
+A second class of generators which are used in our calculations are
+inspired by imaginary-time evolution techniques that are frequently
+used in Quantum Monte Carlo methods, for instance (see, e.g.,
+\cite{carlson2015} and references therein). Using the off-diagonal
+Hamiltonian, Eq.~\eqref{eq:def_Hod}, we define
 \begin{align}
   \etaO^\text{IIA/B}(s)
   &\equiv\sum_{ph} \mathrm{sgn}\!\left(\Delta^\text{A/B}_{ph}(s)\right)f_{ph}(s)\nord{\aaO_{p}\aO_{h}\!}\notag\\
   &\hphantom{=}
    +\sum_{pp'hh'}\mathrm{sgn}\!\left(\Delta^\text{A/B}_{pp'hh'}(s)\right)\Gamma_{pp'hh'}(s)\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}-\text{H.c.}\,,\label{eq:eta_imtime}
 \end{align}
-where $\Delta^\text{A/B}$ are the Epstein-Nesbet and M{\o}ller-Plesset energy denominators defined in Eqs.~\eqref{eq:eden1b_en}--\eqref{eq:eden2b_mp}. As we will see in Sec.~\ref{sec:scales}, the sign functions are necessary to ensure that off-diagonal matrix elements are suppressed instead of enhanced during the flow. The decay scale for these matrix elements is approximately given by the linear energy difference between the reference state and 1p1h or 2p2h excitations, respectively, which can be expressed via $\Delta^\text{A/B}$. Note that this implies that $\etaO^\text{IIA/B}$ generates a proper RG flow.
+where $\Delta^\text{A/B}$ are the Epstein-Nesbet and M{\o}ller-Plesset
+energy denominators defined in
+Eqs.~\eqref{eq:eden1b_en}--\eqref{eq:eden2b_mp}. As we will see in
+Sec.~\ref{sec:scales}, the sign functions are necessary to ensure that
+off-diagonal matrix elements are suppressed instead of enhanced during
+the flow. The decay scale for these matrix elements is approximately
+given by the linear energy difference between the reference state and
+1p1h or 2p2h excitations, respectively, which can be expressed via
+$\Delta^\text{A/B}$. Note that this implies that $\etaO^\text{IIA/B}$
+generates a proper RG flow.
 
-For the imaginary-time generator, the IM-SRG(2) flow equations are quadratic in the Hamiltonian. While this leads to a mild increase in the stiffness compared to the use of White generators, the flow is not susceptible to small or vanishing energy denominators. Combined with the low $\mathcal{O}(N_h^2N_p^2)$ effort for its construction, the imaginary-time generator is a robust numerical fallback option in cases where singular White generators stall the IM-SRG flow.
+For the imaginary-time generator, the IM-SRG(2) flow equations are
+quadratic in the Hamiltonian. While this leads to a mild increase in
+the stiffness compared to the use of White generators, the flow is not
+susceptible to small or vanishing energy denominators. Combined with
+the low $\mathcal{O}(N_h^2N_p^2)$ effort for its construction, the
+imaginary-time generator is a robust numerical fallback option in
+cases where singular White generators stall the IM-SRG flow.
 
 
 \subsection{\label{sec:generators_Wegner}Wegner Generators}
-In his initial work on flow equations and the SRG \cite{Wegner:1994dk}, Wegner proposed the canonical generator 
+In his initial work on flow equations and the SRG \cite{wegner1994}, Wegner proposed the canonical generator 
 \begin{equation}\label{eq:eta_wegner}
   \etaO^\text{III}(s) = \comm{\hat{H}^d(s)}{\hat{H}^{od}(s)}\,.
 \end{equation}
-Using the definition of the off-diagonal Hamiltonian, Eq.~\eqref{eq:def_Hod}, and the commutators from Appendix \ref{app:commutators}, it is straightforward to derive the individual one-body, two-body, etc. matrix elements of $\etaO(s)$. Keeping up to two-body operators, just as in the IM-SRG(2) flow equations, we obtain
+Using the definition of the off-diagonal Hamiltonian,
+Eq.~\eqref{eq:def_Hod}, and the commutators from Appendix
+\ref{app:commutators}, it is straightforward to derive the individual
+one-body, two-body, etc. matrix elements of $\etaO(s)$. Keeping up to
+two-body operators, just as in the IM-SRG(2) flow equations, we obtain
 \begin{align}
   \eta_{12} &= 
   \sum_{a}(1-P_{12})f^d_{1a}f^{od}_{a2} +\sum_{ab}(n_a-n_b)(f^d_{ab}\Gamma^{od}_{b1a2}-f^{od}_{ab}\Gamma^d_{b1a2}) \notag\\ 
@@ -581,9 +648,20 @@ Using the definition of the off-diagonal Hamiltonian, Eq.~\eqref{eq:def_Hod}, an
   &\quad-\sum_{ab}(n_a-n_b) (1-P_{12})(1-P_{34})\Gamma^d_{b2a4}\Gamma^{od}_{a1b3}
     \label{eq:eta_wegner_m2b}\,.
 \end{align}
-Structurally, Eqs.~\eqref{eq:eta_wegner_m1b} and \eqref{eq:eta_wegner_m2b} are identical to the flow equations except for signs stemming from the overall anti-Hermiticity of the generator. The $J$-scheme expressions for $\etaO^\text{III}(s)$ are easily obtained from Eqs.~\eqref{eq:imsrg2_j1b} and \eqref{eq:imsrg2_j2b}.
+Structurally, Eqs.~\eqref{eq:eta_wegner_m1b} and
+\eqref{eq:eta_wegner_m2b} are identical to the flow equations except
+for signs stemming from the overall anti-Hermiticity of the
+generator. The $J$-scheme expressions for $\etaO^\text{III}(s)$ are
+easily obtained from Eqs.~\eqref{eq:imsrg2_j1b} and
+\eqref{eq:imsrg2_j2b}.
 
-Clearly, a fixed point of the Wegner flow is reached when $\etaO(s)$ vanishes. At finite $s$, this can occur when $\hat{H}^d(s)$ and $\hat{H}^{od}(s)$ commute due to a degeneracy in the spectrum of $\hat{H}(s)$, e.g., because of symmetries. A fixed point at $s\to\infty$ exists if $\hat{H}^{od}(s)$ vanishes as required. When we work with a truncated, finite-dimensional Hilbert space, it is easy to show that \cite{Wegner:1994dk,Kehrein:2006kx}
+Clearly, a fixed point of the Wegner flow is reached when $\etaO(s)$
+vanishes. At finite $s$, this can occur when $\hat{H}^d(s)$ and
+$\hat{H}^{od}(s)$ commute due to a degeneracy in the spectrum of
+$\hat{H}(s)$, e.g., because of symmetries. A fixed point at
+$s\to\infty$ exists if $\hat{H}^{od}(s)$ vanishes as required. When we
+work with a truncated, finite-dimensional Hilbert space, it is easy to
+show that \cite{wegner1994,kehrein2006}
 \begin{equation} \label{eq:steepest_descent}
   \totd{}{s}\mathrm{tr}\left(\hat{H}^{od}(s)\right)^2 = -2 \mathrm{tr}\left(\etaO^\dag(s)\etaO(s)\right)\leq 0
 \end{equation}
@@ -613,12 +691,15 @@ the use of White or imaginary-time generators.
 \subsection{\label{sec:scales}Decay Scales}
 Further insight into the IM-SRG flows that result from our different generator choices can
 be gained from a schematic analysis of the flow equations, analogous to prior work for
-the free-space SRG \cite{Anderson:2008hx,Bogner:2010pq}.
+the free-space SRG \cite{anderson2008,bogner2010}.
 Let us again assume that the Hamiltonian is split into a diagonal and an off-diagonal part,
 \begin{equation}
   \hat{H}(s)=\hat{H}^d(s) + \hat{H}^{od}(s)\,,
 \end{equation}
-where $\hat{H}^{od}(s)$ is supposed to be suppressed as $s\to\infty$. Further, we work in the eigenbasis of $\hat{H}^d(0)$, which is assumed to be invariant under $s$, so that at each step of the flow
+where $\hat{H}^{od}(s)$ is supposed to be suppressed as
+$s\to\infty$. Further, we work in the eigenbasis of $\hat{H}^d(0)$,
+which is assumed to be invariant under $s$, so that at each step of
+the flow
 \begin{equation}
   \hat{H}^d(s)\ket{n} = E_n(s)\ket{n}\,.
 \end{equation}
@@ -641,7 +722,12 @@ so that the flow equation reads
   =-\matrixe{i}{\hat{H}^{od}}{j}
   +\sum_k\frac{E_i+E_j-2E_k}{(E_i-E_k)(E_j-E_k)}\matrixe{i}{\hat{H}^{od}}{k}\matrixe{k}{\hat{H}^{od}}{j}\,.\label{eq:schema_white}
 \end{align}
-Let us assume that the transformation generated by $\etaO$ truly suppresses $\hat{H}^{od}$, and consider the asymptotic behavior for large flow parameters $s>s_0\gg0$. If $||H^{od}(s_0)||\ll 1$ in some suitable norm, the second term in the flow equation can be neglected compared to the first one. In this case, Eq.~\eqref{eq:schema_white} implies
+Let us assume that the transformation generated by $\etaO$ truly
+suppresses $\hat{H}^{od}$, and consider the asymptotic behavior for
+large flow parameters $s>s_0\gg0$. If $||H^{od}(s_0)||\ll 1$ in some
+suitable norm, the second term in the flow equation can be neglected
+compared to the first one. In this case, Eq.~\eqref{eq:schema_white}
+implies
 \begin{align}
   \left.\totd{E_i}{s}\right|_{s=s_0}&=2\sum_k\frac{\matrixe{i}{\hat{H}^{od}}{k}\matrixe{k}{\hat{H}^{od}}{i}}{E_i-E_k}
   \approx0\,,
@@ -654,7 +740,10 @@ Consequently, Eq.~\eqref{eq:schema_white} can be integrated, and we have
 \begin{equation}
   \matrixe{i}{\hat{H}^{od}(s)}{j} \approx \matrixe{i}{\hat{H}^{od}(s_0)}{j}\,e^{-(s-s_0)}\,,\quad s>s_0\,,
 \end{equation}
-as already mentioned in Sec.~\ref{sec:white}. If the initial $\hat{H}_{od}(0)$ is perturbative, we will observe this behavior from the very onset of the flow (see the discussion in Sec.~\ref{sec:mbpt}).
+as already mentioned in Sec.~\ref{sec:white}. If the initial
+$\hat{H}_{od}(0)$ is perturbative, we will observe this behavior from
+the very onset of the flow (see the discussion in
+Sec.~\ref{sec:mbpt}).
 
 For the imaginary-time generator, we have
 \begin{equation}
@@ -668,7 +757,10 @@ and the flow equation
     +\sum_k\left(\mathrm{sgn}\!\!\left(E_i-E_k\right)+\mathrm{sgn}\!\!\left(E_j-E_k\right)\right)\matrixe{i}{\hat{H}^{od}}{k}\matrixe{k}{\hat{H}^{od}}{j}\,.
     \label{eq:schema_imtime}
 \end{align}
-Note that the sign function in the definition of $\etaO^\text{II}$ ensures that only the absolute value of the energy difference between the states $\ket{i}$ and $\ket{k}$ appears in the first term. Integration of Eq.~\eqref{eq:schema_imtime} yields
+Note that the sign function in the definition of $\etaO^\text{II}$
+ensures that only the absolute value of the energy difference between
+the states $\ket{i}$ and $\ket{k}$ appears in the first
+term. Integration of Eq.~\eqref{eq:schema_imtime} yields
 \begin{equation}
   \matrixe{i}{\hat{H}^{od}(s)}{j} \approx \matrixe{i}{\hat{H}^{od}(s_0)}{j}\,e^{-|E_i-E_j|(s-s_0)}\,, \quad s>s_0\,,
 \end{equation}
@@ -702,27 +794,46 @@ have omitted in our schematic analysis, and the necessary truncations
 in the IM-SRG flow equations.
 
 
-\section{In-medium SRG studies of infinite matter}
+\section{In-medium SRG studies of the pairing model and infinite neutron matter}
+
+\section{Conclusions and perspectives}
+
 
 \begin{acknowledgement}
-
+This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University).
 \end{acknowledgement}
 
+\begin{thebibliography}{99}
+\bibitem{wegner1994}
+\bibitem{glazek1993}
+\bibitem{bogner2007}
+\bibitem{bogner2010}
+\bibitem{morris2015}
+\bibitem{bogner2016}
+\bibitem{navratil2000}
+\bibitem{barrett2013}
+\bibitem{golubvanloan1996}
+\bibitem{weinberg1996}
+\bibitem{tsukiyama2011}
+\bibitem{tsukiyama2012}
+\bibitem{hergert2013}
+\bibitem{day1967}
+\bibitem{brandow1967}
+\bibitem{fetter2003}
+\bibitem{shavittbartlett2009}
+\bibitem{hagen2014}
+\bibitem{dickhoff2004}
+\bibitem{barbieri2007}
+\bibitem{cipollone2013}
+\bibitem{white2002}
+\bibitem{yanai2006}
+\bibitem{anderson2010}
+\bibitem{bogner2010}
+\bibitem{blanes2009}
+\bibitem{morris2015}
+\bibitem{jurgenson2010}
+\bibitem{hebeler2012}
 
 
+\end{thebibliography}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
