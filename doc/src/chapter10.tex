@@ -84,7 +84,7 @@ perspectives and research directions.
 
 \section{Similarity Renormalization Group method}
 
-We give here a brief overview of the SRG method applied to two simple systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8. 
+We give here a brief overview of the SRG method applied to two simple systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8, the latter as a numerical case study. 
 
 Taking the derivative of Eq.~\eqref{eq:cut}
 with respect to the flow parameter $s$, we obtain the operator flow equation
@@ -110,7 +110,7 @@ Hamiltonian. To make matters worse, implementing the flow means we
 would deal with the Hamiltonian's full spectrum rather than just some
 extremal eigenvalues that can be extracted efficiently in
 state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
-\cite{golubvaloan1996,navratil2000,barrett2013}.
+\cite{golubvaloan1996}.
 
 \subsection{Simple demonstration of the SRG method}
 In order to get a better understanding of the SRG method, let us first consider  
@@ -250,7 +250,7 @@ Let us now apply the above flow equations to the simple pairing model discussed 
 
 \subsection{The pairing model}
 In chapter 8 we presented a simple pairing model, which for the case of four doubly degenerate single-particle states and 
-four fermions resulting in the following Hamiltonian matrix
+four fermions resulted in the following Hamiltonian matrix
  \[
   H = \begin{bmatrix}
   2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\ -g/2 & 4\delta -g &
@@ -261,15 +261,18 @@ four fermions resulting in the following Hamiltonian matrix
   \end{bmatrix}
   \]
 where $g$ represents the strength of the two-body interaction and $\delta$ is a constant that defines the single-particle energies, see Eqs.~(\ref{eq:sppairing}) and 
-(\ref{eq:intpairing}) and problem \ref{problem:pairingmodel}. 
-We restate these equations here
+(\ref{eq:intpairing}) and problem \ref{problem:pairingmodel}.  The above Hamiltonian matrix represents the case where no pairs of fermions are broken.
+
+We restate the equations for the various parts of the Hamiltonian here, namely
  \[
   \hat{H}_0 = \xi \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p\sigma},
   \]
+for the one-body part
 and 
   \[
-  \hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+}.
+  \hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+},
   \]
+for the two-body interaction. The parameters $\xi$ and $g$ are constants.
 The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
 
 

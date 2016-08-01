@@ -2732,13 +2732,19 @@ In Fig. \ref{fig.cimc_conv} we show how the computed energy depends on the numbe
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Chapter9-figures/eos_MInn_cimc.eps}
+		\includegraphics[scale=0.5]{Chapter9-figures/cimcccd.pdf}
 	\end{center}
-	\caption{Equation of state of neutron matter modeled as a periodic cell containing A=66 neutrons. }
+	\caption{Equation of state of neutron matter modeled as a periodic cell containing A=66 neutrons using the CIMC method and coupled cluster theory with doubes correlations. Single-particle states up to $N_{\mathrm{max}}=36$ have been included.}
 	\label{fig.cimc_eos}
 \end{figure}
 
-In Fig. \ref{fig.cimc_eos} the energy computed by CIMC shown for the same neutron matter model as a function of the density (the so called "Equation of State" of neutron matter). Comparison of the EoS of PNM  computed with different methods using a Minnesota potential will be compared in a later section. 
+In Fig. \ref{fig.cimc_eos} the energy computed by CIMC shown for the same neutron matter model as a function of the density (the so called "Equation of State" of neutron matter) is compared with the coupled theory results with doubles (CCD) only discussed in the previous chapter. 
+In this calculation single-particle states up to $N_{\mathrm{max}}=36$ have been used. The CIMCC and CCD results are converged to the fifth digit as function of 
+$N_{\mathrm{max}}$. The agreement between the two methods is at the level of the third digit after the decimal point for neutron matter with the 
+Minnesota interaction. This is a striking agreement between such different many-body methods, in particular for larger densities where correlations and contributions from states above and below the Fermi level play a larger role, as seen from the difference between the reference energy and the CIMC and CCD energies.
+Most likely, there will be larger differences between different many-body methods when proton correlations are brought in, as well as when more realistic interaction models will be used. Such results will be presented elsewhere. In the next two chapters we will add results using two further many-body methods. 
+
+\section{Conclusions and perspectives}
 
 
 \section{Problems}
@@ -2787,10 +2793,7 @@ In Fig. \ref{fig.cimc_eos} the energy computed by CIMC shown for the same neutro
 In the case of nuclear Hamiltonians spin is not a conserved quantity. Referring to the calculation of the local energy in Sec. 9.6.4, how would you modify the subroutine EL\_calc2 to take into account the non-conservation of spin?
 \end{prob}
   
-%\begin{acknowledgement}
-%If you want to include acknowledgments of assistance and the like at the end of an individual chapter please use the \verb|acknowledgement| environment -- it will automatically render Springer's preferred layout.
-%\end{acknowledgement}
-%
+
 \section*{Appendix}
 \addcontentsline{toc}{section}{Appendix}
 In this appendix we give the proof of the upper--bound property for the auxiliary hamiltonians $\mathcal{H}_{\gamma}$, defined in Sec.~\ref{subsect:CCDMC-IS}, for

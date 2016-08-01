@@ -196,46 +196,47 @@
 \BOOKMARK [2][-]{subsection.9.6.3}{Trial wave-functions from Coupled Cluster ansatz}{section.9.6}% 196
 \BOOKMARK [2][-]{subsection.9.6.4}{Propagator sampling with no time-step error}{section.9.6}% 197
 \BOOKMARK [2][-]{subsection.9.6.5}{Results}{section.9.6}% 198
-\BOOKMARK [1][-]{section.9.7}{Problems}{section*.32}% 199
-\BOOKMARK [1][-]{section*.33}{Appendix}{section*.32}% 200
-\BOOKMARK [1][-]{section*.34}{References}{section*.32}% 201
-\BOOKMARK [0][-]{section*.35}{In-medium SRG approaches to infinite nuclear matter}{}% 202
-\BOOKMARK [0][-]{section*.35}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 203
-\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.35}% 204
-\BOOKMARK [1][-]{section.10.2}{Similarity Renormalization Group method}{section*.35}% 205
-\BOOKMARK [2][-]{subsection.10.2.1}{Simple demonstration of the SRG method}{section.10.2}% 206
-\BOOKMARK [2][-]{subsection.10.2.2}{The pairing model}{section.10.2}% 207
-\BOOKMARK [1][-]{section.10.3}{In-medium SRG and flow equations}{section*.35}% 208
-\BOOKMARK [2][-]{subsection.10.3.1}{General Observables}{section.10.3}% 209
-\BOOKMARK [1][-]{section.10.4}{Choice of Generator}{section*.35}% 210
-\BOOKMARK [2][-]{subsection.10.4.1}{Decoupling}{section.10.4}% 211
-\BOOKMARK [2][-]{subsection.10.4.2}{White Generators}{section.10.4}% 212
-\BOOKMARK [2][-]{subsection.10.4.3}{Imaginary-Time Generators}{section.10.4}% 213
-\BOOKMARK [2][-]{subsection.10.4.4}{Wegner Generators}{section.10.4}% 214
-\BOOKMARK [2][-]{subsection.10.4.5}{Decay Scales}{section.10.4}% 215
-\BOOKMARK [1][-]{section.10.5}{In-medium SRG studies of the pairing model and infinite neutron matter}{section*.35}% 216
-\BOOKMARK [1][-]{section.10.6}{Conclusions and perspectives}{section*.35}% 217
-\BOOKMARK [1][-]{section*.36}{References}{section*.35}% 218
-\BOOKMARK [0][-]{section*.37}{Self-consistent Green's function approaches}{}% 219
-\BOOKMARK [0][-]{section*.37}{Carlo Barbieri and Arianna Carbone}{}% 220
-\BOOKMARK [1][-]{section.11.1}{Introduction}{section*.37}% 221
-\BOOKMARK [1][-]{section.11.2}{Many-body Green's function theory}{section*.37}% 222
-\BOOKMARK [2][-]{subsection.11.2.1}{Spectral function and relation to experimental observations}{section.11.2}% 223
-\BOOKMARK [2][-]{subsection.11.2.2}{Perturbation expansion of the Green 's function}{section.11.2}% 224
-\BOOKMARK [1][-]{section.11.3}{The Algebraic Diagrammatic Construction method}{section*.37}% 225
-\BOOKMARK [2][-]{subsection.11.3.1}{The algebraic diagrammatic construction method}{section.11.3}% 226
-\BOOKMARK [2][-]{subsection.11.3.2}{Solving the Dyson equation}{section.11.3}% 227
-\BOOKMARK [2][-]{subsection.11.3.3}{A simple pairing model}{section.11.3}% 228
-\BOOKMARK [1][-]{section.11.4}{A computational project in infinite matter}{section*.37}% 229
-\BOOKMARK [1][-]{section.11.5}{Self-consistenft GF at finite temperatures in the thermodynamic limit}{section*.37}% 230
-\BOOKMARK [2][-]{subsection.11.5.1}{Numerical implementation at finite temperature}{section.11.5}% 231
-\BOOKMARK [2][-]{subsection.11.5.2}{Calculations of neutron matter at finite temperatures.}{section.11.5}% 232
-\BOOKMARK [2][-]{subsection.11.5.3}{Numerical calculation when including three-body forces.}{section.11.5}% 233
-\BOOKMARK [1][-]{section.11.6}{Concluding remarks}{section*.37}% 234
-\BOOKMARK [1][-]{section*.38}{Appendix 1: Chiral NNLO three-nucleon forces}{section*.37}% 235
-\BOOKMARK [1][-]{section*.39}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{section*.37}% 236
-\BOOKMARK [1][-]{section*.40}{References}{section*.37}% 237
-\BOOKMARK [0][-]{section*.41}{Concluding remarks and perspectives}{}% 238
-\BOOKMARK [0][-]{section*.41}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 239
-\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.41}% 240
-\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.41}% 241
+\BOOKMARK [1][-]{section.9.7}{Conclusions and perspectives}{section*.32}% 199
+\BOOKMARK [1][-]{section.9.8}{Problems}{section*.32}% 200
+\BOOKMARK [1][-]{section*.33}{Appendix}{section*.32}% 201
+\BOOKMARK [1][-]{section*.34}{References}{section*.32}% 202
+\BOOKMARK [0][-]{section*.35}{In-medium SRG approaches to infinite nuclear matter}{}% 203
+\BOOKMARK [0][-]{section*.35}{Scott K. Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{}% 204
+\BOOKMARK [1][-]{section.10.1}{Introduction}{section*.35}% 205
+\BOOKMARK [1][-]{section.10.2}{Similarity Renormalization Group method}{section*.35}% 206
+\BOOKMARK [2][-]{subsection.10.2.1}{Simple demonstration of the SRG method}{section.10.2}% 207
+\BOOKMARK [2][-]{subsection.10.2.2}{The pairing model}{section.10.2}% 208
+\BOOKMARK [1][-]{section.10.3}{In-medium SRG and flow equations}{section*.35}% 209
+\BOOKMARK [2][-]{subsection.10.3.1}{General Observables}{section.10.3}% 210
+\BOOKMARK [1][-]{section.10.4}{Choice of Generator}{section*.35}% 211
+\BOOKMARK [2][-]{subsection.10.4.1}{Decoupling}{section.10.4}% 212
+\BOOKMARK [2][-]{subsection.10.4.2}{White Generators}{section.10.4}% 213
+\BOOKMARK [2][-]{subsection.10.4.3}{Imaginary-Time Generators}{section.10.4}% 214
+\BOOKMARK [2][-]{subsection.10.4.4}{Wegner Generators}{section.10.4}% 215
+\BOOKMARK [2][-]{subsection.10.4.5}{Decay Scales}{section.10.4}% 216
+\BOOKMARK [1][-]{section.10.5}{In-medium SRG studies of the pairing model and infinite neutron matter}{section*.35}% 217
+\BOOKMARK [1][-]{section.10.6}{Conclusions and perspectives}{section*.35}% 218
+\BOOKMARK [1][-]{section*.36}{References}{section*.35}% 219
+\BOOKMARK [0][-]{section*.37}{Self-consistent Green's function approaches}{}% 220
+\BOOKMARK [0][-]{section*.37}{Carlo Barbieri and Arianna Carbone}{}% 221
+\BOOKMARK [1][-]{section.11.1}{Introduction}{section*.37}% 222
+\BOOKMARK [1][-]{section.11.2}{Many-body Green's function theory}{section*.37}% 223
+\BOOKMARK [2][-]{subsection.11.2.1}{Spectral function and relation to experimental observations}{section.11.2}% 224
+\BOOKMARK [2][-]{subsection.11.2.2}{Perturbation expansion of the Green 's function}{section.11.2}% 225
+\BOOKMARK [1][-]{section.11.3}{The Algebraic Diagrammatic Construction method}{section*.37}% 226
+\BOOKMARK [2][-]{subsection.11.3.1}{The algebraic diagrammatic construction method}{section.11.3}% 227
+\BOOKMARK [2][-]{subsection.11.3.2}{Solving the Dyson equation}{section.11.3}% 228
+\BOOKMARK [2][-]{subsection.11.3.3}{A simple pairing model}{section.11.3}% 229
+\BOOKMARK [1][-]{section.11.4}{A computational project in infinite matter}{section*.37}% 230
+\BOOKMARK [1][-]{section.11.5}{Self-consistenft GF at finite temperatures in the thermodynamic limit}{section*.37}% 231
+\BOOKMARK [2][-]{subsection.11.5.1}{Numerical implementation at finite temperature}{section.11.5}% 232
+\BOOKMARK [2][-]{subsection.11.5.2}{Calculations of neutron matter at finite temperatures.}{section.11.5}% 233
+\BOOKMARK [2][-]{subsection.11.5.3}{Numerical calculation when including three-body forces.}{section.11.5}% 234
+\BOOKMARK [1][-]{section.11.6}{Concluding remarks}{section*.37}% 235
+\BOOKMARK [1][-]{section*.38}{Appendix 1: Chiral NNLO three-nucleon forces}{section*.37}% 236
+\BOOKMARK [1][-]{section*.39}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{section*.37}% 237
+\BOOKMARK [1][-]{section*.40}{References}{section*.37}% 238
+\BOOKMARK [0][-]{section*.41}{Concluding remarks and perspectives}{}% 239
+\BOOKMARK [0][-]{section*.41}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{}% 240
+\BOOKMARK [1][-]{section.12.1}{Concluding remarks}{section*.41}% 241
+\BOOKMARK [1][-]{section.12.2}{Perspectives}{section*.41}% 242
