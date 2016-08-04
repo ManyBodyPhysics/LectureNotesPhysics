@@ -4106,6 +4106,389 @@ double MBPT2MatrixMatrix(int numChannels)
 } // end MBPT2corr
 \end{lstlisting}
 
+\subsection{High-performance computing and analysis of the MBPT program}
+The aim of this subsection is to discuss in more detail how we can make the computations discussed in connection with equations 
+Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient using physical constraints, algorithm improvements, and parallel processing. For pedagocical reasons, we will use the MBPT parts of the program due to their simplicity while still containing the important elements of a larger, more complicated calculation. 
+The codes can be found at the github link 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
+We start by discussing the basic structure of these codes by looking at the MBPT2 functions in MBPTfunctions.cpp.
+All of the functions with MBPT2 in their name calculate Eq.~(\ref{eq:bruteforceMBPT}), but each iteration utilizes more techniques to minimize its runtime.
+
+The first function is the most simple way to calculate the sum over $ijab$ with four nested loops. When all hole states are indexed below all particle states, the loops over $ab$ can be restricted above the number of holes while the loops over $ij$ can be restricted under the number of hole states. This function scales as $h^2p^2$, where $h$ is the number of hole states and $p$ is the number of particle states.
+
+\lstset{language=c++}
+\begin{lstlisting}
+  void MBPT2_0(const Input_Parameters &Parameters, const Model_Space &Space)
+  {
+    double energy0;
+    double energy = 0.0;
+    for(int i = 0; i < Space.indhol; ++i){
+      for(int j = 0; j < Space.indhol; ++j){
+        if(i == j){ continue; }
+        for(int a = Space.indhol; a < Space.indtot; ++a){
+	  for(int b = Space.indhol; b < Space.indtot; ++b){
+	    if(a == b){ continue; }
+	    energy0 = V_Minnesota(Space, i, j, a, b);
+	    energy0 *= energy0;
+	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	    energy += energy0;
+	  }
+        }
+      }
+    }
+    energy *= 0.25;
+  }
+\end{lstlisting}
+
+The second function improves upon the first by splitting the top loop over $a$ into different processing elements so the inner loops can be computed simultaneously. At this point it's important to think about which variables will only be used on a certain thread and which will be shared. In this case, each thread has a private variable named ``energy0'' and share the ``energy'' variable, which is subject to the specified reduction operation at the end of each parallel section. Naively, this should improve the calculation time by a factor equal to the number of processing threads, which in the case of these calculations is four. However, there is some overhead processing that occurs to split and recombine the threads which slows the overall time. In addition, because each team of threads can only proceed when the slowest member finishes, there is overhead in unbalanced threads and in optimizing their order. Fortunately, the nested loops over $bij$ are all equivalent, so each thread is balanced and declaring ``schedule(static)'' tells the thread scheduler not to spend time optimizing them.
+
+\begin{lstlisting}
+  void MBPT2_1(const Input_Parameters &Parameters, const Model_Space &Space)
+  {
+    double energy = 0.0;
+    double energy0;
+    #pragma omp parallel private(energy0)
+    {
+      #pragma omp for schedule(static) reduction(+:energy)
+      for(int i = 0; i < Space.indhol; ++i){
+        for(int j = 0; j < Space.indhol; ++j){
+	  if(i == j){ continue; }
+	  for(int a = Space.indhol; a < Space.indtot; ++a){
+	    for(int b = Space.indhol; b < Space.indtot; ++b){
+	      if(a == b){ continue; }
+	      energy0 = V_Minnesota(Space, i, j, a, b);
+	      energy0 *= energy0;
+	      energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	      energy += energy0;
+	    }
+	  }
+        }
+      }
+    }
+    energy *= 0.25;
+  }
+\end{lstlisting}
+
+The rest of the functions begin by exploiting the symmetries of the interaction to split the single-particle states into channels. This essentially removes all of the zeros that break the symmetry. The function that sets up these channels uses an index function that maps the summed quantum numbers of two states onto a unique channel index. Then, because the MBPT term uses only pairs of holes and pairs of particles, the function constructs lists of these indicies, ``hhvec'' and ``ppvec''. Now, instead of four nested loops over all holes and particles, the sum is obtained by looping over hhvec and ppvec inside each channel.
+
+\begin{lstlisting}
+  void MBPT2_2(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
+  {
+    double energy = 0.0;
+    double energy0;
+    int nhh, npp, i, j, a, b;
+    for(int chan = 0; chan < Chan.size; ++chan){
+      nhh = Chan.nhh[chan];
+      npp = Chan.npp[chan];
+      if(nhh*npp == 0){ continue; }
+      
+      for(int hh = 0; hh < nhh; ++hh){
+        i = Chan.hhvec[chan][2*hh];
+        j = Chan.hhvec[chan][2*hh + 1];
+        for(int pp = 0; pp < npp; ++pp){
+	  a = Chan.ppvec[chan][2*pp];
+	  b = Chan.ppvec[chan][2*pp + 1];
+	  energy0 = V_Minnesota(Space, i, j, a, b);
+	  energy0 *= energy0;
+	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	  energy += energy0;
+        }
+      }
+    }
+    energy *= 0.25;
+  }
+\end{lstlisting}
+
+The next function is exactly like the last except that it is parallelized like the improvement from the first to the second function. However, there are some obvious differences. Because the sizes of hhvec and ppvec for each channel can be wildly different, splitting the loop over channels into a team of threads could be massively unbalanced. An easy way to balance the threads to use a static scheduler is to parallelize the loops over ppvec inside each channel because each nested loop over ''hhvec'' is equivalent.
+
+\begin{lstlisting}
+  void MBPT2_3(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
+  {
+    double energy = 0.0;
+    double energy0;
+    int nhh, npp, i, j, a, b;
+    for(int chan = 0; chan < Chan.size; ++chan){
+      nhh = Chan.nhh[chan];
+      npp = Chan.npp[chan];
+      if(nhh*npp == 0){ continue; }
+      
+      #pragma omp parallel private(i, j, a, b, energy0)
+      {
+        #pragma omp for schedule(static) reduction(+:energy)
+        for(int hh = 0; hh < nhh; ++hh){
+	  i = Chan.hhvec[chan][2*hh];
+	  j = Chan.hhvec[chan][2*hh + 1];
+	  for(int pp = 0; pp < npp; ++pp){
+	    a = Chan.ppvec[chan][2*pp];
+	    b = Chan.ppvec[chan][2*pp + 1];
+	    energy0 = V_Minnesota(Space, i, j, a, b);
+	    energy0 *= energy0;
+	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	    energy += energy0;
+	  }
+        }
+      }
+    }
+    energy *= 0.25;
+  }
+\end{lstlisting}
+
+The last MBPT2 function uses the ``hhvec'' and ``ppvec'' lists from the channel function to make matrices of the relevant interaction matrix elements and energy denominators. Then it uses a matrix-matrix multiplication function from \cite{blas} to sum the elements together like equation Eq.~(\ref{eq:mtxmtx}). The benefit to this strategy is that this function is optimized to compute the matrix-matrix multiplication faster than an equivalent loop structure. The detriment is the memory required to hold the different matrix elements.
+
+\begin{lstlisting}
+  void MBPT2_4(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
+  {
+    double energy = 0.0;
+    double *V1, *V2, *S1;
+    char N = 'N';
+    double fac0 = 0.0;
+    double fac1 = 1.0;
+    int nhh, npp, i, j, a, b, idx;
+    double energy0;
+    for(int chan = 0; chan < Chan.size; ++chan){
+      nhh = Chan.nhh[chan];
+      npp = Chan.npp[chan];
+      if(nhh*npp == 0){ continue; }
+      
+      V1 = new double[nhh * npp];
+      V2 = new double[npp * nhh];
+      S1 = new double[nhh * nhh];
+      #pragma omp parallel shared(V1, V2) private(i, j, a, b, idx, energy0)
+      {
+        #pragma omp for schedule(static)
+        for(int hh = 0; hh < nhh; ++hh){
+	  i = Chan.hhvec[chan][2*hh];
+	  j = Chan.hhvec[chan][2*hh + 1];
+	  for(int pp = 0; pp < npp; ++pp){
+	    a = Chan.ppvec[chan][2*pp];
+	    b = Chan.ppvec[chan][2*pp + 1];
+	    idx = hh * npp + pp;
+	    energy0 = V_Minnesota(Space, i, j, a, b);
+	    V1[idx] = energy0 / (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	    idx = pp * nhh + hh;
+	    V2[idx] = energy0;
+	  }
+        }
+      } 
+      RM_dgemm(V1, V2, S1, &nhh, &nhh, &npp, &fac1, &fac0, &N, &N);
+      delete V1; delete V2;
+      
+      for(int hh = 0; hh < nhh; ++hh){ energy += S1[nhh*hh + hh]; }
+      delete S1;
+    }
+  }
+\end{lstlisting}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Chapter8-figures/MBPT2fig.pdf}
+  \caption{Computation times of the MBPT2 energy correction for different algorithms and the time to construct symmetry channels. These calculations use the Minnesota potential with a density of $\mathrm{\rho=0.08\ fm^{-3}}$ and $\mathrm{14}$ neutrons.}
+  \label{fig:fig5}
+\end{figure}
+
+Figure~(\ref{fig:fig5}) shows the computation times from these MBPT2 functions and the channel setup function for up to 28 major shells with 14 neutrons at a density 0f $0.08 fm^{-3}$. There is a clear improvement from the first to the second function and the third to the fourth, except in very small cases where the overhead from parallelization is overwhelming. It's also clear that there is an order of magnitude by first computing the symmetry channels. However, there are two aspects of these improvements that aren't clear. First, the time it takes to setup the channels begins to overcome the MBPT2 sums for large cases due to its higher scaling. Second, the matrix-matrix multiplication in the fifth function doesn't improve on the previous function because the same loops are needed to fill the matrices in the first place.
+
+To more clearly see the power of matrix-matrix multiplication and why the scaling of the channel function becomes insignificant, we move to the particle-particle term in the MBPT3 energy term which is shown in diagram 4 of fig. 8.2 and in eqn. 8.65. This sum should naively scale as $h^2p^4$ which for larger model spaces dramatically increase the computation time. The first four functions for MBPT3 mirror very closely those for MBPT2 with additional loop(s) for the additional two particle indices.
+
+\begin{lstlisting}
+  void MBPT3_0(const Input_Parameters &Parameters, const Model_Space &Space)
+  {
+    double energy0, energy1;
+    double energy = 0.0;
+    for(int i = 0; i < Space.indhol; ++i){
+      for(int j = 0; j < Space.indhol; ++j){
+        if(i == j){ continue; }
+        for(int a = Space.indhol; a < Space.indtot; ++a){
+	  for(int b = Space.indhol; b < Space.indtot; ++b){
+	    if(a == b){ continue; }
+	    energy0 = V_Minnesota(Space, i, j, a, b);
+	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	    for(int c = Space.indhol; c < Space.indtot; ++c){
+	      for(int d = Space.indhol; d < Space.indtot; ++d){
+	        if(c == d){ continue; }
+	        energy1 = V_Minnesota(Space, a, b, c, d);
+	        energy1 *= V_Minnesota(Space, c, d, i, j);
+	        energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
+	        energy += energy0 * energy1;
+	      }
+	    }
+	  }
+        }
+      }
+    }
+    energy *= 0.125;
+  }
+\end{lstlisting}
+
+\begin{lstlisting}
+  void MBPT3_1(const Input_Parameters &Parameters, const Model_Space &Space)
+  {
+    double energy = 0.0;
+    double energy0, energy1;
+    #pragma omp parallel private(energy0, energy1)
+    {
+      #pragma omp for schedule(static) reduction(+:energy)
+      for(int i = 0; i < Space.indhol; ++i){
+        for(int j = 0; j < Space.indhol; ++j){
+	  if(i == j){ continue; }
+	  for(int a = Space.indhol; a < Space.indtot; ++a){
+	    for(int b = Space.indhol; b < Space.indtot; ++b){
+	      if(a == b){ continue; }
+	      energy0 = V_Minnesota(Space, i, j, a, b);
+	      energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	      for(int c = Space.indhol; c < Space.indtot; ++c){
+	        for(int d = Space.indhol; d < Space.indtot; ++d){
+		  if(c == d){ continue; }
+		  energy1 = V_Minnesota(Space, a, b, c, d);
+		  energy1 *= V_Minnesota(Space, c, d, i, j);
+		  energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
+		  energy += energy0 * energy1;
+	        }
+	      }
+	    }
+	  }
+        }
+      }
+    }
+    energy *= 0.125;
+  }
+\end{lstlisting}
+
+\begin{lstlisting}
+  void MBPT3_2(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
+  {
+    double energy = 0.0;
+    double energy0, energy1;
+    int nhh, npp, i, j, a, b, c, d;
+    for(int chan = 0; chan < Chan.size; ++chan){
+      nhh = Chan.nhh[chan];
+      npp = Chan.npp[chan];
+      if(nhh*npp == 0){ continue; }
+      
+      for(int hh = 0; hh < nhh; ++hh){
+        i = Chan.hhvec[chan][2*hh];
+        j = Chan.hhvec[chan][2*hh + 1];
+        for(int pp0 = 0; pp0 < npp; ++pp0){
+	  a = Chan.ppvec[chan][2*pp0];
+	  b = Chan.ppvec[chan][2*pp0 + 1];
+	  energy0 = V_Minnesota(Space, i, j, a, b);
+	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	  for(int pp1 = 0; pp1 < npp; ++pp1){
+	    c = Chan.ppvec[chan][2*pp1];
+	    d = Chan.ppvec[chan][2*pp1 + 1];
+	    energy1 = V_Minnesota(Space, a, b, c, d);
+	    energy1 *= V_Minnesota(Space, c, d, i, j);
+	    energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
+	    energy += energy0 * energy1;
+	  }
+        }
+      }
+    }
+    energy *= 0.125;
+  }
+\end{lstlisting}
+
+\begin{lstlisting}
+  void MBPT3_3(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
+  {
+    double energy = 0.0;
+    double energy0, energy1;
+    int nhh, npp, i, j, a, b, c, d;
+    for(int chan = 0; chan < Chan.size; ++chan){
+      nhh = Chan.nhh[chan];
+      npp = Chan.npp[chan];
+      if(nhh*npp == 0){ continue; }
+      
+      #pragma omp parallel private(i, j, a, b, c, d, energy0, energy1)
+      {
+        #pragma omp for schedule(static) reduction(+:energy)
+        for(int hh = 0; hh < nhh; ++hh){
+	  i = Chan.hhvec[chan][2*hh];
+	  j = Chan.hhvec[chan][2*hh + 1];
+	  for(int pp0 = 0; pp0 < npp; ++pp0){
+	    a = Chan.ppvec[chan][2*pp0];
+	    b = Chan.ppvec[chan][2*pp0 + 1];
+	    energy0 = V_Minnesota(Space, i, j, a, b);
+	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	    for(int pp1 = 0; pp1 < npp; ++pp1){
+	      c = Chan.ppvec[chan][2*pp1];
+	      d = Chan.ppvec[chan][2*pp1 + 1];
+	      energy1 = V_Minnesota(Space, a, b, c, d);
+	      energy1 *= V_Minnesota(Space, c, d, i, j);
+	      energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
+	      energy += energy0 * energy1;
+	    }
+	  }
+        }
+      }
+    }
+    energy *= 0.125;
+  }
+\end{lstlisting}
+
+The last function is slightly different from its MBPT2 counterpart where loops over $ijab$ were needed to fill the matrices. In this function, the matrices are filled by looping over $ijab$ and $abcd$, respectively, instead of $ijabcd$. Then, the matrix-matrix multiplications take care of the sum over $ab$ between the two structures into an intermediate matrix. This essentially allows the function to scale as the dominant loop, $p^4$, naively improving the computation time by a factor of $h^2$.
+
+\begin{lstlisting}
+  void MBPT3_4(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
+  {
+    double energy = 0.0;
+    double *V1, *S1, *V2, *S2;
+    char N = 'N';
+    char T = 'T';
+    double fac0 = 0.0;
+    double fac1 = 1.0;
+    int nhh, npp, i, j, a, b, c, d, idx;
+    double energy0;
+    for(int chan = 0; chan < Chan.size; ++chan){
+      nhh = Chan.nhh[chan];
+      npp = Chan.npp[chan];
+      if(nhh*npp == 0){ continue; }
+      
+      V1 = new double[nhh * npp];
+      S1 = new double[nhh * npp];
+      V2 = new double[npp * npp];
+      S2 = new double[nhh * nhh];
+      #pragma omp parallel shared(V1, V2) private(i, j, a, b, c, d, idx, energy0)
+      {
+        #pragma omp for schedule(static)
+        for(int pp0 = 0; pp0 < npp; ++pp0){
+	  a = Chan.ppvec[chan][2*pp0];
+	  b = Chan.ppvec[chan][2*pp0 + 1];
+	  for(int hh = 0; hh < nhh; ++hh){
+	    i = Chan.hhvec[chan][2*hh];
+	    j = Chan.hhvec[chan][2*hh + 1];
+	    idx = hh * npp + pp0;
+	    energy0 = V_Minnesota(Space, i, j, a, b);
+	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
+	    V1[idx] = energy0;
+	  }
+	  for(int pp1 = 0; pp1 < npp; ++pp1){
+	    c = Chan.ppvec[chan][2*pp1];
+	    d = Chan.ppvec[chan][2*pp1 + 1];
+	    idx = pp0 * npp + pp1;
+	    V2[idx] = V_Minnesota(Space, a, b, c, d);
+	  }
+        }
+      }
+      
+      RM_dgemm(V1, V2, S1, &nhh, &npp, &npp, &fac1, &fac0, &N, &N);
+      RMT_dgemm(S1, V1, S2, &nhh, &nhh, &npp, &fac1, &fac0, &N, &T);
+      delete V1; delete V2; delete S1;
+      for(int hh = 0; hh < nhh; ++hh){
+        energy += S2[nhh*hh + hh];
+      }
+      delete S2;
+    }
+    energy *= 0.125;
+  }
+\end{lstlisting}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Chapter8-figures/MBPT3fig.pdf}
+  \caption{Computation times of the MBPT3 particle-particle energy correction for different algorithms and the time to construct symmetry channels. These calculations use the Minnesota potential with a density of $\mathrm{\rho=0.08\ fm^{-3}}$ and $\mathrm{14}$ neutrons. The dotted extensions for functions MBPT3_0 and MBPT3_1 are extrapolations.}
+  \label{fig:fig6}
+\end{figure}
+
+Figure\ref{fig:fig6} shows the run times from the MBPT3 functions and the channel setup function up to 28 major shells with 14 neutrons at a density 0f $0.08 fm^{-3}$. The obvious difference between MBPT3 and MBPT2 is the massive increase in computation time. For example, the largest case with the first function would take approximately eight months to compute. Because of this, the first two functions had to be extrapolated for the larger cases. Again, there is a clear improvement from the first to the second function, from the third to the fourth, and by first computing the symmetry channels. In this case, however, the scaling of the channel function is dwarfed by the $h^2p^4$ scaling of the sum. In addition, the optimized matrix-matrix multiplication improves the computation time by another order of magnitude by using an intermediate matrix. Because all many-body methods include similar sums to MBPT and also utilize interactions that benefit from exploiting its symmetries, all of these strategies can be used to make computation times managable.
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that
