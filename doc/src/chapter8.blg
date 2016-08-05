@@ -51,47 +51,45 @@ Warning--I didn't find a database entry for "twistaverage"
 Warning--I didn't find a database entry for "openmp"
 Warning--I didn't find a database entry for "mpi"
 Warning--I didn't find a database entry for "openmpi"
-Warning--I didn't find a database entry for "strassen"
-Warning--I didn't find a database entry for "armadillo"
-You've used 31 entries,
+You've used 30 entries,
             2812 wiz_defined-function locations,
-            843 strings with 10897 characters,
-and the built_in function-call counts, 11345 in all, are:
-= -- 722
-> -- 361
+            833 strings with 10707 characters,
+and the built_in function-call counts, 10980 in all, are:
+= -- 694
+> -- 354
 < -- 0
-+ -- 141
-- -- 110
-* -- 727
-:= -- 1351
-add.period$ -- 33
-call.type$ -- 31
++ -- 138
+- -- 108
+* -- 703
+:= -- 1308
+add.period$ -- 31
+call.type$ -- 30
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 1180
-empty$ -- 1146
-format.name$ -- 135
-if$ -- 2572
+cite$ -- 30
+duplicate$ -- 1144
+empty$ -- 1109
+format.name$ -- 132
+if$ -- 2487
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 323
-newline$ -- 134
-num.names$ -- 31
-pop$ -- 442
+int.to.str$ -- 30
+missing$ -- 314
+newline$ -- 129
+num.names$ -- 30
+pop$ -- 431
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 294
+skip$ -- 283
 stack$ -- 0
-substring$ -- 427
-swap$ -- 712
+substring$ -- 408
+swap$ -- 691
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 59
-width$ -- 33
-write$ -- 318
+while$ -- 57
+width$ -- 32
+write$ -- 306
 (There were 3 error messages)

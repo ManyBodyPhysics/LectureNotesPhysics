@@ -994,7 +994,7 @@ This means that it is possible to evaluate integrals of the form:
 \begin{equation}
 \langle O\rangle=\frac{\int dR f(R) O(R)}{\int dR f(R)}.
 \end{equation}
-As in the previous case the evaluation of the exact energy eigenvalue can be easily obtained by using the local energy. In fact, the matrix element of the Hamiltonian between the guiding function\footnote{It is always possible to project the energy from a function $\Psi_T$ other than $\Psi_G$, by introducing a further weighing factor $\frac{\Psi_T}{\Psi_G}$. However this is used very rarely in standard applications.}  and the ground-state wavefunction is:  
+As in the previous case the evaluation of the exact energy eigenvalue can be easily obtained by using the local energy. In fact, the matrix element of the Hamiltonian between the guiding function\footnote{It is always possible to project the energy from a function $\Psi_T$ other than $\Psi_G$, by introducing a further weighing factor $\frac{\Psi_T}{\Psi_G}$. However this is very rarely used in standard applications.}  and the ground-state wavefunction is:  
 \begin{equation}
 \langle E\rangle =\frac{\langle \phi_0|\hat{H}|\Psi_G\rangle}{\langle \phi_0|\Psi_G\rangle}=\frac{\int dR f(R)\frac{\hat{H}\Psi_G(R)}{\Psi_G(R)}}{\int dR f(R)}
 \end{equation}
@@ -2718,6 +2718,7 @@ will take now only $O(N_{occ}^2{\cal N}_s)$ evaluations of the Hamiltonian at mo
 the only single particle state allowed by simmetry. 
 
 \subsection{Results}
+The combination of imaginary time projection, use of importance function derived from CC calculations and no time-step error propagator make up the algorithm that goes under the name of Configuration Interaction Monte Carlo (CIMC).
 Actual calculations with CIMC require a substantial amount of CPU time. Here we report some results obtained by making use of a simplified Hamiltonian in which the nucleon-nucleon interaction is described by the Minnesota interaction.
 \begin{figure}
 	\begin{center}
@@ -2728,7 +2729,7 @@ Actual calculations with CIMC require a substantial amount of CPU time. Here we 
 \end{figure}
 The system under investigation is homogeneous pure neutron matter (PNM). In QMC calculations PNM is typically modeled as a periodic system containing A neutrons. The cell size is adjusted in such a way that the average density of the system is $\rho$.
 
-In Fig. \ref{fig.cimc_conv} we show how the computed energy depends on the number of plane wave shells included in the model space. As it can be seen, it is necessary to pay attention to the convergence of th results, which can strongly depend on the specific details of the system. In this case, for instance, on can easily see how convergence is faster when the density is increased. 
+In Fig. \ref{fig.cimc_conv} we show how the computed energy depends on the number of plane wave shells included in the model space. As it can be seen, it is necessary to pay attention to the convergence of th results, which can strongly depend on the specific details of the system. In this case, for instance, one can easily see how convergence is faster when the density is increased. 
 
 \begin{figure}
 	\begin{center}
@@ -2742,11 +2743,19 @@ In Fig. \ref{fig.cimc_eos} the energy computed by CIMC shown for the same neutro
 In this calculation single-particle states up to $N_{\mathrm{max}}=36$ have been used. The CIMCC and CCD results are converged to the fifth digit as function of 
 $N_{\mathrm{max}}$. The agreement between the two methods is at the level of the third digit after the decimal point for neutron matter with the 
 Minnesota interaction. This is a striking agreement between such different many-body methods, in particular for larger densities where correlations and contributions from states above and below the Fermi level play a larger role, as seen from the difference between the reference energy and the CIMC and CCD energies.
-Most likely, there will be larger differences between different many-body methods when proton correlations are brought in, as well as when more realistic interaction models will be used. Such results will be presented elsewhere. In the next two chapters we will add results using two further many-body methods. 
+Most likely, there will be larger differences between different many-body methods when proton correlations are brought in, as well as when more realistic interaction models will be used. Such results will be presented elsewhere. In the next two chapters we will add results using two  additional many-body methods, the in-medium SRG approach described in chapter 10 and the Green's function approach of chapter 11.  
 
 \section{Conclusions and perspectives}
 
+Quantum Monte Carlo methods are still one of the most powerful tools to attack general many body problems, and in particular the many-nucleon problem. Despite the fact that the Fermion sign problem prevents us so far from having strictly exact results for the solution of the Schroedinger equation, the accuracy that can be reached is very high, and in any cases it constitutes the current benchmark.
 
+Another important general feature of QMC calculations is that they provide a very flexible framework in which it is possible to explore from low temperature condensed helium, to trapped fermions, from atoms and molecules ad solid state devices to nuclei and eventually lattice QCD. It is not rare that technical improvements spread across different disciplines, and the development of te method itself is a common ground that is often the subject of interdisciplinary workshops and conferences.  
+
+In the field of nuclear physics it is possible that Fock-space based methods will eventually become the standard. Their main feature is the possibility of dealing with non-local interactions, which makes it possible to extend the use of QMC to the original formulations of $\xi$-EFT potentials, and a whole class of soft-core interactions that so far have never been used in this context. On the other hand, the availability of more and more accurate versions of the AFDMC codes will open the access of accurate studies of the equation of state f neutron and nuclear matter, and of general baryonic matter of extreme importance for astrophysical applications, concerning in particular the physics of neutron stars. The possibility of extending accurate calculations to large $A$ systems is also crucial for understanding the phenomenology of exotic beams.
+
+In this chapter we did not deal with the problem of evaluating excited states and dynamical quantities within a QMC framework. Several methods are nowadays available, mostly based on the evaluation of the Laplace transform of a given response function by means of the calculation of imaginary time correlation functions. Many technical advances have been recently made in this field (see e.g. Refs. \cite{Galli, RoggeroHe, Lovato1,Lovato2}), and the subject is still under very active investigation. 
+
+Finally, the hardest wall to climb remains the solution of the Fermion sign problem. Although there are claims that the problem is NP complete (which is true in general), thereby preventing any solution within standard classical computation, there are hints that many Hamiltonians of interest might admit a viable solution with polynomial scaling in $A$. This problem would definitely deserve more efforts than those that are presently devoted to its solution.  
 \section{Problems}
  \begin{prob}
   Evaluate the following integral by means of the Metropolis algorithm
@@ -2929,6 +2938,14 @@ M. H. Kalos, D. Levesque, and L. Verlet, \emph{Helium at zero temperature with h
 A. Holmes, H. J. Changlani and C.J. Umrigar, \emph{Efficient heat-bath sampling in Fock space}, J. Chem. Theory Comput. {\bf 12}, 1561 (2016) 
 \bibitem{Kolodrubetz12}
 M. Kolodrubetz and B. K. Clark, \emph{FCI-QMC approach to the Fermi polaron}, Phys. Rev. B {\bf 86}, 075109 (2012).
+\bibitem{Galli}
+E. Vitali, M. Rossi, L. Reatto, and D. E. Galli, \emph{Ab initio low-energy dynamics of superfluid and solid $^4$He}, Phys. Rev. B {\bf 82}, 174510 (2010).
+\bibitem{RoggeroHe}
+A. Roggero, F. Pederiva, and G. Orlandini, \emph{Dynamical structure functions from quantum Monte Carlo calculations of a proper integral transform}, Phys. Rev. B {\bf 88}, 094302 (2013)
+\bibitem{Lovato1}
+A. Lovato, S. Gandolfi, R. Butler, J. Carlson, E. Lusk, S. C. Pieper, and R. Schiavilla, \emph{Charge Form Factor and Sum Rules of Electromagnetic Response Functions in $^{12}$C}, Phys. Rev. Lett. {\bf 111}, 092501, 2013
+\bibitem{Lovato2}
+A. Lovato, S. Gandolfi, J. Carlson, S. C. Pieper, and R. Schiavilla, \emph{Electromagnetic and neutral-weak response functions of $^4$He and $^{12}$C}, Phys. Rev. C {\bf 91},062501(R) (2015)
 \end{thebibliography}
 
 

@@ -77,7 +77,7 @@ different levels of approximation.  The nuclear Hamiltonians which are
 now used routinely in nuclear structure and nuclear matter
 calculations, include both nucleon-nucleon ($NN$) and three-nucleon forces (3NFs) derived from EFT, see for
 example
-Refs.~\cite{binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,carbone2013}.
+Refs.~\cite{binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,hebeler2010b,carbone2013}.
 Parallel to the development of nuclear forces from EFT, which employs
 symmetries of quantum chromodynamics, there are recent and promising
 approaches to derive the EoS using forces constrained from lattice
