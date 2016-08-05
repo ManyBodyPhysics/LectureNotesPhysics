@@ -1622,11 +1622,6 @@ Despite these limitations there have been enormous successes for lattice EFT for
 \section{Reading assignments and Exercises}
 
 \begin{prob}
-Write a simple lattice code to evaluate a two-particle correlation function as a function of Euclidean time using a $Z_2$ auxiliary field. Simple sources for two-particle states may be delta functions in position or momentum space. Use the long time behavior of the effective mass function, $\ln \frac{C_2(\tau)}{C_2(\tau+1)} \tautoinfty E_0$ (see \Sec{observables}), to determine the ground state energy for your choice of coupling, $g$. Compare this with what you expect from \Eq{eigeqlambda}, using the relation $\lambda = e^{-E_0}$, as the number of lattice points is increased.
-\end{prob}
-
-
-\begin{prob}
 Much of these lecture notes follow this review: arXiv:1208.6556. There you will also find more information about algorithms. The following is an excellent pedagogical introduction to EFT's by David B. Kaplan: arXiv:nucl-th/0510023.
 \end{prob}
 
@@ -1656,8 +1651,30 @@ to the simple interaction, \Eq{pointint}, and derive an analytic expression for 
 \begin{prob}
 Write numerical code (Mathematica will suffice) to solve the transfer matrix for two particles for a chosen set of coefficients, $g_{2n}$ (\Eq{tuningcoef}), using $L=32$, $M=5$, and tune your coefficients to match the first few expected L\"uscher eigenvalues at unitarity. Compare your results with those in Table II of Ref.~\cite{EKLN1}.
 \end{prob}
+
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix}
+\section{Compilation and running the code}
+This code requires the use of the FFTW library, which you may download and install from fftw.org. The script create\_lib.sh should be run first from the head directory. Once this script is successful, you may go into the production directory, modify the script ``create\_binary.sh" to reflect your path to the FFTW library, and compile by running this script. The executable created is called ``a.out", which should be run without specifying any additional parameters in the command line. Input parameters are specified in the files included in the ``arg" folder. The parameters for each file are described in the header ``arg.h".
+
+Output is created in the folder ``results". The file gives a list of the values (real part listed first, imaginary second) of the two-particle correlation function calculated at different values of Euclidean time, on a set of auxiliary field configurations. The organization of the output is as follows: 
+\beq
+\begin{array}{ccccccc}
+\mathrm{Re}\left[C_{\phi_1}(\tau_1)\right] & \mathrm{Im}\left[C_{\phi_1}(\tau_1)\right] & \mathrm{Re}\left[C_{\phi_1}(\tau_2)\right] & \mathrm{Im}\left[C_{\phi_1}(\tau_2)\right] & \cdots & \mathrm{Re}\left[C_{\phi_1}(\tau_{\beta})\right] & \mathrm{Im}\left[C_{\phi_1}(\tau_{\beta})\right] \\
+\mathrm{Re}\left[C_{\phi_2}(\tau_1)\right] & \mathrm{Im}\left[C_{\phi_2}(\tau_1)\right] & \mathrm{Re}\left[C_{\phi_2}(\tau_2)\right] & \mathrm{Im}\left[C_{\phi_2}(\tau_2)\right] & \cdots & \mathrm{Re}\left[C_{\phi_2}(\tau_{\beta})\right] & \mathrm{Im}\left[C_{\phi_2}(\tau_{\beta})\right] \\
+&&& \vdots &&& \\
+\mathrm{Re}\left[C_{\phi_{\Ncfg}}(\tau_1)\right] & \mathrm{Im}\left[C_{\phi_{\Ncfg}}(\tau_1)\right] & \mathrm{Re}\left[C_{\phi_{\Ncfg}}(\tau_2)\right] & \mathrm{Im}\left[C_{\phi_{\Ncfg}}(\tau_2)\right] & \cdots & \mathrm{Re}\left[C_{\phi_{\Ncfg}}(\tau_{\beta})\right] & \mathrm{Im}\left[C_{\phi_{\Ncfg}}(\tau_{\beta})\right] \\
+\end{array} \cr
+\eeq
+where $\beta$ and $\Ncfg$ are the total number of time steps, specified in ``do.arg", and total number of configurations, specified in ``evo.arg", respectively. To calculate the correlation function at a given time, $\tau$, average over all values: $C(\tau) = \sum_i \left(\mathrm{Re}\left[C_{\phi_i}(\tau)\right] + i \ \mathrm{Im}\left[C_{\phi_i}(\tau)\right]\right)$.
+
+\subsection{Exercises}
 \begin{prob}
- Add a harmonic potential to your code by modifying the interaction: $X(\tau) \to e^{-U/2}X(\tau)e^{-U/2}$, with the matrix $U$ given by $U_{x,x'} = 1/2 \kappa x^2 \delta_{x,x'}$. Find the energies of two unitary fermions in a harmonic trap, exploring and removing finite volume and discretization effects by varying the parameters, $L,L_0=\left(\kappa M\right)^{-1/4},\omega=\sqrt{\kappa/M}$, and performing extrapolations in these quantities if necessary. Compare your result to the expected value of 2$\omega$. 
+Set the first value in the file ``interaction.arg" to a coupling of your choice, and the remaining couplings to $0$. Use the long time behavior of the effective mass function, $\ln \frac{C(\tau)}{C(\tau+1)} \tautoinfty E_0$ (see \Sec{observables}), to determine the ground state energy for your choice of coupling, $g$. Compare this with what you expect from \Eq{eigeqlambda}, using the relation $\lambda = e^{-E_0}$, as the number of lattice points is increased. You may test the improved interaction, \Sec{tuning}, using coefficients calculated from your code developed in Prob.~4 by setting multiple couplings in the ``interaction.arg" file. Be careful to set the dispersion relation in ``kinetic.arg" to match the one used in setting up your transfer matrix for the tuning.
+\end{prob}
+
+\begin{prob}
+ Add a harmonic potential by setting the parameters in potential.arg. The three numerical values correspond to the spring constant, $\kappa$, for the $x,y,z$-directions. Find the energies of two unitary fermions in a harmonic trap, exploring and removing finite volume and discretization effects by varying the parameters, $L,L_0=\left(\kappa M\right)^{-1/4}$, and performing extrapolations in these quantities if necessary. Compare your result to the expected value of 2$\omega$, where $\omega = \sqrt{\kappa/M}$, and the mass $M$ is set in the file ``kinetic.arg". 
 \end{prob}
 
 \begin{acknowledgement}
