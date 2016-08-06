@@ -137,20 +137,20 @@
 \contentsline {subsection}{\numberline {5.3.2}Statistical Overlap}{144}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Interpolating Fields}{148}{subsection.5.3.3}
 \contentsline {subsubsection}{\numberline {5.3.3.1}Angular momentum in a box}{150}{subsubsection.5.3.3.1}
-\contentsline {subsection}{\numberline {5.3.4}Analysis methods}{151}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.4}Analysis methods}{152}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Systematic errors and improvement}{155}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Improving the kinetic energy operator}{155}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Improving the interaction}{158}{subsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.2.1}L\"uscher's method}{158}{subsubsection.5.4.2.1}
-\contentsline {subsubsection}{\numberline {5.4.2.2}Applying L\"uscher's method to tune the two-body couplings}{160}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}L\"uscher's method}{159}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Applying L\"uscher's method to tune the two-body couplings}{161}{subsubsection.5.4.2.2}
 \contentsline {subsection}{\numberline {5.4.3}Scaling of discretization errors for many-body systems}{163}{subsection.5.4.3}
 \contentsline {subsection}{\numberline {5.4.4}Additional sources of systematic error}{166}{subsection.5.4.4}
 \contentsline {section}{\numberline {5.5}Beyond leading order EFT}{167}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Tuning the effective range}{168}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.1}Tuning the effective range}{169}{subsection.5.5.1}
 \contentsline {subsection}{\numberline {5.5.2}Including pions}{172}{subsection.5.5.2}
 \contentsline {subsection}{\numberline {5.5.3}3- and higher-body interactions}{174}{subsection.5.5.3}
 \contentsline {subsection}{\numberline {5.5.4}Final considerations}{177}{subsection.5.5.4}
-\contentsline {section}{\numberline {5.6}Reading assignments and Exercises}{177}{section.5.6}
+\contentsline {section}{\numberline {5.6}Reading assignments and Exercises}{178}{section.5.6}
 \contentsline {section}{Appendix}{178}{section*.23}
 \contentsline {section}{\numberline {5.7}Compilation and running the code}{178}{section.5.7}
 \contentsline {subsection}{\numberline {5.7.1}Exercises}{179}{subsection.5.7.1}
@@ -251,20 +251,20 @@
 \contentsline {subsection}{\numberline {9.3.2}Imaginary time propagator in coordinate representation}{328}{subsection.9.3.2}
 \contentsline {subsection}{\numberline {9.3.3}Application to the harmonic oscillator}{332}{subsection.9.3.3}
 \contentsline {subsection}{\numberline {9.3.4}Importance sampling}{334}{subsection.9.3.4}
-\contentsline {subsection}{\numberline {9.3.5}The fermion sign problem}{337}{subsection.9.3.5}
+\contentsline {subsection}{\numberline {9.3.5}The fermion sign problem}{338}{subsection.9.3.5}
 \contentsline {subsubsection}{\numberline {9.3.5.1}Fixed-node approximation}{339}{subsubsection.9.3.5.1}
 \contentsline {section}{\numberline {9.4}Quantum Monte Carlo for Nuclear Hamiltonians in coordinate space}{340}{section.9.4}
 \contentsline {subsection}{\numberline {9.4.1}General Auxiliary Field Formalism}{340}{subsection.9.4.1}
 \contentsline {subsection}{\numberline {9.4.2}Operator expectations and importance sampling}{341}{subsection.9.4.2}
 \contentsline {subsubsection}{\numberline {9.4.2.1}Mixed averages}{341}{subsubsection.9.4.2.1}
-\contentsline {subsubsection}{\numberline {9.4.2.2}Importance sampling}{341}{subsubsection.9.4.2.2}
+\contentsline {subsubsection}{\numberline {9.4.2.2}Importance sampling}{342}{subsubsection.9.4.2.2}
 \contentsline {subsubsection}{\numberline {9.4.2.3}Importance sampling with a Hubbard-Stratonovich transformation}{343}{subsubsection.9.4.2.3}
 \contentsline {subsection}{\numberline {9.4.3}Application to standard diffusion Monte Carlo}{344}{subsection.9.4.3}
 \contentsline {subsubsection}{\numberline {9.4.3.1}Diffusion Monte Carlo without importance sampling}{344}{subsubsection.9.4.3.1}
 \contentsline {subsubsection}{\numberline {9.4.3.2}Importance sampled Diffusion Monte Carlo in the auxiliary field formulism}{345}{subsubsection.9.4.3.2}
 \contentsline {subsection}{\numberline {9.4.4}Fixed-phase importance-sampled Diffusion Monte Carlo}{346}{subsection.9.4.4}
 \contentsline {subsection}{\numberline {9.4.5}Application to quadratic forms}{347}{subsection.9.4.5}
-\contentsline {subsection}{\numberline {9.4.6}Auxiliary Field Breakups}{347}{subsection.9.4.6}
+\contentsline {subsection}{\numberline {9.4.6}Auxiliary Field Breakups}{348}{subsection.9.4.6}
 \contentsline {subsection}{\numberline {9.4.7}AFDMC with the $v_6'$ potential for nuclear matter}{349}{subsection.9.4.7}
 \contentsline {subsubsection}{\numberline {9.4.7.1}The $v_6'$ Hamiltonian as a sum of operator squares}{349}{subsubsection.9.4.7.1}
 \contentsline {subsubsection}{\numberline {9.4.7.2}Complex auxiliary fields}{350}{subsubsection.9.4.7.2}
@@ -277,52 +277,52 @@
 \contentsline {subsection}{\numberline {9.6.3}Trial wave-functions from Coupled Cluster ansatz}{358}{subsection.9.6.3}
 \contentsline {subsection}{\numberline {9.6.4}Propagator sampling with no time-step error}{359}{subsection.9.6.4}
 \contentsline {subsection}{\numberline {9.6.5}Results}{363}{subsection.9.6.5}
-\contentsline {section}{\numberline {9.7}Conclusions and perspectives}{364}{section.9.7}
+\contentsline {section}{\numberline {9.7}Conclusions and perspectives}{365}{section.9.7}
 \contentsline {section}{\numberline {9.8}Problems}{365}{section.9.8}
 \contentsline {section}{Appendix}{366}{section*.34}
-\contentsline {section}{References}{367}{section*.35}
+\contentsline {section}{References}{368}{section*.35}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-11}
-\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{369}{section*.36}
+\contentsline {titlech}{\numberline {10}In-medium SRG approaches to infinite nuclear matter}{371}{section*.36}
 \authcount {1}
-\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{369}{section*.36}
-\contentsline {section}{\numberline {10.1}Introduction}{369}{section.10.1}
-\contentsline {section}{\numberline {10.2}Similarity Renormalization Group method}{370}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Simple demonstration of the SRG method}{371}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}The pairing model}{374}{subsection.10.2.2}
-\contentsline {section}{\numberline {10.3}The in-medium SRG approach}{374}{section.10.3}
-\contentsline {paragraph}{Wegner's canonical generator}{376}{section*.38}
-\contentsline {paragraph}{White's generator}{377}{section*.39}
-\contentsline {section}{\numberline {10.4}In-medium SRG studies of the pairing model and infinite neutron matter}{377}{section.10.4}
-\contentsline {section}{\numberline {10.5}Conclusions and perspectives}{377}{section.10.5}
-\contentsline {section}{References}{377}{section*.40}
+\contentsline {authorch}{Scott K.\nobreakspace {}Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}{371}{section*.36}
+\contentsline {section}{\numberline {10.1}Introduction}{371}{section.10.1}
+\contentsline {section}{\numberline {10.2}Similarity Renormalization Group method}{372}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Simple demonstration of the SRG method}{373}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}The pairing model}{376}{subsection.10.2.2}
+\contentsline {section}{\numberline {10.3}The In-Medium SRG approach}{376}{section.10.3}
+\contentsline {paragraph}{Wegner's canonical generator}{378}{section*.38}
+\contentsline {paragraph}{White's generator}{379}{section*.39}
+\contentsline {section}{\numberline {10.4}In-medium SRG studies of the pairing model and infinite neutron matter}{379}{section.10.4}
+\contentsline {section}{\numberline {10.5}Conclusions and perspectives}{379}{section.10.5}
+\contentsline {section}{References}{379}{section*.40}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-12}
-\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{379}{section*.41}
+\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{381}{section*.41}
 \authcount {1}
-\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{379}{section*.41}
-\contentsline {section}{\numberline {11.1}Introduction}{379}{section.11.1}
-\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{380}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{381}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{381}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{381}{section.11.3}
-\contentsline {subsection}{\numberline {11.3.1}The algebraic diagrammatic construction method}{383}{subsection.11.3.1}
-\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{385}{subsection.11.3.2}
-\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{385}{subsection.11.3.3}
-\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{386}{section.11.4}
-\contentsline {section}{\numberline {11.5}Self-consistenft GF at finite temperatures in the thermodynamic limit}{387}{section.11.5}
-\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{391}{subsection.11.5.1}
-\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{394}{subsection.11.5.2}
-\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{394}{subsection.11.5.3}
-\contentsline {section}{\numberline {11.6}Concluding remarks}{395}{section.11.6}
-\contentsline {section}{Appendix 1: Chiral NNLO three-nucleon forces}{395}{section*.42}
-\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{399}{section*.43}
-\contentsline {section}{References}{399}{section*.44}
+\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{381}{section*.41}
+\contentsline {section}{\numberline {11.1}Introduction}{381}{section.11.1}
+\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{382}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{383}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{383}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{383}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}The algebraic diagrammatic construction method}{385}{subsection.11.3.1}
+\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{387}{subsection.11.3.2}
+\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{387}{subsection.11.3.3}
+\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{388}{section.11.4}
+\contentsline {section}{\numberline {11.5}Self-consistenft GF at finite temperatures in the thermodynamic limit}{389}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{393}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{396}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{396}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Concluding remarks}{397}{section.11.6}
+\contentsline {section}{Appendix 1: Chiral NNLO three-nucleon forces}{397}{section*.42}
+\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{401}{section*.43}
+\contentsline {section}{References}{401}{section*.44}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-13}
-\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{401}{section*.45}
+\contentsline {titlech}{\numberline {12}Concluding remarks and perspectives}{403}{section*.45}
 \authcount {1}
-\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{401}{section*.45}
-\contentsline {section}{\numberline {12.1}Concluding remarks}{401}{section.12.1}
-\contentsline {section}{\numberline {12.2}Perspectives}{401}{section.12.2}
+\contentsline {authorch}{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}{403}{section*.45}
+\contentsline {section}{\numberline {12.1}Concluding remarks}{403}{section.12.1}
+\contentsline {section}{\numberline {12.2}Perspectives}{403}{section.12.2}
 \gdef \the@ipfilectr {}

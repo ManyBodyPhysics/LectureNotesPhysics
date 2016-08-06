@@ -307,6 +307,7 @@ i.e. the so called "Metropolis-Hastings algorithm"~\cite{Metropolis53,Hastings70
 	\end{equation}
 	with $\alpha =x,y,z$, and $i=1\dots A$. This choice has the advantage of being symmetric. If we imagine
 	to store our configuration in an array $R[0...2][0...A-1]$ the implementation of this step would read:
+\begin{svgraybox}
 	\begin{algorithmic} 
 		\State{MC\_Move()}
 		\For{$i \in \{0,A-1\}$}  
@@ -315,6 +316,7 @@ i.e. the so called "Metropolis-Hastings algorithm"~\cite{Metropolis53,Hastings70
 		\EndFor
 		\EndFor
 	\end{algorithmic}
+\end{svgraybox}
     We will assume that the function ${\rm rand}()$ generates a random number uniformly distributed
     in $[0,1)$.
     \item 
@@ -324,6 +326,7 @@ i.e. the so called "Metropolis-Hastings algorithm"~\cite{Metropolis53,Hastings70
     \end{equation}
     \item
     Next we need to decide whether we keep the proposed configuration as the next element in the chain or if we want to resort to the original one. If we define ${\rm acc} = A(R'\leftarrow R)$, then:
+\begin{svgraybox}
     	\begin{algorithmic} 
     		\State{Accept\_reject()}
     		\State{$\xi = \text{rand}()$}
@@ -331,16 +334,19 @@ i.e. the so called "Metropolis-Hastings algorithm"~\cite{Metropolis53,Hastings70
 	    		\State{$R[i][j]\gets R_{new}[i][j]$}
     		\EndIf
     	\end{algorithmic}
+\end{svgraybox}
     	\item
     	According to the Central Limit Theorem, we now need to cumulate the values of the rest of the integrand. In the case of our variational calculation we need to sum up the local energies.
     	Notice that this step has to be taken whatever the result of the procedure described at the previous point. If we want to estimate the statistical error, we also need to cumulate the {\it square}
     	of the local energy. 
+\begin{svgraybox}
     	\begin{algorithmic} 
     	   \State{Acuest()}
     	   \State{$\text{eloc}\gets \frac{\hat{H}\Psi_T(R)}{\Psi_T(R)}$}
     	   \State{$\text{ecum}\gets \text{ecum} + \text{eloc}$}
     	   \State{$\text{ecum2}\gets \text{ecum2} + \text{eloc}*\text{eloc}$}
     	   \end{algorithmic}
+\end{svgraybox}
     	\item
     	Steps 2 to 5 need to be repeated $N_{steps}$ times, where $N_{steps}$ must be sufficiently large to provide a small enough statistical error. The final estimate of the energy is given by
     	$\langle E\rangle \pm \Delta E$, where:
@@ -768,6 +774,7 @@ $\eta$ distributed as:
 P[\eta]=\frac{1}{\sqrt{2\pi D \Delta\tau}}e^{-\frac{\eta^2}{2D\Delta\tau}}
 \end{equation}
 and add it to to the original coordinate. 
+\begin{svgraybox}
 	\begin{algorithmic} 
 		\State{DMC\_Move()}
 		\For{$i \in \{0,A-1\}$}  
@@ -776,6 +783,7 @@ and add it to to the original coordinate.
 		\EndFor
 		\EndFor
 	\end{algorithmic}
+\end{svgraybox}
 The function $\text{rgaus}()$ generating normally-distributed random numbers is now universally available as a library routine, but it can easily be implemented starting from a uniform distribution by using the Box-Muller formula. 
 The part of the propagator depending on the potential has a slightly different interpretation. In the classical analogy we could say that the factor $W=e^{-\frac{\Delta\tau}{2}(V(R^M)-E_0)}$ represents 
 the probability of a process to occur by which new points might be created in the time interval $\Delta\tau$ (if $W>1$) or destroyed (if $W<1$), or in other words, a process related to the presence of a source or a sink of walkers. $W$ is interpreted as the average number of walkers that this
@@ -970,6 +978,7 @@ The algorithm including impotance sampling is modified in the following way.
 \item
    For each walker, and for each coordinate perform a "drift" move along the
    gradient of the guiding function. This displacement is deterministic.
+\begin{svgraybox}
  	\begin{algorithmic} 
  		\State{DMC\_Drift()}
  		\For{$i \in \{0,A-1\}$}  
@@ -978,6 +987,7 @@ The algorithm including impotance sampling is modified in the following way.
  		\EndFor
  		\EndFor
  	\end{algorithmic}
+\end{svgraybox}
 \item
 Cycle again over coordinates and diffuse the position from $R_{drift}$ as in the non-importance sampled case.
 \item
@@ -2647,6 +2657,7 @@ order to this we simply choose a target time-step $\tau_t$ at the beginning then
 from Eq.~\eqref{sampled_tau}, if $\tau_{\xi} > \tau_t$ we set $\tau=\tau_t$ and use correspondingly a diagonal move if instead $\tau_{\xi} < \tau_t$ 
 we have to sample an off--diagonal move. The process is preformed until the sum of all the sampled $\tau_{\xi}$ reaches the target time $\tau_t$. 
 The final algorithm for a single walker at $\rvert \mathbf{n}\rangle$ is then as follows: 
+\begin{svgraybox}
 \begin{algorithmic} 
 \State{EXP\_Move()}
 \State{$\tau=\tau_t$}
@@ -2670,6 +2681,7 @@ The final algorithm for a single walker at $\rvert \mathbf{n}\rangle$ is then as
   \State{$\mathbf{n}\to\mathbf{m}$}
 \EndLoop
 \end{algorithmic}
+\end{svgraybox}
 where the function $HeatBath[P,\mathbf{n}]$ generates a new configuration according to the probability $P$ (eg. Eq.~\eqref{eq:heba}) starting 
 from the current state $\mathbf{n}$. In Problem~\ref{prob:heatbath} you will try to devise an implementation of this function.
 
@@ -2679,6 +2691,7 @@ the Hamiltonian and the overlap with the trial function $\Psi_T(\mathbf{m})$. Th
 of fundamental importance to reach medium-sized systems. We can show this for the simple case of a homogeneous system with only two-body interactions
 so that the connected states will be all the possible 2-particle--2-hole excitations that can be obtained from the initial state $\rvert\mathbf{n}\rangle$.
 Neglecting the construction of the transformed matrix $\widetilde{H}$, we can then implement the calculation of the local energy as
+\begin{svgraybox}
 \begin{algorithmic} 
 \State{EL\_calc1()}
 \State{$E_L=0$}
@@ -2694,11 +2707,13 @@ Neglecting the construction of the transformed matrix $\widetilde{H}$, we can th
 \EndFor
 \State{$E_L=E_L/4$}
 \end{algorithmic}
+\end{svgraybox}
 where $occ(\mathbf{n})$ is the set of single-particle states that are occupied in the initial state $\mathbf{n}$. The above algorithm requires $O(N_{occ}^2{\cal N}_s^2)$
 evaluations of the Hamiltonian. Many of these are however equivalent to other ones or just zero. For instance all the terms with $i=j$ or $a=b$ give zero
 due to the Pauli principle. If we fix an ordering of the single particle orbitals in the many--body states and use anti-symmetrized matrix elements the configurations 
 obtained interchanging eg. $i\leftrightarrow j$ are equivalent. Finally if both momentum and spin are conserved, given the triple $(i,j,a)$ there exist only one single
 particle state $b$ allowed. An implementation like
+\begin{svgraybox}
 \begin{algorithmic} 
 \State{EL\_calc2()}
 \State{$E_L=0$}
@@ -2714,6 +2729,7 @@ particle state $b$ allowed. An implementation like
   \EndFor
 \EndFor
 \end{algorithmic}
+\end{svgraybox}
 will take now only $O(N_{occ}^2{\cal N}_s)$ evaluations of the Hamiltonian at most, and with a reduced prefactor with respect to the previous version. The function $FourthState$ returns 
 the only single particle state allowed by simmetry. 
 

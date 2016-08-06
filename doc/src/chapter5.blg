@@ -126,45 +126,45 @@ Warning--empty journal in Bolton:2015psa
 Warning--empty journal in Briceno:2016kkp
 Warning--empty journal in Detmold:2015qwf
 Warning--empty journal in Lahde:2013kma
-You've used 156 entries,
+You've used 158 entries,
             2812 wiz_defined-function locations,
-            1624 strings with 33904 characters,
-and the built_in function-call counts, 56394 in all, are:
-= -- 3469
-> -- 1872
+            1636 strings with 34134 characters,
+and the built_in function-call counts, 57057 in all, are:
+= -- 3510
+> -- 1892
 < -- 0
-+ -- 728
-- -- 572
-* -- 3591
-:= -- 6666
++ -- 736
+- -- 578
+* -- 3630
+:= -- 6743
 add.period$ -- 125
-call.type$ -- 156
+call.type$ -- 158
 change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 169
-duplicate$ -- 6051
-empty$ -- 5735
-format.name$ -- 703
-if$ -- 12723
+cite$ -- 171
+duplicate$ -- 6125
+empty$ -- 5804
+format.name$ -- 711
+if$ -- 12874
 int.to.chr$ -- 0
-int.to.str$ -- 156
-missing$ -- 1639
-newline$ -- 601
-num.names$ -- 156
-pop$ -- 2291
+int.to.str$ -- 158
+missing$ -- 1659
+newline$ -- 607
+num.names$ -- 158
+pop$ -- 2321
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1378
+skip$ -- 1397
 stack$ -- 0
-substring$ -- 1950
-swap$ -- 3723
+substring$ -- 1973
+swap$ -- 3765
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 13
-while$ -- 290
-width$ -- 159
-write$ -- 1472
+while$ -- 294
+width$ -- 161
+write$ -- 1488
 (There were 27 error messages)
