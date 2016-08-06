@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 AUG 2016 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 AUG 2016 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1845,7 +1845,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 291
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 292
- []\T1/fve/m/n/10 373
+ []\T1/fve/m/n/10 374
  []
 
 
@@ -1854,38 +1854,28 @@ Overfull \hbox (3.22194pt too wide) detected at line 293
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 294
- []\T1/fve/m/n/10 377
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 295
- []\T1/fve/m/n/10 377
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 296
  []\T1/fve/m/n/10 377
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 302
- []\T1/fve/m/n/10 379
+Overfull \hbox (3.22194pt too wide) detected at line 297
+ []\T1/fve/m/n/10 377
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 303
- []\T1/fve/m/n/10 380
+Overfull \hbox (3.22194pt too wide) detected at line 298
+ []\T1/fve/m/n/10 377
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 304
- []\T1/fve/m/n/10 381
+ []\T1/fve/m/n/10 379
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 305
- []\T1/fve/m/n/10 381
+ []\T1/fve/m/n/10 380
  []
 
 
@@ -1895,71 +1885,81 @@ Overfull \hbox (3.22194pt too wide) detected at line 306
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 307
- []\T1/fve/m/n/10 383
+ []\T1/fve/m/n/10 381
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 308
- []\T1/fve/m/n/10 385
+ []\T1/fve/m/n/10 381
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 309
- []\T1/fve/m/n/10 385
+ []\T1/fve/m/n/10 383
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 310
- []\T1/fve/m/n/10 386
+ []\T1/fve/m/n/10 385
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 311
- []\T1/fve/m/n/10 387
+ []\T1/fve/m/n/10 385
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 312
- []\T1/fve/m/n/10 391
+ []\T1/fve/m/n/10 386
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 313
- []\T1/fve/m/n/10 394
+ []\T1/fve/m/n/10 387
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 314
- []\T1/fve/m/n/10 394
+ []\T1/fve/m/n/10 391
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 315
- []\T1/fve/m/n/10 395
+ []\T1/fve/m/n/10 394
  []
 
-[13]
+
 Overfull \hbox (3.22194pt too wide) detected at line 316
- []\T1/fve/m/n/10 395
+ []\T1/fve/m/n/10 394
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 317
- []\T1/fve/m/n/10 399
+ []\T1/fve/m/n/10 395
  []
 
-
+[13]
 Overfull \hbox (3.22194pt too wide) detected at line 318
+ []\T1/fve/m/n/10 395
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 319
  []\T1/fve/m/n/10 399
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 324
+Overfull \hbox (3.22194pt too wide) detected at line 320
+ []\T1/fve/m/n/10 399
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 326
  []\T1/fve/m/n/10 401
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 325
+Overfull \hbox (3.22194pt too wide) detected at line 327
  []\T1/fve/m/n/10 401
  []
 
@@ -7553,364 +7553,33 @@ a shorter form with \authorrunning prior to \maketitle
 
 
 
-]
+] [370]
 
-LaTeX Warning: Reference `sec:generators' on page 370 undefined on input line 7
-2.
+LaTeX Warning: Citation `golubvaloan1996' on page 371 undefined on input line 1
+28.
 
+[371] [372] [373]
 
-LaTeX Warning: Citation `golubvaloan1996' on page 370 undefined on input line 8
-2.
-
-[370] [371] [372] [373]
-
-LaTeX Warning: Citation `reimann2013quantum' on page 374 undefined on input lin
-e 265.
-
-! Undefined control sequence.
-l.281 ...H}_s = U_s^\dagger \hat{H} U_s \equiv \Hd
-                                                  _s + \Ho_s,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.281 ..._s^\dagger \hat{H} U_s \equiv \Hd_s + \Ho
-                                                  _s,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `kehrein2006' on page 374 undefined on input line 307.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--309
-
- []
-
-[374]
-
-LaTeX Warning: Citation `kehrein2006flow' on page 375 undefined on input line 3
-22.
+LaTeX Warning: Citation `hergert2016' on page 374 undefined on input line 309.
 
 
-LaTeX Warning: Citation `IMSRG' on page 375 undefined on input line 323.
-
-
-LaTeX Warning: Citation `PhysRevLett.106.222502' on page 375 undefined on input
- line 323.
-
-! Undefined control sequence.
-<argument> ...0)} \left | q \right \rangle a_p\da 
-                                                  a_q + \frac {1}{4}\sum \li...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...frac {1}{4}\sum \limits _{pqrs}\lla 
-                                                  pq || r s \rra a_p\da a_q\...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \limits _{pqrs}\lla pq || r s \rra 
-                                                  a_p\da a_q\da a_s a_r, \la...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...s _{pqrs}\lla pq || r s \rra a_p\da 
-                                                  a_q\da a_s a_r, \label {eq...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...s}\lla pq || r s \rra a_p\da a_q\da 
-                                                  a_s a_r, \label {eq:ourHam...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...0)} \left | q \right \rangle a_p\da 
-                                                  a_q + \frac {1}{4}\sum \li...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...frac {1}{4}\sum \limits _{pqrs}\lla 
-                                                  pq || r s \rra a_p\da a_q\...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \limits _{pqrs}\lla pq || r s \rra 
-                                                  a_p\da a_q\da a_s a_r, \la...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...s _{pqrs}\lla pq || r s \rra a_p\da 
-                                                  a_q\da a_s a_r, \label {eq...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...s}\lla pq || r s \rra a_p\da a_q\da 
-                                                  a_s a_r, \label {eq:ourHam...
-l.337 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... E_0 + \sum \limits _{pq}f_{pq}\llb 
-                                                  a_p\da a_q\rrb + \frac {1}...
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum \limits _{pq}f_{pq}\llb a_p\da 
-                                                  a_q\rrb + \frac {1}{4}\sum...
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...mits _{pq}f_{pq}\llb a_p\da a_q\rrb 
-                                                  + \frac {1}{4}\sum \limits...
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...4}\sum \limits _{pqrs}v_{pqrs} \llb 
-                                                  a_p\da a_q\da a_s a_r \rrb , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\limits _{pqrs}v_{pqrs} \llb a_p\da 
-                                                  a_q\da a_s a_r \rrb , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... _{pqrs}v_{pqrs} \llb a_p\da a_q\da 
-                                                  a_s a_r \rrb , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...rs} \llb a_p\da a_q\da a_s a_r \rrb 
-                                                  , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... E_0 + \sum \limits _{pq}f_{pq}\llb 
-                                                  a_p\da a_q\rrb + \frac {1}...
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum \limits _{pq}f_{pq}\llb a_p\da 
-                                                  a_q\rrb + \frac {1}{4}\sum...
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...mits _{pq}f_{pq}\llb a_p\da a_q\rrb 
-                                                  + \frac {1}{4}\sum \limits...
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...4}\sum \limits _{pqrs}v_{pqrs} \llb 
-                                                  a_p\da a_q\da a_s a_r \rrb , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\limits _{pqrs}v_{pqrs} \llb a_p\da 
-                                                  a_q\da a_s a_r \rrb , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... _{pqrs}v_{pqrs} \llb a_p\da a_q\da 
-                                                  a_s a_r \rrb , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...rs} \llb a_p\da a_q\da a_s a_r \rrb 
-                                                  , 
-l.345 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.348 f_{pq} = \lla
-                    p \right|\hat{h}^{(0)}\left| q \rra + \sum\limits_{i}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Reference `Hnormalorder' on page 374 undefined on input line 317
+.
 
 ! Extra \right.
-l.348 f_{pq} = \lla p \right|
-                             \hat{h}^{(0)}\left| q \rra + \sum\limits_{i}
+\rbrace ->\delimiter "5267309 
+                              
+l.320 ...e a^\dagger_p a^\dagger_q a_s a_r\right\}
+                                                  +\sum_{pq,i\le F}
 I'm ignoring a \right that had no matching \left.
-
-! Undefined control sequence.
-l.348 ... \lla p \right|\hat{h}^{(0)}\left| q \rra
-                                                   + \sum\limits_{i}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.349 \lla
-           pi || qi\rra,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.349 \lla pi || qi\rra
-                       ,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.350 \]
+l.322 \]
         
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7918,105 +7587,12 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-l.351 and where $v_{pqrs} = \lla
-                                 pq || r s \rra$ are the amplitudes of the
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[374]
 
-! Undefined control sequence.
-l.351 and where $v_{pqrs} = \lla pq || r s \rra
-                                               $ are the amplitudes of the
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `hergert2016' on page 375 undefined on input line 373.
 
 
-LaTeX Warning: Citation `PhysRevLett.106.222502' on page 375 undefined on input
- line 373.
-
-
-LaTeX Warning: Citation `PhysRevLett.109.052501' on page 375 undefined on input
- line 373.
-
-
-LaTeX Warning: Citation `IMSRG' on page 375 undefined on input line 373.
-
-
-LaTeX Warning: Citation `shavitt2009many' on page 375 undefined on input line 3
-77.
-
-
-LaTeX Warning: Citation `ISI:A1981MN73700014' on page 375 undefined on input li
-ne 377.
-
-! Undefined control sequence.
-l.383 \hat{\eta} = \sum_{pq} \eta_{pq}^{(1)} \llb
-                                                  a_p\da a_q\rrb +
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.383 ...} = \sum_{pq} \eta_{pq}^{(1)} \llb a_p\da
-                                                   a_q\rrb +
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.383 ..._{pq} \eta_{pq}^{(1)} \llb a_p\da a_q\rrb
-                                                   +
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.384 ...}\sum\limits_{pqrs}\eta_{pqrs}^{(2)} \llb
-                                                   a_p\da a_q\da a_s
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.384 ...imits_{pqrs}\eta_{pqrs}^{(2)} \llb a_p\da
-                                                   a_q\da a_s
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.384 ...pqrs}\eta_{pqrs}^{(2)} \llb a_p\da a_q\da
-                                                   a_s
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.385 a_r \rrb
-              ,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `hergert2016' on page 375 undefined on input line 379.
 
 
 ! LaTeX Error: Environment widetext undefined.
@@ -8025,16 +7601,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.391 \begin{widetext}
+l.395 \begin{widetext}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-<argument> ... \frac {d f_{pq}}{ds}&= \sum _r \lb 
-                                                  \eta _{pr}^{(1)}f_{rq} + \...
-l.404 \end{align}
+<argument> ...a}\left (1-\hat {P}_{ia}\right )\lb 
+                                                  \eta _{ia}^{(1)}v_{apiq} -...
+l.408 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8045,7 +7621,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.404 \end{align}
+l.408 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8054,80 +7630,25 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Extra \right.
-<argument> ...rq} + \eta _{qr}^{(1)}f_{rp}\right )
-                                                   + \sum _{ia}\lb 1-\hat {P...
-l.404 \end{align}
+<argument> ... - f_{ia}\eta _{apiq}^{(2)} \right )
+                                                  \notag \\ & +\frac {1}{2} ...
+l.408 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
-
-! Undefined control sequence.
-<argument> ...{(1)}f_{rp}\right ) + \sum _{ia}\lb 
-                                                  1-\hat {P}_{ia}\rb \lb \et...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... + \sum _{ia}\lb 1-\hat {P}_{ia}\rb 
-                                                  \lb \eta _{ia}^{(1)}v_{api...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...sum _{ia}\lb 1-\hat {P}_{ia}\rb \lb 
-                                                  \eta _{ia}^{(1)}v_{apiq} -...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...piq} - f_{ia}\eta _{apiq}^{(2)} \rb 
-                                                  \notag \\ & +\frac {1}{2} ...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.404 \end{align}
+l.408 \end{align}
                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
 ! Undefined control sequence.
-<argument> ... \\ & +\frac {1}{2} \sum _{aij} \lb 
-                                                  1+\hat {P}_{pq}\rb \eta _{...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \sum _{aij} \lb 1+\hat {P}_{pq}\rb 
+<argument> ...um _{aij} \left (1+\hat {P}_{pq}\rb 
                                                   \eta _{apij}^{(2)}v_{ijaq}...
-l.404 \end{align}
+l.408 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8136,20 +7657,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<argument> ...{ijaq} + \frac {1}{2}\sum _{abi}\lb 
-                                                  1+\hat {P}_{pq}\rb \eta _{...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...2}\sum _{abi}\lb 1+\hat {P}_{pq}\rb 
+<argument> ...sum _{abi}\left (1+\hat {P}_{pq}\rb 
                                                   \eta _{ipab}^{(2)}v_{abiq}...
-l.404 \end{align}
+l.408 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8157,10 +7667,54 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.408 \end{align}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.408 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.408 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.408 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Undefined control sequence.
-<argument> ... \frac {d f_{pq}}{ds}&= \sum _r \lb 
-                                                  \eta _{pr}^{(1)}f_{rq} + \...
-l.404 \end{align}
+<argument> ...a}\left (1-\hat {P}_{ia}\right )\lb 
+                                                  \eta _{ia}^{(1)}v_{apiq} -...
+l.408 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8171,7 +7725,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.404 \end{align}
+l.408 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8180,60 +7734,16 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Extra \right.
-<argument> ...rq} + \eta _{qr}^{(1)}f_{rp}\right )
-                                                   + \sum _{ia}\lb 1-\hat {P...
-l.404 \end{align}
+<argument> ... - f_{ia}\eta _{apiq}^{(2)} \right )
+                                                  \notag \\ & +\frac {1}{2} ...
+l.408 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
-
-! Undefined control sequence.
-<argument> ...{(1)}f_{rp}\right ) + \sum _{ia}\lb 
-                                                  1-\hat {P}_{ia}\rb \lb \et...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... + \sum _{ia}\lb 1-\hat {P}_{ia}\rb 
-                                                  \lb \eta _{ia}^{(1)}v_{api...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...sum _{ia}\lb 1-\hat {P}_{ia}\rb \lb 
-                                                  \eta _{ia}^{(1)}v_{apiq} -...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...piq} - f_{ia}\eta _{apiq}^{(2)} \rb 
-                                                  \notag \\ & +\frac {1}{2} ...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.404 \end{align}
+l.408 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8244,7 +7754,7 @@ my insertion and my current dilemma will both disappear.
 ! Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.404 \end{align}
+l.408 \end{align}
                  
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -8252,27 +7762,16 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.404 \end{align}
+l.408 \end{align}
                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
 ! Undefined control sequence.
-<argument> ... \\ & +\frac {1}{2} \sum _{aij} \lb 
-                                                  1+\hat {P}_{pq}\rb \eta _{...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \sum _{aij} \lb 1+\hat {P}_{pq}\rb 
+<argument> ...um _{aij} \left (1+\hat {P}_{pq}\rb 
                                                   \eta _{apij}^{(2)}v_{ijaq}...
-l.404 \end{align}
+l.408 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8281,54 +7780,65 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<argument> ...{ijaq} + \frac {1}{2}\sum _{abi}\lb 
-                                                  1+\hat {P}_{pq}\rb \eta _{...
-l.404 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...2}\sum _{abi}\lb 1+\hat {P}_{pq}\rb 
+<argument> ...sum _{abi}\left (1+\hat {P}_{pq}\rb 
                                                   \eta _{ipab}^{(2)}v_{abiq}...
-l.404 \end{align}
+l.408 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.408 \end{align}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.408 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.408 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.408 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 [375]
 ! Undefined control sequence.
-<argument>  \frac {d v_{pqrs}}{ds} &= \sum _t \lb 
-                                                  1-\hat {P}_{pq} \rb \lb \e...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... &= \sum _t \lb 1-\hat {P}_{pq} \rb 
-                                                  \lb \eta _{pt}^{(1)}v_{tqr...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum _t \lb 1-\hat {P}_{pq} \rb \lb 
+<argument> ... \left (1-\hat {P}_{pq} \right )\lb 
                                                   \eta _{pt}^{(1)}v_{tqrs}-f...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8336,10 +7846,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ..._{tqrs}-f_{pt}\eta _{tqrs}^{(2)}\rb 
+! Missing } inserted.
+<inserted text> 
+                }
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ...rs}-f_{pt}\eta _{tqrs}^{(2)}\right )
                                                   -\sum _t \lb 1-\hat {P}_{r...
-l.416 \end{align}
+l.420 \end{align}
+                 
+I'm ignoring a \right that had no matching \left.
+
+! Undefined control sequence.
+<argument> ...a _{tqrs}^{(2)}\right )-\sum _t \lb 
+                                                  1-\hat {P}_{rs} \right )\l...
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8347,54 +7875,26 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...}\eta _{tqrs}^{(2)}\rb -\sum _t \lb 
-                                                  1-\hat {P}_{rs} \rb \lb \e...
-l.416 \end{align}
+! Extra \right.
+<argument> ...\sum _t \lb 1-\hat {P}_{rs} \right )
+                                                  \left (\eta _{tr}^{(1)} v_...
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
 
-! Undefined control sequence.
-<argument> ...rb -\sum _t \lb 1-\hat {P}_{rs} \rb 
-                                                  \lb \eta _{tr}^{(1)} v_{pq...
-l.416 \end{align}
+! Missing { inserted.
+<inserted text> 
+                {
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum _t \lb 1-\hat {P}_{rs} \rb \lb 
-                                                  \eta _{tr}^{(1)} v_{pqts} ...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...qts} - f_{tr} \eta _{pqts}^{(2)}\rb 
-                                                  \notag \\ & +\frac {1}{2}\...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 ! Undefined control sequence.
 <argument> ...ag \\ & +\frac {1}{2}\sum _{ab} \lb 
                                                   \eta _{pqab}^{(2)} v_{abrs...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8402,21 +7902,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...rs} - v_{pqab}\eta _{abrs}^{(2)}\rb 
+! Missing } inserted.
+<inserted text> 
+                }
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ...- v_{pqab}\eta _{abrs}^{(2)}\right )
                                                   - \frac {1}{2}\sum _{ij} \...
-l.416 \end{align}
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
 
 ! Undefined control sequence.
-<argument> ...2)}\rb - \frac {1}{2}\sum _{ij} \lb 
+<argument> ...right )- \frac {1}{2}\sum _{ij} \lb 
                                                   \eta _{pqij}^{(2)} v_{ijrs...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8424,76 +7931,26 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...rs} - v_{pqij}\eta _{ijrs}^{(2)}\rb 
+! Extra \right.
+<argument> ...- v_{pqij}\eta _{ijrs}^{(2)}\right )
                                                   \notag \\ & -\sum _{ia} \l...
-l.416 \end{align}
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.420 \end{align}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 ! Undefined control sequence.
-<argument> ...(2)}\rb \notag \\ & -\sum _{ia} \lb 
-                                                  1- \hat {P}_{ia} \rb \lb 1...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum _{ia} \lb 1- \hat {P}_{ia} \rb 
-                                                  \lb 1-\hat {P}_{pq}\rb \lb...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... _{ia} \lb 1- \hat {P}_{ia} \rb \lb 
-                                                  1-\hat {P}_{pq}\rb \lb 1-\...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{P}_{ia} \rb \lb 1-\hat {P}_{pq}\rb 
-                                                  \lb 1-\hat {P}_{rs} \rb \e...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{ia} \rb \lb 1-\hat {P}_{pq}\rb \lb 
-                                                  1-\hat {P}_{rs} \rb \eta _...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{P}_{pq}\rb \lb 1-\hat {P}_{rs} \rb 
+<argument> ...}\right )\left (1-\hat {P}_{rs} \rb 
                                                   \eta _{aqis}^{(2)}v_{ipar}...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8501,32 +7958,43 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument>  \frac {d v_{pqrs}}{ds} &= \sum _t \lb 
-                                                  1-\hat {P}_{pq} \rb \lb \e...
-l.416 \end{align}
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-<argument> ... &= \sum _t \lb 1-\hat {P}_{pq} \rb 
-                                                  \lb \eta _{pt}^{(1)}v_{tqr...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum _t \lb 1-\hat {P}_{pq} \rb \lb 
+<argument> ... \left (1-\hat {P}_{pq} \right )\lb 
                                                   \eta _{pt}^{(1)}v_{tqrs}-f...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8534,10 +8002,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ..._{tqrs}-f_{pt}\eta _{tqrs}^{(2)}\rb 
+! Missing } inserted.
+<inserted text> 
+                }
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ...rs}-f_{pt}\eta _{tqrs}^{(2)}\right )
                                                   -\sum _t \lb 1-\hat {P}_{r...
-l.416 \end{align}
+l.420 \end{align}
+                 
+I'm ignoring a \right that had no matching \left.
+
+! Undefined control sequence.
+<argument> ...a _{tqrs}^{(2)}\right )-\sum _t \lb 
+                                                  1-\hat {P}_{rs} \right )\l...
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8545,54 +8031,45 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...}\eta _{tqrs}^{(2)}\rb -\sum _t \lb 
-                                                  1-\hat {P}_{rs} \rb \lb \e...
-l.416 \end{align}
+! Extra \right.
+<argument> ...\sum _t \lb 1-\hat {P}_{rs} \right )
+                                                  \left (\eta _{tr}^{(1)} v_...
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
 
-! Undefined control sequence.
-<argument> ...rb -\sum _t \lb 1-\hat {P}_{rs} \rb 
-                                                  \lb \eta _{tr}^{(1)} v_{pq...
-l.416 \end{align}
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-<argument> ...\sum _t \lb 1-\hat {P}_{rs} \rb \lb 
-                                                  \eta _{tr}^{(1)} v_{pqts} ...
-l.416 \end{align}
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-! Undefined control sequence.
-<argument> ...qts} - f_{tr} \eta _{pqts}^{(2)}\rb 
-                                                  \notag \\ & +\frac {1}{2}\...
-l.416 \end{align}
+! Missing { inserted.
+<inserted text> 
+                {
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 ! Undefined control sequence.
 <argument> ...ag \\ & +\frac {1}{2}\sum _{ab} \lb 
                                                   \eta _{pqab}^{(2)} v_{abrs...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8600,21 +8077,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...rs} - v_{pqab}\eta _{abrs}^{(2)}\rb 
+! Missing } inserted.
+<inserted text> 
+                }
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ...- v_{pqab}\eta _{abrs}^{(2)}\right )
                                                   - \frac {1}{2}\sum _{ij} \...
-l.416 \end{align}
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
 
 ! Undefined control sequence.
-<argument> ...2)}\rb - \frac {1}{2}\sum _{ij} \lb 
+<argument> ...right )- \frac {1}{2}\sum _{ij} \lb 
                                                   \eta _{pqij}^{(2)} v_{ijrs...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8622,82 +8106,84 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...rs} - v_{pqij}\eta _{ijrs}^{(2)}\rb 
+! Extra \right.
+<argument> ...- v_{pqij}\eta _{ijrs}^{(2)}\right )
                                                   \notag \\ & -\sum _{ia} \l...
-l.416 \end{align}
+l.420 \end{align}
                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.420 \end{align}
+                 
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.420 \end{align}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 ! Undefined control sequence.
-<argument> ...(2)}\rb \notag \\ & -\sum _{ia} \lb 
-                                                  1- \hat {P}_{ia} \rb \lb 1...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\sum _{ia} \lb 1- \hat {P}_{ia} \rb 
-                                                  \lb 1-\hat {P}_{pq}\rb \lb...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... _{ia} \lb 1- \hat {P}_{ia} \rb \lb 
-                                                  1-\hat {P}_{pq}\rb \lb 1-\...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{P}_{ia} \rb \lb 1-\hat {P}_{pq}\rb 
-                                                  \lb 1-\hat {P}_{rs} \rb \e...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{ia} \rb \lb 1-\hat {P}_{pq}\rb \lb 
-                                                  1-\hat {P}_{rs} \rb \eta _...
-l.416 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{P}_{pq}\rb \lb 1-\hat {P}_{rs} \rb 
+<argument> ...}\right )\left (1-\hat {P}_{rs} \rb 
                                                   \eta _{aqis}^{(2)}v_{ipar}...
-l.416 \end{align}
+l.420 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.420 \end{align}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.420 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
 ! LaTeX Error: \begin{document} ended by \end{widetext}.
@@ -8706,78 +8192,72 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.417 \end{widetext}
+l.421 \end{widetext}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
 
  []
 
 
-LaTeX Warning: Citation `PhysRepWegner0' on page 376 undefined on input line 42
-7.
-
-! Undefined control sequence.
-l.428 \be \hat{\eta} = \left[ \Hd
-                                 , \Ho \right] = \left[ \Hd, \hat{H}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.428 \be \hat{\eta} = \left[ \Hd, \Ho
-                                       \right] = \left[ \Hd, \hat{H}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.428 ...a} = \left[ \Hd, \Ho \right] = \left[ \Hd
-                                                  , \hat{H}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `PhysRepWegner0' on page 376 undefined on input line 43
+1.
 
 
-LaTeX Warning: Citation `kehrein2006flow' on page 376 undefined on input line 4
-33.
-
-! Undefined control sequence.
-<argument>  \eta _{pq}^{(1)} = & \sum _{r}\lb 
-                                              f_{pr}^d f_{rq} - f_{pr} f_{rq...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `kehrein2006' on page 376 undefined on input line 439.
 
 ! Undefined control sequence.
 <argument> ...{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb 
-                                                  + f_{pq} v_{qppq}^d \lb n_...
-l.448 \end{align*}
+                                                  + f_{pq} v_{qppq}^d \left ...
+l.456 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.456 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.456 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.456 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-<argument> ..._{rq}^d \rb + f_{pq} v_{qppq}^d \lb 
-                                                  n_q - n_p \rb \\ \eta _{pq...
-l.448 \end{align*}
+<argument> ... _{tu} \left (n_t - n_u \right )\lb 
+                                                  1 - \hat {P}_{pq} \right )...
+l.456 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8785,254 +8265,37 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...f_{pq} v_{qppq}^d \lb n_q - n_p \rb 
-                                                  \\ \eta _{pqrs}^{(2)} = & ...
-l.448 \end{align*}
+! Missing } inserted.
+<inserted text> 
+                }
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-<argument> ...2)} = & - \sum _t \left \lbrace \lb 
-                                                  1-\hat {P}_{pq} \rb f_{pt}...
-l.448 \end{align*}
+! Extra \right.
+<argument> ...ight )\lb 1 - \hat {P}_{pq} \right )
+                                                  \left (1 - \hat {P}_{rs} \...
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
 
-! Undefined control sequence.
-<argument> ...eft \lbrace \lb 1-\hat {P}_{pq} \rb 
-                                                  f_{pt} v_{tqrs}^d - \lb 1 ...
-l.448 \end{align*}
+! Missing { inserted.
+<inserted text> 
+                {
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...P}_{pq} \rb f_{pt} v_{tqrs}^d - \lb 
-                                                  1 - \hat {P}_{rs} \rb f_{t...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...tqrs}^d - \lb 1 - \hat {P}_{rs} \rb 
-                                                  f_{tr} v_{pqts}^d \right \...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ce \notag \\ & + \sum _t \left \llb 
-                                                  \lb 1 - \hat {P}_{pq} \rb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...notag \\ & + \sum _t \left \llb \lb 
-                                                  1 - \hat {P}_{pq} \rb f_{p...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   1
-l.448 \end{align*}
-                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Undefined control sequence.
-<argument> ...left \llb \lb 1 - \hat {P}_{pq} \rb 
-                                                  f_{pt}^d v_{tqrs} - \lb 1 ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...P}_{pq} \rb f_{pt}^d v_{tqrs} - \lb 
-                                                  1 - \hat {P}_{rs} \rb f_{t...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{tqrs} - \lb 1 - \hat {P}_{rs} \rb 
-                                                  f_{tr}^d v_{pqts} \right \...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...} \rb f_{tr}^d v_{pqts} \right \rrb 
-                                                  \notag \\ & + \frac {1}{2}...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   \let 
-l.448 \end{align*}
-                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Undefined control sequence.
-<argument> ...}{2} \sum _{tu} (1 - n_t - n_u) \lb 
-                                                  v_{pqtu}^d v_{turs} - v_{p...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... v_{turs} - v_{pqtu} v_{turs}^d \rb 
-                                                  \notag \\ & + \sum _{tu} \...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...^d \rb \notag \\ & + \sum _{tu} \lb 
-                                                  n_t - n_u \rb \lb 1 - \hat...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\\ & + \sum _{tu} \lb n_t - n_u \rb 
-                                                  \lb 1 - \hat {P}_{pq} \rb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... + \sum _{tu} \lb n_t - n_u \rb \lb 
-                                                  1 - \hat {P}_{pq} \rb \lb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...- n_u \rb \lb 1 - \hat {P}_{pq} \rb 
-                                                  \lb 1 - \hat {P}_{rs} \rb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...u \rb \lb 1 - \hat {P}_{pq} \rb \lb 
-                                                  1 - \hat {P}_{rs} \rb v_{t...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{pq} \rb \lb 1 - \hat {P}_{rs} \rb 
-                                                  v_{tpur}^d v_{uqts}, 
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  \eta _{pq}^{(1)} = & \sum _{r}\lb 
-                                              f_{pr}^d f_{rq} - f_{pr} f_{rq...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 ! Undefined control sequence.
 <argument> ...{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb 
-                                                  + f_{pq} v_{qppq}^d \lb n_...
-l.448 \end{align*}
+                                                  + f_{pq} v_{qppq}^d \left ...
+l.456 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9040,10 +8303,43 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.456 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.456 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.456 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Undefined control sequence.
-<argument> ..._{rq}^d \rb + f_{pq} v_{qppq}^d \lb 
-                                                  n_q - n_p \rb \\ \eta _{pq...
-l.448 \end{align*}
+<argument> ... _{tu} \left (n_t - n_u \right )\lb 
+                                                  1 - \hat {P}_{pq} \right )...
+l.456 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9051,328 +8347,62 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> ...f_{pq} v_{qppq}^d \lb n_q - n_p \rb 
-                                                  \\ \eta _{pqrs}^{(2)} = & ...
-l.448 \end{align*}
+! Missing } inserted.
+<inserted text> 
+                }
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-<argument> ...2)} = & - \sum _t \left \lbrace \lb 
-                                                  1-\hat {P}_{pq} \rb f_{pt}...
-l.448 \end{align*}
+! Extra \right.
+<argument> ...ight )\lb 1 - \hat {P}_{pq} \right )
+                                                  \left (1 - \hat {P}_{rs} \...
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I'm ignoring a \right that had no matching \left.
 
-! Undefined control sequence.
-<argument> ...eft \lbrace \lb 1-\hat {P}_{pq} \rb 
-                                                  f_{pt} v_{tqrs}^d - \lb 1 ...
-l.448 \end{align*}
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-<argument> ...P}_{pq} \rb f_{pt} v_{tqrs}^d - \lb 
-                                                  1 - \hat {P}_{rs} \rb f_{t...
-l.448 \end{align*}
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-! Undefined control sequence.
-<argument> ...tqrs}^d - \lb 1 - \hat {P}_{rs} \rb 
-                                                  f_{tr} v_{pqts}^d \right \...
-l.448 \end{align*}
+! Missing { inserted.
+<inserted text> 
+                {
+l.456 \end{align*}
                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-! Undefined control sequence.
-<argument> ...ce \notag \\ & + \sum _t \left \llb 
-                                                  \lb 1 - \hat {P}_{pq} \rb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...notag \\ & + \sum _t \left \llb \lb 
-                                                  1 - \hat {P}_{pq} \rb f_{p...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   1
-l.448 \end{align*}
-                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Undefined control sequence.
-<argument> ...left \llb \lb 1 - \hat {P}_{pq} \rb 
-                                                  f_{pt}^d v_{tqrs} - \lb 1 ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...P}_{pq} \rb f_{pt}^d v_{tqrs} - \lb 
-                                                  1 - \hat {P}_{rs} \rb f_{t...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{tqrs} - \lb 1 - \hat {P}_{rs} \rb 
-                                                  f_{tr}^d v_{pqts} \right \...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...} \rb f_{tr}^d v_{pqts} \right \rrb 
-                                                  \notag \\ & + \frac {1}{2}...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   \let 
-l.448 \end{align*}
-                  
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Undefined control sequence.
-<argument> ...}{2} \sum _{tu} (1 - n_t - n_u) \lb 
-                                                  v_{pqtu}^d v_{turs} - v_{p...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... v_{turs} - v_{pqtu} v_{turs}^d \rb 
-                                                  \notag \\ & + \sum _{tu} \...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...^d \rb \notag \\ & + \sum _{tu} \lb 
-                                                  n_t - n_u \rb \lb 1 - \hat...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\\ & + \sum _{tu} \lb n_t - n_u \rb 
-                                                  \lb 1 - \hat {P}_{pq} \rb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... + \sum _{tu} \lb n_t - n_u \rb \lb 
-                                                  1 - \hat {P}_{pq} \rb \lb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...- n_u \rb \lb 1 - \hat {P}_{pq} \rb 
-                                                  \lb 1 - \hat {P}_{rs} \rb ...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...u \rb \lb 1 - \hat {P}_{pq} \rb \lb 
-                                                  1 - \hat {P}_{rs} \rb v_{t...
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{pq} \rb \lb 1 - \hat {P}_{rs} \rb 
-                                                  v_{tpur}^d v_{uqts}, 
-l.448 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[376]
-
-LaTeX Warning: Citation `White:cond-mat0201346' on page 377 undefined on input 
-line 460.
-
-
-LaTeX Warning: Citation `PhysRevLett.106.222502' on page 377 undefined on input
- line 475.
-
-
-LaTeX Warning: Citation `White:cond-mat0201346' on page 377 undefined on input 
-line 475.
-
-! Undefined control sequence.
-<argument> ...i}}{f_a-f_i-v_{aiai}}\lbrace a_a\da 
-                                                  a_i\rbrace -\text {hc} \no...
-l.481 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...f_b-f_i-f_j+A_{abij}}\lbrace a_a\da 
-                                                  a_b\da a_j a_i\rbrace - \t...
-l.481 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...-f_j+A_{abij}}\lbrace a_a\da a_b\da 
-                                                  a_j a_i\rbrace - \text {hc...
-l.481 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...i}}{f_a-f_i-v_{aiai}}\lbrace a_a\da 
-                                                  a_i\rbrace -\text {hc} \no...
-l.481 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...f_b-f_i-f_j+A_{abij}}\lbrace a_a\da 
-                                                  a_b\da a_j a_i\rbrace - \t...
-l.481 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...-f_j+A_{abij}}\lbrace a_a\da a_b\da 
-                                                  a_j a_i\rbrace - \text {hc...
-l.481 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[377]pdfTeX warning (ext4): destination with the same identifier (name{cite.bog
-ner2010@-11}) has been already used, duplicate ignored
+[376] [377]pdfTeX warning (ext4): destination with the same identifier (name{ci
+te.bogner2010@-11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.533 \bibitem{bogner2010}
+l.540 \bibitem{bogner2010}
                           pdfTeX warning (ext4): destination with the same iden
 tifier (name{cite.morris2015@-11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.535 \bibitem{morris2015}
+l.542 \bibitem{morris2015}
                           ) [378]
 \openout2 = `chapter11.aux'.
 
@@ -10025,7 +9055,7 @@ LaTeX Warning: Reference `eq:Dyson' on page 385 undefined on input line 339.
 LaTeX Warning: Reference `eq:???' on page 385 undefined on input line 339.
 
 
-<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=8761, 682.55pt x 582.175pt>
+<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=8759, 682.55pt x 582.175pt>
 File: Chapter11-figures/Pairing_model_CI_ADC_CC.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>
@@ -10034,7 +9064,7 @@ input line 363.
 (pdftex.def)             Requested size: 339.67029pt x 289.71877pt.
  [385] [386 <./Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>] [387] [388] [389
 ] [390]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8868, 1027.84pt x 770.88pt>
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8866, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
@@ -10081,7 +9111,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 99B0A88E58BA70E9246B2DFE2A35EA8A;19855.
+(rerunfilecheck)             Checksum: 06524DDBCDF1B3393F9D054F298EDB1F;19868.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -10095,10 +9125,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 203.
  ) 
 Here is how much of TeX's memory you used:
- 26116 strings out of 493089
- 415151 string characters out of 6134842
- 609178 words of memory out of 5000000
- 25261 multiletter control sequences out of 15000+600000
+ 26096 strings out of 493089
+ 414867 string characters out of 6134842
+ 609199 words of memory out of 5000000
+ 25247 multiletter control sequences out of 15000+600000
  158847 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,25n,122p,1588b,1758s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -10135,10 +9165,10 @@ al/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on lnp.pdf (412 pages, 6207301 bytes).
+Output written on lnp.pdf (412 pages, 6190375 bytes).
 PDF statistics:
- 9994 PDF objects out of 10688 (max. 8388607)
- 8699 compressed objects within 87 object streams
- 3676 named destinations out of 4296 (max. 500000)
+ 9989 PDF objects out of 10688 (max. 8388607)
+ 8694 compressed objects within 87 object streams
+ 3670 named destinations out of 4296 (max. 500000)
  2576 words of extra memory for PDF output out of 10000 (max. 10000000)
 

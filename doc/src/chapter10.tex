@@ -1,6 +1,3 @@
-% additional new command
-\newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
-
 
 \title{In-medium SRG approaches to infinite nuclear matter}
 \author{Scott K.~Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}
@@ -55,25 +52,74 @@ perspectives and research directions.
 
 We give here a brief overview of the SRG method applied to two simple systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8, the latter as a numerical case study in this chapter. 
 
-If we take the derivative of Eq.~\eqref{eq:cut}
-with respect to the flow parameter $s$, we obtain the operator flow equation
-\begin{equation}\label{eq:opflow}
-  \frac{d}{ds}\hat{H}(s) = [\hat{\eta}(s),\hat{H}(s)],
-\end{equation} 
-where the generator $\hat{\eta}(s)$ is related to the unitary transformation $\hat{U}(s)$ by
-\begin{equation}
-  \eta(s)=\frac{dU(s)}{ds}U^{\dag}(s) = -\eta^{\dag}(s).
-\end{equation}
-By rearranging this relation, we obtain a differential equation for $\hat{U}(s)$ whose formal solution is given by the \emph{path-}
-or \emph{S-ordered} exponential
-\begin{equation}
-  U(s) = \mathcal{S}\exp \int^s_0 ds' \eta(s').
-\end{equation}
-We leave $\hat{\eta}(s)$ unspecified for now and defer the discussion of suitable choices to section \ref{sec:generators}. 
+In the similarity renormalization group (SRG) method, one performs a
+continuous sequence of unitary transformations on a Hamiltonian
+operator $\hat H$ to evolve it into a more ``amenable'' form, which
+generally implies decoupling a small model space of interest from its
+complement.  The sequence is parameterized by a continuous variable
+$s$ known as the \textit{flow parameter}, which by convention we
+define to be $0$ at the beginning of the sequence.  Upon reaching $s$,
+the transformed Hamiltonian is given by
+\begin{align*}
+  \tilde H(s) \equiv \hat U(s) \hat H \hat U(s)
+\end{align*}
+where $U(s)$ describes the product of all such transformations since $s = 0$.
+At every step $s'$, the differential unitary transformation is described by
+the exponential of an antihermitian operator $\eta(s)$, known as the
+\textit{generator} of the transformation.  When ``integrated'' as a product,
+the full transformation $\hat U(s)$ is recovered
+\begin{align*}
+  \hat U(s) = \lim_{\Delta s' \to 0} \prod_{s' = 0}^{s' = s}
+  \mathrm e^{\hat \eta(s') \Delta s'}
+\end{align*}
+The evolution of the Hamiltonian itself is governed by a differential
+equation, commonly referred to as the flow equation:
+\begin{gather} \label{eq:imsrgode}
+  \frac{d}{d s} \tilde H(s) = [\hat \eta(s), \tilde H(s)]
+\end{gather}
+which allows $\tilde H(s)$ to be evaluated without explicitly constructing the
+full transformation $\hat U(s)$.
 
-Naively, one could try to solve the flow equation \eqref{eq:opflow} by
+ Introducing a flow parameter $s$, there exits a unitary
+ transformation $U_s$, such that
+\begin{equation}
+ \hat{H}_s = U_s^\dagger \hat{H} U_s \equiv \hat{H}^{\rm d}_s + \hat{H}^{\rm od}_s,
+\end{equation}
+with the relations $U_{s=0} = \mathbf{1}$, and $\hat{H}_{s= 0} =
+\hat{H}$.  The transformation $U_s$ is parametrized as
+\[
+U_s = T_s \exp \left(\int_0^s \! ds'\hat{\eta}_{s'} \right),
+\]
+where the anti-hermitian operator $\hat{\eta}_s$ serves as generator
+of the transformation. With $T_s$ we denote $s$-ordering, which is
+defined equivalently to usual time-ordering.  Taking the derivative of
+$\hat{H}_s$ with respect to $s$ gives
+\begin{equation}
+ \frac{d \hat{H}_s}{ds} = \frac{d U_s}{ds}\hat{H} U_s^\dagger + U_s
+ \hat{H} \frac{d U_s^\dagger}{ds}.
+\label{eq:flowlong}
+\end{equation}
+Utilizing that for our particular form of $U_s$, we have that 
+\begin{equation}
+\hat{\eta}_s = \frac{d U_s}{ds} U_s^\dagger = - U_s \frac{d
+  U_s^\dagger}{ds} = -\hat{\eta}_s,
+\label{eq:eta}
+\end{equation} 
+we obtain that 
+\begin{equation} 
+\frac{d \hat{H}_s}{ds} = \hat{\eta}_s \hat{H}_s
+- \hat{H}_s \hat{\eta}_s = \left[\hat{\eta}_s, \hat{H}_s \right].
+\label{eq:flowEquations}
+\end{equation}
+
+This is the key expression of the SRG method, describing the flow
+of the Hamiltonian.  The specific unitary transformation is determined
+by the choice of $\hat{\eta}_s$.  Through different choices of
+$\hat{\eta}_s$, the SRG evolution can be adapted to the features of a
+particular problem.
+Naively, one could try to solve the flow equation \eqref{eq:flowEquations} by
 choosing a suitable basis of the many-body Hilbert space and turning
-Eq.~\eqref{eq:opflow} into a matrix differential equation, but such an
+Eq.~\eqref{eq:flowEquations} into a matrix differential equation, but such an
 approach would ultimately amount to a diagonalization of the many-body
 Hamiltonian. To make matters worse, implementing the flow means we
 would deal with the Hamiltonian's full spectrum rather than just some
@@ -83,9 +129,8 @@ state-of-the-art, large-scale large scale diagonalization approaches based on it
 
 \subsection{Simple demonstration of the SRG method}
 In order to get a better understanding of the SRG method, let us first consider  
-a simple $2\times 2$ matrix and use Jacobi's rotation method to find its eigenvalues. 
-We will thereafter link the flow equations
-with the results obtained with the simple Jacobi method, see for example Ref.~\cite{golubvanloan1996}.
+a simple $2\times 2$ matrix and compare \eqref{eq:flowEquations} with standard diagonalization algorithms like 
+Jacobi's rotation method, see for example Ref.~\cite{golubvanloan1996}.
 
 We define a  symmetric matrix  $H\in {\mathbb{R}}^{2\times 2}$
 \[ 
@@ -243,113 +288,72 @@ and
   \]
 for the two-body interaction. The parameters $\xi$ and $g$ are constants.
 The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
+In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{shampine1976}. 
+As we let $s$ evolve, the Hamiltonian matrix becomes more and more diagonal. The code to solve the coupled ODEs is at
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95}. For $s=$ and $g=-0.5$ and $\delta=1$
+we obtain 
 
-\section{In-medium SRG}
 
-In the similarity renormalization group (SRG) method, one performs a
-continuous sequence of unitary transformations on a Hamiltonian operator
-$\hat H$ to evolve it into a more ``amenable'' form -- which generally implies
-decoupling a small model space of interest from its complement.  The sequence
-is parameterized by a continuous variable $s$ known as the \textit{flow
-  parameter}, which by convention we define to be $0$ at the beginning of the
-sequence.  Upon reaching $s$, the transformed Hamiltonian is given by
-\begin{align*}
-  \tilde H(s) \equiv \hat U(s) \hat H \hat U(s)
-\end{align*}
-where $U(s)$ describes the product of all such transformations since $s = 0$.
-At every step $s'$, the differential unitary transformation is described by
-the exponential of an antihermitian operator $\eta(s)$, known as the
-\textit{generator} of the transformation.  When ``integrated'' as a product,
-the full transformation $\hat U(s)$ is recovered:\footnote{Alternatively, this
-  can also be reinterpreted as an $s'$-ordered integral.  See \cite[\S
-  6.1]{reimann2013quantum}.}
-\begin{align*}
-  \hat U(s) = \lim_{\Delta s' \to 0} \prod_{s' = 0}^{s' = s}
-  \mathrm e^{\hat \eta(s') \Delta s'}
-\end{align*}
-The evolution of the Hamiltonian itself is governed by a differential
-equation, commonly referred to as the flow equation:
-\begin{gather} \label{eq:imsrgode}
-  \frac{d}{d s} \tilde H(s) = [\hat \eta(s), \tilde H(s)]
-\end{gather}
-which allows $\tilde H(s)$ to be evaluated without explicitly constructing the
-full transformation $\hat U(s)$.
-
- Introducing a flow parameter $s$, there exits a unitary
- transformation $U_s$, such that
-\begin{equation}
- \hat{H}_s = U_s^\dagger \hat{H} U_s \equiv \Hd_s + \Ho_s,
-\end{equation}
-with the relations $U_{s=0} = \mathbf{1}$, and $\hat{H}_{s= 0} =
-\hat{H}$.  The transformation $U_s$ is parametrized as
-\[
-U_s = T_s \exp \left(\int_0^s \! ds'\hat{\eta}_{s'} \right),
-\]
-where the anti-hermitian operator $\hat{\eta}_s$ serves as generator
-of the transformation. With $T_s$ we denote $s$-ordering, which is
-defined equivalently to usual time-ordering.  Taking the derivative of
-$\hat{H}_s$ with respect to $s$ gives
-\begin{equation}
- \frac{d \hat{H}_s}{ds} = \frac{d U_s}{ds}\hat{H} U_s^\dagger + U_s
- \hat{H} \frac{d U_s^\dagger}{ds}.
-\label{eq:flow_long}
-\end{equation}
-Utilizing that for our particular form of $U_s$, we have that \be
-\hat{\eta}_s = \frac{d U_s}{ds} U_s^\dagger = - U_s \frac{d
-  U_s^\dagger}{ds} = -\hat{\eta}_s,
-\label{eq:eta}
-\ee we obtain that \be \frac{d \hat{H}_s}{ds} = \hat{\eta}_s \hat{H}_s
-- \hat{H}_s \hat{\eta}_s = \left[\hat{\eta}_s, \hat{H}_s \right].
-\label{eq:flowEquations}
-\ee This is the key expression of the SRG method, describing the flow
-of the Hamiltonian.  The specific unitary transformation is determined
-by the choice of $\hat{\eta}_s$.  Through different choices of
-$\hat{\eta}_s$, the SRG evolution can be adapted to the features of a
-particular problem.\\
-
-\paragraph*{In-medium SRG}
-
-One possibility to solve the flow equations is to choose a basis with
-respect to the physical vacuum state, set up the Hamiltonian matrix in
-this basis and solve Eq.~(\ref{eq:flowEquations}) as a set of coupled
+As we can from this study, we solve the flow equations with
+respect to the physical vacuum state by setting up the full  Hamiltonian matrix in
+and solve Eq.~(\ref{eq:flowEquations}) as a set of coupled
 first-order differential equations. However, since the size of the
 problem grows enormously with the number of particles and the size of
 the model space, the applicability of this free-space SRG method is
-restricted to comparatively small systems.
+restricted to comparatively small systems. This leads us to approximations to the solution of the full set of coupled ODEs. We discuss this in the next section. 
+
+
+\section{The In-Medium SRG approach}
+
+
 
 Instead of performing SRG in free space, the evolution can be done at
-finite density, i.e.~directly in the A-body system
-\cite{kehrein2006flow}. This approach has recently been applied very
-successfully in nuclear physics \cite{IMSRG,PhysRevLett.106.222502}
+finite density, that is directly in the $A$-body system
+\cite{kehrein2006}. This approach has recently been applied very
+successfully in nuclear physics, see the recent review of Bogner, Hergert, Morris and collaborators 
+\cite{hergert2016},
 and is called in-medium SRG (IM-SRG). The method allows the evolution
 of $3,...,A$-body operators using only two-body machinery, with the
 simplifications arising from the use of normal-ordering with respect
 to a reference state.
 
 In our case, we assume that the problem can be modelled by a
-Hamiltonian containing maximally two-body interactions. In
-second-quantized form, this one is given by
-\begin{align}
-\hat{H} & = \sum\limits_{pq}\left\langle p \right| \hat{h}^{(0)}
-\left| q \right\rangle a_p\da a_q + \frac{1}{4}\sum\limits_{pqrs}\lla
-pq || r s \rra a_p\da a_q\da a_s a_r,
-\label{eq:ourHamiltonian}
-\end{align} 
-where the operator $\hat{h}^{(0)}$ denotes the single-particle
-Hamiltonian, and the elements $\langle pq||rs\rangle$ are the
-anti-symmetrized two-body matrix elements.  Normal-ordering with
-respect to a reference state $|\Phi_0\rangle$ yields
-\begin{align*}
-\hat{H} &= E_0 + \sum\limits_{pq}f_{pq}\llb a_p\da a_q\rrb +
-\frac{1}{4}\sum\limits_{pqrs}v_{pqrs} \llb a_p\da a_q\da a_s a_r \rrb,
-\end{align*}
-with Fock matrix elements
+Hamiltonian containing maximally two-body interaction, as done in chapters 8 and 9. In
+second-quantized form, we defined in chapter 8 the normal-ordered Hamiltonian as
 \[
-f_{pq} = \lla p \right|\hat{h}^{(0)}\left| q \rra + \sum\limits_{i}
-\lla pi || qi\rra,
+\hat{H}_N = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^\dagger_p
+a_q+\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s a_r+\sum_{pq,i\le F}
+\langle pi|\hat{v}|qi\rangle \left\{a^\dagger_p a_q.
 \]
-and where $v_{pqrs} = \lla pq || r s \rra$ are the amplitudes of the
-two-body operator.  Here and in the following, indices $i,j,k,...$
+In chapter 8 we rewrote the normal-ordered Hamiltonian 
+in terms of a new one-body operator and a two-body operator
+\[
+\hat{H}_N=\hat{F}_N+\hat{V}_N,
+\]
+with
+\[
+\hat{F}_N=\sum_{pq} \langle p|\hat{f}|q\rangle a^\dagger_pa_q,
+\]
+where
+\[
+\langle p|\hat{f}|q\rangle= \langle p|\hat{h}_0|q\rangle +\sum_{i\le F}
+\langle pi|\hat{v}|qi\rangle.
+\]
+The last term on the right hand side represents a medium modification
+to the single-particle Hamiltonian due to the two-body interaction.
+Finally, the two-body interaction is given by
+\[
+\hat{V}_N = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s a_r.
+\]
+In the equations below we will use the following shorthand notation for the matrix elements
+\[
+f_{pq}=\langle p|\hat{f}|q\rangle,
+\]
+and 
+\[
+v_{pqrs}= \langle pq|\hat{v}|rs\rangle.
+\]
+As discussed in chapter 8, the indices $i,j,k,...$
 denote hole states below the Fermi level, indices $a,b,c,...$
 particles states above the Fermi level, and indices $ p,q,r,...$ can
 be used for both particle and hole states. As reference state
@@ -363,30 +367,35 @@ higher and higher order interaction terms during the flow. With each
 evaluation of the commutator, the Hamiltonian gains terms of higher
 order, and these induced contributions will in subsequent integration
 steps contribute to terms of lower order. In principle, this continues
-to infinity.\\ To make the method computationally possible, we have to
+to infinity. 
+To make the method computationally possible, we have to
 close the IM-SRG flow equations, suggesting that we are forced to
 truncate the equations to a certain order. We choose to truncate both
 $\hat{H}_s$ and $\hat{\eta}_s$ at the two-body level, an approach
 which is referred to as IM-SRG(2).  This normal-ordered two-body
 approximation seems to be sufficient in many cases and has yielded
 excellent results for several nuclei
-\cite{PhysRevLett.106.222502,PhysRevLett.109.052501,IMSRG}.\\ The
+\cite{tsukiyama2011,tsukiyama2012,hergert2016}.
+
+The
 commutator in the flow equations (\ref{eq:flowEquations}) guarantees
 that the IM-SRG wave function $U_s^\dagger|\Phi\rangle$ can be
 expanded in terms of linked diagrams only
-\cite{shavitt2009many,ISI:A1981MN73700014}, which suggests that IM-SRG
+\cite{shavittbartlett2009,hergert2016}, which suggests that IM-SRG
 is size-extensive. Regarding the quality of the SRG results, it means
 that the error introduced by truncating the many-body expansions
-scales linearly with the number of particles~$N$.\\ With this
+scales linearly with the number of particles~$N$.
+
+With this
 truncation, the generator $\hat{\eta}$ can be written as
 \[
-\hat{\eta} = \sum_{pq} \eta_{pq}^{(1)} \llb a_p\da a_q\rrb +
-\frac{1}{4}\sum\limits_{pqrs}\eta_{pqrs}^{(2)} \llb a_p\da a_q\da a_s
-a_r \rrb,
+\hat{\eta} = \sum_{pq} \eta_{pq}^{(1)} \lbrace  a_p^{\dagger}a_q\rbrace  +
+\frac{1}{4}\sum\limits_{pqrs}\eta_{pqrs}^{(2)} \lbrace  a_p^{\dagger}a_q^{\dagger}a_s
+a_r \rbrace ,
 \]
 where $\eta_{pq}^{(1)}$ and $ \eta_{pqrs}^{(2)}$ are the one- and
 two-body elements, respectively. Making use of the permutation
-operator $ \hat{P}_{pq}f(p,q) = f(q,p)$, the IM-SRG(2) flow equations
+operator $ \hat{P}_{pq}f(p,q) = f(q,p)$ defined in chapter 8, the IM-SRG(2) flow equations
 are given by
 \begin{widetext}
 \begin{align}
@@ -394,57 +403,61 @@ are given by
 \eta_{ai}^{(1)}f_{ia}\right) +
 \frac{1}{2}\sum_{ijab}\eta_{ijab}^{(2)}v_{abij},
 \label{eq:flow1}\\
-\frac{d f_{pq}}{ds}&= \sum_r \lb \eta_{pr}^{(1)}f_{rq} +
-\eta_{qr}^{(1)}f_{rp}\right) + \sum_{ia}\lb 1-\hat{P}_{ia}\rb \lb
-\eta_{ia}^{(1)}v_{apiq} - f_{ia}\eta_{apiq}^{(2)} \rb \notag \\ &
-+\frac{1}{2} \sum_{aij} \lb 1+\hat{P}_{pq}\rb
-\eta_{apij}^{(2)}v_{ijaq} + \frac{1}{2}\sum_{abi}\lb 1+\hat{P}_{pq}\rb
+\frac{d f_{pq}}{ds}&= \sum_r \left(\eta_{pr}^{(1)}f_{rq} +
+\eta_{qr}^{(1)}f_{rp}\right) + \sum_{ia}\left(1-\hat{P}_{ia}\right)\lb
+\eta_{ia}^{(1)}v_{apiq} - f_{ia}\eta_{apiq}^{(2)} \right)\notag \\ &
++\frac{1}{2} \sum_{aij} \left(1+\hat{P}_{pq}\rb
+\eta_{apij}^{(2)}v_{ijaq} + \frac{1}{2}\sum_{abi}\left(1+\hat{P}_{pq}\rb
 \eta_{ipab}^{(2)}v_{abiq},
 \label{eq:flow2}
 \end{align}
 \begin{align}
-\frac{d v_{pqrs}}{ds} &= \sum_t \lb 1-\hat{P}_{pq} \rb \lb
-\eta_{pt}^{(1)}v_{tqrs}-f_{pt}\eta_{tqrs}^{(2)}\rb -\sum_t \lb
-1-\hat{P}_{rs} \rb \lb \eta_{tr}^{(1)} v_{pqts} - f_{tr}
-\eta_{pqts}^{(2)}\rb \notag \\ & +\frac{1}{2}\sum_{ab}
-\lb\eta_{pqab}^{(2)} v_{abrs} - v_{pqab}\eta_{abrs}^{(2)}\rb -
+\frac{d v_{pqrs}}{ds} &= \sum_t \left(1-\hat{P}_{pq} \right)\lb
+\eta_{pt}^{(1)}v_{tqrs}-f_{pt}\eta_{tqrs}^{(2)}\right)-\sum_t \lb
+1-\hat{P}_{rs} \right)\left(\eta_{tr}^{(1)} v_{pqts} - f_{tr}
+\eta_{pqts}^{(2)}\right)\notag \\ & +\frac{1}{2}\sum_{ab}
+\lb\eta_{pqab}^{(2)} v_{abrs} - v_{pqab}\eta_{abrs}^{(2)}\right)-
 \frac{1}{2}\sum_{ij} \lb\eta_{pqij}^{(2)} v_{ijrs} -
-v_{pqij}\eta_{ijrs}^{(2)}\rb \notag \\ & -\sum_{ia} \lb 1-
-\hat{P}_{ia} \rb \lb 1-\hat{P}_{pq}\rb \lb 1-\hat{P}_{rs} \rb
+v_{pqij}\eta_{ijrs}^{(2)}\right)\notag \\ & -\sum_{ia} \left(1-
+\hat{P}_{ia} \right)\left(1-\hat{P}_{pq}\right)\left(1-\hat{P}_{rs} \rb
 \eta_{aqis}^{(2)}v_{ipar}.
 \label{eq:flow3}
 \end{align}
 \end{widetext}
-Note that for brevity, we skip all $s$-dependence in the equations.
+Note that for brevity, we have skipped the explicit $s$-dependence in the equations.
 
-\subsubsection*{Choice of generator}
+\subsection*{Choice of generator}
 To determine the specific unitary transformation, one needs to specify
 the generator~$\hat{\eta}$. Through different choices, the SRG flow
 can be adapted to the features of a particular problem.\\
 
 
-\paragraph*{Wegner's canonical generator}
+\paragraph{Wegner's canonical generator}
 The original choice, suggested by Wegner \cite{PhysRepWegner0}, reads
-\be \hat{\eta} = \left[ \Hd, \Ho \right] = \left[ \Hd, \hat{H}
+\begin{equation} 
+\hat{\eta} = \left[ \hat{H}^{\rm d}, \hat{H}^{\rm od} \right] = \left[ \hat{H}^{\rm d}, \hat{H}
   \right].
 \label{eq:etaWegner}
-\ee As commutator between two Hermitian operators, $\hat{\eta}$
+\end{equation} 
+As commutator between two Hermitian operators, $\hat{\eta}$
 fulfils the criterion of antihermiticity and can be shown to suppress
-the off-diagonal matrix elements \cite{kehrein2006flow}. In general,
+the off-diagonal matrix elements \cite{kehrein2006}. In general,
 matrix elements far off the diagonal, where the Hamiltonian connects
 states with large energy differences, are suppressed much faster than
-elements closer to the diagonal. \\ Evaluating the commutator, we get
+elements closer to the diagonal. 
+
+Evaluating the commutator, we get
 for the one- and two-body elements
 \begin{align*}
-\eta_{pq}^{(1)} = & \sum_{r}\lb f_{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb
-+ f_{pq} v_{qppq}^d \lb n_q - n_p \rb \\ \eta_{pqrs}^{(2)} = & -
-\sum_t \left\lbrace \lb 1-\hat{P}_{pq} \rb f_{pt} v_{tqrs}^d - \lb 1 -
-\hat{P}_{rs} \rb f_{tr} v_{pqts}^d \right\rbrace \notag \\ & + \sum_t
-\left\llb \lb 1 - \hat{P}_{pq} \rb f_{pt}^d v_{tqrs} - \lb 1 -
-\hat{P}_{rs} \rb f_{tr}^d v_{pqts} \right\rrb \notag \\ & +
-\frac{1}{2} \sum_{tu} (1 - n_t - n_u) \lb v_{pqtu}^d v_{turs} -
-v_{pqtu} v_{turs}^d \rb \notag \\ & + \sum_{tu} \lb n_t - n_u \rb \lb
-1 - \hat{P}_{pq} \rb \lb 1 - \hat{P}_{rs} \rb v_{tpur}^d v_{uqts},
+\eta_{pq}^{(1)} = & \sum_{r}\left(f_{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb
++ f_{pq} v_{qppq}^d \left(n_q - n_p \right)\\ \eta_{pqrs}^{(2)} = & -
+\sum_t \left\lbrace \left(1-\hat{P}_{pq} \right)f_{pt} v_{tqrs}^d - \left(1 -
+\hat{P}_{rs} \right)f_{tr} v_{pqts}^d \right\rbrace \notag \\ & + \sum_t
+\left\lbrace  \left(1 - \hat{P}_{pq} \right)f_{pt}^d v_{tqrs} - \left(1 -
+\hat{P}_{rs} \right)f_{tr}^d v_{pqts} \right\rbrace  \notag \\ & +
+\frac{1}{2} \sum_{tu} (1 - n_t - n_u) \left(v_{pqtu}^d v_{turs} -
+v_{pqtu} v_{turs}^d \right)\notag \\ & + \sum_{tu} \left(n_t - n_u \right)\lb
+1 - \hat{P}_{pq} \right)\left(1 - \hat{P}_{rs} \right)v_{tpur}^d v_{uqts},
 \end{align*}
 where we use the standard notation
 \[
@@ -454,10 +467,10 @@ n_p = \begin{cases} 1, & \mbox{if } p< \epsilon_F \quad(p\;\mbox{is
 \end{cases}.
 \]
 
-\paragraph*{White's generator}
+\paragraph{White's generator}
 Apart from this canonical generator, there exist several other ones in
 literature. One of them is White's choice
-\cite{White:cond-mat0201346}, which makes numerical approaches much
+\cite{white2002}, which makes numerical approaches much
 more efficient.  The problem with Wegner's generator are the widely
 varying decaying speeds of the elements, removing first terms with
 large energy differences and then subsequently those ones with smaller
@@ -471,11 +484,10 @@ connected to the reference state $|\Phi_0\rangle$, aiming to decouple
 the reference state from the remaining Hamiltonian. With a suitable
 transformation, the elements get similar decaying speeds, which solves
 the problem of stiffness of the flow equations.  The generator is
-explicitly constructed the following way
-\cite{PhysRevLett.106.222502,White:cond-mat0201346}
+explicitly constructed the following way \cite{white2002}
 \begin{align}
-\hat{\eta} &= \sum_{ai} \frac{f_{ai}}{f_a-f_i-v_{aiai}}\lbrace a_a\da a_i\rbrace -\text{hc} \notag \\ & + \sum_{abij}
-\frac{v_{abij}}{f_a+f_b-f_i-f_j+A_{abij}}\lbrace a_a\da a_b\da a_j
+\hat{\eta} &= \sum_{ai} \frac{f_{ai}}{f_a-f_i-v_{aiai}}\lbrace a_a^{\dagger}a_i\rbrace -\text{hc} \notag \\ & + \sum_{abij}
+\frac{v_{abij}}{f_a+f_b-f_i-f_j+A_{abij}}\lbrace a_a^{\dagger}a_b^{\dagger}a_j
 a_i\rbrace - \text{hc},
 \label{eq:WhiteFull}
 \end{align}
@@ -491,7 +503,7 @@ these elements contribute only linearly with White's generator, which
 results in much better numerical properties.
 
 
-
+{\bf add more? Magnus? derivation of the equations?}
 
 
 
