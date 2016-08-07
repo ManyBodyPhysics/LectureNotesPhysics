@@ -6,8 +6,6 @@
 
 
 
-\abstract{Our presentation}
-
 
 Nuclear physics has recently experienced several discoveries and
 technological advances that address the fundamental questions of the
@@ -17,9 +15,9 @@ Many of these advances have been made possible by significant
 investments in frontier research facilities worldwide over the last
 two decades. Some of these discoveries are the detection of perhaps
 the most exotic state of matter, the quark-gluon plasma, which is
-believed to have existed in the very first moments of the Universe
-(refs).  Recent experiments have validated the standard solar model
-and established that neutrinos have mass (refs). High-precision
+believed to have existed in the very first moments of the Universe.  
+Recent experiments have validated the standard solar model
+and established that neutrinos have mass. High-precision
 measurements of the quark structure of the nucleon are challenging
 existing theoretical understanding.  Nuclear physicists have started
 to explore a completely unknown landscape of nuclei with extreme
@@ -42,27 +40,27 @@ nuclei involve solving the nuclear many-body problem.
 
 Accompanying these developments, a qualitative change has swept the
 nuclear theory landscape thanks to a combination of techniques that is
-allowing, for the first time, th direct connection between QCD and
-nuclear structure. This transformation has been brought by a dramatic
+allowing, for the first time, to construct links between QCD and
+the nuclear many-body problem. This transformation has been brought by a dramatic
 improvement in the capability of numerical calculations both in QCD,
-via lattice simulations, and in the nuclear many-body problem, via "ab
-initio" methods for the diagonilization of non-relativistic
-Hamiltonians. Simultaneously, the framework of effective field
-theories builts a bridge between the two numerical approaches,
-allowing to convert the results of lattice QCD into input to ab initio
+via lattice simulations, and in the nuclear many-body problem via first principle or {\em ab initio} 
+many-body methods that employ non-relativistic
+Hamiltonians. Simultaneously, effective field
+theories attempt at buidling  a bridge between the two numerical approaches,
+allowing to convert the results of lattice QCD into input Hamiltonians that can be used in {\em ab initio}
 methods.
 
-Now, algorithmic and computational advances hold promise for
+Algorithmic and computational advances hold promise for
 breakthroughs in predictive power including proper error estimates,
-enhancing the already strong links between theory and experiment.
-These advances include better ab initio many-body methods as well as a
+enhancing the already strong ties between theory and experiment.
+These advances include better {\em ab initio} many-body methods as well as a
 better understanding of the underlying effective degrees of freedom
-and the respective forces at play.  And obviously better numerical
-algorithms as well as developments in high-performance computing.
-This will provide us with important new insights about the stability
-of nuclear matter and allow us to relate these novel understandings to
+and the respective forces at play.  Similarly, we have recently witnessed a significant improvement in numerical
+algorithms and high-performance computing.
+This provides us with important new insights about the stability
+of nuclear matter and allows us to relate these novel understandings to
 the underlying laws of motion, the corresponding forces and the
-pertinent fundamental building blocks.
+pertinent fundamental building blocks of nuclear matter.
 
 Important issues such as whether we can explain from first-principle
 methods the existence of magic numbers and their vanishing as we add
@@ -75,58 +73,36 @@ advances, will allow us to advance our basic knowledge about the
 limits of stability of matter, and, hopefully, help us in gaining a
 better understanding of visible matter.
 
-It is within this framework the present texts finds its rationale.
-This text collects and synthesizes seven series of lectures on the
+It is within this framework the present set of lectures finds its rationale.
+This text collects and synthesizes ten series of lectures on the
 nuclear many-body problem, starting from our present understanding of
 the underlying forces with a presentation of recent advances within
 the field of lattice QCD, via effective field theories to central
-many-body methods like Monte Carlo, coupled-cluster, and large-scale
-diagonalization methods.  The applications span from our smallest
-components, quarks and gluons as the mediators of the strong force to
-the computation of the equation of state for infinite nuclear matter
-and neutron star matter.  The lectures provide a proper exposition of
-the underlying theoretical and algorithmic approaches as well as
-strong ties to the numerical implementation of the exposed methods.
-The lectures propose exercises, often providing a proper link to
-actual numerical software The latter will enable the reader to build
-upon these and develop his/her own insights about these methods, as
-well as using these codes for developing his/her own programs for
-tackling complicated many-body problems.
+many-body methods like various Monte Carlo approaches, coupled-cluster
+theory, the similarity renormalization group approach, Green's
+function methods and large-scale diagonalization methods.  The
+applications span from our smallest components, quarks and gluons as
+the mediators of the strong force to the computation of the equation
+of state for infinite nuclear matter and neutron star matter.  The
+lectures provide a proper exposition of the underlying theoretical and
+algorithmic approaches as well as strong ties to the numerical
+implementation of the exposed methods.  The various chapters propose
+exercises meant to deepen the exposed theory as well as  actual numerical software
+The latter will enable the reader to build upon these and develop
+her/his own insights about these methods, as well as using these codes
+for developing her/his own programs for tackling complicated many-body
+problems.  Proper benchmarks for the various programs are also provided, allowing thereby potential readers and users to check the 
+correctness, installation and compilation  of the various programs. All codes are properly linked in the various chapters and available via the github link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics}. 
 
 
+\begin{acknowledgement}
+The different chapters are based on lectures given at the Doctoral Training program {\em Computational Nuclear Physics - Hadrons, Nuclei and Dense Matter} held at  the European Center for Theoretical Nuclear Physics
+and Related Areas (ECT*) in Trento, Italy, from April 13 to May 22, 2015, the Nuclear Talent course {\em Many-body methods for nuclear physics}, held at GANIL, Caen, France, from July 5 to July 25,  2015, and the Nuclear Talent course {\em High-performance computing and computational tools for nuclear physics} held at North Carolina State University from July 11 to July 29, 2016. For more information about the Nuclear Talent courses see \url{http://www.nucleartalent.org}. For the Doctoral Training program of the ECT*, see \url{http://www.ectstar.eu/node/799}.
+The support for organizing these series of lectures from the ECT*, GANIL and the University of Basse Normadie at Caen, North Carolina State University, Los Alamos National Laboratory and Michigan State University is greatly acknowledged.   Some of the lectures (chapters 8 and 10) are co-authored by students (Michigan State University) who  attended the abovementioned Nuclear Talent courses.
 
 
-A proper understanding of the role of correlations beyond a mean-field
-description is of great importance for quantum many-particle theories.
-For many quantum-mechanical systems, either finite ones or infinite
-systems like the homogeneous electron gas in two or three dimensions
-\cite{ceperley1980,tanatar1989,shepherd2012a} or nuclear or neutron star matter 
-\cite{day1967,shapiro,walecka,weber1999,hh2000},  
-the concept of an independent particle motion plays a fundamental role
-in studies of many-particle systems.  Deviations from such an
-independent particle, or mean-field, picture have normally been
-interpreted as a possible measure of correlations.  The latter are
-expected to reveal important features about the structure and the
-dynamics of a many-particle system beyond a mean-field
-approximation. However, even for a system like the homogeneous
-electron gas, defined by a rather simple model Hamiltonian that
-results in mean-field solutions in closed form, to obtain a reliable
-estimate of correlations beyond the mean field with different
-many-body methods, is rather difficult.  The nuclear many-body problem
-for infinite nuclear matter, which is an idealized 
-system of infinitely many interacting baryons, is no exception. There
-as well, the simplicity of the infinite system at the one-body level
-offers a good starting point for various many-body
-approximations. However, to understand properly correlations beyond
-the mean field level for nuclear matter has proven to be a very hard
-problem to solve. Being able to compute reliably properties of
-infinite nuclear matter is thus one of the fundamental goals of
-nuclear physics and many-particle theories, with far reaching
-consequences for our basic understanding of hadronic matter, as seen
-in the physics of compact objects like neutron stars or in explosive
-phenomena in astrophysics.
+The work of MHJ is supported by NSF Grant No.~PHY-1404159 (Michigan State University). 
+\end{acknowledgement}
 
-
-
-\bibliographystyle{spphys}
-\bibliography{lnplib}
+%\bibliographystyle{spphys}
+%\bibliography{lnplib}
