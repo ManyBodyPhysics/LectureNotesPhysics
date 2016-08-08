@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 AUG 2016 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 AUG 2016 07:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,7 +1014,7 @@ LaTeX Warning: Label `FTpart' multiply defined.
 
 LaTeX Warning: Label `FThole' multiply defined.
 
-) (./chapter12.aux))
+))
 \openout1 = `lnp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
@@ -1034,8 +1034,7 @@ LaTeX Font Info:    ... okay on input line 172.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 172.
 
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 172.
@@ -1845,22 +1844,22 @@ Overfull \hbox (3.22194pt too wide) detected at line 291
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 292
- []\T1/fve/m/n/10 374
+ []\T1/fve/m/n/10 375
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 295
- []\T1/fve/m/n/10 377
+ []\T1/fve/m/n/10 378
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 296
- []\T1/fve/m/n/10 377
+ []\T1/fve/m/n/10 378
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 297
- []\T1/fve/m/n/10 377
+ []\T1/fve/m/n/10 378
  []
 
 
@@ -1948,16 +1947,6 @@ Overfull \hbox (3.22194pt too wide) detected at line 319
  []\T1/fve/m/n/10 399
  []
 
-
-Overfull \hbox (3.22194pt too wide) detected at line 325
- []\T1/fve/m/n/10 401
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 326
- []\T1/fve/m/n/10 401
- []
-
 )
 \tf@toc=\write6
 \openout6 = `lnp.toc'.
@@ -2023,7 +2012,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 ] [4]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 209.
- [5] <Chapter2-figures/config1.pdf, id=1329, 478.78876pt x 412.54124pt>
+ [5] <Chapter2-figures/config1.pdf, id=1310, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
@@ -2035,7 +2024,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 365.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 365.
- [8] <Chapter2-figures/qcd_ms_high.pdf, id=1396, 588.1975pt x 534.99875pt>
+ [8] <Chapter2-figures/qcd_ms_high.pdf, id=1377, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
@@ -2056,7 +2045,7 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 844.
 
-[15] <Chapter2-figures/topology.pdf, id=1550, 361.35pt x 252.945pt>
+[15] <Chapter2-figures/topology.pdf, id=1531, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
@@ -2070,7 +2059,7 @@ Overfull \hbox (2.46152pt too wide) in paragraph at lines 1383--1391
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-<Chapter2-figures/hic_evol_schem.pdf, id=1678, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1659, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
@@ -2093,7 +2082,7 @@ arz_eta_w_txt-eps-converted-to.pdf Chapter2-figures/AdS5_Schwarz_eta_w_txt.eps>
 (epstopdf)             \includegraphics on input line 2224.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1925, 459.717
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1906, 459.717
 5pt x 287.0725pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2116,7 +2105,7 @@ btr_txt.eps>
 (epstopdf)             \includegraphics on input line 2225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1927, 4
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1908, 4
 59.7175pt x 262.9825pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2137,7 +2126,7 @@ File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
 LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2297.
 
-<Chapter2-figures/EnergyDensity.pdf, id=1993, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=1974, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
@@ -2181,7 +2170,7 @@ ne-eps-converted-to.pdf Chapter3-figures/wilson-line.eps>
 (epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2302, 325.215pt x 208.78
+<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2283, 325.215pt x 208.78
 pt>
 File: Chapter3-figures/wilson-line-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2208,7 +2197,7 @@ converted-to.pdf Chapter3-figures/cube.eps>
 (epstopdf)             \includegraphics on input line 250.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/cube-eps-converted-to.pdf, id=2314, 414.54875pt x 229.85875pt
+<Chapter3-figures/cube-eps-converted-to.pdf, id=2295, 414.54875pt x 229.85875pt
 >
 File: Chapter3-figures/cube-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/cube-eps-converted-to.pdf>
@@ -2228,7 +2217,7 @@ n-eps-converted-to.pdf Chapter3-figures/dispersion.eps>
 (epstopdf)             \includegraphics on input line 419.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2350, 332.24126pt x 206.7
+<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2331, 332.24126pt x 206.7
 725pt>
 File: Chapter3-figures/dispersion-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/dispersion-eps-converted-to.pdf>
@@ -2248,7 +2237,7 @@ ons-eps-converted-to.pdf Chapter3-figures/correlations.eps>
 (epstopdf)             \includegraphics on input line 605.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/correlations-eps-converted-to.pdf, id=2404, 1370.11874pt x 45
+<Chapter3-figures/correlations-eps-converted-to.pdf, id=2384, 1370.11874pt x 45
 3.695pt>
 File: Chapter3-figures/correlations-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -2268,7 +2257,7 @@ eps-converted-to.pdf Chapter3-figures/wilson-L.eps>
 (epstopdf)             \includegraphics on input line 626.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2405, 155.58125pt x 229.858
+<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2385, 155.58125pt x 229.858
 75pt>
 File: Chapter3-figures/wilson-L-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/wilson-L-eps-converted-to.pdf>
@@ -2288,7 +2277,7 @@ eps-converted-to.pdf Chapter3-figures/strong-c.eps>
 (epstopdf)             \includegraphics on input line 703.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2427, 171.64125pt x 171.641
+<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2408, 171.64125pt x 171.641
 25pt>
 File: Chapter3-figures/strong-c-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/strong-c-eps-converted-to.pdf>
@@ -2309,7 +2298,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 829.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/crossover-eps-converted-to.pdf, id=2451, 597.23125pt x 845.15
+<Chapter3-figures/crossover-eps-converted-to.pdf, id=2432, 597.23125pt x 845.15
 75pt>
 File: Chapter3-figures/crossover-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/crossover-eps-converted-to.pdf>
@@ -2329,7 +2318,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 898.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/running-g-eps-converted-to.pdf, id=2479, 578.16pt x 374.39874
+<Chapter3-figures/running-g-eps-converted-to.pdf, id=2460, 578.16pt x 374.39874
 pt>
 File: Chapter3-figures/running-g-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/running-g-eps-converted-to.pdf>
@@ -2358,7 +2347,7 @@ converted-to.pdf Chapter3-figures/auto.eps>
 (epstopdf)             \includegraphics on input line 1097.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/auto-eps-converted-to.pdf, id=2559, 974.64125pt x 406.51875pt
+<Chapter3-figures/auto-eps-converted-to.pdf, id=2540, 974.64125pt x 406.51875pt
 >
 File: Chapter3-figures/auto-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/auto-eps-converted-to.pdf>
@@ -2388,7 +2377,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1340.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2616, 475.7775pt x 394.473
+<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2597, 475.7775pt x 394.473
 75pt>
 File: Chapter3-figures/QQbar-pot-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/QQbar-pot-eps-converted-to.pdf>
@@ -2408,7 +2397,7 @@ ted-to.pdf>
 (epstopdf)             \includegraphics on input line 1415.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2637, 674.52pt x 477.
+<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2618, 674.52pt x 477.
 785pt>
 File: Chapter3-figures/effective-mass-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2428,7 +2417,7 @@ g-eps-converted-to.pdf Chapter3-figures/NO_scaling.eps>
 (epstopdf)             \includegraphics on input line 1416.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2638, 758.835pt x 509.905
+<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2619, 758.835pt x 509.905
 pt>
 File: Chapter3-figures/NO_scaling-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/NO_scaling-eps-converted-to.pdf>
@@ -2447,7 +2436,7 @@ ps-converted-to.pdf Chapter3-figures/pn-mass.eps>
 (epstopdf)             \includegraphics on input line 1445.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2643, 1165.35374pt x 731.733
+<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2624, 1165.35374pt x 731.733
 75pt>
 File: Chapter3-figures/pn-mass-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/pn-mass-eps-converted-to.pdf>
@@ -2469,7 +2458,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 1601.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2725, 361.35pt x 252.945p
+<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2706, 361.35pt x 252.945p
 t>
 File: Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf>
@@ -2488,7 +2477,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vc_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1602.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2726, 361.35pt x 252.945
+<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2707, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2508,7 +2497,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1603.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2727, 361.35pt x 252.945pt
+<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2708, 361.35pt x 252.945pt
 >
 File: Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf>
@@ -2527,7 +2516,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vt_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1604.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2728, 361.35pt x 252.945
+<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2709, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2550,7 +2539,7 @@ ft-eps-converted-to.pdf Chapter3-figures/phase-shift.eps>
 (epstopdf)             \includegraphics on input line 1644.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2798, 882.29625pt x 646.
+<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2779, 882.29625pt x 646.
 415pt>
 File: Chapter3-figures/phase-shift-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2570,7 +2559,7 @@ atter-eps-converted-to.pdf Chapter3-figures/neutron-matter.eps>
 (epstopdf)             \includegraphics on input line 1645.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2799, 592.2125pt x 71
+<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2780, 592.2125pt x 71
 5.67375pt>
 File: Chapter3-figures/neutron-matter-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2592,7 +2581,7 @@ s-converted-to.pdf Chapter3-figures/char-c.eps>
 (epstopdf)             \includegraphics on input line 2045.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/char-c-eps-converted-to.pdf, id=2885, 479.7925pt x 345.29pt>
+<Chapter3-figures/char-c-eps-converted-to.pdf, id=2866, 479.7925pt x 345.29pt>
 File: Chapter3-figures/char-c-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter3-figures/char-c-eps-converted-to.pdf>
@@ -2612,7 +2601,7 @@ eps-converted-to.pdf Chapter3-figures/leapfrog.eps>
 (epstopdf)             \includegraphics on input line 2102.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2906, 934.49126pt x 307.147
+<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2887, 934.49126pt x 307.147
 5pt>
 File: Chapter3-figures/leapfrog-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/leapfrog-eps-converted-to.pdf>
@@ -2637,7 +2626,7 @@ e/m/n/8.5 (2008) 1224
 
 
 ] [73]
-<Chapter4-figures/BosonContact-2body-simple.pdf, id=2961, 224.84pt x 58.2175pt>
+<Chapter4-figures/BosonContact-2body-simple.pdf, id=2942, 224.84pt x 58.2175pt>
 File: Chapter4-figures/BosonContact-2body-simple.pdf Graphic file (type pdf)
 <use Chapter4-figures/BosonContact-2body-simple.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
@@ -2647,7 +2636,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 505.
  [76]
-<Chapter4-figures/BosonContact-2body.pdf, id=3023, 249.93375pt x 62.2325pt>
+<Chapter4-figures/BosonContact-2body.pdf, id=3004, 249.93375pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-2body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-2body.pdf>
@@ -2655,7 +2644,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body.pdf used on input
 line 519.
 (pdftex.def)             Requested size: 318.43968pt x 79.29837pt.
  [77 <./Chapter4-figures/BosonContact-2body.pdf>]
-<Chapter4-figures/BosonContact-3body.pdf, id=3064, 334.24875pt x 62.2325pt>
+<Chapter4-figures/BosonContact-3body.pdf, id=3045, 334.24875pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-3body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-3body.pdf>
@@ -3192,7 +3181,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[91] <Chapter4-figures/fig_2bdypert.pdf, id=3289, 482.80376pt x 59.22125pt>
+[91] <Chapter4-figures/fig_2bdypert.pdf, id=3270, 482.80376pt x 59.22125pt>
 File: Chapter4-figures/fig_2bdypert.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_2bdypert.pdf>
@@ -3267,7 +3256,7 @@ and I'll forget about whatever was undefined.
                                                   \fi \fi 
 l.1844 \end{equation}
                       <./Chapter4-figures/fig_2bdypert.pdf>]
-<Chapter4-figures/fig_feynC0int.pdf, id=3339, 275.0275pt x 59.22125pt>
+<Chapter4-figures/fig_feynC0int.pdf, id=3320, 275.0275pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC0int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC0int.pdf>
@@ -3284,7 +3273,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[93] <Chapter4-figures/fig_feynC2int.pdf, id=3364, 470.75874pt x 59.22125pt>
+[93] <Chapter4-figures/fig_feynC2int.pdf, id=3344, 470.75874pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC2int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC2int.pdf>
@@ -3373,7 +3362,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 [94 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.pd
-f>] <Chapter4-figures/fig_feynDimer.pdf, id=3414, 460.72125pt x 88.33pt>
+f>] <Chapter4-figures/fig_feynDimer.pdf, id=3395, 460.72125pt x 88.33pt>
 File: Chapter4-figures/fig_feynDimer.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynDimer.pdf>
@@ -3406,7 +3395,7 @@ Overfull \hbox (13.88416pt too wide) in paragraph at lines 2156--2162
 ell-known Skorniakov-Ter-Martirosian
  []
 
-<Chapter4-figures/fig_feyn8c.pdf, id=3459, 359.3425pt x 151.56625pt>
+<Chapter4-figures/fig_feyn8c.pdf, id=3440, 359.3425pt x 151.56625pt>
 File: Chapter4-figures/fig_feyn8c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn8c.pdf>
@@ -3984,7 +3973,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[98] <Chapter4-figures/fig_feyn9c.pdf, id=3523, 432.61626pt x 61.22874pt>
+[98] <Chapter4-figures/fig_feyn9c.pdf, id=3504, 432.61626pt x 61.22874pt>
 File: Chapter4-figures/fig_feyn9c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn9c.pdf>
@@ -4022,7 +4011,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/B3LecNote.pdf, id=3589, 522.95375pt x 368.37625pt>
+<Chapter4-figures/B3LecNote.pdf, id=3570, 522.95375pt x 368.37625pt>
 File: Chapter4-figures/B3LecNote.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/B3LecNote.pdf>
@@ -4086,7 +4075,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/C0-Vertex.pdf, id=3642, 72.27pt x 58.2175pt>
+<Chapter4-figures/C0-Vertex.pdf, id=3623, 72.27pt x 58.2175pt>
 File: Chapter4-figures/C0-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/C0-Vertex.pdf>
@@ -4277,7 +4266,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<Chapter4-figures/nd-IntEq-Q.pdf, id=3683, 189.70876pt x 34.1275pt>
+<Chapter4-figures/nd-IntEq-Q.pdf, id=3664, 189.70876pt x 34.1275pt>
 File: Chapter4-figures/nd-IntEq-Q.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-Q.pdf>
@@ -4395,7 +4384,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/nd-IntEq-D.pdf, id=3711, 283.0575pt x 80.3pt>
+<Chapter4-figures/nd-IntEq-D.pdf, id=3692, 283.0575pt x 80.3pt>
 File: Chapter4-figures/nd-IntEq-D.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-D.pdf>
@@ -4875,7 +4864,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/Phillips.pdf, id=3764, 392.46625pt x 279.0425pt>
+<Chapter4-figures/Phillips.pdf, id=3745, 392.46625pt x 279.0425pt>
 File: Chapter4-figures/Phillips.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Phillips.pdf>
@@ -4939,7 +4928,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/Photon-Vertex-0.pdf, id=3805, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-0.pdf, id=3786, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-0.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-0.pdf>
@@ -4963,7 +4952,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [111 <./Chapter4-figures/Photon-Vertex-0.pdf>]
-<Chapter4-figures/OnePhotonExchange.pdf, id=3831, 30.1125pt x 29.10875pt>
+<Chapter4-figures/OnePhotonExchange.pdf, id=3812, 30.1125pt x 29.10875pt>
 File: Chapter4-figures/OnePhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/OnePhotonExchange.pdf>
@@ -4971,7 +4960,7 @@ Package pdftex.def Info: Chapter4-figures/OnePhotonExchange.pdf used on input l
 ine 3427.
 (pdftex.def)             Requested size: 47.4876pt x 45.89969pt.
 
-<Chapter4-figures/TwoPhotonExchange.pdf, id=3833, 50.1875pt x 29.10875pt>
+<Chapter4-figures/TwoPhotonExchange.pdf, id=3814, 50.1875pt x 29.10875pt>
 File: Chapter4-figures/TwoPhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/TwoPhotonExchange.pdf>
@@ -5001,7 +4990,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Chapter4-figures/SinglePhotonBubble.pdf, id=3835, 78.2925pt x 34.1275pt>
+<Chapter4-figures/SinglePhotonBubble.pdf, id=3816, 78.2925pt x 34.1275pt>
 File: Chapter4-figures/SinglePhotonBubble.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/SinglePhotonBubble.pdf>
@@ -5009,7 +4998,7 @@ Package pdftex.def Info: Chapter4-figures/SinglePhotonBubble.pdf used on input
 line 3456.
 (pdftex.def)             Requested size: 106.14656pt x 46.27058pt.
 
-<Chapter4-figures/Photon-Vertex-trans.pdf, id=3838, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-trans.pdf, id=3819, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-trans.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-trans.pdf>
@@ -5032,7 +5021,7 @@ and I'll forget about whatever was undefined.
 
 [112 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonEx
 change.pdf> <./Chapter4-figures/SinglePhotonBubble.pdf>]
-<Chapter4-figures/Photon-Prop-gauge.pdf, id=3861, 75.28125pt x 22.0825pt>
+<Chapter4-figures/Photon-Prop-gauge.pdf, id=3841, 75.28125pt x 22.0825pt>
 File: Chapter4-figures/Photon-Prop-gauge.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Prop-gauge.pdf>
@@ -5040,7 +5029,7 @@ Package pdftex.def Info: Chapter4-figures/Photon-Prop-gauge.pdf used on input l
 ine 3518.
 (pdftex.def)             Requested size: 69.74953pt x 20.46169pt.
 
-<Chapter4-figures/Photon-Vertex-mag.pdf, id=3862, 84.315pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-mag.pdf, id=3842, 84.315pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-mag.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-mag.pdf>
@@ -5049,7 +5038,7 @@ ine 3560.
 (pdftex.def)             Requested size: 71.99951pt x 46.28654pt.
  [113 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-P
 rop-gauge.pdf> <./Chapter4-figures/Photon-Vertex-mag.pdf>]
-<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3898, 176.66pt x 108.405pt>
+<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3879, 176.66pt x 108.405pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf>
@@ -5057,7 +5046,7 @@ Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf used on in
 put line 3586.
 (pdftex.def)             Requested size: 149.6064pt x 91.79938pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3900, 152.57pt x 103.38625pt>
+<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3881, 152.57pt x 103.38625pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf Graphic file (type pdf)
 <use Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf used on i
@@ -5133,7 +5122,7 @@ my insertion and my current dilemma will both disappear.
 LaTeX Warning: Reference `sec:Dibaryons' on page 114 undefined on input line 36
 33.
 
-<Chapter4-figures/Deuteron-Vertex.pdf, id=3905, 66.2475pt x 61.22874pt>
+<Chapter4-figures/Deuteron-Vertex.pdf, id=3886, 66.2475pt x 61.22874pt>
 File: Chapter4-figures/Deuteron-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Deuteron-Vertex.pdf>
@@ -5304,21 +5293,21 @@ or  <return>  to continue without it.
 
 
 ] [119] [120] [121]
-<Chapter5-figures/al0.png, id=4072, 385.44pt x 300.12125pt>
+<Chapter5-figures/al0.png, id=4053, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
 Package pdftex.def Info: Chapter5-figures/al0.png used on input line 147.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
-<Chapter5-figures/ae0.png, id=4074, 387.4475pt x 302.12875pt>
+<Chapter5-figures/ae0.png, id=4055, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
 Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 148.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
-<Chapter5-figures/ag0.png, id=4075, 383.4325pt x 300.12125pt>
+<Chapter5-figures/ag0.png, id=4056, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
@@ -5326,21 +5315,21 @@ Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 149.
 (pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
  [122 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-fig
 ures/ag0.png>] [123]
-<Chapter5-figures/simple1.png, id=4111, 788.9475pt x 95.35625pt>
+<Chapter5-figures/simple1.png, id=4092, 788.9475pt x 95.35625pt>
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
 Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 190.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
-<Chapter5-figures/loop1.png, id=4112, 893.3375pt x 191.71625pt>
+<Chapter5-figures/loop1.png, id=4093, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
 Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 196.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
-<Chapter5-figures/beta.pdf, id=4116, 481.8pt x 303.24593pt>
+<Chapter5-figures/beta.pdf, id=4097, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
@@ -5348,14 +5337,14 @@ Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 214.
 (pdftex.def)             Requested size: 212.29312pt x 133.6137pt.
  [124 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>] [125 <./
 Chapter5-figures/beta.pdf>] [126] [127] [128]
-[129] <Chapter5-figures/dimer.png, id=4220, 905.3825pt x 206.7725pt>
+[129] <Chapter5-figures/dimer.png, id=4201, 905.3825pt x 206.7725pt>
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
 Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 375.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
  [130 <./Chapter5-figures/dimer.png>]
-<Chapter5-figures/lattice.png, id=4231, 348.30125pt x 312.16624pt>
+<Chapter5-figures/lattice.png, id=4212, 348.30125pt x 312.16624pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
@@ -5363,7 +5352,7 @@ Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 395.
 (pdftex.def)             Requested size: 169.8319pt x 152.21019pt.
  [131 <./Chapter5-figures/lattice.png>]
 [132] [133] [134] [135] [136] [137] [138] [139] [140] [141]
-<Chapter5-figures/QCDbubble.pdf, id=4374, 424.58624pt x 370.38374pt>
+<Chapter5-figures/QCDbubble.pdf, id=4355, 424.58624pt x 370.38374pt>
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
@@ -5371,21 +5360,21 @@ Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 728.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
  [142 <./Chapter5-figures/QCDbubble.pdf>]
-<Chapter5-figures/overlap.pdf, id=4393, 481.8pt x 303.65443pt>
+<Chapter5-figures/overlap.pdf, id=4374, 481.8pt x 303.65443pt>
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
 Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 739.
 (pdftex.def)             Requested size: 212.29312pt x 133.79369pt.
  [143 <./Chapter5-figures/overlap.pdf>]
-[144] <Chapter5-figures/cumulant.png, id=4437, 491.8375pt x 321.2pt>
+[144] <Chapter5-figures/cumulant.png, id=4418, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
 Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 803.
 (pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
  [145] [146 <./Chapter5-figures/cumulant.png>] <Chapter5-figures/twobody.png, i
-d=4464, 800.9925pt x 530.98375pt>
+d=4445, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
@@ -5393,7 +5382,7 @@ Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 865.
 (pdftex.def)             Requested size: 424.58624pt x 281.46864pt.
  [147] [148 <./Chapter5-figures/twobody.png>] [149] [150] [151] [152] [153] [15
 4]
-<Chapter5-figures/dispersion.png, id=4582, 737.75626pt x 509.905pt>
+<Chapter5-figures/dispersion.png, id=4563, 737.75626pt x 509.905pt>
 File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
@@ -5401,14 +5390,14 @@ Package pdftex.def Info: Chapter5-figures/dispersion.png used on input line 110
 3.
 (pdftex.def)             Requested size: 424.58624pt x 293.44984pt.
  [155 <./Chapter5-figures/dispersion.png>] [156] [157] <Chapter5-figures/lusche
-r.png, id=4662, 614.295pt x 429.605pt>
+r.png, id=4643, 614.295pt x 429.605pt>
 File: Chapter5-figures/luscher.png Graphic file (type png)
 
 <use Chapter5-figures/luscher.png>
 Package pdftex.def Info: Chapter5-figures/luscher.png used on input line 1199.
 (pdftex.def)             Requested size: 212.29312pt x 148.46298pt.
  [158]
-<Chapter5-figures/interaction.png, id=4695, 658.46pt x 512.91624pt>
+<Chapter5-figures/interaction.png, id=4676, 658.46pt x 512.91624pt>
 File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
@@ -5416,7 +5405,7 @@ Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 12
 21.
 (pdftex.def)             Requested size: 424.58624pt x 330.74626pt.
  [159 <./Chapter5-figures/luscher.png>]
-<Chapter5-figures/tuning.png, id=4725, 466.74374pt x 294.09875pt>
+<Chapter5-figures/tuning.png, id=4706, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
@@ -5424,7 +5413,7 @@ Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1230.
 (pdftex.def)             Requested size: 212.29312pt x 133.76576pt.
  [160 <./Chapter5-figures/interaction.png>]
 [161 <./Chapter5-figures/tuning.png>] [162]
-<Chapter5-figures/dimer2.png, id=4761, 748.7975pt x 110.4125pt>
+<Chapter5-figures/dimer2.png, id=4742, 748.7975pt x 110.4125pt>
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
@@ -5432,21 +5421,21 @@ Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1305.
 (pdftex.def)             Requested size: 424.58624pt x 62.60724pt.
  [163 <./Chapter5-figures/dimer2.png>]
 [164] [165] [166] [167] [168] [169]
-<Chapter5-figures/tree.png, id=4863, 112.42pt x 74.2775pt>
+<Chapter5-figures/tree.png, id=4844, 112.42pt x 74.2775pt>
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
 Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1531.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
 
-<Chapter5-figures/box.png, id=4864, 118.4425pt x 73.27374pt>
+<Chapter5-figures/box.png, id=4845, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
 Package pdftex.def Info: Chapter5-figures/box.png used on input line 1537.
 (pdftex.def)             Requested size: 42.46121pt x 26.26782pt.
  [170 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>] [171]
-<Chapter5-figures/sunset.png, id=4890, 787.94376pt x 73.27374pt>
+<Chapter5-figures/sunset.png, id=4871, 787.94376pt x 73.27374pt>
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
@@ -5457,7 +5446,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 1568--1569
 [][] 
  []
 
-<Chapter5-figures/dresseddimer.png, id=4894, 858.20625pt x 60.225pt>
+<Chapter5-figures/dresseddimer.png, id=4875, 858.20625pt x 60.225pt>
 File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
@@ -5465,14 +5454,14 @@ Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
 586.
 (pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
  [172 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
-<Chapter5-figures/3body.png, id=4907, 821.0675pt x 84.315pt>
+<Chapter5-figures/3body.png, id=4888, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
 Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1610.
 (pdftex.def)             Requested size: 424.58624pt x 43.5996pt.
 
-<Chapter5-figures/HLambda.pdf, id=4913, 481.8pt x 319.76967pt>
+<Chapter5-figures/HLambda.pdf, id=4894, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
@@ -5521,7 +5510,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
-[185] <Chapter6-figures/formalism.png, id=5191, 439.8834pt x 249.5724pt>
+[185] <Chapter6-figures/formalism.png, id=5171, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
@@ -5529,7 +5518,7 @@ Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 209.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
  [186 <./Chapter6-figures/formalism.png>]
-[187] <Chapter6-figures/worldlines.png, id=5225, 579.6054pt x 495.7722pt>
+[187] <Chapter6-figures/worldlines.png, id=5206, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
@@ -5537,7 +5526,7 @@ Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 371
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [188] [189 <./Chapter6-figures/worldlines.png>] [190] [191]
-<Chapter6-figures/HSworldlines.png, id=5282, 579.6054pt x 495.7722pt>
+<Chapter6-figures/HSworldlines.png, id=5263, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -5545,7 +5534,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 11.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=5286, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=5267, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -5556,7 +5545,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 631.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 631.
 
-<Chapter6-figures/getzdualvecs.png, id=5287, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=5268, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -5568,7 +5557,7 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 645.
 
-<Chapter6-figures/call_getzvecs.png, id=5288, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=5269, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
@@ -5591,21 +5580,21 @@ ed, duplicate ignored
 l.713 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=5317, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=5297, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 786.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
  [195]
-<Chapter6-figures/dVds.png, id=5334, 507.8975pt x 367.3725pt>
+<Chapter6-figures/dVds.png, id=5315, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 809.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=5336, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=5317, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
@@ -5952,7 +5941,7 @@ converted-to.pdf Chapter7-figures/fig1.eps>
 (epstopdf)             \includegraphics on input line 433.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig1-eps-converted-to.pdf, id=5503, 619.31375pt x 435.6275pt>
+<Chapter7-figures/fig1-eps-converted-to.pdf, id=5484, 619.31375pt x 435.6275pt>
 File: Chapter7-figures/fig1-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig1-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig1-eps-converted-to.pdf used on inp
@@ -6003,7 +5992,7 @@ converted-to.pdf Chapter7-figures/fig2.eps>
 (epstopdf)             \includegraphics on input line 570.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig2-eps-converted-to.pdf, id=5562, 936.49875pt x 696.6025pt>
+<Chapter7-figures/fig2-eps-converted-to.pdf, id=5543, 936.49875pt x 696.6025pt>
 File: Chapter7-figures/fig2-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig2-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig2-eps-converted-to.pdf used on inp
@@ -6681,7 +6670,7 @@ converted-to.pdf Chapter7-figures/fig3.eps>
 (epstopdf)             \includegraphics on input line 824.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig3-eps-converted-to.pdf, id=5618, 671.50874pt x 491.8375pt>
+<Chapter7-figures/fig3-eps-converted-to.pdf, id=5599, 671.50874pt x 491.8375pt>
 File: Chapter7-figures/fig3-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig3-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig3-eps-converted-to.pdf used on inp
@@ -6860,7 +6849,7 @@ LaTeX Warning: Citation `ekstromPRX' on page 236 undefined on input line 868.
 
 LaTeX Warning: Citation `ekstromPRX' on page 237 undefined on input line 906.
 
-<Chapter8-figures/diagNNLO.pdf, id=5904, 1803.73875pt x 1574.88374pt>
+<Chapter8-figures/diagNNLO.pdf, id=5885, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
@@ -6933,7 +6922,7 @@ LaTeX Warning: Citation `haxton' on page 253 undefined on input line 2079.
 LaTeX Warning: Citation `svavittbartlett2009' on page 254 undefined on input li
 ne 2177.
 
-<Chapter8-figures/mbpt.pdf, id=6124, 614.295pt x 794.97pt>
+<Chapter8-figures/mbpt.pdf, id=6105, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
@@ -7031,7 +7020,7 @@ Overfull \hbox (4.76913pt too wide) in paragraph at lines 3230--3234
  []
 
 [270] [271]
-<Chapter8-figures/perturbationtheory.pdf, id=6389, 578.16pt x 433.62pt>
+<Chapter8-figures/perturbationtheory.pdf, id=6369, 578.16pt x 433.62pt>
 File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
@@ -7039,7 +7028,7 @@ Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input
 line 3382.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
 
-<Chapter8-figures/CCDMBPT4theory.pdf, id=6395, 578.16pt x 433.62pt>
+<Chapter8-figures/CCDMBPT4theory.pdf, id=6375, 578.16pt x 433.62pt>
 File: Chapter8-figures/CCDMBPT4theory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/CCDMBPT4theory.pdf>
@@ -7051,7 +7040,7 @@ es/CCDMBPT4theory.pdf>] [275]
 
 LaTeX Warning: Citation `blas' on page 276 undefined on input line 3561.
 
-<Chapter8-figures/blockvsfull_log.png, id=6572, 578.16pt x 433.62pt>
+<Chapter8-figures/blockvsfull_log.png, id=6552, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
@@ -7087,14 +7076,14 @@ Package xcolor Warning: Incompatible color definition on input line 3703.
 
 Package xcolor Warning: Incompatible color definition on input line 3703.
 
-[279] <Chapter8-figures/fig1.pdf, id=6608, 500.87437pt x 400.11984pt>
+[279] <Chapter8-figures/fig1.pdf, id=6589, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
 Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3758.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=6609, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=6590, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
@@ -7135,14 +7124,14 @@ Package xcolor Warning: Incompatible color definition on input line 3816.
 
 Package xcolor Warning: Incompatible color definition on input line 3816.
 
-<Chapter8-figures/fig3.pdf, id=6688, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=6669, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
 Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3836.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=6690, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=6671, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
@@ -7166,7 +7155,7 @@ LaTeX Warning: Citation `blas' on page 287 undefined on input line 4014.
 
 LaTeX Warning: Reference `eq:mtxmtx' on page 287 undefined on input line 4014.
 
-[287] <Chapter8-figures/MBPT2fig.pdf, id=7003, 528.05405pt x 403.94664pt>
+[287] <Chapter8-figures/MBPT2fig.pdf, id=6984, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT2fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT2fig.pdf>
@@ -7174,7 +7163,7 @@ Package pdftex.def Info: Chapter8-figures/MBPT2fig.pdf used on input line 4061.
 
 (pdftex.def)             Requested size: 424.58624pt x 324.80962pt.
  [288] [289 <./Chapter8-figures/MBPT2fig.pdf>] [290] [291]
-<Chapter8-figures/MBPT3fig.pdf, id=7265, 528.05405pt x 403.94664pt>
+<Chapter8-figures/MBPT3fig.pdf, id=7246, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT3fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT3fig.pdf>
@@ -7279,7 +7268,7 @@ grams / cpp / CCD / src$[]\T1/fve/m/n/10 , abide to this
  []
 
 [305]
-<Chapter8-figures/classabstractspbasis.pdf, id=7549, 501.875pt x 74.90987pt>
+<Chapter8-figures/classabstractspbasis.pdf, id=7530, 501.875pt x 74.90987pt>
 File: Chapter8-figures/classabstractspbasis.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/classabstractspbasis.pdf>
@@ -7364,7 +7353,7 @@ converted-to.pdf Chapter9-figures/qvar.eps>
 (epstopdf)             \includegraphics on input line 476.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/qvar-eps-converted-to.pdf, id=7800, 667.49374pt x 473.77pt>
+<Chapter9-figures/qvar-eps-converted-to.pdf, id=7781, 667.49374pt x 473.77pt>
 File: Chapter9-figures/qvar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/qvar-eps-converted-to.pdf>
@@ -7384,7 +7373,7 @@ onverted-to.pdf Chapter9-figures/jas.eps>
 (epstopdf)             \includegraphics on input line 507.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/jas-eps-converted-to.pdf, id=7815, 699.61375pt x 487.8225pt>
+<Chapter9-figures/jas-eps-converted-to.pdf, id=7796, 699.61375pt x 487.8225pt>
 File: Chapter9-figures/jas-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/jas-eps-converted-to.pdf>
@@ -7417,7 +7406,7 @@ f>
 (epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/hists-eps-converted-to.pdf, id=7938, 682.55pt x 465.74pt>
+<Chapter9-figures/hists-eps-converted-to.pdf, id=7919, 682.55pt x 465.74pt>
 File: Chapter9-figures/hists-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/hists-eps-converted-to.pdf>
@@ -7436,7 +7425,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 877.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7940, 669.50125pt x 466.74
+<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7921, 669.50125pt x 466.74
 374pt>
 File: Chapter9-figures/dmc_decay-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_decay-eps-converted-to.pdf>
@@ -7456,7 +7445,7 @@ mc-eps-converted-to.pdf Chapter9-figures/walkers_dmc.eps>
 (epstopdf)             \includegraphics on input line 897.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7961, 692.5875pt x 485.8
+<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7942, 692.5875pt x 485.8
 15pt>
 File: Chapter9-figures/walkers_dmc-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -7476,7 +7465,7 @@ eps-converted-to.pdf Chapter9-figures/dmc_extr.eps>
 (epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7963, 701.62125pt x 475.777
+<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7944, 701.62125pt x 475.777
 5pt>
 File: Chapter9-figures/dmc_extr-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_extr-eps-converted-to.pdf>
@@ -7599,7 +7588,7 @@ ergence-eps-converted-to.pdf Chapter9-figures/cimc_convergence.eps>
 (epstopdf)             \includegraphics on input line 2741.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8408, 726.715pt x 5
+<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8389, 726.715pt x 5
 05.89pt>
 File: Chapter9-figures/cimc_convergence-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -7608,7 +7597,7 @@ Package pdftex.def Info: Chapter9-figures/cimc_convergence-eps-converted-to.pdf
  used on input line 2741.
 (pdftex.def)             Requested size: 363.3566pt x 252.94437pt.
 
-<Chapter9-figures/cimcccd.pdf, id=8410, 578.16pt x 433.62pt>
+<Chapter9-figures/cimcccd.pdf, id=8391, 578.16pt x 433.62pt>
 File: Chapter9-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/cimcccd.pdf>
@@ -7635,19 +7624,56 @@ LaTeX Warning: Citation `golubvaloan1996' on page 371 undefined on input line 1
 
 [371] [372] [373]
 
-LaTeX Warning: Citation `shampine1976' on page 374 undefined on input line 291.
+LaTeX Warning: Citation `shampine1976' on page 374 undefined on input line 292.
 
 
 
-LaTeX Warning: Citation `kehrein2006' on page 374 undefined on input line 312.
+Overfull \hbox (40.78192pt too wide) in paragraph at lines 301--307
+\T1/fve/m/n/10 .413102-179 0.348610E+01 -.556534-177 0.000000E+00 0.000000E+00 
+-.101304-186 0.000000E+00
+ []
 
 
-LaTeX Warning: Citation `hergert2016' on page 374 undefined on input line 314.
+Overfull \hbox (51.85184pt too wide) in paragraph at lines 301--307
+\T1/fve/m/n/10 -.556534-177 0.551955E+01 -.119801-173 0.000000E+00 0.000000E+00
+ 0.000000E+00 0.000000E+00
+ []
 
+
+Overfull \hbox (46.50587pt too wide) in paragraph at lines 301--307
+\T1/fve/m/n/10 -.119801-173 0.747926E+01 -.168573-178 0.000000E+00 0.516773-184
+ 0.000000E+00 0.000000E+00
+ []
+
+
+Overfull \hbox (36.81294pt too wide) in paragraph at lines 301--307
+\T1/fve/m/n/10 -.168573-178 0.953081E+01 -.209242-176 -.652307E-07 -.101304-186
+ 0.000000E+00 0.000000E+00
+ []
+
+
+Overfull \hbox (14.03407pt too wide) in paragraph at lines 312--318
+\T1/fve/m/n/10 .473950E-02 0.348610E+01 -.401318E-02 -.274470E-07 -.103994E-11 
+0.174969E-10 -.213293E-
+ []
+
+
+Overfull \hbox (11.3521pt too wide) in paragraph at lines 312--318
+\T1/fve/m/n/10 .274470E-07 -.393739E-05 0.747927E+01 -.437695E-02 -.204824E-07 
+-.139603E-10 -.103994E-
+ []
+
+
+LaTeX Warning: Citation `kehrein2006' on page 374 undefined on input line 336.
+
+
+LaTeX Warning: Citation `hergert2016' on page 374 undefined on input line 338.
+
+[374]
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.327 \]
+l.351 \]
         
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7655,13 +7681,13 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[374]
 
-LaTeX Warning: Citation `hergert2016' on page 375 undefined on input line 378.
+LaTeX Warning: Citation `hergert2016' on page 375 undefined on input line 402.
 
 
-LaTeX Warning: Citation `hergert2016' on page 375 undefined on input line 384.
+LaTeX Warning: Citation `hergert2016' on page 375 undefined on input line 408.
 
+[375]
 
 ! LaTeX Error: Environment widetext undefined.
 
@@ -7669,7 +7695,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.400 \begin{widetext}
+l.424 \begin{widetext}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7678,7 +7704,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <argument> ...a}\left (1-\hat {P}_{ia}\right )\lb 
                                                   \eta _{ia}^{(1)}v_{apiq} -...
-l.413 \end{align}
+l.437 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7689,7 +7715,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7700,14 +7726,14 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ... - f_{ia}\eta _{apiq}^{(2)} \right )
                                                   \notag \\ & +\frac {1}{2} ...
-l.413 \end{align}
+l.437 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.413 \end{align}
+l.437 \end{align}
                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -7716,7 +7742,7 @@ Try to go on, since this might almost work.
 ! Undefined control sequence.
 <argument> ...um _{aij} \left (1+\hat {P}_{pq}\rb 
                                                   \eta _{apij}^{(2)}v_{ijaq}...
-l.413 \end{align}
+l.437 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7727,7 +7753,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...sum _{abi}\left (1+\hat {P}_{pq}\rb 
                                                   \eta _{ipab}^{(2)}v_{abiq}...
-l.413 \end{align}
+l.437 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7738,7 +7764,7 @@ and I'll forget about whatever was undefined.
 ! Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.413 \end{align}
+l.437 \end{align}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7749,7 +7775,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7760,7 +7786,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7771,7 +7797,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7782,7 +7808,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 <argument> ...a}\left (1-\hat {P}_{ia}\right )\lb 
                                                   \eta _{ia}^{(1)}v_{apiq} -...
-l.413 \end{align}
+l.437 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7793,7 +7819,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7804,14 +7830,14 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ... - f_{ia}\eta _{apiq}^{(2)} \right )
                                                   \notag \\ & +\frac {1}{2} ...
-l.413 \end{align}
+l.437 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7822,7 +7848,7 @@ my insertion and my current dilemma will both disappear.
 ! Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.413 \end{align}
+l.437 \end{align}
                  
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -7830,7 +7856,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.413 \end{align}
+l.437 \end{align}
                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -7839,7 +7865,7 @@ Try to go on, since this might almost work.
 ! Undefined control sequence.
 <argument> ...um _{aij} \left (1+\hat {P}_{pq}\rb 
                                                   \eta _{apij}^{(2)}v_{ijaq}...
-l.413 \end{align}
+l.437 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7850,7 +7876,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...sum _{abi}\left (1+\hat {P}_{pq}\rb 
                                                   \eta _{ipab}^{(2)}v_{abiq}...
-l.413 \end{align}
+l.437 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7861,7 +7887,7 @@ and I'll forget about whatever was undefined.
 ! Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.413 \end{align}
+l.437 \end{align}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7872,7 +7898,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7883,7 +7909,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.413 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7894,164 +7920,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.413 \end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[375]
-! Undefined control sequence.
-<argument> ... \left (1-\hat {P}_{pq} \right )\lb 
-                                                  \eta _{pt}^{(1)}v_{tqrs}-f...
-l.425 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.425 \end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra \right.
-<argument> ...rs}-f_{pt}\eta _{tqrs}^{(2)}\right )
-                                                  -\sum _t \lb 1-\hat {P}_{r...
-l.425 \end{align}
-                 
-I'm ignoring a \right that had no matching \left.
-
-! Undefined control sequence.
-<argument> ...a _{tqrs}^{(2)}\right )-\sum _t \lb 
-                                                  1-\hat {P}_{rs} \right )\l...
-l.425 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra \right.
-<argument> ...\sum _t \lb 1-\hat {P}_{rs} \right )
-                                                  \left (\eta _{tr}^{(1)} v_...
-l.425 \end{align}
-                 
-I'm ignoring a \right that had no matching \left.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.425 \end{align}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Undefined control sequence.
-<argument> ...ag \\ & +\frac {1}{2}\sum _{ab} \lb 
-                                                  \eta _{pqab}^{(2)} v_{abrs...
-l.425 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.425 \end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra \right.
-<argument> ...- v_{pqab}\eta _{abrs}^{(2)}\right )
-                                                  - \frac {1}{2}\sum _{ij} \...
-l.425 \end{align}
-                 
-I'm ignoring a \right that had no matching \left.
-
-! Undefined control sequence.
-<argument> ...right )- \frac {1}{2}\sum _{ij} \lb 
-                                                  \eta _{pqij}^{(2)} v_{ijrs...
-l.425 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra \right.
-<argument> ...- v_{pqij}\eta _{ijrs}^{(2)}\right )
-                                                  \notag \\ & -\sum _{ia} \l...
-l.425 \end{align}
-                 
-I'm ignoring a \right that had no matching \left.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.425 \end{align}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Undefined control sequence.
-<argument> ...}\right )\left (1-\hat {P}_{rs} \rb 
-                                                  \eta _{aqis}^{(2)}v_{ipar}...
-l.425 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra }, or forgotten \right.
-<template> }
-            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.425 \end{align}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.425 \end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.425 \end{align}
+l.437 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8062,7 +7931,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 <argument> ... \left (1-\hat {P}_{pq} \right )\lb 
                                                   \eta _{pt}^{(1)}v_{tqrs}-f...
-l.425 \end{align}
+l.449 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8073,7 +7942,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.425 \end{align}
+l.449 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8084,14 +7953,14 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ...rs}-f_{pt}\eta _{tqrs}^{(2)}\right )
                                                   -\sum _t \lb 1-\hat {P}_{r...
-l.425 \end{align}
+l.449 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
 
 ! Undefined control sequence.
 <argument> ...a _{tqrs}^{(2)}\right )-\sum _t \lb 
                                                   1-\hat {P}_{rs} \right )\l...
-l.425 \end{align}
+l.449 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8102,33 +7971,14 @@ and I'll forget about whatever was undefined.
 ! Extra \right.
 <argument> ...\sum _t \lb 1-\hat {P}_{rs} \right )
                                                   \left (\eta _{tr}^{(1)} v_...
-l.425 \end{align}
+l.449 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.425 \end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.425 \end{align}
-                 
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.425 \end{align}
+l.449 \end{align}
                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -8137,7 +7987,7 @@ Try to go on, since this might almost work.
 ! Undefined control sequence.
 <argument> ...ag \\ & +\frac {1}{2}\sum _{ab} \lb 
                                                   \eta _{pqab}^{(2)} v_{abrs...
-l.425 \end{align}
+l.449 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8148,7 +7998,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.425 \end{align}
+l.449 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8159,14 +8009,14 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ...- v_{pqab}\eta _{abrs}^{(2)}\right )
                                                   - \frac {1}{2}\sum _{ij} \...
-l.425 \end{align}
+l.449 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
 
 ! Undefined control sequence.
 <argument> ...right )- \frac {1}{2}\sum _{ij} \lb 
                                                   \eta _{pqij}^{(2)} v_{ijrs...
-l.425 \end{align}
+l.449 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8177,33 +8027,14 @@ and I'll forget about whatever was undefined.
 ! Extra \right.
 <argument> ...- v_{pqij}\eta _{ijrs}^{(2)}\right )
                                                   \notag \\ & -\sum _{ia} \l...
-l.425 \end{align}
+l.449 \end{align}
                  
 I'm ignoring a \right that had no matching \left.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.425 \end{align}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.425 \end{align}
-                 
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.425 \end{align}
+l.449 \end{align}
                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -8212,7 +8043,7 @@ Try to go on, since this might almost work.
 ! Undefined control sequence.
 <argument> ...}\right )\left (1-\hat {P}_{rs} \rb 
                                                   \eta _{aqis}^{(2)}v_{ipar}...
-l.425 \end{align}
+l.449 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8223,7 +8054,7 @@ and I'll forget about whatever was undefined.
 ! Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.425 \end{align}
+l.449 \end{align}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -8234,7 +8065,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.425 \end{align}
+l.449 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8245,7 +8076,201 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.425 \end{align}
+l.449 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+<argument> ... \left (1-\hat {P}_{pq} \right )\lb 
+                                                  \eta _{pt}^{(1)}v_{tqrs}-f...
+l.449 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.449 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ...rs}-f_{pt}\eta _{tqrs}^{(2)}\right )
+                                                  -\sum _t \lb 1-\hat {P}_{r...
+l.449 \end{align}
+                 
+I'm ignoring a \right that had no matching \left.
+
+! Undefined control sequence.
+<argument> ...a _{tqrs}^{(2)}\right )-\sum _t \lb 
+                                                  1-\hat {P}_{rs} \right )\l...
+l.449 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra \right.
+<argument> ...\sum _t \lb 1-\hat {P}_{rs} \right )
+                                                  \left (\eta _{tr}^{(1)} v_...
+l.449 \end{align}
+                 
+I'm ignoring a \right that had no matching \left.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.449 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.449 \end{align}
+                 
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.449 \end{align}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Undefined control sequence.
+<argument> ...ag \\ & +\frac {1}{2}\sum _{ab} \lb 
+                                                  \eta _{pqab}^{(2)} v_{abrs...
+l.449 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.449 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ...- v_{pqab}\eta _{abrs}^{(2)}\right )
+                                                  - \frac {1}{2}\sum _{ij} \...
+l.449 \end{align}
+                 
+I'm ignoring a \right that had no matching \left.
+
+! Undefined control sequence.
+<argument> ...right )- \frac {1}{2}\sum _{ij} \lb 
+                                                  \eta _{pqij}^{(2)} v_{ijrs...
+l.449 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra \right.
+<argument> ...- v_{pqij}\eta _{ijrs}^{(2)}\right )
+                                                  \notag \\ & -\sum _{ia} \l...
+l.449 \end{align}
+                 
+I'm ignoring a \right that had no matching \left.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.449 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.449 \end{align}
+                 
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.449 \end{align}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Undefined control sequence.
+<argument> ...}\right )\left (1-\hat {P}_{rs} \rb 
+                                                  \eta _{aqis}^{(2)}v_{ipar}...
+l.449 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.449 \end{align}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.449 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.449 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8260,28 +8285,28 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.426 \end{widetext}
+l.450 \end{widetext}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--433
+Underfull \hbox (badness 10000) in paragraph at lines 454--457
 
  []
 
 
-LaTeX Warning: Citation `PhysRepWegner0' on page 376 undefined on input line 43
-6.
+LaTeX Warning: Citation `PhysRepWegner0' on page 376 undefined on input line 46
+0.
 
 
-LaTeX Warning: Citation `kehrein2006' on page 376 undefined on input line 444.
+LaTeX Warning: Citation `kehrein2006' on page 376 undefined on input line 468.
 
 ! Undefined control sequence.
 <argument> ...{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb 
                                                   + f_{pq} v_{qppq}^d \left ...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8292,7 +8317,7 @@ and I'll forget about whatever was undefined.
 ! Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -8303,7 +8328,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8314,7 +8339,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8325,7 +8350,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 <argument> ... _{tu} \left (n_t - n_u \right )\lb 
                                                   1 - \hat {P}_{pq} \right )...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8336,7 +8361,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8347,14 +8372,14 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ...ight )\lb 1 - \hat {P}_{pq} \right )
                                                   \left (1 - \hat {P}_{rs} \...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I'm ignoring a \right that had no matching \left.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -8363,7 +8388,7 @@ Try to go on, since this might almost work.
 ! Undefined control sequence.
 <argument> ...{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb 
                                                   + f_{pq} v_{qppq}^d \left ...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8374,7 +8399,7 @@ and I'll forget about whatever was undefined.
 ! Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -8385,7 +8410,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8396,7 +8421,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8407,7 +8432,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 <argument> ... _{tu} \left (n_t - n_u \right )\lb 
                                                   1 - \hat {P}_{pq} \right )...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8418,7 +8443,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8429,14 +8454,14 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ...ight )\lb 1 - \hat {P}_{pq} \right )
                                                   \left (1 - \hat {P}_{rs} \...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I'm ignoring a \right that had no matching \left.
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8447,7 +8472,7 @@ my insertion and my current dilemma will both disappear.
 ! Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -8455,23 +8480,26 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.461 \end{align*}
+l.485 \end{align*}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-[376] [377]pdfTeX warning (ext4): destination with the same identifier (name{ci
-te.bogner2010@-11}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.545 \bibitem{bogner2010}
-                          pdfTeX warning (ext4): destination with the same iden
-tifier (name{cite.morris2015@-11}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.547 \bibitem{morris2015}
-                          ) [378]
+[376] [377]) [378pdfTeX warning (ext4): destination with the same identifier (n
+ame{cite.bogner2010@-11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 \include{chapter10}
+                         \label{chap:chapter10}pdfTeX warning (ext4): destinati
+on with the same identifier (name{cite.morris2015@-11}) has been already used, 
+duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 \include{chapter10}
+                         \label{chap:chapter10}]
 \openout2 = `chapter11.aux'.
 
  (./chapter11.tex [379
@@ -8480,7 +8508,8 @@ l.547 \bibitem{morris2015}
 
 
 
-] [380]
+]
+[380]
 
 LaTeX Warning: Reference `' on page 381 undefined on input line 77.
 
@@ -9123,7 +9152,7 @@ LaTeX Warning: Reference `eq:Dyson' on page 385 undefined on input line 339.
 LaTeX Warning: Reference `eq:???' on page 385 undefined on input line 339.
 
 
-<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=8739, 682.55pt x 582.175pt>
+<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=8720, 682.55pt x 582.175pt>
 File: Chapter11-figures/Pairing_model_CI_ADC_CC.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>
@@ -9132,7 +9161,7 @@ input line 363.
 (pdftex.def)             Requested size: 339.67029pt x 289.71877pt.
  [385] [386 <./Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>] [387] [388] [389
 ] [390]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8846, 1027.84pt x 770.88pt>
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8827, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
@@ -9161,25 +9190,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 829--831
  []
 
 [397] [398]) [399]
-\openout2 = `chapter12.aux'.
-
- (./chapter12.tex [400
-
-
-
-
-
-]) [401]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
- (./lnp.aux (./preface.aux)
-(./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux)
-(./chapter5.aux) (./chapter6.aux) (./chapter7.aux) (./chapter8.aux)
-(./chapter9.aux) (./chapter10.aux) (./chapter11.aux) (./chapter12.aux))
+ (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) 
+(./chapter4.aux) (./chapter5.aux) (./chapter6.aux)
+(./chapter7.aux) (./chapter8.aux) (./chapter9.aux) (./chapter10.aux)
+(./chapter11.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: AAAD2D0EB824E496C4BC0BE44B61C6F1;19810.
+(rerunfilecheck)             Checksum: 0F3D4DC7B01FD5360B6BE6D4FA93A71A;19498.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -9193,10 +9213,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 203.
  ) 
 Here is how much of TeX's memory you used:
- 26078 strings out of 493089
- 414632 string characters out of 6134842
- 609008 words of memory out of 5000000
- 25239 multiletter control sequences out of 15000+600000
+ 26059 strings out of 493089
+ 414402 string characters out of 6134842
+ 607882 words of memory out of 5000000
+ 25233 multiletter control sequences out of 15000+600000
  158847 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,25n,122p,1588b,1753s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -9233,10 +9253,10 @@ al/texlive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on lnp.pdf (412 pages, 6172835 bytes).
+Output written on lnp.pdf (410 pages, 6178540 bytes).
 PDF statistics:
- 9969 PDF objects out of 10688 (max. 8388607)
- 8676 compressed objects within 87 object streams
- 3662 named destinations out of 4296 (max. 500000)
- 2568 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9937 PDF objects out of 10688 (max. 8388607)
+ 8646 compressed objects within 87 object streams
+ 3656 named destinations out of 4296 (max. 500000)
+ 2536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
