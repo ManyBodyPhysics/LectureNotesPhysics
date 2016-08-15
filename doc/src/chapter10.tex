@@ -273,7 +273,7 @@ four fermions resulted in the following Hamiltonian matrix
   -g/2 \\ -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\ -g/2 & 0 & -g/2
   & -g/2 & 8\delta-g & -g/2 \\ 0 & -g/2 & -g/2 & -g/2 & -g/2 &
   10\delta -g
-  \end{bmatrix}
+  \end{bmatrix},
   \]
 where $g$ represents the strength of the two-body interaction and $\delta$ is a constant that defines the single-particle energies, see the discussions in chapter 8.  The above Hamiltonian matrix represents the case where no pairs of fermions are broken, resulting in six possible Slater determinats that span the actual model space.
 
@@ -293,22 +293,22 @@ We follow Wegner's formulation \cite{wegner1994} in terms of a flow equation
 for the Hamiltonian.
 The initial  Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}=\hat{T}+\hat{V}$, where $\hat{H}_0=\hat{T}$ is independent of $s$ and
 represents the non-interacting part of the Hamiltonian, is transformed by the 
-unitary operator $U(s)$ according to
+unitary operator $\hat{U}(s)$ according to
 \[ 
 \hat{H}(s) = \hat{U}(s)\hat{H}(s=0)\hat{U}(s)^T, 
 \]
 which results in the equation
 \[
-  \frac{d\hat{H}(s)}{ds}= [\eta(s),H(s)],
+  \frac{d\hat{H}(s)}{ds}= [\eta(s),\hat{H}(s)],
 \]
 with
 \[
-   \eta(s) = \frac{dU(s)}{ds} U^\dagger(s) = -\eta^\dagger(s).
+   \eta(s) = \frac{d\hat{U}(s)}{ds} \hat{U}^\dagger(s) = -\eta^\dagger(s).
 \]
 Choosing $\eta(s)$ specifies the transformation.
 Here we make perhaps the simplest choice \cite{wegner1994},
 \begin{equation}
-  \eta(s) =  [\hat{H}_0, H(s)]
+  \eta(s) =  [\hat{H}_0, \hat{H}(s)]
   \label{eq:choice},
 \end{equation}
 which gives the flow equation,
@@ -329,9 +329,14 @@ k'\rangle$, we obtain
     + \sum_{q=0}^{\infty}(\varepsilon_k + \varepsilon_{k'} - 2\varepsilon_{q})\langle k \vert \hat{V}(s) \vert q\rangle\langle q \vert \hat{V}(s) \vert k'\rangle.
       \label{eq:diffeq}
 \end{equation}
-Here the quantity $\varepsilon_k$ represents the single-particle energies arising from the non-interacting Hamiltonian. We have assumed that the basis $k$ 
-forms an eigenbasis for the non-interacting Hamiltonian $\hat{H}_0$ and we have used the discrete completeness relation $\sum{k=0}^{\infty}\vert k \rangle \langle k \vert = 1$. 
-As demonstrated below via various numerical examples, when we let $s$ evolve to infinity, the Hamiltonian matrix becomes more and more diagonal. The code to solve the coupled ODEs is at
+Here the quantity $\varepsilon_k$ represents the single-particle
+energies arising from the non-interacting Hamiltonian. We have assumed
+that the basis $k$ forms an eigenbasis for the non-interacting
+Hamiltonian $\hat{H}_0$ and we have used the discrete completeness
+relation $\sum_{k=0}^{\infty}\vert k \rangle \langle k \vert = 1$.  As
+demonstrated below via various numerical examples, when we let $s$
+evolve to infinity, the Hamiltonian matrix becomes more and more
+diagonal. The code to solve the coupled ODEs is at
 \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
 \begin{lstlisting}
 ! The derative of V as function of a given value of s
@@ -371,7 +376,7 @@ SUBROUTINE derivative(v, dv)
 END SUBROUTINE derivative
 \end{lstlisting}
 If we wish to solve the above equations for a nuclear interaction in a
-partial wave basis using relative coordinates, the explicit equations
+partial wave basis using relative coordinates for the momenta $k$, the explicit equations
 become \cite{bogner2007} (with normalization
 so that $1 = \frac{2}{\pi}\int_0^\infty|q\rangle q^2\,dq \langle q |$
 and in units where $\hbar^2/M = 1$),
@@ -390,9 +395,9 @@ value of $s$ is equal to the initial potential.
 Instead of the parameter $s$ which is being evolved to $\infty$, we could define 
 the parameter $\lambda \equiv s^{-1/4}$. This parameter  provides a measure of the
 spread of the off-diagonal strength when $s$ or $\lambda$ are evolved. The replacement of $s$ by $\lambda$ introduces a multiplicative factor 
-of $-2.0*/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
+of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
 
-Returning to our pairing problem, the input parameters to the Fortran program {\em pairing.f90} is easily compiled with any available Fortran compiler. The reader needs simply to specify the input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well
+Returning to our pairing problem, in order to run the Fortran program {\em pairing.f90}, which is easily compiled with any available Fortran compiler, the reader needs to specify the relevant input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well
 \begin{svgraybox}
 \begin{lstlisting}
 # Parameters for the simple pairing model code
@@ -419,8 +424,9 @@ value_startpoint = 40.0
 \end{lstlisting}
 \end{svgraybox}
 The program employs $\lambda$ as flow parameter instead of $s$. This means that the starting point for solving the differential equations
-should be as large as possible. The smaller the value of the $\lambda$, the close to zero are the non-diagonal matrix elements. 
-$g=-0.5$ and the single-particle energy strength $\delta=1$ we obtain the following exact eigenavalues by diagonalizing the above $6\times 6$ matrix (to six leading digits)
+should be as large as possible. The smaller the value of $\lambda$, the closer to zero are the non-diagonal matrix elements. 
+In the examples here we have chosen 
+$g=-0.5$ and the single-particle energy strength $\delta=1$. The resulting exact eigenavalues by diagonalizing the above $6\times 6$ matrix (to six leading digits) are
 $1.42705,   3.48610,  11.5572,   9.53081, 7.47926,   5.51955$.
 
 With $\lambda=1$ (or $s=1$), our similarity transformed matrix becomes
@@ -446,17 +452,25 @@ With $\lambda=0.1$ (or $s=10$), our similarity transformed matrix becomes
     -.652307E-07   &  -.101304-186   &  0.000000E+00   &  0.000000E+00   &  -.209242-176   &  0.115572E+02
 \end{bmatrix}.
 \]
-We see clearly that for $\lambda=0.1$, our eigenvalues are equal to the exact ones (at the level of six leading digits) and the non-diagonal matrix
-are for all practical purposes equal to zero. 
+We see clearly that for $\lambda=0.1$, our eigenvalues are equal to
+the exact ones (at the level of six leading digits) and the
+non-diagonal matrix are for all practical purposes equal to zero.
 
-For the simple pairing model, with modest dimensionalities of the Hamiltonian matrix,
-we can solve the flow equations with
-respect to the physical vacuum state by setting up the full  Hamiltonian matrix, 
-and solve Eq.~(\ref{eq:flowEquations}) as a set of coupled
-first-order differential equations. However, since the size of the
-problem grows enormously with the number of particles and the size of
-the model space, the applicability of this free-space SRG method is
-restricted to comparatively small systems. This leads us to approximations to the solution of the full set of coupled ODEs. In particular we will here discuss the in-medium SRG approach, where a new reference vacuum is introduced (normally defined by the Hartree-Fock state discussed in chapters 8 and 9). This will allow us to make links with the many-body methods  discussed in chapter 8, 9 and 11. The final part of this chapter is devoted to a presentation of the in-medium SRG approach and its applications to the pairing model and infinite nuclear matter. 
+For the simple pairing model, with modest dimensionalities of the
+Hamiltonian matrix, we can solve the flow equations with respect to
+the physical vacuum state by setting up the full Hamiltonian matrix,
+and solve Eq.~(\ref{eq:flowEquations}) as a set of coupled first-order
+differential equations. However, since the size of the problem grows
+enormously with the number of particles and the size of the model
+space, the applicability of this free-space SRG method is restricted
+to comparatively small systems. This leads us to approximations to the
+solution of the full set of coupled ODEs. In particular we will here
+discuss the in-medium SRG approach, where a new reference vacuum is
+introduced (normally defined by the Hartree-Fock state discussed in
+chapters 8 and 9). This will allow us to make links with the many-body
+methods discussed in chapters 8, 9 and 11. The final part of this
+chapter is devoted to a presentation of the in-medium SRG approach and
+its applications to the pairing model and infinite nuclear matter.
 
 
 \section{The In-Medium SRG approach}
