@@ -31,7 +31,7 @@ of the Hamiltonian matrix in a chosen basis
 These specific cases are realized in nuclear
 physics applications, where the SRG is used to decouple momentum or
 energy scales, and thereby render the nuclear Hamiltonian more
-suitable for \emph{ab initio} many-body calculations \cite{bogner2007,bogner2010,morris2015,bogner2016}.
+suitable for \emph{ab initio} many-body calculations \cite{bogner2007,bogner2010,morris2015,hergert2016}.
 
 In the following sections we outline the basic ingredients behind the
 SRG method, with an emphasis on applications to infinite nuclear
@@ -125,7 +125,7 @@ Hamiltonian. To make matters worse, implementing the flow means we
 would deal with the Hamiltonian's full spectrum rather than just some
 extremal eigenvalues that can be extracted efficiently in
 state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
-\cite{golubvaloan1996}.
+\cite{golubvanloan1996}.
 
 \subsection{Simple demonstration of the SRG method}
 
@@ -275,8 +275,7 @@ four fermions resulted in the following Hamiltonian matrix
   10\delta -g
   \end{bmatrix}
   \]
-where $g$ represents the strength of the two-body interaction and $\delta$ is a constant that defines the single-particle energies, see Eqs.~(\ref{eq:sppairing}) and 
-(\ref{eq:intpairing}) and problem \ref{problem:pairingmodel}.  The above Hamiltonian matrix represents the case where no pairs of fermions are broken, resulting in six possible Slater determinats that span the actual model space.
+where $g$ represents the strength of the two-body interaction and $\delta$ is a constant that defines the single-particle energies, see the discussions in chapter 8.  The above Hamiltonian matrix represents the case where no pairs of fermions are broken, resulting in six possible Slater determinats that span the actual model space.
 
 We restate the equations for the various parts of the Hamiltonian here, namely
  \[
@@ -289,42 +288,175 @@ and
   \]
 for the two-body interaction. The parameters $\xi$ and $g$ are constants.
 The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
-In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{shampine1976}. 
-As we let $s$ evolve, the Hamiltonian matrix becomes more and more diagonal. The code to solve the coupled ODEs is at
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95}. For $s=$ and $g=-0.5$ and $\delta=1$
-we obtain 
+In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{shampine1976}.
+We follow Wegner's formulation \cite{wegner1994} in terms of a flow equation
+for the Hamiltonian.
+The initial  Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}=\hat{T}+\hat{V}$, where $\hat{H}_0=\hat{T}$ is independent of $s$ and
+represents the non-interacting part of the Hamiltonian, is transformed by the 
+unitary operator $U(s)$ according to
+\[ 
+\hat{H}(s) = \hat{U}(s)\hat{H}(s=0)\hat{U}(s)^T, 
+\]
+which results in the equation
+\[
+  \frac{d\hat{H}(s)}{ds}= [\eta(s),H(s)],
+\]
+with
+\[
+   \eta(s) = \frac{dU(s)}{ds} U^\dagger(s) = -\eta^\dagger(s).
+\]
+Choosing $\eta(s)$ specifies the transformation.
+Here we make perhaps the simplest choice \cite{wegner1994},
+\begin{equation}
+  \eta(s) =  [\hat{H}_0, H(s)]
+  \label{eq:choice},
+\end{equation}
+which gives the flow equation,
+\begin{equation}
+  \frac{d\hat{H}(s)}{ds}=  [ [\hat{H}_0, \hat{H}(s)], \hat{H}(s)].
+  \label{eq:commutator}
+\end{equation}
+%
+Other choices will be discussed below, see also
+Refs.~\cite{hergert2016,morris2016} for a detailed discussion of
+possible similarity transformations.  The derivative of the
+Hamiltonian involves only the potential since we have assumed that
+$\hat{H}_0$ is independent of the flow parameter $s$. With a given
+basis $k$ the derivative of $\hat{V}$ evolves as, using dimensionless
+units and specifying $\hat{V}(s) = \langle k \vert \hat{V}(s) \vert
+k'\rangle$, we obtain
+\begin{equation} \frac{d(\langle k \vert \hat{V}(s) \vert k'\rangle)}{ds} =- (\varepsilon_k -\varepsilon_{k'} )^2\langle k \vert \hat{V}(s) \vert k'\rangle
+    + \sum_{q=0}^{\infty}(\varepsilon_k + \varepsilon_{k'} - 2\varepsilon_{q})\langle k \vert \hat{V}(s) \vert q\rangle\langle q \vert \hat{V}(s) \vert k'\rangle.
+      \label{eq:diffeq}
+\end{equation}
+Here the quantity $\varepsilon_k$ represents the single-particle energies arising from the non-interacting Hamiltonian. We have assumed that the basis $k$ 
+forms an eigenbasis for the non-interacting Hamiltonian $\hat{H}_0$. 
+As demonstrated below via various numerical examples, when we let $s$ evolve to infinity, the Hamiltonian matrix becomes more and more diagonal. The code to solve the coupled ODEs is at
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
+\begin{lstlisting}
+! The derative of V as function of a given value of s
+! n_total stands for the number of basis function k and v is the potential term
+! The terms onebodyenergy  represent the eigenenergies of the non-interacting Hamiltonian H_0
+SUBROUTINE derivative(v, dv)
+  IMPLICIT NONE
+  INTEGER ::  ij, i, j, k
+  REAL(8) :: sum, v(:), dv(:), k1, k2, p
+  REAL(8), ALLOCATABLE :: vij(:,:)
 
-1.42704949,   3.48610223,  11.55722946,   9.53080786,
-         7.47925918,   5.51955178]
+  ALLOCATE(vij(n_total,n_total)) 
+  ij = 0
+  DO j = 1, n_total
+     DO i = j, n_total
+        ij = ij + 1
+        vij(i,j) = v(ij)
+        vij(j,i) = v(ij)
+     ENDDO
+  ENDDO
+  ij = 0
+  DO i = 1, n_total
+     k1 = onebodyenergy(i) 
+     DO j = i, n_total
+        k2 = onebodyenergy(j) 
+        ij = ij + 1
+        sum = 0_dp
+        DO k = 1, n_total
+           p = onebodyenergy(k) 
+           sum = sum +  (k1+k2-2.0*p)*vij(j,k)*vij(k,i) 
+        ENDDO
+        dv(ij) =  sum - (k2-k1)*(k2-k1)*vij(j,i)
+     ENDDO
+  ENDDO
+  DEALLOCATE(vij)
+
+END SUBROUTINE derivative
+\end{lstlisting}
+If we wish to solve the above equations for a nuclear interaction in a
+partial wave basis using relative coordinates, the explicit equations
+become \cite{bogner2007} (with normalization
+so that $1 = \frac{2}{\pi}\int_0^\infty|q\rangle q^2\,dq \langle q |$
+and in units where $\hbar^2/M = 1$),
+%
+\begin{equation}
+  \frac{d(\langle k \vert \hat{V}(s) \vert k'\rangle)}{ds} =- (k^2 - k'{}^2)^2\langle k \vert \hat{V}(s) \vert k'\rangle
+    + \frac{2}{\pi}\int_0^{\infty}q^2dq
+      (k^2 + k'{}^2 - 2q^2)\langle k \vert \hat{V}(s) \vert q\rangle\langle q \vert \hat{V}(s) \vert k'\rangle).
+\end{equation}
+By discretizing the relative momentum space on a grid of Gaussian integration points, 
+we obtain a simple (but nonlinear) system of first-order
+coupled differential equations,
+with the boundary condition that $\langle k \vert \hat{V}(s) \vert k'\rangle$ at the initial
+value of $s$ is equal to the initial potential.
+
+Instead of the parameter $s$ which is being evolved to $\infty$, we could define 
+the parameter $\lambda \equiv s^{-1/4}$. This parameter  provides a measure of the
+spread of the off-diagonal strength when $s$ or $\lambda$ are evolved. The replacement of $s$ by $\lambda$ introduces a multiplicative factor 
+of $-2.0*/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
+
+Returning to our pairing problem, the input parameters to the Fortran program {\em pairing.f90} at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95} is easily compiled with any available Fortran compiler. The reader needs simply to specify the input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well
+\begin{svgraybox}
+\begin{lstlisting}
+# Parameters for the simple pairing model code
+# It reads the variable names and corresponding values as 
+# variable = something
+# You can have as many blank lines as you want.   
+# to the left is btw the comment sign. But do not change the leftmost
+# text string, which is needed by the code to identify which variable
+# is used. 
+
+# Dimensionless units are used throughout
+# output_run is prefixed to output file for optional printouts, tests etc.
+output_run = run_test.dat
+
+# Give the size of the matrix
+dimension_matrix = 6
 
 
-0.142705E+01    -.413102-179    0.000000E+00    0.000000E+00    0.516773-184    -.652307E-07
-    -.413102-179    0.348610E+01    -.556534-177    0.000000E+00    0.000000E+00    -.101304-186
-    0.000000E+00    -.556534-177    0.551955E+01    -.119801-173    0.000000E+00    0.000000E+00
-    0.000000E+00    0.000000E+00    -.119801-173    0.747926E+01    -.168573-178    0.000000E+00
-    0.516773-184    0.000000E+00    0.000000E+00    -.168573-178    0.953081E+01    -.209242-176
-    -.652307E-07    -.101304-186    0.000000E+00    0.000000E+00    -.209242-176    0.115572E+02
+# The values of delta, g, lambda and starting point
+value_delta = 1.0
+value_g = 0.5
+value_lambda = 1.0
+value_startpoint = 40.0
+\end{lstlisting}
+\end{svgraybox}
+The program employs $\lambda$ as flow parameter instead of $s$. This means that the starting point for solving the differential equations
+should be as large as possible. The smaller the value of the $\lambda$, the close to zero are the non-diagonal matrix elements. 
+$g=-0.5$ and the single-particle energy strength $\delta=1$ we obtain the following exact eigenavalues by diagonalizing the above $6\times 6$ matrix (to six leading digits)
+$1.42705,   3.48610,  11.5572,   9.53081, 7.47926,   5.51955$.
 
-with s=0.1
+With $\lambda=1$ (or $s=1$), our similarity transformed matrix becomes
+\[
+\begin{bmatrix}
+0.142706E+01 &   -.473950E-02  &   -.213293E-07  &   0.160910E-10  &   -.139603E-10  &   0.127066E-07 \\
+    -.473950E-02   &  0.348610E+01  &   -.401318E-02  &   -.274470E-07   &  -.103994E-11  &   0.174969E-10 \\
+    -.213293E-07   &  -.401318E-02   &  0.551954E+01   &  -.393739E-05   &  -.278160E-07   &  -.129686E-10 \\
+    0.160910E-10   &  -.274470E-07   &  -.393739E-05   &  0.747927E+01   &  -.437695E-02  &   -.204824E-07 \\
+    -.139603E-10   &  -.103994E-11   &  -.278160E-07   &  -.437695E-02   &  0.953081E+01  &   -.375229E-02 \\
+    0.127066E-07   &  0.174969E-10   &  -.129686E-10   &  -.204824E-07   &  -.375229E-02  &   0.115572E+02
+\end{bmatrix}.
+\]
 
-with s =1.0
+With $\lambda=0.1$ (or $s=10$), our similarity transformed matrix becomes
+\[
+\begin{bmatrix}
+0.142705E+01 &   -.413102-179 &   0.000000E+00 &   0.000000E+00 &   0.516773-184 &   -.652307E-07 \\
+    -.413102-179   &  0.348610E+01  &   -.556534-177  &   0.000000E+00  &   0.000000E+00  &   -.101304-186 \\
+    0.000000E+00   &  -.556534-177  &   0.551955E+01   &  -.119801-173  &   0.000000E+00   &  0.000000E+00 \\
+    0.000000E+00   &  0.000000E+00   &  -.119801-173   &  0.747926E+01   &  -.168573-178   &  0.000000E+00 \\
+    0.516773-184   &  0.000000E+00   &  0.000000E+00   &  -.168573-178   &  0.953081E+01   &  -.209242-176 \\
+    -.652307E-07   &  -.101304-186   &  0.000000E+00   &  0.000000E+00   &  -.209242-176   &  0.115572E+02
+\end{bmatrix}.
+\]
+We see clearly that for $\lambda=0.1$, our eigenvalues are equal to the exact ones (at the level of six leading digits) and the non-diagonal matrix
+are for all practical purposes equal to zero. 
 
-0.142706E+01    -.473950E-02    -.213293E-07    0.160910E-10    -.139603E-10    0.127066E-07
-    -.473950E-02    0.348610E+01    -.401318E-02    -.274470E-07    -.103994E-11    0.174969E-10
-    -.213293E-07    -.401318E-02    0.551954E+01    -.393739E-05    -.278160E-07    -.129686E-10
-    0.160910E-10    -.274470E-07    -.393739E-05    0.747927E+01    -.437695E-02    -.204824E-07
-    -.139603E-10    -.103994E-11    -.278160E-07    -.437695E-02    0.953081E+01    -.375229E-02
-    0.127066E-07    0.174969E-10    -.129686E-10    -.204824E-07    -.375229E-02    0.115572E+02
-
-
-
-As we can from this study, we solve the flow equations with
-respect to the physical vacuum state by setting up the full  Hamiltonian matrix in
+For the simple pairing model, with modest dimensionalities of the Hamiltonian matrix,
+we can solve the flow equations with
+respect to the physical vacuum state by setting up the full  Hamiltonian matrix, 
 and solve Eq.~(\ref{eq:flowEquations}) as a set of coupled
 first-order differential equations. However, since the size of the
 problem grows enormously with the number of particles and the size of
 the model space, the applicability of this free-space SRG method is
-restricted to comparatively small systems. This leads us to approximations to the solution of the full set of coupled ODEs. We discuss this in the next section. 
+restricted to comparatively small systems. This leads us to approximations to the solution of the full set of coupled ODEs. In particular we will here discuss the in-medium SRG approach, where a new reference vacuum is introduced (normally defined by the Hartree-Fock state discussed in chapters 8 and 9). This will allow us to make links with the many-body methods  discussed in chapter 8, 9 and 11. The final part of this chapter is devoted to a presentation of the in-medium SRG approach and its applications to the pairing model and infinite nuclear matter. 
 
 
 \section{The In-Medium SRG approach}
@@ -335,7 +467,7 @@ Instead of performing SRG in free space, the evolution can be done at
 finite density, that is directly in the $A$-body system
 \cite{kehrein2006}. This approach has recently been applied very
 successfully in nuclear physics, see the recent review of Bogner, Hergert, Morris and collaborators 
-\cite{hergert2016},
+\cite{hergert2016,morris2016},
 and is called in-medium SRG (IM-SRG). The method allows the evolution
 of $3,...,A$-body operators using only two-body machinery, with the
 simplifications arising from the use of normal-ordering with respect
@@ -347,7 +479,7 @@ second-quantized form, we defined in chapter 8 the normal-ordered Hamiltonian as
 \[
 \hat{H}_N = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^\dagger_p
 a_q+\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s a_r+\sum_{pq,i\le F}
-\langle pi|\hat{v}|qi\rangle \left\{a^\dagger_p a_q.
+\langle pi|\hat{v}|qi\rangle a^\dagger_p a_q.
 \]
 In chapter 8 we rewrote the normal-ordered Hamiltonian 
 in terms of a new one-body operator and a two-body operator
@@ -421,43 +553,40 @@ where $\eta_{pq}^{(1)}$ and $ \eta_{pqrs}^{(2)}$ are the one- and
 two-body elements, respectively. Making use of the permutation
 operator $ \hat{P}_{pq}f(p,q) = f(q,p)$ defined in chapter 8, the IM-SRG(2) flow equations
 are given by
-\begin{widetext}
 \begin{align}
 \frac{d E_0}{ds} &= \sum_{ia}\left( \eta_{ia}^{(1)}f_{ai} -
 \eta_{ai}^{(1)}f_{ia}\right) +
 \frac{1}{2}\sum_{ijab}\eta_{ijab}^{(2)}v_{abij},
 \label{eq:flow1}\\
 \frac{d f_{pq}}{ds}&= \sum_r \left(\eta_{pr}^{(1)}f_{rq} +
-\eta_{qr}^{(1)}f_{rp}\right) + \sum_{ia}\left(1-\hat{P}_{ia}\right)\lb
+\eta_{qr}^{(1)}f_{rp}\right) + \sum_{ia}\left(1-\hat{P}_{ia}\right)\left(
 \eta_{ia}^{(1)}v_{apiq} - f_{ia}\eta_{apiq}^{(2)} \right)\notag \\ &
-+\frac{1}{2} \sum_{aij} \left(1+\hat{P}_{pq}\rb
-\eta_{apij}^{(2)}v_{ijaq} + \frac{1}{2}\sum_{abi}\left(1+\hat{P}_{pq}\rb
-\eta_{ipab}^{(2)}v_{abiq},
++\frac{1}{2} \sum_{aij} \left(1+\hat{P}_{pq}\right)
+\eta_{apij}^{(2)}v_{ijaq} + \frac{1}{2}\sum_{abi}\left(1+\hat{P}_{pq}\right) \eta_{ipab}^{(2)}v_{abiq},
 \label{eq:flow2}
 \end{align}
 \begin{align}
-\frac{d v_{pqrs}}{ds} &= \sum_t \left(1-\hat{P}_{pq} \right)\lb
-\eta_{pt}^{(1)}v_{tqrs}-f_{pt}\eta_{tqrs}^{(2)}\right)-\sum_t \lb
+\frac{d v_{pqrs}}{ds} &= \sum_t \left(1-\hat{P}_{pq} \right)\left(
+\eta_{pt}^{(1)}v_{tqrs}-f_{pt}\eta_{tqrs}^{(2)}\right)-\sum_t \left(
 1-\hat{P}_{rs} \right)\left(\eta_{tr}^{(1)} v_{pqts} - f_{tr}
 \eta_{pqts}^{(2)}\right)\notag \\ & +\frac{1}{2}\sum_{ab}
-\lb\eta_{pqab}^{(2)} v_{abrs} - v_{pqab}\eta_{abrs}^{(2)}\right)-
-\frac{1}{2}\sum_{ij} \lb\eta_{pqij}^{(2)} v_{ijrs} -
+\left(\eta_{pqab}^{(2)} v_{abrs} - v_{pqab}\eta_{abrs}^{(2)}\right)-
+\frac{1}{2}\sum_{ij} \left(\eta_{pqij}^{(2)} v_{ijrs} -
 v_{pqij}\eta_{ijrs}^{(2)}\right)\notag \\ & -\sum_{ia} \left(1-
-\hat{P}_{ia} \right)\left(1-\hat{P}_{pq}\right)\left(1-\hat{P}_{rs} \rb
+\hat{P}_{ia} \right)\left(1-\hat{P}_{pq}\right)\left(1-\hat{P}_{rs} \right)
 \eta_{aqis}^{(2)}v_{ipar}.
 \label{eq:flow3}
 \end{align}
-\end{widetext}
 Note that for brevity, we have skipped the explicit $s$-dependence in the equations.
 
-\subsection*{Choice of generator}
+\subsection{Choice of generator}
 To determine the specific unitary transformation, one needs to specify
 the generator~$\hat{\eta}$. Through different choices, the SRG flow
 can be adapted to the features of a particular problem.\\
 
 
 \paragraph{Wegner's canonical generator}
-The original choice, suggested by Wegner \cite{PhysRepWegner0}, reads
+The original choice, suggested by Wegner \cite{wegner1994}, reads
 \begin{equation} 
 \hat{\eta} = \left[ \hat{H}^{\rm d}, \hat{H}^{\rm od} \right] = \left[ \hat{H}^{\rm d}, \hat{H}
   \right].
@@ -473,14 +602,14 @@ elements closer to the diagonal.
 Evaluating the commutator, we get
 for the one- and two-body elements
 \begin{align*}
-\eta_{pq}^{(1)} = & \sum_{r}\left(f_{pr}^d f_{rq} - f_{pr} f_{rq}^d \rb
+\eta_{pq}^{(1)} = & \sum_{r}\left(f_{pr}^d f_{rq} - f_{pr} f_{rq}^d \right)
 + f_{pq} v_{qppq}^d \left(n_q - n_p \right)\\ \eta_{pqrs}^{(2)} = & -
-\sum_t \left\lbrace \left(1-\hat{P}_{pq} \right)f_{pt} v_{tqrs}^d - \left(1 -
-\hat{P}_{rs} \right)f_{tr} v_{pqts}^d \right\rbrace \notag \\ & + \sum_t
-\left\lbrace  \left(1 - \hat{P}_{pq} \right)f_{pt}^d v_{tqrs} - \left(1 -
-\hat{P}_{rs} \right)f_{tr}^d v_{pqts} \right\rbrace  \notag \\ & +
+\sum_t \left[ \left(1-\hat{P}_{pq} \right)f_{pt} v_{tqrs}^d - \left(1 -
+\hat{P}_{rs} \right)f_{tr} v_{pqts}^d \right] \notag \\ & + \sum_t
+\left[  \left(1 - \hat{P}_{pq} \right)f_{pt}^d v_{tqrs} - \left(1 -
+\hat{P}_{rs} \right)f_{tr}^d v_{pqts} \right]  \notag \\ & +
 \frac{1}{2} \sum_{tu} (1 - n_t - n_u) \left(v_{pqtu}^d v_{turs} -
-v_{pqtu} v_{turs}^d \right)\notag \\ & + \sum_{tu} \left(n_t - n_u \right)\lb
+v_{pqtu} v_{turs}^d \right)\notag \\ & + \sum_{tu} \left(n_t - n_u \right)\left(
 1 - \hat{P}_{pq} \right)\left(1 - \hat{P}_{rs} \right)v_{tpur}^d v_{uqts},
 \end{align*}
 where we use the standard notation
@@ -527,7 +656,7 @@ these elements contribute only linearly with White's generator, which
 results in much better numerical properties.
 
 
-{\bf add more? Magnus? derivation of the equations?}
+{\bf add more? Magnus discussion ? derivation of the equations?}
 
 
 
@@ -542,36 +671,23 @@ This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University)
 \end{acknowledgement}
 
 \begin{thebibliography}{99}
-\bibitem{wegner1994}
-\bibitem{glazek1993}
-\bibitem{bogner2007}
-\bibitem{bogner2010}
-\bibitem{morris2015}
-\bibitem{bogner2016}
-\bibitem{navratil2000}
-\bibitem{barrett2013}
-\bibitem{golubvanloan1996}
-\bibitem{weinberg1996}
-\bibitem{tsukiyama2011}
-\bibitem{tsukiyama2012}
-\bibitem{hergert2013}
-\bibitem{day1967}
-\bibitem{brandow1967}
-\bibitem{fetter2003}
-\bibitem{shavittbartlett2009}
-\bibitem{hagen2014}
-\bibitem{dickhoff2004}
-\bibitem{barbieri2007}
-\bibitem{cipollone2013}
-\bibitem{white2002}
-\bibitem{yanai2006}
-\bibitem{anderson2010}
-\bibitem{bogner2010}
-\bibitem{blanes2009}
-\bibitem{morris2015}
-\bibitem{jurgenson2010}
-\bibitem{hebeler2012}
+\bibitem{wegner1994}  F.~Wegner, Ann.\ Phys.\ (Leipzig) {\bf 3}, 77 (1994).
+\bibitem{glazek1993}  S. D.~Glazek and K. G.~Wilson, Phys.\ Rev.\ D {\bf 48}, 5863 (1993).
+\bibitem{bogner2007} S.~K.~Bogner, R.~J.~Furnstahl, and R.~J.~Perry, Phys.~Rev.~C {\bf 75} 061001(R) (2007).
+\bibitem{bogner2010} Bogner S~K, Furnstahl R~J and Schwenk A, Prog. Part. Nucl. Phys. {\bf 65}, 94 (2010).
+\bibitem{morris2015} T.~D.~Morris, N.~M.~Parzuchowski, and S.~k.~Bogner, Phys.~Rev.~C {\bf 92} 034331 (2015).
+\bibitem{hergert2016} H. Hergert, S. K. Bogner, T. D. Morris, A. Schwenk, K. Tsukiyama, Phys.~Rep.~{\bf 621}, 165 (2016); H.~Hergert, Phys.~Scripta, (2016), in press and arXiv:1607.06882.
+\bibitem{golubvanloan1996} G.~H.~Golub and C.~F.~Van Loan, {\em Matrix Computations}, (The John Hopkins University Press, London and Baltimore, 1996, 3rd edition).
+\bibitem{shampine1976} L.~F.~Shampine and M.~K.~Gordon, {\em Computer solution of ordinary differential equations : the initial value problem}, (W.~H.~Freeman, San Francisco, 1975). 
+\bibitem{morris2016} T.~.D.~Morris, {\em Magnus expansion and in-medium similarity renormalization group}, PhD thesis, Michigan State University, (2016).
+\bibitem{kehrein2006} S.~Kehrein, {\em The Flow Equation Approach to Many-Particle Systems}, Springer Tracts in Modern Physics, vol 237, (Springer Verlag, Berlin, 2006)
+\bibitem{tsukiyama2011} K.~Tsukiyama, S.~K.~Bogner, and A.~Schwenk, Phys.~Rev.~Lett.~{\bf 106}, 222502 (2011).
+  222502
+\bibitem{tsukiyama2012}K.~Tsukiyama, S.~K.~Bogner, and A.~Schwenk, Phys.~Rev.~C {\bf 85}, 061304(R) (2012).
+  061304 
+\bibitem{shavittbartlett2009} I.~Shavitt and R.~J.~Bartlett, {\em Many-Body Methods in Chemistry and Physics: Many-body Perturbation Theory and Coupled-Cluster Theory} (Cambridge University Press, 2009).
 
-
+\bibitem{white2002} S.~R.~White, J.~Chem.~Phys.~{\bf 117}, 7472 (2002).
+ 
 \end{thebibliography}
-
+    
