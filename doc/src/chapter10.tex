@@ -279,14 +279,14 @@ where $g$ represents the strength of the two-body interaction and $\delta$ is a 
 
 We restate the equations for the various parts of the Hamiltonian here, namely
  \[
-  \hat{H}_0 = \xi \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p\sigma},
+  \hat{H}_0 = \delta \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p\sigma},
   \]
 for the one-body part
 and 
   \[
   \hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+},
   \]
-for the two-body interaction. The parameters $\xi$ and $g$ are constants.
+for the two-body interaction. The parameters $\delta$ and $g$ are constants.
 The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
 In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{shampine1976}.
 We follow Wegner's formulation \cite{wegner1994} in terms of a flow equation
@@ -330,7 +330,7 @@ k'\rangle$, we obtain
       \label{eq:diffeq}
 \end{equation}
 Here the quantity $\varepsilon_k$ represents the single-particle energies arising from the non-interacting Hamiltonian. We have assumed that the basis $k$ 
-forms an eigenbasis for the non-interacting Hamiltonian $\hat{H}_0$. 
+forms an eigenbasis for the non-interacting Hamiltonian $\hat{H}_0$ and we have used the discrete completeness relation $\sum{k=0}^{\infty}\vert k \rangle \langle k \vert = 1$. 
 As demonstrated below via various numerical examples, when we let $s$ evolve to infinity, the Hamiltonian matrix becomes more and more diagonal. The code to solve the coupled ODEs is at
 \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
 \begin{lstlisting}
@@ -392,7 +392,7 @@ the parameter $\lambda \equiv s^{-1/4}$. This parameter  provides a measure of t
 spread of the off-diagonal strength when $s$ or $\lambda$ are evolved. The replacement of $s$ by $\lambda$ introduces a multiplicative factor 
 of $-2.0*/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
 
-Returning to our pairing problem, the input parameters to the Fortran program {\em pairing.f90} at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95} is easily compiled with any available Fortran compiler. The reader needs simply to specify the input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well
+Returning to our pairing problem, the input parameters to the Fortran program {\em pairing.f90} is easily compiled with any available Fortran compiler. The reader needs simply to specify the input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well
 \begin{svgraybox}
 \begin{lstlisting}
 # Parameters for the simple pairing model code
@@ -545,9 +545,9 @@ scales linearly with the number of particles~$N$.
 With this
 truncation, the generator $\hat{\eta}$ can be written as
 \[
-\hat{\eta} = \sum_{pq} \eta_{pq}^{(1)} \lbrace  a_p^{\dagger}a_q\rbrace  +
-\frac{1}{4}\sum\limits_{pqrs}\eta_{pqrs}^{(2)} \lbrace  a_p^{\dagger}a_q^{\dagger}a_s
-a_r \rbrace ,
+\hat{\eta} = \sum_{pq} \eta_{pq}^{(1)} a_p^{\dagger}a_q  +
+\frac{1}{4}\sum\limits_{pqrs}\eta_{pqrs}^{(2)} a_p^{\dagger}a_q^{\dagger}a_s
+a_r,
 \]
 where $\eta_{pq}^{(1)}$ and $ \eta_{pqrs}^{(2)}$ are the one- and
 two-body elements, respectively. Making use of the permutation
