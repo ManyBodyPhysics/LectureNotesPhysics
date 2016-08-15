@@ -2,169 +2,209 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter5.aux
 The style file: spphys.bst
-Database file #1: lnplib.bib
-I was expecting a `,' or a `}'---line 402 of file lnplib.bib
- :       
- :       year           = "2013",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 484 of file lnplib.bib
- :       
- :       year           = "2013",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 1315 of file lnplib.bib
- : @article
- :         {Bazavov:2014pvz,
-I'm skipping whatever remains of this entry
-Repeated entry---line 7797 of file lnplib.bib
- : @article{Weinberg:1990rz
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 7806 of file lnplib.bib
- : @article{Weinberg:1991um
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 7863 of file lnplib.bib
- : @article{Epelbaum:2008ga
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 7873 of file lnplib.bib
- : @article{Lee:2008fa
- :                    ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8013 of file lnplib.bib
- : @article{Borasoy:2006qn
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8071 of file lnplib.bib
- : @article{Epelbaum:2009pd
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8083 of file lnplib.bib
- : @article{Epelbaum:2011md
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8097 of file lnplib.bib
- : @article{Epelbaum:2012qn
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8111 of file lnplib.bib
- : @article{Epelbaum:2012iu
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8125 of file lnplib.bib
- : @article{Lahde:2013uqa
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8139 of file lnplib.bib
- : @article{Epelbaum:2013paa
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 8210 of file lnplib.bib
- : @article{Luscher:1986pf
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12447 of file lnplib.bib
- : @article{Bedaque:1998kg
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12459 of file lnplib.bib
- : @article{Bedaque:1998km
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12509 of file lnplib.bib
- : @article{Braaten:2004rn
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12563 of file lnplib.bib
- : @article{Epelbaum:2008ga
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12590 of file lnplib.bib
- : @article{Fleming:1999ee
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12643 of file lnplib.bib
- : @article{Kaplan:2005es
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12674 of file lnplib.bib
- : @article{Kaplan:1998tg
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12683 of file lnplib.bib
- : @article{Kaplan:1998we
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12693 of file lnplib.bib
- : @article{Kaplan:1996xu
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12744 of file lnplib.bib
- : @article{Machleidt:2011zz
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12803 of file lnplib.bib
- : @article{Weinberg:1991um
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 12812 of file lnplib.bib
- : @article{Weinberg:1990rz
- :                         ,
-I'm skipping whatever remains of this entry
-Warning--empty journal in Berkowitz:2015eaa
-Warning--empty journal in Kurth:2015cvl
-Warning--empty booktitle in Epelbaum:2010nr
-Warning--empty booktitle in Kaplan:2005es
-Warning--empty journal in Nicholson:2012xt
-Warning--empty journal in Briceno:2012yi
-Warning--empty journal in Briceno:2015tza
-Warning--empty journal in Wilson:2014cna
-Warning--empty journal in Wilson:2015dqa
-Warning--empty journal in Bolton:2015psa
-Warning--empty journal in Briceno:2016kkp
-Warning--empty journal in Detmold:2015qwf
-Warning--empty journal in Lahde:2013kma
-You've used 158 entries,
+I couldn't open database file lnplib.bib
+---line 224 of file chapter5.aux
+ : \bibdata{lnplib
+ :                }
+I'm skipping whatever remains of this command
+I found no database files---while reading file chapter5.aux
+Warning--I didn't find a database entry for "EKLN1"
+Warning--I didn't find a database entry for "EKLN4"
+Warning--I didn't find a database entry for "Lepage:1989hd"
+Warning--I didn't find a database entry for "Berkowitz:2015eaa"
+Warning--I didn't find a database entry for "Kurth:2015cvl"
+Warning--I didn't find a database entry for "Nicholson:2015pys"
+Warning--I didn't find a database entry for "Orginos:2015aya"
+Warning--I didn't find a database entry for "Detmold:2015daa"
+Warning--I didn't find a database entry for "Chang:2015qxa"
+Warning--I didn't find a database entry for "Beane:2015yha"
+Warning--I didn't find a database entry for "Beane:2014sda"
+Warning--I didn't find a database entry for "Beane:2014ora"
+Warning--I didn't find a database entry for "Beane:2013br"
+Warning--I didn't find a database entry for "Beane:2012vq"
+Warning--I didn't find a database entry for "Beane:2011iw"
+Warning--I didn't find a database entry for "Beane:2009py"
+Warning--I didn't find a database entry for "Yamazaki:2015vjn"
+Warning--I didn't find a database entry for "Yamazaki:2015asa"
+Warning--I didn't find a database entry for "Yamazaki:2013rna"
+Warning--I didn't find a database entry for "Yamazaki:2012fn"
+Warning--I didn't find a database entry for "Yamazaki:2012hi"
+Warning--I didn't find a database entry for "Doi:2015uvd"
+Warning--I didn't find a database entry for "Doi:2015oha"
+Warning--I didn't find a database entry for "Ishii:2006ec"
+Warning--I didn't find a database entry for "Murano:2013xxa"
+Warning--I didn't find a database entry for "Aoki:2014mia"
+Warning--I didn't find a database entry for "Murano:2013gta"
+Warning--I didn't find a database entry for "HALQCD:2012aa"
+Warning--I didn't find a database entry for "Inoue:2010hs"
+Warning--I didn't find a database entry for "Beane:2009gs"
+Warning--I didn't find a database entry for "Doi:2011gq"
+Warning--I didn't find a database entry for "Weinberg:1990rz"
+Warning--I didn't find a database entry for "Weinberg:1991um"
+Warning--I didn't find a database entry for "Kaplan:1996xu"
+Warning--I didn't find a database entry for "Kaplan:1998tg"
+Warning--I didn't find a database entry for "Kaplan:1998we"
+Warning--I didn't find a database entry for "Epelbaum:2008ga"
+Warning--I didn't find a database entry for "Epelbaum:2010nr"
+Warning--I didn't find a database entry for "Machleidt:2011zz"
+Warning--I didn't find a database entry for "Kaplan:2005es"
+Warning--I didn't find a database entry for "AtomsReview1"
+Warning--I didn't find a database entry for "AtomsReview2"
+Warning--I didn't find a database entry for "Drut:2012md"
+Warning--I didn't find a database entry for "Beane:2010em"
+Warning--I didn't find a database entry for "Detmold:2014hla"
+Warning--I didn't find a database entry for "Detmold:2014rfa"
+Warning--I didn't find a database entry for "Grabowska:2012ik"
+Warning--I didn't find a database entry for "Nicholson:2012xt"
+Warning--I didn't find a database entry for "EKLN5"
+Warning--I didn't find a database entry for "BerryEsseen1"
+Warning--I didn't find a database entry for "BerryEsseen2"
+Warning--I didn't find a database entry for "DeGrand:2012ik"
+Warning--I didn't find a database entry for "Nicholson:2012zp"
+Warning--I didn't find a database entry for "Nicholson:2015zxa"
+Warning--I didn't find a database entry for "Dudek:2010wm"
+Warning--I didn't find a database entry for "MICHAEL1983433"
+Warning--I didn't find a database entry for "Luscher:1990ck"
+Warning--I didn't find a database entry for "Blossier:2009kd"
+Warning--I didn't find a database entry for "Aubin:2011zz"
+Warning--I didn't find a database entry for "GPOF1"
+Warning--I didn't find a database entry for "GPOF2"
+Warning--I didn't find a database entry for "Beane:2009kya"
+Warning--I didn't find a database entry for "Fleming:2009wb"
+Warning--I didn't find a database entry for "Symanzik1"
+Warning--I didn't find a database entry for "Symanzik2"
+Warning--I didn't find a database entry for "Symanzik3"
+Warning--I didn't find a database entry for "Symanzik4"
+Warning--I didn't find a database entry for "Batrouni"
+Warning--I didn't find a database entry for "Daviesetal1"
+Warning--I didn't find a database entry for "Daviesetal2"
+Warning--I didn't find a database entry for "Katzetal1"
+Warning--I didn't find a database entry for "Luscher:1986pf"
+Warning--I didn't find a database entry for "Luscher:1990ux"
+Warning--I didn't find a database entry for "Beane:2003da"
+Warning--I didn't find a database entry for "Briceno:2012yi"
+Warning--I didn't find a database entry for "Hansen:2012tf"
+Warning--I didn't find a database entry for "Li:2014wga"
+Warning--I didn't find a database entry for "Briceno:2014oea"
+Warning--I didn't find a database entry for "Briceno:2015tza"
+Warning--I didn't find a database entry for "Briceno:2015csa"
+Warning--I didn't find a database entry for "Briceno:2015axa"
+Warning--I didn't find a database entry for "Briceno:2014uqa"
+Warning--I didn't find a database entry for "Luu:2011ep"
+Warning--I didn't find a database entry for "Konig:2011nz"
+Warning--I didn't find a database entry for "Koenig:2011ti"
+Warning--I didn't find a database entry for "Rummukainen:1995vs"
+Warning--I didn't find a database entry for "Kim:2005gf"
+Warning--I didn't find a database entry for "Bour:2011ef"
+Warning--I didn't find a database entry for "Davoudi:2011md"
+Warning--I didn't find a database entry for "Li:2003jn"
+Warning--I didn't find a database entry for "Feng:2004ua"
+Warning--I didn't find a database entry for "Hansen:2016fzj"
+Warning--I didn't find a database entry for "Hansen:2015zga"
+Warning--I didn't find a database entry for "Hansen:2014eka"
+Warning--I didn't find a database entry for "Briceno:2012rv"
+Warning--I didn't find a database entry for "Beane:2007qr"
+Warning--I didn't find a database entry for "Detmold:2008gh"
+Warning--I didn't find a database entry for "Smigielski:2008pa"
+Warning--I didn't find a database entry for "Briceno:2013lba"
+Warning--I didn't find a database entry for "Briceno:2013bda"
+Warning--I didn't find a database entry for "Beane:2006mx"
+Warning--I didn't find a database entry for "Wilson:2014cna"
+Warning--I didn't find a database entry for "Wilson:2015dqa"
+Warning--I didn't find a database entry for "Dudek:2012gj"
+Warning--I didn't find a database entry for "Dudek:2012xn"
+Warning--I didn't find a database entry for "Dudek:2014qha"
+Warning--I didn't find a database entry for "Beane:2011sc"
+Warning--I didn't find a database entry for "Aoki:2007rd"
+Warning--I didn't find a database entry for "Aoki:2011yj"
+Warning--I didn't find a database entry for "Pelissier:2012pi"
+Warning--I didn't find a database entry for "Feng:2010es"
+Warning--I didn't find a database entry for "Torres:2014vna"
+Warning--I didn't find a database entry for "Bolton:2015psa"
+Warning--I didn't find a database entry for "Briceno:2015dca"
+Warning--I didn't find a database entry for "Lang:2012sv"
+Warning--I didn't find a database entry for "Prelovsek:2013ela"
+Warning--I didn't find a database entry for "Lang:2014yfa"
+Warning--I didn't find a database entry for "Lang:2015hza"
+Warning--I didn't find a database entry for "Lang:2011mn"
+Warning--I didn't find a database entry for "Briceno:2016kkp"
+Warning--I didn't find a database entry for "Verduci:2014csa"
+Warning--I didn't find a database entry for "Lang:2012db"
+Warning--I didn't find a database entry for "Torok:2009dg"
+Warning--I didn't find a database entry for "Detmold:2015qwf"
+Warning--I didn't find a database entry for "Beane:2012ey"
+Warning--I didn't find a database entry for "Beane:2006gf"
+Warning--I didn't find a database entry for "NishidaSonConformal"
+Warning--I didn't find a database entry for "2007PhRvL..99w3201B"
+Warning--I didn't find a database entry for "2011CRPhy..12...86B"
+Warning--I didn't find a database entry for "2006PhRvL..97o0401W"
+Warning--I didn't find a database entry for "Lee:2008fa"
+Warning--I didn't find a database entry for "Borasoy:2006qn"
+Warning--I didn't find a database entry for "PhysRev.98.145"
+Warning--I didn't find a database entry for "Phillips:1996ae"
+Warning--I didn't find a database entry for "Cohen:1996my"
+Warning--I didn't find a database entry for "Phillips:1997xu"
+Warning--I didn't find a database entry for "Fleming:1999ee"
+Warning--I didn't find a database entry for "Braaten:2004rn"
+Warning--I didn't find a database entry for "Bedaque:1998km"
+Warning--I didn't find a database entry for "Bedaque:1998kg"
+Warning--I didn't find a database entry for "Beane:2000wh"
+Warning--I didn't find a database entry for "V1970563"
+Warning--I didn't find a database entry for "Efimov:1971zz"
+Warning--I didn't find a database entry for "Hammer:2010kp"
+Warning--I didn't find a database entry for "EKLN2"
+Warning--I didn't find a database entry for "EKLN3"
+Warning--I didn't find a database entry for "LEKN1"
+Warning--I didn't find a database entry for "NEKL1"
+Warning--I didn't find a database entry for "Epelbaum:2010xt"
+Warning--I didn't find a database entry for "Epelbaum:2009pd"
+Warning--I didn't find a database entry for "Epelbaum:2013paa"
+Warning--I didn't find a database entry for "Lahde:2013kma"
+Warning--I didn't find a database entry for "Lahde:2013uqa"
+Warning--I didn't find a database entry for "Epelbaum:2011md"
+Warning--I didn't find a database entry for "Epelbaum:2012qn"
+Warning--I didn't find a database entry for "Epelbaum:2012iu"
+Warning--I didn't find a database entry for "Epelbaum:2013wla"
+Warning--I didn't find a database entry for "Lahde:2014bna"
+You've used 0 entries,
             2812 wiz_defined-function locations,
-            1636 strings with 34134 characters,
-and the built_in function-call counts, 57057 in all, are:
-= -- 3510
-> -- 1892
+            909 strings with 8408 characters,
+and the built_in function-call counts, 28 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 736
-- -- 578
-* -- 3630
-:= -- 6743
-add.period$ -- 125
-call.type$ -- 158
-change.case$ -- 5
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 171
-duplicate$ -- 6125
-empty$ -- 5804
-format.name$ -- 711
-if$ -- 12874
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 158
-missing$ -- 1659
-newline$ -- 607
-num.names$ -- 158
-pop$ -- 2321
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1397
+skip$ -- 1
 stack$ -- 0
-substring$ -- 1973
-swap$ -- 3765
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 13
-while$ -- 294
-width$ -- 161
-write$ -- 1488
-(There were 27 error messages)
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There were 2 error messages)

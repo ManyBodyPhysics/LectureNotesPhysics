@@ -60,7 +60,7 @@ which consists of kinetic energy $T$ and potential $V$:
 H = T + V  = \sum_{i=1}^A {\frac {\mathbf{p}^2_i} {2m} } + \sum_{i<j}^A V_{ij} + \sum_{i<j<k}^A V_{ijk} + ...\,.
 \label{Hint}
 \ee
-In the equation above ${\p}_i$ is the momentum of the $i$-th nucleon in a general laboratory system,  
+In the equation above $\mathbf{p}_i$ is the momentum of the $i$-th nucleon in a general laboratory system,  
 and $V_{ij}$ and $V_{ijk}$ denote the nucleon-nucleon (NN)
 potential $V_{\rm NN}$, the three-nucleon potential $V_{\rm NNN}$, etc., respectively.
 Notice that the reason why in general the nuclear Hamiltonian should contain many-body potentials is due to the fact 
@@ -97,32 +97,32 @@ which seems impossible otherwise. It is this possibility that generates the rich
 A correct approach to the non relativistic many-nucleon problem  should fulfill 
 two fundamental symmetries, namely those related to translational and Galileian invariance. One can easily show that the 
 corresponding conserved quantities  are center of mass (CM) momentum 
-$ {\P}_{CM} = \sum_i^A {\p}_i $ and CM position  $ {\R}_{CM} = \frac{1}{A}\sum_i^A {\r}_i $, respectively. 
+$ \mathbf{p}_{CM} = \sum_i^A \mathbf{p}_i $ and CM position  $ \mathbf{R}_{CM} = \frac{1}{A}\sum_i^A \mathbf{r}_i $, respectively. 
 Therefore the correct nuclear Hamiltonian must commute with those operators. This can be achieved if one rewrites  
 Eq.~(\ref{Hint}) in terms of the Jacobi vectors, i.e. the $A$ independent (normalized) vectors  given by
-$ {\R}_{CM}$ and  
+$ \mathbf{R}_{CM}$ and  
 %\be\label{jacobi}
-%\bm{\eta}_{k-1}=\sqrt{\frac{k-1}{k}}\left({\r}_{k}-\frac{1}{k-1}({\r}_{1}+{\r}_{2}+...{\r}_{k-1})\right)\,\,\,\,\,\,\,k=2,3...A\,,
+%\mathbf{\eta}_{k-1}=\sqrt{\frac{k-1}{k}}\left(\mathbf{r}_{k}-\frac{1}{k-1}({\mathbf{r}}_{1}+{\mathbf{r}}_{2}+...{\mathbf{r}}_{k-1})\right)\,\,\,\,\,\,\,k=2,3...A\,,
 %\ee
 \begin{eqnarray} \label{jacobi}
-  \bm{\eta}_1 & = & \sqrt{\frac{A-1}{A}}\Big(\vec{ r}_1 
-                - \frac{1}{A-1}(\vec{ r}_2 + \vec{ r}_3 + \cdots
-                + \vec{ r}_{A} )\Big)  \nonumber \\
-  \bm{\eta}_2 & = & \sqrt{\frac{A-2}{A-1}}\Big(\vec{ r}_{2} 
-               - \frac{1}{A-2}(\vec{ r}_3 + \vec{ r}_4 + \cdots
-               + \vec{ r}_{A} )\Big)  \nonumber \\
+  \mathbf{\eta}_1 & = & \sqrt{\frac{A-1}{A}}\Big(\mathbf{r}_1 
+                - \frac{1}{A-1}(\mathbf{r}_2 + \mathbf{r}_3 + \cdots
+                + \mathbf{r}_{A} )\Big)  \nonumber \\
+  \mathbf{\eta}_2 & = & \sqrt{\frac{A-2}{A-1}}\Big(\mathbf{r}_{2} 
+               - \frac{1}{A-2}(\mathbf{r}_3 + \mathbf{r}_4 + \cdots
+               + \mathbf{r}_{A} )\Big)  \nonumber \\
   &\ldots&  \nonumber \\ 
-  \bm{\eta}_{N} & = & \sqrt{\frac{1}{2}}\Big( \vec{ r}_{A-1}
-                        - \vec{ r}_{A} \Big) \,,\,\,\,\,\,\,\,\,\,\,\, N=A-1\,;
+  \mathbf{\eta}_{N} & = & \sqrt{\frac{1}{2}}\Big(\mathbf{r}_{A-1}
+                        - \mathbf{r}_{A} \Big) \,,\,\,\,\,\,\,\,\,\,\,\, N=A-1\,;
 \end{eqnarray} 
-together with their conjugate momenta ${\P}_{CM}$ and $\bm{\pi}_1, \bm{\pi}_2, ... \bm{\pi}_N$.
+together with their conjugate momenta $\mathbf{p}_{CM}$ and $\mathbf{\pi}_1, \mathbf{\pi}_2, ... \mathbf{\pi}_N$.
 
 In terms of Jacobi vectors the Hamiltonian in (\ref{Hint}) becomes 
 \be\label{Hlab}
-H = H_{CM} + {\cal H} = \frac{\P_{CM}^2}{2 A m} + \sum_{i=1}^{A-1} \frac{\bm{\pi}_i^2}{2m} + V(\bm{\eta}_1,\bm{\eta}_2.... \bm{\eta}_{A-1})\,,
+H = H_{CM} + {\cal H} = \frac{\P_{CM}^2}{2 A m} + \sum_{i=1}^{A-1} \frac{\mathbf{\pi}_i^2}{2m} + V(\mathbf{\eta}_1,\mathbf{\eta}_2.... \mathbf{\eta}_{A-1})\,,
 \ee
-and the translation and Galileian invariant Hamiltonian of our interest is ${\cal H}$, which commutes both with $ {\P}_{CM}$ and 
-$ {\R}_{CM}$.
+and the translation and Galileian invariant Hamiltonian of our interest is ${\cal H}$, which commutes both with $ \mathbf{p}_{CM}$ and 
+$ \mathbf{R}_{CM}$.
 An interesting remark is in order here:
 any potential, even when it is limited to have a two-(or three-)body character, becomes an unseparated function of the $(A-1)$-coordinate 
 in ${\cal H}$. 
@@ -240,10 +240,10 @@ Because of this,  they   are expressed in terms of the hyperspherical coordinate
 of the Jacobi vectors.
 
 Let us remember that the set of $A$ Jacobi vectors is composed 
-by  $\R_{CM}$ and the $N=A-1$ relative vectors $\bm{\eta}_1,...,\bm{\eta}_N$ in Eq.(\ref{jacobi}), for a total of $3 A$ coordinates. 
+by  $\mathbf{R}_{CM}$ and the $N=A-1$ relative vectors $\mathbf{\eta}_1,...,\mathbf{\eta}_N$ in Eq.(\ref{jacobi}), for a total of $3 A$ coordinates. 
 The hyperspherical coordinates are defined by further transforming  
-the $3N$ coordinates $\bm{\eta}_1,...,\bm{\eta}_N$ as follows:
-the $2N$ polar angles $\theta_i$ and $\phi_i$ of the $\bm{\eta}_i\equiv(\eta_i,\theta_i,\phi_i)$ are left unaffected 
+the $3N$ coordinates $\mathbf{\eta}_1,...,\mathbf{\eta}_N$ as follows:
+the $2N$ polar angles $\theta_i$ and $\phi_i$ of the $\mathbf{\eta}_i\equiv(\eta_i,\theta_i,\phi_i)$ are left unaffected 
 by the transformation. The remaining 
 $N$  hyperspherical coordinates $\eta_i$ are expressed in terms of one {\it hyper}-radius $\rho_N$ and $(N-1)$ 
 {\it hyper}-angles $\alpha_n$ defined by
@@ -271,9 +271,9 @@ are the orthonormal eigenfunctions ${\cal Y}_{[K_N]}(\hat\Omega_{[N]})$ of ${\bf
 \end{equation} 
 As one sees the eigenvalues are expressed in terms of the quantum number $K_N$. 
 The subscript $[K_N]$ stands for the total set of $(3N-1)$ quantum numbers corresponding to commuting operators, namely
-the hyperangular momenta ${\bf K}^2_N, {\bf K}^2_{N-1},... {\bf K}^2_2$ relative to the subsets of $N,N-1...2$ $\bm \eta$-coordinates, 
-the angular momenta relative to each of the $N$ Jacobi coordinates $\vec l^2_N,\vec l^2_{N-1},...\vec l^2_1 $,
-the total angular momenta $\vec L^2_N,\vec L^2_{N-1},...\vec L^2_2$ of the same subsets of $N,N-1...2$ $\bm \eta$-coordinates, 
+the hyperangular momenta ${\bf K}^2_N, {\bf K}^2_{N-1},... {\bf K}^2_2$ relative to the subsets of $N,N-1...2$ $\mathbf{\eta}$-coordinates, 
+the angular momenta relative to each of the $N$ Jacobi coordinates $\mathbf{l}^2_N,\vec \mathbf{l}^2_{N-1},...\vec \mathbf{l}^2_1 $,
+the total angular momenta $\mathbf{L}^2_N,\mathbf{L}^2_{N-1},...\mathbf{L}^2_2$ of the same subsets of $N,N-1...2$ $\mathbf{\eta}$-coordinates, 
 and the third component of the total angular momentum $L^z$.
  
 The ${\cal Y}_{[K_N]}(\hat\Omega_{[N]})$ are good  basis functions for the hyperangular part of the $A$-body internal 
@@ -314,7 +314,7 @@ When expressed in HH coordinates the invariant Hamiltonian $\cal H$ is
 However, supposing for simplicity that the potential has a two-body character $\sum_{i<j} V_{ij}$
 (but the present argument can be easily extended to three-body potentials) its matrix element 
 on antisymmetric functions will be the sum of $A(A-1)$ identical integrals 
-with, say, $i=A$ and $j=A-1$. This means that $V$  will be a function only of the Jacobi vector $\bm{\eta}_N$, namely
+with, say, $i=A$ and $j=A-1$. This means that $V$  will be a function only of the Jacobi vector $\mathbf{\eta}_N$, namely
 $V(\sqrt{2}\rho \sin \alpha_N, \theta_N,\phi_N)$, 
 the recursive  construction of the HH allows then to use the orthonormality condition 
 of the ${\cal Y}_{[K_{N-1}]}(\hat\Omega_{[N-1]})$ and reduce the calculation of the matrix element of the potential 
@@ -473,7 +473,7 @@ In the literature two versions of the NCSM exist , which differ in the treatment
 In one version, the Hamiltonian of Eq.~(\ref{Hint})
 is modified~\cite{ShF74} by adding a harmonic oscillator CM Hamiltonian $H_{\rm CM}$ to the intrinsic Hamiltonian $\cal H$
  \begin{eqnarray}
-H^{[A]}_\Omega &=& {\cal H} + H_{\rm CM}^{\rm HO} = {\cal H} +  \frac {{\P}_{\rm \rm CM}^2} {2Am} + 
+H^{[A]}_\Omega &=& {\cal H} + H_{\rm CM}^{\rm HO} = {\cal H} +  \frac {\mathbf{p}_{\rm \rm CM}^2} {2Am} + 
 {\frac{Am}{2}} \Omega^2 {\bf R}_{\rm CM}^2 \\
 \label{prova}
  &=& \sum_{i=1}^A \left[ {\frac{{\bf p}_i^2}{2m}}
@@ -509,8 +509,8 @@ by restricting the sums to two nucleons only (e.g. nucleons $A$ and $A-1)$, keep
 in the interaction term $\tilde V$:
 
 \begin{equation}\label{HO2mega}
-{\cal H}^{[2]}_\Omega = \left[ \frac{\bm {\pi}^2}{2 m}
-+\frac{1}{2}m\Omega^2 \bm {\eta}^2\right ]+
+{\cal H}^{[2]}_\Omega = \left[ \frac{\mathbf{\pi}^2}{2 m}
++\frac{1}{2}m\Omega^2 \mathbf{\eta}^2\right ]+
 \tilde V_{A(A-1)}
 \equiv {\cal H}^{[2]}_{\rm HO} +\tilde V_{A(A-1)}  \,.
 \end{equation}
@@ -643,72 +643,72 @@ final and initial states, generally the ground state $|0\rangle$ and one of its 
 that in $\omega$ the  energy 
 that has served to recoil the nucleus has been subtracted). 
 In general the interaction $H_{int}$ can be described as the product of the ''current`` densities inside the nucleus  
-and the field generated  by the probe, e.g. the charge density $\rho(\vec r)$ and the electromagnetic scalar potential $\varphi(\vec r)$
+and the field generated  by the probe, e.g. the charge density $\rho(\mathbf{r})$ and the electromagnetic scalar potential $\varphi(\mathbf{r})$
 generated by the electrons in an electron scattering experiment
 \begin{equation}
- H_{int}=\int d\vec r\,\rho(\vec r)\,\varphi(\vec r)
+ H_{int}=\int d\mathbf{r}\,\rho(\mathbf{r})\,\varphi(\mathbf{r})
 \end{equation}
 In this example the nuclear  charge density is due to the presence of the protons
 \begin{equation}
-\rho(r)=\sum_{j=1}^Z e\, \delta(\vec r-\vec r_j)=e \sum_{j=1}^A  \delta(\vec r-\vec r_j) \frac{1+\tau_j^3}{2}\,.
+\rho(r)=\sum_{j=1}^Z e\, \delta(\mathbf{r}-\mathbf{r}_j)=e \sum_{j=1}^A  \delta(\mathbf{r} r-\mathbf{r}_j) \frac{1+\tau_j^3}{2}\,.
 \end{equation}
 The initial and final states will be the product of the CM wave functions 
 and the internal ones, which are antisymmetric and translation invariant 
 \begin{eqnarray}
-|i\rangle &=& |\Phi_i(\vec R_{CM})\rangle|\psi_i(\bm{\eta}_1...\bm{\eta}_{A-1})\rangle\\
-|f\rangle &=& |\Phi_f(\vec R_{CM})\rangle|\psi_f(\bm{\eta}_1...\bm{\eta}_{A-1})\rangle
+|i\rangle &=& |\Phi_i(\mathbf{R}_{CM})\rangle|\psi_i(\mathbf{\eta}_1...\mathbf{\eta}_{A-1})\rangle\\
+|f\rangle &=& |\Phi_f(\mathbf{R}_{CM})\rangle|\psi_f(\mathbf{\eta}_1...\mathbf{\eta}_{A-1})\rangle
 \end{eqnarray}
 Therefore 
 \begin{eqnarray}\label{ME} 
- \langle f|H_{int}|i\rangle &=& e \int d\vec r \,\varphi(\vec r)\,\int d\vec R_{CM}  
- e^{-i\vec P_f\cdot\vec R_{CM}}\,e^{i \vec P_i\cdot\vec R_{CM}}
+ \langle f|H_{int}|i\rangle &=& e \int d\mathbf{r} \,\varphi(\mathbf{r})\,\int d\vec \mathbf{R}_{CM}  
+ e^{-i\mathbf{P}_f\cdot\mathbf{R}_{CM}}\,e^{i \mathbf{P}_i\cdot\mathbf{R}_{CM}}
   \,\,\times \nonumber\\
- &\times& \int d\bm{\eta}_1...d\bm{\eta}_{A-1}\psi^*_f(\bm{\eta}_1...\bm{\eta}_{A-1}; 
+ &\times& \int d\mathbf{\eta}_1...d\mathbf{\eta}_{A-1}\psi^*_f(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; 
  \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,\,\times \nonumber\\
- &\times&\sum_{j=1}^A  \delta(\vec r-\vec r_j)\frac{1+\tau_j^3}{2} \psi_i(\bm{\eta}_1...\bm{\eta}_{A-1}; 
+ &\times&\sum_{j=1}^A  \delta(\mathbf{r}-\mathbf{r}_j)\frac{1+\tau_j^3}{2} \psi_i(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; 
  \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,.
 \end{eqnarray}
 Because the $\psi$ are antisymmetric the matrix element above is a sum of $A$ equal integrals, with the charge density operator 
 limited to only one element of the sum (e.g. j=1). 
 
 At this point it is necessary to express 
-$\delta(\vec r-\vec r_1)$ in terms of the integration variables. Using the definition of the Jacobi coordinate $\bm{\eta}_1$  
+$\delta(\mathbf{r}-\mathbf{r}_1)$ in terms of the integration variables. Using the definition of the Jacobi coordinate $\mathbf{\eta}_1$  
 as in (\ref{jacobi}
 \begin{equation}
-\bm{\eta}_1=\sqrt{\frac{A}{A-1}}(\vec r_1 - \vec R_{CM})
+\mathbf{\eta}_1=\sqrt{\frac{A}{A-1}}(\mathbf{r}_1 - \mathbf{R}_{CM})
 \end{equation}
 the matrix element in \ref{ME} becomes
 \begin{eqnarray}\label{MEE} 
- \langle f|H_{int}|i\rangle &=& A e \int d\vec r \,\varphi(\vec r)\,\int d\vec R_{CM}  e^{i\vec q\cdot\vec R_{CM}}
+ \langle f|H_{int}|i\rangle &=& A e \int d\mathbf{r} \,\varphi(\mathbf{r})\,\int d\mathbf{R}_{CM}  e^{i\mathbf{r}\cdot\mathbf{R}_{CM}}
   \,\,\times \nonumber\\
- &\times& \int d\bm{\eta}_1...d\bm{\eta}_{A-1}\psi^*_f(\bm{\eta}_1...\bm{\eta}_{A-1}; 
+ &\times& \int d\mathbf{\eta}_1...d\mathbf{\eta}_{A-1}\psi^*_f(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; 
  \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,\,\times \nonumber\\
- &\times&\sum_{j=1}^A  \delta\left(\vec r-\vec R_{CM}-\sqrt{\frac{A-1}{A}} 
- \bm{\eta}_1\right)\frac{1+\tau_1^3}{2} \psi_i(\bm{\eta}_1...\bm{\eta}_{A-1}; 
+ &\times&\sum_{j=1}^A  \delta\left(\mathbf{r}-\mathbf{R}_{CM}-\sqrt{\frac{A-1}{A}} 
+ \mathbf{\eta}_1\right)\frac{1+\tau_1^3}{2} \psi_i(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; 
  \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,.
 \end{eqnarray}
-After performing the integral in $d\vec R_{CM}$ one has
+After performing the integral in $d\mathbf{R}_{CM}$ one has
 \begin{eqnarray}   
- \langle f|H_{int}|i\rangle &=& A e \int d\vec r \,\varphi(\vec r)\,e^{i\vec q\cdot\vec r}\,\int d\bm{\eta}_1...d\bm{\eta}_{A-1} 
+ \langle f|H_{int}|i\rangle &=& A e \int d\mathbf{r} \,\varphi(\mathbf{r})\,e^{i\mathbf{q}\cdot\mathbf{r}}\,\int d\mathbf{\eta}_1...d\mathbf{\eta}_{A-1} 
   \,\,\times \nonumber\\
-&\times&\, \psi^*_f(\bm{\eta}_1...\bm{\eta}_{A-1}; \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,
-e^{i\vec q\cdot\sqrt{\frac{A-1}{A}}\bm{\eta}_1}\,\frac{1+\tau_1^3}{2} \,\psi_i(\bm{\eta}_1...\bm{\eta}_{A-1}; 
+&\times&\, \psi^*_f(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,
+e^{i\mathbf{q}\cdot\sqrt{\frac{A-1}{A}}\mathbf{\eta}_1}\,\frac{1+\tau_1^3}{2} \,\psi_i(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; 
  \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,.
 \end{eqnarray}
 One can notice that in the matrix element one has a factorization in two terms: the Fourier transform of the field 
 \begin{equation}
- \varphi(\vec q)=\int d\vec r \,\varphi(\vec r)\,e^{i\vec q\cdot\vec r}
+ \varphi(\mathbf{q})=\int d\vec r \,\varphi(\mathbf{r})\,e^{i\mathbf{q}\cdot\mathbf{r}}
 \end{equation}
 and the Fourier transform of the so called {\it proton transition density}, defined as
 \begin{equation}
- \rho_{i,f}^p(\bm{\eta}_1) =\int d\bm{\eta}_2...d\bm{\eta}_{A-1} 
- \psi^*_f(\bm{\eta}_1...\bm{\eta}_{A-1}; \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,
-\,\sum_j\frac{1+\tau_j^3}{2} \,\psi_i(\bm{\eta}_1...\bm{\eta}_{A-1}; 
+ \rho_{i,f}^p(\mathbf{\eta}_1) =\int d\mathbf{\eta}_2...d\mathbf{\eta}_{A-1} 
+ \psi^*_f(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,
+\,\sum_j\frac{1+\tau_j^3}{2} \,\psi_i(\mathbf{\eta}_1...\mathbf{\eta}_{A-1}; 
  \sigma_1^z...\sigma_A^z;\tau_1^z...\tau_A^z)\,.
 \end{equation}
-Since $\sqrt{\frac{A-1}{A}}\bm{\eta}_1=\vec r_1-\vec R_{CM}\equiv \vec r'$ one can write  the final expression as
+Since $\sqrt{\frac{A-1}{A}}\mathbf{\eta}_1=\mathbf{r}_1-\mathbf{R}_{CM}\equiv \mathbf{r}'$ one can write  the final expression as
 \begin{equation}
-\langle f|H_{int}|i\rangle =  e \varphi(\vec q) \sqrt{\frac{A}{A-1}}\int d\vec r' \,e^{i\vec q\cdot\vec r'}\, \rho^p_{i,f}(\vec \r')\,.
+\langle f|H_{int}|i\rangle =  e \varphi(\mathbf{q}) \sqrt{\frac{A}{A-1}}\int d\mathbf{r}' \,e^{i\mathbf{q}\cdot\mathbf{r}'}\, \rho^p_{i,f}(\mathbf{r}')\,.
 \end{equation}
 
 Some remarks are in order here: 
@@ -719,7 +719,7 @@ excite, the cross section is called {\it elastic} and will be proportional to th
 the {\it charge form factor}. This is the Fourier transform of the average charge distribution 
 with respect to the center of mass $\rho_{0,0}^p(r')$; 
 \item if $\psi_i\neq\psi_f$ the cross section is called {\it inelastic}
-and one has the Fourier transform of the transition density $\rho^p_{i,f}(\vec \r')$ (called the {\it transition form factor});
+and one has the Fourier transform of the transition density $\rho^p_{i,f}(\mathbf{r}')$ (called the {\it transition form factor});
 \item the matrix element entering in the cross section is involving an integral 
 of the wave functions. This means that in principle one does not need to know the whole detailed wave function, but only an 
 integral of it (an infinite number of different wave functions will have the same integral!).
@@ -734,12 +734,12 @@ but from other kinds of operators.
 
 From what has been illustrated above  we can conclude what is the main ingredient of the cross section 
 for  perturbative {\it inclusive} experiments. Such experiments are those where
-the only experimentally controlled quantities are the energy $\omega$ and the momentum $\vec q$ transferred 
+the only experimentally controlled quantities are the energy $\omega$ and the momentum $\mathbf{q}$ transferred 
 to the nucleus, while nothing is known on what has happened to it (in how many fragments it has possibly broken).
 The cross section will be proportional to the so called {\it structure} or {\it response} function
-$S(\vec q, \omega)$
+$S(\mathbf{q}, \omega)$
 \begin{equation}\label{S}
-S(\vec q,\omega)= \sum_{n=0}^\infty |\langle n|G|0\rangle|^2 \delta(\omega-E_n+E_0)\,.
+S(\mathbf{q},\omega)= \sum_{n=0}^\infty |\langle n|G|0\rangle|^2 \delta(\omega-E_n+E_0)\,.
 \end{equation}
 The operator $G$ denotes the general operator that interacts with the field created by the probe.
 
@@ -750,10 +750,10 @@ part of the spectrum, that sum may be intended as an integral. Moreover it has t
 one has the degeneration given by the different possible ''asymptotic channels``, namely the possibility that such a many-body system 
 breaks in many different sets of fragments at the same energy. 
 
-In the following we will concentrate on the inelastic part of the response function, namely $S(\vec q,\omega)$ where the term
+In the following we will concentrate on the inelastic part of the response function, namely $S(\mathbf{q},\omega)$ where the term
 $n=0$ in the sum is excluded
  \begin{equation}
-R(\vec q,\omega)= \sum_{n \neq 0}^\infty |\langle n|G|0\rangle|^2 \delta(\omega-E_n+E_0)\,.
+R(\mathbf{q},\omega)= \sum_{n \neq 0}^\infty |\langle n|G|0\rangle|^2 \delta(\omega-E_n+E_0)\,.
 \end{equation}
 The reason is that the elastic part requires only the knowledge of the ground state of the system and its calculation 
 can be done with one of the methods described above.
@@ -761,7 +761,7 @@ Here, instead we want to face the inelastic scattering problem, and in particula
 enough to break the system and continuum states $|n\rangle$ are in the game.  
 To this aim we  define a fluctuation operator $\Theta= G - \langle0|G|0\rangle$. Since $\langle0|\Theta|0\rangle=0$ one can write
  \begin{equation}
-R(\vec q,\omega)= \sum_{n = 0}^\infty\!\!\!\!\!\!\!\!\!\!\!\int\, |\langle n|\Theta|0\rangle|^2 \delta(\omega-E_n+E_0)\,,
+R(\mathbf{q},\omega)= \sum_{n = 0}^\infty\!\!\!\!\!\!\!\!\!\!\!\int\, |\langle n|\Theta|0\rangle|^2 \delta(\omega-E_n+E_0)\,,
 \end{equation}
 where the complete sum (or the integral) on all states has been recovered. Having a complete sum on the Hamiltonian eigenstates 
 is crucial as it will be clear below. 
@@ -775,10 +775,10 @@ the amount of information contained in the  wave function is
 redundant with respect to the transition matrix elements needed, since the latter involve their integrals.
 Therefore, one tries to avoid 
 the difficult task of solving the Schr\"odinger
-equation for positive energies and one concentrates instead on $R(\vec q,\omega)$, directly. 
+equation for positive energies and one concentrates instead on $R(\mathbf{q},\omega)$, directly. 
 
 
-An integral transform of $R(\omega)$ (here and in the following we drop the dependence on $\vec q$) is defined as
+An integral transform of $R(\omega)$ (here and in the following we drop the dependence on $\mathbf{q}$) is defined as
 \begin{equation}\label{phisigma1}
  \Phi(\sigma)=\int\, K(\sigma,\omega)\,R(\omega) \,d\omega\,,
 \end{equation}
@@ -788,7 +788,7 @@ $\sum_{n=0}^\infty |n\rangle\langle n|=I$  (see the remark at the end of Section
 \begin{equation}\label{phisigma2}
 \Phi(\sigma)=\langle 0|\Theta^\dagger\hat{K}\left(\sigma,(\hat{H}-E_0)\right)\,\Theta|0\rangle\,.
 \end{equation}
-From Eq. (\re{phisigma2}) one can see that the calculation of $\Phi(\sigma)$ seems to require in principle the knowledge of the ground state 
+From Eq. (\ref{phisigma2}) one can see that the calculation of $\Phi(\sigma)$ seems to require in principle the knowledge of the ground state 
 only. However, the possibility to actually calculate $\Phi(\sigma)$ depends on how complicate is the operator $\hat{K}(\sigma,\hat{H})$. 
 Moreover, in order to access the quantity of interest, namely $R(\omega)$ an inversion of the transform is necessary.
 
@@ -1177,179 +1177,176 @@ of strong interaction and nuclear phenomena, many of which are at the basis of t
 
 \begin{thebibliography}{00}
 %[1]
-\bibitem{EpM11} see e.g E. Epelbaum and U.-G. Mei{\ss}ner, Ann. Rev. Nucl. Part. Sci. {\bf 62}, 159-185 (2012)
+\bibitem{EpM11} see e.g E. Epelbaum and U.-G. Mei{\ss}ner, Ann. Rev. Nucl. Part. Sci. {\bf 62}, 159 (2012).
 
 %[2]        
-\bibitem{WlO12} W. Leidemann and G. Orlandini,  Progr. Part.  Nucl. Phys. {\bf 68}, 158-214  (2013)
+\bibitem{WlO12} W. Leidemann and G. Orlandini,  Progr. Part.  Nucl. Phys. {\bf 68}, 158  (2013).
 
 %[3]
-\bibitem{FADDEEV:1961} L.D. Faddeev,
-        Sov. Phys. JETP, {\bf 12}, 1014 (1961)
+\bibitem{FADDEEV:1961} L.D. Faddeev, Sov. Phys. JETP, {\bf 12}, 1014 (1961).
 %[4]       
 \bibitem{YAKUBOWSKY:1967} O. Yakubowsky,   
-        Yad. Fiz., {\bf 5}, 1312 (1967) [{\it Sov. J. Nucl. Phys.} {\bf 5} 937] 
+        Yad. Fiz., {\bf 5}, 1312 (1967) [{\it Sov. J. Nucl. Phys.} {\bf 5} 937]. 
 %[5]
 \bibitem{AGS}  E.O. Alt, P. Grassberger, W. Sandhas, Nucl. Phys. B {\bf 2},  167 (1967) ;
-               P. Grassberger, W. Sandhas, Nucl. Phys. B {\bf 2} 181(1967) 
+               P. Grassberger, W. Sandhas, Nucl. Phys. B {\bf 2}, 181(1967). 
 %[6]
-\bibitem{Ra870} J.M. Rayleigh, Phil. Trans. {\bf 161}, 77 (1870)
+\bibitem{Ra870} J.M. Rayleigh, Phil. Trans. {\bf 161}, 77 (1870).
 
 %[7]
 \bibitem{Ri909} W. Ritz, 
-   Journal f\"ur die Reine und Angewandte Mathematik, {\bf 135}, 1 (1909)
+   Journal f\"ur die Reine und Angewandte Mathematik, {\bf 135}, 1 (1909).
 %[8]  
 \bibitem{RGM1} K. Wildermuth, Y.C. Tang, \textit{A Unified Theory of the Nucleus}, Vieweg, Braunschweig, 1977;
-                Y.C. Tang, M. Lemere, D.R. Thompson, Phys. Rep. {\bf 47} 169 (1978) 
+                Y.C. Tang, M. Lemere, D.R. Thompson, Phys. Rep. {\bf 47}, 169 (1978). 
 %[9]
 \bibitem{RGM2} H.M. Hofmann, G.M. Hale, Nucl. Phys. A {\bf 613}, 69 (1997) ;
-             Phys. Rev. C {\bf 77} 044002 (2008) 
+             Phys. Rev. C {\bf 77}, 044002 (2008). 
 %[10] 
-\bibitem{SVM1} V.I. Kukulin, V.M. Krasnopolsk, J. Phys. {\bf 3}  795 (1977)
+\bibitem{SVM1} V.I. Kukulin, V.M. Krasnopolsk, J. Phys. {\bf 3},  795 (1977).
 
 %[11] 
 \bibitem{SVM2}  Y. Suzuki, K. Varga, \textit{Stochastic Variational Approach to Quantum Mechnical Few-Body Problems},
-                  Springer-Verlag, Berlin, 1998
+                  (Springer-Verlag, Berlin, 1998).
                   
 %[12]                  
-\bibitem{bench_2001}  H. Kamada {\it et al.} Phys. Rev. C {\bf 64}, 044001 (2001)       
+\bibitem{bench_2001}  H. Kamada {\it et al.} Phys. Rev. C {\bf 64}, 044001 (2001).       
 
 %[13]                
-\bibitem{HiD56} J.O. Hirschfelder and J. Dahler, Proc. Natl. Acad. Sci. USA {\bf 42}, 363 (1956)                                 
+\bibitem{HiD56} J.O. Hirschfelder and J. Dahler, Proc. Natl. Acad. Sci. USA {\bf 42}, 363 (1956).                                 
 
 %[14]  
-\bibitem{NOVOSELSKY:1994} A. Novoselsky and J.  Katriel,  
-	 Phys. Rev A {\bf 49},  833  (1994)
+\bibitem{NOVOSELSKY:1994} A. Novoselsky and J.  Katriel, Phys. Rev.~ A {\bf 49},  833  (1994).
 %[15]
 \bibitem{BARNEA:1997+8}  N. Barnea  and A. Novoselsky,
-	 Ann. Phys. (N.Y.)  {\bf 256}, 192, (1997); Phys. Rev.  A {\bf 57},  48 (1998)
+	 Ann. Phys. (N.Y.)  {\bf 256}, 192, (1997); Phys. Rev.  A {\bf 57},  48 (1998).
 %[16]	 
-\bibitem{Gatto:2011}  M. Gattobigio, A. Kievsky, and M. Viviani, Phys. Rev. C {\bf 83}, 024001 (2011)
+\bibitem{Gatto:2011}  M. Gattobigio, A. Kievsky, and M. Viviani, Phys. Rev. C {\bf 83}, 024001 (2011).
 
 %[17]
 \bibitem{Deflorian:2013}	 
-	 S. Deflorian, N. Barnea, W. Leidemann, G. Orlandini, Few-Body Syst. {\bf 54}, 1879 (2013) 
+	 S. Deflorian, N. Barnea, W. Leidemann, G. Orlandini, Few-Body Syst. {\bf 54}, 1879 (2013). 
 %[18]	 
-\bibitem{Ok54} S. Okubo, \PRO, {\bf 12}, 603 (1954)
+\bibitem{Ok54} S. Okubo, Prog.~Theor.~Phys.~{\bf 12}, 603 (1954).
 
 %[19]
-\bibitem{CoK60} F. Coester and H. K{\" u}mmel, Nucl. Phys.  {\bf 17}, 477 (1960)
+\bibitem{CoK60} F. Coester and H. K{\"u}mmel, Nucl. Phys.  {\bf 17}, 477 (1960).
 
 %[20]
-\bibitem{DaS64} J. da Providencia and C.M. Shakin, \ANNP, {\bf 30}, 95 (1964) 
+\bibitem{DaS64} J. da Providencia and C.M. Shakin, Ann.~Phys.~{\bf 30}, 95 (1964). 
 
 %[21]
-\bibitem{SuL80} K. Suzuki and S.Y. Lee, \PRO, {\bf 64},  2091  (1980)
+\bibitem{SuL80} K. Suzuki and S.Y. Lee, Prog.~Theor.~Phys.~{\bf 64},  2091  (1980).
 
 %[22]
-\bibitem{Zab:1978} H. K\"ummel, K.H. L\"uhrmann, J.G. Zabolitzky, Phys. Rep. {\bf 36},1 (1978) 
+\bibitem{Zab:1978} H. K\"ummel, K.H. L\"uhrmann, J.G. Zabolitzky, Phys.~Rep.~{\bf 36}, 1 (1978). 
 
 %[23]
-\bibitem{HJ:2004} D.J. Dean, M. Hjorth-Jensen, Phys. Rev. C  {\bf 69}, 054320 (2004) 
+\bibitem{HJ:2004} D.J. Dean, M. Hjorth-Jensen, Phys. Rev. C  {\bf 69}, 054320 (2004). 
 
 %[24]
-\bibitem{Ka62} M.H. Kalos,  \PREV,  {\bf 128},  1791 (1962) 
+\bibitem{Ka62} M.H. Kalos,  Phys.~Rev.~{\bf 128},  1791 (1962). 
 
 %[25]
-\bibitem{Ca87} J. Carlson,  \PRC,  {\bf 36},  2026   (1987) 
+\bibitem{Ca87} J. Carlson,  Phys.~Rev.~C {\bf 36},  2026   (1987). 
 
 %[26]
-\bibitem{ScF99} K. E. Schmidt and S. Fantoni,  \PLB,  {\bf 446},  99  (1999) 
+\bibitem{ScF99} K. E. Schmidt and S. Fantoni,  Phys.~Lett.~B {\bf 446},  99  (1999). 
 
 %[27]
-\bibitem{Le09} D. Lee,   Prog. Part. Nucl. Phys., {\bf 64}, 117 (2009)
+\bibitem{Le09} D. Lee,   Prog. Part. Nucl. Phys.~{\bf 64}, 117 (2009).
 
 %[28]
-\bibitem{KoD97} S.E. Koonin, D.J. Dean, and K. Langanke,  \PREP, {\bf 278}, 1 (1997)
+\bibitem{KoD97} S.E. Koonin, D.J. Dean, and K. Langanke,  Phys.~Rep.~{\bf 278}, 1 (1997).
 
 %[29]
-\bibitem{HoM95} M. Honma, T. Mizusaki, and T. Otsuka,  \PRL,  {\bf 75}, 1284 (1995)
+\bibitem{HoM95} M. Honma, T. Mizusaki, and T. Otsuka,  Phys.~Rev.~Lett.~{\bf 75}, 1284 (1995).
 
 %[30]
-\bibitem{OtH01} T. Otsuka et al.,  Prog. Part. Nucl. Phys., {\bf 47},  319 (2001)
+\bibitem{OtH01} T. Otsuka et al.,  Prog. Part. Nucl. Phys.~{\bf 47},  319 (2001).
 
 %[31]
-\bibitem{PiW01} S. C. Pieper and R. B. Wiringa, Ann. Rev. Nucl. Part. Sci., {\bf 51}, 53 (2001)
+\bibitem{PiW01} S. C. Pieper and R. B. Wiringa, Ann. Rev. Nucl. Part. Sci., {\bf 51}, 53 (2001).
 
 %[32]
 \bibitem{ShF74} A. de Shalit and H. Feshbach, {\it Theoretical Nuclear Physics: Nuclear Structure}, 
-               John Wiley \& Sons Inc, 1974                
+               (John Wiley \& Sons Inc, 1974).                
 %[33]               
-\bibitem{NAV:1998} P. Navratil, B. R. Barrett, Phys.Rev.C {\bf 57}, 562 (1998) 
+\bibitem{NAV:1998} P. Navratil, B. R. Barrett, Phys.Rev.C {\bf 57}, 562 (1998). 
 
 %[34]
-\bibitem{BaL00}N. Barnea , W.Leidemann, G. Orlandini, Phys.Rev. C {\bf 61}, 054001 (2000)
+\bibitem{BaL00}N. Barnea , W.Leidemann, G. Orlandini, Phys.Rev. C {\bf 61}, 054001 (2000).
 
 %[35]
-\bibitem{OTrep} G. Orlandini and M. Traini, Rep. Prog. Phys. {\bf 54} 257 (1991) 
+\bibitem{OTrep} G. Orlandini and M. Traini, Rep. Prog. Phys. {\bf 54}, 257 (1991). 
 
 %[36]
-\bibitem{Rosenf:1980} R.Rosenfelder, Ann. Phys. {\bf 128}, 188 (1980)
+\bibitem{Rosenf:1980} R.Rosenfelder, Ann. Phys. {\bf 128}, 188 (1980).
 
 %[37]
-\bibitem{ELO94} V.D. Efros, W. Leidemann  and G. Orlandini, Phys. Lett. B, {\bf 338}, 130 (1994)
+\bibitem{ELO94} V.D. Efros, W. Leidemann  and G. Orlandini, Phys. Lett. B, {\bf 338}, 130 (1994).
 
 %[38]
-\bibitem{Sara95} S. Martinelli et al., Phys. Rev. C {\bf 52} (1995) 1778.
+\bibitem{Sara95} S. Martinelli et al., Phys. Rev. C {\bf 52}, (1995) 1778.
 
 %[39]
 \bibitem{Golak_Benchmark2002} J. Golak, R. Skibinski, W. Gl\"ockle, H. Kamada, A. Nogga, 
 H. Witala, V. D. Efros, W. Leidemann, G. Orlandini, and E.L. Tomusiak, 
-Nucl. Phys. {\bf A707}, 365 (2002)
+Nucl. Phys. {\bf A707}, 365 (2002).
   
 %[40]   
-\bibitem{long3H_2004} V. D. Efros, W. Leidemann, G. Orlandini, E. L. Tomusiak,  Phys.Rev. C {\bf  69},  044001 (2004)
+\bibitem{long3H_2004} V. D. Efros, W. Leidemann, G. Orlandini, E. L. Tomusiak,  Phys.Rev. C {\bf  69},  044001 (2004).
 
 %[41]  
-\bibitem{accuracy_2006} N. Barnea, W. Leidemann, G. Orlandini, V. D. Efros, E. L. Tomusiak, Few-Body Syst. C {\bf 39}, 1 (2006)
+\bibitem{accuracy_2006} N. Barnea, W. Leidemann, G. Orlandini, V. D. Efros, E. L. Tomusiak, Few-Body Syst. C {\bf 39}, 1 (2006).
 
 %[42]
-\bibitem{Stetcu_2005} I. Stetcu, B. R. Barrett, P. Navr\'atil, and J. P. Vary, Phys. Rev. C \textbf{71}, 044325 (2005)
+\bibitem{Stetcu_2005} I. Stetcu, B. R. Barrett, P. Navr\'atil, and J. P. Vary, Phys. Rev. C \textbf{71}, 044325 (2005).
 
 %[43]
-\bibitem{Gazit_2006} D. Gazit, S. Bacca, N. Barnea, W. Leidemann, G. OD.J. Dean, M. Hjorth-Jensen, Phys. Rev. C 69 (2004) 054320.rlandini, Phys. Rev. Lett.{\bf  96}, 112301 (2006) 
+\bibitem{Gazit_2006} D. Gazit, S. Bacca, N. Barnea, W. Leidemann, G. Orlandini, Phys. Rev. Lett.{\bf  96}, 112301 (2006). 
 
 %[44]
-\bibitem{He6_2004} S. Bacca, N. Barnea, W. Leidemann, G. Orlandini, Phys. Rev. C {\bf 69}, 057001 (2004) 
+\bibitem{He6_2004} S. Bacca, N. Barnea, W. Leidemann, G. Orlandini, Phys. Rev. C {\bf 69}, 057001 (2004).
 
 %[45]
-\bibitem{Li7_2004} S. Bacca, H. Arenhoevel, N. Barnea, W. Leidemann, G. Orlandini,  Phys.Lett. B {\bf 603}, 159 (2004)
+\bibitem{Li7_2004} S. Bacca, H. Arenhoevel, N. Barnea, W. Leidemann, G. Orlandini,  Phys.Lett. B {\bf 603}, 159 (2004).
 
 %[46]
-\bibitem{neutrino_2007}D. Gazit, N. Barnea, Nucl. Phys. A {\bf 790}, 3D.J. Dean, M. Hjorth-Jensen, Phys. Rev. C 69 (2004) 054320.56 (2007) 
+\bibitem{neutrino_2007}D. Gazit, N. Barnea, Nucl. Phys. A {\bf 790}, 356 (2007). 
 
 %[47]
-\bibitem{CC_O16} S. Bacca, N. Barnea, G. Hagen, M. Miorelli, G. Orlandini, T. Papenbrock, Phys. Rev. C {\bf 90}, 064619 (2014)
+\bibitem{CC_O16} S. Bacca, N. Barnea, G. Hagen, M. Miorelli, G. Orlandini, T. Papenbrock, Phys. Rev. C {\bf 90}, 064619 (2014).
 
 %[48]
-\bibitem{Leidemann_2015} W. Leidemann, Phys. Rev. C {\bf 91}, 054001 (2015) 
+\bibitem{Leidemann_2015} W. Leidemann, Phys. Rev. C {\bf 91}, 054001 (2015). 
 
 %[49]
 \bibitem{report_2007} V. D. Efros, W. Leidemann, G. Orlandini and N. Barnea,
-J. Phys. G: Nucl. Part. Phys. {\bf 34}, R459 (2007)  
+J. Phys. G: Nucl. Part. Phys. {\bf 34}, R459 (2007).
 
 %[50]
-\bibitem{Roggero_2013} A. Roggero, F. Pederiva, and G. Orlandini, Phys. Rev. B {\bf 88}, 094302 (2013)
+\bibitem{Roggero_2013} A. Roggero, F. Pederiva, and G. Orlandini, Phys. Rev. B {\bf 88}, 094302 (2013).
 
 %[51]
-\bibitem{Efros85} V.D. Efros, Sov. J. Nucl. Phys. {\bf 41}, 949 (1985); 
-V.D. Efros, W. Leidemann and {\bf G. Orlandini}
+\bibitem{Efros85} V.D. Efros, Sov. J. Nucl. Phys. {\bf 41}, 949 (1985).
 
 %[52]
-\bibitem{Stieltjes_1993} V.D. Efros,  W. Leidemann, G. Orlandini, Few-Body Sys. {\bf 14}, 151 (1993)
+\bibitem{Stieltjes_1993} V.D. Efros,  W. Leidemann, G. Orlandini, Few-Body Sys. {\bf 14}, 151 (1993).
 
 %[53]
-\bibitem{Miorelli_2016} M. Miorelli, S. Bacca, N. Barnea, G. Hagen, G. R. Jansen, G. Orlandini, T. Papenbrock, arXiv:1604.05381
+\bibitem{Miorelli_2016} M. Miorelli, S. Bacca, N. Barnea, G. Hagen, G. R. Jansen, G. Orlandini, T. Papenbrock, arXiv:1604.05381.
  
 %[54]
 \bibitem{MEM_book}  E. T. Jaynes, {\it Information Theory and Statistical Mechanics}, in “Statistical Physics“, Ed. K.
 Ford New York: Benjamin, p. 181, 1963.
 
 %[55]
-\bibitem{TIKHONOV:1977} A.N. Tikhonov, V.Y. Arsenin, {\it Solutions of ill--posed Problems}, Winston, 1977
+\bibitem{TIKHONOV:1977} A.N. Tikhonov, V.Y. Arsenin, {\it Solutions of ill--posed Problems}, Winston, 1977.
 
 %[56]
 \bibitem{ANDREASI:2005}
-D. Andreasi, W. Leidemann, C. Reiss, and M. Schwamb, Eur. Phys. J. A {\bf 24}, 361 (2005)
+D. Andreasi, W. Leidemann, C. Reiss, and M. Schwamb, Eur. Phys. J. A {\bf 24}, 361 (2005).
 
 \end{thebibliography}
 
