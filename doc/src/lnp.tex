@@ -33,6 +33,13 @@
 \setcounter{tocdepth}{2}
 \usepackage{textcomp,type1ec,pdfpages}
 \usepackage{bera}
+\usepackage{slashed}
+\usepackage{environ}
+\usepackage{esvect}
+\usepackage{xspace}
+\usepackage{bm}
+
+
 %\usepackage{natbib}
 \usepackage{chapterbib}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -164,6 +171,19 @@ tabsize=2
 }}{}
 \usepackage{calrsfs}
 \DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\newcommand {\bea}{\begin{eqnarray}}
+\newcommand {\eea}{\end{eqnarray}}
+\newcommand {\be}{\begin{equation}}
+\newcommand {\ee}{\end{equation}}
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\newcommand {\bc}{\begin{center}}
+\newcommand {\ec}{\end{center}}
+\def\lsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$<$}}}               
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}  
+
 
 \makeindex             % used for the subject index
                        % please use the style svind.ist with
@@ -192,7 +212,7 @@ tabsize=2
 \include{chapter1}
 \include{chapter2}
 \include{chapter3}
-%\include{chapter4}
+\include{chapter4}
 \include{chapter5}
 \include{chapter6}
 \include{chapter7}

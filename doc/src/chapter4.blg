@@ -1,0 +1,94 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter4.aux
+The style file: spphys.bst
+I couldn't open database file lnplib.bib
+---line 252 of file chapter4.aux
+ : \bibdata{lnplib
+ :                }
+I'm skipping whatever remains of this command
+I found no database files---while reading file chapter4.aux
+Warning--I didn't find a database entry for "Wilson-83"
+Warning--I didn't find a database entry for "Lepage-89"
+Warning--I didn't find a database entry for "Weinberg:1978kz"
+Warning--I didn't find a database entry for "Kaplan:1995uv"
+Warning--I didn't find a database entry for "Kaplan:2005es"
+Warning--I didn't find a database entry for "Gasser:1983yg"
+Warning--I didn't find a database entry for "Gasser:1984gg"
+Warning--I didn't find a database entry for "Donoghue:1992"
+Warning--I didn't find a database entry for "Hagen:2014"
+Warning--I didn't find a database entry for "Braaten:2004rn"
+Warning--I didn't find a database entry for "Beane:2000fx"
+Warning--I didn't find a database entry for "Bertulani:2002sz"
+Warning--I didn't find a database entry for "Bedaque:2003wa"
+Warning--I didn't find a database entry for "vanKolck:1998bw"
+Warning--I didn't find a database entry for "Kaplan:1998we"
+Warning--I didn't find a database entry for "Kaplan:1996nv"
+Warning--I didn't find a database entry for "Skorniakov:1957aa"
+Warning--I didn't find a database entry for "Danilov:1961aa"
+Warning--I didn't find a database entry for "Kharchenko:1973aa"
+Warning--I didn't find a database entry for "Bedaque:1998kg"
+Warning--I didn't find a database entry for "Efimov:1970aa"
+Warning--I didn't find a database entry for "Braaten:2011sz"
+Warning--I didn't find a database entry for "Ferlaino:2010viw"
+Warning--I didn't find a database entry for "PhysRevA.93.022707"
+Warning--I didn't find a database entry for "Bedaque:1998km"
+Warning--I didn't find a database entry for "Konig:2014ufa"
+Warning--I didn't find a database entry for "Bedaque:1999ve"
+Warning--I didn't find a database entry for "Peskin:1995"
+Warning--I didn't find a database entry for "Weinberg:1990rz"
+Warning--I didn't find a database entry for "Weinberg:1991um"
+Warning--I didn't find a database entry for "Kaplan:1996xu"
+Warning--I didn't find a database entry for "Kaplan:1998tg"
+Warning--I didn't find a database entry for "Fleming:1999ee"
+Warning--I didn't find a database entry for "Bedaque:2002mn"
+Warning--I didn't find a database entry for "Nogga:2005hy"
+Warning--I didn't find a database entry for "Birse:2005um"
+Warning--I didn't find a database entry for "Epelbaum:2008ga"
+Warning--I didn't find a database entry for "Machleidt:2011zz"
+Warning--I didn't find a database entry for "Epelbaum:2006pt"
+Warning--I didn't find a database entry for "Hammer:2012id"
+Warning--I didn't find a database entry for "Long:2016vnq"
+Warning--I didn't find a database entry for "Scherer:2012xha"
+You've used 0 entries,
+            2812 wiz_defined-function locations,
+            677 strings with 5476 characters,
+and the built_in function-call counts, 28 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There were 2 error messages)

@@ -1,85 +1,16 @@
-\label{chap:chapter5}
-\newcommand\mpi {m_{\pi}}
-%\newcommand\qslash {\slashed{q}}
-%\newcommand{\note}[1]{{\bf \textcolor{red}{\uppercase{#1}}}}
-\newcommand\pslash {\slashed{p}}
-\newcommand\dslash {\slashed{\partial}}
-%\newcommand\Dslash {\slashed{D}}
-\newcommand\psidag{\psi^{\dagger}}
 \newcommand\tautoinfty{\underset{\tau \to\infty}{\longrightarrow}}
 \newcommand\Eq[1]{Eq.~(\ref{eq:#1})}
 \newcommand\Eqs[2]{Eqs.~(\ref{eq:#1},\ref{eq:#2})}
-%\newcommand\Eqs[2]{Eqs.~(\ref{eq:#1})-(\ref{eq:#2})}
 \newcommand\Fig[1]{Fig.~\ref{fig:#1}}
 \newcommand\Figtwo[2]{Figs.~\ref{fig:#1} and \ref{fig:#2}}
 \newcommand\Figs[2]{Figs.~\ref{fig:#1}-\ref{fig:#2}}
 \newcommand\Sec[1]{Sec.~\ref{sec:#1}}
 \newcommand\Sect[1]{Section~\ref{sec:#1}}
 \newcommand\Tab[1]{Table~\ref{tab:#1}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand\beq{\begin{eqnarray}}
-%\newcommand\eeq{\end{eqnarray}} 
 \newcommand\eqn[1]{\label{eq:#1}} 
 \newcommand\eq[1]{eq.~(\ref{eq:#1})} 
 \newcommand\eqstwo[2]{eqs. (\ref{eq:#1},\ref{eq:#2})} 
 \newcommand\eqs[2]{eqs. (\ref{eq:#1}-\ref{eq:#2})} 
-\newcommand{\vev}[1]{\langle #1 \rangle}
-\newcommand{\lfb}{\bigskip\noindent}
-\newcommand{\bfn}{{\mathbf n}}
-\newcommand{\bfx}{{\mathbf x}}
-\newcommand{\bfr}{{\mathbf r}}
-\newcommand{\bfk}{{\mathbf k}}
-\newcommand{\bfq}{{\mathbf q}}
-\newcommand{\bfp}{{\mathbf p}}
-\newcommand{\bfP}{{\mathbf P}}
-\newcommand\Ncfg{N_{\mbox{\tiny cfg}}}
-\newcommand{\eV}{{\rm ~eV }}
-\newcommand{\keV}{{\rm ~keV }}
-\newcommand{\GeV}{{\rm ~GeV }}
-\newcommand{\TeV}{{\rm ~TeV }}
-\newcommand{\MeV}{{\rm ~MeV }}
-\newcommand{\calA}{{\mathcal{ A}}}
-\newcommand{\calB}{{\mathcal{ B}}}
-\newcommand{\calC}{{\mathcal{ C}}}
-\newcommand{\calD}{{\mathcal{ D}}}
-\newcommand{\calE}{{\mathcal{ E}}}
-\newcommand{\calF}{{\mathcal{ F}}}
-\newcommand{\calI}{{\mathcal{ I}}}
-\newcommand{\calH}{{\mathcal{ H}}}
-\newcommand{\calO}{{\mathcal{ O}}}
-\newcommand{\calM}{{\mathcal{ M}}}
-\newcommand{\calN}{{\mathcal{ N}}}
-\newcommand{\calP}{{\mathcal{ P}}}
-\newcommand{\calR}{{\mathcal{ R}}}
-\newcommand{\calG}{{\mathcal{ G}}}
-\newcommand{\calQ}{{\mathcal{ Q}}}
-\newcommand{\calS}{{\mathcal{ S}}}
-\newcommand{\calT}{{\mathcal{ T}}}
-\newcommand{\calU}{{\mathcal{ U}}}
-\newcommand{\calV}{{\mathcal{ V}}}
-\newcommand{\calW}{{\mathcal{ W}}}
-\newcommand{\calZ}{{\mathcal{ Z}}}
-\newcommand{\calL}{{\mathcal{ L}}}
-\newcommand\rf[1]{{\bf [REF #1]}}
-\newcommand{\Tr}{{\rm Tr\,}}
-\newcommand\half{{\textstyle{\frac{1}{2}}}} 
-\newcommand\fourth{{\textstyle{\frac{1}{4}}}} 
-\newcommand\expect[3]{\langle #1|#2|#3\rangle}
-
-%
-% Young Tableaux:
-%
-\newcommand{\mybar}[1]%
-        {\kern 0.6pt\overline{\kern -0.6pt#1\kern -0.6pt}\kern 0.6pt}
-\newcommand{\drawsquare}[2]{\hbox{%
-\rule{#2pt}{#1pt}\hskip-#2pt%  left vertical
-\rule{#1pt}{#2pt}\hskip-#1pt%  lower horizontal
-\rule[#1pt]{#1pt}{#2pt}}\rule[#1pt]{#2pt}{#2pt}\hskip-#2pt%  upper horizontal
-\rule{#2pt}{#1pt}}% right vertical
-\newcommand{\Yfund}{\raisebox{-.5pt}{\drawsquare{6.5}{0.4}}}%  fund
-\newcommand{\Ybarfund}{\mybar{\raisebox{-.5pt}{\drawsquare{6.5}{0.4}}}}%
-
 %\begin{document}
 \title{Lattice methods and effective field theory}
 \author{Amy Nicholson}
@@ -98,9 +29,9 @@ LQCD is a powerful and advanced tool for directly calculating low-energy propert
 
 The first issue is the large number of degrees of freedom involved when using quark fields to create nucleons. In order to calculate a correlation function for a single nucleon in LQCD using quarks (each of which has twelve internal degrees of freedom given by spin and color), one has to perform all possible Wick contractions of the fields in order to build in fermion antisymmetrization. For example, to create a proton using three valence quark operators requires the calculation of two different terms corresponding to interchanging the two up quark sources. The number of contractions involved for a nuclear correlation function grows with atomic number $Z$ and mass number $A$ as $(A+Z)!(2A-Z)!$. For He$_4$ this corresponds to $\sim 5 \times 10^5$ terms\footnote{This is a very na\"ive estimate; far more sophisticated algorithms exist with power-law scaling.}!
 
-The second major problem occurs when performing a stochastic estimate of the path integral. A single quark propagator calculated on a given gauge field configuration may be a part of either a light meson or a heavy nucleon. However, the difference cannot be determined until correlations with the other quark fields present are built in by summing over a sufficiently large number of these field configurations\footnote{This interpretation of the signal-to-noise problem has been provided by David B. Kaplan.}. This leads to large fluctuations from configuration to configuration, and a stochastic signal-to-noise ratio, $\calR$, which degrades exponentially with the number of nucleons in the system,
+The second major problem occurs when performing a stochastic estimate of the path integral. A single quark propagator calculated on a given gauge field configuration may be a part of either a light meson or a heavy nucleon. However, the difference cannot be determined until correlations with the other quark fields present are built in by summing over a sufficiently large number of these field configurations\footnote{This interpretation of the signal-to-noise problem has been provided by David B. Kaplan.}. This leads to large fluctuations from configuration to configuration, and a stochastic signal-to-noise ratio, ${\mathcal{ R}}$, which degrades exponentially with the number of nucleons in the system,
 \beq
-\calR \sim e^{-A(M-3/2 m_{\pi})\tau} \ ,
+{\mathcal{ R}} \sim e^{-A(M-3/2 m_{\pi})\tau} \ ,
 \eeq
 where $M$ is the nucleon mass and $m_{\pi}$ is the pion mass \cite{Lepage:1989hd}. This is currently the major limiting factor for the size of nuclear which can be probed using LQCD. The best calculations we have from LQCD using multiple nucleons to date are in the two-nucleon sector \cite{Berkowitz:2015eaa,Kurth:2015cvl,Nicholson:2015pys,Orginos:2015aya,Detmold:2015daa,Chang:2015qxa,Beane:2015yha,Beane:2014sda,Beane:2014ora,Beane:2013br,Beane:2012vq,Beane:2011iw,Beane:2009py,Yamazaki:2015vjn,Yamazaki:2015asa,Yamazaki:2013rna,Yamazaki:2012fn,Yamazaki:2012hi,Doi:2015uvd,Doi:2015oha,Ishii:2006ec,Murano:2013xxa,Aoki:2014mia,Murano:2013gta,HALQCD:2012aa,Inoue:2010hs}, while fewer calculations have been performed for three and four nucleon systems \cite{Beane:2009gs,Beane:2012vq,Beane:2014ora,Beane:2014sda,Chang:2015qxa,Yamazaki:2015vjn,Yamazaki:2015asa,Yamazaki:2013rna,Yamazaki:2012fn,Yamazaki:2012hi,Doi:2011gq}; however, even for two nucleon systems unphysically large pion masses must be used in order to reduce the noise problem. We will discuss signal-to-noise problems in more detail in \Sec{SNR}. 
 
@@ -330,22 +261,22 @@ where the integration measure for the $\phi$ field, $\rho[\phi]$, depends on the
 With the action in the bilinear form of \Eq{actiongen}, the $\psi$ fields can be integrated out analytically, resulting in
 \beq
 \label{eq:prob}
-Z_{\phi}=\int \calD \phi P[\phi] \qquad P[\phi] \equiv \rho[\phi]\det K[\phi] \ .
+Z_{\phi}=\int {\mathcal{ D}} \phi P[\phi] \qquad P[\phi] \equiv \rho[\phi]\det K[\phi] \ .
 \eeq
 Observables take the form
 \beq
-\langle \calO \rangle = \frac{1}{Z} \int \calD \phi P[\phi]\calO[\phi] \ .
+\langle {\mathcal{ O}} \rangle = \frac{1}{Z} \int {\mathcal{ D}} \phi P[\phi]{\mathcal{ O}}[\phi] \ .
 \eeq
 
-Through the use of discretization and a finite volume, the path integral has been converted into a standard integral with finite dimension. However, the dimension is still much too large to imagine calculating it on any conceivable computer, so we must resort to Monte Carlo methods for approximation. The basic idea is to generate a finite set of $\phi$ field configurations of size $\Ncfg$ according to the probability measure $P[\phi]$, calculate the observable on each of these configurations, then take the mean as an approximation of the full integral,
+Through the use of discretization and a finite volume, the path integral has been converted into a standard integral with finite dimension. However, the dimension is still much too large to imagine calculating it on any conceivable computer, so we must resort to Monte Carlo methods for approximation. The basic idea is to generate a finite set of $\phi$ field configurations of size $N_{\mbox{\tiny cfg}}$ according to the probability measure $P[\phi]$, calculate the observable on each of these configurations, then take the mean as an approximation of the full integral,
 \beq
-\langle \calO \rangle \approx \frac{1}{\Ncfg}\sum_n^{\Ncfg}\calO(\phi_n) \ .
+\langle {\mathcal{ O}} \rangle \approx \frac{1}{N_{\mbox{\tiny cfg}}}\sum_n^{N_{\mbox{\tiny cfg}}}{\mathcal{ O}}(\phi_n) \ .
 \eeq
-Assuming the central limit theorem holds, for $\Ncfg$ large enough (a non-trivial condition, as will be discussed in \Sec{overlap}), the distribution of the mean approaches a Gaussian, and the error on the mean falls off with the square root of the sample size. 
+Assuming the central limit theorem holds, for $N_{\mbox{\tiny cfg}}$ large enough (a non-trivial condition, as will be discussed in \Sec{overlap}), the distribution of the mean approaches a Gaussian, and the error on the mean falls off with the square root of the sample size. 
 
 There are several algorithms on the market for generating field configurations according to a given probability distribution, and I will only briefly mention a few. Lattice calculations are particularly tricky due to the presence of the determinant in \Eq{prob}, which is a highly non-local object and is very costly to compute. One possible algorithm to deal with this is called determinantal Monte  Carlo, which implements local changes in $\phi$, followed by a simple Metropolis accept/reject step. This process can be rather inefficient due to the local updates. An alternative possibility is Hybrid Monte Carlo, commonly used for lattice QCD calculations, in which global updates of the field are produced using molecular dynamics as a guiding principle. Note that the field $\phi$ must be continuous in order to use this algorithm due to the use of classical differential equations when generating changes in the field. Also common in lattice QCD calculations is the use of pseudofermion fields as a means for estimating the fermion determinant. Here the determinant is rewritten in terms of a Gaussian integral over bosonic fields, $\chi$,
 \beq
-\det K[\phi] \propto \int \calD \chi^{\dagger}\calD \chi e^{-\chi^{\dagger}K^{-1}[\phi]\chi} \ .
+\det K[\phi] \propto \int {\mathcal{ D}} \chi^{\dagger}{\mathcal{ D}} \chi e^{-\chi^{\dagger}K^{-1}[\phi]\chi} \ .
 \eeq
 This integral is then evaluated stochastically. These are just a sample of the available algorithms. For more details on these and others in the context of non-relativistic lattice field theory, see \cite{Drut:2012md}.
 
@@ -353,7 +284,7 @@ This integral is then evaluated stochastically. These are just a sample of the a
 Now that we have developed a general framework for lattice EFT, let's be explicit and make a few choices in order to further our understanding and make calculations simpler. The first choice I'm going to make is to use a $Z_2$ $\phi$ field, so that $\rho[\phi]$ is trivial. The next simplification I'm going to make is to allow the $\phi$ fields to live only on temporal links,
 \beq
 \label{eq:pointint}
-\calL_{\mbox{\tiny int}} = \sum_{\bfx}\sqrt{b_{\tau}g_0}\phi_{\bfx,\tau}\psidag_{\bfx,\tau}\psi_{\bfx,\tau-1} \ .
+{\mathcal{ L}}_{\mbox{\tiny int}} = \sum_{{\mathbf x}}\sqrt{b_{\tau}g_0}\phi_{{\mathbf x},\tau}\psi^{\dagger}_{{\mathbf x},\tau}\psi_{{\mathbf x},\tau-1} \ .
 \eeq
 Note that we are free to make this choice, so long as the proper four-fermion interaction is regained in the continuum limit. This choice renders the interaction separable, as it was in our continuum effective theory. This means we may analytically sum two-body bubble chain diagrams as we did previously in order to set the coupling $g_0$ using some physical observable (see \Fig{dimer}). 
 
@@ -437,11 +368,11 @@ This final sum may be calculated numerically for a given $M$ and $L$ (governing 
 
 The second method for setting the coupling utilizes the calculation of the ground state energy of two particles. We start with the two-particle correlation function,
 \beq
-C_2(\tau) = \frac{1}{Z}\int \calD \phi \calD \psidag \calD \psi e^{-S[\psidag, \psi, \phi]} \Psi^{\dagger}_{\mbox{\tiny src,2}} \Psi_{\mbox{\tiny snk,2}} \ ,
+C_2(\tau) = \frac{1}{Z}\int {\mathcal{ D}} \phi {\mathcal{ D}} \psi^{\dagger} {\mathcal{ D}} \psi e^{-S[\psi^{\dagger}, \psi, \phi]} \Psi^{\dagger}_{\mbox{\tiny src,2}} \Psi_{\mbox{\tiny snk,2}} \ ,
 \eeq
 where $\Psi_{\mbox{\tiny src,2(snk,2)}}$ is a source (sink) wavefunction involving one spin up and one spin down particle. Integrating out the fermion fields gives,
 \beq
-C_2(\tau) &=& \frac{1}{Z_{\phi}}\int \calD \phi P[\phi] \langle \Psi_{\mbox{\tiny snk,2}}|K^{-1}(\tau,0) \otimes K^{-1}(\tau,0) | \Psi_{\mbox{\tiny src,2}}\rangle \cr
+C_2(\tau) &=& \frac{1}{Z_{\phi}}\int {\mathcal{ D}} \phi P[\phi] \langle \Psi_{\mbox{\tiny snk,2}}|K^{-1}(\tau,0) \otimes K^{-1}(\tau,0) | \Psi_{\mbox{\tiny src,2}}\rangle \cr
 &=& \frac{1}{4\tau}\sum_{\phi=\pm 1}\langle \Psi_{\mbox{\tiny snk,2}} | D^{-1} \otimes D^{-1} X(\phi_\tau)\otimes X(\phi_{\tau})D^{-1}\otimes D^{-1} X(\phi_{\tau-1})\otimes X(\phi_{\tau-1}) \cdots |\Psi_{\mbox{\tiny src,2}} \rangle \ . \cr
 \eeq
 I will now write out the components of the matrices explicitly:
@@ -457,29 +388,29 @@ The first (last) piece in angle brackets represents the position space wavefunct
 \eeq
 where the cross terms vanish upon performing the sum. If we make the following definitions,
 \beq
-\langle x_1 x_1' | \calD ^{-1} | x_2 x_2' \rangle \equiv D^{-1}_{x_1 x_1'} D^{-1}_{x_2 x_2'} \ ,  \qquad \langle x_1 x_2 | \calV | x_1' x_2' \rangle \equiv g_0 \delta_{x_1x_1'}\delta_{x_2x_2'}\delta_{x_1x_2}  \ ,
+\langle x_1 x_1' | {\mathcal{ D}} ^{-1} | x_2 x_2' \rangle \equiv D^{-1}_{x_1 x_1'} D^{-1}_{x_2 x_2'} \ ,  \qquad \langle x_1 x_2 | {\mathcal{ V}} | x_1' x_2' \rangle \equiv g_0 \delta_{x_1x_1'}\delta_{x_2x_2'}\delta_{x_1x_2}  \ ,
 \eeq
 then we can write the two-particle correlation function as,
 \beq
-C_2(\tau) &=& \langle \Psi_{\mbox{\tiny snk,2}}| \calD^{-1}(1+\calV)\calD^{-1}(1+\calV) \cdots \calD^{-1}(1+\calV)\calD^{-1} | \Psi_{\mbox{\tiny src}} \rangle \cr
-&=& \langle \Psi_{\mbox{\tiny snk}} | \calD^{-1/2} \calT \calD^{-1/2} | \Psi_{\mbox{\tiny src,2}} \rangle \ ,
+C_2(\tau) &=& \langle \Psi_{\mbox{\tiny snk,2}}| {\mathcal{ D}}^{-1}(1+{\mathcal{ V}}){\mathcal{ D}}^{-1}(1+{\mathcal{ V}}) \cdots {\mathcal{ D}}^{-1}(1+{\mathcal{ V}}){\mathcal{ D}}^{-1} | \Psi_{\mbox{\tiny src}} \rangle \cr
+&=& \langle \Psi_{\mbox{\tiny snk}} | {\mathcal{ D}}^{-1/2} {\mathcal{ T}} {\mathcal{ D}}^{-1/2} | \Psi_{\mbox{\tiny src,2}} \rangle \ ,
 \eeq
 where I have made the definition
 \beq
 \label{eq:transmat}
-\calT \equiv \calD^{-1/2}(1+\calV) \calD^{-1/2} \ .
+{\mathcal{ T}} \equiv {\mathcal{ D}}^{-1/2}(1+{\mathcal{ V}}) {\mathcal{ D}}^{-1/2} \ .
 \eeq
 Recall from statistical mechanics that correlation functions may be written as $\tau$ insertions of the transfer matrix, $e^{-H}$, acting between two states,
 \beq
 C(\tau) &=& \langle \Psi_{\mbox{\tiny snk,2}} | e^{-H\tau} | \Psi_{\mbox{\tiny src,2}} \rangle \cr 
 &=& \langle \Psi_{\mbox{\tiny snk,2}} | \left[e^{-H}\right]^{\tau} | \Psi_{\mbox{\tiny src,2}} \rangle \ .
 \eeq 
-Then we may identify $\calT$ in \Eq{transmat} as the transfer matrix of the theory, $\calT = e^{-H}$. This in turn implies that the logarithm of the eigenvalues of $\calT$ give the energies of the two-particle system.
+Then we may identify ${\mathcal{ T}}$ in \Eq{transmat} as the transfer matrix of the theory, ${\mathcal{ T}} = e^{-H}$. This in turn implies that the logarithm of the eigenvalues of ${\mathcal{ T}}$ give the energies of the two-particle system.
 
 We will now evaluate the transfer matrix in momentum space:
 \beq
 \label{eq:transexplicit}
-\langle p q| \calT | p'q'\rangle &=& \sum_{kk'll'}\langle pq|\calD^{-1/2}|kl\rangle \langle kl | 1+\calV | k'l' \rangle \langle k'l' |\calD^{-1/2}|p'q'\rangle \cr
+\langle p q| {\mathcal{ T}} | p'q'\rangle &=& \sum_{kk'll'}\langle pq|{\mathcal{ D}}^{-1/2}|kl\rangle \langle kl | 1+{\mathcal{ V}} | k'l' \rangle \langle k'l' |{\mathcal{ D}}^{-1/2}|p'q'\rangle \cr
 &=& \sum_{kk'll'} \delta_{k'p'}\delta_{l'q'}\delta_{pk}\delta_{ql} \left(\delta_{kk'}\delta_{ll'}+\delta_{k+l,k'+l'} \frac{g_0}{V}\right) \cr
 &\times& \left[\frac{1}{\left(1+\frac{\Delta(p)}{M}\right)\left(1+\frac{\Delta(q)}{M}\right)\left(1+\frac{\Delta(p')}{M}\right)\left(1+\frac{\Delta(q')}{M}\right)}\right]^{1/2} \cr
 &=&\frac{\delta_{pp'}\delta_{qq'}+\frac{g_0}{V}\delta_{p+q,p'+q'}}{\sqrt{\xi(p)\xi(q)\xi(q')\xi(p')}} \ ,
@@ -488,7 +419,7 @@ where I have made the definition,
 \beq
 \xi(p) \equiv 1+\frac{\Delta(q)}{M} \ .
 \eeq
-The eigenvalues of the matrix $\calT$ may be evaluated numerically to reproduce the entire two-particle spectrum. However, for the moment we only need to set a single coupling, $g_0$, so one eigenvalue will be sufficient. The largest eigenvalue of the transfer matrix, corresponding to the ground state, may be found using a simple variational analysis\footnote{Many thanks to Michael Endres for the following variational argument.}. Choosing a simple trial state wavefunction,
+The eigenvalues of the matrix ${\mathcal{ T}}$ may be evaluated numerically to reproduce the entire two-particle spectrum. However, for the moment we only need to set a single coupling, $g_0$, so one eigenvalue will be sufficient. The largest eigenvalue of the transfer matrix, corresponding to the ground state, may be found using a simple variational analysis\footnote{Many thanks to Michael Endres for the following variational argument.}. Choosing a simple trial state wavefunction,
 \beq
 \langle pq| \Psi \rangle = \frac{\psi(p)}{\sqrt{V}}\delta_{p,-q} \ ,
 \eeq
@@ -498,9 +429,9 @@ subject to the normalization constraint,
 \eeq
 we now need to maximize the following functional:
 \beq
-\langle \Psi |\calT | \Psi \rangle = \left[\frac{1}{V} \sum_p \frac{|\psi(p)|^2}{\xi^2(p)} + \frac{g_0}{V^2}\left| \sum_p \frac{\psi(p)}{\xi(p)} \right|^2 + \lambda \left(1-\frac{1}{V}\sum_p |\psi(p)|^2\right)\right] \ ,
+\langle \Psi |{\mathcal{ T}} | \Psi \rangle = \left[\frac{1}{V} \sum_p \frac{|\psi(p)|^2}{\xi^2(p)} + \frac{g_0}{V^2}\left| \sum_p \frac{\psi(p)}{\xi(p)} \right|^2 + \lambda \left(1-\frac{1}{V}\sum_p |\psi(p)|^2\right)\right] \ ,
 \eeq
-where $\lambda$ is a Lagrange multiplier enforcing the normalization constraint, and I have used the fact that $\xi(p)$ is symmetric in $p$ to simplify the expression. Taking a functional derivative with respect to $\psidag(q)$ on both sides gives
+where $\lambda$ is a Lagrange multiplier enforcing the normalization constraint, and I have used the fact that $\xi(p)$ is symmetric in $p$ to simplify the expression. Taking a functional derivative with respect to $\psi^{\dagger}(q)$ on both sides gives
 \beq
 -\lambda \psi(q) + \frac{\psi(q)}{\xi^2(q)} + \frac{g_0}{V}\sum_p \frac{\psi(p)}{\xi(p)\xi(q)} = 0 \ ,
 \eeq
@@ -516,11 +447,11 @@ finally resulting in
 We now have an equation involving two unknowns, $\lambda$ and $g_0$. We need a second equation in order to determine these two parameters. We may use the constraint equation to solve for $\psi(p)$, giving
 \beq
 \label{eq:varpsi}
-\psi(p) = \calN \frac{\xi(p)}{\lambda \xi^2(p)-1} \ , \qquad \frac{1}{\calN^2} = \frac{1}{V} \sum_p \frac{\xi^2(p)}{\left[\lambda \xi^2(p)-1\right]^2} \ .
+\psi(p) = {\mathcal{ N}} \frac{\xi(p)}{\lambda \xi^2(p)-1} \ , \qquad \frac{1}{{\mathcal{ N}}^2} = \frac{1}{V} \sum_p \frac{\xi^2(p)}{\left[\lambda \xi^2(p)-1\right]^2} \ .
 \eeq
 Plugging this back in to our transfer matrix we find,
 \beq
-\langle \Psi | \calT | \Psi \rangle = \lambda \ .
+\langle \Psi | {\mathcal{ T}} | \Psi \rangle = \lambda \ .
 \eeq
 This tells us that $\lambda$ is equivalent to the eigenvalue we sought, $E_0 = -\ln \lambda(g_0)$. As a check, we can compare \Eqs{eigeqscat}{eigeqlambda} in the unitary limit: $a \to \infty, \lambda \to 1$, giving
 \beq
@@ -533,7 +464,7 @@ In \Sec{tuning} we will discuss a simple formalism for determining the exact two
 \section{\label{sec:observables}Calculating observables}
 Perhaps the simplest observable to calculate using lattice (or any imaginary time) methods is the ground-state energy. While the two-body system may be solved exactly and used to set the couplings for two-body interactions, correlation functions for $N$-body systems can then be used to make predictions. However, the transfer matrix for $N\gtrsim 4$ cannot in general be solved exactly, because the dimension of the matrix increases with particle number. For this reason we form instead $N$-body correlation functions,
 \beq
-C_N(\tau)=\frac{1}{Z}\int \calD\phi\calD\psidag\calD\psi e^{-S[\psidag,\psi,\phi]}\Psi_{b_1 \cdots b_N}^{(b)}(\tau)\Psi_{a_1 \cdots a_N}^{\dagger (a)}(0) \ ,
+C_N(\tau)=\frac{1}{Z}\int {\mathcal{ D}}\phi{\mathcal{ D}}\psi^{\dagger}{\mathcal{ D}}\psi e^{-S[\psi^{\dagger},\psi,\phi]}\Psi_{b_1 \cdots b_N}^{(b)}(\tau)\Psi_{a_1 \cdots a_N}^{\dagger (a)}(0) \ ,
 \eeq
 where 
 \beq
@@ -574,33 +505,33 @@ Another observable one may calculate using lattice methods is the scattering pha
 \subsection{\label{sec:SNR}Signal-to-noise}
 Recall that we must use Monte Carlo methods to approximate the partition function using importance sampling,
 \beq
-C(\tau) \approx \frac{1}{\Ncfg} \sum_{i=1}^{\Ncfg} C(\phi_i,\tau) \tautoinfty Z_0 e^{-E_0\tau}\ ,
+C(\tau) \approx \frac{1}{N_{\mbox{\tiny cfg}}} \sum_{i=1}^{N_{\mbox{\tiny cfg}}} C(\phi_i,\tau) \tautoinfty Z_0 e^{-E_0\tau}\ ,
 \eeq
 where $C(\phi_i,\tau)$ is the operator for some correlation function of interest evaluated on a single configuration $\phi_i$, and the set of all fields, $\phi$, are generated according to the appropriate probability distribution. In the long Euclidean time limit we expect that this quantity will give us an accurate value for the ground state energy. As stated previously, if the ensemble is large enough for the central limit theorem to hold, then the error on the mean (noise) will be governed by the sample standard deviation,
 \beq
-\sigma_C^2(\tau) = \frac{1}{\Ncfg}\left[ \sum_{i=1}^{\Ncfg}|C(\phi_i,\tau)|^2 - \left|\sum_{i=1}^{\Ncfg}C(\phi_i,\tau)\right|^2\right] \ .
+\sigma_C^2(\tau) = \frac{1}{N_{\mbox{\tiny cfg}}}\left[ \sum_{i=1}^{N_{\mbox{\tiny cfg}}}|C(\phi_i,\tau)|^2 - \left|\sum_{i=1}^{N_{\mbox{\tiny cfg}}}C(\phi_i,\tau)\right|^2\right] \ .
 \eeq
 
 As an example of how to estimate the size of the fluctuations relative to the signal, let's consider a single particle correlation function, consisting of a single propagator,
 \beq
-\frac{1}{Z_{\phi}}\int \calD \phi P(\phi) \langle \Psi_a | K^{-1}(\phi,\tau) | \Psi_b \rangle \approx \frac{1}{\Ncfg}\sum_{i=1}^{\Ncfg} K_{ab}^{-1}(\phi_i,\tau) \ ,
+\frac{1}{Z_{\phi}}\int {\mathcal{ D}} \phi P(\phi) \langle \Psi_a | K^{-1}(\phi,\tau) | \Psi_b \rangle \approx \frac{1}{N_{\mbox{\tiny cfg}}}\sum_{i=1}^{N_{\mbox{\tiny cfg}}} K_{ab}^{-1}(\phi_i,\tau) \ ,
 \eeq 
 where the indices $\{ ab\}$ indicate projection onto the states specified by the source/sink. In the large Euclidean time limit, this object will approach a constant, $Z_0$, because the ground state energy for a single particle is $E_0=0$. For the non-relativistic theory as we have set it up, the matrix $K$ is real so long as $g_0>0$ (attractive interaction). The standard deviation is then given by
 \beq
 \label{eq:sig1part}
-\sigma_{C_1}^2(\tau) = \frac{1}{\Ncfg}\left[ \sum_{i=1}^{\Ncfg} \left(K_{ab}^{-1}(\phi_i,\tau)\right)^2 - \left( \sum_{i=1}^{\Ncfg} K_{ab}^{-1}(\phi_i,\tau)\right)^2 \right] \ .
+\sigma_{C_1}^2(\tau) = \frac{1}{N_{\mbox{\tiny cfg}}}\left[ \sum_{i=1}^{N_{\mbox{\tiny cfg}}} \left(K_{ab}^{-1}(\phi_i,\tau)\right)^2 - \left( \sum_{i=1}^{N_{\mbox{\tiny cfg}}} K_{ab}^{-1}(\phi_i,\tau)\right)^2 \right] \ .
 \eeq
 The second term on the right hand side of the above equation is simply the square of the single particle correlation function, and will therefore also go to a constant, $Z_0^2$, for large Euclidean time. To gain an idea of how large the first term of $\sigma_{C_1}^2$ is, let's take a look at a correlation function for one spin up and one spin down particle,
 \beq
-C_2(\tau)=\frac{1}{Z}\int \calD\phi\calD\psidag\calD\psi e^{-S[\psidag,\psi,\phi]}\psi_{\uparrow}^{(b)}(\tau)\psi_{\downarrow}^{(b)}(\tau)\psi_{\uparrow}^{\dagger (a)}(0)\psi_{\downarrow}^{\dagger (a)}(0) \ ,
+C_2(\tau)=\frac{1}{Z}\int {\mathcal{ D}}\phi{\mathcal{ D}}\psi^{\dagger}{\mathcal{ D}}\psi e^{-S[\psi^{\dagger},\psi,\phi]}\psi_{\uparrow}^{(b)}(\tau)\psi_{\downarrow}^{(b)}(\tau)\psi_{\uparrow}^{\dagger (a)}(0)\psi_{\downarrow}^{\dagger (a)}(0) \ ,
 \eeq
 where I have chosen the same single particle source (sink), $\psi^{(a)}$ ($\psi^{(b)}$), for both particles (this is only allowed for bosons or for fermions with different spin/flavor labels). After integrating out the $\psi$ fields we have
 \beq
-C_2(\tau) = \frac{1}{Z_{\phi}}\int \calD\phi P(\phi) K_{ab}^{-1}(\phi,\tau) K_{ab}^{-1}(\phi,\tau) \ ,
+C_2(\tau) = \frac{1}{Z_{\phi}}\int {\mathcal{ D}}\phi P(\phi) K_{ab}^{-1}(\phi,\tau) K_{ab}^{-1}(\phi,\tau) \ ,
 \eeq
 which is approximately given by
 \beq
-C_2(\tau) \approx \frac{1}{\Ncfg}\sum_{i=1}^{\Ncfg}\left[ K_{ab}^{-1}(\phi_i,\tau)\right]^2 \ .
+C_2(\tau) \approx \frac{1}{N_{\mbox{\tiny cfg}}}\sum_{i=1}^{N_{\mbox{\tiny cfg}}}\left[ K_{ab}^{-1}(\phi_i,\tau)\right]^2 \ .
 \eeq
 This is precisely what we have for the first term on the right hand side of \Eq{sig1part}. Therefore, this term should be considered a two-particle correlation function, whose long Euclidean time behavior is known. Note that we must interpret this quantity as a two-particle correlation function whose particles are either bosons or fermions with different spin/flavor labels due to the lack of anti-symmetrization. 
 
@@ -612,19 +543,19 @@ where $E_0^{(2)}$ is the ground state energy of the two-particle system. For a t
 \beq
 \sigma_{C_1}^2(\tau) \tautoinfty Z_2e^{E_B^{(2)} \tau} - Z_1^2 \ ,
 \eeq
-where I've defined $E_B^{(2)} \equiv -E_0^{(2)}$. This tells us that $\sigma_{C_1}^2$, and therefore the noise, grows exponentially with time. We can write the signal-to-noise ratio $\calR_{C_1}(\tau)$ as
+where I've defined $E_B^{(2)} \equiv -E_0^{(2)}$. This tells us that $\sigma_{C_1}^2$, and therefore the noise, grows exponentially with time. We can write the signal-to-noise ratio ${\mathcal{ R}}_{C_1}(\tau)$ as
 \beq
-\calR_{C_1}(\tau) \equiv \frac{C_1(\tau)}{\frac{1}{\sqrt{\Ncfg}} \sigma_{C_1}(\tau)} \tautoinfty \sqrt{\Ncfg} \frac{Z_1}{\sqrt{Z_2} e^{E_B^{(2)}\tau/2}} = \sqrt{\Ncfg}\frac{Z_1}{\sqrt{Z_2}}e^{-E_B^{(2)} \tau/2} \ ,
+{\mathcal{ R}}_{C_1}(\tau) \equiv \frac{C_1(\tau)}{\frac{1}{\sqrt{N_{\mbox{\tiny cfg}}}} \sigma_{C_1}(\tau)} \tautoinfty \sqrt{N_{\mbox{\tiny cfg}}} \frac{Z_1}{\sqrt{Z_2} e^{E_B^{(2)}\tau/2}} = \sqrt{N_{\mbox{\tiny cfg}}}\frac{Z_1}{\sqrt{Z_2}}e^{-E_B^{(2)} \tau/2} \ ,
 \eeq
-where I've dropped the constant term in $\sigma_{C_1}^2$, because it is suppressed in time relative to the exponentially growing term. This expression indicates that the signal-to-noise ratio itself grows exponentially with time, and therefore an exponentially large $\Ncfg$ will be necessary to extract a signal at large Euclidean time. Unfortunately, large Euclidean time is necessary in order to isolate the ground state. 
+where I've dropped the constant term in $\sigma_{C_1}^2$, because it is suppressed in time relative to the exponentially growing term. This expression indicates that the signal-to-noise ratio itself grows exponentially with time, and therefore an exponentially large $N_{\mbox{\tiny cfg}}$ will be necessary to extract a signal at large Euclidean time. Unfortunately, large Euclidean time is necessary in order to isolate the ground state. 
 
 This exponential signal-to-noise problem is currently the limiting factor in system size for the use of any lattice method for nuclear physics. Here, we will discuss it in some detail because in many cases understanding the physical basis behind the problem can lead to methods for alleviation. One method we can use is to employ knowledge of the wavefunction of the signal and/or the wavefunction of the undesired noise in order to maximize the ratio of $Z$-factors, $Z_1/\sqrt{Z_2}$. For example, choosing a plane wave source for our single particle correlator gives perfect overlap with the desired signal, but will give poor overlap with the bound state expected in the noise. This leads to what has been referred to as a ``golden window" in time where the ground-state dominates before the noise begins to turn on \cite{Beane:2010em}. In general, choosing a perfect source for the signal is not possible, however, a proposal for simultaneously maximizing the overlap with the desired state as well as reducing the overlap with the noise using a variational principle has been proposed in \cite{Detmold:2014hla,Detmold:2014rfa}. We will discuss other methods for choosing good interpolating fields in \Sec{interp}, in order to allow us to extract a signal at earlier times where the signal-to-noise problem is less severe.
 
 Another situation where understanding of the noise may allow us to reduce the noise is when the auxiliary fields and couplings used to generate the interactions can often be introduced in different ways, for instance, via the density channel vs. the BCS channel as mentioned previously. While different formulations can give the same effective interaction, they may lead to different sizes of the fluctuations. Understanding what types of interactions generate the most noise is therefore crucial. This will become particularly relevant when we discuss adding interactions beyond leading order to our EFT in \Sec{NLO}, where different combinations of interactions can be tuned to give the same physical observables.
 
-Let's now discuss what happens to $\sigma_{C_1}^2$ if we have a repulsive interaction ($g_0<0$). Because nuclear potentials have repulsive cores, such a scenario occurs for interactions at large energy. Since the auxiliary-field-mediated interaction is given by $\sqrt{g_0}\phi\psidag\psi$, this implies that the interaction is complex. Our noise is now given by
+Let's now discuss what happens to $\sigma_{C_1}^2$ if we have a repulsive interaction ($g_0<0$). Because nuclear potentials have repulsive cores, such a scenario occurs for interactions at large energy. Since the auxiliary-field-mediated interaction is given by $\sqrt{g_0}\phi\psi^{\dagger}\psi$, this implies that the interaction is complex. Our noise is now given by
 \beq
-\sigma_{C_1}^2(\tau) = \frac{1}{\Ncfg} \sum_{i=1}^{\Ncfg} K_{ab}^{-1}(\phi_i,\tau) \left[K_{ab}^{-1}(\phi_i,\tau)\right]^{\dagger} - |C_1(\tau)|^2 \ .
+\sigma_{C_1}^2(\tau) = \frac{1}{N_{\mbox{\tiny cfg}}} \sum_{i=1}^{N_{\mbox{\tiny cfg}}} K_{ab}^{-1}(\phi_i,\tau) \left[K_{ab}^{-1}(\phi_i,\tau)\right]^{\dagger} - |C_1(\tau)|^2 \ .
 \eeq
 Recall that the single particle propagator can be written
 \beq
@@ -642,7 +573,7 @@ which is exactly the same as we had for the attractive interaction. This implies
 
 In general, however, signal-to-noise problems for systems with repulsive interactions are exponentially worse than those for attractive interactions. This is because generically the signal-to-noise ratio falls off as,
 \beq
-\calR \sim e^{-\left(E_{\mathcal{S}} - E_{\mathcal{N}}/2\right)\tau} \ ,
+{\mathcal{ R}} \sim e^{-\left(E_{\mathcal{S}} - E_{\mathcal{N}}/2\right)\tau} \ ,
 \eeq
 where $E_{\mathcal{S}(\mathcal{N})}$ is the ground-state energy associated with the signal (noise). Because the signal corresponds to a repulsive system while the noise corresponds to an attractive system, the energy difference in the exponential will be greater than for a signal corresponding to an attractive system. 
 
@@ -651,44 +582,44 @@ A related but generally more insidious problem can occur in formulations having 
 
 The basic issue behind a sign problem is that a probability measure, by definition, must be real and positive. Therefore, a complex determinant cannot be used for importance sampling. Methods to get around the sign problem often result in exponentially large fluctuations of the observable when calculated on a finite sample, similar to the signal-to-noise problem (the two usually result from the same physical mechanism). One particular method is called reweighting, in which a reshuffling occurs between what is considered the ``observable" and what is considered the ``probability measure". For example, when calculating an observable,
 \beq
-\langle \calO \rangle = \frac{1}{Z_{\phi}}\int \calD\phi P(\phi)\calO(\phi) \ ,
+\langle {\mathcal{ O}} \rangle = \frac{1}{Z_{\phi}}\int {\mathcal{ D}}\phi P(\phi){\mathcal{ O}}(\phi) \ ,
 \eeq
 when $P(\phi)$ is complex, we can multiply and divide by the magnitude of $P(\phi)$ in both numerator and denominator,
 \beq
-\langle \calO \rangle = \frac{\int \calD\phi |P(\phi)| \frac{P(\phi)\calO(\phi)}{|P(\phi)|}}{\int \calD\phi |P(\phi)| \frac{P(\phi)}{|P(\phi)|}} \ ,
+\langle {\mathcal{ O}} \rangle = \frac{\int {\mathcal{ D}}\phi |P(\phi)| \frac{P(\phi){\mathcal{ O}}(\phi)}{|P(\phi)|}}{\int {\mathcal{ D}}\phi |P(\phi)| \frac{P(\phi)}{|P(\phi)|}} \ ,
 \eeq
-as well as multiply and divide by $\tilde{Z}_{\phi} \equiv \int \calD \phi |P(\phi)|$,
+as well as multiply and divide by $\tilde{Z}_{\phi} \equiv \int {\mathcal{ D}} \phi |P(\phi)|$,
 \beq
 \label{eq:reweight}
-\langle \calO \rangle = \frac{\int \calD\phi |P(\phi)| \frac{P(\phi)\calO(\phi)}{|P(\phi)|}}{\tilde{Z}_{\phi}}\left/\frac{\int \calD\phi |P(\phi)| \frac{P(\phi)}{|P(\phi)|}} {\tilde{Z}_{\phi}} = \langle \calO' \rangle_{|P|}\left/\langle \calO''\rangle_{|P|}\right.\right. \ ,
+\langle {\mathcal{ O}} \rangle = \frac{\int {\mathcal{ D}}\phi |P(\phi)| \frac{P(\phi){\mathcal{ O}}(\phi)}{|P(\phi)|}}{\tilde{Z}_{\phi}}\left/\frac{\int {\mathcal{ D}}\phi |P(\phi)| \frac{P(\phi)}{|P(\phi)|}} {\tilde{Z}_{\phi}} = \langle {\mathcal{ O}}' \rangle_{|P|}\left/\langle {\mathcal{ O}}''\rangle_{|P|}\right.\right. \ ,
 \eeq
 where
 \beq
-\calO' \equiv \frac{P(\phi)\calO(\phi)}{|P(\phi)|} \ , \qquad \calO'' \equiv \frac{P(\phi)}{|P(\phi)|} \ ,
+{\mathcal{ O}}' \equiv \frac{P(\phi){\mathcal{ O}}(\phi)}{|P(\phi)|} \ , \qquad {\mathcal{ O}}'' \equiv \frac{P(\phi)}{|P(\phi)|} \ ,
 \eeq
-and $\langle \cdots \rangle_{|P|}$ implies that the path integrals in the expectation values use the measure $|P(\phi)|$. The advantage is that now the probability measure used for sampling is real and positive, at the cost of having to calculate two observables, $\calO', \calO''$. The real disadvantage, however, is that the second observable, $\calO''$ corresponds to the complex phase of the original measure, $P(\phi)$, which is highly oscillatory from field configuration to field configuration. 
+and $\langle \cdots \rangle_{|P|}$ implies that the path integrals in the expectation values use the measure $|P(\phi)|$. The advantage is that now the probability measure used for sampling is real and positive, at the cost of having to calculate two observables, ${\mathcal{ O}}', {\mathcal{ O}}''$. The real disadvantage, however, is that the second observable, ${\mathcal{ O}}''$ corresponds to the complex phase of the original measure, $P(\phi)$, which is highly oscillatory from field configuration to field configuration. 
 
 We can measure the size of the fluctuations of the phase of $P(\phi)= \left[\det K(\phi)\right]^2$, corresponding to a two-spin (or flavor) theory with a repulsive interaction,
 \beq
-\langle \calO'' \rangle_{|P|} = \frac{\int \calD \phi \det K(\phi)\det K^*(\phi)}{\int \calD \phi \left[\det K(\phi)\right]^2} \ .
+\langle {\mathcal{ O}}'' \rangle_{|P|} = \frac{\int {\mathcal{ D}} \phi \det K(\phi)\det K^*(\phi)}{\int {\mathcal{ D}} \phi \left[\det K(\phi)\right]^2} \ .
 \eeq
 The denominator of the above ratio corresponds to the partition function of the original theory which has two spins of particles interacting via a repulsive interaction. The numerator also corresponds to the partition function of a two-spin theory. However, recall that $K^*(\phi)$ corresponds to a propagator with the opposite sign on the interaction term. Because fermions of the same spin don't interact (Pauli principle), the only interaction in this theory is that between two particles of opposite spin, which we established previously will be an attractive interaction due to the sign flip on $K^*(\phi)$. Thus, the numerator corresponds to the partition function of a two-spin theory with an attractive interaction. 
 
-A partition function is simply the logarithm of the free energy, $Z=e^{-\beta F}$. For a system in a finite volume at zero temperature this becomes $Z=e^{-V \calE_0}$, where $\calE_0$ is the energy density of the ground state of the theory. This implies that 
+A partition function is simply the logarithm of the free energy, $Z=e^{-\beta F}$. For a system in a finite volume at zero temperature this becomes $Z=e^{-V {\mathcal{ E}}_0}$, where ${\mathcal{ E}}_0$ is the energy density of the ground state of the theory. This implies that 
 \beq
 \label{eq:expectationsign}
-\langle \calO'' \rangle_{|P|} \underset{\tau\to\infty}{\sim} e^{-V(\calE_0^{(\mbox{\tiny rep})}-\calE_0^{(\mbox{\tiny att})})} \ ,
+\langle {\mathcal{ O}}'' \rangle_{|P|} \underset{\tau\to\infty}{\sim} e^{-V({\mathcal{ E}}_0^{(\mbox{\tiny rep})}-{\mathcal{ E}}_0^{(\mbox{\tiny att})})} \ ,
 \eeq
-where $\calE_0^{(\mbox{\tiny rep})}$ ($\calE_0^{(\mbox{\tiny att})}$) is the energy density of the ground state of the repulsive (attractive) theory. Generically, $\calE_0^{(\mbox{\tiny att})} \leq \calE_0^{(\mbox{\tiny rep})} $, for theories which are identical up to the sign of their interaction. This may be shown using the Cauchy-Schwarz theorem,
+where ${\mathcal{ E}}_0^{(\mbox{\tiny rep})}$ (${\mathcal{ E}}_0^{(\mbox{\tiny att})}$) is the energy density of the ground state of the repulsive (attractive) theory. Generically, ${\mathcal{ E}}_0^{(\mbox{\tiny att})} \leq {\mathcal{ E}}_0^{(\mbox{\tiny rep})} $, for theories which are identical up to the sign of their interaction. This may be shown using the Cauchy-Schwarz theorem,
 \beq
 \langle | \det K(\phi)| \rangle \leq | \langle \det K(\phi) \rangle | \ .
 \eeq
-Therefore, $\langle \calO'' \rangle_{|P|}$ will be exponentially small for large Euclidean times so long as $\calE_0^{(\mbox{\tiny rep})} \neq \calE_0^{(\mbox{\tiny att})}$. The variance, on the other hand, is
+Therefore, $\langle {\mathcal{ O}}'' \rangle_{|P|}$ will be exponentially small for large Euclidean times so long as ${\mathcal{ E}}_0^{(\mbox{\tiny rep})} \neq {\mathcal{ E}}_0^{(\mbox{\tiny att})}$. The variance, on the other hand, is
 \beq
-\langle |\calO'' |^2\rangle_{|P|} - |\langle \calO'' \rangle_{|P|}|^2 = \langle 1 \rangle - |\langle \calO'' \rangle_{|P|}|^2 \underset{\tau\to\infty}{\sim} 1-e^{-2V(\calE_0^{(\mbox{\tiny rep})}-\calE_0^{(\mbox{\tiny att})})} \sim 1 \ .
+\langle |{\mathcal{ O}}'' |^2\rangle_{|P|} - |\langle {\mathcal{ O}}'' \rangle_{|P|}|^2 = \langle 1 \rangle - |\langle {\mathcal{ O}}'' \rangle_{|P|}|^2 \underset{\tau\to\infty}{\sim} 1-e^{-2V({\mathcal{ E}}_0^{(\mbox{\tiny rep})}-{\mathcal{ E}}_0^{(\mbox{\tiny att})})} \sim 1 \ .
 \eeq
 
-So again, we have an exponentially small signal-to-noise ratio at large Euclidean time for the observable $\calO''$. This argument is very similar to our signal-to-noise argument for correlation functions. In general, if a theory has a sign problem there will be a corresponding signal-to-noise problem for correlation functions. The reverse is not always true, however, because reweighting is only necessary when the integration measure is complex, so even if there is a signal-to-noise problem in calculating correlation functions (as there is for an attractive interaction), a sign problem may not arise. Sign problems are in general far more problematic due to the exponential scaling with the volume, and because correlation functions give us the additional freedom of choosing interpolating fields in order to try to minimize the noise. In some cases, however, it may be possible to use knowledge learned from signal-to-noise problems in order to solve or reduce sign problems, and vice-versa \cite{Grabowska:2012ik,Nicholson:2012xt,EKLN5}.
+So again, we have an exponentially small signal-to-noise ratio at large Euclidean time for the observable ${\mathcal{ O}}''$. This argument is very similar to our signal-to-noise argument for correlation functions. In general, if a theory has a sign problem there will be a corresponding signal-to-noise problem for correlation functions. The reverse is not always true, however, because reweighting is only necessary when the integration measure is complex, so even if there is a signal-to-noise problem in calculating correlation functions (as there is for an attractive interaction), a sign problem may not arise. Sign problems are in general far more problematic due to the exponential scaling with the volume, and because correlation functions give us the additional freedom of choosing interpolating fields in order to try to minimize the noise. In some cases, however, it may be possible to use knowledge learned from signal-to-noise problems in order to solve or reduce sign problems, and vice-versa \cite{Grabowska:2012ik,Nicholson:2012xt,EKLN5}.
 
 \subsubsection{Noise in Many-Body Systems}
 
@@ -706,7 +637,7 @@ It is simple to see that the first term in this expression corresponds to a four
 \eeq
 where $C_4(\tau)$ corresponds to a correlator with four particles having different flavors. This is much like a correlator for an alpha particle in the spin/flavor $SU(4)$ limit, thus, it will be dominated at large times by the binding energy, $E_B^{(4)}$, of a state with a large amount of binding energy per particle. Our signal-to-noise ratio is then,
 \beq
-\calR_{C_2}(\tau) \underset{\tau\to\infty}{\sim} \frac{e^{E_B^{(2)} \tau}}{e^{E_B^{(4)}\tau/2}} \ ,
+{\mathcal{ R}}_{C_2}(\tau) \underset{\tau\to\infty}{\sim} \frac{e^{E_B^{(2)} \tau}}{e^{E_B^{(4)}\tau/2}} \ ,
 \eeq
 where, $E_B^{(4)}/2 > E_B^{(2)}$. Therefore, the signal-to-noise ratio is again falling off exponentially in time; this problem clearly becomes worse as the coupling becomes stronger. Finally, we can consider a many-body correlator composed of a Slater determinant over $N$ single-particle states in a two spin/flavor theory,
 \beq
@@ -732,7 +663,7 @@ We can look to lattice QCD for a pedagogical example. In QCD, the fermion determ
 
 Such problems are referred to as statistical overlap problems. Another situation where these overlap problems can often occur is when doing reweighting to evade a sign problem, as discussed in \Sec{sign}. For example, if the distribution being sampled corresponds to a theory with an attractive interaction, but the desired observable has a repulsive interaction, the Monte Carlo sampling will be unlikely to pick up the most relevant configurations, affecting the numerator of \Eq{reweight}.
 
-We can understand the problem further by studying probability distributions of observables. While the distribution of the sampled field, $\phi$ in our case, may be peaked around the mean value of $\phi$, the distribution of the observable as calculated over the sample may not be peaked near the true mean of the observable. Such a distribution necessarily has a long tail. Plotting histograms of the values of the observable as calculated over the sample, $\{ C(\phi_1), C(\phi_2), \cdots C(\phi_{\Ncfg}) \}$, can allow us to gain an idea of the shape of the distribution for that observable. An example of a distribution with a statistical overlap problem is plotted in \Fig{overlap}. In this case, the peak of the distribution is far from the true mean. Values in the tail of the distribution have small weight, and are likely to be thrown out during importance sampling, skewing the sample mean without a corresponding increase in the error bar. The error bar is instead largely set by the width of the distribution near the peak. One way to determine whether there is an overlap problem is to recalculate the observable on a different sample size; if the mean value fluctuates significantly outside the original error bar this indicates an overlap problem.
+We can understand the problem further by studying probability distributions of observables. While the distribution of the sampled field, $\phi$ in our case, may be peaked around the mean value of $\phi$, the distribution of the observable as calculated over the sample may not be peaked near the true mean of the observable. Such a distribution necessarily has a long tail. Plotting histograms of the values of the observable as calculated over the sample, $\{ C(\phi_1), C(\phi_2), \cdots C(\phi_{N_{\mbox{\tiny cfg}}}) \}$, can allow us to gain an idea of the shape of the distribution for that observable. An example of a distribution with a statistical overlap problem is plotted in \Fig{overlap}. In this case, the peak of the distribution is far from the true mean. Values in the tail of the distribution have small weight, and are likely to be thrown out during importance sampling, skewing the sample mean without a corresponding increase in the error bar. The error bar is instead largely set by the width of the distribution near the peak. One way to determine whether there is an overlap problem is to recalculate the observable on a different sample size; if the mean value fluctuates significantly outside the original error bar this indicates an overlap problem.
 
 \begin{figure}
 \begin{center}
@@ -743,7 +674,7 @@ We can understand the problem further by studying probability distributions of o
 
 The central limit theorem tells us that regardless of the initial distribution we pull from, the distribution of the mean should approach a Gaussian for a large enough sample size, so in principle we should be able to combat an overlap problem by brute force. However, what constitutes a ``large enough" sample size is dictated by the shape of the original distribution. The Berry-Esseen theorem \cite{BerryEsseen1,BerryEsseen2} can be used to determine that the number of configurations necessary to assume the central limit theorem applies is governed by
 \beq
-\sqrt{\Ncfg} \sim \frac{\langle \mathcal{X}^3\rangle}{\langle \mathcal{X}^2\rangle^{3/2}} \ ,
+\sqrt{N_{\mbox{\tiny cfg}}} \sim \frac{\langle \mathcal{X}^3\rangle}{\langle \mathcal{X}^2\rangle^{3/2}} \ ,
 \eeq
 where $\langle \mathcal{X}^n \rangle$ is the $n$th moment of the distribution of an observable, $\mathcal{X}$. Thus, a large skewness, or long tail, increases the number of configurations necessary before the central limit theorem applies, and therefore, to trust an error bar determined by the standard deviation of the distribution of the mean.
 
@@ -755,22 +686,22 @@ corresponding to a correlation function containing six particles of different fl
 
 While we mentioned that using reweighting to avoid a sign problem is one situation where overlap problems often occur, it is also possible to use reverse reweighting in order to lessen an overlap problem. Here instead we would like to reweight in order to make the distribution of $\phi$ have \underline{more} overlap with the configurations that are important for the observable. An example that is commonly used is to include the desired correlation function itself, calculated at some fixed time, to be part of the probability measure. This may be accomplished using ratios of correlators at different times,
 \beq
-\frac{C_N(\tau'+\tau)}{C_N(\tau')} = \frac{\int \calD\phi \tilde{P}(\phi)\tilde{\calO}(\phi,\tau)}{\int\calD\phi \tilde{P}(\phi)} \ ,
+\frac{C_N(\tau'+\tau)}{C_N(\tau')} = \frac{\int {\mathcal{ D}}\phi \tilde{P}(\phi)\tilde{{\mathcal{ O}}}(\phi,\tau)}{\int{\mathcal{ D}}\phi \tilde{P}(\phi)} \ ,
 \eeq
 where
 \beq
-\tilde{P}(\phi) \equiv P(\phi)C_N(\tau',\phi) \ , \qquad \tilde{\calO}(\phi,\tau) \equiv \frac{C_N(\tau'+\tau,\phi)}{C_N(\tau',\phi)} \ .
+\tilde{P}(\phi) \equiv P(\phi)C_N(\tau',\phi) \ , \qquad \tilde{{\mathcal{ O}}}(\phi,\tau) \equiv \frac{C_N(\tau'+\tau,\phi)}{C_N(\tau',\phi)} \ .
 \eeq
 Now the probability distribution incorporates an $N$-body correlator at one time, $\tau'$, and will therefore do a much better job of generating configurations relevant for the $N$-body correlator at different times. A drawback of this method is that it is much more computationally expensive to require the calculation of propagators for the generation of eaach configuration. Furthermore, the configurations that are generated will be operator-dependent, so that calculating the correlator $C_{N+1}$ will require the generation of a whole new set of field configurations.
 
 Another method for overcoming a statistical overlap problem is to try to get a more faithful estimate of the mean from the long-tailed distribution itself. To try to better understand the distribution, let's use our signal-to-noise argument to estimate higher moments of the distribution. We can easily estimate the $N$th moment of the correlation function for a single particle,
 \beq
-\calM_N \sim C_{N} \underset{\tau\to\infty}{\sim} e^{-E_0^{(N)}\tau} \ ,
+{\mathcal{ M}}_N \sim C_{N} \underset{\tau\to\infty}{\sim} e^{-E_0^{(N)}\tau} \ ,
 \eeq
 where $E_0^{(N)}$ is the ground-state energy of $N$ particles with different flavors. Let's consider the theory to be weakly coupled (small scattering length, $a/L \ll 1$). In this case the two-body interaction dominates and we can use perturbation theory to estimate the energy of two particles in a box: $E_0^{(2)} \approx \frac{4\pi a}{ML^3}$. A weakly coupled system of $N$ particles interacting via the two-body interaction is given by simply counting the number of possible pairs of interacting particles, $E_0^{(N)} \approx N(N-1) \frac{4\pi a}{ML^3}$, leading to the following expression for the moments \cite{DeGrand:2012ik}:
 \beq
 \label{eq:lnmoments}
-\calM_N \sim e^{-N(N-1) \frac{4\pi a}{ML^3}} \ .
+{\mathcal{ M}}_N \sim e^{-N(N-1) \frac{4\pi a}{ML^3}} \ .
 \eeq
 Distributions with the particular $N$ dependence seen in \Eq{lnmoments} are called log-normal distributions, so named because the distribution of the logarithm of a log-normally distributed quantity is normal. While we derived this expression for theories near weak coupling, there is also evidence that the log-normal distribution occurs for correlators near unitarity as well \cite{Nicholson:2012zp,Nicholson:2015zxa}. 
 
@@ -783,7 +714,7 @@ and then products of these propagators may be used to form correlation functions
 If it is $\ln C$ that is nearly Gaussian rather than $C$, then it may be better to sample $\ln C$ as our observable instead. Without asserting any assumptions about the actual form of the distribution, we can expand around the log-normal distribution using what is known as a cumulant expansion,
 \beq
 \label{eq:cumulantexp}
-\ln \langle \calO \rangle = \sum_{n=1}^{\infty} \frac{1}{n!} \kappa_n(\ln \calO) \ ,
+\ln \langle {\mathcal{ O}} \rangle = \sum_{n=1}^{\infty} \frac{1}{n!} \kappa_n(\ln {\mathcal{ O}}) \ ,
 \eeq
 where $\kappa_n$ is the $n$th cumulant, or connected moment. The cumulants may be calculated using the following recursion relation:
 \beq
@@ -802,7 +733,7 @@ Again, this expansion is true for a correlation function obeying any distributio
 \begin{center}
 \includegraphics[width=0.5\linewidth]{Chapter5-figures/cumulant}
 \end{center}
-\caption{\label{fig:cumulant} Results for the energy of 50 two-component fermions at unitarity using the cumulant expansion (\Eq{cumulantexp}) cut off at $\calO(N_k)$. Figure from \cite{EKLN4}.}
+\caption{\label{fig:cumulant} Results for the energy of 50 two-component fermions at unitarity using the cumulant expansion (\Eq{cumulantexp}) cut off at ${\mathcal{ O}}(N_k)$. Figure from \cite{EKLN4}.}
 \end{figure}
 
 The benefit of using the cumulant expansion to estimate the mean rather than using the standard method is that for a finite sample size, high-order cumulants of $\ln C$ are poorly measured, which is the culprit behind the overlap problem. However, for approximately log-normal distributions these high-order cumulants should be small in the infinite statistics limit. Thus, by not including them in the expansion we do a better job at estimating the true mean on a finite sample size. In other words, by sampling $\ln C$ rather than $C$, we have shifted the overlap problem into high, irrelevant moments which we may neglect.
@@ -871,9 +802,9 @@ To ensure Pauli exclusion, it is sufficient to antisymmetrize only the sources, 
 \beq
 C_{N_{\uparrow},N_{\downarrow}}(\tau) = \langle \det S^{\uparrow \downarrow}(\tau) \rangle \ ,
 \eeq 
-where the determinant runs over the two sink indices. For correlation functions having an odd number of particles, one may replace a row $i$ of $S^{\uparrow\downarrow}$ with the corresponding row of the single particle object, $S^{\uparrow}$. The benefit of folding the wavefunction in at the sinks only is an $\calO(V^2)$ savings in computational cost: to fold a two-body wavefunction in at both source and sink requires the calculation of propagators from all possible spatial points on the lattice to all possible spatial points in order to perform the resulting double sum. 
+where the determinant runs over the two sink indices. For correlation functions having an odd number of particles, one may replace a row $i$ of $S^{\uparrow\downarrow}$ with the corresponding row of the single particle object, $S^{\uparrow}$. The benefit of folding the wavefunction in at the sinks only is an ${\mathcal{ O}}(V^2)$ savings in computational cost: to fold a two-body wavefunction in at both source and sink requires the calculation of propagators from all possible spatial points on the lattice to all possible spatial points in order to perform the resulting double sum. 
 
-Higher-body correlations may also be important and can be incorporated using similar methods. However, these will lead to further $\calO(V)$ increases in computation time. Finally, the entire system should be projected onto the desired parity, lattice cubic irreducible representation (which we will now briefly discuss), etc. in order to eliminate any contamination from excited states having different quantum numbers. 
+Higher-body correlations may also be important and can be incorporated using similar methods. However, these will lead to further ${\mathcal{ O}}(V)$ increases in computation time. Finally, the entire system should be projected onto the desired parity, lattice cubic irreducible representation (which we will now briefly discuss), etc. in order to eliminate any contamination from excited states having different quantum numbers. 
 
 \subsubsection{Angular momentum in a box}
 
@@ -928,19 +859,19 @@ y(\tau) = \sum_n^{\Lambda}Z_n e^{-E_n \tau} \ ,
 \eeq
 where $\Lambda$ is a cutoff in the number of exponentials included in the fit, we may perform a correlated $\chi^2$ minimization,
 \beq
-\chi_{\Lambda}^2 = \sum_{\tau,\tau'}\left[ C(\tau)-y(\tau)\right] \left(\calC^{-1}\right)_{\tau\tau'}\left[ C(\tau')-y(\tau')\right]  \ ,
+\chi_{\Lambda}^2 = \sum_{\tau,\tau'}\left[ C(\tau)-y(\tau)\right] \left({\mathcal{ C}}^{-1}\right)_{\tau\tau'}\left[ C(\tau')-y(\tau')\right]  \ ,
 \eeq
-where $\calC$ is the covariance matrix taking into account the correlation between different time steps. Because the correlation function at a given time is built directly upon the correlation function for the previous time step, there is large correlation between times that must be taken into account. 
+where ${\mathcal{ C}}$ is the covariance matrix taking into account the correlation between different time steps. Because the correlation function at a given time is built directly upon the correlation function for the previous time step, there is large correlation between times that must be taken into account. 
 
 We can go further by noting that correlation functions formed using different sources, but having the same quantum numbers, will lead to the same spectrum in \Eq{funcformC}, but with different overlap factors, $Z_n$. Thus, the $\chi^2$ minimization can be expanded to include different sources $s$, with only a modest increase in the number of parameters to be fit. Different sources may be produced, for example, by varying some parameter in the wavefunction, such as $b$ in \Eq{pairing}, through a different basis of non-interacting single particle states, such as plane waves vs. harmonic oscillator states, or through different constructions of the same cubic irrep, as discussed in the previous subsection. The resulting $\chi^2$ minimization is
 \beq
-y_s(\tau) = \sum_n^{\Lambda}Z_n^{(s)} e^{-E_n \tau} \ , \qquad \chi_{\Lambda}^2 = \sum_{\tau,\tau',s,s'}\left[ C_s(\tau)-y_s(\tau)\right] \left(\calC^{-1}\right)_{\tau\tau'}^{ss'}\left[ C_{s'}(\tau')-y_{s'}(\tau')\right]  \ ,
+y_s(\tau) = \sum_n^{\Lambda}Z_n^{(s)} e^{-E_n \tau} \ , \qquad \chi_{\Lambda}^2 = \sum_{\tau,\tau',s,s'}\left[ C_s(\tau)-y_s(\tau)\right] \left({\mathcal{ C}}^{-1}\right)_{\tau\tau'}^{ss'}\left[ C_{s'}(\tau')-y_{s'}(\tau')\right]  \ ,
 \eeq
 where the covariance matrix now takes into account the correlation between different sources calculated on the same ensembles. 
 
 In general, multiple parameter fits require high precision from the data in order to extract several parameters. The use of priors through Bayesian analysis techniques may be beneficial in some circumstances when performing multi-exponential fits to noisy data.
 
-A more elegant approach using a set of correlation functions created using different operators is based on a variational principle \cite{MICHAEL1983433,Luscher:1990ck}. A basic variational argument proceeds as follows \cite{Blossier:2009kd}: starting with some set of operators $\calO_i$ which produce states $|\phi_i\rangle = \calO_i |0\rangle$ from the vacuum, we can evolve the state to some time $\tau_0$, $|\tilde{\phi}_i\rangle = e^{-\tau_0H/2}|\phi_i\rangle$ in order to eliminate the highest excited states, but leaving a finite set of states contributing to the correlation function. We would like to find some wavefunction $|\psi \rangle = \sum_{i=1}^N \alpha_i | \tilde{\phi}_i \rangle$ which is a linear combination of our set of operators parameterized by $\{\alpha_i\}$, that maximizes the following quantity for $\tau>\tau_0$:
+A more elegant approach using a set of correlation functions created using different operators is based on a variational principle \cite{MICHAEL1983433,Luscher:1990ck}. A basic variational argument proceeds as follows \cite{Blossier:2009kd}: starting with some set of operators ${\mathcal{ O}}_i$ which produce states $|\phi_i\rangle = {\mathcal{ O}}_i |0\rangle$ from the vacuum, we can evolve the state to some time $\tau_0$, $|\tilde{\phi}_i\rangle = e^{-\tau_0H/2}|\phi_i\rangle$ in order to eliminate the highest excited states, but leaving a finite set of states contributing to the correlation function. We would like to find some wavefunction $|\psi \rangle = \sum_{i=1}^N \alpha_i | \tilde{\phi}_i \rangle$ which is a linear combination of our set of operators parameterized by $\{\alpha_i\}$, that maximizes the following quantity for $\tau>\tau_0$:
 \beq
 \lambda_0(\tau,\tau_0) = \underset{\{\alpha_i\}}{\mbox{Max}}\frac{\langle \psi|e^{-(\tau-\tau_0)H}|\psi \rangle}{\langle\psi | \psi \rangle} \ ,
 \eeq
@@ -951,7 +882,7 @@ so that
 
 A powerful method for finding the appropriate linear combination of states satisfying the variational principle uses a generalized eigenvalue problem (GEVP). For this method we form a matrix of correlation functions using all combinations of sources and sinks formed from a set of operators,
 \beq
-C_{ij}(\tau) = \langle \calO_i(\tau) \calO^*_j(0)\rangle = \sum_n e^{-E_n \tau}Z_i^{(n)}Z_j^{(n)} \ .
+C_{ij}(\tau) = \langle {\mathcal{ O}}_i(\tau) {\mathcal{ O}}^*_j(0)\rangle = \sum_n e^{-E_n \tau}Z_i^{(n)}Z_j^{(n)} \ .
 \eeq
 The GEVP may be stated as:
 \beq
@@ -1054,13 +985,13 @@ leading to the following kinetic term in momentum space,
 \eeq
 The transfer matrix for the non-interacting system is given by
 \beq
-\calT = e^{-b_{\tau}H} = 1+b_{\tau} \frac{\Delta({p)}}{M}  \ ,
+{\mathcal{ T}} = e^{-b_{\tau}H} = 1+b_{\tau} \frac{\Delta({p)}}{M}  \ ,
 \eeq
 leading to the energy, 
 \beq
-E=\frac{p^2}{2M} + \calO\left(\frac{p^4}{M} b_s^2 \right) \ .
+E=\frac{p^2}{2M} + {\mathcal{ O}}\left(\frac{p^4}{M} b_s^2 \right) \ .
 \eeq
-Therefore, discretization errors in this observable appear at $\calO\left(b_s^2\right)$ using this particular discretization. To be more precise, the errors scale with the dimensionless combination $(pb_s)^2$, reflecting the fact that the errors grow as higher momentum scales are probed. As we will discuss in \Sec{NLO}, small lattice spacings can lead to computational difficulties beyond the obvious scaling with the number of lattice sites, and taking the continuum limit may prove to be quite difficult. Therefore, it would be beneficial to have an improved operator whose discretization errors come in at a higher order in $pb_s$. One way to determine such an operator is to examine the relation between the finite difference and the continuum derivative in more detail using a Taylor expansion of the finite difference operator acting on a generic function, $f(x)$,
+Therefore, discretization errors in this observable appear at ${\mathcal{ O}}\left(b_s^2\right)$ using this particular discretization. To be more precise, the errors scale with the dimensionless combination $(pb_s)^2$, reflecting the fact that the errors grow as higher momentum scales are probed. As we will discuss in \Sec{NLO}, small lattice spacings can lead to computational difficulties beyond the obvious scaling with the number of lattice sites, and taking the continuum limit may prove to be quite difficult. Therefore, it would be beneficial to have an improved operator whose discretization errors come in at a higher order in $pb_s$. One way to determine such an operator is to examine the relation between the finite difference and the continuum derivative in more detail using a Taylor expansion of the finite difference operator acting on a generic function, $f(x)$,
 \beq
 f(x+b_s)-f(x) = b_s f'(x) + \frac{b_s^2}{2}f''(x) + \frac{b_s^3}{6} f'''(x) + \frac{b_s^4}{24}f''''(x) + \cdots  \ .
 \eeq
@@ -1068,7 +999,7 @@ Using this expansion, the expression we used previously for the discretized Lapl
 \beq
 \nabla_L^2 f(x) = \frac{1}{b_s^2} \left( f(x+b_s)+f(x-b_s)-2f(x) \right)= f''(x) + \frac{b_s^2}{12} f''''(x)+ \cdots \ .
 \eeq
-We see that the leading error comes in at $\calO(b_s^2)$, as expected. One method for eliminating the leading error is to add terms involving multiple hops,
+We see that the leading error comes in at ${\mathcal{ O}}(b_s^2)$, as expected. One method for eliminating the leading error is to add terms involving multiple hops,
 \beq
 \label{eq:improvkinetic}
 \tilde{\nabla}_L^2 f(x) = \frac{1}{b_s^2} \left( f(x+b_s)+f(x-b_s)-2f(x) +c_1 f(x+2b_s) + c_2 f(x-2b_s) \right) \ ,
@@ -1077,13 +1008,13 @@ where $c_1,c_2$ must be fixed in such a way as to eliminate the leading error. F
 \beq
 E(c_1) = \frac{p^2}{2M} + h(c_1) \frac{p^4}{M} b_s^2 + \cdots \ .
 \eeq
-By solving $h(c_1)=0$ for $c_1$, discretization errors will only enter at $\calO(b_s^4)$, implying a faster approach to the continuum as $b_s$ is decreased. Perhaps more importantly, in cases where decreasing the lattice spacing is difficult or impossible, the resulting systematic errors at finite lattice spacing will be significantly reduced.
+By solving $h(c_1)=0$ for $c_1$, discretization errors will only enter at ${\mathcal{ O}}(b_s^4)$, implying a faster approach to the continuum as $b_s$ is decreased. Perhaps more importantly, in cases where decreasing the lattice spacing is difficult or impossible, the resulting systematic errors at finite lattice spacing will be significantly reduced.
 
 This is our first, very simple, example of improvement. A more general method for improving the action in order to reduce discretization effects utilizes an EFT-like approach \cite{Symanzik1,Symanzik2,Symanzik3,Symanzik4,EKLN4}: we add higher dimension operators consistent with the symmetries of the theory and having unknown coefficients. The coefficients are then fixed by matching onto known physical quantities. The dimension of the operator added determines the order at which discretization errors have been eliminated.
 
 In principle, one would need an infinite number of operators in order to eliminate all discretization errors. We are, of course, limited in the number of displacements we can add, as in \Eq{improvkinetic}, by the number of lattice sites. Therefore, the best possible kinetic operator, utilizing all possible spatial hops allowed by the lattice, may still only exactly reproduce the non-interacting spectrum up to the momentum cutoff set by the edge of the first Brillouin zone. Because the kinetic operator $\Delta$ is diagonal in momentum space, we may determine this ``perfect" operator directly by setting the transfer matrix,
 \beq
-\calT= 1+\frac{b_{\tau}\Delta(p)}{M} = e^{-\frac{b_{\tau}p^2}{2M}} \ ,
+{\mathcal{ T}}= 1+\frac{b_{\tau}\Delta(p)}{M} = e^{-\frac{b_{\tau}p^2}{2M}} \ ,
 \eeq
 up to a cutoff, leading to the operator,
 \beq
@@ -1126,11 +1057,11 @@ p\cot\delta = 0 \ ,
 \eeq
 implying that the inverse scattering length, effective range, and all other shape parameters vanish. In \Sec{tuning}, we discussed how to tune the two-particle coupling in order to reproduce infinite scattering length. The lattice, however, naturally induces an effective range for the interactions, which have been generated via auxiliary fields extending across a lattice link, of size $b_s$. In order to improve the interaction and eliminate the unwanted effective range contribution stemming from discretization, we may add a higher-order interaction operator,
 \beq
-\sum_{\bfx}\sqrt{g_2} \phi \psidag_{\bfx} \nabla_L^2 \psi_{\bfx} \ ,
+\sum_{{\mathbf x}}\sqrt{g_2} \phi \psi^{\dagger}_{{\mathbf x}} \nabla_L^2 \psi_{{\mathbf x}} \ ,
 \eeq
 recalculate the scattering amplitude, $A$, as a function of $g_0, g_2$, and tune $g_2$ to eliminate the $r_0$ term in the effective range expansion. In principle, one may further generalize the interaction operator,
 \beq
-\calL_{\mbox{\tiny int}} = \sum_n \sqrt{g_{2n}}  \phi \psidag \nabla_L^{2n} \psi \ ,
+{\mathcal{ L}}_{\mbox{\tiny int}} = \sum_n \sqrt{g_{2n}}  \phi \psi^{\dagger} \nabla_L^{2n} \psi \ ,
 \eeq
 where we will now suppress spacetime indices, and use the $g_{2n}$ to tune away successive terms in the effective range expansion. In practice this may be difficult because the interaction is generally no longer separable, so that loops can't be summed analytically. An easier method may be to use the transfer matrix, as we did in \Sec{LEFT}, to determine the two particle energy spectrum in a box, then tune the couplings in order to reproduce the desired energies. The target energies may be determined for systems obeying any known physical scattering phase shift using an approach known as the L\"uscher method, which we will now briefly review.
 
@@ -1138,7 +1069,7 @@ where we will now suppress spacetime indices, and use the $g_{2n}$ to tune away 
 
 L\"uscher's method (\cite{Luscher:1986pf,Luscher:1990ux}) was originally developed as a tool for extracting physical scattering phase shifts from finite volume, Euclidean space observables produced by lattice QCD. The concept of asymptotic ``in" and ``out" scattering states does not exist in a finite volume, making direct scattering ``experiments" impossible on the lattice. Furthermore, the issue of analytic continuation from Euclidean to Minkowski time is a tricky one, particularly when utilizing stochastic techniques. Thus, L\"uscher proposed utilizing a different observable, finite volume energy shifts, and inferring the infinite volume scattering phase shift that would lead to the observed finite volume spectrum. In this section, we will largely follow the discussion in \cite{Beane:2003da}.
 
-First let's recap how to calculate the infinite volume $s$-wave scattering phase shift in our effective theory assuming the following generic tree-level interaction: $\calL_2 = \sum_n g_{2n}p^{2n}$. The scattering amplitude is given by,
+First let's recap how to calculate the infinite volume $s$-wave scattering phase shift in our effective theory assuming the following generic tree-level interaction: ${\mathcal{ L}}_2 = \sum_n g_{2n}p^{2n}$. The scattering amplitude is given by,
 \beq
 \label{eq:Aluscher}
 A_{\infty} = \frac{\sum_{n}g_{2n} p^{2n}}{1-\sum_n g_{2n}p^{2n}I_0^{\infty}} = \frac{4\pi}{M}\frac{1}{p\cot\delta-ip} \ ,
@@ -1207,12 +1138,12 @@ The prescription for a lattice QCD calculation of nucleon-nucleon phase shifts i
 Our prescription for tuning the coefficients will be to construct the two-body transfer matrix with some set of operators,
 \beq
 \label{eq:tuningcoef}
-\mathcal{G}(\vec{p}) = \sum_n^{\Lambda_n} g_{2n}\calO_{2n}(\vec{p}) \ ,
+\mathcal{G}(\vec{p}) = \sum_n^{\Lambda_n} g_{2n}{\mathcal{ O}}_{2n}(\vec{p}) \ ,
 \eeq
-which satisfy the low energy expansion $\calO_{2n}(\vec{p}) = \vec{p}^{2n} \left[ 1 + \calO(\vec{p}^2) \right]$ at low momenta, and should be chosen to depend only on the relative momentum of the two particle system in order to ensure Galilean invariance. This is important so that once the interaction is tuned boosted pairs of particles will see the same interaction. A convenient choice for the operators is given by,
+which satisfy the low energy expansion ${\mathcal{ O}}_{2n}(\vec{p}) = \vec{p}^{2n} \left[ 1 + {\mathcal{ O}}(\vec{p}^2) \right]$ at low momenta, and should be chosen to depend only on the relative momentum of the two particle system in order to ensure Galilean invariance. This is important so that once the interaction is tuned boosted pairs of particles will see the same interaction. A convenient choice for the operators is given by,
 \beq
 \label{eq:Ofunc}
-\calO_{2n}(\vec{p}) =  M^n \left(1-e^{-\hat{\vec{p}}^2 /M} \right)^n\ ,
+{\mathcal{ O}}_{2n}(\vec{p}) =  M^n \left(1-e^{-\hat{\vec{p}}^2 /M} \right)^n\ ,
 \eeq
 where $\hat{\vec{p}}$ is taken to be a periodic function of $\vec{p}$ and satisfies the relation $\hat{\vec{p}}^2 = \vec{p}^2 \theta(\Lambda-|\vec{p}|) + \Lambda^2  \theta(|\vec{p}| - \Lambda)$ for $\vec{p}$ in the first Brillouin zone. Sample code for calculating this interaction operator is shown in \Fig{interaction}.
 
@@ -1223,22 +1154,22 @@ where $\hat{\vec{p}}$ is taken to be a periodic function of $\vec{p}$ and satisf
 \caption{\label{fig:interaction}C++ code fragment for calculating the interaction given in \Eq{tuningcoef}, using the operators \Eq{Ofunc}, given some set of input coefficients interaction\_arg.couplings$[\Lambda_n]$. Note that this operator is calculated in momentum space. It may be applied directly to the momentum space vector resulting from the first operation of the kinetic operator, $D^{-1}$. A FFT must then be performed before applying the random auxiliary field, $\phi_x$. A final FFT must then be performed to return to momentum space before applying the next operation of $D^{-1}$ in order to propagate the system forward in time.}
 \end{figure}
 
-The transfer matrix may then be diagonalized numerically to determine the energy eigenvalues. The $g_{2n}$ should then be tuned until the energies match the first $\Lambda_n$ eigenvalues given by the L\"uscher method. This process serves a dual purpose: tuning multiple couplings helps reduce lattice spacing effects like the effective range, as we discussed previously, and also takes into account finite volume effects by correctly translating the exact infinite volume phase shifts into a finite volume. The process of tuning for the case of unitarity is illustrated in \Fig{tuning}. Here, $N_{\calO}$ coefficients have been tuned to correctly reproduce the first $N_{\calO}$ L\"uscher eigenvalues. The entire two-body spectrum is then calculated using these coefficients, and the resulting energies are plugged back into \Eq{pcotdeltaeig} to determine the effective phase shift seen by pairs of particles with different momenta. To be truly at unitarity, we should have $p\cot\delta = 0$ for all momenta. Clearly, tuning more coefficients brings us closer to unitarity for larger and larger momenta. This is particularly important for calculations involving many-body systems, where the average momentum grows with the density, $\langle p \rangle \sim n^{1/3}$.
+The transfer matrix may then be diagonalized numerically to determine the energy eigenvalues. The $g_{2n}$ should then be tuned until the energies match the first $\Lambda_n$ eigenvalues given by the L\"uscher method. This process serves a dual purpose: tuning multiple couplings helps reduce lattice spacing effects like the effective range, as we discussed previously, and also takes into account finite volume effects by correctly translating the exact infinite volume phase shifts into a finite volume. The process of tuning for the case of unitarity is illustrated in \Fig{tuning}. Here, $N_{{\mathcal{ O}}}$ coefficients have been tuned to correctly reproduce the first $N_{{\mathcal{ O}}}$ L\"uscher eigenvalues. The entire two-body spectrum is then calculated using these coefficients, and the resulting energies are plugged back into \Eq{pcotdeltaeig} to determine the effective phase shift seen by pairs of particles with different momenta. To be truly at unitarity, we should have $p\cot\delta = 0$ for all momenta. Clearly, tuning more coefficients brings us closer to unitarity for larger and larger momenta. This is particularly important for calculations involving many-body systems, where the average momentum grows with the density, $\langle p \rangle \sim n^{1/3}$.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.5\linewidth]{Chapter5-figures/tuning.png}
 \end{center}
-\caption{\label{fig:tuning}Effective scattering phase shifts $p \cot \delta$ vs. $\eta$ produced by a set of contact interactions of the form in \Eq{tuningcoef}, with $N_{\calO}$ coefficients tuned to unitarity. Figure from \cite{EKLN1}.}
+\caption{\label{fig:tuning}Effective scattering phase shifts $p \cot \delta$ vs. $\eta$ produced by a set of contact interactions of the form in \Eq{tuningcoef}, with $N_{{\mathcal{ O}}}$ coefficients tuned to unitarity. Figure from \cite{EKLN1}.}
 \end{figure}
 
-A quantitative prediction can be made for the error remaining in higher, untuned two-body energy levels \cite{EKLN1}. Assuming $N_{\calO}$ terms in the effective range expansion have been tuned to zero,
+A quantitative prediction can be made for the error remaining in higher, untuned two-body energy levels \cite{EKLN1}. Assuming $N_{{\mathcal{ O}}}$ terms in the effective range expansion have been tuned to zero,
 \beq
-p\cot\delta \sim r_{N_{\calO}-1}p^{2N_{\calO}} =\left(\frac{2\pi}{L}\right)^{2N_{\calO}} r_{N_{\calO}-1} \eta^{N_{\calO}} \ ,
+p\cot\delta \sim r_{N_{{\mathcal{ O}}}-1}p^{2N_{{\mathcal{ O}}}} =\left(\frac{2\pi}{L}\right)^{2N_{{\mathcal{ O}}}} r_{N_{{\mathcal{ O}}}-1} \eta^{N_{{\mathcal{ O}}}} \ ,
 \eeq
 we can then use L\"uscher's relation for the first untuned eigenvalue $\eta_k$,
 \beq
-\left(\frac{2\pi}{L}\right)^{2N_{\calO}} r_{N_{\calO}-1} \eta_k^{N_{\calO}} = \frac{1}{\pi L}S(\eta_k) \ .
+\left(\frac{2\pi}{L}\right)^{2N_{{\mathcal{ O}}}} r_{N_{{\mathcal{ O}}}-1} \eta_k^{N_{{\mathcal{ O}}}} = \frac{1}{\pi L}S(\eta_k) \ .
 \eeq
 Let's suppose $\eta_k^*$ is the eigenvalue one would expect in the true unitary limit. We can then Taylor expand the function $S(\eta_k)$ around $\eta_k^*$,
 \beq
@@ -1246,45 +1177,45 @@ S(\eta_k) \approx c_k (\eta_k-\eta_k^*)\ ,
 \eeq
 where $c_k$ is the slope near $\eta_k^*$. The error is then estimated as,
 \beq
-\frac{\eta_k}{\eta_k^*}-1 \approx \frac{\pi L}{\eta_k^* c_k} \left(\frac{2\pi}{L}\right)^{2N_{\calO}}r_{N_{\calO}-1} \left(\eta_k^{*}\right)^{N_{\calO}} \sim \calO\left(L^{1-2N_{\calO}}\right) \sim \calO\left((b_s n^{1/3})^{2N_{\calO}-1}\right) \ ,
+\frac{\eta_k}{\eta_k^*}-1 \approx \frac{\pi L}{\eta_k^* c_k} \left(\frac{2\pi}{L}\right)^{2N_{{\mathcal{ O}}}}r_{N_{{\mathcal{ O}}}-1} \left(\eta_k^{*}\right)^{N_{{\mathcal{ O}}}} \sim {\mathcal{ O}}\left(L^{1-2N_{{\mathcal{ O}}}}\right) \sim {\mathcal{ O}}\left((b_s n^{1/3})^{2N_{{\mathcal{ O}}}-1}\right) \ ,
 \eeq
 where on the right I have rewritten the scaling with the volume as a scaling with the density to remind you that though the errors scale with the volume, these are not actually finite volume errors we are investigating, but discretization effects scaling with the dimensionless quantity $b_s n^{1/3} \sim b_s /L_{\mbox \tiny phys} = 1/L$ for systems at unitarity. The L\"uscher method takes into account finite volume effects automatically. 
 
 \subsection{Scaling of discretization errors for many-body systems}
-Having tuned our two-body interaction, we can now also predict the scaling of errors that we should expect to find in an $N$-body calculation. Let us suppose that the first untuned operator contains at most $2N_{\calO}$ derivatives,
+Having tuned our two-body interaction, we can now also predict the scaling of errors that we should expect to find in an $N$-body calculation. Let us suppose that the first untuned operator contains at most $2N_{{\mathcal{ O}}}$ derivatives,
 \beq
 \label{eq:errop}
-\calO_{2N_{\calO}} \sim \left(\psi\psi\right)^{\dagger} \psi \nabla^{2N_{\calO}}\psi \ .
+{\mathcal{ O}}_{2N_{{\mathcal{ O}}}} \sim \left(\psi\psi\right)^{\dagger} \psi \nabla^{2N_{{\mathcal{ O}}}}\psi \ .
 \eeq
 The leading error results when any pair of particles interacts via this operator, and should scale with the dimension of this operator. 
 
 To determine the operator dimension, first let me briefly recap how scaling dimensions are determined in a non-relativistic theory (see \cite{Kaplan:2005es} for more details). We expect the action, $S$, to be a dimensionless quantity, so we will consider the action for a non-interacting theory to determine how the fields and derivatives must scale,
 \beq
-S=\int d\tau d^3x \psidag \left( \partial_{\tau}-\frac{\nabla^2}{2M} \right) \psi \ .
+S=\int d\tau d^3x \psi^{\dagger} \left( \partial_{\tau}-\frac{\nabla^2}{2M} \right) \psi \ .
 \eeq
 First, note that the mass, $M$, carries zero scaling dimension in a non-relativistic theory because it is considered to be much larger than any scale of interest. Then, from the expression in parentheses, we see that time and space must scale differently, $[\partial_{\tau}] = 2 [\nabla]$. Using the convention $[\nabla]=1$, we can then determine that the dimension of the fermion field must be $[\psi]=3/2$. 
 
 Now let us return to the operator, \Eq{errop}, and determine its scaling dimension relative to the energy,
 \beq
-\left[ \left(\psi\psi\right)^{\dagger} \psi \nabla^{2N_{\calO}}\psi \right] - \left[\psidag \partial_{\tau} \psi \right] =( 6+2N_{\calO} ) - ( 5 ) = 1+2N_{\calO} \ .
+\left[ \left(\psi\psi\right)^{\dagger} \psi \nabla^{2N_{{\mathcal{ O}}}}\psi \right] - \left[\psi^{\dagger} \partial_{\tau} \psi \right] =( 6+2N_{{\mathcal{ O}}} ) - ( 5 ) = 1+2N_{{\mathcal{ O}}} \ .
 \eeq
-This indicates that the error from such an operator will scale as $\sim \calO(b_s p)^{1+2N_{\calO}}$, or $\sim \calO\left((b_s n^{1/3})^{1+2N_{\calO}}\right)$ for unitary fermions. This is similar scaling that we saw for higher two-body states, however, here the dependence on the number of particles is also important.
+This indicates that the error from such an operator will scale as $\sim {\mathcal{ O}}(b_s p)^{1+2N_{{\mathcal{ O}}}}$, or $\sim {\mathcal{ O}}\left((b_s n^{1/3})^{1+2N_{{\mathcal{ O}}}}\right)$ for unitary fermions. This is similar scaling that we saw for higher two-body states, however, here the dependence on the number of particles is also important.
 
 One may in principle tune as many operators as possible in order to perfect the interaction for higher energies. In practice, however, as more and more operators are tuned, the coefficients in front of higher dimensional operators which are still untuned can become very large. This can cause interactions seen by pairs of particles far in the tail of the momentum distribution to generate large errors. Thus, similar to the case of the kinetic operator, there is a limit to how ``perfect" the interaction can be made. 
 
 On the other hand, these $s$-wave two-body interactions are not the only possible errors that are induced by the lattice, so we should not expect to see much improvement by tuning more operators corresponding to errors which are higher order than the leading operator which is not accounted for. For example, an unfortunate consequence of our tuning program is the introduction of interactions in the $p$-wave channel, as well as in higher partial waves. While a simple interaction which is point-like in space has no $p$-wave contribution, the introduction of spatial derivatives in our tuning operators gives rise to these new $p$-wave interactions. The leading $p$-wave operator has the form,
 \beq
-\calO_{p\mbox{\tiny -wave}} \sim \psidag \vec{\nabla} \psi \cdot \psidag \vec{\nabla} \psi \ ,
+{\mathcal{ O}}_{p\mbox{\tiny -wave}} \sim \psi^{\dagger} \vec{\nabla} \psi \cdot \psi^{\dagger} \vec{\nabla} \psi \ ,
 \eeq
-and induces errors at $\calO\left(b_s n^{1/3})^{3}\right)$. In order to cancel this operator we could in principle add a $\phi$ field which carries momentum and carry out a similar program for tuning the coefficients as we used for the $s$-wave interaction. This destroys the separability of our interaction, however, and may be difficult to implement, in addition to introducing a new source of noise.
+and induces errors at ${\mathcal{ O}}\left(b_s n^{1/3})^{3}\right)$. In order to cancel this operator we could in principle add a $\phi$ field which carries momentum and carry out a similar program for tuning the coefficients as we used for the $s$-wave interaction. This destroys the separability of our interaction, however, and may be difficult to implement, in addition to introducing a new source of noise.
 
 In general, we can determine all possible sources of discretization error as well as their scaling using a method referred to as the Symanzik effective action \cite{Symanzik1,Symanzik2,Symanzik3,Symanzik4,EKLN4}. The basic procedure begins through considering any possible operators (that have not been explicitly tuned) which are allowed by the symmetry of the theory. Because these operators may only be induced through discretization and must disappear in the continuum limit, they should be multiplied by the lattice spacing raised to the appropriate scaling dimension of the operator. We can then determine at what order in $b_s$, relative to the energy, we can expect systematic errors to arise.
 
 Let's take a look another interesting operator which arises due to discretization, corresponding to a three-body interaction. While there can be no point-like 3-body interaction in the continuum limit for 2-component fermions due to the Pauli exclusion principle, three particles separated by a lattice spacing may interact via $\phi$-field exchange because they don't all lie on the same spacetime point. Thus, we should include in our Symanzik effective action an operator,
 \beq
-\calO_{\mbox{\tiny 3-body}} \sim \left(\psi \psi \psi \right)^{\dagger} \psi \psi \psi \ .
+{\mathcal{ O}}_{\mbox{\tiny 3-body}} \sim \left(\psi \psi \psi \right)^{\dagger} \psi \psi \psi \ .
 \eeq
-Na\"ively, the dimension of this operator is 9, and therefore should contribute errors of $\calO\left((b_sn^{1/3})^4\right)$. So far, all of the operators we've discussed obey this simple scaling, corresponding to na\"ive dimensional analysis. However, our theory is strongly interacting, which can in general lead to large anomalous dimensions of certain operators. 
+Na\"ively, the dimension of this operator is 9, and therefore should contribute errors of ${\mathcal{ O}}\left((b_sn^{1/3})^4\right)$. So far, all of the operators we've discussed obey this simple scaling, corresponding to na\"ive dimensional analysis. However, our theory is strongly interacting, which can in general lead to large anomalous dimensions of certain operators. 
 
 As an example, let's consider the scaling dimension of a very basic operator, the field $\phi$. The canonical (non-interacting) dimension for a generic bosonic field in a non-relativistic theory can be deduced by looking at the kinetic term in the action,
 \beq
@@ -1292,7 +1223,7 @@ S_{\mbox{\tiny kin}} = \int d\tau d^3x \nabla^2 \phi^2 \ ,
 \eeq
 leading to a scaling dimension, $[\phi] = 3/2$. However, once interactions with the $\psi$ fields are included, the $\phi$ propagator is renormalized through loop diagrams (see \Fig{phiprop}). For a non-perturbative interaction, we must sum all possible loop diagrams. However, there is a simpler way to determine the scaling dimension of the strongly interacting $\phi$ field. The key is to recognize that near unitarity the $\phi$ field represents a bound state of two $\psi$ fields at threshold. We can therefore write $\phi$ as a local operator,
 \beq
-\phi(x) = \underset{x\to y}{\lim} |x-y| \psidag(x)\psi(y) \ ,
+\phi(x) = \underset{x\to y}{\lim} |x-y| \psi^{\dagger}(x)\psi(y) \ ,
 \eeq
 where $|x-y|$ must be included to ensure that matrix elements of the operator are finite (the wavefunction for two particles at unitarity must scale as $|x-y|^{-1}$ at short distances \cite{NishidaSonConformal}). Using our previous analysis for the scaling dimension of the $\psi$ field, we find,
 \beq
@@ -1317,11 +1248,11 @@ The error-inducing operator in the Symanzik effective action both creates and de
 \beq
 \left[\left(\psi\psi\psi\right)^{\dagger}\psi\psi\psi\right] = 9.34 \ .
 \eeq
-The relative error in the energy will then be $\calO\left(L^{-(9.34-5)}\right) = \calO\left(L^{-4.34}\right)$.
+The relative error in the energy will then be ${\mathcal{ O}}\left(L^{-(9.34-5)}\right) = {\mathcal{ O}}\left(L^{-4.34}\right)$.
 
-It turns out that the ground state of three fermions in a harmonic potential is actually not the $s$-wave state, but a $p$-wave state with energy $\sim 4.27\omega$. Thus, we should expect an additional systematic error corresponding to a 3-body $p$-wave operator that contributes at $\calO\left(L^{-3.55}\right)$ \cite{2006PhRvL..97o0401W}. Finally, at approximately the same order as the 3-body $s$-wave there is a 2-body $d$-wave operator (four derivatives) with zero anomalous dimension, and therefore contributing at $\calO\left(L^{-5}\right)$.
+It turns out that the ground state of three fermions in a harmonic potential is actually not the $s$-wave state, but a $p$-wave state with energy $\sim 4.27\omega$. Thus, we should expect an additional systematic error corresponding to a 3-body $p$-wave operator that contributes at ${\mathcal{ O}}\left(L^{-3.55}\right)$ \cite{2006PhRvL..97o0401W}. Finally, at approximately the same order as the 3-body $s$-wave there is a 2-body $d$-wave operator (four derivatives) with zero anomalous dimension, and therefore contributing at ${\mathcal{ O}}\left(L^{-5}\right)$.
 
-While certainly only the leading error ($\calO\left(L^{-3}\right)$) will dominate very close to the continuum limit, at a finite lattice spacing we have just demonstrated that there are several sources of error scaling with very similar powers of the lattice spacing. If we wish to eliminate discretization errors through extrapolation to the continuum limit, we must include all possible non-negligible contributions in our extrapolation function. For example, we could employ the following function:
+While certainly only the leading error (${\mathcal{ O}}\left(L^{-3}\right)$) will dominate very close to the continuum limit, at a finite lattice spacing we have just demonstrated that there are several sources of error scaling with very similar powers of the lattice spacing. If we wish to eliminate discretization errors through extrapolation to the continuum limit, we must include all possible non-negligible contributions in our extrapolation function. For example, we could employ the following function:
 \beq
 E(L) = E_0\left[1+a L^{-3} + b L^{-3.55} + c L^{-4.34} + d L^{-5} + \cdots \right] \ ,
 \eeq
@@ -1336,9 +1267,9 @@ For the case of nuclei, which are bound states whose wavefunctions fall off expo
 
 Finally, we should briefly discuss systematic errors associated with temporal discretization. These tend to be far less worrisome for zero temperature results for several reasons. The first is due to the relation $b_{\tau} = \frac{b_s^2}{M}$ for non-relativistic theories, indicating that temporal discretization errors are of lower order than spatial discretization errors. Furthermore, our tuning method for improving the kinetic and interaction operators also translates into an improved temporal derivative operator. The lattice temporal derivative is given by the finite difference,
 \beq
-\partial_{\tau}\psi \sim \psi_{\tau+1} - \psi_{\tau} \sim \left(\calT -1\right) \psi_{\tau} \ ,
+\partial_{\tau}\psi \sim \psi_{\tau+1} - \psi_{\tau} \sim \left({\mathcal{ T}} -1\right) \psi_{\tau} \ ,
 \eeq
-where on the right hand side I have used the knowledge that the transfer matrix $\calT$ is our time-translation operator. By perfecting the transfer matrix with our tuning method, we are in turn perfecting the single time hop operation, thereby reducing temporal discretization errors.
+where on the right hand side I have used the knowledge that the transfer matrix ${\mathcal{ T}}$ is our time-translation operator. By perfecting the transfer matrix with our tuning method, we are in turn perfecting the single time hop operation, thereby reducing temporal discretization errors.
 
 We also have the freedom to use the anisotropy parameter $M$ to tune the temporal lattice spacing to be intrinsically smaller than the spatial lattice spacing. However, it should be noted that because the temperature is controlled by the physical Euclidean time length, $1/\left(b_{\tau}N_{\tau}\right)$, increasing the anisotropy parameter $M$ will necessitate an increase in the number of temporal lattice points to reach the zero temperature limit. On the other hand, having a finer temporal lattice spacing may also help to better resolve plateaus occurring within a short ``golden window" before the noise begins to set in, due to the increase in the number of points available for fitting. For this reason, anisotropic lattices are sometimes used in lattice QCD for noisy systems. However, points corresponding to a finer temporal lattice spacing are also more correlated, so it is currently unclear whether anisotropic lattices are actually beneficial for resolving noisy signals.
 
@@ -1347,12 +1278,12 @@ We also have the freedom to use the anisotropy parameter $M$ to tune the tempora
 The first step away from unitarity and toward real nuclear physics that we can easily take is to introduce a four-component nucleon field, $N$, containing two flavors of spin up and spin down fermions. The nucleons have two allowed $s$-wave scattering channels, $^1S_0$ and $^3S_1$, which should be tuned independently (breaking the approximate $SU(4)$ symmetry between the nucleons) to give the physical nucleon-nucleon scattering lengths. One possible way to achieve this is to introduce two four-fermion interactions corresponding to,
 \beq
 \label{eq:STint}
-\calL_{\mbox{\tiny int}} = -\frac{1}{2} g_S \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_T \left(N^{\dagger}\vec{\sigma}N\right)^2 \ ,
+{\mathcal{ L}}_{\mbox{\tiny int}} = -\frac{1}{2} g_S \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_T \left(N^{\dagger}\vec{\sigma}N\right)^2 \ ,
 \eeq
 where $\sigma_i$ is a Pauli matrix acting on the spin indices, and $g_S,g_T$ are couplings for the spin singlet and spin triplet channel, respectively. The lattice version of this interaction requires the introduction of two independent auxiliary fields, $\phi_{S},\phi_{T}$. One possibility is,
 \beq
 \label{eq:noSU4}
-\calL_{\mbox{\tiny int}}^{(L)} = \sqrt{g_S} \phi_S N^{\dagger}N+\sqrt{g_T} \phi_T \vec{\sigma} \cdot N^{\dagger} \vec{\sigma} N \ .
+{\mathcal{ L}}_{\mbox{\tiny int}}^{(L)} = \sqrt{g_S} \phi_S N^{\dagger}N+\sqrt{g_T} \phi_T \vec{\sigma} \cdot N^{\dagger} \vec{\sigma} N \ .
 \eeq
 
 There are, in fact, many ways to implement the same interactions, and the different implementations will affect the signal-to-noise ratios of observables. For example, one could imagine having one of the $\phi$ fields couple to both channels equally (the $SU(4)$ limit), tuned to give the scattering length of the more attractive channel, $^3S_1$, then adding a second auxiliary field coupling only to the $^1S_0$ channel and tuning this coupling to be repulsive, making this channel more weakly attractive as desired. As we learned in \Sec{SNR}, repulsive interactions cause severe sign and noise problems, so this would clearly be a poor choice of implementation.
@@ -1368,11 +1299,11 @@ while the noise is given by,
 \eeq
 where $n'$ denotes a particle of different flavor from $n$, and $E_B^{(4)}$ is the binding energy of a four particle, four flavor state. This causes a signal-to-noise problem which is similar to our original two-body correlator, however, in this case the problem is exacerbated by the fact that particles in \Eq{noSU4noise} having different flavor index interact through the most attractive channel, $^3S_1$. This results in a greater disparity between the energies governing the signal and the noise, leading to more severe exponential decay of the signal-to-noise ratio. Unequal interactions can also lead to problems with reweighting methods designed to alleviate an overlap problem if the desired reweighting factor is no longer real or positive.
 
-One method, devised by the Bonn-Raleigh group (for a review, see e.g. \cite{Lee:2008fa}), for avoiding the extra noise caused by unequal interactions in the two $s$-wave channels, is to use an $SU(4)$ symmetric transfer matrix, $\calT_{SU(4)}$, to evolve the system for several time steps before applying the full asymmetric transfer matrix. This process may be thought of as utilizing several applications of $\calT_{SU(4)}$ in order to produce a better interpolating wavefunction from some initial guess wavefunctions, $\Psi_{i,f}$, which is then used as a source for the correlation function,
+One method, devised by the Bonn-Raleigh group (for a review, see e.g. \cite{Lee:2008fa}), for avoiding the extra noise caused by unequal interactions in the two $s$-wave channels, is to use an $SU(4)$ symmetric transfer matrix, ${\mathcal{ T}}_{SU(4)}$, to evolve the system for several time steps before applying the full asymmetric transfer matrix. This process may be thought of as utilizing several applications of ${\mathcal{ T}}_{SU(4)}$ in order to produce a better interpolating wavefunction from some initial guess wavefunctions, $\Psi_{i,f}$, which is then used as a source for the correlation function,
 \beq
-C(\tau) = \langle \Psi_f | \calT_{SU(4)}^{\tau'} \calT^{\tau} \calT_{SU(4)}^{\tau'}|\Psi_i \rangle = \langle \tilde{\Psi}_f | \calT^{\tau} | \tilde{\Psi}_i\rangle \ ,
+C(\tau) = \langle \Psi_f | {\mathcal{ T}}_{SU(4)}^{\tau'} {\mathcal{ T}}^{\tau} {\mathcal{ T}}_{SU(4)}^{\tau'}|\Psi_i \rangle = \langle \tilde{\Psi}_f | {\mathcal{ T}}^{\tau} | \tilde{\Psi}_i\rangle \ ,
 \eeq
-where $| \tilde{\Psi}_i\rangle  \equiv \calT_{SU(4)}^{\tau'}|\Psi_i \rangle$. Using this method reduces the number of times the noisier $\calT$ must be used because the system begins in a state that is already closer to the true ground state.
+where $| \tilde{\Psi}_i\rangle  \equiv {\mathcal{ T}}_{SU(4)}^{\tau'}|\Psi_i \rangle$. Using this method reduces the number of times the noisier ${\mathcal{ T}}$ must be used because the system begins in a state that is already closer to the true ground state.
 
 Another method used by the same group to reduce noise is to perform a Fierz transformation on the four-fermion interactions in order to define interactions with more symmetric couplings \cite{Borasoy:2006qn}. Using the identity,
 \beq
@@ -1380,7 +1311,7 @@ Another method used by the same group to reduce noise is to perform a Fierz tran
 \eeq
 we can rewrite the four-fermion interactions, \Eq{STint}, to give the following,
 \beq
-\tilde{\calL}_{\mbox{\tiny int}} = -\frac{1}{2} g_0 \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_I \left(N^{\dagger}\vec{\tau}N\right)^2 \ ,
+\tilde{{\mathcal{ L}}}_{\mbox{\tiny int}} = -\frac{1}{2} g_0 \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_I \left(N^{\dagger}\vec{\tau}N\right)^2 \ ,
 \eeq
 where $\tau_i$ is a Pauli matrix acting on the flavor components of $N$, and the couplings $g_{0,I}$ are related to the original couplings by,
 \beq
@@ -1396,7 +1327,7 @@ In certain cases, however, this situation can be avoided. An example is our non-
 
 Because the general tuning method introduced in \Sec{tuning} involves the numerical calculation of the transfer matrix, understanding the Wigner bound in this context is difficult. To better illustrate the issue, let's attempt to tune the effective range instead using the first method for tuning, outlined in \Sec{couplings}. This method involves calculating the scattering amplitude and tuning the couplings to match the desired scattering parameters directly from the effective range expansion. 
 
-We will again calculate a sum of bubble diagrams, however, we must now include an interaction of the form $\calL_{\mbox{\tiny int}} \sim g_2 \psidag \nabla^2 \psi$, which we would like to use to tune the effective range. We will largely follow the discussion of \cite{Phillips:1997xu}. A generic integral from one of these diagrams will have the form,
+We will again calculate a sum of bubble diagrams, however, we must now include an interaction of the form ${\mathcal{ L}}_{\mbox{\tiny int}} \sim g_2 \psi^{\dagger} \nabla^2 \psi$, which we would like to use to tune the effective range. We will largely follow the discussion of \cite{Phillips:1997xu}. A generic integral from one of these diagrams will have the form,
 \beq
 I_{2n} = \frac{1}{2\pi^2}\int dq \frac{q^{2+2n}}{E-q^2/M} \ ,
 \eeq
@@ -1458,14 +1389,14 @@ A = - \sum_{i,j=0}^1 \left(ME\right)^{i+j} a_{ij} \ ,
 \eeq
 where
 \beq
-a = v + v \calI a \ , \qquad \calI = \left( \begin{array}{cc}
+a = v + v {\mathcal{ I}} a \ , \qquad {\mathcal{ I}} = \left( \begin{array}{cc}
 I_0 & I_2 \\
 I_2 & I_4 \\
 \end{array} \right) \ .
 \eeq
 We can now solve for $a$,
 \beq
-a = \left[1-v\calI \right]^{-1} v = \frac{1}{\lambda} \left( \begin{array}{cc}
+a = \left[1-v{\mathcal{ I}} \right]^{-1} v = \frac{1}{\lambda} \left( \begin{array}{cc}
 g_0+g_2^2 I_4 & g_2(1-g_2I_2) \\
 g_2(1-g_2I_2) & g_2^2 I_0 \\
 \end{array} \right) \ ,
@@ -1517,7 +1448,7 @@ In our lattice formulation the interactions are generated by an auxiliary field 
 
 One possibility for avoiding this restriction is to include the effective range contribution to observables perturbatively, keeping the renormalizability of the effective theory intact. Perturbative corrections may be added by expanding the transfer matrix,
 \beq
-\calT \approx e^{-H_0 b_{\tau}} - b_{\tau} \delta H e^{-H_0 b_{\tau}} \ ,
+{\mathcal{ T}} \approx e^{-H_0 b_{\tau}} - b_{\tau} \delta H e^{-H_0 b_{\tau}} \ ,
 \eeq
 where $H = H_0 + \delta H$ is the full Hamiltonian and $\delta H$ is the piece we wish to treat perturbatively. Multiple insertions of $\delta H$ may be included to reach higher orders in the effective theory.
 
@@ -1561,7 +1492,7 @@ S_{\pi\pi} = \left( \frac{m_{\pi}^2}{2} + 3\right) \sum_{\vec{x},\tau,I} \pi_{\v
 \eeq
 Because the pions are derivatively coupled to the nucleons, the interaction term should behave like,
 \beq
-S_{\pi NN} \sim \frac{g_A}{2f_{\pi}}\sum_{I,k} \left[\pi^{(I)}_{\vec{x}+\hat{k}}-\pi^{(I)}_{\vec{x}-\hat{k}}\right] \psidag_{\vec{x}} \psi_{\vec{x}} \ ,
+S_{\pi NN} \sim \frac{g_A}{2f_{\pi}}\sum_{I,k} \left[\pi^{(I)}_{\vec{x}+\hat{k}}-\pi^{(I)}_{\vec{x}-\hat{k}}\right] \psi^{\dagger}_{\vec{x}} \psi_{\vec{x}} \ ,
 \eeq
 (see \cite{Lee:2008fa} for more details on the particular interaction chosen). The pions have been chosen to only couple to the nucleons through spatial displacements. This simplifies the analysis by eliminating the renormalization of the nucleon mass through nucleon self-energy diagrams such as:
 
@@ -1571,7 +1502,7 @@ Then we can simply utilize the physical value, $M \sim 938$ MeV, for the nucleon
 
 \subsection{3- and higher-body interactions}
 
-Na\"ive dimensional analysis dictates that the leading three-body interaction should be suppressed relative to the two-body interaction by $\calO(L^3)$. We should be more cautious by this point, since we have seen dimensional analysis fail in previous cases for strongly interacting systems. For that reason, we will now inspect the three-body system more carefully. 
+Na\"ive dimensional analysis dictates that the leading three-body interaction should be suppressed relative to the two-body interaction by ${\mathcal{ O}}(L^3)$. We should be more cautious by this point, since we have seen dimensional analysis fail in previous cases for strongly interacting systems. For that reason, we will now inspect the three-body system more carefully. 
 
 To begin, we will consider a system of three particles interacting via only the simplest, leading order two-body contact interaction. We will follow the discussion of \cite{Braaten:2004rn}. Let us assume that all three particles carry different quantum numbers, as they do for the triton and $^3$He, and that all pairs of particles interact via the same two-body coupling, $g_0$. To calculate the three-particle scattering amplitude for a strongly coupled system we must iterate this interaction non-perturbatively, as we did for the two-particle system. 
 
@@ -1629,7 +1560,7 @@ There are two remarkable things to note here: the first is that this result for 
 
 Because the three-body interaction has been demonstrated to be relevant at leading order, we should in general include it non-perturbatively to our lattice theory by adding an interaction term to the Lagrangian such as,
 \beq
-C_3 \phi_3 \psidag_{\tau} \psi_{\tau+1} \ ,
+C_3 \phi_3 \psi^{\dagger}_{\tau} \psi_{\tau+1} \ ,
 \eeq
 where $C_3$ is tuned to reproduce some three-body observable, and $\phi_3 \in Z_3$ (cube roots of 1). However, $\phi_3$ is necessarily a complex field, will induce severe noise and/or sign problems. The interaction may alternatively be introduced via multiple $Z_2$ interactions, but the noise problem remains.
 
@@ -1641,7 +1572,7 @@ Finally, given that the three-body sector required a reshuffling of the orders i
 
 This is observed via the so-called Tjon line (see, e.g. \cite{Hammer:2010kp}). Recall that while the two-body system at unitarity has no intrinsic scale, in order to describe the three-body system we had to introduce a single scale, $\Lambda_{*}$, to be set by some three-body observable. Once this scale is set, all other three-body observables may then be predicted. If four- and higher-body operators appear only at higher orders, then this three-body scale remains the only relevant scale in the problem, and observables must be proportional to $\Lambda_{*}$ \footnote{This single scale is also critical for the appearance of the log-normal distribution in correlators near unitarity, where the moments are given by
 \beq
-\calM_N \sim e^{-E_{\mbox{\tiny N-body}}\tau} \sim e^{-f(N) \Lambda_{*} \tau} \ .
+{\mathcal{ M}}_N \sim e^{-E_{\mbox{\tiny N-body}}\tau} \sim e^{-f(N) \Lambda_{*} \tau} \ .
 \eeq
 Numerical evidence was shown in \cite{Nicholson:2012zp} that $f(N)$ has the expected form for the log-normal distribution.}. This implies that varying the three-body parameter $\Lambda_{*}$, in a plot of the binding energy for the four-body system versus the binding energy of the three-body system, will result in a straight line. Any non-linear dependence on higher-order $N$-body operators contributes only within the error band predicted at this order in perturbation theory.
 
@@ -1677,7 +1608,7 @@ G.P. Lepage: Analysis of algorithms for lattice field theory \cite{Lepage:1989hd
 \begin{prob}
 Add a term
 \beq
-c \psidag_{\tau} \nabla_{L}^2 \psi_{\tau-1}
+c \psi^{\dagger}_{\tau} \nabla_{L}^2 \psi_{\tau-1}
 \eeq
 to the simple interaction, \Eq{pointint}, and derive an analytic expression for tuning the couplings, $g_0$ and $c$ in order to eliminate the effective range contribution. You may use either the scattering amplitude or the transfer matrix method.
 \end{prob}
@@ -1696,10 +1627,10 @@ Output is created in the folder ``results". The file gives a list of the values 
 \mathrm{Re}\left[C(\phi_1,\tau_1)\right] & \mathrm{Im}\left[C(\phi_1,\tau_1)\right] & \mathrm{Re}\left[C(\phi_1,\tau_2)\right] & \mathrm{Im}\left[C(\phi_1,\tau_2)\right] & \cdots & \mathrm{Re}\left[C(\phi_1,\tau_{N_{\tau}})\right] & \mathrm{Im}\left[C(\phi_1,\tau_{N_{\tau}})\right] \\
 \mathrm{Re}\left[C(\phi_2,\tau_1)\right] & \mathrm{Im}\left[C(\phi_2,\tau_1)\right] & \mathrm{Re}\left[C(\phi_2,\tau_2)\right] & \mathrm{Im}\left[C(\phi_2,\tau_2)\right] & \cdots & \mathrm{Re}\left[C(\phi_2,\tau_{N_{\tau}})\right] & \mathrm{Im}\left[C(\phi_2,\tau_{N_{\tau}})\right] \\
 &&& \vdots &&& \\
-\mathrm{Re}\left[C(\phi_{\Ncfg},\tau_1)\right] & \mathrm{Im}\left[C(\phi_{\Ncfg},\tau_1)\right] & \mathrm{Re}\left[C(\phi_{\Ncfg},\tau_2)\right] & \mathrm{Im}\left[C(\phi_{\Ncfg},\tau_2)\right] & \cdots & \mathrm{Re}\left[C(\phi_{\Ncfg},\tau_{N_{\tau}})\right] & \mathrm{Im}\left[C(\phi_{\Ncfg},\tau_{N_{\tau}})\right] \\
+\mathrm{Re}\left[C(\phi_{N_{\mbox{\tiny cfg}}},\tau_1)\right] & \mathrm{Im}\left[C(\phi_{N_{\mbox{\tiny cfg}}},\tau_1)\right] & \mathrm{Re}\left[C(\phi_{N_{\mbox{\tiny cfg}}},\tau_2)\right] & \mathrm{Im}\left[C(\phi_{N_{\mbox{\tiny cfg}}},\tau_2)\right] & \cdots & \mathrm{Re}\left[C(\phi_{N_{\mbox{\tiny cfg}}},\tau_{N_{\tau}})\right] & \mathrm{Im}\left[C(\phi_{N_{\mbox{\tiny cfg}}},\tau_{N_{\tau}})\right] \\
 \end{array} \nonumber
 \eeq
-where $N_{\tau}$ and $\Ncfg$ are the total number of time steps, specified in ``do.arg", and total number of configurations, specified in ``evo.arg", respectively. To calculate the correlation function at a given time, $\tau$, average over all values: $C(\tau) = \sum_i \left(\mathrm{Re}\left[C(\phi_i,\tau)\right] + i \ \mathrm{Im}\left[C(\phi_i,\tau)\right]\right)$.
+where $N_{\tau}$ and $N_{\mbox{\tiny cfg}}$ are the total number of time steps, specified in ``do.arg", and total number of configurations, specified in ``evo.arg", respectively. To calculate the correlation function at a given time, $\tau$, average over all values: $C(\tau) = \sum_i \left(\mathrm{Re}\left[C(\phi_i,\tau)\right] + i \ \mathrm{Im}\left[C(\phi_i,\tau)\right]\right)$.
 
 \subsection{Exercises}
 \begin{prob}

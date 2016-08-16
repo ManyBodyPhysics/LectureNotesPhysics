@@ -21,6 +21,8 @@
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\conj}[1]{\overline{#1}}
 
+\newcommand{\gsim}{\gtrsim}
+\newcommand{\lsim}{\lesssim}
 
 % derivatives
 \newcommand{\dd}{\mathrm{d}}
@@ -30,13 +32,14 @@
 \newcommand{\dAlem}{\Box}
 
 % three-vectors
-%\newcommand{\vx}{\mathbf{x}}
-%\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
 
-%\newcommand{\vk}{\mathbf{k}}
-%\newcommand{\vq}{\mathbf{q}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vp}{\mathbf{p}}
+\newcommand{\vq}{\mathbf{q}}
 
-%\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vA}{\mathbf{A}}
 
 \newcommand{\vZero}{\mathbf{0}}
 
@@ -82,24 +85,24 @@
 \newcommand{\fpi}{f_\pi}
 
 \newcommand{\gamt}{\gamma_t}
-%\newcommand{\at}{a_t}
+\newcommand{\at}{a_t}
 \newcommand{\rt}{r_t}
 \newcommand{\rhot}{\rho_t}
 
 \newcommand{\gamd}{\gamt}
 
 % matrices
-%\NewEnviron{skmattwod}{%
-%\left(\begin{array}{cc}
-%  \BODY
-%\end{array}\right)
-%}
+\NewEnviron{skmattwod}{%
+\left(\begin{array}{cc}
+  \BODY
+\end{array}\right)
+}
 
-%\NewEnviron{skvectwod}{%
-%\left(\begin{array}{c}
-%  \BODY
-%\end{array}\right)
-%}
+\NewEnviron{skvectwod}{%
+\left(\begin{array}{c}
+  \BODY
+\end{array}\right)
+}
 
 \newcommand{\twodmat}[1]{\begin{skmattwod}#1\end{skmattwod}}
 \newcommand{\twodvec}[1]{\begin{skvectwod}#1\end{skvectwod}}
@@ -148,17 +151,17 @@
 \newcommand{\acommbig}[2]{\big\{#1,#2\big\}}
 
 % custom environments and boxes
-%\NewEnviron{subalign}[1][]{%
-%\begin{subequations}\begin{align}
-%  \BODY
-%\end{align}\label{#1}\end{subequations}
-%}
+\NewEnviron{subalign}[1][]{%
+\begin{subequations}\begin{align}
+  \BODY
+\end{align}\label{#1}\end{subequations}
+}
 
-%\NewEnviron{spliteq}{%
-%\begin{equation}\begin{split}
-%  \BODY
-%\end{split}\end{equation}
-%}
+\NewEnviron{spliteq}{%
+\begin{equation}\begin{split}
+  \BODY
+\end{split}\end{equation}
+}
 
 \newcommand*{\vcenteredhbox}[1]
 {\begingroup\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}

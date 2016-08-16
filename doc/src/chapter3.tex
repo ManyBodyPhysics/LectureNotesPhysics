@@ -3,8 +3,6 @@
 \institute{Tetsuo Hatsuda \at Nishina Center, RIKEN, Saitama 351-0198, Japan,  \email{thatsuda@riken.jp}}
 \maketitle
 \abstract{
-%Each chapter should be preceded by an abstract (10--15 lines long) that summarizes the content. The abstract will appear \textit{online} at \url{www.SpringerLink.com} and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter. As a general rule the abstracts will not appear in the printed version of your book unless it is the style of your particular book or that of the series to which your book belongs.\newline\indent
-%Please use the 'starred' version of the new Springer \texttt{abstract} command for typesetting the text of the online abstracts (cf. source file of this chapter template \texttt{abstract}) and include them with the source files of your manuscript. Use the plain \texttt{abstract} command if the abstract is also to appear in the printed version of the book.
 Concepts and applications of lattice quantum chromodynamics (LQCD) are introduced.
 After discussing how to define quarks and gluons on the Euclidean hypercubic lattice, 
  the strong coupling expansion  and the weak coupling expansions are reviewed 
@@ -14,41 +12,6 @@ After discussing how to define quarks and gluons on the Euclidean hypercubic lat
   examples of the high precision LQCD simulations,  numerical results of the heavy quark potential and the hadron masses
    are shown.  Recent LQCD results on the baryon-baryon interactions are briefly discussed.
    }
-
-% macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\renewcommand{\theequation}{\thesection.\arabic{equation}}
-\newcommand{\beq}{\begin{eqnarray}}
-\newcommand{\eeq}{\end{eqnarray}}
-\newcommand{\la}{\langle}
-\newcommand{\ra}{\rangle}
-%% vector-notation
-\newcommand{\vx}{\vec{x}}
-\newcommand{\vy}{\vec{y}}
-\newcommand{\vk}{\vec{k}}
-\newcommand{\LRDelta}{\overleftrightarrow{\Delta}}
-\newcommand{\vgamma}{\vec{\gamma}} 
-\newcommand{\vA}{\vec{A}}
-\newcommand{\vr}{\vec{r}}
-\newcommand{\vn}{\vec{n}}
-\newcommand{\vm}{\vec{m}}
-\newcommand{\vv}{\vec{v}}
-\newcommand{\vp}{\vec{p}}
-\newcommand{\vsigma}{\vec{\sigma}}
-\newcommand{\vL}{\vec{L}}
-\newcommand{\vS}{\vec{S}}
-\newcommand{\vT}{\vec{T}}
-%% lattice
-\newcommand{\Rs}{R_{\rm s}}
-\newcommand{\Rt}{R_{\rm t}}
-\newcommand{\Ns}{N_{\rm s}}
-\newcommand{\Ntau}{N_{\tau}}
-\newcommand{\at}{a_{\rm t}}
-\newcommand{\as}{a_{\rm s}}
-\newcommand{\Lamqcd}{ \Lambda_{_{\rm QCD}} } 
-\newcommand{\Lamlat}{ \Lambda_{_{\rm LAT}} } 
-\newcommand{\Lammsb}{ \Lambda_{_{\overline{\rm MS} }}  } 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 %%%%%%%%%%%%%
@@ -127,7 +90,7 @@ The quark mass matrix in the flavor space ($u, d, s, \cdots$) is denoted by $m$ 
 \beq
 D_{\mu}^{\alpha \beta} = \partial_{\mu} \delta^{\alpha \beta} + ig A_{\mu}^{\alpha \beta}, 
 \eeq
-with  $x_{\mu}= (\tau, \vx)$,  $\partial_{\mu} = (\partial_{\tau}, \nabla )$ and the $3 \times 3$ matrix field, $A_{\mu} = A_{\mu}^b t^b$. 
+with  $x_{\mu}= (\tau, \mathbf{x})$,  $\partial_{\mu} = (\partial_{\tau}, \nabla )$ and the $3 \times 3$ matrix field, $A_{\mu} = A_{\mu}^b t^b$. 
 The explicit form of the color SU(3) generators $t^{a=1, \cdots, 8}$ is given in the Appendix [SU$(N)$ algebra]. 
 The field strength tensor is $G_{\mu \nu}=G_{\mu \nu}^b t^b$ with
  $G_{\mu \nu}^b= \partial_{\mu}A_{\nu}^b - \partial_{\nu} A_{\mu}^b -g f_{bcd} A_{\mu}^c A_{\nu}^d$.
@@ -140,9 +103,9 @@ The field strength tensor is $G_{\mu \nu}=G_{\mu \nu}^b t^b$ with
 \eeq 
 See Appendix [Gaussian and Grassmann integrals] for the examples of integration with these measures.
 The temporal boundary condition of the gluon (quark) field is periodic (anti-periodic) due to its
-c-number (Grassmann-number) character;  $A_{\mu}^b (\tau=0, \vx)=A_{\mu}^b (\tau=1/T, \vx)$,
-$\bar{q}^{\alpha}(\tau=0,\vx)=-\bar{q}^{\alpha}(\tau=1/T,\vx)$, and 
-$q^{\beta}(\tau=0,\vx)=-q^{\beta}(\tau=1/T,\vx)$.    On the other hand, the spatial boundary conditions are 
+c-number (Grassmann-number) character;  $A_{\mu}^b (\tau=0, \mathbf{x})=A_{\mu}^b (\tau=1/T, \mathbf{x})$,
+$\bar{q}^{\alpha}(\tau=0,\mathbf{x})=-\bar{q}^{\alpha}(\tau=1/T,\mathbf{x})$, and 
+$q^{\beta}(\tau=0,\mathbf{x})=-q^{\beta}(\tau=1/T,\mathbf{x})$.    On the other hand, the spatial boundary conditions are 
 not constrained and can be taken to be either periodic or anti-periodic; the difference should disappear in the 
 thermodynamic limit, $L \rightarrow \infty$.
  Throughout this chapter, we take $T = 1/L $   to
@@ -638,8 +601,8 @@ a fixed separation $R$.
 It corresponds to Fig.\ref{fig:wilson-L} and can be written as
 \beq
  \label{eq:5.wilson-loop-lattice}
-\la W(C) \ra  
- & = & \la {\rm tr}\ \prod_{{\rm link}\in C}  U_{\mu}(n) \ra , \\
+\langle W(C) \rangle  
+ & = & \langle {\rm tr}\ \prod_{{\rm link}\in C}  U_{\mu}(n) \rangle , \\
  \label{eq:5.wilson-loop-asym}
  & \propto  & 
   {\rm e}^{-V(R) {\cal T} } \simeq 
@@ -648,7 +611,7 @@ It corresponds to Fig.\ref{fig:wilson-L} and can be written as
 where we  have taken a limit     
 ${\cal T} \gg R \rightarrow \infty$ in   Eq.(\ref{eq:5.wilson-loop-asym}).
  Remembering the fact that the real time $t$ and the imaginary time $\tau$ are
- related as  $\tau=it$, the exponential falloff of  $\la W(C) \ra$ in $\tau$ implies the 
+ related as  $\tau=it$, the exponential falloff of  $\langle W(C) \rangle$ in $\tau$ implies the 
   temporal oscillation in $t$, and its $R$-dependent coefficient is nothing but the 
  interaction  energy between $Q$ and $\bar{Q}$.  
  
@@ -658,7 +621,7 @@ In Eq.(\ref{eq:5.wilson-loop-asym}),
 linear confining potential.
  It also implies 
  the area law  of the Wilson loop 
- $\la W(C) \ra \sim \exp(-K{\cal A})$
+ $\langle W(C) \rangle \sim \exp(-K{\cal A})$
  where ${\cal A}= R \times {\cal T} $ is 
   the area inside the path $C$.
     In full QCD where pair creation of light quarks 
@@ -679,14 +642,14 @@ $\exp (-S_{\rm G}) = 1 - S_{\rm G}+ S_{\rm G}^2 /2 + \cdots $
  and finds (Exercise \ref{prob:7})
 \beq
 \label{eq:5.wilson-strong}
-\la W(C) \ra = {1 \over {\cal Z}}
+\langle W(C) \rangle = {1 \over {\cal Z}}
  \int [dU] \ {\rm tr} \prod_{{\rm link}\in C} U_{\mu}(n) \  
  \sum_{\ell =0}^{\infty} \frac{1}{\ell !} (-S_{\rm G})^{\ell}.
 \eeq
  
 Only the first three integrals, Eqs.(\ref{eq:group-int-0},\ref{eq:group-int-1},\ref{eq:group-int-2}),
  are necessary to extract the leading contribution to 
- $\la W(C) \ra $  in the strong coupling.
+ $\langle W(C) \rangle $  in the strong coupling.
    Key observation is that all the $U$'s 
   from the Wilson loop and $U^{\dagger}$'s 
  from $(-S_{\rm G})^{\ell}$ should be paired in the leading order of $1/g^2$
@@ -723,7 +686,7 @@ Only the first three integrals, Eqs.(\ref{eq:group-int-0},\ref{eq:group-int-1},\
  of the strong coupling expansion,
 \beq
  \label{eq:5.strong-estimate}
-\frac{1}{N_c} \la W(C) \ra 
+\frac{1}{N_c} \langle W(C) \rangle 
 & & \xrightarrow[g^2\rightarrow \infty] 
  \  \frac{1}{N_c} \cdot  
 \left(\frac{1}{g^2} \right)^{N_{\rm plaq}} \cdot  
@@ -849,12 +812,12 @@ $\beta_{_{\rm LAT}}(g)$, one finds
   (\beta_0 g^2)^{-{\beta_1 \over 2 \beta_0^2}} 
  \cdot (1 + O(g^2)).
  \eeq
-Here  $\Lamlat$ is called the scale parameter on the lattice, and  
-   $g(a)$ can be expressed in terms of $a$ and $\Lamlat$ ((Exercise \ref{prob:8}),
+Here  $ \Lambda_{_{\rm LAT}}$ is called the scale parameter on the lattice, and  
+   $g(a)$ can be expressed in terms of $a$ and $ \Lambda_{_{\rm LAT}}$ ((Exercise \ref{prob:8}),
  \beq
 \label{eq:5.lat-running-g}
-{1 \over g^2(a)} = \beta_0 \ln \left( 1 \over a^2 \Lamlat^2 \right)
-+ {\beta_1 \over \beta_0} \ln \ln \left( 1 \over a^2 \Lamlat^2 \right)
+{1 \over g^2(a)} = \beta_0 \ln \left( 1 \over a^2  \Lambda_{_{\rm LAT}}^2 \right)
++ {\beta_1 \over \beta_0} \ln \ln \left( 1 \over a^2  \Lambda_{_{\rm LAT}}^2 \right)
 + \cdot \cdot \cdot .
 \eeq
  This is the asymptotic freedom
@@ -862,7 +825,7 @@ Here  $\Lamlat$ is called the scale parameter on the lattice, and
  assumption that the beta-function can be expanded by $g(a)$ for small $a$.
  
  
-Direct way to extract the actual value of $\Lamlat$  is to
+Direct way to extract the actual value of $ \Lambda_{_{\rm LAT}}$  is to
  carry out  numerical simulations of  
  a certain physical quantity (such as the string tension)
  and compare the result with the experimental value. 
@@ -871,7 +834,7 @@ Direct way to extract the actual value of $\Lamlat$  is to
 \beq
 \label{eq:5.lat-K}
 K a^2 = C_K \exp \left( - {1 \over \beta_0 g^2} \right) 
-(\beta_0 g^2)^{-\beta_1 /\beta_0^2} = C_K \Lamlat^2 ,
+(\beta_0 g^2)^{-\beta_1 /\beta_0^2} = C_K  \Lambda_{_{\rm LAT}}^2 ,
 \eeq
 with $C_K$ being a dimensionless numerical constant independent
  of $g$.  As  can be seen from this example, 
@@ -936,10 +899,10 @@ Then, we eventually arrive at the formula
 \beq
 V(R,g(a), a) = \frac{a}{R} V (a, \bar{g}(R/a), a) .
 \eeq
-If $R$ is  in the interval,  $a < R \ll \Lamlat^{-1}$, the running coupling $\bar{g}$ is small enough, so that 
+If $R$ is  in the interval,  $a < R \ll  \Lambda_{_{\rm LAT}}^{-1}$, the running coupling $\bar{g}$ is small enough, so that 
 one may use the perturbative expansion of $\beta_{_{\rm LAT}}$ to obtain
 \beq
-\bar{g}^2(R/a) \simeq \frac{g^2(a)}{1-2\beta_0 g^2(a) \ln (R/a)} =  \frac{1}{2\beta_0 \ln (1/(R\Lamlat) ) }. 
+\bar{g}^2(R/a) \simeq \frac{g^2(a)}{1-2\beta_0 g^2(a) \ln (R/a)} =  \frac{1}{2\beta_0 \ln (1/(R \Lambda_{_{\rm LAT}}) ) }. 
 \label{eq:running-R}
 \eeq 
 In Fig.\ref{fig:running-g}, the behavior of $\frac{1}{4\pi}\bar{g}^2(\lambda)$  as a function of $\lambda^{-1}$ is shown.
@@ -951,7 +914,7 @@ For $R$ sufficiently close to $a$, one may evaluate the potential by using pertu
 $V (a, \bar{g}(R/a), a)  = - C_{{\rm F}} \frac{\bar{g}(R/a)^2}{4\pi a}$, so that we finally obtain
 \beq
 \label{eq:RG-Coulomb}
-V(R,g(a),a) \simeq - C_{{\rm F}} \frac{\bar{g}^2(R/a)}{4\pi R} \ \ \ \ \ (a < R \ll \Lamlat^{-1}),
+V(R,g(a),a) \simeq - C_{{\rm F}} \frac{\bar{g}^2(R/a)}{4\pi R} \ \ \ \ \ (a < R \ll  \Lambda_{_{\rm LAT}}^{-1}),
 \eeq
 where $C_{{\rm F}}=4/3$ for $N_c=3$ is given in Appendix [SU($N$) algebra].
 Eq.(\ref{eq:RG-Coulomb}) is nothing but the Coulomb potential with the running coupling constant.
@@ -961,7 +924,7 @@ such a logarithmic $a$-dependence  is cancelled by the next-to-leading order ter
 Note also that the similar analysis can be done for any other observables.
 The QCD thermal pressure at finite temperature $P(T,g(a),a)$ is a typical example, in which 
 the weak coupling analysis (i.e. the description by  quark-gluon plasma picture)
-is justified  under the condition  $ \Lamlat \ll T < a^{-1}$. 
+is justified  under the condition  $  \Lambda_{_{\rm LAT}} \ll T < a^{-1}$. 
 
 
 
@@ -970,15 +933,15 @@ is justified  under the condition  $ \Lamlat \ll T < a^{-1}$.
 %%%%%%%%%%%%%%%%%%%
 
 
-Suppose we have a lattice having $\Ns$ ($\Ntau$) number of sites
+Suppose we have a lattice having $N_{\rm s}$ ($N_{\tau}$) number of sites
 in each spatial (temporal) direction. Then 
  the total number of links is 
-   $  \Ns^3 \times \Ntau  \times 4$. 
+   $  N_{\rm s}^3 \times N_{\tau}  \times 4$. 
  Therefore the total  number of gluon integrations $\int [dU]$
- for a moderate lattice size  $\Ns = \Ntau =32$ reads
+ for a moderate lattice size  $N_{\rm s} = N_{\tau} =32$ reads
 \beq
 \label{eq:5.lattice-size}
- ( \Ns^3 \times \Ntau \times 4 )_{\rm links} \times 8_{\rm color} 
+ ( N_{\rm s}^3 \times N_{\tau} \times 4 )_{\rm links} \times 8_{\rm color} 
  \sim 3 \times 10^7 .
  \eeq
  This is 
@@ -1014,9 +977,9 @@ with $\phi^{(n)}$  being arranged to appear with
  are  used to calculate the expectation value,
  \beq
 \label{eq:5.obs-average}
-\la {\cal O} \ra = \frac{1}{N}\sum_{n=1}^N {\cal O}^{(n)}
+\langle {\cal O} \rangle = \frac{1}{N}\sum_{n=1}^N {\cal O}^{(n)}
 \pm \sqrt{{\sigma^2 \over N}}, \ \ \ \ \ 
-\sigma^2 =  \frac{1}{N-1} \sum_{n=1}^N \la {\cal O}^{(n)} - \la {\cal O} \ra \ra^2 ,
+\sigma^2 =  \frac{1}{N-1} \sum_{n=1}^N \langle {\cal O}^{(n)} - \langle {\cal O} \rangle \rangle^2 ,
 \eeq
 with ${\cal O}^{(n)}={\cal O}(\phi^{(n)})$.
 \end{enumerate}
@@ -1039,10 +1002,10 @@ initial configuration,
 \eeq
 where the ``{\it update}" of the $i$-th configuration ($\phi$)  to
 the $(i+1)$-th configulation ($\phi'$)  is governed by the conditional probability
-$P$ or equivalently  the transition matrix $\vT$, 
+$P$ or equivalently  the transition matrix $\mathbf{T}$, 
 \beq
 \label{eq:M-transition}
-P(\phi \rightarrow \phi') = (\vT)_{\phi \phi'} 
+P(\phi \rightarrow \phi') = (\mathbf{T})_{\phi \phi'} 
 \eeq
 which has the property, $\sum_{\phi'} P(\phi \rightarrow \phi')=1$.
 Eq.(\ref{eq:M-chain}) generated by Eq.(\ref{eq:M-transition}) is called the {\it Markov chain} since
@@ -1056,16 +1019,16 @@ W'[\phi' ] =  \sum_\phi  W[\phi] P(\phi \rightarrow \phi').
 
 If  the Markov chain is {\it irreducible} (any $\phi$ and $\phi'$ are connected with each other) and  {\it aperiodic}
 (absence of $\phi$ which appears periodically) \footnote{Rigorous definitions are as follows. (i) The Markov chain is said to be 
-irreducible if one can find a finite positive integer $n (< \infty)$  such that  $(\vT^n)_{\phi \phi'} > 0 $ for all $\phi$ and $\phi'$.
+irreducible if one can find a finite positive integer $n (< \infty)$  such that  $(\mathbf{T}^n)_{\phi \phi'} > 0 $ for all $\phi$ and $\phi'$.
 (ii)  The period, $d(\phi)$, is defined by the greatest common divisor  of the set of positive integers $n (\ge 1)$
-such that  $(\vT^n)_{\phi \phi} > 0 $ is satisfied. If $d(\phi)=1$ for all $\phi$, the Markov chain is 
+such that  $(\mathbf{T}^n)_{\phi \phi} > 0 $ is satisfied. If $d(\phi)=1$ for all $\phi$, the Markov chain is 
 said to be aperiodic \cite{Haggstrom:2002}.},  there exists a theorem that the Markov chain
  has a unique equilibrium distribution $W_{\rm eq}$ satisfying 
 \beq
 \label{eq:transition-W}
 W_{\rm eq}[\phi']  =  \sum_\phi W_{\rm eq}[\phi] P (\phi \rightarrow \phi'),
 \eeq
-and it can be reached by $\vT^{\infty}$ starting from arbitrary initial distribution.
+and it can be reached by $\mathbf{T}^{\infty}$ starting from arbitrary initial distribution.
 For a heuristic proof of this theorem, see Exercise \ref{prob:9}. For mathematical proof,  see  \cite{Haggstrom:2002}.
 
 As is easily seen, a  sufficient but not necessary condition for $P$ to lead $W_{\rm eq}$  is the {\it detailed balance}:
@@ -1274,8 +1237,8 @@ It originates from the importance sampling.  A very useful procedure to estimate
   originates from the ``jackknife"  which is an easy and  portable  tool  for general purposes).
   Let us consider the mean and the unbiased variance of a certain quantity $ {\cal O}$,
   \beq
-   \la {\cal O} \ra = \frac{1}{N} \sum_{n=1}^N {\cal O}^{(n)}  \pm \sqrt{\frac{\sigma^2({\cal O} )}{N}}, \ \ \ \
-   \sigma^2({\cal O}) = \left( \frac{N}{N-1} \right)  \frac{1}{N} \sum_{n=1}^N ( {\cal O}^{(n)}  - \la {\cal O} \ra )^2,
+   \langle {\cal O} \rangle = \frac{1}{N} \sum_{n=1}^N {\cal O}^{(n)}  \pm \sqrt{\frac{\sigma^2({\cal O} )}{N}}, \ \ \ \
+   \sigma^2({\cal O}) = \left( \frac{N}{N-1} \right)  \frac{1}{N} \sum_{n=1}^N ( {\cal O}^{(n)}  - \langle {\cal O} \rangle )^2,
   \eeq
 where the factor $\frac{N}{N-1}$ is called the Bessel's correction.
  The jackknife samples are obtained by
@@ -1286,11 +1249,11 @@ where the factor $\frac{N}{N-1}$ is called the Bessel's correction.
   mean and the variance of a function $f({\cal O})$, we have
  \beq
 \label{eq:jack}
- \la f({\cal O}_J)\ra = \frac{1}{N} \sum_{n=1}^{N} f( {\cal O}^{(n)}_J) \pm  \sqrt{\frac{\sigma_J^2(f)}{N}}, \ \ \ \ 
-  \sigma_J^2(f) = (N-1) \sum_{n=1}^N ( f( {\cal O}^{(n)}_J) -  \la f( {\cal O}_J)\ra)^2. 
+ \langle f({\cal O}_J)\rangle = \frac{1}{N} \sum_{n=1}^{N} f( {\cal O}^{(n)}_J) \pm  \sqrt{\frac{\sigma_J^2(f)}{N}}, \ \ \ \ 
+  \sigma_J^2(f) = (N-1) \sum_{n=1}^N ( f( {\cal O}^{(n)}_J) -  \langle f( {\cal O}_J)\rangle)^2. 
 \eeq
 For $f( {\cal O})={\cal O}$, we recover the original  mean and variance;
- $\la  {\cal O}_J \ra = \la  {\cal O} \ra$ and  $\sigma_J^2({\cal O})=\sigma^2({\cal O})$. (Exercise \ref{prob:12}).
+ $\langle  {\cal O}_J \rangle = \langle  {\cal O} \rangle$ and  $\sigma_J^2({\cal O})=\sigma^2({\cal O})$. (Exercise \ref{prob:12}).
 One can generalize this procedure by dividing $N$ into $N_b=N/n_b$  
 with the bin-size $n_b$ and create the $N_b$ jackknife samples. 
  Eq.(\ref{eq:jack})  corresponds to the case with $n_b=1$.
@@ -1360,10 +1323,10 @@ $[V(R)-V(R_0)]\times R_0$
  calculated with high accuracy by LQCD simulations
   with dynamical quarks.  The starting point is the hadronic 
   correlation functions $C_{\rm H=M,B} (n,n')$ in Eqs.(\ref{eq:correlation-M},\ref{eq:correlation-B}) 
-  integrated over the spatial coordinates, $\vn$ and $\vn'$,   
+  integrated over the spatial coordinates, $\mathbf{n}$ and $\mathbf{n}'$,   
  \beq
  \label{eq:5.D-tau}
- C_{\rm H}(\tau) = \sum_{\vn, \vn'} C_{\rm H} (n,n') 
+ C_{\rm H}(\tau) = \sum_{\mathbf{n}, \mathbf{n}'} C_{\rm H} (n,n') 
  \xrightarrow[\tau \rightarrow \infty]
    \ |Z_{\rm H}|^2 {\rm e}^{-M_{\rm H} \tau}   ,
  \eeq   
@@ -1379,10 +1342,10 @@ where $\tau= (n_4-n_4')a$ is the temporal distance between the source at $n'$ an
 aM_{\rm H}^{\rm eff}(\tau) = \ln \left( \frac{C_{\rm H}(\tau)}{C_{\rm H}(\tau+a) } \right) .
 \eeq
 The asymptotic plateau of the effective mass at large $\tau$ corresponds to the hadron mass.
-     In actual simulations,  the temporal extent is limited ($0 \le \tau/a \le \Ntau$), so that 
+     In actual simulations,  the temporal extent is limited ($0 \le \tau/a \le N_{\tau}$), so that 
     the exponential damping 
     of  Eq.(\ref{eq:5.D-tau}) is replaced by
-     $C_{\rm H} \rightarrow \exp[-M_{\rm H} \tau ] \pm  \exp [-M_{\rm H} (\Ntau a - \tau)]$
+     $C_{\rm H} \rightarrow \exp[-M_{\rm H} \tau ] \pm  \exp [-M_{\rm H} (N_{\tau} a - \tau)]$
     where $+ (-)$ for the periodic (anti-periodic) boundary condition.
      
  Shown in the left panel of Fig.\ref{fig:hadron-mass} is the 
@@ -1505,25 +1468,25 @@ Understanding of  the nuclear force from QCD
   smaller than the size of the box $R_{\rm QCD}<L/2$, the behavior of the 
   the equal-time Bethe-Salpeter amplitude (or more precisely 
   the Nambu-Bethe-Salpeter (NBS) amplitude)
-     $\psi (\vr)$ in the interval $R_{\rm QCD} < | \vr | < L/2 $
+     $\psi (\mathbf{r})$ in the interval $R_{\rm QCD} < | \mathbf{r} | < L/2 $
     has sufficient information to relate the phase shift and the 
   energy shift $\Delta E =M_{\rm HH}-2M_{\rm H}$.
   
    The HAL QCD method was proposed as another theoretical framework to study the hadron-hadron interactions from LQCD
  by Ishii, Aoki and Hatsuda \cite{Ishii:2006ec}
   and was further developed by  HAL QCD Collaboration \cite{HALQCD:2012aa}.
-    The starting point is the same equal-time NBS amplitude  $\psi (\vr)$: 
+    The starting point is the same equal-time NBS amplitude  $\psi (\mathbf{r})$: 
   Instead of looking at the amplitude 
   outside the range of the interaction,
-   the internal region $ |\vr | < R_{\rm QCD}$ is considered and
-  an energy-independent  non-local potential $U(\vr, \vr')$  is deduced from  $\psi (\vr)$.
-    Since $U(\vr, \vr')$ in QCD
+   the internal region $ |\mathbf{r} | < R_{\rm QCD}$ is considered and
+  an energy-independent  non-local potential $U(\mathbf{r}, \mathbf{r}')$  is deduced from  $\psi (\mathbf{r})$.
+    Since $U(\mathbf{r}, \mathbf{r}')$ in QCD
    is spatially  localized due to the confinement
    of quarks and gluons, it is affected  only weakly
    by the finite lattice volume. Physical quantities such 
  as the scattering phase shifts, bound state spectra,  and resonance energies
   can be calculated by solving  the
-  integro-differential differential equation satisfied by $\psi (\vr)$ with $U(\vr, \vr')$.
+  integro-differential differential equation satisfied by $\psi (\mathbf{r})$ with $U(\mathbf{r}, \mathbf{r}')$.
    
   Recently, a detailed comparison between the FVM and the HAL QCD method has been carried out:
   Although they agree with each other quite accurately for non-resonant pion-pion scattering,
@@ -1536,17 +1499,17 @@ Understanding of  the nuclear force from QCD
 %=============================================  
   
 Let us consider  the baryon-baryon correlation in Fig.\ref{fig:correlation}(c) and 
-define the equal-time NBS amplitude $\psi_{\ell}(\vr,\tau)$  from its large $\tau$ behavior:
+define the equal-time NBS amplitude $\psi_{\ell}(\mathbf{r},\tau)$  from its large $\tau$ behavior:
  \beq
- C_{\rm BB}(\vr, \tau) 
- =\sum_{\vn',\vm'}   \left. C_{\rm BB}(n,m,n',m') \right|_{n_4=m_4,n_4'=m_4'} 
- \rightarrow \sum_{\ell} a_{\ell}  \psi_{\ell} (\vr,\tau)  e^{-E_{\ell} \tau}   ,
+ C_{\rm BB}(\mathbf{r}, \tau) 
+ =\sum_{\mathbf{n}',\mathbf{m}'}   \left. C_{\rm BB}(n,m,n',m') \right|_{n_4=m_4,n_4'=m_4'} 
+ \rightarrow \sum_{\ell} a_{\ell}  \psi_{\ell} (\mathbf{r},\tau)  e^{-E_{\ell} \tau}   ,
  \eeq 
- where $\vr=(\vn-\vm) a$, $\tau=(n_4-n_4')$, and $\psi_{\ell} (\vr,\tau)$ being the 
+ where $\mathbf{r}=(\mathbf{n}-\mathbf{m}) a$, $\tau=(n_4-n_4')$, and $\psi_{\ell} (\mathbf{r},\tau)$ being the 
   NBS wave function for $\ell$-th scattering state on the lattice. 
   For large lattice size, $E_{\ell}$ is very dense, so that it is impossible to identify each level.  
  This causes a fatal problem in FVM as mentioned above.  On the other hand,
- if we define  $ C_{\rm BB}(\vr;\tau)= {\cal R}(\vr,\tau) e^{-2M_{\rm B} \tau}$, 
+ if we define  $ C_{\rm BB}(\mathbf{r};\tau)= {\cal R}(\mathbf{r},\tau) e^{-2M_{\rm B} \tau}$, 
   the following  integro-differential equation can be derived below the inelastic threshold ($\tau > M_{\pi}^{-1}$),
 \beq
   \left\{
@@ -1554,11 +1517,11 @@ define the equal-time NBS amplitude $\psi_{\ell}(\vr,\tau)$  from its large $\ta
   -\frac{\partial}{\partial \tau}
   - H_0
   \right\}
-  {\cal R}(\vr,\tau)
+  {\cal R}(\mathbf{r},\tau)
   =
   \int d^3 r'
-  U(\vr, \vr')
-  {\cal R}(\vr', \tau),
+  U(\mathbf{r}, \mathbf{r}')
+  {\cal R}(\mathbf{r}', \tau),
   \label{eq.tdep}
 \eeq
  with  $H_0= - \nabla^2/M_{\rm B}$.
@@ -1569,27 +1532,27 @@ elastic $BB$ scatterings \cite{HALQCD:2012aa}.
   If we further focus on the 
   energies  much below  the inelastic threshold,
    the velocity expansion
-   of $U(\vr,\vr')$ in terms of its  non-locality can be adopted.
+   of $U(\mathbf{r},\mathbf{r}')$ in terms of its  non-locality can be adopted.
    In fact, the potential with hermiticity, 
    rotational invariance, parity symmetry,   and time-reversal invariance may be expanded as \cite{okubo}
 \begin{eqnarray} 
 \label{eq:U-del}
-  U(\vr,\vr')    &=& V(\vr, \vv) \delta(\vr-\vr'), \\
- V(\vr, \vv)    & =&
+  U(\mathbf{r},\mathbf{r}')    &=& V(\mathbf{r}, \mathbf{v}) \delta(\mathbf{r}-\mathbf{r}'), \\
+ V(\mathbf{r}, \mathbf{v})    & =&
    \underbrace{V_{\rm C}(r) + V_{\rm T}(r) S_{12}}_{\rm LO} 
-  + \underbrace{V_{\rm LS}(r) {\vL} \cdot {\vS}}_{\rm NLO}  
-  +\underbrace{{O}(\vv^2)}_{{\rm N}^2{\rm LO}}
+  + \underbrace{V_{\rm LS}(r) {\mathbf{L}} \cdot {\mathbf{S}}}_{\rm NLO}  
+  +\underbrace{{O}(\mathbf{v}^2)}_{{\rm N}^2{\rm LO}}
   + \cdots , 
    \label{eq:V-pot}
 \end{eqnarray} 
-   where $\vv = \vp/(M_{\rm B}/2) $, $\vL = \vr \times \vp $, 
-   $\vp = -i \nabla$ and 
-   $S_{12}=3(\vsigma_1 \cdot \vr)(\vsigma_2 \cdot \vr)/r^2 - \vsigma_1 \cdot \vsigma_2$.
+   where $\mathbf{v} = \mathbf{p}/(M_{\rm B}/2) $, $\mathbf{L} = \mathbf{r} \times \mathbf{p} $, 
+   $\mathbf{p} = -i \nabla$ and 
+   $S_{12}=3(\mathbf{\sigma}_1 \cdot \mathbf{r})(\mathbf{\sigma}_2 \cdot \mathbf{r})/r^2 - \mathbf{\sigma}_1 \cdot \mathbf{\sigma}_2$.
      The central potential $V_{\rm C}$ and 
   the tensor potential $V_{\rm T}$ are classified as
   the leading order (LO) potentials since they
-  are of $O(\vv^0)$. The next-to-leading (NLO) potential of  
-  $O(\vv)$ is the spin-orbit potential  $V_{\rm LS}(r)$. 
+  are of $O(\mathbf{v}^0)$. The next-to-leading (NLO) potential of  
+  $O(\mathbf{v})$ is the spin-orbit potential  $V_{\rm LS}(r)$. 
 
 %=============================================
 \subsection{Baryon-baryon interaction in flavor SU(3) limit}
@@ -1799,17 +1762,17 @@ This work was supported in part by MEXT SPIRE and JICFuS and also by RIKEN iTHES
 In the (3+1)-dimensional  Minkowski spacetime, coordinates, derivatives 
 and four vectors with $\mu=0,1,2,3$ are
 \beq
-x^{\mu} = (t, \vx),
+x^{\mu} = (t, \mathbf{x}),
 \ \ \partial^{\mu}   =  (\partial_t, -\nabla),
-\ \  A^{\mu} =(A^0, \vA).
+\ \  A^{\mu} =(A^0, \mathbf{A}).
 \label{eq:B.vector-M}
 \eeq
 In the 4-dimensional Euclidean space, 
  we define the corresponding vectors  for $\mu=4,1,2,3$ as
  \beq
-(x_{\mu})^{\rm E} = (\tau=it, \vx),
+(x_{\mu})^{\rm E} = (\tau=it, \mathbf{x}),
 \ \ (\partial_{\mu})^{\rm E}   =  (\partial_\tau = -i \partial_{t}, \nabla),
-\ \  (A_{\mu})^{\rm E}  =(A_4=iA^0,\vA).
+\ \  (A_{\mu})^{\rm E}  =(A_4=iA^0,\mathbf{A}).
 \label{eq:B.vector-E}
 \eeq
 
@@ -1869,7 +1832,7 @@ In the 4-dimensional Euclidean space  with the metric
   the Euclidean Dirac matrices as
  \beq
   \Gamma_{\mu}  \equiv
- \left(\gamma_4= \gamma^0, -i \vgamma \right),  
+ \left(\gamma_4= \gamma^0, -i \mathbf{\gamma} \right),  
  \ \ \Gamma_{-\mu} \equiv  - \Gamma_{\mu}, 
   \ \ {\rm and}   \ \ \Gamma_5 \equiv \gamma^5,
   \eeq
@@ -2058,7 +2021,7 @@ where  $h$ stands for an integration of the known function $c(\bar{t},\bar{x})$ 
 characteristic curve.  Eq.(\ref{eq:MCA-6}) implies  that the desired function at $(t,x)$ is obtained 
 essential by a "pullback" of the point to $(t_{\rm i},x_{\rm i})$ along the characteristic curve. 
 It is a straightforward exercise  to generalize the above derivation to the system with more coordinates,
-$(t, \vx)$.  
+$(t, \mathbf{x})$.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsubsection*{\center{Leapfrog integrator in molecular dynamics}}
