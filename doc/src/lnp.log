@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,8 +990,8 @@ Writing index file lnp.idx
 LaTeX Warning: Unused global option(s):
     [sectrefs].
 
-(./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
-(./chapter4.aux
+(./lnp.aux (./contributors.aux) (./preface.aux) (./chapter1.aux)
+(./chapter2.aux) (./chapter3.aux) (./chapter4.aux
 
 LaTeX Warning: Label `eq:L-mag' multiply defined.
 
@@ -1129,57 +1129,57 @@ Non-PDF special ignored!
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package mathptmx Warning: There are no bold math fonts on input line 204.
+Package mathptmx Warning: There are no bold math fonts on input line 205.
 
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 14.3999pt on input line 204.
+(Font)              scaled to size 14.3999pt on input line 205.
 
 Package hyperref Warning: bookmark level for unknown title defaults to 0.
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 7.64995pt on input line 204.
+(Font)              scaled to size 7.64995pt on input line 205.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 20
-4.
+5.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 20
-4.
+5.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 20
-4.
+5.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 20
-4.
+5.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 204.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 205.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
-LaTeX Font Info:    Try loading font information for U+esvect on input line 204
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 205
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 204
+LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 205
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd)
@@ -1190,176 +1190,183 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 
 ]
-\openout2 = `preface.aux'.
+\openout2 = `contributors.aux'.
 
- (./preface.tex [6
+ (./contributors.tex [6
 
 
 
 
 ]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 14.3999pt on input line 2.
-) [7] [8
+(Font)              scaled to size 14.3999pt on input line 9.
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 11.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 11.
+ [7]) [8]
+\openout2 = `preface.aux'.
+
+
+(./preface.tex) [9
+
+
+
+
+
+] [10
 
 
 
 ] (./lnp.toc
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
- [9]
-Overfull \hbox (3.22194pt too wide) detected at line 94
- []\T1/fve/m/n/10 101
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 95
- []\T1/fve/m/n/10 101
- []
-
-
+ [11]
 Overfull \hbox (3.22194pt too wide) detected at line 96
  []\T1/fve/m/n/10 101
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 97
+ []\T1/fve/m/n/10 101
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 98
+ []\T1/fve/m/n/10 101
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 99
  []\T1/fve/m/n/10 102
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 101
+Overfull \hbox (3.22194pt too wide) detected at line 103
  []\T1/fve/m/n/10 104
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 106
+Overfull \hbox (3.22194pt too wide) detected at line 108
  []\T1/fve/m/n/10 108
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 107
+Overfull \hbox (3.22194pt too wide) detected at line 109
  []\T1/fve/m/n/10 108
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 112
+Overfull \hbox (3.22194pt too wide) detected at line 114
  []\T1/fve/m/n/10 112
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 113
+Overfull \hbox (3.22194pt too wide) detected at line 115
  []\T1/fve/m/n/10 113
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 115
+Overfull \hbox (3.22194pt too wide) detected at line 117
  []\T1/fve/m/n/10 115
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 121
+Overfull \hbox (3.22194pt too wide) detected at line 123
  []\T1/fve/m/n/10 117
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 122
+Overfull \hbox (3.22194pt too wide) detected at line 124
  []\T1/fve/m/n/10 119
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 123
+Overfull \hbox (3.22194pt too wide) detected at line 125
  []\T1/fve/m/n/10 119
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 126
+Overfull \hbox (3.22194pt too wide) detected at line 128
  []\T1/fve/m/n/10 123
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 132
+Overfull \hbox (3.22194pt too wide) detected at line 134
  []\T1/fve/m/n/10 133
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 133
+Overfull \hbox (3.22194pt too wide) detected at line 135
  []\T1/fve/m/n/10 134
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 136
+Overfull \hbox (3.22194pt too wide) detected at line 138
  []\T1/fve/m/n/10 140
  []
 
-[10]
-Overfull \hbox (3.22194pt too wide) detected at line 137
+[12]
+Overfull \hbox (3.22194pt too wide) detected at line 139
  []\T1/fve/m/n/10 144
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 139
+Overfull \hbox (3.22194pt too wide) detected at line 141
  []\T1/fve/m/n/10 148
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 140
- []\T1/fve/m/n/10 151
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 141
- []\T1/fve/m/n/10 151
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 142
+ []\T1/fve/m/n/10 151
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 143
+ []\T1/fve/m/n/10 151
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 144
  []\T1/fve/m/n/10 154
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 145
+Overfull \hbox (3.22194pt too wide) detected at line 147
  []\T1/fve/m/n/10 159
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 146
+Overfull \hbox (3.22194pt too wide) detected at line 148
  []\T1/fve/m/n/10 162
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 147
+Overfull \hbox (3.22194pt too wide) detected at line 149
  []\T1/fve/m/n/10 163
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 148
+Overfull \hbox (3.22194pt too wide) detected at line 150
  []\T1/fve/m/n/10 165
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 149
+Overfull \hbox (3.22194pt too wide) detected at line 151
  []\T1/fve/m/n/10 168
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 150
+Overfull \hbox (3.22194pt too wide) detected at line 152
  []\T1/fve/m/n/10 170
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 151
- []\T1/fve/m/n/10 173
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 152
- []\T1/fve/m/n/10 174
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 153
- []\T1/fve/m/n/10 174
+ []\T1/fve/m/n/10 173
  []
 
 
@@ -1369,516 +1376,516 @@ Overfull \hbox (3.22194pt too wide) detected at line 154
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 155
- []\T1/fve/m/n/10 175
+ []\T1/fve/m/n/10 174
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 156
+ []\T1/fve/m/n/10 174
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 157
  []\T1/fve/m/n/10 175
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 162
- []\T1/fve/m/n/10 177
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 163
- []\T1/fve/m/n/10 178
+Overfull \hbox (3.22194pt too wide) detected at line 158
+ []\T1/fve/m/n/10 175
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 164
- []\T1/fve/m/n/10 180
+ []\T1/fve/m/n/10 177
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 165
- []\T1/fve/m/n/10 180
+ []\T1/fve/m/n/10 178
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 166
- []\T1/fve/m/n/10 182
+ []\T1/fve/m/n/10 180
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 167
- []\T1/fve/m/n/10 182
+ []\T1/fve/m/n/10 180
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 168
- []\T1/fve/m/n/10 185
+ []\T1/fve/m/n/10 182
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 169
- []\T1/fve/m/n/10 185
+ []\T1/fve/m/n/10 182
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 170
- []\T1/fve/m/n/10 186
+ []\T1/fve/m/n/10 185
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 171
- []\T1/fve/m/n/10 191
+ []\T1/fve/m/n/10 185
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 172
+ []\T1/fve/m/n/10 186
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 173
+ []\T1/fve/m/n/10 191
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 174
  []\T1/fve/m/n/10 192
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 178
+Overfull \hbox (3.22194pt too wide) detected at line 180
  []\T1/fve/m/n/10 195
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 179
+Overfull \hbox (3.22194pt too wide) detected at line 181
  []\T1/fve/m/n/10 196
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 180
+Overfull \hbox (3.22194pt too wide) detected at line 182
  []\T1/fve/m/n/10 197
  []
 
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 181.
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 183.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 181.
+(Font)              scaled to size 8.99994pt on input line 183.
 
-Overfull \hbox (3.22194pt too wide) detected at line 181
+Overfull \hbox (3.22194pt too wide) detected at line 183
  []\T1/fve/m/n/10 197
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 182
- []\T1/fve/m/n/10 198
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 183
+Overfull \hbox (3.22194pt too wide) detected at line 184
  []\T1/fve/m/n/10 198
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 185
- []\T1/fve/m/n/10 201
+ []\T1/fve/m/n/10 198
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 187
- []\T1/fve/m/n/10 202
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 188
- []\T1/fve/m/n/10 203
+ []\T1/fve/m/n/10 201
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 189
- []\T1/fve/m/n/10 204
+ []\T1/fve/m/n/10 202
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 190
- []\T1/fve/m/n/10 205
+ []\T1/fve/m/n/10 203
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 191
- []\T1/fve/m/n/10 206
+ []\T1/fve/m/n/10 204
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 192
- []\T1/fve/m/n/10 206
+ []\T1/fve/m/n/10 205
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 193
- []\T1/fve/m/n/10 209
+ []\T1/fve/m/n/10 206
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 194
- []\T1/fve/m/n/10 209
+ []\T1/fve/m/n/10 206
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 195
- []\T1/fve/m/n/10 210
+ []\T1/fve/m/n/10 209
  []
 
-[11]
+
 Overfull \hbox (3.22194pt too wide) detected at line 196
- []\T1/fve/m/n/10 211
+ []\T1/fve/m/n/10 209
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 197
- []\T1/fve/m/n/10 213
+ []\T1/fve/m/n/10 210
  []
 
-
+[13]
 Overfull \hbox (3.22194pt too wide) detected at line 198
- []\T1/fve/m/n/10 213
+ []\T1/fve/m/n/10 211
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 199
- []\T1/fve/m/n/10 214
+ []\T1/fve/m/n/10 213
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 200
- []\T1/fve/m/n/10 216
+ []\T1/fve/m/n/10 213
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 201
+ []\T1/fve/m/n/10 214
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 202
  []\T1/fve/m/n/10 216
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 207
- []\T1/fve/m/n/10 219
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 208
- []\T1/fve/m/n/10 221
+Overfull \hbox (3.22194pt too wide) detected at line 203
+ []\T1/fve/m/n/10 216
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 209
- []\T1/fve/m/n/10 221
+ []\T1/fve/m/n/10 219
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 210
- []\T1/fve/m/n/10 226
+ []\T1/fve/m/n/10 221
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 211
- []\T1/fve/m/n/10 228
+ []\T1/fve/m/n/10 221
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 212
- []\T1/fve/m/n/10 230
+ []\T1/fve/m/n/10 226
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 213
- []\T1/fve/m/n/10 234
+ []\T1/fve/m/n/10 228
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 214
- []\T1/fve/m/n/10 236
+ []\T1/fve/m/n/10 230
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 215
- []\T1/fve/m/n/10 239
+ []\T1/fve/m/n/10 234
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 216
- []\T1/fve/m/n/10 243
+ []\T1/fve/m/n/10 236
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 217
- []\T1/fve/m/n/10 244
+ []\T1/fve/m/n/10 239
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 218
- []\T1/fve/m/n/10 245
+ []\T1/fve/m/n/10 243
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 219
- []\T1/fve/m/n/10 250
+ []\T1/fve/m/n/10 244
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 220
- []\T1/fve/m/n/10 252
+ []\T1/fve/m/n/10 245
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 221
- []\T1/fve/m/n/10 252
+ []\T1/fve/m/n/10 250
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 222
- []\T1/fve/m/n/10 257
+ []\T1/fve/m/n/10 252
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 223
- []\T1/fve/m/n/10 258
+ []\T1/fve/m/n/10 252
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 224
- []\T1/fve/m/n/10 259
+ []\T1/fve/m/n/10 257
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 225
- []\T1/fve/m/n/10 260
+ []\T1/fve/m/n/10 258
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 226
- []\T1/fve/m/n/10 279
+ []\T1/fve/m/n/10 259
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 227
- []\T1/fve/m/n/10 287
+ []\T1/fve/m/n/10 260
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 228
- []\T1/fve/m/n/10 288
+ []\T1/fve/m/n/10 279
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 229
- []\T1/fve/m/n/10 294
+ []\T1/fve/m/n/10 287
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 230
- []\T1/fve/m/n/10 297
+ []\T1/fve/m/n/10 288
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 231
+ []\T1/fve/m/n/10 294
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 232
+ []\T1/fve/m/n/10 297
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 233
  []\T1/fve/m/n/10 301
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 237
- []\T1/fve/m/n/10 303
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 238
- []\T1/fve/m/n/10 303
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 239
- []\T1/fve/m/n/10 305
+ []\T1/fve/m/n/10 303
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 240
- []\T1/fve/m/n/10 305
+ []\T1/fve/m/n/10 303
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 241
- []\T1/fve/m/n/10 306
+ []\T1/fve/m/n/10 305
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 242
- []\T1/fve/m/n/10 307
+ []\T1/fve/m/n/10 305
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 243
+ []\T1/fve/m/n/10 306
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 244
+ []\T1/fve/m/n/10 307
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 246
  []\T1/fve/m/n/10 313
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 245
+Overfull \hbox (3.22194pt too wide) detected at line 247
  []\T1/fve/m/n/10 316
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 248
- []\T1/fve/m/n/10 319
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 249
- []\T1/fve/m/n/10 319
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 250
- []\T1/fve/m/n/10 320
+ []\T1/fve/m/n/10 319
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 251
- []\T1/fve/m/n/10 324
+ []\T1/fve/m/n/10 319
  []
 
-[12]
+
 Overfull \hbox (3.22194pt too wide) detected at line 252
- []\T1/fve/m/n/10 326
+ []\T1/fve/m/n/10 320
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 253
- []\T1/fve/m/n/10 330
+ []\T1/fve/m/n/10 324
+ []
+
+[14]
+Overfull \hbox (3.22194pt too wide) detected at line 254
+ []\T1/fve/m/n/10 326
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 255
- []\T1/fve/m/n/10 332
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 256
- []\T1/fve/m/n/10 332
+ []\T1/fve/m/n/10 330
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 257
+ []\T1/fve/m/n/10 332
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 258
+ []\T1/fve/m/n/10 332
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 259
  []\T1/fve/m/n/10 333
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 261
+Overfull \hbox (3.22194pt too wide) detected at line 263
  []\T1/fve/m/n/10 336
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 264
+Overfull \hbox (3.22194pt too wide) detected at line 266
  []\T1/fve/m/n/10 338
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 265
+Overfull \hbox (3.22194pt too wide) detected at line 267
  []\T1/fve/m/n/10 339
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 266
+Overfull \hbox (3.22194pt too wide) detected at line 268
  []\T1/fve/m/n/10 340
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 267
+Overfull \hbox (3.22194pt too wide) detected at line 269
  []\T1/fve/m/n/10 341
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 271
+Overfull \hbox (3.22194pt too wide) detected at line 273
  []\T1/fve/m/n/10 343
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 272
+Overfull \hbox (3.22194pt too wide) detected at line 274
  []\T1/fve/m/n/10 344
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 273
+Overfull \hbox (3.22194pt too wide) detected at line 275
  []\T1/fve/m/n/10 345
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 274
+Overfull \hbox (3.22194pt too wide) detected at line 276
  []\T1/fve/m/n/10 346
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 275
+Overfull \hbox (3.22194pt too wide) detected at line 277
  []\T1/fve/m/n/10 348
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 276
+Overfull \hbox (3.22194pt too wide) detected at line 278
  []\T1/fve/m/n/10 350
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 277
+Overfull \hbox (3.22194pt too wide) detected at line 279
  []\T1/fve/m/n/10 351
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 278
+Overfull \hbox (3.22194pt too wide) detected at line 280
  []\T1/fve/m/n/10 355
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 279
- []\T1/fve/m/n/10 357
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 280
- []\T1/fve/m/n/10 357
- []
-
-
 Overfull \hbox (3.22194pt too wide) detected at line 281
- []\T1/fve/m/n/10 358
+ []\T1/fve/m/n/10 357
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 282
+ []\T1/fve/m/n/10 357
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 283
+ []\T1/fve/m/n/10 358
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 284
  []\T1/fve/m/n/10 360
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 288
+Overfull \hbox (3.22194pt too wide) detected at line 290
  []\T1/fve/m/n/10 361
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 289
+Overfull \hbox (3.22194pt too wide) detected at line 291
  []\T1/fve/m/n/10 362
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 290
+Overfull \hbox (3.22194pt too wide) detected at line 292
  []\T1/fve/m/n/10 363
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 291
+Overfull \hbox (3.22194pt too wide) detected at line 293
  []\T1/fve/m/n/10 366
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 292
+Overfull \hbox (3.22194pt too wide) detected at line 294
  []\T1/fve/m/n/10 369
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 293
+Overfull \hbox (3.22194pt too wide) detected at line 295
  []\T1/fve/m/n/10 370
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 296
- []\T1/fve/m/n/10 372
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 297
- []\T1/fve/m/n/10 372
  []
 
 
@@ -1887,87 +1894,97 @@ Overfull \hbox (3.22194pt too wide) detected at line 298
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 304
- []\T1/fve/m/n/10 373
+Overfull \hbox (3.22194pt too wide) detected at line 299
+ []\T1/fve/m/n/10 372
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 305
- []\T1/fve/m/n/10 374
+Overfull \hbox (3.22194pt too wide) detected at line 300
+ []\T1/fve/m/n/10 372
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 306
- []\T1/fve/m/n/10 376
+ []\T1/fve/m/n/10 373
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 307
- []\T1/fve/m/n/10 377
+ []\T1/fve/m/n/10 374
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 308
- []\T1/fve/m/n/10 380
+ []\T1/fve/m/n/10 376
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 309
- []\T1/fve/m/n/10 383
+ []\T1/fve/m/n/10 377
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 310
- []\T1/fve/m/n/10 386
+ []\T1/fve/m/n/10 380
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 311
- []\T1/fve/m/n/10 388
+ []\T1/fve/m/n/10 383
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 312
- []\T1/fve/m/n/10 389
+ []\T1/fve/m/n/10 386
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 313
- []\T1/fve/m/n/10 392
+ []\T1/fve/m/n/10 388
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 314
- []\T1/fve/m/n/10 396
+ []\T1/fve/m/n/10 389
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 315
- []\T1/fve/m/n/10 399
+ []\T1/fve/m/n/10 392
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 316
- []\T1/fve/m/n/10 399
+ []\T1/fve/m/n/10 396
  []
 
-[13]
+
 Overfull \hbox (3.22194pt too wide) detected at line 317
- []\T1/fve/m/n/10 403
+ []\T1/fve/m/n/10 399
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 318
+ []\T1/fve/m/n/10 399
+ []
+
+[15]
+Overfull \hbox (3.22194pt too wide) detected at line 319
  []\T1/fve/m/n/10 403
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 319
+Overfull \hbox (3.22194pt too wide) detected at line 320
+ []\T1/fve/m/n/10 403
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 321
  []\T1/fve/m/n/10 407
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 320
+Overfull \hbox (3.22194pt too wide) detected at line 322
  []\T1/fve/m/n/10 408
  []
 
@@ -1975,7 +1992,7 @@ Overfull \hbox (3.22194pt too wide) detected at line 320
 \tf@toc=\write6
 \openout6 = `lnp.toc'.
 
- [14]
+ [16]
 \openout2 = `chapter1.aux'.
 
  (./chapter1.tex
@@ -1995,13 +2012,8 @@ LaTeX Font Warning: Font shape `U/esvect/m/n' in size <8.5> not available
 LaTeX Font Warning: Font shape `OMS/rsfs/m/n' in size <8.5> not available
 (Font)              size <8> substituted on input line 5.
 
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 5.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 5.
-
 
 Package hyperref Warning: bookmark level for unknown titlech defaults to 0.
 
@@ -2016,8 +2028,6 @@ Package hyperref Warning: bookmark level for unknown authorch defaults to 0.
 
 
 ]
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 95.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 98.
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <8.5> not available
@@ -2044,7 +2054,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 ] [4]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 193.
- [5] <Chapter2-figures/config1.pdf, id=1316, 478.78876pt x 412.54124pt>
+ [5] <Chapter2-figures/config1.pdf, id=1349, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
@@ -2056,7 +2066,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 349.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 349.
- [8] <Chapter2-figures/qcd_ms_high.pdf, id=1383, 588.1975pt x 534.99875pt>
+ [8] <Chapter2-figures/qcd_ms_high.pdf, id=1417, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
@@ -2073,7 +2083,7 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 828.
  [15]
-<Chapter2-figures/topology.pdf, id=1540, 361.35pt x 252.945pt>
+<Chapter2-figures/topology.pdf, id=1574, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
@@ -2086,7 +2096,7 @@ Overfull \hbox (2.46152pt too wide) in paragraph at lines 1367--1375
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-<Chapter2-figures/hic_evol_schem.pdf, id=1668, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1702, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
@@ -2109,7 +2119,7 @@ arz_eta_w_txt-eps-converted-to.pdf Chapter2-figures/AdS5_Schwarz_eta_w_txt.eps>
 (epstopdf)             \includegraphics on input line 2208.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1915, 459.717
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1949, 459.717
 5pt x 287.0725pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2132,7 +2142,7 @@ btr_txt.eps>
 (epstopdf)             \includegraphics on input line 2209.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1917, 4
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1951, 4
 59.7175pt x 262.9825pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2153,7 +2163,7 @@ File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
 LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2281.
 
-<Chapter2-figures/EnergyDensity.pdf, id=1983, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=2016, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
@@ -2197,7 +2207,7 @@ ne-eps-converted-to.pdf Chapter3-figures/wilson-line.eps>
 (epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2292, 325.215pt x 208.78
+<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2326, 325.215pt x 208.78
 pt>
 File: Chapter3-figures/wilson-line-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2224,7 +2234,7 @@ converted-to.pdf Chapter3-figures/cube.eps>
 (epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/cube-eps-converted-to.pdf, id=2304, 414.54875pt x 229.85875pt
+<Chapter3-figures/cube-eps-converted-to.pdf, id=2338, 414.54875pt x 229.85875pt
 >
 File: Chapter3-figures/cube-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/cube-eps-converted-to.pdf>
@@ -2244,7 +2254,7 @@ n-eps-converted-to.pdf Chapter3-figures/dispersion.eps>
 (epstopdf)             \includegraphics on input line 382.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2340, 332.24126pt x 206.7
+<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2373, 332.24126pt x 206.7
 725pt>
 File: Chapter3-figures/dispersion-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/dispersion-eps-converted-to.pdf>
@@ -2264,7 +2274,7 @@ ons-eps-converted-to.pdf Chapter3-figures/correlations.eps>
 (epstopdf)             \includegraphics on input line 568.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/correlations-eps-converted-to.pdf, id=2393, 1370.11874pt x 45
+<Chapter3-figures/correlations-eps-converted-to.pdf, id=2428, 1370.11874pt x 45
 3.695pt>
 File: Chapter3-figures/correlations-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -2284,7 +2294,7 @@ eps-converted-to.pdf Chapter3-figures/wilson-L.eps>
 (epstopdf)             \includegraphics on input line 589.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2394, 155.58125pt x 229.858
+<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2429, 155.58125pt x 229.858
 75pt>
 File: Chapter3-figures/wilson-L-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/wilson-L-eps-converted-to.pdf>
@@ -2304,7 +2314,7 @@ eps-converted-to.pdf Chapter3-figures/strong-c.eps>
 (epstopdf)             \includegraphics on input line 666.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2417, 171.64125pt x 171.641
+<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2451, 171.64125pt x 171.641
 25pt>
 File: Chapter3-figures/strong-c-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/strong-c-eps-converted-to.pdf>
@@ -2325,7 +2335,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 792.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/crossover-eps-converted-to.pdf, id=2441, 597.23125pt x 845.15
+<Chapter3-figures/crossover-eps-converted-to.pdf, id=2474, 597.23125pt x 845.15
 75pt>
 File: Chapter3-figures/crossover-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/crossover-eps-converted-to.pdf>
@@ -2345,7 +2355,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 861.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/running-g-eps-converted-to.pdf, id=2469, 578.16pt x 374.39874
+<Chapter3-figures/running-g-eps-converted-to.pdf, id=2502, 578.16pt x 374.39874
 pt>
 File: Chapter3-figures/running-g-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/running-g-eps-converted-to.pdf>
@@ -2374,7 +2384,7 @@ converted-to.pdf Chapter3-figures/auto.eps>
 (epstopdf)             \includegraphics on input line 1060.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/auto-eps-converted-to.pdf, id=2549, 974.64125pt x 406.51875pt
+<Chapter3-figures/auto-eps-converted-to.pdf, id=2583, 974.64125pt x 406.51875pt
 >
 File: Chapter3-figures/auto-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/auto-eps-converted-to.pdf>
@@ -2404,7 +2414,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1303.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2606, 475.7775pt x 394.473
+<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2639, 475.7775pt x 394.473
 75pt>
 File: Chapter3-figures/QQbar-pot-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/QQbar-pot-eps-converted-to.pdf>
@@ -2424,7 +2434,7 @@ ted-to.pdf>
 (epstopdf)             \includegraphics on input line 1378.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2627, 674.52pt x 477.
+<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2661, 674.52pt x 477.
 785pt>
 File: Chapter3-figures/effective-mass-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2444,7 +2454,7 @@ g-eps-converted-to.pdf Chapter3-figures/NO_scaling.eps>
 (epstopdf)             \includegraphics on input line 1379.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2628, 758.835pt x 509.905
+<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2662, 758.835pt x 509.905
 pt>
 File: Chapter3-figures/NO_scaling-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/NO_scaling-eps-converted-to.pdf>
@@ -2463,7 +2473,7 @@ ps-converted-to.pdf Chapter3-figures/pn-mass.eps>
 (epstopdf)             \includegraphics on input line 1408.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2633, 1165.35374pt x 731.733
+<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2667, 1165.35374pt x 731.733
 75pt>
 File: Chapter3-figures/pn-mass-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/pn-mass-eps-converted-to.pdf>
@@ -2485,7 +2495,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 1564.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2715, 361.35pt x 252.945p
+<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2748, 361.35pt x 252.945p
 t>
 File: Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf>
@@ -2504,7 +2514,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vc_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1565.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2716, 361.35pt x 252.945
+<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2749, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2524,7 +2534,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1566.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2717, 361.35pt x 252.945pt
+<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2750, 361.35pt x 252.945pt
 >
 File: Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf>
@@ -2543,7 +2553,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vt_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1567.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2718, 361.35pt x 252.945
+<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2751, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2566,7 +2576,7 @@ ft-eps-converted-to.pdf Chapter3-figures/phase-shift.eps>
 (epstopdf)             \includegraphics on input line 1607.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2788, 882.29625pt x 646.
+<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2822, 882.29625pt x 646.
 415pt>
 File: Chapter3-figures/phase-shift-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2586,7 +2596,7 @@ atter-eps-converted-to.pdf Chapter3-figures/neutron-matter.eps>
 (epstopdf)             \includegraphics on input line 1608.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2789, 592.2125pt x 71
+<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2823, 592.2125pt x 71
 5.67375pt>
 File: Chapter3-figures/neutron-matter-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2608,7 +2618,7 @@ s-converted-to.pdf Chapter3-figures/char-c.eps>
 (epstopdf)             \includegraphics on input line 2008.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/char-c-eps-converted-to.pdf, id=2875, 479.7925pt x 345.29pt>
+<Chapter3-figures/char-c-eps-converted-to.pdf, id=2910, 479.7925pt x 345.29pt>
 File: Chapter3-figures/char-c-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter3-figures/char-c-eps-converted-to.pdf>
@@ -2628,7 +2638,7 @@ eps-converted-to.pdf Chapter3-figures/leapfrog.eps>
 (epstopdf)             \includegraphics on input line 2065.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2896, 934.49126pt x 307.147
+<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2930, 934.49126pt x 307.147
 5pt>
 File: Chapter3-figures/leapfrog-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/leapfrog-eps-converted-to.pdf>
@@ -2646,7 +2656,7 @@ Package pdftex.def Info: Chapter3-figures/leapfrog-eps-converted-to.pdf used on
 
 
 ]
-<Chapter4-figures/BosonContact-2body-simple.pdf, id=2943, 224.84pt x 58.2175pt>
+<Chapter4-figures/BosonContact-2body-simple.pdf, id=2976, 224.84pt x 58.2175pt>
 File: Chapter4-figures/BosonContact-2body-simple.pdf Graphic file (type pdf)
 <use Chapter4-figures/BosonContact-2body-simple.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
@@ -2656,7 +2666,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 506.
  [74]
-<Chapter4-figures/BosonContact-2body.pdf, id=3005, 249.93375pt x 62.2325pt>
+<Chapter4-figures/BosonContact-2body.pdf, id=3038, 249.93375pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-2body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-2body.pdf>
@@ -2664,7 +2674,7 @@ Package pdftex.def Info: Chapter4-figures/BosonContact-2body.pdf used on input
 line 520.
 (pdftex.def)             Requested size: 318.43968pt x 79.29837pt.
  [75 <./Chapter4-figures/BosonContact-2body.pdf>]
-<Chapter4-figures/BosonContact-3body.pdf, id=3046, 334.24875pt x 62.2325pt>
+<Chapter4-figures/BosonContact-3body.pdf, id=3079, 334.24875pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-3body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-3body.pdf>
@@ -2682,7 +2692,7 @@ Missing character: There is no ã in font zptmcm7t!
 Missing character: There is no € in font zptmcm7t!
 Missing character: There is no € in font zptmcm7t!
  [87] [88]
-[89] <Chapter4-figures/fig_2bdypert.pdf, id=3276, 482.80376pt x 59.22125pt>
+[89] <Chapter4-figures/fig_2bdypert.pdf, id=3309, 482.80376pt x 59.22125pt>
 File: Chapter4-figures/fig_2bdypert.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_2bdypert.pdf>
@@ -2696,7 +2706,7 @@ Package pdftex.def Info: Chapter4-figures/fig_2bdypert.pdf used on input line 1
                                                   \fi \fi 
 l.1827 \end{equation}
                       <./Chapter4-figures/fig_2bdypert.pdf>] [91]
-<Chapter4-figures/fig_feynC0int.pdf, id=3337, 275.0275pt x 59.22125pt>
+<Chapter4-figures/fig_feynC0int.pdf, id=3372, 275.0275pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC0int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC0int.pdf>
@@ -2704,7 +2714,7 @@ Package pdftex.def Info: Chapter4-figures/fig_feynC0int.pdf used on input line
 1937.
 (pdftex.def)             Requested size: 184.9429pt x 39.8244pt.
 
-<Chapter4-figures/fig_feynC2int.pdf, id=3347, 470.75874pt x 59.22125pt>
+<Chapter4-figures/fig_feynC2int.pdf, id=3382, 470.75874pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC2int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC2int.pdf>
@@ -2713,7 +2723,7 @@ Package pdftex.def Info: Chapter4-figures/fig_feynC2int.pdf used on input line
 (pdftex.def)             Requested size: 341.43306pt x 42.9519pt.
  [92 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.p
 df>]
-<Chapter4-figures/fig_feynDimer.pdf, id=3400, 460.72125pt x 88.33pt>
+<Chapter4-figures/fig_feynDimer.pdf, id=3433, 460.72125pt x 88.33pt>
 File: Chapter4-figures/fig_feynDimer.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynDimer.pdf>
@@ -2726,7 +2736,7 @@ Overfull \hbox (13.88416pt too wide) in paragraph at lines 2157--2163
 ell-known Skorniakov-Ter-Martirosian
  []
 
-[94] <Chapter4-figures/fig_feyn8c.pdf, id=3458, 359.3425pt x 151.56625pt>
+[94] <Chapter4-figures/fig_feyn8c.pdf, id=3492, 359.3425pt x 151.56625pt>
 File: Chapter4-figures/fig_feyn8c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn8c.pdf>
@@ -2734,7 +2744,7 @@ Package pdftex.def Info: Chapter4-figures/fig_feyn8c.pdf used on input line 217
 9.
 (pdftex.def)             Requested size: 256.0748pt x 108.0175pt.
  [95 <./Chapter4-figures/fig_feyn8c.pdf>]
-[96] <Chapter4-figures/fig_feyn9c.pdf, id=3509, 432.61626pt x 61.22874pt>
+[96] <Chapter4-figures/fig_feyn9c.pdf, id=3543, 432.61626pt x 61.22874pt>
 File: Chapter4-figures/fig_feyn9c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn9c.pdf>
@@ -2742,7 +2752,7 @@ Package pdftex.def Info: Chapter4-figures/fig_feyn9c.pdf used on input line 238
 3.
 (pdftex.def)             Requested size: 312.9803pt x 44.29858pt.
  [97 <./Chapter4-figures/fig_feyn9c.pdf>]
-[98] [99] <Chapter4-figures/B3LecNote.pdf, id=3588, 522.95375pt x 368.37625pt>
+[98] [99] <Chapter4-figures/B3LecNote.pdf, id=3622, 522.95375pt x 368.37625pt>
 File: Chapter4-figures/B3LecNote.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/B3LecNote.pdf>
@@ -2750,7 +2760,7 @@ Package pdftex.def Info: Chapter4-figures/B3LecNote.pdf used on input line 2648
 .
 (pdftex.def)             Requested size: 227.62204pt x 160.34354pt.
  [100 <./Chapter4-figures/B3LecNote.pdf>]
-[101] <Chapter4-figures/C0-Vertex.pdf, id=3630, 72.27pt x 58.2175pt>
+[101] <Chapter4-figures/C0-Vertex.pdf, id=3663, 72.27pt x 58.2175pt>
 File: Chapter4-figures/C0-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/C0-Vertex.pdf>
@@ -2758,7 +2768,7 @@ Package pdftex.def Info: Chapter4-figures/C0-Vertex.pdf used on input line 2809
 .
 (pdftex.def)             Requested size: 58.4996pt x 47.1248pt.
  [102 <./Chapter4-figures/C0-Vertex.pdf>]
-[103] <Chapter4-figures/nd-IntEq-Q.pdf, id=3670, 189.70876pt x 34.1275pt>
+[103] <Chapter4-figures/nd-IntEq-Q.pdf, id=3704, 189.70876pt x 34.1275pt>
 File: Chapter4-figures/nd-IntEq-Q.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-Q.pdf>
@@ -2766,7 +2776,7 @@ Package pdftex.def Info: Chapter4-figures/nd-IntEq-Q.pdf used on input line 300
 8.
 (pdftex.def)             Requested size: 212.29312pt x 38.19127pt.
  [104] [105 <./Chapter4-figures/nd-IntEq-Q.pdf>] <Chapter4-figures/nd-IntEq-D.p
-df, id=3712, 283.0575pt x 80.3pt>
+df, id=3746, 283.0575pt x 80.3pt>
 File: Chapter4-figures/nd-IntEq-D.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-D.pdf>
@@ -2774,7 +2784,7 @@ Package pdftex.def Info: Chapter4-figures/nd-IntEq-D.pdf used on input line 309
 9.
 (pdftex.def)             Requested size: 275.97845pt x 78.29768pt.
  [106 <./Chapter4-figures/nd-IntEq-D.pdf>] [107] <Chapter4-figures/Phillips.pdf
-, id=3763, 392.46625pt x 279.0425pt>
+, id=3796, 392.46625pt x 279.0425pt>
 File: Chapter4-figures/Phillips.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Phillips.pdf>
@@ -2782,7 +2792,7 @@ Package pdftex.def Info: Chapter4-figures/Phillips.pdf used on input line 3253.
 
 (pdftex.def)             Requested size: 275.97845pt x 196.23106pt.
  [108 <./Chapter4-figures/Phillips.pdf>]
-<Chapter4-figures/Photon-Vertex-0.pdf, id=3791, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-0.pdf, id=3825, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-0.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-0.pdf>
@@ -2795,7 +2805,7 @@ Overfull \hbox (8.99994pt too wide) in paragraph at lines 3387--3387
  []
 
 [109 <./Chapter4-figures/Photon-Vertex-0.pdf>]
-<Chapter4-figures/OnePhotonExchange.pdf, id=3820, 30.1125pt x 29.10875pt>
+<Chapter4-figures/OnePhotonExchange.pdf, id=3855, 30.1125pt x 29.10875pt>
 File: Chapter4-figures/OnePhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/OnePhotonExchange.pdf>
@@ -2803,7 +2813,7 @@ Package pdftex.def Info: Chapter4-figures/OnePhotonExchange.pdf used on input l
 ine 3428.
 (pdftex.def)             Requested size: 47.4876pt x 45.89969pt.
 
-<Chapter4-figures/TwoPhotonExchange.pdf, id=3822, 50.1875pt x 29.10875pt>
+<Chapter4-figures/TwoPhotonExchange.pdf, id=3857, 50.1875pt x 29.10875pt>
 File: Chapter4-figures/TwoPhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/TwoPhotonExchange.pdf>
@@ -2811,7 +2821,7 @@ Package pdftex.def Info: Chapter4-figures/TwoPhotonExchange.pdf used on input l
 ine 3434.
 (pdftex.def)             Requested size: 79.14603pt x 45.89969pt.
 
-<Chapter4-figures/SinglePhotonBubble.pdf, id=3824, 78.2925pt x 34.1275pt>
+<Chapter4-figures/SinglePhotonBubble.pdf, id=3859, 78.2925pt x 34.1275pt>
 File: Chapter4-figures/SinglePhotonBubble.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/SinglePhotonBubble.pdf>
@@ -2820,7 +2830,7 @@ line 3457.
 (pdftex.def)             Requested size: 106.14656pt x 46.27058pt.
  [110 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonE
 xchange.pdf> <./Chapter4-figures/SinglePhotonBubble.pdf>]
-<Chapter4-figures/Photon-Vertex-trans.pdf, id=3845, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-trans.pdf, id=3878, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-trans.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-trans.pdf>
@@ -2832,7 +2842,7 @@ Overfull \hbox (8.99994pt too wide) in paragraph at lines 3501--3501
 [][] 
  []
 
-<Chapter4-figures/Photon-Prop-gauge.pdf, id=3849, 75.28125pt x 22.0825pt>
+<Chapter4-figures/Photon-Prop-gauge.pdf, id=3882, 75.28125pt x 22.0825pt>
 File: Chapter4-figures/Photon-Prop-gauge.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Prop-gauge.pdf>
@@ -2841,7 +2851,7 @@ ine 3519.
 (pdftex.def)             Requested size: 69.74953pt x 20.46169pt.
  [111 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-P
 rop-gauge.pdf>]
-<Chapter4-figures/Photon-Vertex-mag.pdf, id=3878, 84.315pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-mag.pdf, id=3911, 84.315pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-mag.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-mag.pdf>
@@ -2849,7 +2859,7 @@ Package pdftex.def Info: Chapter4-figures/Photon-Vertex-mag.pdf used on input l
 ine 3561.
 (pdftex.def)             Requested size: 71.99951pt x 46.28654pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3881, 176.66pt x 108.405pt>
+<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3914, 176.66pt x 108.405pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf>
@@ -2857,7 +2867,7 @@ Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf used on in
 put line 3587.
 (pdftex.def)             Requested size: 149.6064pt x 91.79938pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3883, 152.57pt x 103.38625pt>
+<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3916, 152.57pt x 103.38625pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf Graphic file (type pdf)
 <use Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf used on i
@@ -2869,7 +2879,7 @@ reakup-IA-kin-NNcm.pdf> <./Chapter4-figures/Photon-Vertex-mag.pdf>]
 LaTeX Warning: Reference `sec:Dibaryons' on page 113 undefined on input line 36
 34.
 
-<Chapter4-figures/Deuteron-Vertex.pdf, id=3930, 66.2475pt x 61.22874pt>
+<Chapter4-figures/Deuteron-Vertex.pdf, id=3964, 66.2475pt x 61.22874pt>
 File: Chapter4-figures/Deuteron-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Deuteron-Vertex.pdf>
@@ -3038,21 +3048,21 @@ LaTeX Warning: Citation `Doi:2011gq' on page 118 undefined on input line 37.
 LaTeX Warning: Citation `Epelbaum:2010nr' on page 118 undefined on input line 4
 5.
 
-[118] [119] <Chapter5-figures/al0.png, id=4042, 385.44pt x 300.12125pt>
+[118] [119] <Chapter5-figures/al0.png, id=4075, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
 Package pdftex.def Info: Chapter5-figures/al0.png used on input line 79.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
-<Chapter5-figures/ae0.png, id=4044, 387.4475pt x 302.12875pt>
+<Chapter5-figures/ae0.png, id=4077, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
 Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 80.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
-<Chapter5-figures/ag0.png, id=4045, 383.4325pt x 300.12125pt>
+<Chapter5-figures/ag0.png, id=4078, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
@@ -3067,21 +3077,21 @@ LaTeX Warning: Citation `AtomsReview2' on page 120 undefined on input line 86.
 
 [120 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
 res/ag0.png>] [121]
-<Chapter5-figures/simple1.png, id=4076, 788.9475pt x 95.35625pt>
+<Chapter5-figures/simple1.png, id=4110, 788.9475pt x 95.35625pt>
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
 Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 122.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
-<Chapter5-figures/loop1.png, id=4077, 893.3375pt x 191.71625pt>
+<Chapter5-figures/loop1.png, id=4111, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
 Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 128.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
-<Chapter5-figures/beta.pdf, id=4081, 481.8pt x 303.24593pt>
+<Chapter5-figures/beta.pdf, id=4115, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
@@ -3092,14 +3102,14 @@ Chapter5-figures/beta.pdf>] [124] [125] [126]
 
 LaTeX Warning: Citation `Drut:2012md' on page 127 undefined on input line 282.
 
-[127] <Chapter5-figures/dimer.png, id=4183, 905.3825pt x 206.7725pt>
+[127] <Chapter5-figures/dimer.png, id=4217, 905.3825pt x 206.7725pt>
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
 Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 307.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
  [128 <./Chapter5-figures/dimer.png>]
-<Chapter5-figures/lattice.png, id=4195, 348.30125pt x 312.16624pt>
+<Chapter5-figures/lattice.png, id=4228, 348.30125pt x 312.16624pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
@@ -3132,7 +3142,7 @@ LaTeX Warning: Citation `Nicholson:2012xt' on page 138 undefined on input line
 LaTeX Warning: Citation `EKLN5' on page 138 undefined on input line 623.
 
 [138] [139]
-<Chapter5-figures/QCDbubble.pdf, id=4327, 424.58624pt x 370.38374pt>
+<Chapter5-figures/QCDbubble.pdf, id=4361, 424.58624pt x 370.38374pt>
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
@@ -3140,7 +3150,7 @@ Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 660.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
  [140 <./Chapter5-figures/QCDbubble.pdf>]
-<Chapter5-figures/overlap.pdf, id=4347, 481.8pt x 303.65443pt>
+<Chapter5-figures/overlap.pdf, id=4380, 481.8pt x 303.65443pt>
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
@@ -3168,7 +3178,7 @@ LaTeX Warning: Citation `Nicholson:2012zp' on page 142 undefined on input line
 LaTeX Warning: Citation `Nicholson:2015zxa' on page 142 undefined on input line
  707.
 
-[142] <Chapter5-figures/cumulant.png, id=4380, 491.8375pt x 321.2pt>
+[142] <Chapter5-figures/cumulant.png, id=4414, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
@@ -3182,7 +3192,7 @@ LaTeX Warning: Citation `EKLN4' on page 143 undefined on input line 737.
 LaTeX Warning: Citation `EKLN4' on page 143 undefined on input line 737.
 
 [143] [144 <./Chapter5-figures/cumulant.png>]
-<Chapter5-figures/twobody.png, id=4405, 800.9925pt x 530.98375pt>
+<Chapter5-figures/twobody.png, id=4439, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
@@ -3245,7 +3255,7 @@ LaTeX Warning: Citation `Symanzik4' on page 152 undefined on input line 1014.
 
 LaTeX Warning: Citation `EKLN4' on page 152 undefined on input line 1014.
 
-[152] <Chapter5-figures/dispersion.png, id=4501, 737.75626pt x 509.905pt>
+[152] <Chapter5-figures/dispersion.png, id=4535, 737.75626pt x 509.905pt>
 File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
@@ -3525,7 +3535,7 @@ LaTeX Warning: Citation `Beane:2009py' on page 156 undefined on input line 1127
 LaTeX Warning: Citation `Beane:2006gf' on page 156 undefined on input line 1127
 .
 
-<Chapter5-figures/luscher.png, id=4542, 614.295pt x 429.605pt>
+<Chapter5-figures/luscher.png, id=4575, 614.295pt x 429.605pt>
 File: Chapter5-figures/luscher.png Graphic file (type png)
 
 <use Chapter5-figures/luscher.png>
@@ -3540,7 +3550,7 @@ LaTeX Warning: Citation `Drut:2012md' on page 156 undefined on input line 1133.
 LaTeX Warning: Citation `Drut:2012md' on page 156 undefined on input line 1133.
 
 
-[156] <Chapter5-figures/interaction.png, id=4556, 658.46pt x 512.91624pt>
+[156] <Chapter5-figures/interaction.png, id=4590, 658.46pt x 512.91624pt>
 File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
@@ -3548,7 +3558,7 @@ Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 11
 53.
 (pdftex.def)             Requested size: 424.58624pt x 330.74626pt.
  [157 <./Chapter5-figures/luscher.png>]
-<Chapter5-figures/tuning.png, id=4572, 466.74374pt x 294.09875pt>
+<Chapter5-figures/tuning.png, id=4606, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
@@ -3586,7 +3596,7 @@ LaTeX Warning: Citation `EKLN4' on page 160 undefined on input line 1213.
 LaTeX Warning: Citation `NishidaSonConformal' on page 161 undefined on input li
 ne 1229.
 
-<Chapter5-figures/dimer2.png, id=4602, 748.7975pt x 110.4125pt>
+<Chapter5-figures/dimer2.png, id=4636, 748.7975pt x 110.4125pt>
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
@@ -3630,14 +3640,14 @@ LaTeX Warning: Citation `Cohen:1996my' on page 165 undefined on input line 1327
 LaTeX Warning: Citation `Phillips:1997xu' on page 165 undefined on input line 1
 331.
 
-[165] [166] [167] <Chapter5-figures/tree.png, id=4689, 112.42pt x 74.2775pt>
+[165] [166] [167] <Chapter5-figures/tree.png, id=4722, 112.42pt x 74.2775pt>
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
 Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1463.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
 
-<Chapter5-figures/box.png, id=4690, 118.4425pt x 73.27374pt>
+<Chapter5-figures/box.png, id=4723, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
@@ -3648,7 +3658,7 @@ Package pdftex.def Info: Chapter5-figures/box.png used on input line 1469.
 LaTeX Warning: Citation `Epelbaum:2010nr' on page 169 undefined on input line 1
 478.
 
-[169] <Chapter5-figures/sunset.png, id=4713, 787.94376pt x 73.27374pt>
+[169] <Chapter5-figures/sunset.png, id=4748, 787.94376pt x 73.27374pt>
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
@@ -3659,7 +3669,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 1500--1501
 [][] 
  []
 
-<Chapter5-figures/dresseddimer.png, id=4717, 858.20625pt x 60.225pt>
+<Chapter5-figures/dresseddimer.png, id=4752, 858.20625pt x 60.225pt>
 File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
@@ -3667,7 +3677,7 @@ Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
 518.
 (pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
  [170 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
-<Chapter5-figures/3body.png, id=4731, 821.0675pt x 84.315pt>
+<Chapter5-figures/3body.png, id=4765, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
@@ -3685,7 +3695,7 @@ LaTeX Warning: Citation `V1970563' on page 171 undefined on input line 1553.
 LaTeX Warning: Citation `Efimov:1971zz' on page 171 undefined on input line 155
 3.
 
-<Chapter5-figures/HLambda.pdf, id=4735, 481.8pt x 319.76967pt>
+<Chapter5-figures/HLambda.pdf, id=4769, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
@@ -3761,7 +3771,7 @@ Overfull \hbox (14.54308pt too wide) in alignment at lines 1626--1633
 
 
 ] [178] [179]
-<Chapter6-figures/formalism.png, id=4910, 439.8834pt x 249.5724pt>
+<Chapter6-figures/formalism.png, id=4943, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
@@ -3769,7 +3779,7 @@ Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 207.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
  [180 <./Chapter6-figures/formalism.png>]
-[181] <Chapter6-figures/worldlines.png, id=4944, 579.6054pt x 495.7722pt>
+[181] <Chapter6-figures/worldlines.png, id=4978, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
@@ -3777,7 +3787,7 @@ Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 369
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [182] [183 <./Chapter6-figures/worldlines.png>] [184] [185]
-<Chapter6-figures/HSworldlines.png, id=5002, 579.6054pt x 495.7722pt>
+<Chapter6-figures/HSworldlines.png, id=5035, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -3785,7 +3795,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 09.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=5006, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=5039, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -3796,7 +3806,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 629.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 629.
 
-<Chapter6-figures/getzdualvecs.png, id=5007, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=5040, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -3808,7 +3818,7 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 643.
 
-<Chapter6-figures/call_getzvecs.png, id=5008, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=5041, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
@@ -3831,21 +3841,21 @@ ed, duplicate ignored
 l.711 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=5036, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=5069, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 784.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
  [189]
-<Chapter6-figures/dVds.png, id=5053, 507.8975pt x 367.3725pt>
+<Chapter6-figures/dVds.png, id=5086, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 807.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=5055, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=5088, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
@@ -3892,7 +3902,7 @@ converted-to.pdf Chapter7-figures/fig1.eps>
 (epstopdf)             \includegraphics on input line 433.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig1-eps-converted-to.pdf, id=5223, 619.31375pt x 435.6275pt>
+<Chapter7-figures/fig1-eps-converted-to.pdf, id=5256, 619.31375pt x 435.6275pt>
 File: Chapter7-figures/fig1-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig1-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig1-eps-converted-to.pdf used on inp
@@ -3922,7 +3932,7 @@ converted-to.pdf Chapter7-figures/fig2.eps>
 (epstopdf)             \includegraphics on input line 570.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig2-eps-converted-to.pdf, id=5281, 936.49875pt x 696.6025pt>
+<Chapter7-figures/fig2-eps-converted-to.pdf, id=5316, 936.49875pt x 696.6025pt>
 File: Chapter7-figures/fig2-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig2-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig2-eps-converted-to.pdf used on inp
@@ -3953,7 +3963,7 @@ converted-to.pdf Chapter7-figures/fig3.eps>
 (epstopdf)             \includegraphics on input line 824.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig3-eps-converted-to.pdf, id=5339, 671.50874pt x 491.8375pt>
+<Chapter7-figures/fig3-eps-converted-to.pdf, id=5372, 671.50874pt x 491.8375pt>
 File: Chapter7-figures/fig3-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig3-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig3-eps-converted-to.pdf used on inp
@@ -4052,7 +4062,7 @@ LaTeX Warning: Citation `ekstromPRX' on page 230 undefined on input line 869.
 
 LaTeX Warning: Citation `ekstromPRX' on page 231 undefined on input line 907.
 
-<Chapter8-figures/diagNNLO.pdf, id=5627, 1803.73875pt x 1574.88374pt>
+<Chapter8-figures/diagNNLO.pdf, id=5660, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
@@ -4125,7 +4135,7 @@ LaTeX Warning: Citation `haxton' on page 247 undefined on input line 2080.
 LaTeX Warning: Citation `svavittbartlett2009' on page 248 undefined on input li
 ne 2178.
 
-<Chapter8-figures/mbpt.pdf, id=5847, 614.295pt x 794.97pt>
+<Chapter8-figures/mbpt.pdf, id=5881, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
@@ -4223,7 +4233,7 @@ Overfull \hbox (4.76913pt too wide) in paragraph at lines 3231--3235
  []
 
 [264] [265]
-<Chapter8-figures/perturbationtheory.pdf, id=6111, 578.16pt x 433.62pt>
+<Chapter8-figures/perturbationtheory.pdf, id=6145, 578.16pt x 433.62pt>
 File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
@@ -4231,7 +4241,7 @@ Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input
 line 3383.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
 
-<Chapter8-figures/CCDMBPT4theory.pdf, id=6117, 578.16pt x 433.62pt>
+<Chapter8-figures/CCDMBPT4theory.pdf, id=6151, 578.16pt x 433.62pt>
 File: Chapter8-figures/CCDMBPT4theory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/CCDMBPT4theory.pdf>
@@ -4243,7 +4253,7 @@ es/CCDMBPT4theory.pdf>] [269]
 
 LaTeX Warning: Citation `blas' on page 270 undefined on input line 3562.
 
-<Chapter8-figures/blockvsfull_log.png, id=6294, 578.16pt x 433.62pt>
+<Chapter8-figures/blockvsfull_log.png, id=6327, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
@@ -4279,14 +4289,14 @@ Package xcolor Warning: Incompatible color definition on input line 3704.
 
 Package xcolor Warning: Incompatible color definition on input line 3704.
 
-[273] <Chapter8-figures/fig1.pdf, id=6330, 500.87437pt x 400.11984pt>
+[273] <Chapter8-figures/fig1.pdf, id=6364, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
 Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3759.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=6331, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=6365, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
@@ -4327,14 +4337,14 @@ Package xcolor Warning: Incompatible color definition on input line 3817.
 
 Package xcolor Warning: Incompatible color definition on input line 3817.
 
-<Chapter8-figures/fig3.pdf, id=6411, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=6444, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
 Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3837.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=6413, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=6446, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
@@ -4358,7 +4368,7 @@ LaTeX Warning: Citation `blas' on page 281 undefined on input line 4015.
 
 LaTeX Warning: Reference `eq:mtxmtx' on page 281 undefined on input line 4015.
 
-[281] <Chapter8-figures/MBPT2fig.pdf, id=6726, 528.05405pt x 403.94664pt>
+[281] <Chapter8-figures/MBPT2fig.pdf, id=6759, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT2fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT2fig.pdf>
@@ -4366,7 +4376,7 @@ Package pdftex.def Info: Chapter8-figures/MBPT2fig.pdf used on input line 4062.
 
 (pdftex.def)             Requested size: 424.58624pt x 324.80962pt.
  [282] [283 <./Chapter8-figures/MBPT2fig.pdf>] [284] [285]
-<Chapter8-figures/MBPT3fig.pdf, id=6988, 528.05405pt x 403.94664pt>
+<Chapter8-figures/MBPT3fig.pdf, id=7021, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT3fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT3fig.pdf>
@@ -4432,7 +4442,7 @@ grams / cpp / CCD / src$[]\T1/fve/m/n/10 , abide to this
  []
 
 [299]
-<Chapter8-figures/classabstractspbasis.pdf, id=7272, 501.875pt x 74.90987pt>
+<Chapter8-figures/classabstractspbasis.pdf, id=7305, 501.875pt x 74.90987pt>
 File: Chapter8-figures/classabstractspbasis.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/classabstractspbasis.pdf>
@@ -4517,7 +4527,7 @@ converted-to.pdf Chapter9-figures/qvar.eps>
 (epstopdf)             \includegraphics on input line 476.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/qvar-eps-converted-to.pdf, id=7504, 667.49374pt x 473.77pt>
+<Chapter9-figures/qvar-eps-converted-to.pdf, id=7539, 667.49374pt x 473.77pt>
 File: Chapter9-figures/qvar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/qvar-eps-converted-to.pdf>
@@ -4537,7 +4547,7 @@ onverted-to.pdf Chapter9-figures/jas.eps>
 (epstopdf)             \includegraphics on input line 507.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/jas-eps-converted-to.pdf, id=7519, 699.61375pt x 487.8225pt>
+<Chapter9-figures/jas-eps-converted-to.pdf, id=7553, 699.61375pt x 487.8225pt>
 File: Chapter9-figures/jas-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/jas-eps-converted-to.pdf>
@@ -4570,7 +4580,7 @@ f>
 (epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/hists-eps-converted-to.pdf, id=7642, 682.55pt x 465.74pt>
+<Chapter9-figures/hists-eps-converted-to.pdf, id=7676, 682.55pt x 465.74pt>
 File: Chapter9-figures/hists-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/hists-eps-converted-to.pdf>
@@ -4589,7 +4599,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 877.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7644, 669.50125pt x 466.74
+<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7678, 669.50125pt x 466.74
 374pt>
 File: Chapter9-figures/dmc_decay-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_decay-eps-converted-to.pdf>
@@ -4609,7 +4619,7 @@ mc-eps-converted-to.pdf Chapter9-figures/walkers_dmc.eps>
 (epstopdf)             \includegraphics on input line 897.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7666, 692.5875pt x 485.8
+<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7700, 692.5875pt x 485.8
 15pt>
 File: Chapter9-figures/walkers_dmc-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -4629,7 +4639,7 @@ eps-converted-to.pdf Chapter9-figures/dmc_extr.eps>
 (epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7668, 701.62125pt x 475.777
+<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7702, 701.62125pt x 475.777
 5pt>
 File: Chapter9-figures/dmc_extr-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_extr-eps-converted-to.pdf>
@@ -4752,7 +4762,7 @@ ergence-eps-converted-to.pdf Chapter9-figures/cimc_convergence.eps>
 (epstopdf)             \includegraphics on input line 2741.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8113, 726.715pt x 5
+<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8147, 726.715pt x 5
 05.89pt>
 File: Chapter9-figures/cimc_convergence-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -4761,7 +4771,7 @@ Package pdftex.def Info: Chapter9-figures/cimc_convergence-eps-converted-to.pdf
  used on input line 2741.
 (pdftex.def)             Requested size: 363.3566pt x 252.94437pt.
 
-<Chapter9-figures/cimcccd.pdf, id=8115, 578.16pt x 433.62pt>
+<Chapter9-figures/cimcccd.pdf, id=8149, 578.16pt x 433.62pt>
 File: Chapter9-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/cimcccd.pdf>
@@ -4880,7 +4890,7 @@ LaTeX Warning: Citation `Som14a' on page 387 undefined on input line 897.
 
 LaTeX Warning: Citation `RingSchuck' on page 388 undefined on input line 899.
 
-<Chapter11-figures/Pairing_LNP_scgf.pdf, id=8670, 622.325pt x 521.95pt>
+<Chapter11-figures/Pairing_LNP_scgf.pdf, id=8703, 622.325pt x 521.95pt>
 File: Chapter11-figures/Pairing_LNP_scgf.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_LNP_scgf.pdf>
@@ -4888,7 +4898,7 @@ Package pdftex.def Info: Chapter11-figures/Pairing_LNP_scgf.pdf used on input l
 ine 916.
 (pdftex.def)             Requested size: 339.67029pt x 284.8832pt.
 
-<Chapter11-figures/Pairing_LNP_ALL.pdf, id=8673, 622.325pt x 521.95pt>
+<Chapter11-figures/Pairing_LNP_ALL.pdf, id=8706, 622.325pt x 521.95pt>
 File: Chapter11-figures/Pairing_LNP_ALL.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_LNP_ALL.pdf>
@@ -4902,7 +4912,7 @@ LaTeX Warning: Reference `chap:chapter8' on page 388 undefined on input line 93
 
 [388] [389 <./Chapter11-figures/Pairing_LNP_scgf.pdf>] [390 <./Chapter11-figure
 s/Pairing_LNP_ALL.pdf>] [391] [392] [393] [394] [395]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8901, 1027.84pt x 770.88pt>
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8934, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
@@ -4910,7 +4920,7 @@ Package pdftex.def Info: Chapter11-figures/numerical_scgf_diagrams.pdf used on
 input line 1238.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
  [396 <./Chapter11-figures/numerical_scgf_diagrams.pdf>] [397] [398]
-<Chapter11-figures/cimcccd.pdf, id=9086, 578.16pt x 433.62pt>
+<Chapter11-figures/cimcccd.pdf, id=9119, 578.16pt x 433.62pt>
 File: Chapter11-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/cimcccd.pdf>
@@ -4942,16 +4952,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1682--1684
  []
 
 [406] [407] (./chapter11.bbl)) [408]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
- (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) 
-(./chapter4.aux) (./chapter5.aux)
-(./chapter6.aux) (./chapter7.aux) (./chapter8.aux) (./chapter9.aux)
-(./chapter10.aux) (./chapter11.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 222.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 222.
+ (./lnp.aux (./contributors.aux)
+(./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
+(./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./chapter7.aux)
+(./chapter8.aux) (./chapter9.aux) (./chapter10.aux) (./chapter11.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 222.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 5AD27BD6806B23F5D418599835790BAD;19626.
+(rerunfilecheck)             Checksum: 41275FAD339CEB9F443F4328580B7849;19626.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -4966,13 +4976,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 27330 strings out of 493089
- 430388 string characters out of 6134842
- 613262 words of memory out of 5000000
- 26294 multiletter control sequences out of 15000+600000
+ 27341 strings out of 493089
+ 430632 string characters out of 6134842
+ 615318 words of memory out of 5000000
+ 26296 multiletter control sequences out of 15000+600000
  159699 words of font info for 277 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,25n,122p,1567b,2068s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5008,10 +5018,10 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect1
 0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on lnp.pdf (419 pages, 6282339 bytes).
+Output written on lnp.pdf (421 pages, 6278314 bytes).
 PDF statistics:
- 10263 PDF objects out of 10688 (max. 8388607)
- 8909 compressed objects within 90 object streams
- 3823 named destinations out of 4296 (max. 500000)
+ 10297 PDF objects out of 10688 (max. 8388607)
+ 8941 compressed objects within 90 object streams
+ 3826 named destinations out of 4296 (max. 500000)
  2554 words of extra memory for PDF output out of 10000 (max. 10000000)
 
