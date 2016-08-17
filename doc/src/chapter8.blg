@@ -2,12 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter8.aux
 The style file: spphys.bst
-I couldn't open database file lnplib.bib
----line 204 of file chapter8.aux
- : \bibdata{lnplib
- :                }
-I'm skipping whatever remains of this command
-I found no database files---while reading file chapter8.aux
+Database file #1: lnp.bib
 Warning--I didn't find a database entry for "lattimer2007"
 Warning--I didn't find a database entry for "lattimer2012"
 Warning--I didn't find a database entry for "weber1999"
@@ -74,7 +69,7 @@ Warning--I didn't find a database entry for "mpi"
 Warning--I didn't find a database entry for "openmpi"
 You've used 0 entries,
             2812 wiz_defined-function locations,
-            661 strings with 5053 characters,
+            661 strings with 5050 characters,
 and the built_in function-call counts, 28 in all, are:
 = -- 0
 > -- 0
@@ -113,4 +108,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 7
-(There were 2 error messages)
+(There were 64 warnings)

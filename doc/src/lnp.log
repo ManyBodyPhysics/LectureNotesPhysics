@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 09:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,228 +1208,243 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
  [9]
-Overfull \hbox (3.22194pt too wide) detected at line 97
- []\T1/fve/m/n/10 100
+Overfull \hbox (3.22194pt too wide) detected at line 94
+ []\T1/fve/m/n/10 101
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 101
+Overfull \hbox (3.22194pt too wide) detected at line 95
+ []\T1/fve/m/n/10 101
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 96
+ []\T1/fve/m/n/10 101
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 97
  []\T1/fve/m/n/10 102
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 101
+ []\T1/fve/m/n/10 104
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 106
- []\T1/fve/m/n/10 106
+ []\T1/fve/m/n/10 108
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 107
- []\T1/fve/m/n/10 106
+ []\T1/fve/m/n/10 108
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 112
- []\T1/fve/m/n/10 110
+ []\T1/fve/m/n/10 112
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 113
- []\T1/fve/m/n/10 111
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 115
  []\T1/fve/m/n/10 113
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 121
+Overfull \hbox (3.22194pt too wide) detected at line 115
  []\T1/fve/m/n/10 115
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 122
+Overfull \hbox (3.22194pt too wide) detected at line 121
  []\T1/fve/m/n/10 117
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 122
+ []\T1/fve/m/n/10 119
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 123
- []\T1/fve/m/n/10 117
+ []\T1/fve/m/n/10 119
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 126
- []\T1/fve/m/n/10 121
+ []\T1/fve/m/n/10 123
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 132
- []\T1/fve/m/n/10 131
+ []\T1/fve/m/n/10 133
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 133
- []\T1/fve/m/n/10 132
+ []\T1/fve/m/n/10 134
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 136
- []\T1/fve/m/n/10 138
+ []\T1/fve/m/n/10 140
  []
 
 [10]
 Overfull \hbox (3.22194pt too wide) detected at line 137
- []\T1/fve/m/n/10 142
+ []\T1/fve/m/n/10 144
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 139
- []\T1/fve/m/n/10 146
+ []\T1/fve/m/n/10 148
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 140
- []\T1/fve/m/n/10 149
+ []\T1/fve/m/n/10 151
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 141
- []\T1/fve/m/n/10 149
+ []\T1/fve/m/n/10 151
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 142
- []\T1/fve/m/n/10 152
+ []\T1/fve/m/n/10 154
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 145
- []\T1/fve/m/n/10 158
+ []\T1/fve/m/n/10 159
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 146
- []\T1/fve/m/n/10 160
+ []\T1/fve/m/n/10 162
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 147
- []\T1/fve/m/n/10 161
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 148
  []\T1/fve/m/n/10 163
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 149
- []\T1/fve/m/n/10 166
+Overfull \hbox (3.22194pt too wide) detected at line 148
+ []\T1/fve/m/n/10 165
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 150
+Overfull \hbox (3.22194pt too wide) detected at line 149
  []\T1/fve/m/n/10 168
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 150
+ []\T1/fve/m/n/10 170
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 151
- []\T1/fve/m/n/10 171
+ []\T1/fve/m/n/10 173
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 152
- []\T1/fve/m/n/10 172
+ []\T1/fve/m/n/10 174
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 153
- []\T1/fve/m/n/10 172
+ []\T1/fve/m/n/10 174
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 154
- []\T1/fve/m/n/10 172
+ []\T1/fve/m/n/10 174
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 155
- []\T1/fve/m/n/10 173
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 156
- []\T1/fve/m/n/10 173
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 162
  []\T1/fve/m/n/10 175
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 156
+ []\T1/fve/m/n/10 175
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 162
+ []\T1/fve/m/n/10 177
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 163
- []\T1/fve/m/n/10 176
+ []\T1/fve/m/n/10 178
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 164
- []\T1/fve/m/n/10 178
+ []\T1/fve/m/n/10 180
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 165
- []\T1/fve/m/n/10 178
+ []\T1/fve/m/n/10 180
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 166
- []\T1/fve/m/n/10 180
+ []\T1/fve/m/n/10 182
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 167
- []\T1/fve/m/n/10 180
+ []\T1/fve/m/n/10 182
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 168
- []\T1/fve/m/n/10 183
+ []\T1/fve/m/n/10 185
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 169
- []\T1/fve/m/n/10 183
+ []\T1/fve/m/n/10 185
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 170
- []\T1/fve/m/n/10 184
+ []\T1/fve/m/n/10 186
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 171
- []\T1/fve/m/n/10 189
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 172
- []\T1/fve/m/n/10 190
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 178
  []\T1/fve/m/n/10 191
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 179
+Overfull \hbox (3.22194pt too wide) detected at line 172
  []\T1/fve/m/n/10 192
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 178
+ []\T1/fve/m/n/10 195
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 179
+ []\T1/fve/m/n/10 196
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 180
- []\T1/fve/m/n/10 193
+ []\T1/fve/m/n/10 197
  []
 
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
@@ -1438,522 +1453,522 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 181.
 
 Overfull \hbox (3.22194pt too wide) detected at line 181
- []\T1/fve/m/n/10 193
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 182
- []\T1/fve/m/n/10 194
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 183
- []\T1/fve/m/n/10 194
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 185
  []\T1/fve/m/n/10 197
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 187
+Overfull \hbox (3.22194pt too wide) detected at line 182
  []\T1/fve/m/n/10 198
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 188
- []\T1/fve/m/n/10 199
+Overfull \hbox (3.22194pt too wide) detected at line 183
+ []\T1/fve/m/n/10 198
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 189
- []\T1/fve/m/n/10 200
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 190
+Overfull \hbox (3.22194pt too wide) detected at line 185
  []\T1/fve/m/n/10 201
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 191
+Overfull \hbox (3.22194pt too wide) detected at line 187
  []\T1/fve/m/n/10 202
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 188
+ []\T1/fve/m/n/10 203
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 189
+ []\T1/fve/m/n/10 204
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 190
+ []\T1/fve/m/n/10 205
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 191
+ []\T1/fve/m/n/10 206
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 192
- []\T1/fve/m/n/10 202
+ []\T1/fve/m/n/10 206
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 193
- []\T1/fve/m/n/10 205
+ []\T1/fve/m/n/10 209
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 194
- []\T1/fve/m/n/10 205
+ []\T1/fve/m/n/10 209
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 195
- []\T1/fve/m/n/10 206
+ []\T1/fve/m/n/10 210
  []
 
 [11]
 Overfull \hbox (3.22194pt too wide) detected at line 196
- []\T1/fve/m/n/10 207
+ []\T1/fve/m/n/10 211
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 197
- []\T1/fve/m/n/10 209
+ []\T1/fve/m/n/10 213
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 198
- []\T1/fve/m/n/10 209
+ []\T1/fve/m/n/10 213
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 199
- []\T1/fve/m/n/10 210
+ []\T1/fve/m/n/10 214
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 200
- []\T1/fve/m/n/10 212
+ []\T1/fve/m/n/10 216
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 201
- []\T1/fve/m/n/10 212
+ []\T1/fve/m/n/10 216
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 207
- []\T1/fve/m/n/10 215
+ []\T1/fve/m/n/10 219
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 208
- []\T1/fve/m/n/10 217
+ []\T1/fve/m/n/10 221
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 209
- []\T1/fve/m/n/10 217
+ []\T1/fve/m/n/10 221
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 210
- []\T1/fve/m/n/10 222
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 211
- []\T1/fve/m/n/10 224
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 212
  []\T1/fve/m/n/10 226
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 213
+Overfull \hbox (3.22194pt too wide) detected at line 211
+ []\T1/fve/m/n/10 228
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 212
  []\T1/fve/m/n/10 230
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 213
+ []\T1/fve/m/n/10 234
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 214
- []\T1/fve/m/n/10 232
+ []\T1/fve/m/n/10 236
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 215
- []\T1/fve/m/n/10 235
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 216
  []\T1/fve/m/n/10 239
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 216
+ []\T1/fve/m/n/10 243
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 217
- []\T1/fve/m/n/10 240
+ []\T1/fve/m/n/10 244
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 218
- []\T1/fve/m/n/10 241
+ []\T1/fve/m/n/10 245
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 219
- []\T1/fve/m/n/10 246
+ []\T1/fve/m/n/10 250
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 220
- []\T1/fve/m/n/10 248
+ []\T1/fve/m/n/10 252
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 221
- []\T1/fve/m/n/10 248
+ []\T1/fve/m/n/10 252
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 222
- []\T1/fve/m/n/10 253
+ []\T1/fve/m/n/10 257
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 223
- []\T1/fve/m/n/10 254
+ []\T1/fve/m/n/10 258
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 224
- []\T1/fve/m/n/10 255
+ []\T1/fve/m/n/10 259
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 225
- []\T1/fve/m/n/10 256
+ []\T1/fve/m/n/10 260
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 226
- []\T1/fve/m/n/10 275
+ []\T1/fve/m/n/10 279
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 227
- []\T1/fve/m/n/10 283
+ []\T1/fve/m/n/10 287
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 228
- []\T1/fve/m/n/10 284
+ []\T1/fve/m/n/10 288
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 229
- []\T1/fve/m/n/10 290
+ []\T1/fve/m/n/10 294
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 230
- []\T1/fve/m/n/10 293
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 231
  []\T1/fve/m/n/10 297
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 231
+ []\T1/fve/m/n/10 301
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 237
- []\T1/fve/m/n/10 299
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 238
- []\T1/fve/m/n/10 299
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 239
- []\T1/fve/m/n/10 301
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 240
- []\T1/fve/m/n/10 301
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 241
- []\T1/fve/m/n/10 302
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 242
  []\T1/fve/m/n/10 303
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 238
+ []\T1/fve/m/n/10 303
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 239
+ []\T1/fve/m/n/10 305
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 240
+ []\T1/fve/m/n/10 305
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 241
+ []\T1/fve/m/n/10 306
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 242
+ []\T1/fve/m/n/10 307
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 244
- []\T1/fve/m/n/10 309
+ []\T1/fve/m/n/10 313
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 245
- []\T1/fve/m/n/10 312
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 248
- []\T1/fve/m/n/10 315
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 249
- []\T1/fve/m/n/10 315
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 250
  []\T1/fve/m/n/10 316
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 251
+Overfull \hbox (3.22194pt too wide) detected at line 248
+ []\T1/fve/m/n/10 319
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 249
+ []\T1/fve/m/n/10 319
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 250
  []\T1/fve/m/n/10 320
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 251
+ []\T1/fve/m/n/10 324
  []
 
 [12]
 Overfull \hbox (3.22194pt too wide) detected at line 252
- []\T1/fve/m/n/10 322
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 253
  []\T1/fve/m/n/10 326
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 253
+ []\T1/fve/m/n/10 330
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 255
- []\T1/fve/m/n/10 328
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 256
- []\T1/fve/m/n/10 328
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 257
- []\T1/fve/m/n/10 329
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 261
  []\T1/fve/m/n/10 332
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 264
- []\T1/fve/m/n/10 334
+Overfull \hbox (3.22194pt too wide) detected at line 256
+ []\T1/fve/m/n/10 332
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 265
- []\T1/fve/m/n/10 335
+Overfull \hbox (3.22194pt too wide) detected at line 257
+ []\T1/fve/m/n/10 333
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 266
+Overfull \hbox (3.22194pt too wide) detected at line 261
  []\T1/fve/m/n/10 336
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 267
- []\T1/fve/m/n/10 337
+Overfull \hbox (3.22194pt too wide) detected at line 264
+ []\T1/fve/m/n/10 338
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 271
+Overfull \hbox (3.22194pt too wide) detected at line 265
  []\T1/fve/m/n/10 339
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 272
+Overfull \hbox (3.22194pt too wide) detected at line 266
  []\T1/fve/m/n/10 340
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 273
+Overfull \hbox (3.22194pt too wide) detected at line 267
  []\T1/fve/m/n/10 341
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 274
- []\T1/fve/m/n/10 342
+Overfull \hbox (3.22194pt too wide) detected at line 271
+ []\T1/fve/m/n/10 343
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 275
+Overfull \hbox (3.22194pt too wide) detected at line 272
  []\T1/fve/m/n/10 344
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 276
+Overfull \hbox (3.22194pt too wide) detected at line 273
+ []\T1/fve/m/n/10 345
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 274
  []\T1/fve/m/n/10 346
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 277
- []\T1/fve/m/n/10 347
+Overfull \hbox (3.22194pt too wide) detected at line 275
+ []\T1/fve/m/n/10 348
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 278
+Overfull \hbox (3.22194pt too wide) detected at line 276
+ []\T1/fve/m/n/10 350
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 277
  []\T1/fve/m/n/10 351
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 278
+ []\T1/fve/m/n/10 355
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 279
- []\T1/fve/m/n/10 353
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 280
- []\T1/fve/m/n/10 353
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 281
- []\T1/fve/m/n/10 354
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 282
- []\T1/fve/m/n/10 356
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 288
  []\T1/fve/m/n/10 357
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 289
+Overfull \hbox (3.22194pt too wide) detected at line 280
+ []\T1/fve/m/n/10 357
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 281
  []\T1/fve/m/n/10 358
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 290
- []\T1/fve/m/n/10 359
+Overfull \hbox (3.22194pt too wide) detected at line 282
+ []\T1/fve/m/n/10 360
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 291
+Overfull \hbox (3.22194pt too wide) detected at line 288
+ []\T1/fve/m/n/10 361
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 289
  []\T1/fve/m/n/10 362
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 292
- []\T1/fve/m/n/10 365
+Overfull \hbox (3.22194pt too wide) detected at line 290
+ []\T1/fve/m/n/10 363
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 293
+Overfull \hbox (3.22194pt too wide) detected at line 291
  []\T1/fve/m/n/10 366
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 296
- []\T1/fve/m/n/10 368
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 297
- []\T1/fve/m/n/10 368
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 298
- []\T1/fve/m/n/10 368
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 304
+Overfull \hbox (3.22194pt too wide) detected at line 292
  []\T1/fve/m/n/10 369
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 305
+Overfull \hbox (3.22194pt too wide) detected at line 293
  []\T1/fve/m/n/10 370
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 306
- []\T1/fve/m/n/10 371
+Overfull \hbox (3.22194pt too wide) detected at line 296
+ []\T1/fve/m/n/10 372
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 307
- []\T1/fve/m/n/10 371
+Overfull \hbox (3.22194pt too wide) detected at line 297
+ []\T1/fve/m/n/10 372
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 308
- []\T1/fve/m/n/10 371
+Overfull \hbox (3.22194pt too wide) detected at line 298
+ []\T1/fve/m/n/10 372
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 309
+Overfull \hbox (3.22194pt too wide) detected at line 304
  []\T1/fve/m/n/10 373
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 310
- []\T1/fve/m/n/10 375
+Overfull \hbox (3.22194pt too wide) detected at line 305
+ []\T1/fve/m/n/10 374
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 311
- []\T1/fve/m/n/10 375
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 312
+Overfull \hbox (3.22194pt too wide) detected at line 306
  []\T1/fve/m/n/10 376
  []
 
 
-Overfull \hbox (3.22194pt too wide) detected at line 313
+Overfull \hbox (3.22194pt too wide) detected at line 307
  []\T1/fve/m/n/10 377
  []
 
 
+Overfull \hbox (3.22194pt too wide) detected at line 308
+ []\T1/fve/m/n/10 380
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 309
+ []\T1/fve/m/n/10 383
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 310
+ []\T1/fve/m/n/10 386
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 311
+ []\T1/fve/m/n/10 388
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 312
+ []\T1/fve/m/n/10 389
+ []
+
+
+Overfull \hbox (3.22194pt too wide) detected at line 313
+ []\T1/fve/m/n/10 392
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 314
- []\T1/fve/m/n/10 381
+ []\T1/fve/m/n/10 396
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 315
- []\T1/fve/m/n/10 384
+ []\T1/fve/m/n/10 399
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 316
- []\T1/fve/m/n/10 384
- []
-
-
-Overfull \hbox (3.22194pt too wide) detected at line 317
- []\T1/fve/m/n/10 385
+ []\T1/fve/m/n/10 399
  []
 
 [13]
+Overfull \hbox (3.22194pt too wide) detected at line 317
+ []\T1/fve/m/n/10 403
+ []
+
+
 Overfull \hbox (3.22194pt too wide) detected at line 318
- []\T1/fve/m/n/10 385
+ []\T1/fve/m/n/10 403
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 319
- []\T1/fve/m/n/10 389
+ []\T1/fve/m/n/10 407
  []
 
 
 Overfull \hbox (3.22194pt too wide) detected at line 320
- []\T1/fve/m/n/10 389
+ []\T1/fve/m/n/10 408
  []
 
 )
@@ -2026,620 +2041,60 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 
 
 
-]
-
-LaTeX Warning: Citation `Feynman' on page 4 undefined on input line 76.
-
-
-LaTeX Warning: Citation `Metropolis:1953am' on page 4 undefined on input line 1
-16.
-
-
-LaTeX Warning: Citation `Creutz:1980gp' on page 4 undefined on input line 118.
-
-
-LaTeX Warning: Citation `Shuryak:1984xr' on page 4 undefined on input line 118.
-
-
-
-LaTeX Warning: Citation `Shuryak:1987tr' on page 4 undefined on input line 118.
-
-
-
-LaTeX Warning: Citation `Schafer:2004xa' on page 4 undefined on input line 118.
-
-
-[4]
-
-LaTeX Warning: Citation `Schafer:2004xa' on page 5 undefined on input line 167.
-
-
+] [4]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 7.64995pt on input line 193.
-[5] <Chapter2-figures/config1.pdf, id=1306, 478.78876pt x 412.54124pt>
+ [5] <Chapter2-figures/config1.pdf, id=1316, 478.78876pt x 412.54124pt>
 File: Chapter2-figures/config1.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/config1.pdf>
 Package pdftex.def Info: Chapter2-figures/config1.pdf used on input line 216.
 (pdftex.def)             Requested size: 256.0748pt x 220.64128pt.
-
-
-LaTeX Warning: Citation `Jarrell:1996rrw' on page 6 undefined on input line 263
-.
-
-
-LaTeX Warning: Citation `Asakawa:2000tr' on page 6 undefined on input line 263.
-
-
-[6 <./Chapter2-figures/config1.pdf>] [7]
-
-LaTeX Warning: Citation `Jarzynski:1997' on page 8 undefined on input line 344.
-
-
+ [6 <./Chapter2-figures/config1.pdf>]
+[7]
 LaTeX Font Info:    Font shape `T1/fve/b/it' in size <12> not available
 (Font)              Font shape `T1/fve/b/sl' tried instead on input line 349.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
 (Font)              scaled to size 10.79993pt on input line 349.
-
-LaTeX Warning: Citation `Gross:1973id' on page 8 undefined on input line 395.
-
-
-LaTeX Warning: Citation `Politzer:1973fx' on page 8 undefined on input line 395
-.
-
-[8]
-
-LaTeX Warning: Citation `Coleman:1973jx' on page 9 undefined on input line 407.
-
-
-
-LaTeX Warning: Citation `Gross:1973id' on page 9 undefined on input line 412.
-
-
-LaTeX Warning: Citation `Politzer:1973fx' on page 9 undefined on input line 412
-.
-
-
-LaTeX Warning: Citation `Nakamura:2010zzi' on page 9 undefined on input line 43
-1.
-
-
-LaTeX Warning: Citation `Nakamura:2010zzi' on page 9 undefined on input line 43
-6.
-
-<Chapter2-figures/qcd_ms_high.pdf, id=1358, 588.1975pt x 534.99875pt>
+ [8] <Chapter2-figures/qcd_ms_high.pdf, id=1383, 588.1975pt x 534.99875pt>
 File: Chapter2-figures/qcd_ms_high.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/qcd_ms_high.pdf>
 Package pdftex.def Info: Chapter2-figures/qcd_ms_high.pdf used on input line 44
 0.
 (pdftex.def)             Requested size: 297.20906pt x 270.33142pt.
-
-
-LaTeX Warning: Citation `Alford:2007xm' on page 9 undefined on input line 463.
-
-
-LaTeX Warning: Citation `Adams:2012th' on page 9 undefined on input line 463.
-
-
-LaTeX Warning: Citation `Braun-Munzinger:2015hba' on page 9 undefined on input 
-line 463.
-
-
-LaTeX Warning: Citation `GellMann:1968rz' on page 9 undefined on input line 478
-.
-
-
-LaTeX Warning: Citation `Coleman:1980mx' on page 9 undefined on input line 478.
-
-
-
-LaTeX Warning: Citation `tHooft:1979bh' on page 9 undefined on input line 478.
-
-[9] [10 <./Chapter2-figures/qcd_ms_high.pdf>]
-
-LaTeX Warning: Citation `GellMann:1968rz' on page 11 undefined on input line 55
-8.
-
-
-LaTeX Warning: Citation `Shuryak:1977ut' on page 11 undefined on input line 580
-.
-
-
-LaTeX Warning: Citation `Shuryak:1978ij' on page 11 undefined on input line 580
-.
-
-
-LaTeX Warning: Citation `Linde:1980ts' on page 11 undefined on input line 605.
-
-[11]
-
-LaTeX Warning: Citation `Pisarski:1983ms' on page 12 undefined on input line 61
-6.
-
-
-LaTeX Warning: Citation `Aoki:2006we' on page 12 undefined on input line 620.
-
-
-LaTeX Warning: Citation `Bazavov:2011nk' on page 12 undefined on input line 620
-.
-
-
-LaTeX Warning: Citation `Aoki:2006br' on page 12 undefined on input line 622.
-
-
-LaTeX Warning: Citation `Aoki:2009sc' on page 12 undefined on input line 622.
-
-
-LaTeX Warning: Citation `Bazavov:2011nk' on page 12 undefined on input line 623
-.
-
-
-LaTeX Warning: Citation `Bazavov:2014pvz' on page 12 undefined on input line 62
-3.
-
-
-LaTeX Warning: Citation `Stephanov:2004wx' on page 12 undefined on input line 6
-28.
-
-
-LaTeX Warning: Citation `Fodor:2001pe' on page 12 undefined on input line 634.
-
-
-LaTeX Warning: Citation `Allton:2002zi' on page 12 undefined on input line 634.
-
-
-
-LaTeX Warning: Citation `Karsch:2003va' on page 12 undefined on input line 634.
-
-
-
-LaTeX Warning: Citation `Fodor:2004nz' on page 12 undefined on input line 634.
-
-
-LaTeX Warning: Citation `Gavai:2008zr' on page 12 undefined on input line 634.
-
-
-LaTeX Warning: Citation `Datta:2012pj' on page 12 undefined on input line 634.
-
-
-LaTeX Warning: Citation `deForcrand:2010he' on page 12 undefined on input line 
-637.
-
-
-LaTeX Warning: Citation `Stephanov:1998dy' on page 12 undefined on input line 6
-42.
-
-
-LaTeX Warning: Citation `Sauer:1976zzf' on page 12 undefined on input line 662.
-
-
-
-LaTeX Warning: Citation `Pochodzalla:1995xy' on page 12 undefined on input line
- 662.
-
-
-LaTeX Warning: Citation `Elliott:2013pna' on page 12 undefined on input line 66
-2.
-
-[12]
-
-LaTeX Warning: Citation `Alford:1998mk' on page 13 undefined on input line 687.
-
-
-
-LaTeX Warning: Citation `Schafer:1999fe' on page 13 undefined on input line 687
-.
-
-
-LaTeX Warning: Citation `Alford:2007xm' on page 13 undefined on input line 709.
-
-
-
-LaTeX Warning: Citation `Schafer:1998ef' on page 13 undefined on input line 719
-.
-
-
-LaTeX Warning: Citation `Hatsuda:2006ps' on page 13 undefined on input line 719
-.
-
-
-LaTeX Warning: Citation `Creutz:1983' on page 13 undefined on input line 736.
-
-
-LaTeX Warning: Citation `Montvay:1994' on page 13 undefined on input line 736.
-
-
-LaTeX Warning: Citation `Smit:2002' on page 13 undefined on input line 736.
-
-
-LaTeX Warning: Citation `Gattringer:2009' on page 13 undefined on input line 73
-6.
-
-
-LaTeX Warning: Citation `Lin:2014' on page 13 undefined on input line 736.
-
-
-LaTeX Warning: Citation `Fodor:2009ax' on page 13 undefined on input line 738.
-
-
-LaTeX Warning: Citation `Ding:2015ona' on page 13 undefined on input line 738.
-
-[13]
-
-LaTeX Warning: Citation `Wilson:1974sk' on page 14 undefined on input line 762.
-
-
-
-LaTeX Warning: Citation `Fodor:2009ax' on page 14 undefined on input line 821.
-
-
-LaTeX Warning: Citation `Ding:2015ona' on page 14 undefined on input line 821.
-
-[14]
+ [9] [10 <./Chapter2-figures/qcd_ms_high.pdf>] [11] [12] [13] [14]
 LaTeX Font Info:    Try loading font information for TS1+fve on input line 828.
 
- (/usr/local/texlive/2015/texmf-dist/tex/latex/bera/ts1fve.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bera/ts1fve.fd
 File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 828.
-
-
-LaTeX Warning: Citation `Mezzadri:2006' on page 15 undefined on input line 834.
-
-
-
-LaTeX Warning: Citation `Hasenfratz:1980kn' on page 15 undefined on input line 
-863.
-
-
-LaTeX Warning: Citation `Lepage:1998dt' on page 15 undefined on input line 876.
-
-
-
-LaTeX Warning: Citation `Wolff:1988uh' on page 15 undefined on input line 887.
-
-
-LaTeX Warning: Citation `Wilson:1974sk' on page 15 undefined on input line 906.
-
-
-
-LaTeX Warning: Citation `Kogut:1974ag' on page 15 undefined on input line 907.
-
-
-LaTeX Warning: Citation `Kaplan:1992bt' on page 15 undefined on input line 908.
-
-
-
-LaTeX Warning: Citation `Neuberger:1997fp' on page 15 undefined on input line 9
-09.
-
-[15]
-
-LaTeX Warning: Citation `Luscher:2010ae' on page 16 undefined on input line 937
-.
-
-
-LaTeX Warning: Citation `Endress:2014qpa' on page 16 undefined on input line 98
-3.
-
-<Chapter2-figures/topology.pdf, id=1436, 361.35pt x 252.945pt>
+ [15]
+<Chapter2-figures/topology.pdf, id=1540, 361.35pt x 252.945pt>
 File: Chapter2-figures/topology.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/topology.pdf>
 Package pdftex.def Info: Chapter2-figures/topology.pdf used on input line 988.
 (pdftex.def)             Requested size: 297.20906pt x 208.04921pt.
-
-
-LaTeX Warning: Citation `Dick:2015twa' on page 16 undefined on input line 992.
-
-
-LaTeX Warning: Citation `Dick:2015twa' on page 16 undefined on input line 992.
-
-[16]
-
-LaTeX Warning: Citation `Teper:1985ek' on page 17 undefined on input line 1012.
-
-
-
-LaTeX Warning: Citation `Luscher:2010iy' on page 17 undefined on input line 101
-6.
-
-
-LaTeX Warning: Citation `Belavin:1975fg' on page 17 undefined on input line 102
-9.
-
-
-LaTeX Warning: Citation `Schafer:1996wv' on page 17 undefined on input line 102
-9.
-
-[17 <./Chapter2-figures/topology.pdf>]
-
-LaTeX Warning: Citation `Schafer:1996wv' on page 18 undefined on input line 104
-1.
-
-
-LaTeX Warning: Citation `DelDebbio:2004ns' on page 18 undefined on input line 1
-060.
-
-
-LaTeX Warning: Citation `Ce:2014sfa' on page 18 undefined on input line 1060.
-
-
-LaTeX Warning: Citation `Schafer:1996wv' on page 18 undefined on input line 106
-5.
-
-
-LaTeX Warning: Citation `Poppitz:2012nz' on page 18 undefined on input line 106
-8.
-
-
-LaTeX Warning: Citation `Banks:1979yr' on page 18 undefined on input line 1106.
-
-
-[18]
-
-LaTeX Warning: Citation `Ginsparg:1981bj' on page 19 undefined on input line 11
-20.
-
-
-LaTeX Warning: Citation `Schafer:1996wv' on page 19 undefined on input line 116
-8.
-
-
-LaTeX Warning: Citation `Cherman:2016hcd' on page 19 undefined on input line 11
-80.
-
-[19]
-
-LaTeX Warning: Citation `Lin:2014' on page 20 undefined on input line 1248.
-
-[20]
-
-LaTeX Warning: Citation `Cristoforetti:2012su' on page 21 undefined on input li
-ne 1288.
-
-
-LaTeX Warning: Citation `Aarts:2014nxa' on page 21 undefined on input line 1288
-.
-
-
-LaTeX Warning: Citation `Aarts:2009uq' on page 21 undefined on input line 1290.
-
-
-
-LaTeX Warning: Citation `Sexty:2013ica' on page 21 undefined on input line 1290
-.
-
-
-LaTeX Warning: Citation `Kloiber:2013rba' on page 21 undefined on input line 12
-91.
-
-
-LaTeX Warning: Citation `Schafer:2009dj' on page 21 undefined on input line 133
-0.
-
-
-LaTeX Warning: Citation `Schaefer:2014awa' on page 21 undefined on input line 1
-330.
-
-[21]
-
-LaTeX Warning: Citation `Karsch:1986cq' on page 22 undefined on input line 1370
-.
-
-
-LaTeX Warning: Citation `Meyer:2007ic' on page 22 undefined on input line 1370.
-
-
-
-LaTeX Warning: Citation `Meyer:2007dy' on page 22 undefined on input line 1370.
-
-
-
-LaTeX Warning: Citation `Sakai:2007cm' on page 22 undefined on input line 1370.
-
-
-
+ [16] [17 <./Chapter2-figures/topology.pdf>] [18] [19] [20] [21]
 Overfull \hbox (2.46152pt too wide) in paragraph at lines 1367--1375
 \T1/fve/m/n/10 and $\OML/ztmcm/m/it/10 n[]\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10
  !\OT1/ztmcm/m/n/10 )$ \T1/fve/m/n/10 is the Bose dis-tri-bu-tion func-tion. Th
 e imag-i-nary time cor-re-la-tion func-tion equ. ([]2.63[])
  []
 
-
-LaTeX Warning: Citation `Aarts:2007wj' on page 22 undefined on input line 1383.
-
-
-
-LaTeX Warning: Citation `Aarts:2007va' on page 22 undefined on input line 1383.
-
-
-
-LaTeX Warning: Citation `Aarts:2006wt' on page 22 undefined on input line 1387.
-
-
-
-LaTeX Warning: Citation `Meyer:2008gt' on page 22 undefined on input line 1387.
-
-
-
-LaTeX Warning: Citation `Romatschke:2009ng' on page 22 undefined on input line 
-1390.
-
-
-LaTeX Warning: Citation `Arnold:2000dr' on page 22 undefined on input line 1408
-.
-
-
-LaTeX Warning: Citation `Karsch:1986cq' on page 22 undefined on input line 1411
-.
-
-
-LaTeX Warning: Citation `Meyer:2007ic' on page 22 undefined on input line 1413.
-
-
-
-LaTeX Warning: Citation `Meyer:2008gt' on page 22 undefined on input line 1413.
-
-
-
-LaTeX Warning: Citation `Kovtun:2004de' on page 22 undefined on input line 1418
-.
-
-<Chapter2-figures/hic_evol_schem.pdf, id=1505, 848.16875pt x 259.97125pt>
+<Chapter2-figures/hic_evol_schem.pdf, id=1668, 848.16875pt x 259.97125pt>
 File: Chapter2-figures/hic_evol_schem.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/hic_evol_schem.pdf>
 Package pdftex.def Info: Chapter2-figures/hic_evol_schem.pdf used on input line
  1424.
 (pdftex.def)             Requested size: 403.35562pt x 123.63043pt.
- [22]
-
-LaTeX Warning: Citation `Romatschke:2009im' on page 23 undefined on input line 
-1493.
-
-
-LaTeX Warning: Citation `Rezzolla:2013' on page 23 undefined on input line 1493
-.
-
-
-LaTeX Warning: Citation `Jeon:2015dfa' on page 23 undefined on input line 1493.
-
-
-[23 <./Chapter2-figures/hic_evol_schem.pdf>] [24]
-
-LaTeX Warning: Citation `Colella:1984' on page 25 undefined on input line 1610.
-
-
-
-LaTeX Warning: Citation `Blondin:1993' on page 25 undefined on input line 1611.
-
-
-
-LaTeX Warning: Citation `Schafer:2010dv' on page 25 undefined on input line 161
-2.
-
-[25]
-
-LaTeX Warning: Citation `Colella:1984' on page 26 undefined on input line 1667.
-
-
-
-LaTeX Warning: Citation `Colella:1984' on page 26 undefined on input line 1678.
-
-
-[26]
-
-LaTeX Warning: Citation `Florkowski:2010cf' on page 27 undefined on input line 
-1741.
-
-
-LaTeX Warning: Citation `Martinez:2010sc' on page 27 undefined on input line 17
-41.
-
-
-LaTeX Warning: Citation `Bluhm:2015raa' on page 27 undefined on input line 1741
-.
-
-
-LaTeX Warning: Citation `Bluhm:2015bzi' on page 27 undefined on input line 1741
-.
-
-
-LaTeX Warning: Citation `Romatschke:2011hm' on page 27 undefined on input line 
-1743.
-
-
-LaTeX Warning: Citation `Brewer:2015hua' on page 27 undefined on input line 174
-3.
-
-
-LaTeX Warning: Citation `Kadanoff' on page 27 undefined on input line 1775.
-
-[27]
-
-LaTeX Warning: Citation `Bertsch:1988ik' on page 28 undefined on input line 180
-8.
-
-
-LaTeX Warning: Citation `Lepers:2010be' on page 28 undefined on input line 1809
-.
-
-[28]
-
-LaTeX Warning: Citation `Bass:1998ca' on page 29 undefined on input line 1897.
-
-
-LaTeX Warning: Citation `Buss:2011mx' on page 29 undefined on input line 1897.
-
-
-LaTeX Warning: Citation `Ehehalt:1996uq' on page 29 undefined on input line 189
-8.
-
-
-LaTeX Warning: Citation `Geiger:1991nj' on page 29 undefined on input line 1908
-.
-
-
-LaTeX Warning: Citation `Xu:2004mz' on page 29 undefined on input line 1908.
-
-
-LaTeX Warning: Citation `McLerran:1993ni' on page 29 undefined on input line 19
-18.
-
-
-LaTeX Warning: Citation `Mueller:2002gd' on page 29 undefined on input line 191
-9.
-
-
-LaTeX Warning: Citation `Mrowczynski:2016etf' on page 29 undefined on input lin
-e 1931.
-
-[29]
-
-LaTeX Warning: Citation `Berges:2008wm' on page 30 undefined on input line 2015
-.
-
-[30]
-
-LaTeX Warning: Citation `Dusling:2010rm' on page 31 undefined on input line 201
-9.
-
-
-LaTeX Warning: Citation `Litim:2001db' on page 31 undefined on input line 2023.
-
-
-
-LaTeX Warning: Citation `Wong:1970fu' on page 31 undefined on input line 2024.
-
-
-LaTeX Warning: Citation `Hu:1996sf' on page 31 undefined on input line 2025.
-
-
-LaTeX Warning: Citation `Maldacena:1997re' on page 31 undefined on input line 2
-034.
-
-
-LaTeX Warning: Citation `Son:2007vk' on page 31 undefined on input line 2034.
-
-
-LaTeX Warning: Citation `Gubser:2009md' on page 31 undefined on input line 2034
-.
-
-
-LaTeX Warning: Citation `CasalderreySolana:2011us' on page 31 undefined on inpu
-t line 2034.
-
-
-LaTeX Warning: Citation `DeWolfe:2013cua' on page 31 undefined on input line 20
-34.
-
-[31] [32]
-
-LaTeX Warning: Citation `Son:2007vk' on page 33 undefined on input line 2199.
-
+ [22] [23 <./Chapter2-figures/hic_evol_schem.pdf>] [24] [25] [26] [27] [28] [29
+] [30] [31] [32]
 Package epstopdf Info: Source file: <Chapter2-figures/AdS5_Schwarz_eta_w_txt.ep
 s>
 (epstopdf)                    date: 2016-07-08 05:21:32
@@ -2654,7 +2109,7 @@ arz_eta_w_txt-eps-converted-to.pdf Chapter2-figures/AdS5_Schwarz_eta_w_txt.eps>
 (epstopdf)             \includegraphics on input line 2208.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1688, 459.717
+<Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf, id=1915, 459.717
 5pt x 287.0725pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2677,7 +2132,7 @@ btr_txt.eps>
 (epstopdf)             \includegraphics on input line 2209.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1690, 4
+<Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf, id=1917, 4
 59.7175pt x 262.9825pt>
 File: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2687,112 +2142,49 @@ Package pdftex.def Info: Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-conv
 erted-to.pdf used on input line 2209.
 (pdftex.def)             Requested size: 184.9429pt x 105.79706pt.
 
-
-LaTeX Warning: Citation `Policastro:2002se' on page 33 undefined on input line 
-2232.
-
-
-LaTeX Warning: Citation `Teaney:2006nc' on page 33 undefined on input line 2242
-.
-
 [33 <./Chapter2-figures/AdS5_Schwarz_eta_w_txt-eps-converted-to.pdf> <./Chapter
 2-figures/AdS5_Schwarz_eta_w_subtr_txt-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `Policastro:2002se' on page 34 undefined on input line 
-2264.
-
-
-LaTeX Warning: Citation `Son:2006em' on page 34 undefined on input line 2264.
-
 LaTeX Font Info:    Try loading font information for TS1+fvm on input line 2281
 .
+
 (/usr/local/texlive/2015/texmf-dist/tex/latex/bera/ts1fvm.fd
 File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
 )
 LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
 (Font)              scaled to size 7.64995pt on input line 2281.
 
-<Chapter2-figures/EnergyDensity.pdf, id=1750, 651.27232pt x 359.16324pt>
+<Chapter2-figures/EnergyDensity.pdf, id=1983, 651.27232pt x 359.16324pt>
 File: Chapter2-figures/EnergyDensity.pdf Graphic file (type pdf)
 
 <use Chapter2-figures/EnergyDensity.pdf>
 Package pdftex.def Info: Chapter2-figures/EnergyDensity.pdf used on input line 
 2308.
 (pdftex.def)             Requested size: 241.84842pt x 133.37059pt.
-
-
-LaTeX Warning: Citation `Chesler:2010bi' on page 34 undefined on input line 231
-5.
-
-
-LaTeX Warning: Citation `Chesler:2010bi' on page 34 undefined on input line 231
-5.
-
-
-LaTeX Warning: Citation `Schaefer:2014awa' on page 34 undefined on input line 2
-327.
-
-
-LaTeX Warning: Citation `Chesler:2013lia' on page 34 undefined on input line 23
-36.
-
-
-LaTeX Warning: Citation `Rangamani:2009xk' on page 34 undefined on input line 2
-346.
-
-[34]
-
-LaTeX Warning: Citation `Clay-YM' on page 35 undefined on input line 2363.
-
-
-LaTeX Warning: Citation `Clay-NS' on page 35 undefined on input line 2363.
-
-
-LaTeX Warning: Citation `Villani:2009' on page 35 undefined on input line 2364.
-
-
-
-LaTeX Warning: Citation `Perelman' on page 35 undefined on input line 2366.
-
-
-LaTeX Warning: Citation `Schafer:2004xa' on page 35 undefined on input line 237
-1.
-
-
-LaTeX Warning: Citation `Blondin:1993' on page 35 undefined on input line 2376.
-
-
-
-LaTeX Warning: Citation `Shen:2014vra' on page 35 undefined on input line 2380.
-
-
-[35 <./Chapter2-figures/EnergyDensity.pdf>]
+ [34] [35 <./Chapter2-figures/EnergyDensity.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2400.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2400.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2400.
-
-
-LaTeX Warning: Citation `Creutz:2004' on page 36 undefined on input line 2403.
-
 LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
 (Font)              scaled to size 7.64995pt on input line 2406.
-[36] [37] (./chapter2.bbl
+ [36] [37] (./chapter2.bbl [38] [39]
+Underfull \hbox (badness 1990) in paragraph at lines 466--469
+[]\T1/fve/m/n/8.5 G. Perel-man, The en-tropy for-mula for the Ricci flow and it
+s ge-o-met-ric ap-pli-ca-tions (2002).
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 9.
-
-)) [38]
+)) [40]
 \openout2 = `chapter3.aux'.
 
- (./chapter3.tex [39
+ (./chapter3.tex [41
 
 
 
 
 
-] [40]
+] [42]
 Package epstopdf Info: Source file: <Chapter3-figures/wilson-line.eps>
 (epstopdf)                    date: 2004-08-05 05:45:16
 (epstopdf)                    size: 307523 bytes
@@ -2805,7 +2197,7 @@ ne-eps-converted-to.pdf Chapter3-figures/wilson-line.eps>
 (epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2004, 325.215pt x 208.78
+<Chapter3-figures/wilson-line-eps-converted-to.pdf, id=2292, 325.215pt x 208.78
 pt>
 File: Chapter3-figures/wilson-line-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2819,7 +2211,7 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 166.
 
-[41 <./Chapter3-figures/wilson-line-eps-converted-to.pdf>]
+[43 <./Chapter3-figures/wilson-line-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Chapter3-figures/cube.eps>
 (epstopdf)                    date: 2004-09-27 07:21:20
 (epstopdf)                    size: 222535 bytes
@@ -2832,14 +2224,14 @@ converted-to.pdf Chapter3-figures/cube.eps>
 (epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/cube-eps-converted-to.pdf, id=2016, 414.54875pt x 229.85875pt
+<Chapter3-figures/cube-eps-converted-to.pdf, id=2304, 414.54875pt x 229.85875pt
 >
 File: Chapter3-figures/cube-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/cube-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/cube-eps-converted-to.pdf used on inp
 ut line 213.
 (pdftex.def)             Requested size: 248.73116pt x 137.91629pt.
- [42 <./Chapter3-figures/cube-eps-converted-to.pdf>] [43]
+ [44 <./Chapter3-figures/cube-eps-converted-to.pdf>] [45]
 Package epstopdf Info: Source file: <Chapter3-figures/dispersion.eps>
 (epstopdf)                    date: 2016-06-12 14:41:21
 (epstopdf)                    size: 449089 bytes
@@ -2852,14 +2244,14 @@ n-eps-converted-to.pdf Chapter3-figures/dispersion.eps>
 (epstopdf)             \includegraphics on input line 382.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2051, 332.24126pt x 206.7
+<Chapter3-figures/dispersion-eps-converted-to.pdf, id=2340, 332.24126pt x 206.7
 725pt>
 File: Chapter3-figures/dispersion-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/dispersion-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/dispersion-eps-converted-to.pdf used 
 on input line 382.
 (pdftex.def)             Requested size: 249.18031pt x 155.07898pt.
- [44] [45 <./Chapter3-figures/dispersion-eps-converted-to.pdf>] [46]
+ [46] [47 <./Chapter3-figures/dispersion-eps-converted-to.pdf>] [48]
 Package epstopdf Info: Source file: <Chapter3-figures/correlations.eps>
 (epstopdf)                    date: 2016-06-17 01:44:25
 (epstopdf)                    size: 3718946 bytes
@@ -2872,7 +2264,7 @@ ons-eps-converted-to.pdf Chapter3-figures/correlations.eps>
 (epstopdf)             \includegraphics on input line 568.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/correlations-eps-converted-to.pdf, id=2106, 1370.11874pt x 45
+<Chapter3-figures/correlations-eps-converted-to.pdf, id=2393, 1370.11874pt x 45
 3.695pt>
 File: Chapter3-figures/correlations-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -2892,14 +2284,14 @@ eps-converted-to.pdf Chapter3-figures/wilson-L.eps>
 (epstopdf)             \includegraphics on input line 589.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2107, 155.58125pt x 229.858
+<Chapter3-figures/wilson-L-eps-converted-to.pdf, id=2394, 155.58125pt x 229.858
 75pt>
 File: Chapter3-figures/wilson-L-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/wilson-L-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/wilson-L-eps-converted-to.pdf used on
  input line 589.
 (pdftex.def)             Requested size: 85.56993pt x 126.42268pt.
- [47 <./Chapter3-figures/correlations-eps-converted-to.pdf>]
+ [49 <./Chapter3-figures/correlations-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Chapter3-figures/strong-c.eps>
 (epstopdf)                    date: 2004-08-05 05:45:16
 (epstopdf)                    size: 312171 bytes
@@ -2912,15 +2304,15 @@ eps-converted-to.pdf Chapter3-figures/strong-c.eps>
 (epstopdf)             \includegraphics on input line 666.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2129, 171.64125pt x 171.641
+<Chapter3-figures/strong-c-eps-converted-to.pdf, id=2417, 171.64125pt x 171.641
 25pt>
 File: Chapter3-figures/strong-c-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/strong-c-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/strong-c-eps-converted-to.pdf used on
  input line 666.
 (pdftex.def)             Requested size: 111.56548pt x 111.56548pt.
- [48 <./Chapter3-figures/wilson-L-eps-converted-to.pdf> <./Chapter3-figures/str
-ong-c-eps-converted-to.pdf>] [49]
+ [50 <./Chapter3-figures/wilson-L-eps-converted-to.pdf> <./Chapter3-figures/str
+ong-c-eps-converted-to.pdf>] [51]
 Package epstopdf Info: Source file: <Chapter3-figures/crossover.eps>
 (epstopdf)                    date: 2016-06-16 11:57:02
 (epstopdf)                    size: 108243 bytes
@@ -2933,14 +2325,14 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 792.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/crossover-eps-converted-to.pdf, id=2152, 597.23125pt x 845.15
+<Chapter3-figures/crossover-eps-converted-to.pdf, id=2441, 597.23125pt x 845.15
 75pt>
 File: Chapter3-figures/crossover-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/crossover-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/crossover-eps-converted-to.pdf used o
 n input line 792.
 (pdftex.def)             Requested size: 179.17075pt x 253.54921pt.
- [50 <./Chapter3-figures/crossover-eps-converted-to.pdf>]
+ [52 <./Chapter3-figures/crossover-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Chapter3-figures/running-g.eps>
 (epstopdf)                    date: 2016-06-18 17:47:19
 (epstopdf)                    size: 171096 bytes
@@ -2953,14 +2345,14 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 861.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/running-g-eps-converted-to.pdf, id=2181, 578.16pt x 374.39874
+<Chapter3-figures/running-g-eps-converted-to.pdf, id=2469, 578.16pt x 374.39874
 pt>
 File: Chapter3-figures/running-g-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/running-g-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/running-g-eps-converted-to.pdf used o
 n input line 861.
 (pdftex.def)             Requested size: 260.16959pt x 168.47787pt.
- [51 <./Chapter3-figures/running-g-eps-converted-to.pdf>] [52]
+ [53 <./Chapter3-figures/running-g-eps-converted-to.pdf>] [54]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 6.65994pt on input line 1021.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
@@ -2969,7 +2361,7 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 Overfull \vbox (0.34329pt too high) has occurred while \output is active []
 
 
-[53]
+[55]
 Package epstopdf Info: Source file: <Chapter3-figures/auto.eps>
 (epstopdf)                    date: 2016-06-26 17:14:32
 (epstopdf)                    size: 2370805 bytes
@@ -2982,14 +2374,14 @@ converted-to.pdf Chapter3-figures/auto.eps>
 (epstopdf)             \includegraphics on input line 1060.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/auto-eps-converted-to.pdf, id=2261, 974.64125pt x 406.51875pt
+<Chapter3-figures/auto-eps-converted-to.pdf, id=2549, 974.64125pt x 406.51875pt
 >
 File: Chapter3-figures/auto-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/auto-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/auto-eps-converted-to.pdf used on inp
 ut line 1060.
 (pdftex.def)             Requested size: 360.61162pt x 150.40958pt.
- [54 <./Chapter3-figures/auto-eps-converted-to.pdf>] [55]
+ [56 <./Chapter3-figures/auto-eps-converted-to.pdf>] [57]
 Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
 
  []
@@ -2999,7 +2391,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1223--1232
 
  []
 
-[56]
+[58]
 Package epstopdf Info: Source file: <Chapter3-figures/QQbar-pot.eps>
 (epstopdf)                    date: 2004-08-05 05:45:16
 (epstopdf)                    size: 392511 bytes
@@ -3012,14 +2404,14 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1303.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2318, 475.7775pt x 394.473
+<Chapter3-figures/QQbar-pot-eps-converted-to.pdf, id=2606, 475.7775pt x 394.473
 75pt>
 File: Chapter3-figures/QQbar-pot-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/QQbar-pot-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/QQbar-pot-eps-converted-to.pdf used o
 n input line 1303.
 (pdftex.def)             Requested size: 237.88815pt x 197.23639pt.
- [57]
+ [59]
 Package epstopdf Info: Source file: <Chapter3-figures/effective-mass.eps>
 (epstopdf)                    date: 2008-07-11 21:35:59
 (epstopdf)                    size: 215188 bytes
@@ -3032,7 +2424,7 @@ ted-to.pdf>
 (epstopdf)             \includegraphics on input line 1378.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2339, 674.52pt x 477.
+<Chapter3-figures/effective-mass-eps-converted-to.pdf, id=2627, 674.52pt x 477.
 785pt>
 File: Chapter3-figures/effective-mass-eps-converted-to.pdf Graphic file (type p
 df)
@@ -3052,7 +2444,7 @@ g-eps-converted-to.pdf Chapter3-figures/NO_scaling.eps>
 (epstopdf)             \includegraphics on input line 1379.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2340, 758.835pt x 509.905
+<Chapter3-figures/NO_scaling-eps-converted-to.pdf, id=2628, 758.835pt x 509.905
 pt>
 File: Chapter3-figures/NO_scaling-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/NO_scaling-eps-converted-to.pdf>
@@ -3071,16 +2463,16 @@ ps-converted-to.pdf Chapter3-figures/pn-mass.eps>
 (epstopdf)             \includegraphics on input line 1408.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2345, 1165.35374pt x 731.733
+<Chapter3-figures/pn-mass-eps-converted-to.pdf, id=2633, 1165.35374pt x 731.733
 75pt>
 File: Chapter3-figures/pn-mass-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/pn-mass-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/pn-mass-eps-converted-to.pdf used on 
 input line 1408.
 (pdftex.def)             Requested size: 233.06662pt x 146.34415pt.
- [58 <./Chapter3-figures/QQbar-pot-eps-converted-to.pdf>] [59 <./Chapter3-figur
+ [60 <./Chapter3-figures/QQbar-pot-eps-converted-to.pdf>] [61 <./Chapter3-figur
 es/effective-mass-eps-converted-to.pdf> <./Chapter3-figures/NO_scaling-eps-conv
-erted-to.pdf> <./Chapter3-figures/pn-mass-eps-converted-to.pdf>] [60]
+erted-to.pdf> <./Chapter3-figures/pn-mass-eps-converted-to.pdf>] [62]
 Package epstopdf Info: Source file: <Chapter3-figures/Vc_27_npa2.eps>
 (epstopdf)                    date: 2016-06-21 09:08:22
 (epstopdf)                    size: 1055499 bytes
@@ -3093,7 +2485,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 1564.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2426, 361.35pt x 252.945p
+<Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf, id=2715, 361.35pt x 252.945p
 t>
 File: Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf>
@@ -3112,7 +2504,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vc_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1565.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2427, 361.35pt x 252.945
+<Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf, id=2716, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vc_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3132,7 +2524,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 1566.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2428, 361.35pt x 252.945pt
+<Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf, id=2717, 361.35pt x 252.945pt
 >
 File: Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/Vc_1_npa2-eps-converted-to.pdf>
@@ -3151,7 +2543,7 @@ a2-eps-converted-to.pdf Chapter3-figures/Vt_10s_npa2.eps>
 (epstopdf)             \includegraphics on input line 1567.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2429, 361.35pt x 252.945
+<Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf, id=2718, 361.35pt x 252.945
 pt>
 File: Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3159,7 +2551,7 @@ File: Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf used
  on input line 1567.
 (pdftex.def)             Requested size: 198.74312pt x 139.12018pt.
- [61 <./Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf> <./Chapter3-figures/V
+ [63 <./Chapter3-figures/Vc_27_npa2-eps-converted-to.pdf> <./Chapter3-figures/V
 c_10s_npa2-eps-converted-to.pdf> <./Chapter3-figures/Vc_1_npa2-eps-converted-to
 .pdf> <./Chapter3-figures/Vt_10s_npa2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Chapter3-figures/phase-shift.eps>
@@ -3174,7 +2566,7 @@ ft-eps-converted-to.pdf Chapter3-figures/phase-shift.eps>
 (epstopdf)             \includegraphics on input line 1607.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2500, 882.29625pt x 646.
+<Chapter3-figures/phase-shift-eps-converted-to.pdf, id=2788, 882.29625pt x 646.
 415pt>
 File: Chapter3-figures/phase-shift-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3194,7 +2586,7 @@ atter-eps-converted-to.pdf Chapter3-figures/neutron-matter.eps>
 (epstopdf)             \includegraphics on input line 1608.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2501, 592.2125pt x 71
+<Chapter3-figures/neutron-matter-eps-converted-to.pdf, id=2789, 592.2125pt x 71
 5.67375pt>
 File: Chapter3-figures/neutron-matter-eps-converted-to.pdf Graphic file (type p
 df)
@@ -3202,8 +2594,8 @@ df)
 Package pdftex.def Info: Chapter3-figures/neutron-matter-eps-converted-to.pdf u
 sed on input line 1608.
 (pdftex.def)             Requested size: 159.8995pt x 193.23448pt.
- [62 <./Chapter3-figures/phase-shift-eps-converted-to.pdf> <./Chapter3-figures/
-neutron-matter-eps-converted-to.pdf>] [63] [64] [65]
+ [64 <./Chapter3-figures/phase-shift-eps-converted-to.pdf> <./Chapter3-figures/
+neutron-matter-eps-converted-to.pdf>] [65] [66] [67]
 Package epstopdf Info: Source file: <Chapter3-figures/char-c.eps>
 (epstopdf)                    date: 2016-06-19 04:23:16
 (epstopdf)                    size: 991404 bytes
@@ -3216,14 +2608,14 @@ s-converted-to.pdf Chapter3-figures/char-c.eps>
 (epstopdf)             \includegraphics on input line 2008.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/char-c-eps-converted-to.pdf, id=2587, 479.7925pt x 345.29pt>
+<Chapter3-figures/char-c-eps-converted-to.pdf, id=2875, 479.7925pt x 345.29pt>
 File: Chapter3-figures/char-c-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter3-figures/char-c-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/char-c-eps-converted-to.pdf used on i
 nput line 2008.
 (pdftex.def)             Requested size: 167.92987pt x 120.8533pt.
- [66]
+ [68]
 Package epstopdf Info: Source file: <Chapter3-figures/leapfrog.eps>
 (epstopdf)                    date: 2016-06-26 09:35:06
 (epstopdf)                    size: 1717306 bytes
@@ -3236,144 +2628,75 @@ eps-converted-to.pdf Chapter3-figures/leapfrog.eps>
 (epstopdf)             \includegraphics on input line 2065.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2608, 934.49126pt x 307.147
+<Chapter3-figures/leapfrog-eps-converted-to.pdf, id=2896, 934.49126pt x 307.147
 5pt>
 File: Chapter3-figures/leapfrog-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter3-figures/leapfrog-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter3-figures/leapfrog-eps-converted-to.pdf used on
  input line 2065.
 (pdftex.def)             Requested size: 280.34953pt x 92.14496pt.
- [67 <./Chapter3-figures/char-c-eps-converted-to.pdf>]) [68 <./Chapter3-figures
+ [69 <./Chapter3-figures/char-c-eps-converted-to.pdf>]) [70 <./Chapter3-figures
 /leapfrog-eps-converted-to.pdf>]
 \openout2 = `chapter4.aux'.
 
- (./chapter4.tex
-
-LaTeX Warning: Citation `Wilson-83' on page 69 undefined on input line 239.
-
-
-LaTeX Warning: Citation `Lepage-89' on page 69 undefined on input line 241.
-
-
-LaTeX Warning: Citation `Weinberg:1978kz' on page 69 undefined on input line 24
-2.
-
-
-LaTeX Warning: Citation `Kaplan:1995uv' on page 69 undefined on input line 264.
-
-
-
-LaTeX Warning: Citation `Kaplan:2005es' on page 69 undefined on input line 264.
-
-
-[69
+ (./chapter4.tex [71
 
 
 
 
 
 ]
-<Chapter4-figures/BosonContact-2body-simple.pdf, id=2645, 224.84pt x 58.2175pt>
+<Chapter4-figures/BosonContact-2body-simple.pdf, id=2943, 224.84pt x 58.2175pt>
 File: Chapter4-figures/BosonContact-2body-simple.pdf Graphic file (type pdf)
 <use Chapter4-figures/BosonContact-2body-simple.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
  input line 298.
 (pdftex.def)             Requested size: 227.62204pt x 58.94043pt.
-
-
-LaTeX Warning: Citation `Weinberg:1978kz' on page 70 undefined on input line 31
-9.
-
-
-LaTeX Warning: Citation `Gasser:1983yg' on page 70 undefined on input line 353.
-
-
-
-LaTeX Warning: Citation `Gasser:1984gg' on page 70 undefined on input line 353.
-
-
-[70 <./Chapter4-figures/BosonContact-2body-simple.pdf>] [71]
+ [72 <./Chapter4-figures/BosonContact-2body-simple.pdf>] [73]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 5.39996pt on input line 506.
- [72]
-<Chapter4-figures/BosonContact-2body.pdf, id=2701, 249.93375pt x 62.2325pt>
+ [74]
+<Chapter4-figures/BosonContact-2body.pdf, id=3005, 249.93375pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-2body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-2body.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body.pdf used on input 
 line 520.
 (pdftex.def)             Requested size: 318.43968pt x 79.29837pt.
-
-
-LaTeX Warning: Citation `Donoghue:1992' on page 73 undefined on input line 528.
-
-
-[73 <./Chapter4-figures/BosonContact-2body.pdf>]
-<Chapter4-figures/BosonContact-3body.pdf, id=2740, 334.24875pt x 62.2325pt>
+ [75 <./Chapter4-figures/BosonContact-2body.pdf>]
+<Chapter4-figures/BosonContact-3body.pdf, id=3046, 334.24875pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-3body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-3body.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-3body.pdf used on input 
 line 627.
 (pdftex.def)             Requested size: 360.9009pt x 67.20059pt.
- [74 <./Chapter4-figures/BosonContact-3body.pdf>] [75]
-
-LaTeX Warning: Citation `Donoghue:1992' on page 76 undefined on input line 785.
-
-
-[76] [77] [78] [79] [80] [81]
+ [76 <./Chapter4-figures/BosonContact-3body.pdf>] [77] [78] [79] [80] [81] [82]
+ [83]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 4.49997pt on input line 1352.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1352.
-
-
-LaTeX Warning: Citation `Hagen:2014' on page 82 undefined on input line 1371.
-
-[82] [83] [84]
+ [84] [85] [86]
 Missing character: There is no ã in font zptmcm7t!
 Missing character: There is no € in font zptmcm7t!
 Missing character: There is no € in font zptmcm7t!
- [85] [86]
-
-LaTeX Warning: Citation `Braaten:2004rn' on page 87 undefined on input line 167
-9.
-
-
-LaTeX Warning: Citation `Beane:2000fx' on page 87 undefined on input line 1682.
-
-
-
-LaTeX Warning: Citation `Bertulani:2002sz' on page 87 undefined on input line 1
-682.
-
-
-LaTeX Warning: Citation `Bedaque:2003wa' on page 87 undefined on input line 168
-2.
-
-[87] <Chapter4-figures/fig_2bdypert.pdf, id=2962, 482.80376pt x 59.22125pt>
+ [87] [88]
+[89] <Chapter4-figures/fig_2bdypert.pdf, id=3276, 482.80376pt x 59.22125pt>
 File: Chapter4-figures/fig_2bdypert.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_2bdypert.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_2bdypert.pdf used on input line 1
 794.
 (pdftex.def)             Requested size: 312.9803pt x 38.39214pt.
- [88pdfTeX warning (ext4): destination with the same identifier (name{equation.
+ [90pdfTeX warning (ext4): destination with the same identifier (name{equation.
 4.79}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1827 \end{equation}
-                      <./Chapter4-figures/fig_2bdypert.pdf>]
-
-LaTeX Warning: Citation `vanKolck:1998bw' on page 89 undefined on input line 19
-01.
-
-
-LaTeX Warning: Citation `Kaplan:1998we' on page 89 undefined on input line 1901
-.
-
-[89] <Chapter4-figures/fig_feynC0int.pdf, id=3019, 275.0275pt x 59.22125pt>
+                      <./Chapter4-figures/fig_2bdypert.pdf>] [91]
+<Chapter4-figures/fig_feynC0int.pdf, id=3337, 275.0275pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC0int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC0int.pdf>
@@ -3381,166 +2704,85 @@ Package pdftex.def Info: Chapter4-figures/fig_feynC0int.pdf used on input line
 1937.
 (pdftex.def)             Requested size: 184.9429pt x 39.8244pt.
 
-<Chapter4-figures/fig_feynC2int.pdf, id=3029, 470.75874pt x 59.22125pt>
+<Chapter4-figures/fig_feynC2int.pdf, id=3347, 470.75874pt x 59.22125pt>
 File: Chapter4-figures/fig_feynC2int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC2int.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feynC2int.pdf used on input line 
 1995.
 (pdftex.def)             Requested size: 341.43306pt x 42.9519pt.
- [90 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.p
+ [92 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.p
 df>]
-
-LaTeX Warning: Citation `Kaplan:1996nv' on page 91 undefined on input line 2029
-.
-
-<Chapter4-figures/fig_feynDimer.pdf, id=3080, 460.72125pt x 88.33pt>
+<Chapter4-figures/fig_feynDimer.pdf, id=3400, 460.72125pt x 88.33pt>
 File: Chapter4-figures/fig_feynDimer.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynDimer.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feynDimer.pdf used on input line 
 2071.
 (pdftex.def)             Requested size: 341.43306pt x 65.45886pt.
- [91 <./Chapter4-figures/fig_feynDimer.pdf>]
-
-LaTeX Warning: Citation `Skorniakov:1957aa' on page 92 undefined on input line 
-2159.
-
-
+ [93 <./Chapter4-figures/fig_feynDimer.pdf>]
 Overfull \hbox (13.88416pt too wide) in paragraph at lines 2157--2163
 []\T1/fve/m/n/10 Omitting the three-body in-ter-ac-tion, this is ex-actly the w
 ell-known Skorniakov-Ter-Martirosian
  []
 
-[92] <Chapter4-figures/fig_feyn8c.pdf, id=3136, 359.3425pt x 151.56625pt>
+[94] <Chapter4-figures/fig_feyn8c.pdf, id=3458, 359.3425pt x 151.56625pt>
 File: Chapter4-figures/fig_feyn8c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn8c.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feyn8c.pdf used on input line 217
 9.
 (pdftex.def)             Requested size: 256.0748pt x 108.0175pt.
- [93 <./Chapter4-figures/fig_feyn8c.pdf>]
-
-LaTeX Warning: Citation `Skorniakov:1957aa' on page 94 undefined on input line 
-2248.
-
-
-LaTeX Warning: Citation `Danilov:1961aa' on page 94 undefined on input line 225
-0.
-
-
-LaTeX Warning: Citation `Kharchenko:1973aa' on page 94 undefined on input line 
-2256.
-
-
-LaTeX Warning: Citation `Bedaque:1998kg' on page 94 undefined on input line 225
-9.
-
-
-LaTeX Warning: Citation `Efimov:1970aa' on page 94 undefined on input line 2345
-.
-
-[94] <Chapter4-figures/fig_feyn9c.pdf, id=3179, 432.61626pt x 61.22874pt>
+ [95 <./Chapter4-figures/fig_feyn8c.pdf>]
+[96] <Chapter4-figures/fig_feyn9c.pdf, id=3509, 432.61626pt x 61.22874pt>
 File: Chapter4-figures/fig_feyn9c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn9c.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feyn9c.pdf used on input line 238
 3.
 (pdftex.def)             Requested size: 312.9803pt x 44.29858pt.
- [95 <./Chapter4-figures/fig_feyn9c.pdf>]
-
-LaTeX Warning: Citation `Danilov:1961aa' on page 96 undefined on input line 252
-8.
-
-[96]
-
-LaTeX Warning: Citation `Bedaque:1998kg' on page 97 undefined on input line 256
-8.
-
-
-LaTeX Warning: Citation `Bedaque:1998kg' on page 97 undefined on input line 260
-0.
-
-
-LaTeX Warning: Citation `Braaten:2011sz' on page 97 undefined on input line 261
-5.
-
-
-LaTeX Warning: Citation `Efimov:1970aa' on page 97 undefined on input line 2625
-.
-
-[97]
-
-LaTeX Warning: Citation `Braaten:2004rn' on page 98 undefined on input line 263
-6.
-
-
-LaTeX Warning: Citation `Ferlaino:2010viw' on page 98 undefined on input line 2
-643.
-
-
-LaTeX Warning: Citation `PhysRevA.93.022707' on page 98 undefined on input line
- 2643.
-
-<Chapter4-figures/B3LecNote.pdf, id=3247, 522.95375pt x 368.37625pt>
+ [97 <./Chapter4-figures/fig_feyn9c.pdf>]
+[98] [99] <Chapter4-figures/B3LecNote.pdf, id=3588, 522.95375pt x 368.37625pt>
 File: Chapter4-figures/B3LecNote.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/B3LecNote.pdf>
 Package pdftex.def Info: Chapter4-figures/B3LecNote.pdf used on input line 2648
 .
 (pdftex.def)             Requested size: 227.62204pt x 160.34354pt.
-
-
-LaTeX Warning: Citation `Bedaque:1998km' on page 98 undefined on input line 268
-6.
-
-[98 <./Chapter4-figures/B3LecNote.pdf>] [99]
-<Chapter4-figures/C0-Vertex.pdf, id=3286, 72.27pt x 58.2175pt>
+ [100 <./Chapter4-figures/B3LecNote.pdf>]
+[101] <Chapter4-figures/C0-Vertex.pdf, id=3630, 72.27pt x 58.2175pt>
 File: Chapter4-figures/C0-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/C0-Vertex.pdf>
 Package pdftex.def Info: Chapter4-figures/C0-Vertex.pdf used on input line 2809
 .
 (pdftex.def)             Requested size: 58.4996pt x 47.1248pt.
- [100 <./Chapter4-figures/C0-Vertex.pdf>]
-[101] <Chapter4-figures/nd-IntEq-Q.pdf, id=3326, 189.70876pt x 34.1275pt>
+ [102 <./Chapter4-figures/C0-Vertex.pdf>]
+[103] <Chapter4-figures/nd-IntEq-Q.pdf, id=3670, 189.70876pt x 34.1275pt>
 File: Chapter4-figures/nd-IntEq-Q.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-Q.pdf>
 Package pdftex.def Info: Chapter4-figures/nd-IntEq-Q.pdf used on input line 300
 8.
 (pdftex.def)             Requested size: 212.29312pt x 38.19127pt.
- [102] [103 <./Chapter4-figures/nd-IntEq-Q.pdf>] <Chapter4-figures/nd-IntEq-D.p
-df, id=3367, 283.0575pt x 80.3pt>
+ [104] [105 <./Chapter4-figures/nd-IntEq-Q.pdf>] <Chapter4-figures/nd-IntEq-D.p
+df, id=3712, 283.0575pt x 80.3pt>
 File: Chapter4-figures/nd-IntEq-D.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-D.pdf>
 Package pdftex.def Info: Chapter4-figures/nd-IntEq-D.pdf used on input line 309
 9.
 (pdftex.def)             Requested size: 275.97845pt x 78.29768pt.
-
-
-LaTeX Warning: Citation `Konig:2014ufa' on page 104 undefined on input line 311
-3.
-
-[104 <./Chapter4-figures/nd-IntEq-D.pdf>]
-
-LaTeX Warning: Citation `Bedaque:1999ve' on page 105 undefined on input line 31
-69.
-
-[105] <Chapter4-figures/Phillips.pdf, id=3415, 392.46625pt x 279.0425pt>
+ [106 <./Chapter4-figures/nd-IntEq-D.pdf>] [107] <Chapter4-figures/Phillips.pdf
+, id=3763, 392.46625pt x 279.0425pt>
 File: Chapter4-figures/Phillips.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Phillips.pdf>
 Package pdftex.def Info: Chapter4-figures/Phillips.pdf used on input line 3253.
 
 (pdftex.def)             Requested size: 275.97845pt x 196.23106pt.
- [106 <./Chapter4-figures/Phillips.pdf>]
-
-LaTeX Warning: Citation `Peskin:1995' on page 107 undefined on input line 3346.
-
-
-<Chapter4-figures/Photon-Vertex-0.pdf, id=3442, 140.525pt x 54.2025pt>
+ [108 <./Chapter4-figures/Phillips.pdf>]
+<Chapter4-figures/Photon-Vertex-0.pdf, id=3791, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-0.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-0.pdf>
@@ -3552,8 +2794,8 @@ Overfull \hbox (8.99994pt too wide) in paragraph at lines 3387--3387
 [][] 
  []
 
-[107 <./Chapter4-figures/Photon-Vertex-0.pdf>]
-<Chapter4-figures/OnePhotonExchange.pdf, id=3470, 30.1125pt x 29.10875pt>
+[109 <./Chapter4-figures/Photon-Vertex-0.pdf>]
+<Chapter4-figures/OnePhotonExchange.pdf, id=3820, 30.1125pt x 29.10875pt>
 File: Chapter4-figures/OnePhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/OnePhotonExchange.pdf>
@@ -3561,7 +2803,7 @@ Package pdftex.def Info: Chapter4-figures/OnePhotonExchange.pdf used on input l
 ine 3428.
 (pdftex.def)             Requested size: 47.4876pt x 45.89969pt.
 
-<Chapter4-figures/TwoPhotonExchange.pdf, id=3472, 50.1875pt x 29.10875pt>
+<Chapter4-figures/TwoPhotonExchange.pdf, id=3822, 50.1875pt x 29.10875pt>
 File: Chapter4-figures/TwoPhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/TwoPhotonExchange.pdf>
@@ -3569,16 +2811,16 @@ Package pdftex.def Info: Chapter4-figures/TwoPhotonExchange.pdf used on input l
 ine 3434.
 (pdftex.def)             Requested size: 79.14603pt x 45.89969pt.
 
-<Chapter4-figures/SinglePhotonBubble.pdf, id=3474, 78.2925pt x 34.1275pt>
+<Chapter4-figures/SinglePhotonBubble.pdf, id=3824, 78.2925pt x 34.1275pt>
 File: Chapter4-figures/SinglePhotonBubble.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/SinglePhotonBubble.pdf>
 Package pdftex.def Info: Chapter4-figures/SinglePhotonBubble.pdf used on input 
 line 3457.
 (pdftex.def)             Requested size: 106.14656pt x 46.27058pt.
- [108 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonE
+ [110 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonE
 xchange.pdf> <./Chapter4-figures/SinglePhotonBubble.pdf>]
-<Chapter4-figures/Photon-Vertex-trans.pdf, id=3493, 140.525pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-trans.pdf, id=3845, 140.525pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-trans.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-trans.pdf>
@@ -3590,16 +2832,16 @@ Overfull \hbox (8.99994pt too wide) in paragraph at lines 3501--3501
 [][] 
  []
 
-<Chapter4-figures/Photon-Prop-gauge.pdf, id=3497, 75.28125pt x 22.0825pt>
+<Chapter4-figures/Photon-Prop-gauge.pdf, id=3849, 75.28125pt x 22.0825pt>
 File: Chapter4-figures/Photon-Prop-gauge.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Prop-gauge.pdf>
 Package pdftex.def Info: Chapter4-figures/Photon-Prop-gauge.pdf used on input l
 ine 3519.
 (pdftex.def)             Requested size: 69.74953pt x 20.46169pt.
- [109 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-P
+ [111 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-P
 rop-gauge.pdf>]
-<Chapter4-figures/Photon-Vertex-mag.pdf, id=3527, 84.315pt x 54.2025pt>
+<Chapter4-figures/Photon-Vertex-mag.pdf, id=3878, 84.315pt x 54.2025pt>
 File: Chapter4-figures/Photon-Vertex-mag.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-mag.pdf>
@@ -3607,7 +2849,7 @@ Package pdftex.def Info: Chapter4-figures/Photon-Vertex-mag.pdf used on input l
 ine 3561.
 (pdftex.def)             Requested size: 71.99951pt x 46.28654pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3530, 176.66pt x 108.405pt>
+<Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3881, 176.66pt x 108.405pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf>
@@ -3615,107 +2857,37 @@ Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf used on in
 put line 3587.
 (pdftex.def)             Requested size: 149.6064pt x 91.79938pt.
 
-<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3532, 152.57pt x 103.38625pt>
+<Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3883, 152.57pt x 103.38625pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf Graphic file (type pdf)
 <use Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf used on i
 nput line 3592.
 (pdftex.def)             Requested size: 135.47491pt x 91.79938pt.
- [110 <./Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf> <./Chapter4-figures/DeutB
+ [112 <./Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf> <./Chapter4-figures/DeutB
 reakup-IA-kin-NNcm.pdf> <./Chapter4-figures/Photon-Vertex-mag.pdf>]
 
-LaTeX Warning: Reference `sec:Dibaryons' on page 111 undefined on input line 36
+LaTeX Warning: Reference `sec:Dibaryons' on page 113 undefined on input line 36
 34.
 
-<Chapter4-figures/Deuteron-Vertex.pdf, id=3580, 66.2475pt x 61.22874pt>
+<Chapter4-figures/Deuteron-Vertex.pdf, id=3930, 66.2475pt x 61.22874pt>
 File: Chapter4-figures/Deuteron-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Deuteron-Vertex.pdf>
 Package pdftex.def Info: Chapter4-figures/Deuteron-Vertex.pdf used on input lin
 e 3638.
 (pdftex.def)             Requested size: 53.99963pt x 49.9089pt.
-
-
-LaTeX Warning: Citation `Weinberg:1990rz' on page 111 undefined on input line 3
-707.
-
-
-LaTeX Warning: Citation `Weinberg:1991um' on page 111 undefined on input line 3
-707.
-
-[111 <./Chapter4-figures/Deuteron-Vertex.pdf>]
-
-LaTeX Warning: Citation `Kaplan:1996xu' on page 112 undefined on input line 371
-9.
-
-
-LaTeX Warning: Citation `Kaplan:1998we' on page 112 undefined on input line 371
-9.
-
-
-LaTeX Warning: Citation `Kaplan:1998tg' on page 112 undefined on input line 371
-9.
-
-
-LaTeX Warning: Citation `Fleming:1999ee' on page 112 undefined on input line 37
-23.
-
-
-LaTeX Warning: Citation `Beane:2000fx' on page 112 undefined on input line 3730
-.
-
-
-LaTeX Warning: Citation `Bedaque:2002mn' on page 112 undefined on input line 37
-30.
-
-
-LaTeX Warning: Citation `Nogga:2005hy' on page 112 undefined on input line 3730
-.
-
-
-LaTeX Warning: Citation `Birse:2005um' on page 112 undefined on input line 3730
-.
-
-
-LaTeX Warning: Citation `Epelbaum:2008ga' on page 112 undefined on input line 3
-730.
-
-
-LaTeX Warning: Citation `Machleidt:2011zz' on page 112 undefined on input line 
-3730.
-
-
-LaTeX Warning: Citation `Epelbaum:2006pt' on page 112 undefined on input line 3
-730.
-
-
-LaTeX Warning: Citation `Hammer:2012id' on page 112 undefined on input line 373
-0.
-
-
-LaTeX Warning: Citation `Long:2016vnq' on page 112 undefined on input line 3730
-.
-
-
-LaTeX Warning: Citation `Scherer:2012xha' on page 112 undefined on input line 3
-736.
-
-
-LaTeX Warning: Citation `Scherer:2012xha' on page 112 undefined on input line 3
-741.
-
-
-LaTeX Warning: Citation `Scherer:2012xha' on page 112 undefined on input line 3
-787.
-
-[112] (./chapter4.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 9.
-
-)) [113]
+ [113 <./Chapter4-figures/Deuteron-Vertex.pdf>] [114] (./chapter4.bbl [115])) [
+116]
 \openout2 = `chapter5.aux'.
 
- (./chapter5.tex [114
+ (./chapter5.tex
+
+LaTeX Warning: Citation `EKLN1' on page 117 undefined on input line 20.
+
+
+LaTeX Warning: Citation `EKLN4' on page 117 undefined on input line 20.
+
+[117
 
 
 
@@ -3723,1261 +2895,889 @@ LaTeX Warning: Empty `thebibliography' environment on input line 9.
 
 ]
 
-LaTeX Warning: Citation `EKLN1' on page 115 undefined on input line 19.
-
-
-LaTeX Warning: Citation `EKLN4' on page 115 undefined on input line 19.
-
-[115]
-
-LaTeX Warning: Citation `Lepage:1989hd' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Lepage:1989hd' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Berkowitz:2015eaa' on page 116 undefined on input line
- 36.
+LaTeX Warning: Citation `Berkowitz:2015eaa' on page 118 undefined on input line
+ 37.
 
 
-LaTeX Warning: Citation `Kurth:2015cvl' on page 116 undefined on input line 36.
-
-
-
-LaTeX Warning: Citation `Nicholson:2015pys' on page 116 undefined on input line
- 36.
-
-
-LaTeX Warning: Citation `Orginos:2015aya' on page 116 undefined on input line 3
-6.
-
-
-LaTeX Warning: Citation `Detmold:2015daa' on page 116 undefined on input line 3
-6.
-
-
-LaTeX Warning: Citation `Chang:2015qxa' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Kurth:2015cvl' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Beane:2015yha' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Nicholson:2015pys' on page 118 undefined on input line
+ 37.
+
+
+LaTeX Warning: Citation `Orginos:2015aya' on page 118 undefined on input line 3
+7.
+
+
+LaTeX Warning: Citation `Detmold:2015daa' on page 118 undefined on input line 3
+7.
+
+
+LaTeX Warning: Citation `Chang:2015qxa' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Beane:2014sda' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2015yha' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Beane:2014ora' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2014sda' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Beane:2013br' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2014ora' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Beane:2012vq' on page 116 undefined on input line 36.
+
+LaTeX Warning: Citation `Beane:2013br' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Beane:2011iw' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2012vq' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Beane:2009py' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2011iw' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Yamazaki:2015vjn' on page 116 undefined on input line 
-36.
+LaTeX Warning: Citation `Beane:2009py' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Yamazaki:2015asa' on page 116 undefined on input line 
-36.
+LaTeX Warning: Citation `Yamazaki:2015vjn' on page 118 undefined on input line 
+37.
 
 
-LaTeX Warning: Citation `Yamazaki:2013rna' on page 116 undefined on input line 
-36.
+LaTeX Warning: Citation `Yamazaki:2015asa' on page 118 undefined on input line 
+37.
 
 
-LaTeX Warning: Citation `Yamazaki:2012fn' on page 116 undefined on input line 3
-6.
+LaTeX Warning: Citation `Yamazaki:2013rna' on page 118 undefined on input line 
+37.
 
 
-LaTeX Warning: Citation `Yamazaki:2012hi' on page 116 undefined on input line 3
-6.
+LaTeX Warning: Citation `Yamazaki:2012fn' on page 118 undefined on input line 3
+7.
 
 
-LaTeX Warning: Citation `Doi:2015uvd' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Yamazaki:2012hi' on page 118 undefined on input line 3
+7.
 
 
-LaTeX Warning: Citation `Doi:2015oha' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Doi:2015uvd' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Ishii:2006ec' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Doi:2015oha' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Murano:2013xxa' on page 116 undefined on input line 36
+LaTeX Warning: Citation `Ishii:2006ec' on page 118 undefined on input line 37.
+
+
+LaTeX Warning: Citation `Murano:2013xxa' on page 118 undefined on input line 37
 .
 
 
-LaTeX Warning: Citation `Aoki:2014mia' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Aoki:2014mia' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Murano:2013gta' on page 116 undefined on input line 36
+LaTeX Warning: Citation `Murano:2013gta' on page 118 undefined on input line 37
 .
 
 
-LaTeX Warning: Citation `HALQCD:2012aa' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `HALQCD:2012aa' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Inoue:2010hs' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Inoue:2010hs' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Beane:2009gs' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2009gs' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Beane:2012vq' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2012vq' on page 118 undefined on input line 37.
 
 
-LaTeX Warning: Citation `Beane:2014ora' on page 116 undefined on input line 36.
-
-
-
-LaTeX Warning: Citation `Beane:2014sda' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2014ora' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Chang:2015qxa' on page 116 undefined on input line 36.
+LaTeX Warning: Citation `Beane:2014sda' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Yamazaki:2015vjn' on page 116 undefined on input line 
-36.
-
-
-LaTeX Warning: Citation `Yamazaki:2015asa' on page 116 undefined on input line 
-36.
-
-
-LaTeX Warning: Citation `Yamazaki:2013rna' on page 116 undefined on input line 
-36.
-
-
-LaTeX Warning: Citation `Yamazaki:2012fn' on page 116 undefined on input line 3
-6.
-
-
-LaTeX Warning: Citation `Yamazaki:2012hi' on page 116 undefined on input line 3
-6.
-
-
-LaTeX Warning: Citation `Doi:2011gq' on page 116 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Weinberg:1990rz' on page 116 undefined on input line 4
-4.
-
-
-LaTeX Warning: Citation `Weinberg:1991um' on page 116 undefined on input line 4
-4.
-
-
-LaTeX Warning: Citation `Kaplan:1996xu' on page 116 undefined on input line 44.
+LaTeX Warning: Citation `Chang:2015qxa' on page 118 undefined on input line 37.
 
 
 
-LaTeX Warning: Citation `Kaplan:1998tg' on page 116 undefined on input line 44.
+LaTeX Warning: Citation `Yamazaki:2015vjn' on page 118 undefined on input line 
+37.
 
 
-
-LaTeX Warning: Citation `Kaplan:1998we' on page 116 undefined on input line 44.
-
-
-
-LaTeX Warning: Citation `Epelbaum:2008ga' on page 116 undefined on input line 4
-4.
+LaTeX Warning: Citation `Yamazaki:2015asa' on page 118 undefined on input line 
+37.
 
 
-LaTeX Warning: Citation `Epelbaum:2010nr' on page 116 undefined on input line 4
-4.
+LaTeX Warning: Citation `Yamazaki:2013rna' on page 118 undefined on input line 
+37.
 
 
-LaTeX Warning: Citation `Machleidt:2011zz' on page 116 undefined on input line 
-44.
-
-[116]
-
-LaTeX Warning: Citation `Kaplan:2005es' on page 117 undefined on input line 46.
+LaTeX Warning: Citation `Yamazaki:2012fn' on page 118 undefined on input line 3
+7.
 
 
-[117] <Chapter5-figures/al0.png, id=3651, 385.44pt x 300.12125pt>
+LaTeX Warning: Citation `Yamazaki:2012hi' on page 118 undefined on input line 3
+7.
+
+
+LaTeX Warning: Citation `Doi:2011gq' on page 118 undefined on input line 37.
+
+
+LaTeX Warning: Citation `Epelbaum:2010nr' on page 118 undefined on input line 4
+5.
+
+[118] [119] <Chapter5-figures/al0.png, id=4042, 385.44pt x 300.12125pt>
 File: Chapter5-figures/al0.png Graphic file (type png)
 
 <use Chapter5-figures/al0.png>
-Package pdftex.def Info: Chapter5-figures/al0.png used on input line 78.
+Package pdftex.def Info: Chapter5-figures/al0.png used on input line 79.
 (pdftex.def)             Requested size: 127.37717pt x 99.17769pt.
 
-<Chapter5-figures/ae0.png, id=3653, 387.4475pt x 302.12875pt>
+<Chapter5-figures/ae0.png, id=4044, 387.4475pt x 302.12875pt>
 File: Chapter5-figures/ae0.png Graphic file (type png)
 
 <use Chapter5-figures/ae0.png>
-Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 79.
+Package pdftex.def Info: Chapter5-figures/ae0.png used on input line 80.
 (pdftex.def)             Requested size: 127.37717pt x 99.32475pt.
 
-<Chapter5-figures/ag0.png, id=3654, 383.4325pt x 300.12125pt>
+<Chapter5-figures/ag0.png, id=4045, 383.4325pt x 300.12125pt>
 File: Chapter5-figures/ag0.png Graphic file (type png)
 
 <use Chapter5-figures/ag0.png>
-Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 80.
+Package pdftex.def Info: Chapter5-figures/ag0.png used on input line 81.
 (pdftex.def)             Requested size: 127.37717pt x 99.69975pt.
 
 
-LaTeX Warning: Citation `AtomsReview1' on page 118 undefined on input line 85.
+LaTeX Warning: Citation `AtomsReview1' on page 120 undefined on input line 86.
 
 
-LaTeX Warning: Citation `AtomsReview2' on page 118 undefined on input line 85.
+LaTeX Warning: Citation `AtomsReview2' on page 120 undefined on input line 86.
 
-[118 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
-res/ag0.png>] [119]
-<Chapter5-figures/simple1.png, id=3684, 788.9475pt x 95.35625pt>
+[120 <./Chapter5-figures/al0.png> <./Chapter5-figures/ae0.png> <./Chapter5-figu
+res/ag0.png>] [121]
+<Chapter5-figures/simple1.png, id=4076, 788.9475pt x 95.35625pt>
 File: Chapter5-figures/simple1.png Graphic file (type png)
 
 <use Chapter5-figures/simple1.png>
-Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 121.
+Package pdftex.def Info: Chapter5-figures/simple1.png used on input line 122.
 (pdftex.def)             Requested size: 424.58624pt x 51.31699pt.
 
-<Chapter5-figures/loop1.png, id=3685, 893.3375pt x 191.71625pt>
+<Chapter5-figures/loop1.png, id=4077, 893.3375pt x 191.71625pt>
 File: Chapter5-figures/loop1.png Graphic file (type png)
 
 <use Chapter5-figures/loop1.png>
-Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 127.
+Package pdftex.def Info: Chapter5-figures/loop1.png used on input line 128.
 (pdftex.def)             Requested size: 424.58624pt x 91.1188pt.
 
-<Chapter5-figures/beta.pdf, id=3689, 481.8pt x 303.24593pt>
+<Chapter5-figures/beta.pdf, id=4081, 481.8pt x 303.24593pt>
 File: Chapter5-figures/beta.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/beta.pdf>
-Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 145.
+Package pdftex.def Info: Chapter5-figures/beta.pdf used on input line 146.
 (pdftex.def)             Requested size: 212.29312pt x 133.6137pt.
- [120 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>]
+ [122 <./Chapter5-figures/simple1.png> <./Chapter5-figures/loop1.png>] [123 <./
+Chapter5-figures/beta.pdf>] [124] [125] [126]
 
-LaTeX Warning: Citation `Weinberg:1990rz' on page 121 undefined on input line 1
-50.
+LaTeX Warning: Citation `Drut:2012md' on page 127 undefined on input line 282.
 
-
-LaTeX Warning: Citation `Weinberg:1991um' on page 121 undefined on input line 1
-50.
-
-
-LaTeX Warning: Citation `Kaplan:1998we' on page 121 undefined on input line 155
-.
-
-
-LaTeX Warning: Citation `Kaplan:1998tg' on page 121 undefined on input line 155
-.
-
-
-LaTeX Warning: Citation `Kaplan:1996xu' on page 121 undefined on input line 155
-.
-
-[121 <./Chapter5-figures/beta.pdf>] [122] [123] [124]
-
-LaTeX Warning: Citation `Drut:2012md' on page 125 undefined on input line 281.
-
-[125] <Chapter5-figures/dimer.png, id=3785, 905.3825pt x 206.7725pt>
+[127] <Chapter5-figures/dimer.png, id=4183, 905.3825pt x 206.7725pt>
 File: Chapter5-figures/dimer.png Graphic file (type png)
 
 <use Chapter5-figures/dimer.png>
-Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 306.
+Package pdftex.def Info: Chapter5-figures/dimer.png used on input line 307.
 (pdftex.def)             Requested size: 424.58624pt x 96.96538pt.
- [126 <./Chapter5-figures/dimer.png>]
-<Chapter5-figures/lattice.png, id=3797, 348.30125pt x 312.16624pt>
+ [128 <./Chapter5-figures/dimer.png>]
+<Chapter5-figures/lattice.png, id=4195, 348.30125pt x 312.16624pt>
 File: Chapter5-figures/lattice.png Graphic file (type png)
 
 <use Chapter5-figures/lattice.png>
-Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 326.
+Package pdftex.def Info: Chapter5-figures/lattice.png used on input line 327.
 (pdftex.def)             Requested size: 169.8319pt x 152.21019pt.
- [127 <./Chapter5-figures/lattice.png>]
-[128] [129] [130] [131] [132] [133]
+ [129 <./Chapter5-figures/lattice.png>]
+[130] [131] [132] [133] [134] [135]
 
-LaTeX Warning: Citation `Beane:2010em' on page 134 undefined on input line 552.
-
-
-
-LaTeX Warning: Citation `Detmold:2014hla' on page 134 undefined on input line 5
-52.
+LaTeX Warning: Citation `Beane:2010em' on page 136 undefined on input line 553.
 
 
-LaTeX Warning: Citation `Detmold:2014rfa' on page 134 undefined on input line 5
-52.
 
-[134] [135] [136]
-
-LaTeX Warning: Citation `Grabowska:2012ik' on page 137 undefined on input line 
-622.
+LaTeX Warning: Citation `Detmold:2014hla' on page 136 undefined on input line 5
+53.
 
 
-LaTeX Warning: Citation `Nicholson:2012xt' on page 137 undefined on input line 
-622.
+LaTeX Warning: Citation `Detmold:2014rfa' on page 136 undefined on input line 5
+53.
+
+[136] [137]
+
+LaTeX Warning: Citation `Grabowska:2012ik' on page 138 undefined on input line 
+623.
 
 
-LaTeX Warning: Citation `EKLN5' on page 137 undefined on input line 622.
+LaTeX Warning: Citation `Nicholson:2012xt' on page 138 undefined on input line 
+623.
 
-[137] <Chapter5-figures/QCDbubble.pdf, id=3930, 424.58624pt x 370.38374pt>
+
+LaTeX Warning: Citation `EKLN5' on page 138 undefined on input line 623.
+
+[138] [139]
+<Chapter5-figures/QCDbubble.pdf, id=4327, 424.58624pt x 370.38374pt>
 File: Chapter5-figures/QCDbubble.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/QCDbubble.pdf>
-Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 659.
+Package pdftex.def Info: Chapter5-figures/QCDbubble.pdf used on input line 660.
 
 (pdftex.def)             Requested size: 127.37717pt x 111.11597pt.
- [138 <./Chapter5-figures/QCDbubble.pdf>]
-<Chapter5-figures/overlap.pdf, id=3949, 481.8pt x 303.65443pt>
+ [140 <./Chapter5-figures/QCDbubble.pdf>]
+<Chapter5-figures/overlap.pdf, id=4347, 481.8pt x 303.65443pt>
 File: Chapter5-figures/overlap.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/overlap.pdf>
-Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 670.
+Package pdftex.def Info: Chapter5-figures/overlap.pdf used on input line 671.
 (pdftex.def)             Requested size: 212.29312pt x 133.79369pt.
 
 
-LaTeX Warning: Citation `BerryEsseen1' on page 139 undefined on input line 675.
+LaTeX Warning: Citation `BerryEsseen1' on page 141 undefined on input line 676.
 
 
 
-LaTeX Warning: Citation `BerryEsseen2' on page 139 undefined on input line 675.
+LaTeX Warning: Citation `BerryEsseen2' on page 141 undefined on input line 676.
 
 
-[139 <./Chapter5-figures/overlap.pdf>]
+[141 <./Chapter5-figures/overlap.pdf>]
 
-LaTeX Warning: Citation `DeGrand:2012ik' on page 140 undefined on input line 70
-1.
-
-[140]
-
-LaTeX Warning: Citation `Nicholson:2012zp' on page 141 undefined on input line 
-706.
+LaTeX Warning: Citation `DeGrand:2012ik' on page 142 undefined on input line 70
+2.
 
 
-LaTeX Warning: Citation `Nicholson:2015zxa' on page 141 undefined on input line
- 706.
+LaTeX Warning: Citation `Nicholson:2012zp' on page 142 undefined on input line 
+707.
 
-<Chapter5-figures/cumulant.png, id=3983, 491.8375pt x 321.2pt>
+
+LaTeX Warning: Citation `Nicholson:2015zxa' on page 142 undefined on input line
+ 707.
+
+[142] <Chapter5-figures/cumulant.png, id=4380, 491.8375pt x 321.2pt>
 File: Chapter5-figures/cumulant.png Graphic file (type png)
 
 <use Chapter5-figures/cumulant.png>
-Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 734.
+Package pdftex.def Info: Chapter5-figures/cumulant.png used on input line 735.
 (pdftex.def)             Requested size: 212.29312pt x 138.64262pt.
 
 
-LaTeX Warning: Citation `EKLN4' on page 141 undefined on input line 736.
+LaTeX Warning: Citation `EKLN4' on page 143 undefined on input line 737.
 
 
-LaTeX Warning: Citation `EKLN4' on page 141 undefined on input line 736.
+LaTeX Warning: Citation `EKLN4' on page 143 undefined on input line 737.
 
-[141] [142 <./Chapter5-figures/cumulant.png>] [143]
-<Chapter5-figures/twobody.png, id=4019, 800.9925pt x 530.98375pt>
+[143] [144 <./Chapter5-figures/cumulant.png>]
+<Chapter5-figures/twobody.png, id=4405, 800.9925pt x 530.98375pt>
 File: Chapter5-figures/twobody.png Graphic file (type png)
 
 <use Chapter5-figures/twobody.png>
-Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 796.
+Package pdftex.def Info: Chapter5-figures/twobody.png used on input line 797.
 (pdftex.def)             Requested size: 424.58624pt x 281.46864pt.
- [144 <./Chapter5-figures/twobody.png>]
+ [145] [146 <./Chapter5-figures/twobody.png>]
 
-LaTeX Warning: Citation `Dudek:2010wm' on page 145 undefined on input line 835.
+LaTeX Warning: Citation `Dudek:2010wm' on page 147 undefined on input line 836.
 
-
-[145] [146]
-
-LaTeX Warning: Citation `MICHAEL1983433' on page 147 undefined on input line 87
-4.
-
-
-LaTeX Warning: Citation `Luscher:1990ck' on page 147 undefined on input line 87
-4.
-
-
-LaTeX Warning: Citation `Blossier:2009kd' on page 147 undefined on input line 8
-74.
 
 [147]
 
-LaTeX Warning: Citation `Aubin:2011zz' on page 148 undefined on input line 926.
+LaTeX Warning: Citation `MICHAEL1983433' on page 148 undefined on input line 87
+5.
 
 
-
-LaTeX Warning: Citation `GPOF1' on page 148 undefined on input line 926.
-
-
-LaTeX Warning: Citation `GPOF2' on page 148 undefined on input line 926.
+LaTeX Warning: Citation `Luscher:1990ck' on page 148 undefined on input line 87
+5.
 
 
-LaTeX Warning: Citation `Beane:2009kya' on page 148 undefined on input line 926
-.
-
-
-LaTeX Warning: Citation `Fleming:2009wb' on page 148 undefined on input line 92
-6.
-
-
-LaTeX Warning: Citation `Beane:2009kya' on page 148 undefined on input line 926
-.
+LaTeX Warning: Citation `Blossier:2009kd' on page 148 undefined on input line 8
+75.
 
 [148] [149]
 
-LaTeX Warning: Citation `Symanzik1' on page 150 undefined on input line 1013.
+LaTeX Warning: Citation `Aubin:2011zz' on page 150 undefined on input line 927.
 
 
-LaTeX Warning: Citation `Symanzik2' on page 150 undefined on input line 1013.
+
+LaTeX Warning: Citation `GPOF1' on page 150 undefined on input line 927.
 
 
-LaTeX Warning: Citation `Symanzik3' on page 150 undefined on input line 1013.
+LaTeX Warning: Citation `GPOF2' on page 150 undefined on input line 927.
 
 
-LaTeX Warning: Citation `Symanzik4' on page 150 undefined on input line 1013.
+LaTeX Warning: Citation `Beane:2009kya' on page 150 undefined on input line 927
+.
 
 
-LaTeX Warning: Citation `EKLN4' on page 150 undefined on input line 1013.
+LaTeX Warning: Citation `Fleming:2009wb' on page 150 undefined on input line 92
+7.
 
-[150] <Chapter5-figures/dispersion.png, id=4103, 737.75626pt x 509.905pt>
+
+LaTeX Warning: Citation `Beane:2009kya' on page 150 undefined on input line 927
+.
+
+[150] [151]
+
+LaTeX Warning: Citation `Symanzik1' on page 152 undefined on input line 1014.
+
+
+LaTeX Warning: Citation `Symanzik2' on page 152 undefined on input line 1014.
+
+
+LaTeX Warning: Citation `Symanzik3' on page 152 undefined on input line 1014.
+
+
+LaTeX Warning: Citation `Symanzik4' on page 152 undefined on input line 1014.
+
+
+LaTeX Warning: Citation `EKLN4' on page 152 undefined on input line 1014.
+
+[152] <Chapter5-figures/dispersion.png, id=4501, 737.75626pt x 509.905pt>
 File: Chapter5-figures/dispersion.png Graphic file (type png)
 
 <use Chapter5-figures/dispersion.png>
 Package pdftex.def Info: Chapter5-figures/dispersion.png used on input line 103
-4.
+5.
 (pdftex.def)             Requested size: 424.58624pt x 293.44984pt.
+ [153 <./Chapter5-figures/dispersion.png>]
+
+LaTeX Warning: Citation `Batrouni' on page 154 undefined on input line 1048.
 
 
-LaTeX Warning: Citation `Batrouni' on page 151 undefined on input line 1047.
-
-
-LaTeX Warning: Citation `Daviesetal1' on page 151 undefined on input line 1047.
-
-
-
-LaTeX Warning: Citation `Daviesetal2' on page 151 undefined on input line 1047.
+LaTeX Warning: Citation `Daviesetal1' on page 154 undefined on input line 1048.
 
 
 
-LaTeX Warning: Citation `Katzetal1' on page 151 undefined on input line 1047.
-
-[151] [152 <./Chapter5-figures/dispersion.png>]
-
-LaTeX Warning: Citation `Luscher:1986pf' on page 153 undefined on input line 10
-70.
+LaTeX Warning: Citation `Daviesetal2' on page 154 undefined on input line 1048.
 
 
-LaTeX Warning: Citation `Luscher:1990ux' on page 153 undefined on input line 10
-70.
+
+LaTeX Warning: Citation `Katzetal1' on page 154 undefined on input line 1048.
+
+[154]
+
+LaTeX Warning: Citation `Luscher:1990ux' on page 155 undefined on input line 10
+71.
 
 
-LaTeX Warning: Citation `Beane:2003da' on page 153 undefined on input line 1070
+LaTeX Warning: Citation `Beane:2003da' on page 155 undefined on input line 1071
 .
 
-[153] [154]
+[155]
 
-LaTeX Warning: Citation `Briceno:2012yi' on page 155 undefined on input line 11
-26.
-
-
-LaTeX Warning: Citation `Hansen:2012tf' on page 155 undefined on input line 112
-6.
+LaTeX Warning: Citation `Briceno:2012yi' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Li:2014wga' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Hansen:2012tf' on page 156 undefined on input line 112
+7.
 
 
-LaTeX Warning: Citation `Briceno:2014oea' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Li:2014wga' on page 156 undefined on input line 1127.
 
 
-LaTeX Warning: Citation `Briceno:2015tza' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2014oea' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Briceno:2015csa' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2015tza' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Briceno:2015axa' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2015csa' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Briceno:2014uqa' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2015axa' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Luu:2011ep' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Briceno:2014uqa' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Konig:2011nz' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Luu:2011ep' on page 156 undefined on input line 1127.
+
+
+LaTeX Warning: Citation `Konig:2011nz' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Koenig:2011ti' on page 155 undefined on input line 112
-6.
+LaTeX Warning: Citation `Koenig:2011ti' on page 156 undefined on input line 112
+7.
 
 
-LaTeX Warning: Citation `Rummukainen:1995vs' on page 155 undefined on input lin
-e 1126.
+LaTeX Warning: Citation `Rummukainen:1995vs' on page 156 undefined on input lin
+e 1127.
 
 
-LaTeX Warning: Citation `Kim:2005gf' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Kim:2005gf' on page 156 undefined on input line 1127.
 
 
-LaTeX Warning: Citation `Bour:2011ef' on page 155 undefined on input line 1126.
-
-
-
-LaTeX Warning: Citation `Davoudi:2011md' on page 155 undefined on input line 11
-26.
-
-
-LaTeX Warning: Citation `Li:2003jn' on page 155 undefined on input line 1126.
-
-
-LaTeX Warning: Citation `Feng:2004ua' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Bour:2011ef' on page 156 undefined on input line 1127.
 
 
 
-LaTeX Warning: Citation `Hansen:2016fzj' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Davoudi:2011md' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Hansen:2015zga' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Li:2003jn' on page 156 undefined on input line 1127.
 
 
-LaTeX Warning: Citation `Hansen:2014eka' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Feng:2004ua' on page 156 undefined on input line 1127.
 
 
-LaTeX Warning: Citation `Briceno:2012rv' on page 155 undefined on input line 11
-26.
+
+LaTeX Warning: Citation `Hansen:2016fzj' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Beane:2007qr' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Hansen:2015zga' on page 156 undefined on input line 11
+27.
+
+
+LaTeX Warning: Citation `Hansen:2014eka' on page 156 undefined on input line 11
+27.
+
+
+LaTeX Warning: Citation `Briceno:2012rv' on page 156 undefined on input line 11
+27.
+
+
+LaTeX Warning: Citation `Beane:2007qr' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Detmold:2008gh' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Detmold:2008gh' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Smigielski:2008pa' on page 155 undefined on input line
- 1126.
+LaTeX Warning: Citation `Smigielski:2008pa' on page 156 undefined on input line
+ 1127.
 
 
-LaTeX Warning: Citation `Briceno:2013lba' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2013lba' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Briceno:2013bda' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2013bda' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Beane:2006mx' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2006mx' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Beane:2011iw' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2011iw' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Beane:2012vq' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2012vq' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Detmold:2015daa' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Detmold:2015daa' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Beane:2015yha' on page 155 undefined on input line 112
-6.
+LaTeX Warning: Citation `Beane:2015yha' on page 156 undefined on input line 112
+7.
 
 
-LaTeX Warning: Citation `Chang:2015qxa' on page 155 undefined on input line 112
-6.
+LaTeX Warning: Citation `Chang:2015qxa' on page 156 undefined on input line 112
+7.
 
 
-LaTeX Warning: Citation `Orginos:2015aya' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Orginos:2015aya' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Yamazaki:2012hi' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Yamazaki:2012hi' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Yamazaki:2015asa' on page 155 undefined on input line 
-1126.
+LaTeX Warning: Citation `Yamazaki:2015asa' on page 156 undefined on input line 
+1127.
 
 
-LaTeX Warning: Citation `Berkowitz:2015eaa' on page 155 undefined on input line
- 1126.
+LaTeX Warning: Citation `Berkowitz:2015eaa' on page 156 undefined on input line
+ 1127.
 
 
-LaTeX Warning: Citation `Murano:2013xxa' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Murano:2013xxa' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Wilson:2014cna' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Wilson:2014cna' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Wilson:2015dqa' on page 155 undefined on input line 11
-26.
+LaTeX Warning: Citation `Wilson:2015dqa' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Dudek:2012gj' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Dudek:2012gj' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Dudek:2012xn' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Dudek:2012xn' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Dudek:2014qha' on page 155 undefined on input line 112
-6.
+LaTeX Warning: Citation `Dudek:2014qha' on page 156 undefined on input line 112
+7.
 
 
-LaTeX Warning: Citation `Beane:2011sc' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2011sc' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Aoki:2007rd' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Aoki:2007rd' on page 156 undefined on input line 1127.
 
 
 
-LaTeX Warning: Citation `Aoki:2011yj' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Aoki:2011yj' on page 156 undefined on input line 1127.
 
 
 
-LaTeX Warning: Citation `Pelissier:2012pi' on page 155 undefined on input line 
-1126.
+LaTeX Warning: Citation `Pelissier:2012pi' on page 156 undefined on input line 
+1127.
 
 
-LaTeX Warning: Citation `Feng:2010es' on page 155 undefined on input line 1126.
-
-
-
-LaTeX Warning: Citation `Torres:2014vna' on page 155 undefined on input line 11
-26.
-
-
-LaTeX Warning: Citation `Bolton:2015psa' on page 155 undefined on input line 11
-26.
-
-
-LaTeX Warning: Citation `Briceno:2015dca' on page 155 undefined on input line 1
-126.
-
-
-LaTeX Warning: Citation `Lang:2012sv' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Feng:2010es' on page 156 undefined on input line 1127.
 
 
 
-LaTeX Warning: Citation `Prelovsek:2013ela' on page 155 undefined on input line
- 1126.
+LaTeX Warning: Citation `Torres:2014vna' on page 156 undefined on input line 11
+27.
 
 
-LaTeX Warning: Citation `Lang:2014yfa' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Bolton:2015psa' on page 156 undefined on input line 11
+27.
+
+
+LaTeX Warning: Citation `Briceno:2015dca' on page 156 undefined on input line 1
+127.
+
+
+LaTeX Warning: Citation `Lang:2012sv' on page 156 undefined on input line 1127.
+
+
+
+LaTeX Warning: Citation `Prelovsek:2013ela' on page 156 undefined on input line
+ 1127.
+
+
+LaTeX Warning: Citation `Lang:2014yfa' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Lang:2015hza' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Lang:2015hza' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Lang:2011mn' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Lang:2011mn' on page 156 undefined on input line 1127.
 
 
 
-LaTeX Warning: Citation `Briceno:2016kkp' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Briceno:2016kkp' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Verduci:2014csa' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Verduci:2014csa' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Lang:2012db' on page 155 undefined on input line 1126.
+LaTeX Warning: Citation `Lang:2012db' on page 156 undefined on input line 1127.
 
 
 
-LaTeX Warning: Citation `Torok:2009dg' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Torok:2009dg' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Detmold:2015qwf' on page 155 undefined on input line 1
-126.
+LaTeX Warning: Citation `Detmold:2015qwf' on page 156 undefined on input line 1
+127.
 
 
-LaTeX Warning: Citation `Beane:2012ey' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2012ey' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Beane:2009py' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2009py' on page 156 undefined on input line 1127
 .
 
 
-LaTeX Warning: Citation `Beane:2006gf' on page 155 undefined on input line 1126
+LaTeX Warning: Citation `Beane:2006gf' on page 156 undefined on input line 1127
 .
 
-<Chapter5-figures/luscher.png, id=4153, 614.295pt x 429.605pt>
+<Chapter5-figures/luscher.png, id=4542, 614.295pt x 429.605pt>
 File: Chapter5-figures/luscher.png Graphic file (type png)
 
 <use Chapter5-figures/luscher.png>
-Package pdftex.def Info: Chapter5-figures/luscher.png used on input line 1130.
+Package pdftex.def Info: Chapter5-figures/luscher.png used on input line 1131.
 (pdftex.def)             Requested size: 212.29312pt x 148.46298pt.
 
 
-LaTeX Warning: Citation `Drut:2012md' on page 155 undefined on input line 1132.
+LaTeX Warning: Citation `Drut:2012md' on page 156 undefined on input line 1133.
 
 
 
-LaTeX Warning: Citation `Drut:2012md' on page 155 undefined on input line 1132.
+LaTeX Warning: Citation `Drut:2012md' on page 156 undefined on input line 1133.
 
 
-[155 <./Chapter5-figures/luscher.png>]
-<Chapter5-figures/interaction.png, id=4164, 658.46pt x 512.91624pt>
+[156] <Chapter5-figures/interaction.png, id=4556, 658.46pt x 512.91624pt>
 File: Chapter5-figures/interaction.png Graphic file (type png)
 
 <use Chapter5-figures/interaction.png>
 Package pdftex.def Info: Chapter5-figures/interaction.png used on input line 11
-52.
+53.
 (pdftex.def)             Requested size: 424.58624pt x 330.74626pt.
- [156 <./Chapter5-figures/interaction.png>] <Chapter5-figures/tuning.png, id=41
-78, 466.74374pt x 294.09875pt>
+ [157 <./Chapter5-figures/luscher.png>]
+<Chapter5-figures/tuning.png, id=4572, 466.74374pt x 294.09875pt>
 File: Chapter5-figures/tuning.png Graphic file (type png)
 
 <use Chapter5-figures/tuning.png>
-Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1161.
+Package pdftex.def Info: Chapter5-figures/tuning.png used on input line 1162.
 (pdftex.def)             Requested size: 212.29312pt x 133.76576pt.
 
 
-LaTeX Warning: Citation `EKLN1' on page 157 undefined on input line 1163.
+LaTeX Warning: Citation `EKLN1' on page 158 undefined on input line 1164.
 
 
-LaTeX Warning: Citation `EKLN1' on page 157 undefined on input line 1163.
+LaTeX Warning: Citation `EKLN1' on page 158 undefined on input line 1164.
 
 
-LaTeX Warning: Citation `EKLN1' on page 157 undefined on input line 1166.
+LaTeX Warning: Citation `EKLN1' on page 158 undefined on input line 1167.
 
-[157 <./Chapter5-figures/tuning.png>]
+[158 <./Chapter5-figures/interaction.png>] [159 <./Chapter5-figures/tuning.png>
+]
 
-LaTeX Warning: Citation `Kaplan:2005es' on page 158 undefined on input line 119
-2.
-
-
-LaTeX Warning: Citation `Symanzik1' on page 158 undefined on input line 1212.
+LaTeX Warning: Citation `Symanzik1' on page 160 undefined on input line 1213.
 
 
-LaTeX Warning: Citation `Symanzik2' on page 158 undefined on input line 1212.
+LaTeX Warning: Citation `Symanzik2' on page 160 undefined on input line 1213.
 
 
-LaTeX Warning: Citation `Symanzik3' on page 158 undefined on input line 1212.
+LaTeX Warning: Citation `Symanzik3' on page 160 undefined on input line 1213.
 
 
-LaTeX Warning: Citation `Symanzik4' on page 158 undefined on input line 1212.
+LaTeX Warning: Citation `Symanzik4' on page 160 undefined on input line 1213.
 
 
-LaTeX Warning: Citation `EKLN4' on page 158 undefined on input line 1212.
+LaTeX Warning: Citation `EKLN4' on page 160 undefined on input line 1213.
 
-[158]
+[160]
 
-LaTeX Warning: Citation `NishidaSonConformal' on page 159 undefined on input li
-ne 1228.
+LaTeX Warning: Citation `NishidaSonConformal' on page 161 undefined on input li
+ne 1229.
 
-<Chapter5-figures/dimer2.png, id=4202, 748.7975pt x 110.4125pt>
+<Chapter5-figures/dimer2.png, id=4602, 748.7975pt x 110.4125pt>
 File: Chapter5-figures/dimer2.png Graphic file (type png)
 
 <use Chapter5-figures/dimer2.png>
-Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1236.
+Package pdftex.def Info: Chapter5-figures/dimer2.png used on input line 1237.
 (pdftex.def)             Requested size: 424.58624pt x 62.60724pt.
 
 
-LaTeX Warning: Citation `NishidaSonConformal' on page 159 undefined on input li
-ne 1241.
-
-[159 <./Chapter5-figures/dimer2.png>]
-
-LaTeX Warning: Citation `2007PhRvL..99w3201B' on page 160 undefined on input li
-ne 1243.
+LaTeX Warning: Citation `NishidaSonConformal' on page 161 undefined on input li
+ne 1242.
 
 
-LaTeX Warning: Citation `2011CRPhy..12...86B' on page 160 undefined on input li
-ne 1243.
+LaTeX Warning: Citation `2007PhRvL..99w3201B' on page 161 undefined on input li
+ne 1244.
 
 
-LaTeX Warning: Citation `2006PhRvL..97o0401W' on page 160 undefined on input li
-ne 1253.
+LaTeX Warning: Citation `2011CRPhy..12...86B' on page 161 undefined on input li
+ne 1244.
+
+[161 <./Chapter5-figures/dimer2.png>]
+
+LaTeX Warning: Citation `2006PhRvL..97o0401W' on page 162 undefined on input li
+ne 1254.
 
 
-LaTeX Warning: Citation `EKLN4' on page 160 undefined on input line 1259.
+LaTeX Warning: Citation `EKLN4' on page 162 undefined on input line 1260.
 
-[160] [161]
+[162] [163] [164]
 
-LaTeX Warning: Citation `Lee:2008fa' on page 162 undefined on input line 1302.
-
-
-LaTeX Warning: Citation `Borasoy:2006qn' on page 162 undefined on input line 13
-08.
-
-[162]
-
-LaTeX Warning: Citation `PhysRev.98.145' on page 163 undefined on input line 13
-26.
+LaTeX Warning: Citation `PhysRev.98.145' on page 165 undefined on input line 13
+27.
 
 
-LaTeX Warning: Citation `Phillips:1996ae' on page 163 undefined on input line 1
-326.
+LaTeX Warning: Citation `Phillips:1996ae' on page 165 undefined on input line 1
+327.
 
 
-LaTeX Warning: Citation `Cohen:1996my' on page 163 undefined on input line 1326
+LaTeX Warning: Citation `Cohen:1996my' on page 165 undefined on input line 1327
 .
 
 
-LaTeX Warning: Citation `Phillips:1997xu' on page 163 undefined on input line 1
-330.
+LaTeX Warning: Citation `Phillips:1997xu' on page 165 undefined on input line 1
+331.
 
-[163] [164] [165]
-
-LaTeX Warning: Citation `Kaplan:1996xu' on page 166 undefined on input line 145
-8.
-
-
-LaTeX Warning: Citation `Kaplan:1998tg' on page 166 undefined on input line 145
-8.
-
-
-LaTeX Warning: Citation `Kaplan:1998we' on page 166 undefined on input line 145
-8.
-
-
-LaTeX Warning: Citation `Fleming:1999ee' on page 166 undefined on input line 14
-58.
-
-<Chapter5-figures/tree.png, id=4280, 112.42pt x 74.2775pt>
+[165] [166] [167] <Chapter5-figures/tree.png, id=4689, 112.42pt x 74.2775pt>
 File: Chapter5-figures/tree.png Graphic file (type png)
 
 <use Chapter5-figures/tree.png>
-Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1462.
+Package pdftex.def Info: Chapter5-figures/tree.png used on input line 1463.
 (pdftex.def)             Requested size: 42.46121pt x 28.0546pt.
- [166]
-<Chapter5-figures/box.png, id=4289, 118.4425pt x 73.27374pt>
+
+<Chapter5-figures/box.png, id=4690, 118.4425pt x 73.27374pt>
 File: Chapter5-figures/box.png Graphic file (type png)
 
 <use Chapter5-figures/box.png>
-Package pdftex.def Info: Chapter5-figures/box.png used on input line 1468.
+Package pdftex.def Info: Chapter5-figures/box.png used on input line 1469.
 (pdftex.def)             Requested size: 42.46121pt x 26.26782pt.
+ [168 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
 
+LaTeX Warning: Citation `Epelbaum:2010nr' on page 169 undefined on input line 1
+478.
 
-LaTeX Warning: Citation `Fleming:1999ee' on page 167 undefined on input line 14
-75.
-
-
-LaTeX Warning: Citation `Epelbaum:2010nr' on page 167 undefined on input line 1
-477.
-
-[167 <./Chapter5-figures/tree.png> <./Chapter5-figures/box.png>]
-
-LaTeX Warning: Citation `Lee:2008fa' on page 168 undefined on input line 1489.
-
-
-LaTeX Warning: Citation `Borasoy:2006qn' on page 168 undefined on input line 14
-89.
-
-
-LaTeX Warning: Citation `Lee:2008fa' on page 168 undefined on input line 1497.
-
-<Chapter5-figures/sunset.png, id=4300, 787.94376pt x 73.27374pt>
+[169] <Chapter5-figures/sunset.png, id=4713, 787.94376pt x 73.27374pt>
 File: Chapter5-figures/sunset.png Graphic file (type png)
 
 <use Chapter5-figures/sunset.png>
-Package pdftex.def Info: Chapter5-figures/sunset.png used on input line 1499.
+Package pdftex.def Info: Chapter5-figures/sunset.png used on input line 1500.
 (pdftex.def)             Requested size: 424.58624pt x 39.48335pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 1499--1500
+Overfull \hbox (12.0pt too wide) in paragraph at lines 1500--1501
 [][] 
  []
 
-
-LaTeX Warning: Citation `Braaten:2004rn' on page 168 undefined on input line 15
-07.
-
-[168 <./Chapter5-figures/sunset.png>]
-<Chapter5-figures/dresseddimer.png, id=4312, 858.20625pt x 60.225pt>
+<Chapter5-figures/dresseddimer.png, id=4717, 858.20625pt x 60.225pt>
 File: Chapter5-figures/dresseddimer.png Graphic file (type png)
 
 <use Chapter5-figures/dresseddimer.png>
 Package pdftex.def Info: Chapter5-figures/dresseddimer.png used on input line 1
-517.
+518.
 (pdftex.def)             Requested size: 424.58624pt x 29.79536pt.
-
-
-LaTeX Warning: Citation `Braaten:2004rn' on page 169 undefined on input line 15
-29.
-
-<Chapter5-figures/3body.png, id=4314, 821.0675pt x 84.315pt>
+ [170 <./Chapter5-figures/sunset.png> <./Chapter5-figures/dresseddimer.png>]
+<Chapter5-figures/3body.png, id=4731, 821.0675pt x 84.315pt>
 File: Chapter5-figures/3body.png Graphic file (type png)
 
 <use Chapter5-figures/3body.png>
-Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1541.
+Package pdftex.def Info: Chapter5-figures/3body.png used on input line 1542.
 (pdftex.def)             Requested size: 424.58624pt x 43.5996pt.
 
 
-LaTeX Warning: Citation `Bedaque:1998km' on page 169 undefined on input line 15
-46.
-
-
-LaTeX Warning: Citation `Bedaque:1998kg' on page 169 undefined on input line 15
-46.
-
-
-LaTeX Warning: Citation `Beane:2000wh' on page 169 undefined on input line 1546
+LaTeX Warning: Citation `Beane:2000wh' on page 171 undefined on input line 1547
 .
 
-[169 <./Chapter5-figures/dresseddimer.png> <./Chapter5-figures/3body.png>]
 
-LaTeX Warning: Citation `V1970563' on page 170 undefined on input line 1552.
+LaTeX Warning: Citation `V1970563' on page 171 undefined on input line 1553.
 
 
-LaTeX Warning: Citation `Efimov:1971zz' on page 170 undefined on input line 155
-2.
+LaTeX Warning: Citation `Efimov:1971zz' on page 171 undefined on input line 155
+3.
 
-<Chapter5-figures/HLambda.pdf, id=4327, 481.8pt x 319.76967pt>
+<Chapter5-figures/HLambda.pdf, id=4735, 481.8pt x 319.76967pt>
 File: Chapter5-figures/HLambda.pdf Graphic file (type pdf)
 
 <use Chapter5-figures/HLambda.pdf>
-Package pdftex.def Info: Chapter5-figures/HLambda.pdf used on input line 1556.
+Package pdftex.def Info: Chapter5-figures/HLambda.pdf used on input line 1557.
 (pdftex.def)             Requested size: 212.29312pt x 140.89426pt.
- [170 <./Chapter5-figures/HLambda.pdf>]
+ [171 <./Chapter5-figures/3body.png>]
 
-LaTeX Warning: Citation `Hammer:2010kp' on page 171 undefined on input line 157
-3.
+LaTeX Warning: Citation `Hammer:2010kp' on page 172 undefined on input line 157
+4.
 
 
-LaTeX Warning: Citation `Nicholson:2012zp' on page 171 undefined on input line 
-1577.
+LaTeX Warning: Citation `Nicholson:2012zp' on page 172 undefined on input line 
+1578.
 
+[172 <./Chapter5-figures/HLambda.pdf>]
 
-LaTeX Warning: Citation `Lee:2008fa' on page 171 undefined on input line 1582.
+LaTeX Warning: Citation `EKLN1' on page 173 undefined on input line 1589.
 
-[171]
 
-LaTeX Warning: Citation `EKLN1' on page 172 undefined on input line 1588.
+LaTeX Warning: Citation `EKLN2' on page 173 undefined on input line 1589.
 
 
-LaTeX Warning: Citation `EKLN2' on page 172 undefined on input line 1588.
+LaTeX Warning: Citation `EKLN3' on page 173 undefined on input line 1589.
 
 
-LaTeX Warning: Citation `EKLN3' on page 172 undefined on input line 1588.
+LaTeX Warning: Citation `EKLN4' on page 173 undefined on input line 1589.
 
 
-LaTeX Warning: Citation `EKLN4' on page 172 undefined on input line 1588.
+LaTeX Warning: Citation `LEKN1' on page 173 undefined on input line 1589.
 
 
-LaTeX Warning: Citation `LEKN1' on page 172 undefined on input line 1588.
+LaTeX Warning: Citation `NEKL1' on page 173 undefined on input line 1589.
 
 
-LaTeX Warning: Citation `NEKL1' on page 172 undefined on input line 1588.
+LaTeX Warning: Citation `Epelbaum:2010xt' on page 173 undefined on input line 1
+589.
 
 
-LaTeX Warning: Citation `Epelbaum:2010xt' on page 172 undefined on input line 1
-588.
+LaTeX Warning: Citation `Lahde:2013kma' on page 173 undefined on input line 158
+9.
 
 
-LaTeX Warning: Citation `Epelbaum:2009pd' on page 172 undefined on input line 1
-588.
+LaTeX Warning: Citation `Epelbaum:2013wla' on page 173 undefined on input line 
+1589.
 
 
-LaTeX Warning: Citation `Epelbaum:2013paa' on page 172 undefined on input line 
-1588.
+LaTeX Warning: Citation `Lahde:2014bna' on page 173 undefined on input line 158
+9.
 
+[173]
 
-LaTeX Warning: Citation `Lahde:2013kma' on page 172 undefined on input line 158
-8.
+LaTeX Warning: Citation `EKLN2' on page 174 undefined on input line 1598.
 
 
-LaTeX Warning: Citation `Lahde:2013uqa' on page 172 undefined on input line 158
-8.
-
-
-LaTeX Warning: Citation `Epelbaum:2011md' on page 172 undefined on input line 1
-588.
-
-
-LaTeX Warning: Citation `Epelbaum:2012qn' on page 172 undefined on input line 1
-588.
-
-
-LaTeX Warning: Citation `Epelbaum:2012iu' on page 172 undefined on input line 1
-588.
-
-
-LaTeX Warning: Citation `Epelbaum:2013wla' on page 172 undefined on input line 
-1588.
-
-
-LaTeX Warning: Citation `Lahde:2014bna' on page 172 undefined on input line 158
-8.
-
-
-LaTeX Warning: Citation `EKLN2' on page 172 undefined on input line 1597.
-
-
-LaTeX Warning: Citation `Lee:2008fa' on page 172 undefined on input line 1605.
-
-
-LaTeX Warning: Citation `Lepage:1989hd' on page 172 undefined on input line 160
-6.
-
-
-LaTeX Warning: Citation `EKLN1' on page 172 undefined on input line 1616.
-
-[172]
-Overfull \hbox (14.54308pt too wide) in alignment at lines 1625--1632
- [][][] []
- []
-
-(./chapter5.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 9.
-
-)) [173]
-\openout2 = `chapter6.aux'.
-
- (./chapter6.tex [174
-
-
-
-
-
-]
-
-LaTeX Warning: Citation `Weinberg:1990rz' on page 175 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `Weinberg:1991um' on page 175 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `Ordonez:1992xp' on page 175 undefined on input line 22
-.
-
-
-LaTeX Warning: Citation `Ordonez:1993tn' on page 175 undefined on input line 22
-.
-
-
-LaTeX Warning: Citation `vanKolck:1994yi' on page 175 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `Epelbaum:1998hg' on page 175 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `Epelbaum:1998ka' on page 175 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `Bedaque:2002mn' on page 175 undefined on input line 22
-.
-
-
-LaTeX Warning: Citation `Epelbaum:2008ga' on page 175 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `Lee:2008fa' on page 175 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Drut:2012a' on page 175 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Hubbard:1959ub' on page 175 undefined on input line 41
-.
-
-
-LaTeX Warning: Citation `Stratonovich:1958' on page 175 undefined on input line
- 41.
-
-
-LaTeX Warning: Citation `Weingarten:1980hx' on page 175 undefined on input line
- 42.
-
-
-LaTeX Warning: Citation `Scalettar:1986uy' on page 175 undefined on input line 
-43.
-
-
-LaTeX Warning: Citation `Gottlieb:1987mq' on page 175 undefined on input line 4
-3.
-
-
-LaTeX Warning: Citation `Duane:1987de' on page 175 undefined on input line 43.
-
-
-LaTeX Warning: Citation `Muller:1999cp' on page 175 undefined on input line 45.
-
-
-
-LaTeX Warning: Citation `Lee:2004si' on page 175 undefined on input line 47.
-
-
-LaTeX Warning: Citation `Lee:2004qd' on page 175 undefined on input line 47.
-
-
-LaTeX Warning: Citation `Lee:2005is' on page 175 undefined on input line 47.
-
-
-LaTeX Warning: Citation `Lee:2005it' on page 175 undefined on input line 47.
-
-
-LaTeX Warning: Citation `Borasoy:2005yc' on page 175 undefined on input line 49
-.
-
-
-LaTeX Warning: Citation `Borasoy:2006qn' on page 175 undefined on input line 50
-.
-
-
-LaTeX Warning: Citation `Borasoy:2007vi' on page 175 undefined on input line 51
-.
-
-
-LaTeX Warning: Citation `Borasoy:2007vk' on page 175 undefined on input line 51
-.
-
-
-LaTeX Warning: Citation `Wlazlowski:2014jna' on page 175 undefined on input lin
-e 51.
-
-
-LaTeX Warning: Citation `Epelbaum:2009zs' on page 175 undefined on input line 5
-1.
-
-
-LaTeX Warning: Citation `Epelbaum:2009pd' on page 175 undefined on input line 5
-1.
-
-
-LaTeX Warning: Citation `Epelbaum:2011md' on page 175 undefined on input line 5
-1.
-
-
-LaTeX Warning: Citation `Epelbaum:2012qn' on page 175 undefined on input line 5
-1.
-
-
-LaTeX Warning: Citation `Epelbaum:2012iu' on page 175 undefined on input line 5
-1.
-
-
-LaTeX Warning: Citation `Lahde:2013uqa' on page 175 undefined on input line 51.
-
-
-
-LaTeX Warning: Citation `Epelbaum:2013paa' on page 175 undefined on input line 
-51.
-
-
-LaTeX Warning: Citation `Elhatisari:2016owd' on page 175 undefined on input lin
-e 51.
-
-
-LaTeX Warning: Citation `Rupak:2013aue' on page 175 undefined on input line 51.
-
-
-
-LaTeX Warning: Citation `Rupak:2014xza' on page 175 undefined on input line 51.
-
-
-
-LaTeX Warning: Citation `Elhatisari:2015iga' on page 175 undefined on input lin
-e 51.
-
-[175]
-
-LaTeX Warning: Citation `Epelbaum:2009zs' on page 176 undefined on input line 6
-1.
-
-
-LaTeX Warning: Citation `Luscher:1985dn' on page 176 undefined on input line 64
-.
-
-
-LaTeX Warning: Citation `Luscher:1986pf' on page 176 undefined on input line 64
-.
-
-
-LaTeX Warning: Citation `Luscher:1991ux' on page 176 undefined on input line 64
-.
-
-
-LaTeX Warning: Citation `Borasoy:2007vy' on page 176 undefined on input line 69
-.
-
-
-LaTeX Warning: Citation `Carlson:1984' on page 176 undefined on input line 69.
-
-
-LaTeX Warning: Citation `Borasoy:2007vi' on page 176 undefined on input line 93
-.
-
-
-LaTeX Warning: Citation `Lu:2015riz' on page 176 undefined on input line 95.
-
-[176]
-
-LaTeX Warning: Citation `Lu:2015riz' on page 177 undefined on input line 104.
-
-
-LaTeX Warning: Citation `Pine:2013zja' on page 177 undefined on input line 117.
-
-
-
-LaTeX Warning: Citation `Elhatisari:2014lka' on page 177 undefined on input lin
-e 117.
-
-
-LaTeX Warning: Citation `Elhatisari:2015iga' on page 177 undefined on input lin
-e 117.
-
-
-LaTeX Warning: Citation `Rokash:2015hra' on page 177 undefined on input line 11
+LaTeX Warning: Citation `Lepage:1989hd' on page 174 undefined on input line 160
 7.
 
 
-LaTeX Warning: Citation `Elhatisari:2016owd' on page 177 undefined on input lin
-e 117.
+LaTeX Warning: Citation `EKLN1' on page 174 undefined on input line 1617.
 
-[177] <Chapter6-figures/formalism.png, id=4413, 439.8834pt x 249.5724pt>
+
+Overfull \hbox (14.54308pt too wide) in alignment at lines 1626--1633
+ [][][] []
+ []
+
+[174] (./chapter5.bbl [175])) [176]
+\openout2 = `chapter6.aux'.
+
+ (./chapter6.tex [177
+
+
+
+
+
+] [178] [179]
+<Chapter6-figures/formalism.png, id=4910, 439.8834pt x 249.5724pt>
 File: Chapter6-figures/formalism.png Graphic file (type png)
 
 <use Chapter6-figures/formalism.png>
 Package pdftex.def Info: Chapter6-figures/formalism.png used on input line 207.
 
 (pdftex.def)             Requested size: 216.81pt x 123.01128pt.
- [178 <./Chapter6-figures/formalism.png>]
-
-LaTeX Warning: Citation `Creutz:1988wv' on page 179 undefined on input line 317
-.
-
-
-LaTeX Warning: Citation `Creutz:1999zy' on page 179 undefined on input line 317
-.
-
-[179]
-
-LaTeX Warning: Citation `Carlson:2014vla' on page 180 undefined on input line 3
-60.
-
-<Chapter6-figures/worldlines.png, id=4445, 579.6054pt x 495.7722pt>
+ [180 <./Chapter6-figures/formalism.png>]
+[181] <Chapter6-figures/worldlines.png, id=4944, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/worldlines.png Graphic file (type png)
 
 <use Chapter6-figures/worldlines.png>
 Package pdftex.def Info: Chapter6-figures/worldlines.png used on input line 369
 .
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
- [180] [181 <./Chapter6-figures/worldlines.png>] [182] [183]
-<Chapter6-figures/HSworldlines.png, id=4499, 579.6054pt x 495.7722pt>
+ [182] [183 <./Chapter6-figures/worldlines.png>] [184] [185]
+<Chapter6-figures/HSworldlines.png, id=5002, 579.6054pt x 495.7722pt>
 File: Chapter6-figures/HSworldlines.png Graphic file (type png)
 
 <use Chapter6-figures/HSworldlines.png>
@@ -4985,7 +3785,7 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 09.
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
 
-<Chapter6-figures/getzvecs.png, id=4503, 739.76375pt x 690.58pt>
+<Chapter6-figures/getzvecs.png, id=5006, 739.76375pt x 690.58pt>
 File: Chapter6-figures/getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzvecs.png>
@@ -4996,7 +3796,7 @@ Package pdftex.def Info: Chapter6-figures/getzvecs.png used on input line 629.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 629.
 
-<Chapter6-figures/getzdualvecs.png, id=4504, 794.97pt x 705.63625pt>
+<Chapter6-figures/getzdualvecs.png, id=5007, 794.97pt x 705.63625pt>
 File: Chapter6-figures/getzdualvecs.png Graphic file (type png)
 
 <use Chapter6-figures/getzdualvecs.png>
@@ -5008,33 +3808,21 @@ Package pdftex.def Info: Chapter6-figures/getzdualvecs.png used on input line 6
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 643.
 
-<Chapter6-figures/call_getzvecs.png, id=4505, 480.79625pt x 176.66pt>
+<Chapter6-figures/call_getzvecs.png, id=5008, 480.79625pt x 176.66pt>
 File: Chapter6-figures/call_getzvecs.png Graphic file (type png)
 
 <use Chapter6-figures/call_getzvecs.png>
 Package pdftex.def Info: Chapter6-figures/call_getzvecs.png used on input line 
 658.
 (pdftex.def)             Requested size: 247.7999pt x 91.04872pt.
- [184 <./Chapter6-figures/HSworldlines.png>]
-
-LaTeX Warning: Citation `Scalettar:1986uy' on page 185 undefined on input line 
-675.
-
-
-LaTeX Warning: Citation `Gottlieb:1987mq' on page 185 undefined on input line 6
-75.
-
-
-LaTeX Warning: Citation `Duane:1987de' on page 185 undefined on input line 675.
-
-
-[185pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
-4}) has been already used, duplicate ignored
+ [186 <./Chapter6-figures/HSworldlines.png>] [187pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.6.4}) has been already used, duplica
+te ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.701 \end{equation}
-                     <./Chapter6-figures/getzvecs.png>] [186pdfTeX warning (ext
+                     <./Chapter6-figures/getzvecs.png>] [188pdfTeX warning (ext
 4): destination with the same identifier (name{figure.6.5}) has been already us
 ed, duplicate ignored
 
@@ -5043,46 +3831,50 @@ ed, duplicate ignored
 l.711 \end{equation}
                      <./Chapter6-figures/getzdualvecs.png> <./Chapter6-figures/
 call_getzvecs.png>]
-<Chapter6-figures/bose_sum.png, id=4530, 536.0025pt x 446.66875pt>
+<Chapter6-figures/bose_sum.png, id=5036, 536.0025pt x 446.66875pt>
 File: Chapter6-figures/bose_sum.png Graphic file (type png)
 
 <use Chapter6-figures/bose_sum.png>
 Package pdftex.def Info: Chapter6-figures/bose_sum.png used on input line 784.
 (pdftex.def)             Requested size: 273.15318pt x 227.62204pt.
- [187]
-<Chapter6-figures/dVds.png, id=4547, 507.8975pt x 367.3725pt>
+ [189]
+<Chapter6-figures/dVds.png, id=5053, 507.8975pt x 367.3725pt>
 File: Chapter6-figures/dVds.png Graphic file (type png)
 
 <use Chapter6-figures/dVds.png>
 Package pdftex.def Info: Chapter6-figures/dVds.png used on input line 807.
 (pdftex.def)             Requested size: 251.75491pt x 182.09746pt.
 
-<Chapter6-figures/accept.png, id=4549, 607.26875pt x 379.4175pt>
+<Chapter6-figures/accept.png, id=5055, 607.26875pt x 379.4175pt>
 File: Chapter6-figures/accept.png Graphic file (type png)
 
 <use Chapter6-figures/accept.png>
 Package pdftex.def Info: Chapter6-figures/accept.png used on input line 826.
 (pdftex.def)             Requested size: 291.45789pt x 182.09746pt.
- [188 <./Chapter6-figures/bose_sum.png> <./Chapter6-figures/dVds.png>] [189 <./
+ [190 <./Chapter6-figures/bose_sum.png> <./Chapter6-figures/dVds.png>] [191 <./
 Chapter6-figures/accept.png>] (./chapter6.bbl
+Underfull \hbox (badness 1033) in paragraph at lines 159--163
+[]\T1/fve/m/n/8.5 J. Carl-son, V. Pand-hari-pande, R. Wiringa, Nucl. Phys. A \T
+1/fve/b/n/8.5 424\T1/fve/m/n/8.5 (1), 47 (1984).  URL []$\T1/fvm/m/n/8.5 http :
+ / / www .
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 9.
-
-)) [190]
+[192])) [193]
 \openout2 = `chapter7.aux'.
 
- (./chapter7.tex [191
+ (./chapter7.tex [194
 
 
 
 
 
-] [192]
+] [195] [196]
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <12> not available
 (Font)              Font shape `T1/fve/m/sl' tried instead on input line 137.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 10.79993pt on input line 137.
- [193] [194] [195] [196] [197]
+ [197] [198] [199] [200]
+[201]
 Overfull \hbox (3.11128pt too wide) in paragraph at lines 375--378
 []\T1/fve/m/n/10 to con-struct ef-fec-tive two- or three- body po-ten-tials, as
  de-scribed in the next Sec-tion []7.3.3.1[],
@@ -5100,7 +3892,7 @@ converted-to.pdf Chapter7-figures/fig1.eps>
 (epstopdf)             \includegraphics on input line 433.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig1-eps-converted-to.pdf, id=4689, 619.31375pt x 435.6275pt>
+<Chapter7-figures/fig1-eps-converted-to.pdf, id=5223, 619.31375pt x 435.6275pt>
 File: Chapter7-figures/fig1-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig1-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig1-eps-converted-to.pdf used on inp
@@ -5111,13 +3903,13 @@ ut line 433.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 433.
 
-[198] [199pdfTeX warning (ext4): destination with the same identifier (name{fig
+[202] [203pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.7.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.471 
-       <./Chapter7-figures/fig1-eps-converted-to.pdf>] [200]
+       <./Chapter7-figures/fig1-eps-converted-to.pdf>] [204]
 Package epstopdf Info: Source file: <Chapter7-figures/fig2.eps>
 (epstopdf)                    date: 2016-06-28 18:46:04
 (epstopdf)                    size: 3940558 bytes
@@ -5130,7 +3922,7 @@ converted-to.pdf Chapter7-figures/fig2.eps>
 (epstopdf)             \includegraphics on input line 570.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig2-eps-converted-to.pdf, id=4748, 936.49875pt x 696.6025pt>
+<Chapter7-figures/fig2-eps-converted-to.pdf, id=5281, 936.49875pt x 696.6025pt>
 File: Chapter7-figures/fig2-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig2-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig2-eps-converted-to.pdf used on inp
@@ -5141,14 +3933,14 @@ ut line 570.
 Class SVMult Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 570.
 
-[201pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
+[205pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.597 
-       <./Chapter7-figures/fig2-eps-converted-to.pdf>] [202] [203] [204]
-[205]
+       <./Chapter7-figures/fig2-eps-converted-to.pdf>] [206] [207] [208]
+[209]
 Package epstopdf Info: Source file: <Chapter7-figures/fig3.eps>
 (epstopdf)                    date: 2016-06-28 18:46:10
 (epstopdf)                    size: 28585 bytes
@@ -5161,7 +3953,7 @@ converted-to.pdf Chapter7-figures/fig3.eps>
 (epstopdf)             \includegraphics on input line 824.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter7-figures/fig3-eps-converted-to.pdf, id=4805, 671.50874pt x 491.8375pt>
+<Chapter7-figures/fig3-eps-converted-to.pdf, id=5339, 671.50874pt x 491.8375pt>
 File: Chapter7-figures/fig3-eps-converted-to.pdf Graphic file (type pdf)
 <use Chapter7-figures/fig3-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter7-figures/fig3-eps-converted-to.pdf used on inp
@@ -5177,17 +3969,17 @@ Overfull \hbox (11.88927pt too wide) in paragraph at lines 824--825
 [][][] 
  []
 
-[206pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
+[210pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.836 \end{equation}
-                     <./Chapter7-figures/fig3-eps-converted-to.pdf>] [207]
-[208] [209] [210] [211] [212]) [213]
+                     <./Chapter7-figures/fig3-eps-converted-to.pdf>] [211]
+[212] [213] [214] [215] [216]) [217]
 \openout2 = `chapter8.aux'.
 
- (./chapter8.tex [214
+ (./chapter8.tex [218
 
 
 
@@ -5195,676 +3987,677 @@ l.836 \end{equation}
 
 ]
 
-LaTeX Warning: Citation `lattimer2007' on page 215 undefined on input line 55.
+LaTeX Warning: Citation `lattimer2007' on page 219 undefined on input line 56.
 
 
-LaTeX Warning: Citation `lattimer2012' on page 215 undefined on input line 55.
+LaTeX Warning: Citation `lattimer2012' on page 219 undefined on input line 56.
 
 
-LaTeX Warning: Citation `weber1999' on page 215 undefined on input line 55.
+LaTeX Warning: Citation `weber1999' on page 219 undefined on input line 56.
 
 
-LaTeX Warning: Citation `hh2000' on page 215 undefined on input line 55.
-
-[215]
-
-LaTeX Warning: Citation `vankolck1994' on page 216 undefined on input line 74.
-
-
-LaTeX Warning: Citation `machleidt2011' on page 216 undefined on input line 74.
-
-
-
-LaTeX Warning: Citation `epelbaum2009' on page 216 undefined on input line 74.
-
-
-LaTeX Warning: Citation `binder2013' on page 216 undefined on input line 80.
-
-
-LaTeX Warning: Citation `hergert2013' on page 216 undefined on input line 80.
-
-
-LaTeX Warning: Citation `roth2012' on page 216 undefined on input line 80.
-
-
-LaTeX Warning: Citation `hagen2012a' on page 216 undefined on input line 80.
-
-
-LaTeX Warning: Citation `hagen2012b' on page 216 undefined on input line 80.
-
-
-LaTeX Warning: Citation `cipollone2013' on page 216 undefined on input line 80.
-
-
-
-LaTeX Warning: Citation `carbone2013' on page 216 undefined on input line 80.
-
-
-LaTeX Warning: Citation `tetsuo2013' on page 216 undefined on input line 84.
-
-
-LaTeX Warning: Citation `day1967' on page 216 undefined on input line 90.
-
-
-LaTeX Warning: Citation `brueckner1954' on page 216 undefined on input line 92.
-
-
-
-LaTeX Warning: Citation `brueckner1955' on page 216 undefined on input line 92.
-
-
-
-LaTeX Warning: Citation `hh2000' on page 216 undefined on input line 93.
-
-
-LaTeX Warning: Citation `baldo2012' on page 216 undefined on input line 93.
-
-
-LaTeX Warning: Citation `baldo2012a' on page 216 undefined on input line 93.
-
-
-LaTeX Warning: Citation `bartlett2007' on page 216 undefined on input line 99.
-
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 216 undefined on input li
-ne 99.
-
-
-LaTeX Warning: Citation `gandolfi2009' on page 216 undefined on input line 100.
-
-
-
-LaTeX Warning: Citation `lovato2012' on page 216 undefined on input line 100.
-
-
-LaTeX Warning: Citation `baldo2012a' on page 216 undefined on input line 101.
-
-
-LaTeX Warning: Citation `carbone2013' on page 216 undefined on input line 101.
-
-
-LaTeX Warning: Citation `dickhoff2004' on page 216 undefined on input line 101.
-
-
-
-LaTeX Warning: Citation `erler2013' on page 216 undefined on input line 102.
-
-
-LaTeX Warning: Citation `hh2000' on page 216 undefined on input line 126.
-
-
-LaTeX Warning: Citation `prakash1996' on page 216 undefined on input line 126.
-
-
-LaTeX Warning: Citation `steiner2010' on page 216 undefined on input line 126.
-
-[216] [217]
-
-LaTeX Warning: Citation `prakash2006' on page 218 undefined on input line 239.
-
-[218]
-
-LaTeX Warning: Citation `symmetryenergy2013' on page 219 undefined on input lin
-e 298.
+LaTeX Warning: Citation `hh2000' on page 219 undefined on input line 56.
 
 [219]
 
+LaTeX Warning: Citation `vankolck1994' on page 220 undefined on input line 75.
+
+
+LaTeX Warning: Citation `machleidt2011' on page 220 undefined on input line 75.
+
+
+
+LaTeX Warning: Citation `epelbaum2009' on page 220 undefined on input line 75.
+
+
+LaTeX Warning: Citation `binder2013' on page 220 undefined on input line 81.
+
+
+LaTeX Warning: Citation `hergert2013' on page 220 undefined on input line 81.
+
+
+LaTeX Warning: Citation `roth2012' on page 220 undefined on input line 81.
+
+
+LaTeX Warning: Citation `hagen2012a' on page 220 undefined on input line 81.
+
+
+LaTeX Warning: Citation `hagen2012b' on page 220 undefined on input line 81.
+
+
+LaTeX Warning: Citation `cipollone2013' on page 220 undefined on input line 81.
+
+
+
+LaTeX Warning: Citation `carbone2013' on page 220 undefined on input line 81.
+
+
+LaTeX Warning: Citation `tetsuo2013' on page 220 undefined on input line 85.
+
+
+LaTeX Warning: Citation `day1967' on page 220 undefined on input line 91.
+
+
+LaTeX Warning: Citation `brueckner1954' on page 220 undefined on input line 93.
+
+
+
+LaTeX Warning: Citation `brueckner1955' on page 220 undefined on input line 93.
+
+
+
+LaTeX Warning: Citation `hh2000' on page 220 undefined on input line 94.
+
+
+LaTeX Warning: Citation `baldo2012' on page 220 undefined on input line 94.
+
+
+LaTeX Warning: Citation `baldo2012a' on page 220 undefined on input line 94.
+
+
+LaTeX Warning: Citation `bartlett2007' on page 220 undefined on input line 100.
+
+
+
 LaTeX Warning: Citation `shavittbartlett2009' on page 220 undefined on input li
-ne 381.
+ne 100.
 
 
-Overfull \hbox (4.67732pt too wide) in paragraph at lines 400--402
+LaTeX Warning: Citation `gandolfi2009' on page 220 undefined on input line 101.
+
+
+
+LaTeX Warning: Citation `lovato2012' on page 220 undefined on input line 101.
+
+
+LaTeX Warning: Citation `baldo2012a' on page 220 undefined on input line 102.
+
+
+LaTeX Warning: Citation `carbone2013' on page 220 undefined on input line 102.
+
+
+LaTeX Warning: Citation `dickhoff2004' on page 220 undefined on input line 102.
+
+
+
+LaTeX Warning: Citation `erler2013' on page 220 undefined on input line 103.
+
+
+LaTeX Warning: Citation `hh2000' on page 220 undefined on input line 127.
+
+
+LaTeX Warning: Citation `prakash1996' on page 220 undefined on input line 127.
+
+
+LaTeX Warning: Citation `steiner2010' on page 220 undefined on input line 127.
+
+[220] [221]
+
+LaTeX Warning: Citation `prakash2006' on page 222 undefined on input line 240.
+
+[222]
+
+LaTeX Warning: Citation `symmetryenergy2013' on page 223 undefined on input lin
+e 299.
+
+[223]
+
+LaTeX Warning: Citation `shavittbartlett2009' on page 224 undefined on input li
+ne 382.
+
+
+Overfull \hbox (4.67732pt too wide) in paragraph at lines 401--403
 []\T1/fve/m/n/10 Now we im-pose anti-symmetry by hav-ing the fermion op-er-a-to
 rs sat-isfy the anti-commutation
  []
 
-[220]
+[224]
 
-LaTeX Warning: Reference `eq:kineticenergy' on page 221 undefined on input line
- 467.
+LaTeX Warning: Reference `eq:kineticenergy' on page 225 undefined on input line
+ 468.
 
-[221]
+[225]
 
-LaTeX Warning: Reference `problem:prob8kinetic' on page 222 undefined on input 
-line 583.
+LaTeX Warning: Reference `problem:prob8kinetic' on page 226 undefined on input 
+line 584.
 
-[222] [223] [224] [225]
+[226] [227] [228] [229]
 
-LaTeX Warning: Citation `minnesota' on page 226 undefined on input line 822.
-
-
-LaTeX Warning: Citation `minnesota' on page 226 undefined on input line 850.
+LaTeX Warning: Citation `minnesota' on page 230 undefined on input line 823.
 
 
-LaTeX Warning: Citation `weinberg1990' on page 226 undefined on input line 868.
+LaTeX Warning: Citation `minnesota' on page 230 undefined on input line 851.
 
 
-
-LaTeX Warning: Citation `weinberg1991' on page 226 undefined on input line 868.
+LaTeX Warning: Citation `weinberg1990' on page 230 undefined on input line 869.
 
 
 
-LaTeX Warning: Citation `ordonez1992' on page 226 undefined on input line 868.
-
-
-LaTeX Warning: Citation `ordonez1994' on page 226 undefined on input line 868.
-
-
-LaTeX Warning: Citation `ordonez1996' on page 226 undefined on input line 868.
-
-
-LaTeX Warning: Citation `vankolck1999' on page 226 undefined on input line 868.
+LaTeX Warning: Citation `weinberg1991' on page 230 undefined on input line 869.
 
 
 
-LaTeX Warning: Citation `machleidt2011' on page 226 undefined on input line 868
+LaTeX Warning: Citation `ordonez1992' on page 230 undefined on input line 869.
+
+
+LaTeX Warning: Citation `ordonez1994' on page 230 undefined on input line 869.
+
+
+LaTeX Warning: Citation `ordonez1996' on page 230 undefined on input line 869.
+
+
+LaTeX Warning: Citation `vankolck1999' on page 230 undefined on input line 869.
+
+
+
+LaTeX Warning: Citation `machleidt2011' on page 230 undefined on input line 869
 .
 
 
-LaTeX Warning: Citation `epelbaum2009' on page 226 undefined on input line 868.
+LaTeX Warning: Citation `epelbaum2009' on page 230 undefined on input line 869.
 
 
 
-LaTeX Warning: Citation `ekstrom2013' on page 226 undefined on input line 868.
+LaTeX Warning: Citation `ekstrom2013' on page 230 undefined on input line 869.
 
 
-LaTeX Warning: Citation `ekstromPRX' on page 226 undefined on input line 868.
+LaTeX Warning: Citation `ekstromPRX' on page 230 undefined on input line 869.
 
-[226]
+[230]
 
-LaTeX Warning: Citation `ekstromPRX' on page 227 undefined on input line 906.
+LaTeX Warning: Citation `ekstromPRX' on page 231 undefined on input line 907.
 
 
-LaTeX Warning: Citation `machleidt2011' on page 227 undefined on input line 908
+LaTeX Warning: Citation `machleidt2011' on page 231 undefined on input line 909
 .
 
 
-LaTeX Warning: Citation `epelbaum2009' on page 227 undefined on input line 908.
+LaTeX Warning: Citation `epelbaum2009' on page 231 undefined on input line 909.
 
 
 
-LaTeX Warning: Citation `ekstrom2013' on page 227 undefined on input line 908.
+LaTeX Warning: Citation `ekstrom2013' on page 231 undefined on input line 909.
 
-<Chapter8-figures/diagNNLO.pdf, id=5043, 1803.73875pt x 1574.88374pt>
+<Chapter8-figures/diagNNLO.pdf, id=5577, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
-Package pdftex.def Info: Chapter8-figures/diagNNLO.pdf used on input line 911.
+Package pdftex.def Info: Chapter8-figures/diagNNLO.pdf used on input line 912.
 (pdftex.def)             Requested size: 1803.73438pt x 1574.87991pt.
 
 
-LaTeX Warning: Citation `weinberg1990' on page 227 undefined on input line 926.
+LaTeX Warning: Citation `weinberg1990' on page 231 undefined on input line 927.
 
 
 
-LaTeX Warning: Citation `weinberg1991' on page 227 undefined on input line 926.
+LaTeX Warning: Citation `weinberg1991' on page 231 undefined on input line 927.
 
 
-[227 <./Chapter8-figures/diagNNLO.pdf>]
+[231 <./Chapter8-figures/diagNNLO.pdf>]
 
-LaTeX Warning: Citation `machleidt2011' on page 228 undefined on input line 988
+LaTeX Warning: Citation `machleidt2011' on page 232 undefined on input line 989
 .
 
 
-LaTeX Warning: Citation `ekstromPRX' on page 228 undefined on input line 988.
+LaTeX Warning: Citation `ekstromPRX' on page 232 undefined on input line 989.
 
 
-LaTeX Warning: Citation `machleidt2011' on page 228 undefined on input line 990
+LaTeX Warning: Citation `machleidt2011' on page 232 undefined on input line 991
 .
-
-[228]
-
-LaTeX Warning: Citation `epelbaum2002' on page 229 undefined on input line 1055
-.
-
-
-LaTeX Warning: Citation `navratil2007' on page 229 undefined on input line 1088
-.
-
-[229] [230] [231]
-
-Package xcolor Warning: Incompatible color definition on input line 1324.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1354.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1354.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1354.
 
 [232]
 
-Package xcolor Warning: Incompatible color definition on input line 1354.
+LaTeX Warning: Citation `epelbaum2002' on page 233 undefined on input line 1056
+.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1354.
+LaTeX Warning: Citation `navratil2007' on page 233 undefined on input line 1089
+.
+
+[233] [234] [235]
+
+Package xcolor Warning: Incompatible color definition on input line 1325.
 
 
-Overfull \hbox (5.75911pt too wide) in paragraph at lines 1355--1359
+Package xcolor Warning: Incompatible color definition on input line 1355.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1355.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1355.
+
+[236]
+
+Package xcolor Warning: Incompatible color definition on input line 1355.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1355.
+
+
+Overfull \hbox (5.75911pt too wide) in paragraph at lines 1356--1360
 \T1/fvm/m/n/10 master / doc / src / Chapter8-[]programs / python / hfnuclei . p
 y$[] \T1/fve/m/n/10 for full code and ma-trix el-e-ments. 
  []
 
-[233] [234] [235] [236] [237]
+[237] [238] [239] [240] [241]
 
-LaTeX Warning: Citation `shavittbartlett2009' on page 238 undefined on input li
-ne 1710.
-
-
-LaTeX Warning: Citation `barrettmusial2007' on page 238 undefined on input line
- 1754.
+LaTeX Warning: Citation `shavittbartlett2009' on page 242 undefined on input li
+ne 1711.
 
 
-LaTeX Warning: Citation `navratil2009' on page 238 undefined on input line 1761
+LaTeX Warning: Citation `barrettmusial2007' on page 242 undefined on input line
+ 1755.
+
+
+LaTeX Warning: Citation `navratil2009' on page 242 undefined on input line 1762
 .
 
-[238] [239]
+[242] [243]
 
-LaTeX Warning: Citation `krylov' on page 240 undefined on input line 1898.
-
-
-LaTeX Warning: Citation `lanczos' on page 240 undefined on input line 1898.
+LaTeX Warning: Citation `krylov' on page 244 undefined on input line 1899.
 
 
-LaTeX Warning: Citation `davidson' on page 240 undefined on input line 1898.
+LaTeX Warning: Citation `lanczos' on page 244 undefined on input line 1899.
 
 
-LaTeX Warning: Citation `golubvanloan' on page 240 undefined on input line 1899
+LaTeX Warning: Citation `davidson' on page 244 undefined on input line 1899.
+
+
+LaTeX Warning: Citation `golubvanloan' on page 244 undefined on input line 1900
 .
 
-[240] [241] [242]
+[244] [245] [246]
 
-LaTeX Warning: Citation `haxton' on page 243 undefined on input line 2079.
-
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 243 undefined on input li
-ne 2079.
+LaTeX Warning: Citation `haxton' on page 247 undefined on input line 2080.
 
 
-LaTeX Warning: Citation `shavittbartlett2009' on page 243 undefined on input li
-ne 2111.
-
-[243]
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 244 undefined on input li
-ne 2169.
+LaTeX Warning: Citation `shavittbartlett2009' on page 247 undefined on input li
+ne 2080.
 
 
-LaTeX Warning: Citation `svavittbartlett2009' on page 244 undefined on input li
-ne 2177.
-
-<Chapter8-figures/mbpt.pdf, id=5252, 614.295pt x 794.97pt>
-File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
-
-<use Chapter8-figures/mbpt.pdf>
-Package pdftex.def Info: Chapter8-figures/mbpt.pdf used on input line 2179.
-(pdftex.def)             Requested size: 424.58624pt x 549.46393pt.
-
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 244 undefined on input li
-ne 2185.
-
-[244] [245 <./Chapter8-figures/mbpt.pdf>]
-
-LaTeX Warning: Reference `sec:cc' on page 246 undefined on input line 2241.
-
-[246]
-
-LaTeX Warning: Citation `ripkablaizot' on page 247 undefined on input line 2344
-.
-
-
-LaTeX Warning: Citation `day1967' on page 247 undefined on input line 2347.
+LaTeX Warning: Citation `shavittbartlett2009' on page 247 undefined on input li
+ne 2112.
 
 [247]
 
-LaTeX Warning: Citation `brueckner1955' on page 248 undefined on input line 236
-6.
+LaTeX Warning: Citation `shavittbartlett2009' on page 248 undefined on input li
+ne 2170.
 
 
-LaTeX Warning: Citation `GB1957' on page 248 undefined on input line 2367.
+LaTeX Warning: Citation `svavittbartlett2009' on page 248 undefined on input li
+ne 2178.
 
+<Chapter8-figures/mbpt.pdf, id=5785, 614.295pt x 794.97pt>
+File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
-LaTeX Warning: Citation `Bart_silver74' on page 248 undefined on input line 236
-9.
-
-
-LaTeX Warning: Citation `Bart_silver76' on page 248 undefined on input line 236
-9.
+<use Chapter8-figures/mbpt.pdf>
+Package pdftex.def Info: Chapter8-figures/mbpt.pdf used on input line 2180.
+(pdftex.def)             Requested size: 424.58624pt x 549.46393pt.
 
 
 LaTeX Warning: Citation `shavittbartlett2009' on page 248 undefined on input li
-ne 2374.
+ne 2186.
+
+[248] [249 <./Chapter8-figures/mbpt.pdf>]
+
+LaTeX Warning: Reference `sec:cc' on page 250 undefined on input line 2242.
+
+[250]
+
+LaTeX Warning: Citation `ripkablaizot' on page 251 undefined on input line 2345
+.
 
 
-LaTeX Warning: Citation `papenbrock2014' on page 248 undefined on input line 23
-81.
+LaTeX Warning: Citation `day1967' on page 251 undefined on input line 2348.
+
+[251]
+
+LaTeX Warning: Citation `brueckner1955' on page 252 undefined on input line 236
+7.
 
 
-LaTeX Warning: Citation `hagen2016' on page 248 undefined on input line 2381.
+LaTeX Warning: Citation `GB1957' on page 252 undefined on input line 2368.
 
-[248]
 
-LaTeX Warning: Citation `shavittbartlett2009' on page 249 undefined on input li
-ne 2438.
+LaTeX Warning: Citation `Bart_silver74' on page 252 undefined on input line 237
+0.
 
-[249]
 
-LaTeX Warning: Citation `shavittbartlett2009' on page 250 undefined on input li
-ne 2499.
+LaTeX Warning: Citation `Bart_silver76' on page 252 undefined on input line 237
+0.
 
-[250] [251] [252]
+
+LaTeX Warning: Citation `shavittbartlett2009' on page 252 undefined on input li
+ne 2375.
+
+
+LaTeX Warning: Citation `papenbrock2014' on page 252 undefined on input line 23
+82.
+
+
+LaTeX Warning: Citation `hagen2016' on page 252 undefined on input line 2382.
+
+[252]
 
 LaTeX Warning: Citation `shavittbartlett2009' on page 253 undefined on input li
-ne 2760.
-
-
-LaTeX Warning: Citation `hagen2014' on page 253 undefined on input line 2760.
-
-
-LaTeX Warning: Citation `jansen2015' on page 253 undefined on input line 2763.
+ne 2439.
 
 [253]
 
-LaTeX Warning: Citation `hagen2007' on page 254 undefined on input line 2861.
+LaTeX Warning: Citation `shavittbartlett2009' on page 254 undefined on input li
+ne 2500.
 
-[254]
+[254] [255] [256]
 
-LaTeX Warning: Citation `day1967' on page 255 undefined on input line 2899.
-
-
-LaTeX Warning: Citation `hh2000' on page 255 undefined on input line 2899.
-
-[255] [256]
-
-Package xcolor Warning: Incompatible color definition on input line 3074.
+LaTeX Warning: Citation `shavittbartlett2009' on page 257 undefined on input li
+ne 2761.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3081--3083
+LaTeX Warning: Citation `hagen2014' on page 257 undefined on input line 2761.
+
+
+LaTeX Warning: Citation `jansen2015' on page 257 undefined on input line 2764.
+
+[257]
+
+LaTeX Warning: Citation `hagen2007' on page 258 undefined on input line 2862.
+
+[258]
+
+LaTeX Warning: Citation `day1967' on page 259 undefined on input line 2900.
+
+
+LaTeX Warning: Citation `hh2000' on page 259 undefined on input line 2900.
+
+[259] [260]
+
+Package xcolor Warning: Incompatible color definition on input line 3075.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3082--3084
 [] $[] \OMS/ztmcm/m/n/10   [] \OT1/ztmcm/m/n/10 + 0\OML/ztmcm/m/it/10 :\OT1/ztm
 cm/m/n/10 5 \OMS/ztmcm/m/n/10 ^^B []\OT1/ztmcm/m/n/10 [[](\OML/ztmcm/m/it/10 a;
  b; c; d\OT1/ztmcm/m/n/10 )] \OMS/ztmcm/m/n/10 ^^B
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3090.
+Package xcolor Warning: Incompatible color definition on input line 3091.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3090.
+Package xcolor Warning: Incompatible color definition on input line 3091.
 
-[257]
+[261]
 
-Package xcolor Warning: Incompatible color definition on input line 3103.
+Package xcolor Warning: Incompatible color definition on input line 3104.
 
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 3105.
+(Font)              using `T1/fve/m/n' instead on input line 3106.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3108.
+Package xcolor Warning: Incompatible color definition on input line 3109.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3108.
+Package xcolor Warning: Incompatible color definition on input line 3109.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3133.
+Package xcolor Warning: Incompatible color definition on input line 3134.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3142.
+Package xcolor Warning: Incompatible color definition on input line 3143.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3142.
+Package xcolor Warning: Incompatible color definition on input line 3143.
 
-[258] [259]
-Overfull \hbox (7.63506pt too wide) in paragraph at lines 3230--3234
+[262] [263]
+Overfull \hbox (7.63506pt too wide) in paragraph at lines 3231--3235
 \T1/fve/m/n/10 por-tant test of our codes. See []$\T1/fvm/m/n/10 https : / / gi
 thub . com / ManyBodyPhysics / LectureNotesPhysics /
  []
 
 
-Overfull \hbox (4.76913pt too wide) in paragraph at lines 3230--3234
+Overfull \hbox (4.76913pt too wide) in paragraph at lines 3231--3235
 \T1/fvm/m/n/10 blob / master / doc / src / Chapter8-[]programs / python / mbpt 
 . py$[] \T1/fve/m/n/10 for the Python code shown here. 
  []
 
-[260] [261]
-<Chapter8-figures/perturbationtheory.pdf, id=5507, 578.16pt x 433.62pt>
+[264] [265]
+<Chapter8-figures/perturbationtheory.pdf, id=6040, 578.16pt x 433.62pt>
 File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
 Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input 
-line 3382.
+line 3383.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
 
-<Chapter8-figures/CCDMBPT4theory.pdf, id=5513, 578.16pt x 433.62pt>
+<Chapter8-figures/CCDMBPT4theory.pdf, id=6046, 578.16pt x 433.62pt>
 File: Chapter8-figures/CCDMBPT4theory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/CCDMBPT4theory.pdf>
 Package pdftex.def Info: Chapter8-figures/CCDMBPT4theory.pdf used on input line
- 3411.
+ 3412.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
- [262] [263 <./Chapter8-figures/perturbationtheory.pdf>] [264 <./Chapter8-figur
-es/CCDMBPT4theory.pdf>] [265]
+ [266] [267 <./Chapter8-figures/perturbationtheory.pdf>] [268 <./Chapter8-figur
+es/CCDMBPT4theory.pdf>] [269]
 
-LaTeX Warning: Citation `blas' on page 266 undefined on input line 3561.
+LaTeX Warning: Citation `blas' on page 270 undefined on input line 3562.
 
-<Chapter8-figures/blockvsfull_log.png, id=5689, 578.16pt x 433.62pt>
+<Chapter8-figures/blockvsfull_log.png, id=6223, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
 Package pdftex.def Info: Chapter8-figures/blockvsfull_log.png used on input lin
-e 3584.
+e 3585.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
- [266] [267 <./Chapter8-figures/blockvsfull_log.png>]
+ [270] [271 <./Chapter8-figures/blockvsfull_log.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3628.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3642.
+Package xcolor Warning: Incompatible color definition on input line 3629.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3642.
+Package xcolor Warning: Incompatible color definition on input line 3643.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3673.
-
-[268]
-
-Package xcolor Warning: Incompatible color definition on input line 3686.
+Package xcolor Warning: Incompatible color definition on input line 3643.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3686.
+Package xcolor Warning: Incompatible color definition on input line 3674.
+
+[272]
+
+Package xcolor Warning: Incompatible color definition on input line 3687.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3695.
+Package xcolor Warning: Incompatible color definition on input line 3687.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3703.
+Package xcolor Warning: Incompatible color definition on input line 3696.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3703.
+Package xcolor Warning: Incompatible color definition on input line 3704.
 
-[269] <Chapter8-figures/fig1.pdf, id=5726, 500.87437pt x 400.11984pt>
+
+Package xcolor Warning: Incompatible color definition on input line 3704.
+
+[273] <Chapter8-figures/fig1.pdf, id=6260, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
-Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3758.
+Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3759.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=5727, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=6261, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
-Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3767.
+Package pdftex.def Info: Chapter8-figures/fig2.pdf used on input line 3768.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
 
-LaTeX Warning: Citation `finitesize' on page 270 undefined on input line 3782.
+LaTeX Warning: Citation `finitesize' on page 274 undefined on input line 3783.
 
 
-LaTeX Warning: Citation `twistaverage' on page 270 undefined on input line 3784
+LaTeX Warning: Citation `twistaverage' on page 274 undefined on input line 3785
 .
 
 
-Overfull \hbox (6.54861pt too wide) in paragraph at lines 3776--3787
+Overfull \hbox (6.54861pt too wide) in paragraph at lines 3777--3788
 [] \OT1/ztmcm/m/n/10 = []$\T1/fve/m/n/10 , but we could have cho-sen anti-perio
 dic bound-ary con-di-tions, $[] \OT1/ztmcm/m/n/10 = \OMS/ztmcm/m/n/10 ^^@ []$\T
 1/fve/m/n/10 .
  []
 
-[270]
+[274]
 
-Package xcolor Warning: Incompatible color definition on input line 3803.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3816.
+Package xcolor Warning: Incompatible color definition on input line 3804.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3816.
+Package xcolor Warning: Incompatible color definition on input line 3817.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3816.
-
-[271 <./Chapter8-figures/fig1.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 3816.
+Package xcolor Warning: Incompatible color definition on input line 3817.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3816.
+Package xcolor Warning: Incompatible color definition on input line 3817.
 
-<Chapter8-figures/fig3.pdf, id=5806, 523.75674pt x 407.53818pt>
+[275 <./Chapter8-figures/fig1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 3817.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3817.
+
+<Chapter8-figures/fig3.pdf, id=6340, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
-Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3836.
+Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3837.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=5808, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=6342, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
-Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3846.
+Package pdftex.def Info: Chapter8-figures/fig4.pdf used on input line 3847.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
- [272 <./Chapter8-figures/fig2.pdf>]
+ [276 <./Chapter8-figures/fig2.pdf>]
 
-LaTeX Warning: Citation `openmp' on page 273 undefined on input line 3880.
-
-
-LaTeX Warning: Citation `mpi' on page 273 undefined on input line 3880.
+LaTeX Warning: Citation `openmp' on page 277 undefined on input line 3881.
 
 
-LaTeX Warning: Citation `openmpi' on page 273 undefined on input line 3880.
-
-[273 <./Chapter8-figures/fig3.pdf>] [274 <./Chapter8-figures/fig4.pdf>]
-[275] [276]
-
-LaTeX Warning: Citation `blas' on page 277 undefined on input line 4014.
+LaTeX Warning: Citation `mpi' on page 277 undefined on input line 3881.
 
 
-LaTeX Warning: Reference `eq:mtxmtx' on page 277 undefined on input line 4014.
+LaTeX Warning: Citation `openmpi' on page 277 undefined on input line 3881.
 
-[277] <Chapter8-figures/MBPT2fig.pdf, id=6121, 528.05405pt x 403.94664pt>
+[277 <./Chapter8-figures/fig3.pdf>] [278 <./Chapter8-figures/fig4.pdf>]
+[279] [280]
+
+LaTeX Warning: Citation `blas' on page 281 undefined on input line 4015.
+
+
+LaTeX Warning: Reference `eq:mtxmtx' on page 281 undefined on input line 4015.
+
+[281] <Chapter8-figures/MBPT2fig.pdf, id=6655, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT2fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT2fig.pdf>
-Package pdftex.def Info: Chapter8-figures/MBPT2fig.pdf used on input line 4061.
+Package pdftex.def Info: Chapter8-figures/MBPT2fig.pdf used on input line 4062.
 
 (pdftex.def)             Requested size: 424.58624pt x 324.80962pt.
- [278] [279 <./Chapter8-figures/MBPT2fig.pdf>] [280] [281]
-<Chapter8-figures/MBPT3fig.pdf, id=6383, 528.05405pt x 403.94664pt>
+ [282] [283 <./Chapter8-figures/MBPT2fig.pdf>] [284] [285]
+<Chapter8-figures/MBPT3fig.pdf, id=6917, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT3fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT3fig.pdf>
-Package pdftex.def Info: Chapter8-figures/MBPT3fig.pdf used on input line 4264.
+Package pdftex.def Info: Chapter8-figures/MBPT3fig.pdf used on input line 4265.
 
 (pdftex.def)             Requested size: 424.58624pt x 324.80962pt.
- [282] [283 <./Chapter8-figures/MBPT3fig.pdf>] [284]
+ [286] [287 <./Chapter8-figures/MBPT3fig.pdf>] [288]
 
-LaTeX Warning: Citation `minnesota' on page 285 undefined on input line 4392.
+LaTeX Warning: Citation `minnesota' on page 289 undefined on input line 4393.
 
-[285] [286]
-Overfull \hbox (2.33627pt too wide) in paragraph at lines 4614--4619
+[289] [290]
+Overfull \hbox (2.33627pt too wide) in paragraph at lines 4615--4620
 \T1/fve/m/n/10 particle op-er-a-tor $[]$. Note that the two-body part of the Ha
 mil-to-nian con-tains anti-symmetrized
  []
 
-[287]
+[291]
 
-LaTeX Warning: Reference `fig:schematic' on page 288 undefined on input line 46
-45.
+LaTeX Warning: Reference `fig:schematic' on page 292 undefined on input line 46
+46.
 
-[288]
+[292]
 
-LaTeX Warning: Reference `fig:schematic' on page 289 undefined on input line 47
-15.
-
-
-LaTeX Warning: Reference `fig:schematic' on page 289 undefined on input line 47
-37.
+LaTeX Warning: Reference `fig:schematic' on page 293 undefined on input line 47
+16.
 
 
-LaTeX Warning: Reference `fig:diagrams' on page 289 undefined on input line 474
-1.
+LaTeX Warning: Reference `fig:schematic' on page 293 undefined on input line 47
+38.
 
 
-LaTeX Warning: Reference `fig:diagrams' on page 289 undefined on input line 474
-9.
-
-
-LaTeX Warning: Reference `fig:diagrams' on page 289 undefined on input line 476
+LaTeX Warning: Reference `fig:diagrams' on page 293 undefined on input line 474
 2.
 
-[289]
 
-LaTeX Warning: Citation `ekstromPRX' on page 290 undefined on input line 4841.
+LaTeX Warning: Reference `fig:diagrams' on page 293 undefined on input line 475
+0.
 
 
-Overfull \hbox (31.02185pt too wide) in paragraph at lines 4839--4844
+LaTeX Warning: Reference `fig:diagrams' on page 293 undefined on input line 476
+3.
+
+[293]
+
+LaTeX Warning: Citation `ekstromPRX' on page 294 undefined on input line 4842.
+
+
+Overfull \hbox (31.02185pt too wide) in paragraph at lines 4840--4845
 \T1/fvm/m/n/10 ManyBodyPhysics / LectureNotesPhysics / blob / master / doc / sr
 c / Chapter8-[]programs / cpp / MBPT2 /
  []
 
-[290] [291] [292]
-Overfull \hbox (10.71318pt too wide) in paragraph at lines 5040--5045
+[294] [295] [296]
+Overfull \hbox (10.71318pt too wide) in paragraph at lines 5041--5046
 \T1/fve/m/n/10 Wick's the-o-rem is based on two fun-da-men-tal con-cepts, namel
 y $[]$ and $[]$.
  []
 
-[293] [294]
-Overfull \hbox (10.18704pt too wide) in paragraph at lines 5179--5188
+[297] [298]
+Overfull \hbox (10.18704pt too wide) in paragraph at lines 5180--5189
 \T1/fvm/m/n/10 LectureNotesPhysics / blob / master / doc / src / Chapter8-[]pro
 grams / cpp / CCD / src$[]\T1/fve/m/n/10 , abide to this
  []
 
-[295]
-<Chapter8-figures/classabstractspbasis.pdf, id=6667, 501.875pt x 74.90987pt>
+[299]
+<Chapter8-figures/classabstractspbasis.pdf, id=7201, 501.875pt x 74.90987pt>
 File: Chapter8-figures/classabstractspbasis.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/classabstractspbasis.pdf>
 Package pdftex.def Info: Chapter8-figures/classabstractspbasis.pdf used on inpu
-t line 5231.
+t line 5232.
 (pdftex.def)             Requested size: 501.87376pt x 74.90968pt.
 
-Overfull \hbox (77.28752pt too wide) in paragraph at lines 5231--5232
+Overfull \hbox (77.28752pt too wide) in paragraph at lines 5232--5233
  [] 
  []
 
-[296 <./Chapter8-figures/classabstractspbasis.pdf>] (./chapter8.bbl
+[300 <./Chapter8-figures/classabstractspbasis.pdf>] (./chapter8.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 9.
 
-)) [297]
+)) [301]
 \openout2 = `chapter9.aux'.
 
- (./chapter9.tex [298
+ (./chapter9.tex [302
 
 
 
 
 
-] [299] [300] [301] [302] [303] [304pdfTeX warning (ext4): destination with the
+] [303] [304] [305] [306] [307] [308pdfTeX warning (ext4): destination with the
  same identifier (name{equation.9.27}) has been already used, duplicate ignored
 
 
@@ -5872,7 +4665,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 9.
                                                   \fi \fi 
 l.247 T
        hese properties of stationary Markov chains can be exploited to sampl...
-] [305]
+] [309]
 
 Package xcolor Warning: Incompatible color definition on input line 310.
 
@@ -5903,14 +4696,14 @@ Package xcolor Warning: Incompatible color definition on input line 349.
 
 Package xcolor Warning: Incompatible color definition on input line 349.
 
-[306]
+[310]
 
 Package xcolor Warning: Incompatible color definition on input line 349.
 
 
 Package xcolor Warning: Incompatible color definition on input line 349.
 
-[307] [308] [309]
+[311] [312] [313]
 Package epstopdf Info: Source file: <Chapter9-figures/qvar.eps>
 (epstopdf)                    date: 2016-06-29 16:50:11
 (epstopdf)                    size: 29525 bytes
@@ -5923,14 +4716,14 @@ converted-to.pdf Chapter9-figures/qvar.eps>
 (epstopdf)             \includegraphics on input line 476.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/qvar-eps-converted-to.pdf, id=6889, 667.49374pt x 473.77pt>
+<Chapter9-figures/qvar-eps-converted-to.pdf, id=7422, 667.49374pt x 473.77pt>
 File: Chapter9-figures/qvar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/qvar-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter9-figures/qvar-eps-converted-to.pdf used on inp
 ut line 476.
 (pdftex.def)             Requested size: 333.74606pt x 236.88441pt.
- [310]
+ [314]
 Package epstopdf Info: Source file: <Chapter9-figures/jas.eps>
 (epstopdf)                    date: 2016-06-29 17:19:40
 (epstopdf)                    size: 167469 bytes
@@ -5943,27 +4736,27 @@ onverted-to.pdf Chapter9-figures/jas.eps>
 (epstopdf)             \includegraphics on input line 507.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/jas-eps-converted-to.pdf, id=6903, 699.61375pt x 487.8225pt>
+<Chapter9-figures/jas-eps-converted-to.pdf, id=7438, 699.61375pt x 487.8225pt>
 File: Chapter9-figures/jas-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/jas-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter9-figures/jas-eps-converted-to.pdf used on inpu
 t line 507.
 (pdftex.def)             Requested size: 349.80602pt x 243.91064pt.
- [311 <./Chapter9-figures/qvar-eps-converted-to.pdf>] [312 <./Chapter9-figures/
+ [315 <./Chapter9-figures/qvar-eps-converted-to.pdf>] [316 <./Chapter9-figures/
 jas-eps-converted-to.pdf>]
-[313] [314] [315] [316]
+[317] [318] [319] [320]
 
 Package xcolor Warning: Incompatible color definition on input line 777.
 
-[317]
+[321]
 
 Package xcolor Warning: Incompatible color definition on input line 786.
 
 
 Package xcolor Warning: Incompatible color definition on input line 786.
 
-[318] [319]
+[322] [323]
 Package epstopdf Info: Source file: <Chapter9-figures/hists.eps>
 (epstopdf)                    date: 2016-07-01 12:59:19
 (epstopdf)                    size: 26273 bytes
@@ -5976,7 +4769,7 @@ f>
 (epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/hists-eps-converted-to.pdf, id=7026, 682.55pt x 465.74pt>
+<Chapter9-figures/hists-eps-converted-to.pdf, id=7561, 682.55pt x 465.74pt>
 File: Chapter9-figures/hists-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/hists-eps-converted-to.pdf>
@@ -5995,14 +4788,14 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 877.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7028, 669.50125pt x 466.74
+<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7563, 669.50125pt x 466.74
 374pt>
 File: Chapter9-figures/dmc_decay-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_decay-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter9-figures/dmc_decay-eps-converted-to.pdf used o
 n input line 877.
 (pdftex.def)             Requested size: 334.7498pt x 233.37129pt.
- [320 <./Chapter9-figures/hists-eps-converted-to.pdf>]
+ [324 <./Chapter9-figures/hists-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Chapter9-figures/walkers_dmc.eps>
 (epstopdf)                    date: 2016-07-01 13:07:59
 (epstopdf)                    size: 42311 bytes
@@ -6015,7 +4808,7 @@ mc-eps-converted-to.pdf Chapter9-figures/walkers_dmc.eps>
 (epstopdf)             \includegraphics on input line 897.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7051, 692.5875pt x 485.8
+<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7584, 692.5875pt x 485.8
 15pt>
 File: Chapter9-figures/walkers_dmc-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -6035,17 +4828,17 @@ eps-converted-to.pdf Chapter9-figures/dmc_extr.eps>
 (epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7053, 701.62125pt x 475.777
+<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7586, 701.62125pt x 475.777
 5pt>
 File: Chapter9-figures/dmc_extr-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_extr-eps-converted-to.pdf>
 Package pdftex.def Info: Chapter9-figures/dmc_extr-eps-converted-to.pdf used on
  input line 906.
 (pdftex.def)             Requested size: 350.80975pt x 237.88815pt.
- [321 <./Chapter9-figures/dmc_decay-eps-converted-to.pdf>] [322 <./Chapter9-fig
-ures/walkers_dmc-eps-converted-to.pdf>] [323 <./Chapter9-figures/dmc_extr-eps-c
+ [325 <./Chapter9-figures/dmc_decay-eps-converted-to.pdf>] [326 <./Chapter9-fig
+ures/walkers_dmc-eps-converted-to.pdf>] [327 <./Chapter9-figures/dmc_extr-eps-c
 onverted-to.pdf>]
-[324]
+[328]
 
 Package xcolor Warning: Incompatible color definition on input line 981.
 
@@ -6055,33 +4848,33 @@ Package xcolor Warning: Incompatible color definition on input line 990.
 
 Package xcolor Warning: Incompatible color definition on input line 990.
 
-[325] [326] [327] [328]
+[329] [330] [331] [332]
 
-LaTeX Warning: Citation `xxx2010' on page 329 undefined on input line 1298.
+LaTeX Warning: Citation `xxx2010' on page 333 undefined on input line 1298.
 
-[329] [330]
+[333] [334]
 Overfull \hbox (6.7374pt too wide) in alignment at lines 1461--1480
  [][][] []
  []
 
-[331]
+[335]
 
-LaTeX Warning: Citation `anderson1976' on page 332 undefined on input line 1536
+LaTeX Warning: Citation `anderson1976' on page 336 undefined on input line 1536
 .
 
-[332]
+[336]
 
-LaTeX Warning: Citation `carlson1993' on page 333 undefined on input line 1615.
-
-
-[333]
-
-LaTeX Warning: Citation `ortiz1993' on page 334 undefined on input line 1673.
+LaTeX Warning: Citation `carlson1993' on page 337 undefined on input line 1615.
 
 
-LaTeX Warning: Reference `eq.hsimp' on page 334 undefined on input line 1690.
+[337]
 
-[334] [335] [336]
+LaTeX Warning: Citation `ortiz1993' on page 338 undefined on input line 1673.
+
+
+LaTeX Warning: Reference `eq.hsimp' on page 338 undefined on input line 1690.
+
+[338] [339] [340]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1843.
@@ -6094,20 +4887,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1843.
 
-[337]
+[341]
 
-LaTeX Warning: Reference `eq.hsimpexpanded' on page 338 undefined on input line
+LaTeX Warning: Reference `eq.hsimpexpanded' on page 342 undefined on input line
  1947.
 
 
-LaTeX Warning: Citation `zhang2003' on page 338 undefined on input line 1948.
+LaTeX Warning: Citation `zhang2003' on page 342 undefined on input line 1948.
 
-[338] [339] [340] [341] [342] [343] [344] [345] [346]
+[342] [343] [344] [345] [346] [347] [348] [349] [350]
 
-LaTeX Warning: Reference `sign_function' on page 347 undefined on input line 25
+LaTeX Warning: Reference `sign_function' on page 351 undefined on input line 25
 16.
 
-[347] [348]
+[351] [352]
 
 Package xcolor Warning: Incompatible color definition on input line 2660.
 
@@ -6120,7 +4913,7 @@ Package xcolor Warning: Incompatible color definition on input line 2684.
 
 Package xcolor Warning: Incompatible color definition on input line 2684.
 
-[349]
+[353]
 
 Package xcolor Warning: Incompatible color definition on input line 2684.
 
@@ -6139,7 +4932,7 @@ Package xcolor Warning: Incompatible color definition on input line 2710.
 
 Package xcolor Warning: Incompatible color definition on input line 2716.
 
-[350]
+[354]
 
 Package xcolor Warning: Incompatible color definition on input line 2732.
 
@@ -6158,7 +4951,7 @@ ergence-eps-converted-to.pdf Chapter9-figures/cimc_convergence.eps>
 (epstopdf)             \includegraphics on input line 2741.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=7498, 726.715pt x 5
+<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8031, 726.715pt x 5
 05.89pt>
 File: Chapter9-figures/cimc_convergence-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -6167,33 +4960,33 @@ Package pdftex.def Info: Chapter9-figures/cimc_convergence-eps-converted-to.pdf
  used on input line 2741.
 (pdftex.def)             Requested size: 363.3566pt x 252.94437pt.
 
-<Chapter9-figures/cimcccd.pdf, id=7500, 578.16pt x 433.62pt>
+<Chapter9-figures/cimcccd.pdf, id=8033, 578.16pt x 433.62pt>
 File: Chapter9-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/cimcccd.pdf>
 Package pdftex.def Info: Chapter9-figures/cimcccd.pdf used on input line 2752.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
- [351] [352 <./Chapter9-figures/cimc_convergence-eps-converted-to.pdf> <./Chapt
-er9-figures/cimcccd.pdf>] [353] [354]
-[355]) [356]
+ [355] [356 <./Chapter9-figures/cimc_convergence-eps-converted-to.pdf> <./Chapt
+er9-figures/cimcccd.pdf>] [357] [358]
+[359]) [360]
 \openout2 = `chapter10.aux'.
 
  (./chapter10.tex
 Names of authors too long for running head. Please supply
 a shorter form with \authorrunning prior to \maketitle
-[357
+[361
 
 
 
 
 
-] [358] [359] [360] [361] [362]
+] [362] [363] [364] [365] [366]
 Overfull \hbox (85.20139pt too wide) in paragraph at lines 331--341
 []$\T1/fvm/m/n/10 https : / / github . com / ManyBodyPhysics / LectureNotesPhys
 ics / blob / master / doc / src / Chapter10-[]programs /
  []
 
-[363]
+[367]
 
 Package xcolor Warning: Incompatible color definition on input line 401.
 
@@ -6213,104 +5006,151 @@ Overfull \hbox (7.81888pt too wide) detected at line 454
 [] \OML/ztmcm/m/it/10 :
  []
 
-[364] [365]
+[368] [369]
 Underfull \hbox (badness 10000) in paragraph at lines 597--600
 
  []
 
-[366] [367]) [368]
+[370] [371]) [372]
 \openout2 = `chapter11.aux'.
 
- (./chapter11.tex [369
+ (./chapter11.tex [373
 
 
 
 
 
-] [370]
+]
 
-LaTeX Warning: Reference `eq:Sig_2nd' on page 371 undefined on input line 86.
-
-[371]
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 116
+LaTeX Warning: Reference `chap:chapter8' on page 374 undefined on input line 40
 .
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omszplm.fd
+
+
+LaTeX Warning: Reference `chap:chapter8' on page 374 undefined on input line 40
+.
+
+
+LaTeX Warning: Reference `chap:chapter9' on page 374 undefined on input line 40
+.
+
+
+LaTeX Warning: Reference `chap:chapter10' on page 374 undefined on input line 4
+0.
+
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 55.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
-)
-Overfull \hbox (34.04579pt too wide) in alignment at lines 110--125
- [][][] []
- []
-
-
-LaTeX Warning: Reference `(' on page 372 undefined on input line 176.
-
-[372] [373]
-
-LaTeX Warning: Reference `eq:Sig_2nd' on page 374 undefined on input line 273.
-
-[374pdfTeX warning (ext4): destination with the same identifier (name{equation.
-11.10}) has been already used, duplicate ignored
+) [374] [375]
+[376] [377pdfTeX warning (ext4): destination with the same identifier (name{equ
+ation.11.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.304 {\bf E
-            xercise 11.3}.  In case of a reference propagator that is not fu...
-]
+l.226 
+      ] [378] [379]
+Overfull \hbox (15.38707pt too wide) in alignment at lines 382--396
+ [][][] []
+ []
 
-LaTeX Warning: Reference `eq:Dyson' on page 375 undefined on input line 339.
+[380] [381]
+
+LaTeX Warning: Reference `(' on page 382 undefined on input line 575.
+
+[382] [383pdfTeX warning (ext4): destination with the same identifier (name{equ
+ation.11.26}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.654 \end{eqnarray}
+                    ] [384] [385]
+
+LaTeX Warning: Reference `eq:DysShrod' on page 386 undefined on input line 845.
 
 
-LaTeX Warning: Reference `eq:???' on page 375 undefined on input line 339.
+[386]
+
+LaTeX Warning: Citation `Schirmar9?' on page 387 undefined on input line 897.
 
 
-<Chapter11-figures/Pairing_model_CI_ADC_CC.pdf, id=7895, 682.55pt x 582.175pt>
-File: Chapter11-figures/Pairing_model_CI_ADC_CC.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `Som14a' on page 387 undefined on input line 897.
 
-<use Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>
-Package pdftex.def Info: Chapter11-figures/Pairing_model_CI_ADC_CC.pdf used on 
-input line 363.
-(pdftex.def)             Requested size: 339.67029pt x 289.71877pt.
- [375] [376 <./Chapter11-figures/Pairing_model_CI_ADC_CC.pdf>] [377] [378] [379
-] [380]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8002, 1027.84pt x 770.88pt>
+[387]
+
+LaTeX Warning: Citation `RingSchuck' on page 388 undefined on input line 899.
+
+<Chapter11-figures/Pairing_LNP_scgf.pdf, id=8588, 622.325pt x 521.95pt>
+File: Chapter11-figures/Pairing_LNP_scgf.pdf Graphic file (type pdf)
+
+<use Chapter11-figures/Pairing_LNP_scgf.pdf>
+Package pdftex.def Info: Chapter11-figures/Pairing_LNP_scgf.pdf used on input l
+ine 916.
+(pdftex.def)             Requested size: 339.67029pt x 284.8832pt.
+
+<Chapter11-figures/Pairing_LNP_ALL.pdf, id=8591, 622.325pt x 521.95pt>
+File: Chapter11-figures/Pairing_LNP_ALL.pdf Graphic file (type pdf)
+
+<use Chapter11-figures/Pairing_LNP_ALL.pdf>
+Package pdftex.def Info: Chapter11-figures/Pairing_LNP_ALL.pdf used on input li
+ne 925.
+(pdftex.def)             Requested size: 339.67029pt x 284.8832pt.
+
+
+LaTeX Warning: Reference `chap:chapter8' on page 388 undefined on input line 93
+3.
+
+[388] [389 <./Chapter11-figures/Pairing_LNP_scgf.pdf>] [390 <./Chapter11-figure
+s/Pairing_LNP_ALL.pdf>] [391] [392] [393] [394] [395]
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8819, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
 Package pdftex.def Info: Chapter11-figures/numerical_scgf_diagrams.pdf used on 
-input line 564.
+input line 1238.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
- [381 <./Chapter11-figures/numerical_scgf_diagrams.pdf>] [382] [383] [384] [385
-]
-Underfull \hbox (badness 10000) in paragraph at lines 723--725
+ [396 <./Chapter11-figures/numerical_scgf_diagrams.pdf>] [397] [398]
+<Chapter11-figures/cimcccd.pdf, id=9004, 578.16pt x 433.62pt>
+File: Chapter11-figures/cimcccd.pdf Graphic file (type pdf)
+
+<use Chapter11-figures/cimcccd.pdf>
+Package pdftex.def Info: Chapter11-figures/cimcccd.pdf used on input line 1338.
+
+(pdftex.def)             Requested size: 339.67029pt x 254.74847pt.
+ [399] [400 <./Chapter11-figures/cimcccd.pdf>] [401] [402] [403]
+Underfull \hbox (badness 10000) in paragraph at lines 1552--1554
 
  []
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 763.
-
-[386]
-
-LaTeX Warning: Command \d invalid in math mode on input line 768.
+LaTeX Warning: Command \d invalid in math mode on input line 1590.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 773.
+LaTeX Warning: Command \d invalid in math mode on input line 1593.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--831
+LaTeX Warning: Command \d invalid in math mode on input line 1596.
+
+[404]
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1652
 
  []
 
-[387] [388]) [389]
+[405]
+Underfull \hbox (badness 10000) in paragraph at lines 1682--1684
+
+ []
+
+[406] [407] (./chapter11.bbl)) [408]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) 
-(./chapter4.aux) (./chapter5.aux) (./chapter6.aux)
-(./chapter7.aux) (./chapter8.aux) (./chapter9.aux) (./chapter10.aux)
-(./chapter11.aux))
+(./chapter4.aux) (./chapter5.aux)
+(./chapter6.aux) (./chapter7.aux) (./chapter8.aux) (./chapter9.aux)
+(./chapter10.aux) (./chapter11.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
-(rerunfilecheck)             Checksum: 07CF96B44F1A5421AA00ECA8E9650F57;19574.
+(rerunfilecheck)             Checksum: 5AD27BD6806B23F5D418599835790BAD;19626.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -6328,13 +5168,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 26135 strings out of 493089
- 413377 string characters out of 6134842
- 594520 words of memory out of 5000000
- 25634 multiletter control sequences out of 15000+600000
+ 27300 strings out of 493089
+ 429816 string characters out of 6134842
+ 613238 words of memory out of 5000000
+ 26294 multiletter control sequences out of 15000+600000
  159699 words of font info for 277 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,122p,1567b,1754s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,25n,122p,1567b,2068s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
@@ -6367,10 +5207,10 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect1
 0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on lnp.pdf (400 pages, 6116876 bytes).
+Output written on lnp.pdf (419 pages, 6262303 bytes).
 PDF statistics:
- 9047 PDF objects out of 10688 (max. 8388607)
- 7777 compressed objects within 78 object streams
- 3291 named destinations out of 3580 (max. 500000)
- 2544 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 10175 PDF objects out of 10688 (max. 8388607)
+ 8822 compressed objects within 89 object streams
+ 3793 named destinations out of 4296 (max. 500000)
+ 2554 words of extra memory for PDF output out of 10000 (max. 10000000)
 

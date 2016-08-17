@@ -1,9 +1,83 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
   \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
+
+\bibitem{Weinberg:1990rz}
+S.~Weinberg, Phys. Lett. B \textbf{251}, 288 (1990)
+
+\bibitem{Weinberg:1991um}
+S.~Weinberg, Nucl. Phys. B \textbf{363}, 3 (1991)
+
+\bibitem{Kaplan:1996xu}
+D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. B \textbf{478}, 629 (1996)
+
+\bibitem{Kaplan:1998tg}
+D.B. Kaplan, M.J. Savage, M.B. Wise, Phys. Lett. B \textbf{424}, 390 (1998)
+
+\bibitem{Kaplan:1998we}
+D.B. Kaplan, M.J. Savage, M.B. Wise, Nucl. Phys. B \textbf{534}(1-2), 329
+  (1998)
+
+\bibitem{Epelbaum:2008ga}
+E.~Epelbaum, H.W. Hammer, U.G. Mei{\ss}ner, Rev. Mod. Phys. \textbf{81}, 1773
+  (2009)
+
+\bibitem{Machleidt:2011zz}
+R.~Machleidt, D.R. Entem, Phys. Rept. \textbf{503}, 1 (2011)
+
+\bibitem{Kaplan:2005es}
+D.B. Kaplan,   (2005).
+\newblock \urlprefix\url{http://arxiv.org/abs/nucl-th/0510023}
+
+\bibitem{Luscher:1986pf}
+M.~L{\"u}scher, Commun. Math. Phys. \textbf{105}, 153 (1986)
+
+\bibitem{Lee:2008fa}
+D.~Lee, Prog. Part. Nucl. Phys. \textbf{63}, 117 (2009)
+
+\bibitem{Borasoy:2006qn}
+B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Eur. Phys. J.
+  \textbf{A31}, 105 (2007)
+
+\bibitem{Fleming:1999ee}
+S.~Fleming, T.~Mehen, I.W. Stewart, Nucl. Phys. A \textbf{677}, 313 (2000)
+
+\bibitem{Braaten:2004rn}
+E.~Braaten, H.W. Hammer, Phys. Rept. \textbf{428}, 259 (2006)
+
+\bibitem{Bedaque:1998km}
+P.F. Bedaque, H.W. Hammer, U.~van Kolck, Nucl. Phys. A \textbf{646}, 444 (1999)
+
+\bibitem{Bedaque:1998kg}
+P.F. Bedaque, H.W. Hammer, U.~van Kolck, Phys. Rev. Lett. \textbf{82}, 463
+  (1999)
+
+\bibitem{Epelbaum:2009pd}
+E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Phys. Rev. Lett. \textbf{104},
+  142501 (2010)
+
+\bibitem{Epelbaum:2013paa}
+E.~Epelbaum, H.~Krebs, T.A. L{\"a}hde, D.~Lee, U.G. Mei{\ss}ner, G.~Rupak,
+  Phys. Rev. Lett. \textbf{112}(10), 102501 (2014)
+
+\bibitem{Lahde:2013uqa}
+T.A. L{\"a}hde, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, G.~Rupak,
+  Phys. Lett. \textbf{B732}, 110 (2014)
+
+\bibitem{Epelbaum:2011md}
+E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Phys. Rev. Lett. \textbf{106},
+  192501 (2011)
+
+\bibitem{Epelbaum:2012qn}
+E.~Epelbaum, H.~Krebs, T.~L{\"a}hde, D.~Lee, U.G. Mei{\ss}ner, Phys. Rev. Lett.
+  \textbf{109}, 252501 (2012)
+
+\bibitem{Epelbaum:2012iu}
+E.~Epelbaum, H.~Krebs, T.A. L{\"a}hde, D.~Lee, U.G. Mei{\ss}ner, Phys. Rev.
+  Lett. \textbf{110}, 112502 (2013)
 
 \end{thebibliography}

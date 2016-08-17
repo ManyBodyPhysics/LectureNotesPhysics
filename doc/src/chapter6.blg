@@ -2,101 +2,69 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter6.aux
 The style file: spphys.bst
-I couldn't open database file lnplib.bib
----line 83 of file chapter6.aux
- : \bibdata{lnplib
- :                }
-I'm skipping whatever remains of this command
-I found no database files---while reading file chapter6.aux
-Warning--I didn't find a database entry for "Weinberg:1990rz"
-Warning--I didn't find a database entry for "Weinberg:1991um"
-Warning--I didn't find a database entry for "Ordonez:1992xp"
-Warning--I didn't find a database entry for "Ordonez:1993tn"
-Warning--I didn't find a database entry for "vanKolck:1994yi"
-Warning--I didn't find a database entry for "Epelbaum:1998hg"
-Warning--I didn't find a database entry for "Epelbaum:1998ka"
-Warning--I didn't find a database entry for "Bedaque:2002mn"
-Warning--I didn't find a database entry for "Epelbaum:2008ga"
-Warning--I didn't find a database entry for "Lee:2008fa"
-Warning--I didn't find a database entry for "Drut:2012a"
-Warning--I didn't find a database entry for "Hubbard:1959ub"
-Warning--I didn't find a database entry for "Stratonovich:1958"
-Warning--I didn't find a database entry for "Weingarten:1980hx"
-Warning--I didn't find a database entry for "Scalettar:1986uy"
-Warning--I didn't find a database entry for "Gottlieb:1987mq"
-Warning--I didn't find a database entry for "Duane:1987de"
-Warning--I didn't find a database entry for "Muller:1999cp"
-Warning--I didn't find a database entry for "Lee:2004si"
-Warning--I didn't find a database entry for "Lee:2004qd"
-Warning--I didn't find a database entry for "Lee:2005is"
-Warning--I didn't find a database entry for "Lee:2005it"
-Warning--I didn't find a database entry for "Borasoy:2005yc"
-Warning--I didn't find a database entry for "Borasoy:2006qn"
-Warning--I didn't find a database entry for "Borasoy:2007vi"
-Warning--I didn't find a database entry for "Borasoy:2007vk"
-Warning--I didn't find a database entry for "Wlazlowski:2014jna"
-Warning--I didn't find a database entry for "Epelbaum:2009zs"
-Warning--I didn't find a database entry for "Epelbaum:2009pd"
-Warning--I didn't find a database entry for "Epelbaum:2011md"
-Warning--I didn't find a database entry for "Epelbaum:2012qn"
-Warning--I didn't find a database entry for "Epelbaum:2012iu"
-Warning--I didn't find a database entry for "Lahde:2013uqa"
-Warning--I didn't find a database entry for "Epelbaum:2013paa"
-Warning--I didn't find a database entry for "Elhatisari:2016owd"
-Warning--I didn't find a database entry for "Rupak:2013aue"
-Warning--I didn't find a database entry for "Rupak:2014xza"
-Warning--I didn't find a database entry for "Elhatisari:2015iga"
-Warning--I didn't find a database entry for "Luscher:1985dn"
-Warning--I didn't find a database entry for "Luscher:1986pf"
-Warning--I didn't find a database entry for "Luscher:1991ux"
-Warning--I didn't find a database entry for "Borasoy:2007vy"
-Warning--I didn't find a database entry for "Carlson:1984"
-Warning--I didn't find a database entry for "Lu:2015riz"
-Warning--I didn't find a database entry for "Pine:2013zja"
-Warning--I didn't find a database entry for "Elhatisari:2014lka"
-Warning--I didn't find a database entry for "Rokash:2015hra"
-Warning--I didn't find a database entry for "Creutz:1988wv"
-Warning--I didn't find a database entry for "Creutz:1999zy"
-Warning--I didn't find a database entry for "Carlson:2014vla"
-You've used 0 entries,
+Database file #1: lnp.bib
+Repeated entry---line 3780 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3789 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3836 of file lnp.bib
+ : @article{Bedaque:2002mn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3846 of file lnp.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4284 of file lnp.bib
+ : @article{Carlson:2014vla
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Elhatisari:2016owd
+Warning--empty journal in Lu:2015riz
+Warning--empty journal in Rokash:2015hra
+You've used 50 entries,
             2812 wiz_defined-function locations,
-            693 strings with 5726 characters,
-and the built_in function-call counts, 28 in all, are:
-= -- 0
-> -- 0
+            919 strings with 12039 characters,
+and the built_in function-call counts, 16697 in all, are:
+= -- 993
+> -- 524
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
++ -- 208
+- -- 158
+* -- 1001
+:= -- 1958
+add.period$ -- 3
+call.type$ -- 50
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 53
+duplicate$ -- 1851
+empty$ -- 1736
+format.name$ -- 197
+if$ -- 3772
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 50
+missing$ -- 502
+newline$ -- 161
+num.names$ -- 50
+pop$ -- 770
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 448
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 583
+swap$ -- 1070
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 7
-(There were 2 error messages)
+warning$ -- 3
+while$ -- 96
+width$ -- 52
+write$ -- 407
+(There were 5 error messages)

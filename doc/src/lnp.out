@@ -220,15 +220,15 @@
 \BOOKMARK [2][-]{subsection.11.2.1}{Spectral function and relation to experimental observations}{section.11.2}% 220
 \BOOKMARK [2][-]{subsection.11.2.2}{Perturbation expansion of the Green 's function}{section.11.2}% 221
 \BOOKMARK [1][-]{section.11.3}{The Algebraic Diagrammatic Construction method}{section*.39}% 222
-\BOOKMARK [2][-]{subsection.11.3.1}{The algebraic diagrammatic construction method}{section.11.3}% 223
+\BOOKMARK [2][-]{subsection.11.3.1}{The ADC\(n\) approach and working equations at third-order}{section.11.3}% 223
 \BOOKMARK [2][-]{subsection.11.3.2}{Solving the Dyson equation}{section.11.3}% 224
 \BOOKMARK [2][-]{subsection.11.3.3}{A simple pairing model}{section.11.3}% 225
 \BOOKMARK [1][-]{section.11.4}{A computational project in infinite matter}{section*.39}% 226
-\BOOKMARK [1][-]{section.11.5}{Self-consistenft GF at finite temperatures in the thermodynamic limit}{section*.39}% 227
+\BOOKMARK [1][-]{section.11.5}{Self-consistenft Green's functions at finite temperatures in the thermodynamic limit}{section*.39}% 227
 \BOOKMARK [2][-]{subsection.11.5.1}{Numerical implementation at finite temperature}{section.11.5}% 228
 \BOOKMARK [2][-]{subsection.11.5.2}{Calculations of neutron matter at finite temperatures.}{section.11.5}% 229
 \BOOKMARK [2][-]{subsection.11.5.3}{Numerical calculation when including three-body forces.}{section.11.5}% 230
 \BOOKMARK [1][-]{section.11.6}{Concluding remarks}{section*.39}% 231
-\BOOKMARK [1][-]{section*.40}{Appendix 1: Chiral NNLO three-nucleon forces}{section*.39}% 232
+\BOOKMARK [1][-]{section*.40}{Appendix 1: Chiral next-to-next-to-leading order three-nucleon forces}{section*.39}% 232
 \BOOKMARK [1][-]{section*.41}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{section*.39}% 233
 \BOOKMARK [1][-]{section*.42}{References}{section*.39}% 234
