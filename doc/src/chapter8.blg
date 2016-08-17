@@ -3,32 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter8.aux
 The style file: spphys.bst
 Database file #1: lnp.bib
-Warning--I didn't find a database entry for "lattimer2007"
-Warning--I didn't find a database entry for "lattimer2012"
-Warning--I didn't find a database entry for "weber1999"
-Warning--I didn't find a database entry for "hh2000"
-Warning--I didn't find a database entry for "vankolck1994"
-Warning--I didn't find a database entry for "machleidt2011"
-Warning--I didn't find a database entry for "epelbaum2009"
-Warning--I didn't find a database entry for "binder2013"
-Warning--I didn't find a database entry for "hergert2013"
-Warning--I didn't find a database entry for "roth2012"
-Warning--I didn't find a database entry for "hagen2012a"
-Warning--I didn't find a database entry for "hagen2012b"
-Warning--I didn't find a database entry for "cipollone2013"
-Warning--I didn't find a database entry for "carbone2013"
-Warning--I didn't find a database entry for "tetsuo2013"
-Warning--I didn't find a database entry for "day1967"
-Warning--I didn't find a database entry for "brueckner1954"
-Warning--I didn't find a database entry for "brueckner1955"
-Warning--I didn't find a database entry for "baldo2012"
-Warning--I didn't find a database entry for "baldo2012a"
-Warning--I didn't find a database entry for "bartlett2007"
-Warning--I didn't find a database entry for "shavittbartlett2009"
-Warning--I didn't find a database entry for "gandolfi2009"
-Warning--I didn't find a database entry for "lovato2012"
-Warning--I didn't find a database entry for "dickhoff2004"
-Warning--I didn't find a database entry for "erler2013"
 Warning--I didn't find a database entry for "prakash1996"
 Warning--I didn't find a database entry for "steiner2010"
 Warning--I didn't find a database entry for "prakash2006"
@@ -40,12 +14,8 @@ Warning--I didn't find a database entry for "ordonez1992"
 Warning--I didn't find a database entry for "ordonez1994"
 Warning--I didn't find a database entry for "ordonez1996"
 Warning--I didn't find a database entry for "vankolck1999"
-Warning--I didn't find a database entry for "ekstrom2013"
 Warning--I didn't find a database entry for "ekstromPRX"
-Warning--I didn't find a database entry for "epelbaum2002"
-Warning--I didn't find a database entry for "navratil2007"
 Warning--I didn't find a database entry for "barrettmusial2007"
-Warning--I didn't find a database entry for "navratil2009"
 Warning--I didn't find a database entry for "krylov"
 Warning--I didn't find a database entry for "lanczos"
 Warning--I didn't find a database entry for "davidson"
@@ -67,45 +37,45 @@ Warning--I didn't find a database entry for "twistaverage"
 Warning--I didn't find a database entry for "openmp"
 Warning--I didn't find a database entry for "mpi"
 Warning--I didn't find a database entry for "openmpi"
-You've used 0 entries,
+You've used 30 entries,
             2812 wiz_defined-function locations,
-            661 strings with 5050 characters,
-and the built_in function-call counts, 28 in all, are:
-= -- 0
-> -- 0
+            806 strings with 9626 characters,
+and the built_in function-call counts, 10616 in all, are:
+= -- 629
+> -- 354
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
++ -- 138
+- -- 108
+* -- 651
+:= -- 1243
+add.period$ -- 5
+call.type$ -- 30
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 30
+duplicate$ -- 1131
+empty$ -- 1096
+format.name$ -- 132
+if$ -- 2409
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 30
+missing$ -- 314
+newline$ -- 103
+num.names$ -- 30
+pop$ -- 466
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 300
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 408
+swap$ -- 665
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 7
-(There were 64 warnings)
+while$ -- 57
+width$ -- 32
+write$ -- 254
+(There were 34 warnings)

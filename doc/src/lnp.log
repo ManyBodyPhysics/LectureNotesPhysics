@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 10:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3985,106 +3985,7 @@ l.836 \end{equation}
 
 
 
-]
-
-LaTeX Warning: Citation `lattimer2007' on page 219 undefined on input line 56.
-
-
-LaTeX Warning: Citation `lattimer2012' on page 219 undefined on input line 56.
-
-
-LaTeX Warning: Citation `weber1999' on page 219 undefined on input line 56.
-
-
-LaTeX Warning: Citation `hh2000' on page 219 undefined on input line 56.
-
-[219]
-
-LaTeX Warning: Citation `vankolck1994' on page 220 undefined on input line 75.
-
-
-LaTeX Warning: Citation `machleidt2011' on page 220 undefined on input line 75.
-
-
-
-LaTeX Warning: Citation `epelbaum2009' on page 220 undefined on input line 75.
-
-
-LaTeX Warning: Citation `binder2013' on page 220 undefined on input line 81.
-
-
-LaTeX Warning: Citation `hergert2013' on page 220 undefined on input line 81.
-
-
-LaTeX Warning: Citation `roth2012' on page 220 undefined on input line 81.
-
-
-LaTeX Warning: Citation `hagen2012a' on page 220 undefined on input line 81.
-
-
-LaTeX Warning: Citation `hagen2012b' on page 220 undefined on input line 81.
-
-
-LaTeX Warning: Citation `cipollone2013' on page 220 undefined on input line 81.
-
-
-
-LaTeX Warning: Citation `carbone2013' on page 220 undefined on input line 81.
-
-
-LaTeX Warning: Citation `tetsuo2013' on page 220 undefined on input line 85.
-
-
-LaTeX Warning: Citation `day1967' on page 220 undefined on input line 91.
-
-
-LaTeX Warning: Citation `brueckner1954' on page 220 undefined on input line 93.
-
-
-
-LaTeX Warning: Citation `brueckner1955' on page 220 undefined on input line 93.
-
-
-
-LaTeX Warning: Citation `hh2000' on page 220 undefined on input line 94.
-
-
-LaTeX Warning: Citation `baldo2012' on page 220 undefined on input line 94.
-
-
-LaTeX Warning: Citation `baldo2012a' on page 220 undefined on input line 94.
-
-
-LaTeX Warning: Citation `bartlett2007' on page 220 undefined on input line 100.
-
-
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 220 undefined on input li
-ne 100.
-
-
-LaTeX Warning: Citation `gandolfi2009' on page 220 undefined on input line 101.
-
-
-
-LaTeX Warning: Citation `lovato2012' on page 220 undefined on input line 101.
-
-
-LaTeX Warning: Citation `baldo2012a' on page 220 undefined on input line 102.
-
-
-LaTeX Warning: Citation `carbone2013' on page 220 undefined on input line 102.
-
-
-LaTeX Warning: Citation `dickhoff2004' on page 220 undefined on input line 102.
-
-
-
-LaTeX Warning: Citation `erler2013' on page 220 undefined on input line 103.
-
-
-LaTeX Warning: Citation `hh2000' on page 220 undefined on input line 127.
-
+] [219]
 
 LaTeX Warning: Citation `prakash1996' on page 220 undefined on input line 127.
 
@@ -4101,11 +4002,6 @@ LaTeX Warning: Citation `symmetryenergy2013' on page 223 undefined on input lin
 e 299.
 
 [223]
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 224 undefined on input li
-ne 382.
-
-
 Overfull \hbox (4.67732pt too wide) in paragraph at lines 401--403
 []\T1/fve/m/n/10 Now we im-pose anti-symmetry by hav-ing the fermion op-er-a-to
 rs sat-isfy the anti-commutation
@@ -4150,35 +4046,13 @@ LaTeX Warning: Citation `vankolck1999' on page 230 undefined on input line 869.
 
 
 
-LaTeX Warning: Citation `machleidt2011' on page 230 undefined on input line 869
-.
-
-
-LaTeX Warning: Citation `epelbaum2009' on page 230 undefined on input line 869.
-
-
-
-LaTeX Warning: Citation `ekstrom2013' on page 230 undefined on input line 869.
-
-
 LaTeX Warning: Citation `ekstromPRX' on page 230 undefined on input line 869.
 
 [230]
 
 LaTeX Warning: Citation `ekstromPRX' on page 231 undefined on input line 907.
 
-
-LaTeX Warning: Citation `machleidt2011' on page 231 undefined on input line 909
-.
-
-
-LaTeX Warning: Citation `epelbaum2009' on page 231 undefined on input line 909.
-
-
-
-LaTeX Warning: Citation `ekstrom2013' on page 231 undefined on input line 909.
-
-<Chapter8-figures/diagNNLO.pdf, id=5577, 1803.73875pt x 1574.88374pt>
+<Chapter8-figures/diagNNLO.pdf, id=5627, 1803.73875pt x 1574.88374pt>
 File: Chapter8-figures/diagNNLO.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/diagNNLO.pdf>
@@ -4195,26 +4069,9 @@ LaTeX Warning: Citation `weinberg1991' on page 231 undefined on input line 927.
 
 [231 <./Chapter8-figures/diagNNLO.pdf>]
 
-LaTeX Warning: Citation `machleidt2011' on page 232 undefined on input line 989
-.
-
-
 LaTeX Warning: Citation `ekstromPRX' on page 232 undefined on input line 989.
 
-
-LaTeX Warning: Citation `machleidt2011' on page 232 undefined on input line 991
-.
-
-[232]
-
-LaTeX Warning: Citation `epelbaum2002' on page 233 undefined on input line 1056
-.
-
-
-LaTeX Warning: Citation `navratil2007' on page 233 undefined on input line 1089
-.
-
-[233] [234] [235]
+[232] [233] [234] [235]
 
 Package xcolor Warning: Incompatible color definition on input line 1325.
 
@@ -4242,16 +4099,8 @@ y$[] \T1/fve/m/n/10 for full code and ma-trix el-e-ments.
 
 [237] [238] [239] [240] [241]
 
-LaTeX Warning: Citation `shavittbartlett2009' on page 242 undefined on input li
-ne 1711.
-
-
 LaTeX Warning: Citation `barrettmusial2007' on page 242 undefined on input line
  1755.
-
-
-LaTeX Warning: Citation `navratil2009' on page 242 undefined on input line 1762
-.
 
 [242] [243]
 
@@ -4271,35 +4120,18 @@ LaTeX Warning: Citation `golubvanloan' on page 244 undefined on input line 1900
 
 LaTeX Warning: Citation `haxton' on page 247 undefined on input line 2080.
 
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 247 undefined on input li
-ne 2080.
-
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 247 undefined on input li
-ne 2112.
-
 [247]
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 248 undefined on input li
-ne 2170.
-
 
 LaTeX Warning: Citation `svavittbartlett2009' on page 248 undefined on input li
 ne 2178.
 
-<Chapter8-figures/mbpt.pdf, id=5785, 614.295pt x 794.97pt>
+<Chapter8-figures/mbpt.pdf, id=5847, 614.295pt x 794.97pt>
 File: Chapter8-figures/mbpt.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/mbpt.pdf>
 Package pdftex.def Info: Chapter8-figures/mbpt.pdf used on input line 2180.
 (pdftex.def)             Requested size: 424.58624pt x 549.46393pt.
-
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 248 undefined on input li
-ne 2186.
-
-[248] [249 <./Chapter8-figures/mbpt.pdf>]
+ [248] [249 <./Chapter8-figures/mbpt.pdf>]
 
 LaTeX Warning: Reference `sec:cc' on page 250 undefined on input line 2242.
 
@@ -4308,14 +4140,7 @@ LaTeX Warning: Reference `sec:cc' on page 250 undefined on input line 2242.
 LaTeX Warning: Citation `ripkablaizot' on page 251 undefined on input line 2345
 .
 
-
-LaTeX Warning: Citation `day1967' on page 251 undefined on input line 2348.
-
 [251]
-
-LaTeX Warning: Citation `brueckner1955' on page 252 undefined on input line 236
-7.
-
 
 LaTeX Warning: Citation `GB1957' on page 252 undefined on input line 2368.
 
@@ -4328,31 +4153,13 @@ LaTeX Warning: Citation `Bart_silver76' on page 252 undefined on input line 237
 0.
 
 
-LaTeX Warning: Citation `shavittbartlett2009' on page 252 undefined on input li
-ne 2375.
-
-
 LaTeX Warning: Citation `papenbrock2014' on page 252 undefined on input line 23
 82.
 
 
 LaTeX Warning: Citation `hagen2016' on page 252 undefined on input line 2382.
 
-[252]
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 253 undefined on input li
-ne 2439.
-
-[253]
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 254 undefined on input li
-ne 2500.
-
-[254] [255] [256]
-
-LaTeX Warning: Citation `shavittbartlett2009' on page 257 undefined on input li
-ne 2761.
-
+[252] [253] [254] [255] [256]
 
 LaTeX Warning: Citation `hagen2014' on page 257 undefined on input line 2761.
 
@@ -4363,14 +4170,7 @@ LaTeX Warning: Citation `jansen2015' on page 257 undefined on input line 2764.
 
 LaTeX Warning: Citation `hagen2007' on page 258 undefined on input line 2862.
 
-[258]
-
-LaTeX Warning: Citation `day1967' on page 259 undefined on input line 2900.
-
-
-LaTeX Warning: Citation `hh2000' on page 259 undefined on input line 2900.
-
-[259] [260]
+[258] [259] [260]
 
 Package xcolor Warning: Incompatible color definition on input line 3075.
 
@@ -4423,7 +4223,7 @@ Overfull \hbox (4.76913pt too wide) in paragraph at lines 3231--3235
  []
 
 [264] [265]
-<Chapter8-figures/perturbationtheory.pdf, id=6040, 578.16pt x 433.62pt>
+<Chapter8-figures/perturbationtheory.pdf, id=6111, 578.16pt x 433.62pt>
 File: Chapter8-figures/perturbationtheory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/perturbationtheory.pdf>
@@ -4431,7 +4231,7 @@ Package pdftex.def Info: Chapter8-figures/perturbationtheory.pdf used on input
 line 3383.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
 
-<Chapter8-figures/CCDMBPT4theory.pdf, id=6046, 578.16pt x 433.62pt>
+<Chapter8-figures/CCDMBPT4theory.pdf, id=6117, 578.16pt x 433.62pt>
 File: Chapter8-figures/CCDMBPT4theory.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/CCDMBPT4theory.pdf>
@@ -4443,7 +4243,7 @@ es/CCDMBPT4theory.pdf>] [269]
 
 LaTeX Warning: Citation `blas' on page 270 undefined on input line 3562.
 
-<Chapter8-figures/blockvsfull_log.png, id=6223, 578.16pt x 433.62pt>
+<Chapter8-figures/blockvsfull_log.png, id=6294, 578.16pt x 433.62pt>
 File: Chapter8-figures/blockvsfull_log.png Graphic file (type png)
 
 <use Chapter8-figures/blockvsfull_log.png>
@@ -4479,14 +4279,14 @@ Package xcolor Warning: Incompatible color definition on input line 3704.
 
 Package xcolor Warning: Incompatible color definition on input line 3704.
 
-[273] <Chapter8-figures/fig1.pdf, id=6260, 500.87437pt x 400.11984pt>
+[273] <Chapter8-figures/fig1.pdf, id=6330, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig1.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig1.pdf>
 Package pdftex.def Info: Chapter8-figures/fig1.pdf used on input line 3759.
 (pdftex.def)             Requested size: 424.58624pt x 339.19376pt.
 
-<Chapter8-figures/fig2.pdf, id=6261, 500.87437pt x 400.11984pt>
+<Chapter8-figures/fig2.pdf, id=6331, 500.87437pt x 400.11984pt>
 File: Chapter8-figures/fig2.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig2.pdf>
@@ -4527,14 +4327,14 @@ Package xcolor Warning: Incompatible color definition on input line 3817.
 
 Package xcolor Warning: Incompatible color definition on input line 3817.
 
-<Chapter8-figures/fig3.pdf, id=6340, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig3.pdf, id=6411, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig3.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig3.pdf>
 Package pdftex.def Info: Chapter8-figures/fig3.pdf used on input line 3837.
 (pdftex.def)             Requested size: 424.58624pt x 330.37152pt.
 
-<Chapter8-figures/fig4.pdf, id=6342, 523.75674pt x 407.53818pt>
+<Chapter8-figures/fig4.pdf, id=6413, 523.75674pt x 407.53818pt>
 File: Chapter8-figures/fig4.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/fig4.pdf>
@@ -4558,7 +4358,7 @@ LaTeX Warning: Citation `blas' on page 281 undefined on input line 4015.
 
 LaTeX Warning: Reference `eq:mtxmtx' on page 281 undefined on input line 4015.
 
-[281] <Chapter8-figures/MBPT2fig.pdf, id=6655, 528.05405pt x 403.94664pt>
+[281] <Chapter8-figures/MBPT2fig.pdf, id=6726, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT2fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT2fig.pdf>
@@ -4566,7 +4366,7 @@ Package pdftex.def Info: Chapter8-figures/MBPT2fig.pdf used on input line 4062.
 
 (pdftex.def)             Requested size: 424.58624pt x 324.80962pt.
  [282] [283 <./Chapter8-figures/MBPT2fig.pdf>] [284] [285]
-<Chapter8-figures/MBPT3fig.pdf, id=6917, 528.05405pt x 403.94664pt>
+<Chapter8-figures/MBPT3fig.pdf, id=6988, 528.05405pt x 403.94664pt>
 File: Chapter8-figures/MBPT3fig.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/MBPT3fig.pdf>
@@ -4632,7 +4432,7 @@ grams / cpp / CCD / src$[]\T1/fve/m/n/10 , abide to this
  []
 
 [299]
-<Chapter8-figures/classabstractspbasis.pdf, id=7201, 501.875pt x 74.90987pt>
+<Chapter8-figures/classabstractspbasis.pdf, id=7272, 501.875pt x 74.90987pt>
 File: Chapter8-figures/classabstractspbasis.pdf Graphic file (type pdf)
 
 <use Chapter8-figures/classabstractspbasis.pdf>
@@ -4644,22 +4444,23 @@ Overfull \hbox (77.28752pt too wide) in paragraph at lines 5232--5233
  [] 
  []
 
-[300 <./Chapter8-figures/classabstractspbasis.pdf>] (./chapter8.bbl
+[300 <./Chapter8-figures/classabstractspbasis.pdf>] (./chapter8.bbl [301]
+Underfull \hbox (badness 1527) in paragraph at lines 107--110
+[]\T1/fve/m/n/8.5 A. Ek-ström, G. Baard-sen, C. Forssén, G. Ha-gen, M. Hjorth-J
+ensen, G.R. Jansen, R. Mach-leidt,
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 9.
-
-)) [301]
+)) [302]
 \openout2 = `chapter9.aux'.
 
- (./chapter9.tex [302
+ (./chapter9.tex [303
 
 
 
 
 
-] [303] [304] [305] [306] [307] [308pdfTeX warning (ext4): destination with the
- same identifier (name{equation.9.27}) has been already used, duplicate ignored
-
+] [304] [305] [306] [307] [308pdfTeX warning (ext4): destination with the same 
+identifier (name{equation.9.27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -4716,7 +4517,7 @@ converted-to.pdf Chapter9-figures/qvar.eps>
 (epstopdf)             \includegraphics on input line 476.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/qvar-eps-converted-to.pdf, id=7422, 667.49374pt x 473.77pt>
+<Chapter9-figures/qvar-eps-converted-to.pdf, id=7504, 667.49374pt x 473.77pt>
 File: Chapter9-figures/qvar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/qvar-eps-converted-to.pdf>
@@ -4736,7 +4537,7 @@ onverted-to.pdf Chapter9-figures/jas.eps>
 (epstopdf)             \includegraphics on input line 507.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/jas-eps-converted-to.pdf, id=7438, 699.61375pt x 487.8225pt>
+<Chapter9-figures/jas-eps-converted-to.pdf, id=7519, 699.61375pt x 487.8225pt>
 File: Chapter9-figures/jas-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/jas-eps-converted-to.pdf>
@@ -4769,7 +4570,7 @@ f>
 (epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/hists-eps-converted-to.pdf, id=7561, 682.55pt x 465.74pt>
+<Chapter9-figures/hists-eps-converted-to.pdf, id=7642, 682.55pt x 465.74pt>
 File: Chapter9-figures/hists-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/hists-eps-converted-to.pdf>
@@ -4788,7 +4589,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 877.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7563, 669.50125pt x 466.74
+<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=7644, 669.50125pt x 466.74
 374pt>
 File: Chapter9-figures/dmc_decay-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_decay-eps-converted-to.pdf>
@@ -4808,7 +4609,7 @@ mc-eps-converted-to.pdf Chapter9-figures/walkers_dmc.eps>
 (epstopdf)             \includegraphics on input line 897.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7584, 692.5875pt x 485.8
+<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=7666, 692.5875pt x 485.8
 15pt>
 File: Chapter9-figures/walkers_dmc-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -4828,7 +4629,7 @@ eps-converted-to.pdf Chapter9-figures/dmc_extr.eps>
 (epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7586, 701.62125pt x 475.777
+<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=7668, 701.62125pt x 475.777
 5pt>
 File: Chapter9-figures/dmc_extr-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_extr-eps-converted-to.pdf>
@@ -4951,7 +4752,7 @@ ergence-eps-converted-to.pdf Chapter9-figures/cimc_convergence.eps>
 (epstopdf)             \includegraphics on input line 2741.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8031, 726.715pt x 5
+<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8113, 726.715pt x 5
 05.89pt>
 File: Chapter9-figures/cimc_convergence-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -4960,7 +4761,7 @@ Package pdftex.def Info: Chapter9-figures/cimc_convergence-eps-converted-to.pdf
  used on input line 2741.
 (pdftex.def)             Requested size: 363.3566pt x 252.94437pt.
 
-<Chapter9-figures/cimcccd.pdf, id=8033, 578.16pt x 433.62pt>
+<Chapter9-figures/cimcccd.pdf, id=8115, 578.16pt x 433.62pt>
 File: Chapter9-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/cimcccd.pdf>
@@ -5079,7 +4880,7 @@ LaTeX Warning: Citation `Som14a' on page 387 undefined on input line 897.
 
 LaTeX Warning: Citation `RingSchuck' on page 388 undefined on input line 899.
 
-<Chapter11-figures/Pairing_LNP_scgf.pdf, id=8588, 622.325pt x 521.95pt>
+<Chapter11-figures/Pairing_LNP_scgf.pdf, id=8670, 622.325pt x 521.95pt>
 File: Chapter11-figures/Pairing_LNP_scgf.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_LNP_scgf.pdf>
@@ -5087,7 +4888,7 @@ Package pdftex.def Info: Chapter11-figures/Pairing_LNP_scgf.pdf used on input l
 ine 916.
 (pdftex.def)             Requested size: 339.67029pt x 284.8832pt.
 
-<Chapter11-figures/Pairing_LNP_ALL.pdf, id=8591, 622.325pt x 521.95pt>
+<Chapter11-figures/Pairing_LNP_ALL.pdf, id=8673, 622.325pt x 521.95pt>
 File: Chapter11-figures/Pairing_LNP_ALL.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_LNP_ALL.pdf>
@@ -5101,7 +4902,7 @@ LaTeX Warning: Reference `chap:chapter8' on page 388 undefined on input line 93
 
 [388] [389 <./Chapter11-figures/Pairing_LNP_scgf.pdf>] [390 <./Chapter11-figure
 s/Pairing_LNP_ALL.pdf>] [391] [392] [393] [394] [395]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8819, 1027.84pt x 770.88pt>
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=8901, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
@@ -5109,7 +4910,7 @@ Package pdftex.def Info: Chapter11-figures/numerical_scgf_diagrams.pdf used on
 input line 1238.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
  [396 <./Chapter11-figures/numerical_scgf_diagrams.pdf>] [397] [398]
-<Chapter11-figures/cimcccd.pdf, id=9004, 578.16pt x 433.62pt>
+<Chapter11-figures/cimcccd.pdf, id=9086, 578.16pt x 433.62pt>
 File: Chapter11-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/cimcccd.pdf>
@@ -5168,9 +4969,9 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 27300 strings out of 493089
- 429816 string characters out of 6134842
- 613238 words of memory out of 5000000
+ 27330 strings out of 493089
+ 430388 string characters out of 6134842
+ 613262 words of memory out of 5000000
  26294 multiletter control sequences out of 15000+600000
  159699 words of font info for 277 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -5207,10 +5008,10 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect1
 0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on lnp.pdf (419 pages, 6262303 bytes).
+Output written on lnp.pdf (419 pages, 6282339 bytes).
 PDF statistics:
- 10175 PDF objects out of 10688 (max. 8388607)
- 8822 compressed objects within 89 object streams
- 3793 named destinations out of 4296 (max. 500000)
+ 10263 PDF objects out of 10688 (max. 8388607)
+ 8909 compressed objects within 90 object streams
+ 3823 named destinations out of 4296 (max. 500000)
  2554 words of extra memory for PDF output out of 10000 (max. 10000000)
 
