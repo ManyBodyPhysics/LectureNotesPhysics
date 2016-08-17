@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter4.aux
 The style file: spphys.bst
 I couldn't open database file lnplib.bib
----line 252 of file chapter4.aux
+---line 251 of file chapter4.aux
  : \bibdata{lnplib
  :                }
 I'm skipping whatever remains of this command

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 AUG 2016 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2016 08:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1032,27 +1032,27 @@ LaTeX Warning: Label `FThole' multiply defined.
 ))
 \openout1 = `lnp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 196.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 194.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 194.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    ... okay on input line 194.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1084,7 +1084,7 @@ e
 ))
 \c@lstlisting=\count226
 \AtBeginShipoutBox=\box79
-Package hyperref Info: Link coloring OFF on input line 196.
+Package hyperref Info: Link coloring OFF on input line 194.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1094,26 +1094,26 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count227
 )
-LaTeX Info: Redefining \ref on input line 196.
-LaTeX Info: Redefining \pageref on input line 196.
-LaTeX Info: Redefining \nameref on input line 196.
+LaTeX Info: Redefining \ref on input line 194.
+LaTeX Info: Redefining \pageref on input line 194.
+LaTeX Info: Redefining \nameref on input line 194.
 
 (./lnp.out) (./lnp.out)
 \@outlinefile=\write5
 \openout5 = `lnp.out'.
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 199.
+(Font)              scaled to size 10.79993pt on input line 197.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 16.19989pt on input line 204.
+(Font)              scaled to size 16.19989pt on input line 202.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 204.
+(Font)              scaled to size 22.39185pt on input line 202.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 204.
+(Font)              scaled to size 22.39185pt on input line 202.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 12.59991pt on input line 204.
+(Font)              scaled to size 12.59991pt on input line 202.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 12.59991pt on input line 204.
+(Font)              scaled to size 12.59991pt on input line 202.
  [4
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1129,57 +1129,57 @@ Non-PDF special ignored!
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package mathptmx Warning: There are no bold math fonts on input line 206.
+Package mathptmx Warning: There are no bold math fonts on input line 204.
 
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 14.3999pt on input line 206.
+(Font)              scaled to size 14.3999pt on input line 204.
 
 Package hyperref Warning: bookmark level for unknown title defaults to 0.
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 7.64995pt on input line 206.
+(Font)              scaled to size 7.64995pt on input line 204.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 20
-6.
+4.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 20
-6.
+4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 20
-6.
+4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 20
-6.
+4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 206.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 204.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
-LaTeX Font Info:    Try loading font information for U+esvect on input line 206
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 204
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 206
+LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 204
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd)
@@ -3249,43 +3249,21 @@ Package pdftex.def Info: Chapter3-figures/leapfrog-eps-converted-to.pdf used on
 
  (./chapter4.tex
 
-! LaTeX Error: Command \gsim already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \newcommand{\gsim}{\gtrsim}
-                                
-? 
-
-! LaTeX Error: Command \lsim already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 \newcommand{\lsim}{\lesssim}
-                                 
-? 
-
-LaTeX Warning: Citation `Wilson-83' on page 69 undefined on input line 241.
+LaTeX Warning: Citation `Wilson-83' on page 69 undefined on input line 239.
 
 
-LaTeX Warning: Citation `Lepage-89' on page 69 undefined on input line 243.
+LaTeX Warning: Citation `Lepage-89' on page 69 undefined on input line 241.
 
 
 LaTeX Warning: Citation `Weinberg:1978kz' on page 69 undefined on input line 24
-4.
+2.
 
 
-LaTeX Warning: Citation `Kaplan:1995uv' on page 69 undefined on input line 266.
+LaTeX Warning: Citation `Kaplan:1995uv' on page 69 undefined on input line 264.
 
 
 
-LaTeX Warning: Citation `Kaplan:2005es' on page 69 undefined on input line 266.
+LaTeX Warning: Citation `Kaplan:2005es' on page 69 undefined on input line 264.
 
 
 [69
@@ -3299,35 +3277,35 @@ LaTeX Warning: Citation `Kaplan:2005es' on page 69 undefined on input line 266.
 File: Chapter4-figures/BosonContact-2body-simple.pdf Graphic file (type pdf)
 <use Chapter4-figures/BosonContact-2body-simple.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body-simple.pdf used on
- input line 300.
+ input line 298.
 (pdftex.def)             Requested size: 227.62204pt x 58.94043pt.
 
 
-LaTeX Warning: Citation `Weinberg:1978kz' on page 70 undefined on input line 32
-1.
+LaTeX Warning: Citation `Weinberg:1978kz' on page 70 undefined on input line 31
+9.
 
 
-LaTeX Warning: Citation `Gasser:1983yg' on page 70 undefined on input line 355.
+LaTeX Warning: Citation `Gasser:1983yg' on page 70 undefined on input line 353.
 
 
 
-LaTeX Warning: Citation `Gasser:1984gg' on page 70 undefined on input line 355.
+LaTeX Warning: Citation `Gasser:1984gg' on page 70 undefined on input line 353.
 
 
 [70 <./Chapter4-figures/BosonContact-2body-simple.pdf>] [71]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 508.
+(Font)              scaled to size 5.39996pt on input line 506.
  [72]
 <Chapter4-figures/BosonContact-2body.pdf, id=2701, 249.93375pt x 62.2325pt>
 File: Chapter4-figures/BosonContact-2body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-2body.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-2body.pdf used on input 
-line 522.
+line 520.
 (pdftex.def)             Requested size: 318.43968pt x 79.29837pt.
 
 
-LaTeX Warning: Citation `Donoghue:1992' on page 73 undefined on input line 530.
+LaTeX Warning: Citation `Donoghue:1992' on page 73 undefined on input line 528.
 
 
 [73 <./Chapter4-figures/BosonContact-2body.pdf>]
@@ -3336,21 +3314,21 @@ File: Chapter4-figures/BosonContact-3body.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/BosonContact-3body.pdf>
 Package pdftex.def Info: Chapter4-figures/BosonContact-3body.pdf used on input 
-line 629.
+line 627.
 (pdftex.def)             Requested size: 360.9009pt x 67.20059pt.
  [74 <./Chapter4-figures/BosonContact-3body.pdf>] [75]
 
-LaTeX Warning: Citation `Donoghue:1992' on page 76 undefined on input line 787.
+LaTeX Warning: Citation `Donoghue:1992' on page 76 undefined on input line 785.
 
 
 [76] [77] [78] [79] [80] [81]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 1354.
+(Font)              scaled to size 4.49997pt on input line 1352.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1354.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1352.
 
 
-LaTeX Warning: Citation `Hagen:2014' on page 82 undefined on input line 1373.
+LaTeX Warning: Citation `Hagen:2014' on page 82 undefined on input line 1371.
 
 [82] [83] [84]
 Missing character: There is no ã in font zptmcm7t!
@@ -3358,41 +3336,41 @@ Missing character: There is no € in font zptmcm7t!
 Missing character: There is no € in font zptmcm7t!
  [85] [86]
 
-LaTeX Warning: Citation `Braaten:2004rn' on page 87 undefined on input line 168
-1.
+LaTeX Warning: Citation `Braaten:2004rn' on page 87 undefined on input line 167
+9.
 
 
-LaTeX Warning: Citation `Beane:2000fx' on page 87 undefined on input line 1684.
+LaTeX Warning: Citation `Beane:2000fx' on page 87 undefined on input line 1682.
 
 
 
 LaTeX Warning: Citation `Bertulani:2002sz' on page 87 undefined on input line 1
-684.
+682.
 
 
 LaTeX Warning: Citation `Bedaque:2003wa' on page 87 undefined on input line 168
-4.
+2.
 
 [87] <Chapter4-figures/fig_2bdypert.pdf, id=2962, 482.80376pt x 59.22125pt>
 File: Chapter4-figures/fig_2bdypert.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_2bdypert.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_2bdypert.pdf used on input line 1
-796.
+794.
 (pdftex.def)             Requested size: 312.9803pt x 38.39214pt.
  [88pdfTeX warning (ext4): destination with the same identifier (name{equation.
 4.79}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1829 \end{equation}
+l.1827 \end{equation}
                       <./Chapter4-figures/fig_2bdypert.pdf>]
 
 LaTeX Warning: Citation `vanKolck:1998bw' on page 89 undefined on input line 19
-03.
+01.
 
 
-LaTeX Warning: Citation `Kaplan:1998we' on page 89 undefined on input line 1903
+LaTeX Warning: Citation `Kaplan:1998we' on page 89 undefined on input line 1901
 .
 
 [89] <Chapter4-figures/fig_feynC0int.pdf, id=3019, 275.0275pt x 59.22125pt>
@@ -3400,7 +3378,7 @@ File: Chapter4-figures/fig_feynC0int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC0int.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feynC0int.pdf used on input line 
-1939.
+1937.
 (pdftex.def)             Requested size: 184.9429pt x 39.8244pt.
 
 <Chapter4-figures/fig_feynC2int.pdf, id=3029, 470.75874pt x 59.22125pt>
@@ -3408,12 +3386,12 @@ File: Chapter4-figures/fig_feynC2int.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynC2int.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feynC2int.pdf used on input line 
-1997.
+1995.
 (pdftex.def)             Requested size: 341.43306pt x 42.9519pt.
  [90 <./Chapter4-figures/fig_feynC0int.pdf> <./Chapter4-figures/fig_feynC2int.p
 df>]
 
-LaTeX Warning: Citation `Kaplan:1996nv' on page 91 undefined on input line 2031
+LaTeX Warning: Citation `Kaplan:1996nv' on page 91 undefined on input line 2029
 .
 
 <Chapter4-figures/fig_feynDimer.pdf, id=3080, 460.72125pt x 88.33pt>
@@ -3421,15 +3399,15 @@ File: Chapter4-figures/fig_feynDimer.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feynDimer.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feynDimer.pdf used on input line 
-2073.
+2071.
 (pdftex.def)             Requested size: 341.43306pt x 65.45886pt.
  [91 <./Chapter4-figures/fig_feynDimer.pdf>]
 
 LaTeX Warning: Citation `Skorniakov:1957aa' on page 92 undefined on input line 
-2161.
+2159.
 
 
-Overfull \hbox (13.88416pt too wide) in paragraph at lines 2159--2165
+Overfull \hbox (13.88416pt too wide) in paragraph at lines 2157--2163
 []\T1/fve/m/n/10 Omitting the three-body in-ter-ac-tion, this is ex-actly the w
 ell-known Skorniakov-Ter-Martirosian
  []
@@ -3438,28 +3416,28 @@ ell-known Skorniakov-Ter-Martirosian
 File: Chapter4-figures/fig_feyn8c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn8c.pdf>
-Package pdftex.def Info: Chapter4-figures/fig_feyn8c.pdf used on input line 218
-1.
+Package pdftex.def Info: Chapter4-figures/fig_feyn8c.pdf used on input line 217
+9.
 (pdftex.def)             Requested size: 256.0748pt x 108.0175pt.
  [93 <./Chapter4-figures/fig_feyn8c.pdf>]
 
 LaTeX Warning: Citation `Skorniakov:1957aa' on page 94 undefined on input line 
-2250.
+2248.
 
 
 LaTeX Warning: Citation `Danilov:1961aa' on page 94 undefined on input line 225
-2.
+0.
 
 
 LaTeX Warning: Citation `Kharchenko:1973aa' on page 94 undefined on input line 
-2258.
+2256.
 
 
-LaTeX Warning: Citation `Bedaque:1998kg' on page 94 undefined on input line 226
-1.
+LaTeX Warning: Citation `Bedaque:1998kg' on page 94 undefined on input line 225
+9.
 
 
-LaTeX Warning: Citation `Efimov:1970aa' on page 94 undefined on input line 2347
+LaTeX Warning: Citation `Efimov:1970aa' on page 94 undefined on input line 2345
 .
 
 [94] <Chapter4-figures/fig_feyn9c.pdf, id=3179, 432.61626pt x 61.22874pt>
@@ -3467,61 +3445,61 @@ File: Chapter4-figures/fig_feyn9c.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/fig_feyn9c.pdf>
 Package pdftex.def Info: Chapter4-figures/fig_feyn9c.pdf used on input line 238
-5.
+3.
 (pdftex.def)             Requested size: 312.9803pt x 44.29858pt.
  [95 <./Chapter4-figures/fig_feyn9c.pdf>]
 
-LaTeX Warning: Citation `Danilov:1961aa' on page 96 undefined on input line 253
-0.
+LaTeX Warning: Citation `Danilov:1961aa' on page 96 undefined on input line 252
+8.
 
 [96]
 
-LaTeX Warning: Citation `Bedaque:1998kg' on page 97 undefined on input line 257
-0.
+LaTeX Warning: Citation `Bedaque:1998kg' on page 97 undefined on input line 256
+8.
 
 
 LaTeX Warning: Citation `Bedaque:1998kg' on page 97 undefined on input line 260
-2.
+0.
 
 
 LaTeX Warning: Citation `Braaten:2011sz' on page 97 undefined on input line 261
-7.
+5.
 
 
-LaTeX Warning: Citation `Efimov:1970aa' on page 97 undefined on input line 2627
+LaTeX Warning: Citation `Efimov:1970aa' on page 97 undefined on input line 2625
 .
 
 [97]
 
 LaTeX Warning: Citation `Braaten:2004rn' on page 98 undefined on input line 263
-8.
+6.
 
 
 LaTeX Warning: Citation `Ferlaino:2010viw' on page 98 undefined on input line 2
-645.
+643.
 
 
 LaTeX Warning: Citation `PhysRevA.93.022707' on page 98 undefined on input line
- 2645.
+ 2643.
 
 <Chapter4-figures/B3LecNote.pdf, id=3247, 522.95375pt x 368.37625pt>
 File: Chapter4-figures/B3LecNote.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/B3LecNote.pdf>
-Package pdftex.def Info: Chapter4-figures/B3LecNote.pdf used on input line 2650
+Package pdftex.def Info: Chapter4-figures/B3LecNote.pdf used on input line 2648
 .
 (pdftex.def)             Requested size: 227.62204pt x 160.34354pt.
 
 
 LaTeX Warning: Citation `Bedaque:1998km' on page 98 undefined on input line 268
-8.
+6.
 
 [98 <./Chapter4-figures/B3LecNote.pdf>] [99]
 <Chapter4-figures/C0-Vertex.pdf, id=3286, 72.27pt x 58.2175pt>
 File: Chapter4-figures/C0-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/C0-Vertex.pdf>
-Package pdftex.def Info: Chapter4-figures/C0-Vertex.pdf used on input line 2811
+Package pdftex.def Info: Chapter4-figures/C0-Vertex.pdf used on input line 2809
 .
 (pdftex.def)             Requested size: 58.4996pt x 47.1248pt.
  [100 <./Chapter4-figures/C0-Vertex.pdf>]
@@ -3529,37 +3507,37 @@ Package pdftex.def Info: Chapter4-figures/C0-Vertex.pdf used on input line 2811
 File: Chapter4-figures/nd-IntEq-Q.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-Q.pdf>
-Package pdftex.def Info: Chapter4-figures/nd-IntEq-Q.pdf used on input line 301
-0.
+Package pdftex.def Info: Chapter4-figures/nd-IntEq-Q.pdf used on input line 300
+8.
 (pdftex.def)             Requested size: 212.29312pt x 38.19127pt.
  [102] [103 <./Chapter4-figures/nd-IntEq-Q.pdf>] <Chapter4-figures/nd-IntEq-D.p
 df, id=3367, 283.0575pt x 80.3pt>
 File: Chapter4-figures/nd-IntEq-D.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/nd-IntEq-D.pdf>
-Package pdftex.def Info: Chapter4-figures/nd-IntEq-D.pdf used on input line 310
-1.
+Package pdftex.def Info: Chapter4-figures/nd-IntEq-D.pdf used on input line 309
+9.
 (pdftex.def)             Requested size: 275.97845pt x 78.29768pt.
 
 
 LaTeX Warning: Citation `Konig:2014ufa' on page 104 undefined on input line 311
-5.
+3.
 
 [104 <./Chapter4-figures/nd-IntEq-D.pdf>]
 
 LaTeX Warning: Citation `Bedaque:1999ve' on page 105 undefined on input line 31
-71.
+69.
 
 [105] <Chapter4-figures/Phillips.pdf, id=3415, 392.46625pt x 279.0425pt>
 File: Chapter4-figures/Phillips.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Phillips.pdf>
-Package pdftex.def Info: Chapter4-figures/Phillips.pdf used on input line 3255.
+Package pdftex.def Info: Chapter4-figures/Phillips.pdf used on input line 3253.
 
 (pdftex.def)             Requested size: 275.97845pt x 196.23106pt.
  [106 <./Chapter4-figures/Phillips.pdf>]
 
-LaTeX Warning: Citation `Peskin:1995' on page 107 undefined on input line 3348.
+LaTeX Warning: Citation `Peskin:1995' on page 107 undefined on input line 3346.
 
 
 <Chapter4-figures/Photon-Vertex-0.pdf, id=3442, 140.525pt x 54.2025pt>
@@ -3567,10 +3545,10 @@ File: Chapter4-figures/Photon-Vertex-0.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-0.pdf>
 Package pdftex.def Info: Chapter4-figures/Photon-Vertex-0.pdf used on input lin
-e 3389.
+e 3387.
 (pdftex.def)             Requested size: 116.9992pt x 45.12782pt.
 
-Overfull \hbox (8.99994pt too wide) in paragraph at lines 3389--3389
+Overfull \hbox (8.99994pt too wide) in paragraph at lines 3387--3387
 [][] 
  []
 
@@ -3580,7 +3558,7 @@ File: Chapter4-figures/OnePhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/OnePhotonExchange.pdf>
 Package pdftex.def Info: Chapter4-figures/OnePhotonExchange.pdf used on input l
-ine 3430.
+ine 3428.
 (pdftex.def)             Requested size: 47.4876pt x 45.89969pt.
 
 <Chapter4-figures/TwoPhotonExchange.pdf, id=3472, 50.1875pt x 29.10875pt>
@@ -3588,7 +3566,7 @@ File: Chapter4-figures/TwoPhotonExchange.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/TwoPhotonExchange.pdf>
 Package pdftex.def Info: Chapter4-figures/TwoPhotonExchange.pdf used on input l
-ine 3436.
+ine 3434.
 (pdftex.def)             Requested size: 79.14603pt x 45.89969pt.
 
 <Chapter4-figures/SinglePhotonBubble.pdf, id=3474, 78.2925pt x 34.1275pt>
@@ -3596,7 +3574,7 @@ File: Chapter4-figures/SinglePhotonBubble.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/SinglePhotonBubble.pdf>
 Package pdftex.def Info: Chapter4-figures/SinglePhotonBubble.pdf used on input 
-line 3459.
+line 3457.
 (pdftex.def)             Requested size: 106.14656pt x 46.27058pt.
  [108 <./Chapter4-figures/OnePhotonExchange.pdf> <./Chapter4-figures/TwoPhotonE
 xchange.pdf> <./Chapter4-figures/SinglePhotonBubble.pdf>]
@@ -3605,10 +3583,10 @@ File: Chapter4-figures/Photon-Vertex-trans.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-trans.pdf>
 Package pdftex.def Info: Chapter4-figures/Photon-Vertex-trans.pdf used on input
- line 3503.
+ line 3501.
 (pdftex.def)             Requested size: 116.9992pt x 45.12782pt.
 
-Overfull \hbox (8.99994pt too wide) in paragraph at lines 3503--3503
+Overfull \hbox (8.99994pt too wide) in paragraph at lines 3501--3501
 [][] 
  []
 
@@ -3617,7 +3595,7 @@ File: Chapter4-figures/Photon-Prop-gauge.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Prop-gauge.pdf>
 Package pdftex.def Info: Chapter4-figures/Photon-Prop-gauge.pdf used on input l
-ine 3521.
+ine 3519.
 (pdftex.def)             Requested size: 69.74953pt x 20.46169pt.
  [109 <./Chapter4-figures/Photon-Vertex-trans.pdf> <./Chapter4-figures/Photon-P
 rop-gauge.pdf>]
@@ -3626,7 +3604,7 @@ File: Chapter4-figures/Photon-Vertex-mag.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Photon-Vertex-mag.pdf>
 Package pdftex.def Info: Chapter4-figures/Photon-Vertex-mag.pdf used on input l
-ine 3563.
+ine 3561.
 (pdftex.def)             Requested size: 71.99951pt x 46.28654pt.
 
 <Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf, id=3530, 176.66pt x 108.405pt>
@@ -3634,101 +3612,101 @@ File: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf used on in
-put line 3589.
+put line 3587.
 (pdftex.def)             Requested size: 149.6064pt x 91.79938pt.
 
 <Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf, id=3532, 152.57pt x 103.38625pt>
 File: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf Graphic file (type pdf)
 <use Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf>
 Package pdftex.def Info: Chapter4-figures/DeutBreakup-IA-kin-NNcm.pdf used on i
-nput line 3594.
+nput line 3592.
 (pdftex.def)             Requested size: 135.47491pt x 91.79938pt.
  [110 <./Chapter4-figures/DeutBreakup-IA-kin-Dcm.pdf> <./Chapter4-figures/DeutB
 reakup-IA-kin-NNcm.pdf> <./Chapter4-figures/Photon-Vertex-mag.pdf>]
 
 LaTeX Warning: Reference `sec:Dibaryons' on page 111 undefined on input line 36
-36.
+34.
 
 <Chapter4-figures/Deuteron-Vertex.pdf, id=3580, 66.2475pt x 61.22874pt>
 File: Chapter4-figures/Deuteron-Vertex.pdf Graphic file (type pdf)
 
 <use Chapter4-figures/Deuteron-Vertex.pdf>
 Package pdftex.def Info: Chapter4-figures/Deuteron-Vertex.pdf used on input lin
-e 3640.
+e 3638.
 (pdftex.def)             Requested size: 53.99963pt x 49.9089pt.
 
 
 LaTeX Warning: Citation `Weinberg:1990rz' on page 111 undefined on input line 3
-709.
+707.
 
 
 LaTeX Warning: Citation `Weinberg:1991um' on page 111 undefined on input line 3
-709.
+707.
 
 [111 <./Chapter4-figures/Deuteron-Vertex.pdf>]
 
-LaTeX Warning: Citation `Kaplan:1996xu' on page 112 undefined on input line 372
-1.
+LaTeX Warning: Citation `Kaplan:1996xu' on page 112 undefined on input line 371
+9.
 
 
-LaTeX Warning: Citation `Kaplan:1998we' on page 112 undefined on input line 372
-1.
+LaTeX Warning: Citation `Kaplan:1998we' on page 112 undefined on input line 371
+9.
 
 
-LaTeX Warning: Citation `Kaplan:1998tg' on page 112 undefined on input line 372
-1.
+LaTeX Warning: Citation `Kaplan:1998tg' on page 112 undefined on input line 371
+9.
 
 
 LaTeX Warning: Citation `Fleming:1999ee' on page 112 undefined on input line 37
-25.
+23.
 
 
-LaTeX Warning: Citation `Beane:2000fx' on page 112 undefined on input line 3732
+LaTeX Warning: Citation `Beane:2000fx' on page 112 undefined on input line 3730
 .
 
 
 LaTeX Warning: Citation `Bedaque:2002mn' on page 112 undefined on input line 37
-32.
+30.
 
 
-LaTeX Warning: Citation `Nogga:2005hy' on page 112 undefined on input line 3732
+LaTeX Warning: Citation `Nogga:2005hy' on page 112 undefined on input line 3730
 .
 
 
-LaTeX Warning: Citation `Birse:2005um' on page 112 undefined on input line 3732
+LaTeX Warning: Citation `Birse:2005um' on page 112 undefined on input line 3730
 .
 
 
 LaTeX Warning: Citation `Epelbaum:2008ga' on page 112 undefined on input line 3
-732.
+730.
 
 
 LaTeX Warning: Citation `Machleidt:2011zz' on page 112 undefined on input line 
-3732.
+3730.
 
 
 LaTeX Warning: Citation `Epelbaum:2006pt' on page 112 undefined on input line 3
-732.
+730.
 
 
 LaTeX Warning: Citation `Hammer:2012id' on page 112 undefined on input line 373
-2.
+0.
 
 
-LaTeX Warning: Citation `Long:2016vnq' on page 112 undefined on input line 3732
+LaTeX Warning: Citation `Long:2016vnq' on page 112 undefined on input line 3730
 .
 
 
 LaTeX Warning: Citation `Scherer:2012xha' on page 112 undefined on input line 3
-738.
+736.
 
 
 LaTeX Warning: Citation `Scherer:2012xha' on page 112 undefined on input line 3
-743.
+741.
 
 
 LaTeX Warning: Citation `Scherer:2012xha' on page 112 undefined on input line 3
-789.
+787.
 
 [112] (./chapter4.bbl
 
@@ -5802,32 +5780,7 @@ File: Chapter8-figures/MBPT3fig.pdf Graphic file (type pdf)
 Package pdftex.def Info: Chapter8-figures/MBPT3fig.pdf used on input line 4264.
 
 (pdftex.def)             Requested size: 424.58624pt x 324.80962pt.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4265 ...MBPT3_0 and MBPT3_1 are extrapolations.}
-                                                  
-? 
-! Extra }, or forgotten $.
-\@makecaption ...#1\floatcounterend }\capstrut #2}
-                                                  \ifdim \wd \@tempboxa >\hs...
-l.4265 ...MBPT3_0 and MBPT3_1 are extrapolations.}
-                                                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4265 ...MBPT3_0 and MBPT3_1 are extrapolations.}
-                                                  
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.4265 ...MBPT3_0 and MBPT3_1 are extrapolations.}
-                                                  
-? 
-[282] [283 <./Chapter8-figures/MBPT3fig.pdf>] [284]
+ [282] [283 <./Chapter8-figures/MBPT3fig.pdf>] [284]
 
 LaTeX Warning: Citation `minnesota' on page 285 undefined on input line 4392.
 
@@ -6348,14 +6301,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 829--831
  []
 
 [387] [388]) [389]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./lnp.aux (./preface.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) 
 (./chapter4.aux) (./chapter5.aux) (./chapter6.aux)
 (./chapter7.aux) (./chapter8.aux) (./chapter9.aux) (./chapter10.aux)
 (./chapter11.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `lnp.out' has not changed.
 (rerunfilecheck)             Checksum: 07CF96B44F1A5421AA00ECA8E9650F57;19574.
 
@@ -6372,52 +6325,49 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
  26135 strings out of 493089
  413377 string characters out of 6134842
- 594517 words of memory out of 5000000
+ 594520 words of memory out of 5000000
  25634 multiletter control sequences out of 15000+600000
  159699 words of font info for 277 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,25n,122p,1567b,1754s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.8.11} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/be
-ra/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmb8
-a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmro8a.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on lnp.pdf (400 pages, 6116194 bytes).
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/bera/fveb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+bera/fver8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvm
+b8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmro8a.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
+utmri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
+Output written on lnp.pdf (400 pages, 6118495 bytes).
 PDF statistics:
  9047 PDF objects out of 10688 (max. 8388607)
  7777 compressed objects within 78 object streams
