@@ -19,6 +19,54 @@ Repeated entry---line 3846 of file lnp.bib
  : @article{Epelbaum:2008ga
  :                         ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 7652 of file lnp.bib
+ : @article{Braaten:2004rn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7763 of file lnp.bib
+ : @article{Kaplan:1996xu
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7780 of file lnp.bib
+ : @article{Kaplan:1998tg
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7796 of file lnp.bib
+ : @article{Kaplan:1998we
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7811 of file lnp.bib
+ : @article{Bedaque:1998kg
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7827 of file lnp.bib
+ : @article{Bedaque:1998km
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7842 of file lnp.bib
+ : @article{Fleming:1999ee
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7858 of file lnp.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7874 of file lnp.bib
+ : @article{Machleidt:2011zz
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9258 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9270 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9716 of file lnp.bib
+ : @inproceedings{Kaplan:2005es
+ :                             ,
+I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Lepage-89
 Warning--empty journal in Kaplan:1995uv
 Warning--empty journal in Kaplan:2005es
@@ -65,4 +113,4 @@ warning$ -- 5
 while$ -- 79
 width$ -- 44
 write$ -- 345
-(There were 4 error messages)
+(There were 16 error messages)
