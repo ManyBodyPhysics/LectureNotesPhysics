@@ -18,10 +18,10 @@ N.~Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, E.~Teller, J.
 M.~Creutz, B.~Freedman, Annals Phys. \textbf{132}, 427 (1981)
 
 \bibitem{Shuryak:1984xr}
-E.V. Shuryak, O.V. Zhirov, Nucl. Phys. \textbf{B242}, 393 (1984)
+E.V. Shuryak, O.V. Zhirov, Nucl. Phys. B \textbf{242}, 393 (1984)
 
 \bibitem{Shuryak:1987tr}
-E.V. Shuryak, Nucl. Phys. \textbf{B302}, 621 (1988)
+E.V. Shuryak, Nucl. Phys. B \textbf{302}, 621 (1988)
 
 \bibitem{Schafer:2004xa}
 T.~Sch{\"a}fer, {Instantons and Monte Carlo methods in quantum mechanics}
@@ -29,14 +29,14 @@ T.~Sch{\"a}fer, {Instantons and Monte Carlo methods in quantum mechanics}
 \newblock ArXive:hep-lat/0411010
 
 \bibitem{Jarrell:1996rrw}
-M.~Jarrell, J.E. Gubernatis, Phys. Rept. \textbf{269}, 133 (1996)
+M.~Jarrell, J.E. Gubernatis, Phys. Rep. \textbf{269}, 133 (1996)
 
 \bibitem{Asakawa:2000tr}
 M.~Asakawa, T.~Hatsuda, Y.~Nakahara, Prog. Part. Nucl. Phys. \textbf{46}, 459
   (2001)
 
 \bibitem{Jarzynski:1997}
-C.~{Jarzynski}, Physical Review Letters \textbf{78}, 2690 (1997)
+C.~{Jarzynski}, Phys. Rev. Lett. \textbf{78}, 2690 (1997)
 
 \bibitem{Gross:1973id}
 D.J. Gross, F.~Wilczek, Phys.Rev.Lett. \textbf{30}, 1343 (1973)
@@ -45,10 +45,10 @@ D.J. Gross, F.~Wilczek, Phys.Rev.Lett. \textbf{30}, 1343 (1973)
 H.D. Politzer, Phys.Rev.Lett. \textbf{30}, 1346 (1973)
 
 \bibitem{Coleman:1973jx}
-S.R. Coleman, E.J. Weinberg, Phys.Rev. \textbf{D7}, 1888 (1973)
+S.R. Coleman, E.J. Weinberg, Phys.Rev. D \textbf{7}, 1888 (1973)
 
 \bibitem{Nakamura:2010zzi}
-K.~Nakamura, et~al., J. Phys. \textbf{G37}, 075021 (2010)
+K.~Nakamura, et~al., J. Phys. G \textbf{37}, 075021 (2010)
 
 \bibitem{Alford:2007xm}
 M.G. Alford, A.~Schmitt, K.~Rajagopal, T.~Sch{\"a}fer, Rev. Mod. Phys.
@@ -59,7 +59,7 @@ A.~Adams, L.D. Carr, T.~Sch{\"a}fer, P.~Steinberg, J.E. Thomas, New J. Phys.
   \textbf{14}, 115009 (2012)
 
 \bibitem{Braun-Munzinger:2015hba}
-P.~Braun-Munzinger, V.~Koch, T.~Sch{\"a}fer, J.~Stachel, Phys. Rept.
+P.~Braun-Munzinger, V.~Koch, T.~Sch{\"a}fer, J.~Stachel, Phys. Rep.
   \textbf{621}, 76 (2016)
 
 \bibitem{GellMann:1968rz}
@@ -76,21 +76,21 @@ E.V. Shuryak, Sov. Phys. JETP \textbf{47}, 212 (1978).
 \newblock [Zh. Eksp. Teor. Fiz.74,408(1978)]
 
 \bibitem{Shuryak:1978ij}
-E.V. Shuryak, Phys. Lett. \textbf{B78}, 150 (1978).
+E.V. Shuryak, Phys. Lett. B \textbf{78}, 150 (1978).
 \newblock [Yad. Fiz.28,796(1978)]
 
 \bibitem{Linde:1980ts}
-A.D. Linde, Phys. Lett. \textbf{B96}, 289 (1980)
+A.D. Linde, Phys. Lett. B \textbf{96}, 289 (1980)
 
 \bibitem{Pisarski:1983ms}
-R.D. Pisarski, F.~Wilczek, Phys. Rev. \textbf{D29}, 338 (1984)
+R.D. Pisarski, F.~Wilczek, Phys. Rev. D \textbf{29}, 338 (1984)
 
 \bibitem{Aoki:2006we}
 Y.~Aoki, G.~Endrodi, Z.~Fodor, S.D. Katz, K.K. Szabo, Nature \textbf{443}, 675
   (2006)
 
 \bibitem{Bazavov:2011nk}
-A.~Bazavov, et~al., Phys. Rev. \textbf{D85}, 054503 (2012)
+A.~Bazavov, et~al., Phys. Rev. D \textbf{85}, 054503 (2012)
 
 \bibitem{Aoki:2006br}
 Y.~Aoki, Z.~Fodor, S.D. Katz, K.K. Szabo, Phys. Lett. \textbf{B643}, 46 (2006)
@@ -109,8 +109,8 @@ M.A. Stephanov, Prog. Theor. Phys. Suppl. \textbf{153}, 139 (2004)
 Z.~Fodor, S.D. Katz, JHEP \textbf{03}, 014 (2002)
 
 \bibitem{Allton:2002zi}
-C.~Allton, S.~Ejiri, S.~Hands, O.~Kaczmarek, F.~Karsch, et~al., Phys.Rev.
-  \textbf{D66}, 074507 (2002)
+C.~Allton, S.~Ejiri, S.~Hands, O.~Kaczmarek, F.~Karsch, et~al., Phys. Rev. D
+  \textbf{66}, 074507 (2002)
 
 \bibitem{Karsch:2003va}
 F.~Karsch, C.R. Allton, S.~Ejiri, S.J. Hands, O.~Kaczmarek, E.~Laermann,
@@ -121,10 +121,10 @@ F.~Karsch, C.R. Allton, S.~Ejiri, S.J. Hands, O.~Kaczmarek, E.~Laermann,
 Z.~Fodor, S.~Katz, JHEP \textbf{0404}, 050 (2004)
 
 \bibitem{Gavai:2008zr}
-R.V. Gavai, S.~Gupta, Phys. Rev. \textbf{D78}, 114503 (2008)
+R.V. Gavai, S.~Gupta, Phys. Rev. D \textbf{78}, 114503 (2008)
 
 \bibitem{Datta:2012pj}
-S.~Datta, R.V. Gavai, S.~Gupta, Nucl. Phys. \textbf{A904-905}, 883c (2013)
+S.~Datta, R.V. Gavai, S.~Gupta, Nucl. Phys. A \textbf{904-905}, 883c (2013)
 
 \bibitem{deForcrand:2010he}
 P.~de~Forcrand, O.~Philipsen, Phys. Rev. Lett. \textbf{105}, 152001 (2010)
@@ -134,20 +134,20 @@ M.A. Stephanov, K.~Rajagopal, E.V. Shuryak, Phys. Rev. Lett. \textbf{81}, 4816
   (1998)
 
 \bibitem{Sauer:1976zzf}
-G.~Sauer, H.~Chandra, U.~Mosel, Nucl. Phys. \textbf{A264}, 221 (1976)
+G.~Sauer, H.~Chandra, U.~Mosel, Nucl. Phys. A \textbf{264}, 221 (1976)
 
 \bibitem{Pochodzalla:1995xy}
 J.~Pochodzalla, et~al., Phys. Rev. Lett. \textbf{75}, 1040 (1995)
 
 \bibitem{Elliott:2013pna}
-J.B. Elliott, P.T. Lake, L.G. Moretto, L.~Phair, Phys. Rev. \textbf{C87}(5),
+J.B. Elliott, P.T. Lake, L.G. Moretto, L.~Phair, Phys. Rev. C \textbf{87}(5),
   054622 (2013)
 
 \bibitem{Alford:1998mk}
-M.G. Alford, K.~Rajagopal, F.~Wilczek, Nucl. Phys. \textbf{B537}, 443 (1999)
+M.G. Alford, K.~Rajagopal, F.~Wilczek, Nucl. Phys. B \textbf{537}, 443 (1999)
 
 \bibitem{Schafer:1999fe}
-T.~Sch{\"a}fer, Nucl. Phys. \textbf{B575}, 269 (2000)
+T.~Sch{\"a}fer, Nucl. Phys. B \textbf{575}, 269 (2000)
 
 \bibitem{Schafer:1998ef}
 T.~Sch{\"a}fer, F.~Wilczek, Phys. Rev. Lett. \textbf{82}, 3956 (1999)
@@ -185,7 +185,7 @@ H.T. Ding, F.~Karsch, S.~Mukherjee, {Thermodynamics of strong-interaction
 \newblock ArXiv:1504.05274
 
 \bibitem{Wilson:1974sk}
-K.G. Wilson, Phys. Rev. \textbf{D10}, 2445 (1974).
+K.G. Wilson, Phys. Rev. D \textbf{10}, 2445 (1974).
 \newblock [,45(1974)]
 
 \bibitem{Mezzadri:2006}
@@ -194,7 +194,7 @@ F.~{Mezzadri}, {How to generate random matrices from the classical compact
 \newblock ArXiv:math-ph/0609050
 
 \bibitem{Hasenfratz:1980kn}
-A.~Hasenfratz, P.~Hasenfratz, Phys. Lett. \textbf{B93}, 165 (1980).
+A.~Hasenfratz, P.~Hasenfratz, Phys. Lett. B \textbf{93}, 165 (1980).
 \newblock [,241(1980)]
 
 \bibitem{Lepage:1998dt}
@@ -206,13 +206,13 @@ G.P. Lepage, in \emph{{Strong interactions at low and intermediate energies.
 U.~Wolff, Phys. Rev. Lett. \textbf{62}, 361 (1989)
 
 \bibitem{Kogut:1974ag}
-J.B. Kogut, L.~Susskind, Phys. Rev. \textbf{D11}, 395 (1975)
+J.B. Kogut, L.~Susskind, Phys. Rev. D \textbf{11}, 395 (1975)
 
 \bibitem{Kaplan:1992bt}
-D.B. Kaplan, Phys. Lett. \textbf{B288}, 342 (1992)
+D.B. Kaplan, Phys. Lett. B \textbf{288}, 342 (1992)
 
 \bibitem{Neuberger:1997fp}
-H.~Neuberger, Phys. Lett. \textbf{B417}, 141 (1998)
+H.~Neuberger, Phys. Lett. B \textbf{417}, 141 (1998)
 
 \bibitem{Luscher:2010ae}
 M.~Luscher, in \emph{{Modern perspectives in lattice QCD: Quantum field theory
@@ -224,11 +224,11 @@ E.~Endress, C.~Pena, K.~Sivalingam, Comput. Phys. Commun. \textbf{195}, 35
   (2015)
 
 \bibitem{Dick:2015twa}
-V.~Dick, F.~Karsch, E.~Laermann, S.~Mukherjee, S.~Sharma, Phys. Rev.
-  \textbf{D91}(9), 094504 (2015)
+V.~Dick, F.~Karsch, E.~Laermann, S.~Mukherjee, S.~Sharma, Phys. Rev. D
+  \textbf{91}(9), 094504 (2015)
 
 \bibitem{Teper:1985ek}
-M.~Teper, Phys. Lett. \textbf{B171}, 86 (1986)
+M.~Teper, Phys. Lett. B \textbf{171}, 86 (1986)
 
 \bibitem{Luscher:2010iy}
 M.~L{\"u}scher, JHEP \textbf{08}, 071 (2010).
@@ -236,7 +236,7 @@ M.~L{\"u}scher, JHEP \textbf{08}, 071 (2010).
 
 \bibitem{Belavin:1975fg}
 A.A. Belavin, A.M. Polyakov, A.S. Schwartz, {\relax Yu}.S. Tyupkin, Phys. Lett.
-  \textbf{B59}, 85 (1975)
+  B \textbf{59}, 85 (1975)
 
 \bibitem{Schafer:1996wv}
 T.~Sch{\"a}fer, E.V. Shuryak, Rev. Mod. Phys. \textbf{70}, 323 (1998)
@@ -251,10 +251,10 @@ M.~Ce, C.~Consonni, G.P. Engel, L.~Giusti, PoS \textbf{LATTICE2014}, 353 (2014)
 E.~Poppitz, T.~Sch{\"a}fer, M.~{\"U}nsal, JHEP \textbf{03}, 087 (2013)
 
 \bibitem{Banks:1979yr}
-T.~Banks, A.~Casher, Nucl. Phys. \textbf{B169}, 103 (1980)
+T.~Banks, A.~Casher, Nucl. Phys. B \textbf{169}, 103 (1980)
 
 \bibitem{Ginsparg:1981bj}
-P.H. Ginsparg, K.G. Wilson, Phys. Rev. \textbf{D25}, 2649 (1982)
+P.H. Ginsparg, K.G. Wilson, Phys. Rev. D \textbf{25}, 2649 (1982)
 
 \bibitem{Cherman:2016hcd}
 A.~Cherman, T.~Sch{\"a}fer, M.~Unsal, {Chiral Lagrangian from Duality and
@@ -262,17 +262,17 @@ A.~Cherman, T.~Sch{\"a}fer, M.~Unsal, {Chiral Lagrangian from Duality and
 \newblock ArXiv:1604.06108
 
 \bibitem{Cristoforetti:2012su}
-M.~Cristoforetti, F.~Di~Renzo, L.~Scorzato, Phys. Rev. \textbf{D86}, 074506
+M.~Cristoforetti, F.~Di~Renzo, L.~Scorzato, Phys. Rev. D \textbf{86}, 074506
   (2012)
 
 \bibitem{Aarts:2014nxa}
 G.~Aarts, L.~Bongiovanni, E.~Seiler, D.~Sexty, JHEP \textbf{10}, 159 (2014)
 
 \bibitem{Aarts:2009uq}
-G.~Aarts, E.~Seiler, I.O. Stamatescu, Phys. Rev. \textbf{D81}, 054508 (2010)
+G.~Aarts, E.~Seiler, I.O. Stamatescu, Phys. Rev. D \textbf{81}, 054508 (2010)
 
 \bibitem{Sexty:2013ica}
-D.~Sexty, Phys. Lett. \textbf{B729}, 108 (2014)
+D.~Sexty, Phys. Lett. B \textbf{729}, 108 (2014)
 
 \bibitem{Kloiber:2013rba}
 T.~Kloiber, C.~Gattringer, PoS \textbf{LATTICE2013}, 206 (2014)
@@ -284,10 +284,10 @@ T.~Sch{\"a}fer, D.~Teaney, Rept. Prog. Phys. \textbf{72}, 126001 (2009)
 T.~Sch{\"a}fer, Ann. Rev. Nucl. Part. Sci. \textbf{64}, 125 (2014)
 
 \bibitem{Karsch:1986cq}
-F.~Karsch, H.W. Wyld, Phys. Rev. \textbf{D35}, 2518 (1987)
+F.~Karsch, H.W. Wyld, Phys. Rev. D \textbf{35}, 2518 (1987)
 
 \bibitem{Meyer:2007ic}
-H.B. Meyer, Phys. Rev. \textbf{D76}, 101701 (2007)
+H.B. Meyer, Phys. Rev. D \textbf{76}, 101701 (2007)
 
 \bibitem{Meyer:2007dy}
 H.B. Meyer, Phys. Rev. Lett. \textbf{100}, 162001 (2008)
@@ -304,14 +304,14 @@ G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Phys. Rev. Lett. \textbf{99},
 G.~Aarts, PoS \textbf{LAT2007}, 001 (2007)
 
 \bibitem{Aarts:2006wt}
-G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Nucl. Phys. \textbf{A785}, 202
-  (2007)
+G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Nucl. Phys. A \textbf{785},
+  202 (2007)
 
 \bibitem{Meyer:2008gt}
 H.B. Meyer, JHEP \textbf{08}, 031 (2008)
 
 \bibitem{Romatschke:2009ng}
-P.~Romatschke, D.T. Son, Phys. Rev. \textbf{D80}, 065021 (2009)
+P.~Romatschke, D.T. Son, Phys. Rev. D \textbf{80}, 065021 (2009)
 
 \bibitem{Arnold:2000dr}
 P.B. Arnold, G.D. Moore, L.G. Yaffe, JHEP \textbf{11}, 001 (2000)
@@ -321,14 +321,14 @@ P.~Kovtun, D.T. Son, A.O. Starinets, Phys. Rev. Lett. \textbf{94}, 111601
   (2005)
 
 \bibitem{Romatschke:2009im}
-P.~Romatschke, Int. J. Mod. Phys. \textbf{E19}, 1 (2010)
+P.~Romatschke, Int. J. Mod. Phys. E \textbf{19}, 1 (2010)
 
 \bibitem{Rezzolla:2013}
 L.~Rezzolla, O.~Zanotti, \emph{Relativistic Hydrodynamics} (Oxford University
   Press, 2013)
 
 \bibitem{Jeon:2015dfa}
-S.~Jeon, U.~Heinz, Int. J. Mod. Phys. \textbf{E24}(10), 1530010 (2015)
+S.~Jeon, U.~Heinz, Int. J. Mod. Phys. E \textbf{24}(10), 1530010 (2015)
 
 \bibitem{Colella:1984}
 P.~Colella, P.R. Woodward, J.\ Comp.\ Phys. \textbf{54}, 174 (1984)
@@ -337,25 +337,25 @@ P.~Colella, P.R. Woodward, J.\ Comp.\ Phys. \textbf{54}, 174 (1984)
 J.M. Blondin, E.A. Lufkin, Astrophys.\ J.\ Supp.\ Ser. \textbf{88}, 589 (1993)
 
 \bibitem{Schafer:2010dv}
-T.~Sch{\"a}fer, Phys. Rev. \textbf{A82}, 063629 (2010)
+T.~Sch{\"a}fer, Phys. Rev. A \textbf{82}, 063629 (2010)
 
 \bibitem{Florkowski:2010cf}
-W.~Florkowski, R.~Ryblewski, Phys. Rev. \textbf{C83}, 034907 (2011)
+W.~Florkowski, R.~Ryblewski, Phys. Rev. C \textbf{83}, 034907 (2011)
 
 \bibitem{Martinez:2010sc}
-M.~Martinez, M.~Strickland, Nucl. Phys. \textbf{A848}, 183 (2010)
+M.~Martinez, M.~Strickland, Nucl. Phys. A \textbf{848}, 183 (2010)
 
 \bibitem{Bluhm:2015raa}
-M.~Bluhm, T.~Sch{\"a}fer, Phys. Rev. \textbf{A92}(4), 043602 (2015)
+M.~Bluhm, T.~Sch{\"a}fer, Phys. Rev. A \textbf{92}(4), 043602 (2015)
 
 \bibitem{Bluhm:2015bzi}
 M.~Bluhm, T.~Sch{\"a}fer, Phys. Rev. Lett. \textbf{116}(11), 115301 (2016)
 
 \bibitem{Romatschke:2011hm}
-P.~Romatschke, M.~Mendoza, S.~Succi, Phys. Rev. \textbf{C84}, 034903 (2011)
+P.~Romatschke, M.~Mendoza, S.~Succi, Phys. Rev. C \textbf{84}, 034903 (2011)
 
 \bibitem{Brewer:2015hua}
-J.~Brewer, M.~Mendoza, R.E. Young, P.~Romatschke, Phys. Rev. \textbf{A93}(1),
+J.~Brewer, M.~Mendoza, R.E. Young, P.~Romatschke, Phys. Rev. A \textbf{93}(1),
   013618 (2016)
 
 \bibitem{Kadanoff}
@@ -363,10 +363,10 @@ L.P. Kadanoff, G.~Baym, \emph{Quantum Statistical Mechanics} (W.~A.~Benjamin,
   1962)
 
 \bibitem{Bertsch:1988ik}
-G.F. Bertsch, S.~Das~Gupta, Phys. Rept. \textbf{160}, 189 (1988)
+G.F. Bertsch, S.~Das~Gupta, Phys. Rep. \textbf{160}, 189 (1988)
 
 \bibitem{Lepers:2010be}
-T.~Lepers, D.~Davesne, S.~Chiacchiera, M.~Urban, Phys. Rev. \textbf{A82},
+T.~Lepers, D.~Davesne, S.~Chiacchiera, M.~Urban, Phys. Rev. A \textbf{82},
   023609 (2010)
 
 \bibitem{Bass:1998ca}
@@ -375,23 +375,23 @@ S.A. Bass, et~al., Prog. Part. Nucl. Phys. \textbf{41}, 255 (1998).
 
 \bibitem{Buss:2011mx}
 O.~Buss, T.~Gaitanos, K.~Gallmeister, H.~van Hees, M.~Kaskulov, O.~Lalakulich,
-  A.B. Larionov, T.~Leitner, J.~Weil, U.~Mosel, Phys. Rept. \textbf{512}, 1
+  A.B. Larionov, T.~Leitner, J.~Weil, U.~Mosel, Phys. Rep. \textbf{512}, 1
   (2012)
 
 \bibitem{Ehehalt:1996uq}
-W.~Ehehalt, W.~Cassing, Nucl. Phys. \textbf{A602}, 449 (1996)
+W.~Ehehalt, W.~Cassing, Nucl. Phys. A \textbf{602}, 449 (1996)
 
 \bibitem{Geiger:1991nj}
-K.~Geiger, B.~Muller, Nucl. Phys. \textbf{B369}, 600 (1992)
+K.~Geiger, B.~Muller, Nucl. Phys. B \textbf{369}, 600 (1992)
 
 \bibitem{Xu:2004mz}
-Z.~Xu, C.~Greiner, Phys. Rev. \textbf{C71}, 064901 (2005)
+Z.~Xu, C.~Greiner, Phys. Rev. C \textbf{71}, 064901 (2005)
 
 \bibitem{McLerran:1993ni}
-L.D. McLerran, R.~Venugopalan, Phys. Rev. \textbf{D49}, 2233 (1994)
+L.D. McLerran, R.~Venugopalan, Phys. Rev. D \textbf{49}, 2233 (1994)
 
 \bibitem{Mueller:2002gd}
-A.H. Mueller, D.T. Son, Phys. Lett. \textbf{B582}, 279 (2004)
+A.H. Mueller, D.T. Son, Phys. Lett. B \textbf{582}, 279 (2004)
 
 \bibitem{Mrowczynski:2016etf}
 S.~Mrowczynski, B.~Schenke, M.~Strickland,   (2016)
@@ -401,17 +401,17 @@ J.~Berges, A.~Rothkopf, J.~Schmidt, Phys. Rev. Lett. \textbf{101}, 041603
   (2008)
 
 \bibitem{Dusling:2010rm}
-K.~Dusling, T.~Epelbaum, F.~Gelis, R.~Venugopalan, Nucl. Phys. \textbf{A850},
+K.~Dusling, T.~Epelbaum, F.~Gelis, R.~Venugopalan, Nucl. Phys. A \textbf{850},
   69 (2011)
 
 \bibitem{Litim:2001db}
-D.F. Litim, C.~Manuel, Phys. Rept. \textbf{364}, 451 (2002)
+D.F. Litim, C.~Manuel, Phys. Rep. \textbf{364}, 451 (2002)
 
 \bibitem{Wong:1970fu}
-S.K. Wong, Nuovo Cim. \textbf{A65}, 689 (1970)
+S.K. Wong, Nuovo Cim. A \textbf{65}, 689 (1970)
 
 \bibitem{Hu:1996sf}
-C.R. Hu, B.~Muller, Phys. Lett. \textbf{B409}, 377 (1997)
+C.R. Hu, B.~Muller, Phys. Lett. B \textbf{409}, 377 (1997)
 
 \bibitem{Maldacena:1997re}
 J.M. Maldacena, Int. J. Theor. Phys. \textbf{38}, 1113 (1999).
@@ -435,7 +435,7 @@ O.~DeWolfe, S.S. Gubser, C.~Rosen, D.~Teaney, Prog. Part. Nucl. Phys.
 G.~Policastro, D.T. Son, A.O. Starinets, JHEP \textbf{09}, 043 (2002)
 
 \bibitem{Teaney:2006nc}
-D.~Teaney, Phys. Rev. \textbf{D74}, 045025 (2006)
+D.~Teaney, Phys. Rev. D \textbf{74}, 045025 (2006)
 
 \bibitem{Son:2006em}
 D.T. Son, A.O. Starinets, JHEP \textbf{03}, 052 (2006)

@@ -7,7 +7,7 @@ Warning--empty journal in Mrowczynski:2016etf
 Warning--empty journal in CasalderreySolana:2011us
 You've used 135 entries,
             2812 wiz_defined-function locations,
-            1441 strings with 24967 characters,
+            1428 strings with 24925 characters,
 and the built_in function-call counts, 42320 in all, are:
 = -- 2683
 > -- 1107
@@ -30,11 +30,11 @@ int.to.str$ -- 135
 missing$ -- 1242
 newline$ -- 430
 num.names$ -- 135
-pop$ -- 1926
+pop$ -- 1924
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1245
+skip$ -- 1247
 stack$ -- 0
 substring$ -- 1488
 swap$ -- 2605
