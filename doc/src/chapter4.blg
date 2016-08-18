@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter4.aux
 The style file: spphys.bst
@@ -18,6 +18,11 @@ I'm skipping whatever remains of this entry
 Repeated entry---line 3857 of file lnp.bib
  : @article{Epelbaum:2008ga
  :                         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6232 of file lnp.bib
+ : 
+ : @book{TinkhamBook,
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Repeated entry---line 7663 of file lnp.bib
  : @article{Braaten:2004rn
@@ -114,4 +119,4 @@ warning$ -- 6
 while$ -- 78
 width$ -- 44
 write$ -- 340
-(There were 16 error messages)
+(There were 17 error messages)

@@ -1,8 +1,13 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter11.aux
 The style file: spphys.bst
 Database file #1: lnp.bib
+I was expecting a `,' or a `}'---line 6232 of file lnp.bib
+ : 
+ : @book{TinkhamBook,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "Schirmar9?"
 Warning--I didn't find a database entry for "Som14a"
@@ -49,4 +54,4 @@ warning$ -- 1
 while$ -- 49
 width$ -- 27
 write$ -- 207
-(There were 5 warnings)
+(There was 1 error message)

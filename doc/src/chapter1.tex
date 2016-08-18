@@ -24,9 +24,9 @@ to explore a completely unknown landscape of nuclei with extreme
 neutron-to-proton ratios using radioactive and short-lived ions,
 including rare and very neutron-rich isotopes.  These experiments push
 us towards the extremes of nuclear stability.  Moreover, these rare
-nuclei lie at the heart of nucleosynthesis processes in the universe
+nuclei lie at the heart of nucleosynthesis processes in the Universe
 and are therefore an important component in the puzzle of matter
-generation in the universe.
+generation in the Universe.
 
 A firm experimental and theoretical understanding of nuclear stability
 in terms of the basic constituents is a huge intellectual endeavor.
@@ -35,10 +35,23 @@ all nuclei and their reactions requires theoretical and experimental
 investigations of rare isotopes with unusual neutron-to-proton ratios
 that are very different from their stable counterparts.  These rare
 nuclei are difficult to produce and study experimentally since they
-can have extremely short lifetimes. Theoretical approaches to these
-nuclei involve solving the nuclear many-body problem.
+can have extremely short lifetimes. 
+To study theoretically these nuclear systems  entails 
+being able to solve a complicated quantum-mechanical many-body problem
+in order to address important 
+issues such as whether we can explain from first-principle
+methods the existence of magic numbers and their eventual vanishing with increasing neutron numbers, 
+how the binding energy of neutron-rich nuclei
+behaves, or the radii, neutron skins, and many many other probes that
+extract information about many-body correlations as nuclei evolve
+towards their limits of stability. These are all fundamental
+questions which, combined with recent experimental and theoretical
+advances, will allow us to advance our basic knowledge about the
+limits of stability of matter, and, hopefully, help us in gaining a
+better understanding of visible matter.
 
-Accompanying these developments, a qualitative change has swept the
+
+Accompanying the experimental  developments, a qualitative change has swept the
 nuclear theory landscape thanks to a combination of techniques that are
 allowing, for the first time, to construct links between QCD and
 the nuclear many-body problem. This transformation has been brought by a dramatic
@@ -49,8 +62,8 @@ Hamiltonians. Simultaneously, effective field
 theories attempt at building  a bridge between the two numerical approaches,
 allowing to convert the results of lattice QCD into input Hamiltonians that can be used in {\em ab initio}
 methods.
-
-Algorithmic and computational advances hold promise for
+Furthermore,
+algorithmic and computational advances hold promise for
 breakthroughs in predictive power including proper error estimates,
 enhancing the already strong ties between theory and experiment.
 These advances include better {\em ab initio} many-body methods as well as a
@@ -62,16 +75,6 @@ of nuclear matter and allows us to relate these novel understandings to
 the underlying laws of motion, the corresponding forces and the
 pertinent fundamental building blocks of nuclear matter.
 
-Important issues such as whether we can explain from first-principle
-methods the existence of magic numbers and their vanishing as we add
-more and more nucleons, how the binding energy of neutron-rich nuclei
-behaves, or the radii, neutron skins, and many many other probes that
-extract information about many-body correlations as nuclei evolve
-towards their limits of stability --- these are all fundamental
-questions which, combined with recent experimental and theoretical
-advances, will allow us to advance our basic knowledge about the
-limits of stability of matter, and, hopefully, help us in gaining a
-better understanding of visible matter.
 
 It is within this framework the present set of lectures finds its rationale.
 This text collects and synthesizes ten series of lectures on the
@@ -86,19 +89,61 @@ the mediators of the strong force to the computation of the equation
 of state for infinite nuclear matter and neutron star matter.  The
 lectures provide a proper exposition of the underlying theoretical and
 algorithmic approaches as well as strong ties to the numerical
-implementation of the exposed methods.  The various chapters propose
-exercises meant to deepen the exposed theory as well as  actual numerical software.
-The latter will enable the reader to build upon these and develop
-her/his own insights about these methods, as well as using these codes
-for developing her/his own programs for tackling complicated many-body
-problems.  Proper benchmarks for the various programs are also provided, allowing thereby potential readers and users to check the 
-correctness, installation and compilation  of the various programs. All codes are properly linked in the various chapters and available via the github link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics}. 
+implementation of the exposed methods.  
+
+The next chapter, by Thomas Sch\"afer, aims at a brief introduction to
+quantum chromodynamics (QCD), the QCD phase diagram, and
+non-equilibrium phenomena in QCD. This chapter emphasizes the aspects
+of the theory that can be addressed using computational methods. In
+chapter 3, Tetsuo Hatsuda presents several basic concepts and
+applications of lattice quantum chromodynamics (LQCD), ending the
+chapter by presenting recent LQCD results on baryon-baryon
+interactions.  These results are extremely promising since they allow
+for a better understanding of the links between QCD and effective
+field theories with say nucleons and pions only. The latter provide
+the necessary degrees of freedom and inputs for defining the nuclear
+Hamiltonians that enter the solution of the various nuclear many-body
+methods discussed in chapter 7 through 11. Chapter 4 by Hans-Werner Hammer and Sebastian K\"onig
+presents the general theoretical aspects of nuclear effective field
+theories. In the two subsequent chapters by Amy Nicholson and Dean
+Lee, the authors apply lattice techniques to nuclear effective field
+theories involving nucleons as the basic degrees of freedom. These
+authors give a detailed exposure, with exercises and numerical codes,
+of lattice techniques applied to effective field theory, explaining
+the theory and algorithms relevant to lattice simulations of nuclear
+few- and many-body systems.  
+
+The first five chapters are thus meant to
+expose the reader to the most recent developments in our understanding
+of the strong interaction, linking QCD with effective field
+theories. With the pertinent effective degrees of freedom we can in
+turn define various effective non-relativistic Hamiltonians and embark
+on our studies of widely used methods for solving the non-relativistic
+Schr\"odinger equation. Spanning from Monte Carlo methods to various
+wave function based methods like full configuration interaction
+theory, coupled cluster theory, similarity renormalization group
+approaches and Green's function theory, chapters 7 thorugh 11 aim at
+exposing these methods to the reader, with applications to infinite neutron star
+matter. The latter is studied with a simplified model for the nuclear
+forces. However, the formalism and codes we present can easily be
+extended to include interaction models based on effective field
+theories.  The various chapters propose exercises meant to deepen the
+exposed theory as well as actual numerical software.  The latter is
+meant to enable the reader to build upon these and develop her/his own
+insights about these methods, as well as using these codes for
+developing her/his own programs for tackling complicated many-body
+problems.  Proper benchmarks for the various programs are also
+provided, allowing thereby potential readers and users to check the
+correctness, installation and compilation of the various programs. All
+codes are properly linked in the various chapters and available via
+the github
+link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics}.
 
 
 \begin{acknowledgement}
 The different chapters are based on lectures given at the Doctoral Training program {\em Computational Nuclear Physics - Hadrons, Nuclei and Dense Matter} held at  the European Center for Theoretical Nuclear Physics
 and Related Areas (ECT*) in Trento, Italy, from April 13 to May 22, 2015, the Nuclear Talent course {\em Many-body methods for nuclear physics}, held at GANIL, Caen, France, from July 5 to July 25,  2015, and the Nuclear Talent course {\em High-performance computing and computational tools for nuclear physics} held at North Carolina State University from July 11 to July 29, 2016. For more information about the Nuclear Talent courses see \url{http://www.nucleartalent.org}. For the Doctoral Training program of the ECT*, see \url{http://www.ectstar.eu/node/799}.
-The support for organizing these series of lectures from the ECT*, GANIL and the University of Basse Normadie at Caen, North Carolina State University, Los Alamos National Laboratory and Michigan State University is greatly acknowledged.   Some of the lectures (chapters 8 and 10) are co-authored by students (Michigan State University) who  attended the abovementioned Nuclear Talent courses.
+The support for organizing these series of lectures from the ECT*, GANIL and the University of Basse Normadie at Caen, North Carolina State University, Los Alamos National Laboratory and Michigan State University is greatly acknowledged.   Some of the lectures (chapters 8 and 10) are co-authored by graduate students (from Michigan State University) who  attended the abovementioned Nuclear Talent courses.
 
 
 The work of MHJ is supported by NSF Grant No.~PHY-1404159 (Michigan State University). 

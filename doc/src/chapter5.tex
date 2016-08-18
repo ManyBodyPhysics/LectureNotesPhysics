@@ -168,7 +168,7 @@ Z=\int \mathcal{D} \psi^{\dagger}\mathcal{D} \psi e^{-\int d\tau d^3x\left[\math
 \eeq
 If the integral over Euclidean time is compact, then the finite time extent $\beta$ acts as an inverse temperature, and we may draw an analogy with the partition function in statistical mechanics, $Z = tr\left[e^{-H\beta}\right]$. This analogy is often useful when discussing lattice formulations of the path integral. In this work we will generally consider $\mu=0$ and create non-zero particle density by introducing sources and sinks for particles and calculating correlation functions. 
 
-We discretize this theory on a square lattice consisting of $L^3 \times N_{\tau}$ points, where $L$ is the number of points in all spatial directions, and $N_{\tau}$ is the number of temporal points. We will focus on zero temperature physics, corresponding to large $N_{\tau} ~$\footnote{The explicit condition on $N_{\tau}$ required for extracting zero temperature observables will be discussed in \Sec{observables}}. We must also define the physical distance between points, the lattice spacings $b_s, b_{\tau}$, where $b_{\tau} = b_s^2/M$ by dimensional analysis for non-relativistic theories. The fields are now labeled by discrete points, $\psi(\vec{x},\tau) \to \psi_{\vec{n},\tau}$, and continuous integrals are replaced by discrete sums, $\int d^3x \to \sum_{\vec{n},\tau}^{L,N_{\tau}}$.
+We discretize this theory on a square lattice consisting of $L^3 \times N_{\tau}$ points, where $L$ is the number of points in all spatial directions, and $N_{\tau}$ is the number of temporal points. We will focus on zero temperature physics, corresponding to large $N_{\tau} ~$\footnote{The explicit condition on $N_{\tau}$ required for extracting zero temperature observables will be discussed in \Sec{observables}}. We must also define the physical distance between points, the lattice spacings $b_s, b_{\tau}$, where $b_{\tau} = b_s^2/M$ by dimensional analysis for non-relativistic theories. The fields are now labeled by discrete points, $\psi(\mathbf{x},\tau) \to \psi_{\mathbf{n},\tau}$, and continuous integrals are replaced by discrete sums, $\int d^3x \to \sum_{\mathbf{n},\tau}^{L,N_{\tau}}$.
 
 \subsubsection{Free field theory}
 To discretize a free field theory, we must discuss discretization of derivatives. The simplest operator which behaves as a single derivative in the continuum limit is a finite difference operator,
@@ -205,7 +205,7 @@ where I've used the finite volume momentum $p = \frac{2\pi k}{b_s L}$ to rewrite
 
 Adding a temporal derivative term, 
 \beq
-\partial_{\tau}^{(L)} \psi_{\vec{x},\tau} = \frac{1}{b_{\tau}}\left[\psi_{\vec{n},\tau}- \psi_{\vec{n},\tau-1}\right] \ ,
+\partial_{\tau}^{(L)} \psi_{\mathbf{x},\tau} = \frac{1}{b_{\tau}}\left[\psi_{\mathbf{n},\tau}- \psi_{\mathbf{n},\tau-1}\right] \ ,
 \eeq
 we can now write down a simple action for a non-relativistic free-field theory,
 \beq
@@ -336,11 +336,11 @@ There are several ways to set the two-body coupling. Here we will explore two me
 We have calculated the scattering amplitude previously for our effective theory using a momentum cutoff. For the first method for tuning the coupling, we will calculate it again using our lattice theory with the lattice cutoff as a regulator. First we need the single particle free propagator:
 \beq
 \label{eq:oneprop}
-G_0(\tau,\vec{p}) &=& \langle \vec{p},\tau | \left(D^{-1}\right)^{\tau+1}|\vec{p},0\rangle = \left(1+\frac{\Delta(p)}{M}\right)^{-(\tau+1)} \ , \cr
-\Delta(p) &\equiv& -\frac{1}{2}\langle \vec{p}|\nabla_L^2 | \vec{p}\rangle \cr
+G_0(\tau,\mathbf{p}) &=& \langle \mathbf{p},\tau | \left(D^{-1}\right)^{\tau+1}|\mathbf{p},0\rangle = \left(1+\frac{\Delta(p)}{M}\right)^{-(\tau+1)} \ , \cr
+\Delta(p) &\equiv& -\frac{1}{2}\langle \mathbf{p}|\nabla_L^2 | \mathbf{p}\rangle \cr
 &=& \sum_i \sin^2 \frac{p_i}{2} \ ,
 \eeq
-where I've set $b_s=1$ (we will use this convention from now on until we begin to discuss systematic errors), and have used the previously defined discretized Laplacian operator. I've written the propagator in a mixed $\vec{p},\tau$ representation, as this is often useful in lattice calculations for calculating correlation functions in time when the kinetic operator, $D$, is diagonal in momentum space. 
+where I've set $b_s=1$ (we will use this convention from now on until we begin to discuss systematic errors), and have used the previously defined discretized Laplacian operator. I've written the propagator in a mixed $\mathbf{p},\tau$ representation, as this is often useful in lattice calculations for calculating correlation functions in time when the kinetic operator, $D$, is diagonal in momentum space. 
 
 The diagrammatic two-particle scattering amplitude is shown on the bottom line in \Fig{dimer}. Because we have chosen the interaction to be separable, the amplitude can be factorized:
 \beq
@@ -360,10 +360,10 @@ Relating \Eqs{aint}{aERE}, we find
 
 We will now evaluate the loop integral using the free single particle propagators, \Eq{oneprop},
 \beq
-\hat{L} &=& \frac{1}{V} \sum_{\vec{p}}\sum_{\tau=0}^{\infty} \left[G_0(\tau,\vec{p})\right]^2 \cr
-&=& \frac{1}{V} \sum_{\vec{p}}\sum_{\tau=0}^{\infty} \frac{1}{\left(1+\frac{\Delta(p)}{M}\right)^{2\tau+2}} \cr
-&=& \frac{1}{V} \sum_{\vec{p}} \frac{1}{\left(1+\frac{\Delta(p)}{M}\right)^2}\left[1+\sum_{\tau=0}^{\infty}\frac{1}{\left[\left(1+\frac{\Delta(p)}{M}\right)^2\right]^\tau}\right] \cr
-&=&\frac{1}{V} \sum_{\vec{p}}\frac{M}{2}\frac{1}{\Delta(p)\left(1+\frac{\Delta(p)}{2M}\right)} \ .
+\hat{L} &=& \frac{1}{V} \sum_{\mathbf{p}}\sum_{\tau=0}^{\infty} \left[G_0(\tau,\mathbf{p})\right]^2 \cr
+&=& \frac{1}{V} \sum_{\mathbf{p}}\sum_{\tau=0}^{\infty} \frac{1}{\left(1+\frac{\Delta(p)}{M}\right)^{2\tau+2}} \cr
+&=& \frac{1}{V} \sum_{\mathbf{p}} \frac{1}{\left(1+\frac{\Delta(p)}{M}\right)^2}\left[1+\sum_{\tau=0}^{\infty}\frac{1}{\left[\left(1+\frac{\Delta(p)}{M}\right)^2\right]^\tau}\right] \cr
+&=&\frac{1}{V} \sum_{\mathbf{p}}\frac{M}{2}\frac{1}{\Delta(p)\left(1+\frac{\Delta(p)}{2M}\right)} \ .
 \eeq
 This final sum may be calculated numerically for a given $M$ and $L$ (governing the values of momenta included in the sum), as well as for different possible definitions of the derivative operators contained in $\Delta$, giving the desired coupling, $g_0$, via \Eq{eigeqscat}.
 
@@ -766,38 +766,75 @@ S_{ij}^{\sigma} (\phi,\tau) \equiv \langle \alpha_i^{\sigma} | K^{-1}(\phi,\tau)
 \eeq
 and $\langle \alpha_j^{\sigma}|$ corresponds to single particle state $i$ with spin $\sigma$. As an example, we may use a plane wave basis for the single particle states,
 \beq
-| \alpha_j^{\uparrow}\rangle = |\vec{p}_j \rangle \ , \qquad | \alpha_j^{\downarrow}\rangle = |-\vec{p}_j \rangle \ ,
+| \alpha_j^{\uparrow}\rangle = |\mathbf{p}_j \rangle \ , \qquad | \alpha_j^{\downarrow}\rangle = |-\mathbf{p}_j \rangle \ ,
 \eeq
 where I've chosen equal and opposite momenta for the different spin labels in order to enforce zero total momentum (this condition may be relaxed to attain boosted systems). 
 
 Though the interpolating field chosen in \Eq{slaterdet} has non-zero overlap with the ground state of interest, if the overlap is small it may take an inordinately long time to remove excited state contributions. Consider a system involving only two-particle correlations, as in our two-spin fermion system, and make the simplification that the ground state consists of non-interacting two-body pairs having wavefunction $\Psi_{\mbox{\tiny 2-body}}$, and overlap with a product of two non-interacting single particle states given by
 \beq
-\langle \Psi_{\mbox{\tiny 2-body}} | \left( |\vec{p}\rangle \otimes | - \vec{p} \rangle \right) = \epsilon < 1.
+\langle \Psi_{\mbox{\tiny 2-body}} | \left( |\mathbf{p}\rangle \otimes | - \mathbf{p} \rangle \right) = \epsilon < 1.
 \eeq
 Then the corresponding overlap of the Slater determinant in \Eq{slaterdet} with the ground state wavefunction scales as
 \beq
-\left( \langle \Psi_{\mbox{\tiny 2-body}} | \otimes \cdots \otimes \langle \Psi_{\mbox{\tiny 2-body}} | \right) \left( |\vec{p}_1 \rangle \otimes | -\vec{p}_1 \rangle \otimes \cdots \otimes |\vec{p}_N \rangle \otimes | -\vec{p}_N \rangle \right) \sim \epsilon^N \ .
+\left( \langle \Psi_{\mbox{\tiny 2-body}} | \otimes \cdots \otimes \langle \Psi_{\mbox{\tiny 2-body}} | \right) \left( |\mathbf{p}_1 \rangle \otimes | -\mathbf{p}_1 \rangle \otimes \cdots \otimes |\mathbf{p}_N \rangle \otimes | -\mathbf{p}_N \rangle \right) \sim \epsilon^N \ .
 \eeq
 Thus the overlap of single-particle states with an interacting $2N$-body state is exponentially small with $N$. This condition worsens for systems with $3$- and higher-body correlations.
 
 In order to do a better job we can incorporate two-body correlations into the sinks as follows: first, we construct a two particle propagator,
 \beq
 S_{ij}^{\uparrow}{\downarrow}(\phi,\tau) &=& \langle \Psi_2|K^{-1}(\phi,\tau) \otimes K^{-1}(\phi,\tau)\left( | \alpha_i^{\uparrow}\rangle \otimes | \alpha_j^{\downarrow} \rangle \right)\cr
-&=& \sum_{\vec{p}} \Psi(\vec{p}) \langle \vec{p}| K^{-1}(\phi,\tau) | \alpha_i^{\uparrow} \rangle \langle -\vec{p}| K^{-1}(\phi,\tau) | \alpha_j^{\downarrow} \rangle \ ,
+&=& \sum_{\mathbf{p}} \Psi(\mathbf{p}) \langle \mathbf{p}| K^{-1}(\phi,\tau) | \alpha_i^{\uparrow} \rangle \langle -\mathbf{p}| K^{-1}(\phi,\tau) | \alpha_j^{\downarrow} \rangle \ ,
 \eeq
-where $\Psi_2(\vec{p})$ is some two-body wavefunction (this process could equally well be performed in position space). As an example, to incorporate BCS pairing, we may use a wavefunction of the form:
+where $\Psi_2(\mathbf{p})$ is some two-body wavefunction (this process could equally well be performed in position space). As an example, to incorporate BCS pairing, we may use a wavefunction of the form:
 \beq
 \label{eq:pairing}
-\Psi_2(\vec{p}) \sim \frac{e^{-b|\vec{p}|}}{|\vec{p}|^2} \ ,
+\Psi_2(\mathbf{p}) \sim \frac{e^{-b|\mathbf{p}|}}{|\mathbf{p}|^2} \ ,
 \eeq 
-where $b$ is some parameter which may be tuned to maximize the overlap of the wavefunction. We may also use the wavefunction derived in \Eq{varpsi} for a lattice version of such a wavefunction. An example code fragment for implementing such wavefunctions is given in \Fig{wfcode}.
+where $b$ is some parameter which may be tuned to maximize the overlap of the wavefunction. We may also use the wavefunction derived in \Eq{varpsi} for a lattice version of such a wavefunction. An example code fragment for implementing such wavefunctions is given here. We show a portion  of our c++ code for implementing two types of two-body source vector: \Eq{varpsi} (GND) and \Eq{pairing} (PAIR2). Note that these vectors are computed in momentum space. The first operator applied to a source is the kinetic operator, $D^{-1}$, which is also computed in momentum space.
+\begin{lstlisting}
+  if (two_body_arg.wavefunc_type==WAVEFUNC_TYPE_GND) {
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=\linewidth]{Chapter5-figures/twobody}
-\end{center}
-\caption{\label{fig:wfcode}Portion of c++ code for implementing two types of two-body source vector: \Eq{varpsi} (GND) and \Eq{pairing} (PAIR2). Note that these vectors are computed in momentum space. The first operator applied to a source is the kinetic operator, $D^{-1}$, which is also computed in momentum space.}
-\end{figure}
+    Dispersion dispersion1(two_body_arg.dispersion_type1, two_body_arg.mass1, CUTOFF_TYPE_HARD);
+    Dispersion dispersion2(two_body_arg.dispersion_type2, two_body_arg.mass2, CUTOFF_TYPE_HARD);
+
+    double xi1;
+    double xi2;
+    double lambda = two_body_arg.lambda;
+
+    for (int i=0; i<vol; i++) {
+      xi1 = 1.0 + dispersion1.Get(i);
+      xi2 = 1.0 + dispersion2.Get(i);
+ 
+      // Here, I use the fermion wave function, as derived in my note.
+      // Note that psi(p) = xi(p)/(lambda*xi(p)^2-1) is the eigenstate of the transfer matrix.
+      // The correlation function, however, is given by <final| D^{-1/2} T^N D^{-1/2} |initial>
+      // Hence <p|final> = xi(p) psi(p), where xi is the same as D^{1/2} in momentum space).
+      //
+      // wavefunc[i] = xi^2/(lambda*xi^2-1.0);
+      wavefunc[i] = 1.0;                     // This way avoids NAN when dispersion type is QUADRATIC, or PERFECT
+      wavefunc[i] /= lambda - 1.0/(xi1*xi2); // so do it this way instead:
+    }
+  }
+//
+  if (two_body_arg.wavefunc_type==WAVEFUNC_TYPE_PAIR2) {
+
+    Dispersion dispersion(DISPERSION_TYPE_QUADRATIC, 1.0, CUTOFF_TYPE_HARD);
+    double b = two_body_arg.lambda;
+    double psq;
+
+    for (int i=0; i<vol; i++) {
+      psq = 2.0*dispersion.Get(i); 
+      if (psq < 1e-15) {
+        wavefunc[i] = 0.0; // Omit divergent contribution to wave funcion--must be treated separately
+      } else {
+        wavefunc[i] = exp(- b*sqrt(psq) )/psq;
+      }
+    }
+
+  }
+\end{lstlisting}
+For the full source code see \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter5-programs}.
+
 
 To ensure Pauli exclusion, it is sufficient to antisymmetrize only the sources, $|\alpha_i \rangle$, leading to the following many-body correlation function,
 \beq
@@ -1028,18 +1065,49 @@ While this operator is simple in momentum space, it is highly non-local in posit
 K^{-1}(\tau) &=& D^{-1}X(\tau)D^{-1}X(\tau-1)\cdots D^{-1} \cr
 &=& D^{-1}X(\tau)K^{-1}(\tau-1) \ ,
 \eeq
-suggests that the kinetic ($D^{-1}$) and interaction ($X$) operators may each be applied separately in whatever basis is most convenient. So, we may choose to start with a source in momentum space (which is often preferable), then apply an exact kinetic operator, $D^{-1}$, also in momentum space, perform a FFT to position space, hit the resulting vector with the $X$ operator, which is most easily specified in position space, FFT again back to momentum space to perform a kinetic operation, and so on until finally the sink is applied. Example code for calculating various forms of inverse kinetic operator in momentum space is shown in \Fig{dispersion}.
+suggests that the kinetic ($D^{-1}$) and interaction ($X$) operators may each be applied separately in whatever basis is most convenient. So, we may choose to start with a source in momentum space (which is often preferable), then apply an exact kinetic operator, $D^{-1}$, also in momentum space, perform a FFT to position space, hit the resulting vector with the $X$ operator, which is most easily specified in position space, FFT again back to momentum space to perform a kinetic operation, and so on until finally the sink is applied. Example code for calculating various forms of inverse kinetic operator in momentum space is shown here in terms of a c++ code fragment for computing various lattice Laplacian operators: \Eq{Deltasin} (STANDARD), \Eq{perfect} (PERFECT), as well as a simple quadratic in momentum (QUADRATIC). Note that these are computed in momentum space, and they may be used to calculate the kinetic operator $D^{-1}$, then directly applied to the momentum space vectors discussed above.
+\begin{lstlisting}
+  for(int i=0; i<GJP.Vol(); i++) {
+ 
+    z = i%z_sites;
+    Y = i/z_sites;
+    y = Y%y_sites;
+    x = Y/y_sites;
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=\linewidth]{Chapter5-figures/dispersion}
-\end{center}
-\caption{\label{fig:dispersion}Example c++ code fragment for computing various lattice Laplacian operators: \Eq{Deltasin} (STANDARD), \Eq{perfect} (PERFECT), as well as a simple quadratic in momentum (QUADRATIC). Note that these are computed in momentum space, and they may be used to calculate the kinetic operator $D^{-1}$, then directly applied to the momentum space vectors computed in \Fig{wfcode}.}
-\end{figure}
+    if (dispersion_type==DISPERSION_TYPE_STANDARD) {
+      //
+      // \Delta(p) = 2 \sum_j \sin^2(p_j/2)
+      //
+      sx = sin( (x+bc[0]) * PI / x_sites );
+      sy = sin( (y+bc[1]) * PI / y_sites );
+      sz = sin( (z+bc[2]) * PI / z_sites );
+      dispersion[i] = 2.0 * ( sx*sx + sy*sy + sz*sz ); 
+      dispersion[i] /= mass; 
+    }
+    if ( (dispersion_type==DISPERSION_TYPE_QUADRATIC)||(dispersion_type==DISPERSION_TYPE_PERFECT) ) {
+
+    //  additional code not displayed
+
+      sx = (x + bc[0]) / (double)x_sites;
+      sy = (y + bc[1]) / (double)y_sites;
+      sz = (z + bc[2]) / (double)z_sites;
+      psq = (sx*sx + sy*sy + sz*sz)*4.0*PISQ;
+
+      //---- Cutoff, beyond which we take psq = infinity
+      if ( (cutoff_type==CUTOFF_TYPE_HARD)&&(psq > GJP.CutoffSq() ) ) {
+        dispersion[i] = numeric_limits<double>::infinity();
+      } else {
+        if (dispersion_type==DISPERSION_TYPE_QUADRATIC) { dispersion[i] = psq/(2.0*mass); }
+        if (dispersion_type==DISPERSION_TYPE_PERFECT) { dispersion[i] = ( exp( psq/(2.0*mass) ) -1.0 ); }
+      }
+    }
+\end{lstlisting}
+
+
 
 The benefit to using the FFT repeatedly rather than simply converting the kinetic operator into position space is that modern FFT libraries are highly optimized and cheap to use. For comparison, if we used the ``perfect" kinetic operator in position space it would be a dense $V\times V$ matrix. The operation of applying such an object to a $V$-dimensional vector,
 \beq
-D^{-1}(x) | \psi(x) \rangle \ ,
+D^{-1}(x) | \psi(x) \rangle,
 \eeq
 scales like $V^2$. On the other hand, using the FFT to convert the $V$-dimensional vector to momentum space, then applying a diagonal matrix to it,
 \beq
@@ -1102,7 +1170,7 @@ A_{\mbox{\tiny FV}}^{-1} = \frac{1}{\sum_ng_{2n}p^{2n}} - I_0^{\mbox{\tiny FV}} 
 \eeq
 where the loop integral has been replaced by a finite volume sum over the allowed quantized momenta in a box,
 \beq
-I_0^{\mbox{\tiny FV}} = \frac{1}{L^3} \sum_{\vec{n}}^{\Lambda} \frac{1}{E-\left(\frac{2\pi n}{L}\right)^2/M} \ .
+I_0^{\mbox{\tiny FV}} = \frac{1}{L^3} \sum_{\mathbf{n}}^{\Lambda} \frac{1}{E-\left(\frac{2\pi n}{L}\right)^2/M} \ .
 \eeq
 
 Again, because the couplings are unchanged by the finite volume we are free to use \Eq{C2n} to replace them with the physical infinite volume phase shift, resulting in,
@@ -1116,11 +1184,11 @@ This leads to the eigenvalue equation,
 I have specified taking the real part of the inverse amplitude merely for calculational simplicity; this quantity is, in fact, already purely real because there are no integrals, and therefore, no $i\epsilon$ prescription. Furthermore, the difference between the infinite volume integral and the finite volume sum must be finite because the two encode the same UV behavior. Finally, we have the result,
 \beq
 \label{eq:pcotdeltaeig}
-p\cot\delta = \frac{4\pi}{M}\left[-\frac{M}{4\pi^2L} \sum_{\vec{n}}^{\Lambda}\frac{1}{\left(\frac{pL}{2\pi}\right)^2 - n^2} - \frac{M\Lambda}{\pi L}\right] = \frac{1}{\pi L}S(\eta) \ ,
+p\cot\delta = \frac{4\pi}{M}\left[-\frac{M}{4\pi^2L} \sum_{\mathbf{n}}^{\Lambda}\frac{1}{\left(\frac{pL}{2\pi}\right)^2 - n^2} - \frac{M\Lambda}{\pi L}\right] = \frac{1}{\pi L}S(\eta) \ ,
 \eeq
 where $\eta \equiv \left(\frac{pL}{2\pi}\right)^2$, and
 \beq
-S(\eta) \equiv \sum_{\vec{n}}^{\Lambda} \frac{1}{n^2 - \eta} -4\pi \Lambda \ ,
+S(\eta) \equiv \sum_{\mathbf{n}}^{\Lambda} \frac{1}{n^2 - \eta} -4\pi \Lambda \ ,
 \eeq
 is related to the Riemann zeta function. The cutoff on the sum, $\Lambda$, may be interpreted as an upper limit on the allowed momenta due to the finite lattice spacing, however, in practice it is taken to $\infty$ so that discretization and finite volume effects may be separately accounted for (note that we haven't used our lattice propagators in this derivation, which would be necessary for a proper treatment of discretization effects). Values of momenta which solve this eigenvalue equation for a given phase shift and volume correspond to the predicted finite volume spectrum. This is illustrated in \Fig{luscher}, where the function $S(\eta)$ has been plotted, along with several representative phase shifts, corresponding to positive and negative scattering lengths. The locations of the intersections give the energy eigenvalues for that volume. The poles of the $S$ function give the locations of the energies of a non-interacting system in a box, while the zeroes give the energies for systems at unitarity. 
 
@@ -1139,21 +1207,79 @@ The prescription for a lattice QCD calculation of nucleon-nucleon phase shifts i
 Our prescription for tuning the coefficients will be to construct the two-body transfer matrix with some set of operators,
 \beq
 \label{eq:tuningcoef}
-\mathcal{G}(\vec{p}) = \sum_n^{\Lambda_n} g_{2n}{\mathcal{ O}}_{2n}(\vec{p}) \ ,
+\mathcal{G}(\mathbf{p}) = \sum_n^{\Lambda_n} g_{2n}{\mathcal{ O}}_{2n}(\mathbf{p}) \ ,
 \eeq
-which satisfy the low energy expansion ${\mathcal{ O}}_{2n}(\vec{p}) = \vec{p}^{2n} \left[ 1 + {\mathcal{ O}}(\vec{p}^2) \right]$ at low momenta, and should be chosen to depend only on the relative momentum of the two particle system in order to ensure Galilean invariance. This is important so that once the interaction is tuned boosted pairs of particles will see the same interaction. A convenient choice for the operators is given by,
+which satisfy the low energy expansion ${\mathcal{ O}}_{2n}(\mathbf{p}) = \mathbf{p}^{2n} \left[ 1 + {\mathcal{ O}}(\mathbf{p}^2) \right]$ at low momenta, and should be chosen to depend only on the relative momentum of the two particle system in order to ensure Galilean invariance. This is important so that once the interaction is tuned boosted pairs of particles will see the same interaction. A convenient choice for the operators is given by,
 \beq
 \label{eq:Ofunc}
-{\mathcal{ O}}_{2n}(\vec{p}) =  M^n \left(1-e^{-\hat{\vec{p}}^2 /M} \right)^n\ ,
-\eeq
-where $\hat{\vec{p}}$ is taken to be a periodic function of $\vec{p}$ and satisfies the relation $\hat{\vec{p}}^2 = \vec{p}^2 \theta(\Lambda-|\vec{p}|) + \Lambda^2  \theta(|\vec{p}| - \Lambda)$ for $\vec{p}$ in the first Brillouin zone. Sample code for calculating this interaction operator is shown in \Fig{interaction}.
+{\mathcal{ O}}_{2n}(\mathbf{p}) = M^n \left(1-e^{-\hat{\mathbf{p}}^2 /M}
+\right)^n\ , \eeq 
+where $\hat{\mathbf{p}}$ is taken to be a periodic
+function of $\mathbf{p}$ and satisfies the relation $\hat{\mathbf{p}}^2 =\mathbf{p}^2 \theta(\Lambda-|\mathbf{p}|) + \Lambda^2 \theta(|\mathbf{p}| -\Lambda)$ for $\mathbf{p}$ in the first Brillouin zone. Here we show a
+C++ code fragment for calculating the interaction given in
+\Eq{tuningcoef}, using the operators \Eq{Ofunc}, given some set of
+input coefficients interaction\_arg.couplings$[\Lambda_n]$. Note that
+this operator is calculated in momentum space. It may be applied
+directly to the momentum space vector resulting from the first
+operation of the kinetic operator, $D^{-1}$. A FFT must then be
+performed before applying the random auxiliary field, $\phi_x$. A
+final FFT must then be performed to return to momentum space before
+applying the next operation of $D^{-1}$ in order to propagate the
+system forward in time.
+\begin{lstlisting}
+  double xi1;
+  double xi2;
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=\linewidth]{Chapter5-figures/interaction}
-\end{center}
-\caption{\label{fig:interaction}C++ code fragment for calculating the interaction given in \Eq{tuningcoef}, using the operators \Eq{Ofunc}, given some set of input coefficients interaction\_arg.couplings$[\Lambda_n]$. Note that this operator is calculated in momentum space. It may be applied directly to the momentum space vector resulting from the first operation of the kinetic operator, $D^{-1}$. A FFT must then be performed before applying the random auxiliary field, $\phi_x$. A final FFT must then be performed to return to momentum space before applying the next operation of $D^{-1}$ in order to propagate the system forward in time.}
-\end{figure}
+  double psq;
+  double mass = 2.0 * kinetic_arg1.mass * kinetic_arg2.mass; // reduced mass
+  mass /= kinetic_arg1.mass + kinetic_arg2.mass; // reduced mass
+
+  double PSQ = GJP.Cutoff();
+  PSQ *= PSQ;
+  double XI1 = exp( PSQ/(2.0*kinetic_arg1.mass));
+  double XI2 = exp( PSQ/(2.0*kinetic_arg2.mass));
+
+  for(int i=0; i<vol; i++) {
+
+    xi1 = 1.0 + dispersion1.Get(i);
+    if (xi1 > XI1) { xi1 = XI1; }
+    xi2 = 1.0 + dispersion2.Get(i);
+    if (xi2 > XI2) { xi2 = XI2; }
+
+    switch (interaction_arg.interaction_type) {
+      case INTERACTION_TYPE_NONE:
+        ERR.NotImplemented(fname,"Interaction type INTERACTION_TYPE_NONE.");
+        break;
+      case INTERACTION_TYPE_ONEMINUSXIINVSQ:
+        psq = 1.0 - 1.0 /(xi1*xi2); 
+        break;
+      case INTERACTION_TYPE_XISQMINUSONE:
+        psq = xi1*xi2 - 1.0; 
+        break;
+      default:
+        ERR.NotImplemented(fname,"Unrecognized interaction_type.");
+    }
+
+    psq *= mass;
+
+    //---- Evaluate the interaction as a Taylor series in p^2: O(p) = sum_n C_n p^(2n)
+    interaction[i] = 0.0;
+    for (int j=0; j<interaction_arg.num_couplings; j++) {
+      interaction[i] += interaction_arg.couplings[j]*pow(psq,j);
+    }
+
+    //---- Make sure O(p) is non-negative before taking the square root!
+    if (interaction[i]<0.0) {
+      ERR.General(fname, "Interaction is less the zero; cannot take square root.");
+    }
+
+    //---- Normalize operator, etc..
+    interaction[i] *= 2.0 * TWOPI / mass;  // Just a convention
+    interaction[i] = sqrt(interaction[i]); // Division by vol because FFT is not normalized
+    interaction[i] /= vol; // Division by vol because FFT is not normalized
+    interaction[i] *= dt; // Controls overall sign and step size of the interaction
+  }
+\end{lstlisting}
 
 The transfer matrix may then be diagonalized numerically to determine the energy eigenvalues. The $g_{2n}$ should then be tuned until the energies match the first $\Lambda_n$ eigenvalues given by the L\"uscher method. This process serves a dual purpose: tuning multiple couplings helps reduce lattice spacing effects like the effective range, as we discussed previously, and also takes into account finite volume effects by correctly translating the exact infinite volume phase shifts into a finite volume. The process of tuning for the case of unitarity is illustrated in \Fig{tuning}. Here, $N_{{\mathcal{ O}}}$ coefficients have been tuned to correctly reproduce the first $N_{{\mathcal{ O}}}$ L\"uscher eigenvalues. The entire two-body spectrum is then calculated using these coefficients, and the resulting energies are plugged back into \Eq{pcotdeltaeig} to determine the effective phase shift seen by pairs of particles with different momenta. To be truly at unitarity, we should have $p\cot\delta = 0$ for all momenta. Clearly, tuning more coefficients brings us closer to unitarity for larger and larger momenta. This is particularly important for calculations involving many-body systems, where the average momentum grows with the density, $\langle p \rangle \sim n^{1/3}$.
 
@@ -1206,7 +1332,7 @@ One may in principle tune as many operators as possible in order to perfect the 
 
 On the other hand, these $s$-wave two-body interactions are not the only possible errors that are induced by the lattice, so we should not expect to see much improvement by tuning more operators corresponding to errors which are higher order than the leading operator which is not accounted for. For example, an unfortunate consequence of our tuning program is the introduction of interactions in the $p$-wave channel, as well as in higher partial waves. While a simple interaction which is point-like in space has no $p$-wave contribution, the introduction of spatial derivatives in our tuning operators gives rise to these new $p$-wave interactions. The leading $p$-wave operator has the form,
 \beq
-{\mathcal{ O}}_{p\mbox{\tiny -wave}} \sim \psi^{\dagger} \vec{\nabla} \psi \cdot \psi^{\dagger} \vec{\nabla} \psi \ ,
+{\mathcal{ O}}_{p\mbox{\tiny -wave}} \sim \psi^{\dagger} \mathbf{\nabla} \psi \cdot \psi^{\dagger} \mathbf{\nabla} \psi \ ,
 \eeq
 and induces errors at ${\mathcal{ O}}\left(b_s n^{1/3})^{3}\right)$. In order to cancel this operator we could in principle add a $\phi$ field which carries momentum and carry out a similar program for tuning the coefficients as we used for the $s$-wave interaction. This destroys the separability of our interaction, however, and may be difficult to implement, in addition to introducing a new source of noise.
 
@@ -1279,12 +1405,12 @@ We also have the freedom to use the anisotropy parameter $M$ to tune the tempora
 The first step away from unitarity and toward real nuclear physics that we can easily take is to introduce a four-component nucleon field, $N$, containing two flavors of spin up and spin down fermions. The nucleons have two allowed $s$-wave scattering channels, $^1S_0$ and $^3S_1$, which should be tuned independently (breaking the approximate $SU(4)$ symmetry between the nucleons) to give the physical nucleon-nucleon scattering lengths. One possible way to achieve this is to introduce two four-fermion interactions corresponding to,
 \beq
 \label{eq:STint}
-{\mathcal{ L}}_{\mbox{\tiny int}} = -\frac{1}{2} g_S \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_T \left(N^{\dagger}\vec{\sigma}N\right)^2 \ ,
+{\mathcal{ L}}_{\mbox{\tiny int}} = -\frac{1}{2} g_S \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_T \left(N^{\dagger}\mathbf{\sigma}N\right)^2 \ ,
 \eeq
 where $\sigma_i$ is a Pauli matrix acting on the spin indices, and $g_S,g_T$ are couplings for the spin singlet and spin triplet channel, respectively. The lattice version of this interaction requires the introduction of two independent auxiliary fields, $\phi_{S},\phi_{T}$. One possibility is,
 \beq
 \label{eq:noSU4}
-{\mathcal{ L}}_{\mbox{\tiny int}}^{(L)} = \sqrt{g_S} \phi_S N^{\dagger}N+\sqrt{g_T} \phi_T \vec{\sigma} \cdot N^{\dagger} \vec{\sigma} N \ .
+{\mathcal{ L}}_{\mbox{\tiny int}}^{(L)} = \sqrt{g_S} \phi_S N^{\dagger}N+\sqrt{g_T} \phi_T \mathbf{\sigma} \cdot N^{\dagger} \mathbf{\sigma} N \ .
 \eeq
 
 There are, in fact, many ways to implement the same interactions, and the different implementations will affect the signal-to-noise ratios of observables. For example, one could imagine having one of the $\phi$ fields couple to both channels equally (the $SU(4)$ limit), tuned to give the scattering length of the more attractive channel, $^3S_1$, then adding a second auxiliary field coupling only to the $^1S_0$ channel and tuning this coupling to be repulsive, making this channel more weakly attractive as desired. As we learned in \Sec{SNR}, repulsive interactions cause severe sign and noise problems, so this would clearly be a poor choice of implementation.
@@ -1308,11 +1434,11 @@ where $| \tilde{\Psi}_i\rangle  \equiv {\mathcal{ T}}_{SU(4)}^{\tau'}|\Psi_i \ra
 
 Another method used by the same group to reduce noise is to perform a Fierz transformation on the four-fermion interactions in order to define interactions with more symmetric couplings \cite{Borasoy:2006qn}. Using the identity,
 \beq
-\left(N^{\dagger}N\right)^2 = -\frac{1}{2} \left(N^{\dagger}\vec{\sigma}N\right)^2 - \frac{1}{2} \left(N^{\dagger}\vec{\tau}N\right)^2 \ ,
+\left(N^{\dagger}N\right)^2 = -\frac{1}{2} \left(N^{\dagger}\mathbf{\sigma}N\right)^2 - \frac{1}{2} \left(N^{\dagger}\mathbf{\tau}N\right)^2 \ ,
 \eeq
 we can rewrite the four-fermion interactions, \Eq{STint}, to give the following,
 \beq
-\tilde{{\mathcal{ L}}}_{\mbox{\tiny int}} = -\frac{1}{2} g_0 \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_I \left(N^{\dagger}\vec{\tau}N\right)^2 \ ,
+\tilde{{\mathcal{ L}}}_{\mbox{\tiny int}} = -\frac{1}{2} g_0 \left(N^{\dagger}N\right)^2 - \frac{1}{2} g_I \left(N^{\dagger}\mathbf{\tau}N\right)^2 \ ,
 \eeq
 where $\tau_i$ is a Pauli matrix acting on the flavor components of $N$, and the couplings $g_{0,I}$ are related to the original couplings by,
 \beq
@@ -1477,9 +1603,9 @@ and that the expansion may converge very slowly. In practice, the convergence fo
 
 Weinberg's formulation for nuclear EFT involves summing a subset of diagrams non-perturbatively, then using the resulting nucleon-nucleon potential to solve the Schrodinger equation. In doing so we can take into account higher orders in a perturbative expansion that  breaks down or converges slowly. For the pions we can iterate all possible tree level pion exchange diagrams to give the following 1PE potential \cite{Epelbaum:2010nr},
 \beq
-V_{\mbox{\tiny 1PE}}(\vec{r} = \left(\frac{g_A}{2f_{\pi}}\right)^2 \vec{\tau}_1 \cdot \vec{\tau}_2 \left[m_{\pi}^2\frac{e^{-m_{\pi}r}}{12\pi r}\left(S_{12}(\hat{r}) \left(1+\frac{3}{m_{\pi}r} + \frac{3}{(m_{\pi}r)^2}\right)+\vec{\sigma}_1 \cdot \vec{\sigma}_2 \right) -\frac{1}{3}\vec{\sigma}_1 \cdot \vec{\sigma}_2 \delta^3(r)\right] \ , \cr
+V_{\mbox{\tiny 1PE}}(\mathbf{r} = \left(\frac{g_A}{2f_{\pi}}\right)^2 \mathbf{\tau}_1 \cdot \mathbf{\tau}_2 \left[m_{\pi}^2\frac{e^{-m_{\pi}r}}{12\pi r}\left(S_{12}(\hat{r}) \left(1+\frac{3}{m_{\pi}r} + \frac{3}{(m_{\pi}r)^2}\right)+\mathbf{\sigma}_1 \cdot \mathbf{\sigma}_2 \right) -\frac{1}{3}\mathbf{\sigma}_1 \cdot \mathbf{\sigma}_2 \delta^3(r)\right] \ , \cr
 \eeq
-where $S_{12} = 3\vec{\sigma}_1 \cdot \hat{r} \vec{\sigma}_2 \cdot \hat{r} - \vec{\sigma}_1 \cdot \vec{\sigma}_2$ . 
+where $S_{12} = 3\mathbf{\sigma}_1 \cdot \hat{r} \mathbf{\sigma}_2 \cdot \hat{r} - \mathbf{\sigma}_1 \cdot \mathbf{\sigma}_2$ . 
 
 The most divergent part of this potential, scaling like $\sim 1/r^2$, comes from the tensor force in the spin triplet channel. Attractive potentials which scale as $r^{-n}$ for $n \geq 2$ are referred to as singular potentials. Particles sitting in a singular potential eventually fall toward the center with infinite velocity, which is clearly unphysical. Thus, singular potentials can only be defined with an explicit cutoff that cannot be removed. Particles generally sit near this cutoff, rendering the system sensitive to the short-range details of the choice of boundary condition. Therefore, systems involving singular potentials are generally model dependent and we can no longer have a true effective theory because the cutoff cannot be removed. 
 
@@ -1487,13 +1613,13 @@ The reason such a singular potential arises is similar to that which led to the 
 
 Pion fields may be added directly to our lattice Lagrangian in a straightforward way. The incorporation of dynamical pions, however, will likely complicate importance sampling by introducing noise and/or sign problems, and adds complexity to the Monte Carlo algorithms. Fortunately fully dynamical pions are unnecessary; all we actually seek is the addition of a term in the Lagrangian which generates the tree level diagrams between a single pion and two nucleons. The lattice formulation then non-perturbatively accounts for all possible loop diagrams involving this pion-nucleon interaction. Diagrams involving vacuum pion loops, pion self-energies, etc. are higher order in our chiral expansion and can be included perturbatively if necessary. 
 
-One possible implementation utilized by the Bonn-Raleigh group is to use static pion auxiliary fields, $\pi_{\vec{x},\tau}^{(I)}$, with isospin $I$, and the following action \cite{Lee:2008fa,Borasoy:2006qn}:
+One possible implementation utilized by the Bonn-Raleigh group is to use static pion auxiliary fields, $\pi_{\mathbf{x},\tau}^{(I)}$, with isospin $I$, and the following action \cite{Lee:2008fa,Borasoy:2006qn}:
 \beq
-S_{\pi\pi} = \left( \frac{m_{\pi}^2}{2} + 3\right) \sum_{\vec{x},\tau,I} \pi_{\vec{x},\tau}^{(I)} \pi_{\vec{x},\tau}^{(I)} - \sum_{\vec{x},\tau,I,k} \pi_{\vec{x},\tau}^{(I)} \pi_{\vec{x}+\hat{k},\tau}^{(I)} \ .
+S_{\pi\pi} = \left( \frac{m_{\pi}^2}{2} + 3\right) \sum_{\mathbf{x},\tau,I} \pi_{\mathbf{x},\tau}^{(I)} \pi_{\mathbf{x},\tau}^{(I)} - \sum_{\mathbf{x},\tau,I,k} \pi_{\mathbf{x},\tau}^{(I)} \pi_{\mathbf{x}+\hat{k},\tau}^{(I)} \ .
 \eeq
 Because the pions are derivatively coupled to the nucleons, the interaction term should behave like,
 \beq
-S_{\pi NN} \sim \frac{g_A}{2f_{\pi}}\sum_{I,k} \left[\pi^{(I)}_{\vec{x}+\hat{k}}-\pi^{(I)}_{\vec{x}-\hat{k}}\right] \psi^{\dagger}_{\vec{x}} \psi_{\vec{x}} \ ,
+S_{\pi NN} \sim \frac{g_A}{2f_{\pi}}\sum_{I,k} \left[\pi^{(I)}_{\mathbf{x}+\hat{k}}-\pi^{(I)}_{\mathbf{x}-\hat{k}}\right] \psi^{\dagger}_{\mathbf{x}} \psi_{\mathbf{x}} \ ,
 \eeq
 (see \cite{Lee:2008fa} for more details on the particular interaction chosen). The pions have been chosen to only couple to the nucleons through spatial displacements. This simplifies the analysis by eliminating the renormalization of the nucleon mass through nucleon self-energy diagrams such as:
 
@@ -1507,9 +1633,9 @@ Na\"ive dimensional analysis dictates that the leading three-body interaction sh
 
 To begin, we will consider a system of three particles interacting via only the simplest, leading order two-body contact interaction. We will follow the discussion of \cite{Braaten:2004rn}. Let us assume that all three particles carry different quantum numbers, as they do for the triton and $^3$He, and that all pairs of particles interact via the same two-body coupling, $g_0$. To calculate the three-particle scattering amplitude for a strongly coupled system we must iterate this interaction non-perturbatively, as we did for the two-particle system. 
 
-A useful trick for calculating this quantity is the addition of a bosonic dimer field, $\phi$, coupling to two fermion particles, $\psi$. This allows us to rewrite the three-particle scattering amplitude in the form of a two-particle scattering amplitude. The dimer propagator must be fully dressed by fermion loop bubbles and can be written diagrammatically as shown in \Fig{dimerprop}. This bubble sum is essentially the same as the one we have encountered several times before in these lectures. However, we must now allow external momentum, $(p_0,\vec{p})$ to flow through the diagrams, leading to the following dressed propagator for the dimer field,
+A useful trick for calculating this quantity is the addition of a bosonic dimer field, $\phi$, coupling to two fermion particles, $\psi$. This allows us to rewrite the three-particle scattering amplitude in the form of a two-particle scattering amplitude. The dimer propagator must be fully dressed by fermion loop bubbles and can be written diagrammatically as shown in \Fig{dimerprop}. This bubble sum is essentially the same as the one we have encountered several times before in these lectures. However, we must now allow external momentum, $(p_0,\mathbf{p})$ to flow through the diagrams, leading to the following dressed propagator for the dimer field,
 \beq
-D_0(p_0,\vec{p}) = \frac{1}{1-g_0 \left. I_0 \right|_{E=p_0-p^2/M}} = \frac{1/a-\Lambda}{1/a + i \sqrt{Mp_0-p^2-i\epsilon}} \ ,
+D_0(p_0,\mathbf{p}) = \frac{1}{1-g_0 \left. I_0 \right|_{E=p_0-p^2/M}} = \frac{1/a-\Lambda}{1/a + i \sqrt{Mp_0-p^2-i\epsilon}} \ ,
 \eeq 
 where I've used the results from \Sec{couplings} to rewrite the coupling in terms of the scattering length, $a$, and the cutoff, $\Lambda$. We see that the dimer propagator has a pole at $p_0=\frac{p^2}{M}-\frac{1}{Ma^2}$, corresponding to a (virtual) bound state for (negative) positive scattering length with energy $E_B=\frac{1}{Ma^2}$. 
 
