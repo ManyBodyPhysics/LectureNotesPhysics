@@ -3,75 +3,75 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter6.aux
 The style file: spphys.bst
 Database file #1: lnp.bib
-Repeated entry---line 3779 of file lnp.bib
+Repeated entry---line 3791 of file lnp.bib
  : @article{Weinberg:1990rz
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3788 of file lnp.bib
+Repeated entry---line 3800 of file lnp.bib
  : @article{Weinberg:1991um
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3835 of file lnp.bib
+Repeated entry---line 3847 of file lnp.bib
  : @article{Bedaque:2002mn
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3845 of file lnp.bib
+Repeated entry---line 3857 of file lnp.bib
  : @article{Epelbaum:2008ga
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4283 of file lnp.bib
+Repeated entry---line 4295 of file lnp.bib
  : @article{Carlson:2014vla
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7637 of file lnp.bib
+Repeated entry---line 7649 of file lnp.bib
  : @article{Lee:2008fa
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7667 of file lnp.bib
+Repeated entry---line 7679 of file lnp.bib
  : @article{Borasoy:2006qn
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7747 of file lnp.bib
+Repeated entry---line 7759 of file lnp.bib
  : @article{Lahde:2013uqa
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7857 of file lnp.bib
+Repeated entry---line 7869 of file lnp.bib
  : @article{Epelbaum:2008ga
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7915 of file lnp.bib
+Repeated entry---line 7927 of file lnp.bib
  : @article{Epelbaum:2013paa
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7932 of file lnp.bib
+Repeated entry---line 7944 of file lnp.bib
  : @article{Epelbaum:2009pd
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 7964 of file lnp.bib
+Repeated entry---line 7976 of file lnp.bib
  : @article{Epelbaum:2011md
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9207 of file lnp.bib
+Repeated entry---line 9219 of file lnp.bib
  : @article{Luscher:1986pf
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9257 of file lnp.bib
+Repeated entry---line 9269 of file lnp.bib
  : @article{Weinberg:1990rz
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9269 of file lnp.bib
+Repeated entry---line 9281 of file lnp.bib
  : @article{Weinberg:1991um
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9581 of file lnp.bib
+Repeated entry---line 9593 of file lnp.bib
  : @article{Epelbaum:2012qn
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9596 of file lnp.bib
+Repeated entry---line 9608 of file lnp.bib
  : @article{Epelbaum:2012iu
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 9647 of file lnp.bib
+Repeated entry---line 9659 of file lnp.bib
  : @article{Borasoy:2007vy
  :                        ,
 I'm skipping whatever remains of this entry
@@ -80,16 +80,16 @@ Warning--empty journal in Lu:2015riz
 Warning--empty journal in Rokash:2015hra
 You've used 50 entries,
             2812 wiz_defined-function locations,
-            919 strings with 12039 characters,
-and the built_in function-call counts, 16697 in all, are:
-= -- 993
+            918 strings with 11974 characters,
+and the built_in function-call counts, 16686 in all, are:
+= -- 991
 > -- 524
 < -- 0
 + -- 208
 - -- 158
-* -- 1001
-:= -- 1958
-add.period$ -- 3
+* -- 999
+:= -- 1956
+add.period$ -- 2
 call.type$ -- 50
 change.case$ -- 0
 chr.to.int$ -- 0
@@ -97,13 +97,13 @@ cite$ -- 53
 duplicate$ -- 1851
 empty$ -- 1736
 format.name$ -- 197
-if$ -- 3772
+if$ -- 3770
 int.to.chr$ -- 0
 int.to.str$ -- 50
 missing$ -- 502
-newline$ -- 161
+newline$ -- 160
 num.names$ -- 50
-pop$ -- 770
+pop$ -- 771
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -118,5 +118,5 @@ type$ -- 0
 warning$ -- 3
 while$ -- 96
 width$ -- 52
-write$ -- 407
+write$ -- 405
 (There were 18 error messages)

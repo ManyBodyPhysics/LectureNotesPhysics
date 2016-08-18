@@ -15,7 +15,7 @@ N.~Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, E.~Teller, J.
   Chem. Phys. \textbf{21}, 1087 (1953)
 
 \bibitem{Creutz:1980gp}
-M.~Creutz, B.~Freedman, Annals Phys. \textbf{132}, 427 (1981)
+M.~Creutz, B.~Freedman, Ann. Phys. \textbf{132}, 427 (1981)
 
 \bibitem{Shuryak:1984xr}
 E.V. Shuryak, O.V. Zhirov, Nucl. Phys. B \textbf{242}, 393 (1984)
@@ -93,14 +93,14 @@ Y.~Aoki, G.~Endrodi, Z.~Fodor, S.D. Katz, K.K. Szabo, Nature \textbf{443}, 675
 A.~Bazavov, et~al., Phys. Rev. D \textbf{85}, 054503 (2012)
 
 \bibitem{Aoki:2006br}
-Y.~Aoki, Z.~Fodor, S.D. Katz, K.K. Szabo, Phys. Lett. \textbf{B643}, 46 (2006)
+Y.~Aoki, Z.~Fodor, S.D. Katz, K.K. Szabo, Phys. Lett. B \textbf{643}, 46 (2006)
 
 \bibitem{Aoki:2009sc}
 Y.~Aoki, S.~Borsanyi, S.~Durr, Z.~Fodor, S.D. Katz, S.~Krieg, K.K. Szabo, JHEP
   \textbf{06}, 088 (2009)
 
 \bibitem{Bazavov:2014pvz}
-A.~Bazavov, et~al., Phys. Rev. \textbf{D90}(9), 094503 (2014)
+A.~Bazavov, et~al., Phys. Rev. D \textbf{90}(9), 094503 (2014)
 
 \bibitem{Stephanov:2004wx}
 M.A. Stephanov, Prog. Theor. Phys. Suppl. \textbf{153}, 139 (2004)
@@ -293,7 +293,7 @@ H.B. Meyer, Phys. Rev. D \textbf{76}, 101701 (2007)
 H.B. Meyer, Phys. Rev. Lett. \textbf{100}, 162001 (2008)
 
 \bibitem{Sakai:2007cm}
-S.~Sakai, A.~Nakamura, PoS \textbf{LAT2007}, 221 (2007).
+S.~Sakai, A.~Nakamura, PoS \textbf{LATTICE2007}, 221 (2007).
 \newblock [AIP Conf. Proc.893,5(2007)]
 
 \bibitem{Aarts:2007wj}
@@ -301,7 +301,7 @@ G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Phys. Rev. Lett. \textbf{99},
   022002 (2007)
 
 \bibitem{Aarts:2007va}
-G.~Aarts, PoS \textbf{LAT2007}, 001 (2007)
+G.~Aarts, PoS \textbf{LATTICE2007}, 001 (2007)
 
 \bibitem{Aarts:2006wt}
 G.~Aarts, C.~Allton, J.~Foley, S.~Hands, S.~Kim, Nucl. Phys. A \textbf{785},
@@ -468,11 +468,10 @@ G.~Perelman, {The entropy formula for the Ricci flow and its geometric
 \newblock ArXiv:math/0211159 [math.DG]
 
 \bibitem{Shen:2014vra}
-C.~Shen, Z.~Qiu, H.~Song, J.~Bernhard, S.~Bass, U.~Heinz, Comput. Phys. Commun.
+C.~Shen, Z.~Qiu, H.~Song, J.~Bernhard, S.~Bass, U.~Heinz, Comput. Phys. Comm.
   \textbf{199}, 61 (2016)
 
 \bibitem{Creutz:2004}
-M.~Creutz, Computers in Science \& Engineering \textbf{March/April 2004}, 80
-  (2004)
+M.~Creutz, Comput. Sci. Eng. \textbf{6}, 80 (2004)
 
 \end{thebibliography}
