@@ -144,7 +144,8 @@ E.~Epelbaum,  (2010)
 R.~Machleidt, D.R. Entem, Phys. Rep. \textbf{503}, 1 (2011)
 
 \bibitem{Kaplan:2005es}
-D.B. Kaplan, Five lectures on effective field theory (2005)
+D.B. Kaplan, Five lectures on effective field theory (2005).
+\newblock Nucl-th/0510023
 
 \bibitem{AtomsReview1}
 S.~Giorgini, L.~Pitaevskii, S.~Stringari, Rev.\ Mod.\ Phys. \textbf{80}, 1215
@@ -183,10 +184,10 @@ A.C. Berry, Transactions of the American Mathematical Society \textbf{49}, 122
   (1941)
 
 \bibitem{BerryEsseen2}
-C.G. Esseen, Arkiv få—· matematik, astronomi och fysik \textbf{A28}, 1 (1942)
+C.G. Esseen, Arkiv for matematik, astronomi och fysik A \textbf{28}, 1 (1942)
 
 \bibitem{DeGrand:2012ik}
-T.~DeGrand, Phys.Rev. \textbf{D86}, 014512 (2012)
+T.~DeGrand, Phys. Rev. D \textbf{86}, 014512 (2012)
 
 \bibitem{Nicholson:2012zp}
 A.N. Nicholson, Phys. Rev. Lett. \textbf{109}, 073003 (2012)
@@ -199,10 +200,10 @@ J.J. Dudek, R.G. Edwards, M.J. Peardon, D.G. Richards, C.E. Thomas, Phys. Rev.
   D \textbf{82}, 034508 (2010)
 
 \bibitem{MICHAEL1983433}
-C.~Michael, I.~Teasdale, Nuclear Physics B \textbf{215}, 433 (1983)
+C.~Michael, I.~Teasdale, Nucl. Phys. B \textbf{215}, 433 (1983)
 
 \bibitem{Luscher:1990ck}
-M.~L\"uscher, U.~Wolff, Nucl.Phys. \textbf{B339}, 222 (1990)
+M.~L\"uscher, U.~Wolff, Nucl. Phys. B \textbf{339}, 222 (1990)
 
 \bibitem{Blossier:2009kd}
 B.~Blossier, M.~Della~Morte, G.~von Hippel, T.~Mendes, R.~Sommer, JHEP
@@ -261,7 +262,7 @@ G.~Katz, G.~Batrouni, C.~Davies, A.~Kronfeld, P.~Lepage, P.~Rossi,
 M.~L{\"u}scher, Commun. Math. Phys. \textbf{105}, 153 (1986)
 
 \bibitem{Luscher:1990ux}
-M.~L{\"u}scher, Nucl. Phys. \textbf{B354}, 531 (1991)
+M.~L{\"u}scher, Nucl. Phys. B \textbf{354}, 531 (1991)
 
 \bibitem{Beane:2003da}
 S.~Beane, P.~Bedaque, A.~Parreno, M.~Savage, Phys. Lett. B \textbf{585}, 106
@@ -293,7 +294,7 @@ R.A. Briceno, M.T. Hansen, A.~Walker-Loud, Phys. Rev. D \textbf{91}, 034501
   (2015)
 
 \bibitem{Luu:2011ep}
-T.~Luu, M.J. Savage, Phys.Rev. \textbf{D83}, 114508 (2011)
+T.~Luu, M.J. Savage, Phys. Rev. D \textbf{83}, 114508 (2011)
 
 \bibitem{Konig:2011nz}
 S.~Koenig, D.~Lee, H.W. Hammer, Phys.Rev.Lett. \textbf{107}, 112001 (2011)
@@ -460,8 +461,8 @@ F.~{Werner}, Y.~{Castin}, Phys. Rev. Lett. \textbf{97}, 150401 (2006)
 D.~Lee, Prog. Part. Nucl. Phys. \textbf{63}, 117 (2009)
 
 \bibitem{Borasoy:2006qn}
-B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Eur. Phys. J.
-  \textbf{A31}, 105 (2007)
+B.~Borasoy, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Eur. Phys. J. A
+  \textbf{31}, 105 (2007)
 
 \bibitem{PhysRev.98.145}
 E.P. Wigner, Phys. Rev. \textbf{98}, 145 (1955)
@@ -490,7 +491,7 @@ P.F. Bedaque, H.W. Hammer, U.~van Kolck, Phys. Rev. Lett. \textbf{82}, 463
 
 \bibitem{Beane:2000wh}
 S.R. Beane, P.F. Bedaque, L.~Childress, A.~Kryjevski, J.~McGuire, U.~van Kolck,
-  Phys. Rev. \textbf{A64}, 042103 (2001)
+  Phys. Rev. A \textbf{64}, 042103 (2001)
 
 \bibitem{V1970563}
 V.N. Efimov, Physics Letters B \textbf{33}, 563  (1970)
@@ -535,7 +536,7 @@ T.A. Lahde, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Meißner, G.~Rupak,   (2013).
 
 \bibitem{Lahde:2013uqa}
 T.A. L{\"a}hde, E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, G.~Rupak,
-  Phys. Lett. \textbf{B732}, 110 (2014)
+  Phys. Lett. B \textbf{732}, 110 (2014)
 
 \bibitem{Epelbaum:2011md}
 E.~Epelbaum, H.~Krebs, D.~Lee, U.G. Mei{\ss}ner, Phys. Rev. Lett. \textbf{106},
