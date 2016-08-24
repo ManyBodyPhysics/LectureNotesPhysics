@@ -292,7 +292,7 @@
 \contentsline {subsection}{\numberline {10.2.1}Simple demonstration of the SRG method}{369}{subsection.10.2.1}
 \contentsline {subsection}{\numberline {10.2.2}The pairing model}{372}{subsection.10.2.2}
 \contentsline {section}{\numberline {10.3}The In-Medium SRG approach}{375}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Choice of generator}{376}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.1}Choice of generator}{377}{subsection.10.3.1}
 \contentsline {paragraph}{Wegner's canonical generator}{377}{section*.37}
 \contentsline {paragraph}{White's generator}{377}{section*.38}
 \contentsline {section}{\numberline {10.4}In-medium SRG studies of the pairing model and infinite neutron matter}{378}{section.10.4}
@@ -300,24 +300,24 @@
 \contentsline {section}{References}{378}{section*.39}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-13}
-\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{379}{section*.40}
+\contentsline {titlech}{\numberline {11}Self-consistent Green's function approaches}{381}{section*.40}
 \authcount {1}
-\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{379}{section*.40}
-\contentsline {section}{\numberline {11.1}Introduction}{379}{section.11.1}
-\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{380}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{382}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{383}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{386}{section.11.3}
-\contentsline {subsection}{\numberline {11.3.1}The ADC(n) approach and working equations at third-order}{389}{subsection.11.3.1}
-\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{392}{subsection.11.3.2}
-\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{394}{subsection.11.3.3}
-\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{395}{section.11.4}
-\contentsline {section}{\numberline {11.5}Self-consistenft Green's functions at finite temperatures in the thermodynamic limit}{398}{section.11.5}
-\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{402}{subsection.11.5.1}
-\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{405}{subsection.11.5.2}
-\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{405}{subsection.11.5.3}
-\contentsline {section}{\numberline {11.6}Concluding remarks}{409}{section.11.6}
-\contentsline {section}{Appendix 1: Chiral next-to-next-to-leading order three-nucleon forces}{409}{section*.41}
-\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{413}{section*.42}
-\contentsline {section}{References}{414}{section*.43}
+\contentsline {authorch}{Carlo\nobreakspace {}Barbieri and Arianna Carbone}{381}{section*.40}
+\contentsline {section}{\numberline {11.1}Introduction}{381}{section.11.1}
+\contentsline {section}{\numberline {11.2}Many-body Green's function theory}{382}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Spectral function and relation to experimental observations}{384}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Perturbation expansion of the Green 's function}{385}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}The Algebraic Diagrammatic Construction method}{388}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}The ADC(n) approach and working equations at third-order}{391}{subsection.11.3.1}
+\contentsline {subsection}{\numberline {11.3.2}Solving the Dyson equation}{394}{subsection.11.3.2}
+\contentsline {subsection}{\numberline {11.3.3}A simple pairing model}{396}{subsection.11.3.3}
+\contentsline {section}{\numberline {11.4}A computational project in infinite matter}{397}{section.11.4}
+\contentsline {section}{\numberline {11.5}Self-consistenft Green's functions at finite temperatures in the thermodynamic limit}{400}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}Numerical implementation at finite temperature}{404}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}Calculations of neutron matter at finite temperatures.}{407}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}Numerical calculation when including three-body forces.}{407}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Concluding remarks}{411}{section.11.6}
+\contentsline {section}{Appendix 1: Chiral next-to-next-to-leading order three-nucleon forces}{411}{section*.41}
+\contentsline {section}{Appendix 2: Feynman rules for the one-body propagator and self-energy}{415}{section*.42}
+\contentsline {section}{References}{416}{section*.43}
 \gdef \the@ipfilectr {}

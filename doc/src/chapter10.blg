@@ -1,47 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter10.aux
-I found no \bibdata command---while reading file chapter10.aux
-I found no \bibstyle command---while reading file chapter10.aux
-You've used 14 entries,
-            0 wiz_defined-function locations,
-            97 strings with 656 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+The style file: spphys.bst
+Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
+You've used 15 entries,
+            2812 wiz_defined-function locations,
+            719 strings with 7293 characters,
+and the built_in function-call counts, 4739 in all, are:
+= -- 314
+> -- 114
+< -- 1
++ -- 48
+- -- 33
+* -- 281
+:= -- 562
+add.period$ -- 16
+call.type$ -- 15
+change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 15
+duplicate$ -- 505
+empty$ -- 528
+format.name$ -- 43
+if$ -- 1092
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 15
+missing$ -- 132
+newline$ -- 69
+num.names$ -- 15
+pop$ -- 207
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
+skip$ -- 120
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 135
+swap$ -- 280
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+while$ -- 24
+width$ -- 17
+write$ -- 155

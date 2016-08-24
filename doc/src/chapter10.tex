@@ -1,6 +1,9 @@
+% !TEX root = lnp.tex
+\newcommand{\tbd}[1]{{\color{red}[#1]}}
 
-\title{In-medium SRG approaches to infinite nuclear matter}
-\author{Scott K.~Bogner, Heiko Hergert, Justin Leitz, Titus Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}
+\title{In-Medium Similarity Renormalization Group Approach for Quantum Many-Body Systems}
+
+\author{Scott K.~Bogner, Heiko Hergert, Justin Lietz, Titus D.~Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}
 \institute{Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and Heiko Hergert  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{hergert@nscl.msu.edu}, \and Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Titus Morris  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{morrist@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
 \maketitle
 \abstract{We present applications  of the In-Medium Similarity
@@ -13,10 +16,12 @@ equations are developed and we study different IM-SRG generators that
 achieve the desired decoupling, and how they affect the details of the IM-SRG results. We compare with the coupled cluster theory results of
 chapter 8, the Monte Carlo results of chapter 9 and the Green's function results of chapter 11.}
 
+\tbd{Change title because we do pairing model?}
+
 \section{Introduction}
 
 The Similarity Renormalization Group (SRG) method was first formulated by
-Wegner \cite{wegner1994} and Glazek and Wilson \cite{glazek1993}
+Wegner \cite{Wegner:1994dk} and Glazek and Wilson \cite{Glazek:1993il}
 to study condensed matter systems and light-front quantum field
 theories, respectively.  From a mathematical point of view, the
 philosophy behind the SRG is to render the Hamiltonian $\hat{H}(s)$
@@ -31,7 +36,7 @@ of the Hamiltonian matrix in a chosen basis
 These specific cases are realized in nuclear
 physics applications, where the SRG is used to decouple momentum or
 energy scales, and thereby render the nuclear Hamiltonian more
-suitable for \emph{ab initio} many-body calculations \cite{bogner2007,bogner2010,morris2015,hergert2016}.
+suitable for \emph{ab initio} many-body calculations \cite{Bogner:2007od,Bogner:2010pq,Morris:2015ve,Hergert:2016jk,Hergert:2016ng}.
 
 In the following sections we outline the basic ingredients behind the
 SRG method, with an emphasis on applications to infinite nuclear
@@ -125,13 +130,13 @@ Hamiltonian. To make matters worse, implementing the flow means we
 would deal with the Hamiltonian's full spectrum rather than just some
 extremal eigenvalues that can be extracted efficiently in
 state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
-\cite{golubvanloan1996}.
+\cite{Golub:2013le}.
 
 \subsection{Simple demonstration of the SRG method}
 
 In order to get a better understanding of the SRG method, let us first consider  
 a simple $2\times 2$ matrix and compare \eqref{eq:flowEquations} with standard diagonalization algorithms like 
-Jacobi's rotation method, see for example Ref.~\cite{golubvanloan1996}.
+Jacobi's rotation method, see for example Ref.~\cite{Golub:2013le}.
 
 We define a  symmetric matrix  $H\in {\mathbb{R}}^{2\times 2}$
 \[ 
@@ -288,8 +293,8 @@ and
   \]
 for the two-body interaction. The parameters $\delta$ and $g$ are constants.
 The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
-In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{shampine1976}.
-We follow Wegner's formulation \cite{wegner1994} in terms of a flow equation
+In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{Shampine:1975qq}.
+We follow Wegner's formulation \cite{Wegner:1994dk} in terms of a flow equation
 for the Hamiltonian.
 The initial  Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}=\hat{T}+\hat{V}$, where $\hat{H}_0=\hat{T}$ is independent of $s$ and
 represents the non-interacting part of the Hamiltonian, is transformed by the 
@@ -306,7 +311,7 @@ with
    \eta(s) = \frac{d\hat{U}(s)}{ds} \hat{U}^\dagger(s) = -\eta^\dagger(s).
 \]
 Choosing $\eta(s)$ specifies the transformation.
-Here we make perhaps the simplest choice \cite{wegner1994},
+Here we make perhaps the simplest choice \cite{Wegner:1994dk},
 \begin{equation}
   \eta(s) =  [\hat{H}_0, \hat{H}(s)]
   \label{eq:choice},
@@ -318,7 +323,7 @@ which gives the flow equation,
 \end{equation}
 %
 Other choices will be discussed below, see also
-Refs.~\cite{hergert2016,morris2016} for a detailed discussion of
+Refs.~\cite{Hergert:2016jk,Hergert:2016ng,Morris:2016xp} for a detailed discussion of
 possible similarity transformations.  The derivative of the
 Hamiltonian involves only the potential since we have assumed that
 $\hat{H}_0$ is independent of the flow parameter $s$. With a given
@@ -377,7 +382,7 @@ END SUBROUTINE derivative
 \end{lstlisting}
 If we wish to solve the above equations for a nuclear interaction in a
 partial wave basis using relative coordinates for the momenta $k$, the explicit equations
-become \cite{bogner2007} (with normalization
+become \cite{Bogner:2007od} (with normalization
 so that $1 = \frac{2}{\pi}\int_0^\infty|q\rangle q^2\,dq \langle q |$
 and in units where $\hbar^2/M = 1$),
 %
@@ -479,9 +484,9 @@ its applications to the pairing model and infinite nuclear matter.
 
 Instead of performing SRG in free space, the evolution can be done at
 finite density, that is directly in the $A$-body system
-\cite{kehrein2006}. This approach has recently been applied very
+\cite{Kehrein:2006kx}. This approach has recently been applied very
 successfully in nuclear physics, see the recent review of Bogner, Hergert, Morris and collaborators 
-\cite{hergert2016,morris2016},
+\cite{Hergert:2016jk,Hergert:2016ng,Morris:2016xp},
 and is called in-medium SRG (IM-SRG). The method allows the evolution
 of $3,...,A$-body operators using only two-body machinery, with the
 simplifications arising from the use of normal-ordering with respect
@@ -545,13 +550,13 @@ $\hat{H}_s$ and $\hat{\eta}_s$ at the two-body level, an approach
 which is referred to as IM-SRG(2).  This normal-ordered two-body
 approximation seems to be sufficient in many cases and has yielded
 excellent results for several nuclei
-\cite{tsukiyama2011,tsukiyama2012,hergert2016}.
+\cite{Tsukiyama:2011uq,Tsukiyama:2012fk,Hergert:2016jk,Hergert:2016ng}.
 
 The
 commutator in the flow equations (\ref{eq:flowEquations}) guarantees
 that the IM-SRG wave function $U_s^\dagger|\Phi\rangle$ can be
 expanded in terms of linked diagrams only
-\cite{shavittbartlett2009,hergert2016}, which suggests that IM-SRG
+\cite{Shavitt:2009,Hergert:2016jk,Hergert:2016ng}, which suggests that IM-SRG
 is size-extensive. Regarding the quality of the SRG results, it means
 that the error introduced by truncating the many-body expansions
 scales linearly with the number of particles~$N$.
@@ -600,7 +605,7 @@ can be adapted to the features of a particular problem.\\
 
 
 \paragraph{Wegner's canonical generator}
-The original choice, suggested by Wegner \cite{wegner1994}, reads
+The original choice, suggested by Wegner \cite{Wegner:1994dk}, reads
 \begin{equation} 
 \hat{\eta} = \left[ \hat{H}^{\rm d}, \hat{H}^{\rm od} \right] = \left[ \hat{H}^{\rm d}, \hat{H}
   \right].
@@ -608,7 +613,7 @@ The original choice, suggested by Wegner \cite{wegner1994}, reads
 \end{equation} 
 As commutator between two Hermitian operators, $\hat{\eta}$
 fulfils the criterion of antihermiticity and can be shown to suppress
-the off-diagonal matrix elements \cite{kehrein2006}. In general,
+the off-diagonal matrix elements \cite{Kehrein:2006kx}. In general,
 matrix elements far off the diagonal, where the Hamiltonian connects
 states with large energy differences, are suppressed much faster than
 elements closer to the diagonal. 
@@ -637,7 +642,7 @@ n_p = \begin{cases} 1, & \mbox{if } p< \epsilon_F \quad(p\;\mbox{is
 \paragraph{White's generator}
 Apart from this canonical generator, there exist several other ones in
 literature. One of them is White's choice
-\cite{white2002}, which makes numerical approaches much
+\cite{White:2002fk}, which makes numerical approaches much
 more efficient.  The problem with Wegner's generator are the widely
 varying decaying speeds of the elements, removing first terms with
 large energy differences and then subsequently those ones with smaller
@@ -651,7 +656,7 @@ connected to the reference state $|\Phi_0\rangle$, aiming to decouple
 the reference state from the remaining Hamiltonian. With a suitable
 transformation, the elements get similar decaying speeds, which solves
 the problem of stiffness of the flow equations.  The generator is
-explicitly constructed the following way \cite{white2002}
+explicitly constructed the following way \cite{White:2002fk}
 \begin{align}
 \hat{\eta} &= \sum_{ai} \frac{f_{ai}}{f_a-f_i-v_{aiai}}\lbrace a_a^{\dagger}a_i\rbrace -\text{hc} \notag \\ & + \sum_{abij}
 \frac{v_{abij}}{f_a+f_b-f_i-f_j+A_{abij}}\lbrace a_a^{\dagger}a_b^{\dagger}a_j
@@ -682,26 +687,10 @@ results in much better numerical properties.
 
 \begin{acknowledgement}
 This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University).
+\tbd{HH startup, NSF?}
 \end{acknowledgement}
 
-\begin{thebibliography}{99}
-\bibitem{wegner1994}  F.~Wegner, Ann.\ Phys.\ (Leipzig) {\bf 3}, 77 (1994).
-\bibitem{glazek1993}  S. D.~Glazek and K. G.~Wilson, Phys.\ Rev.\ D {\bf 48}, 5863 (1993).
-\bibitem{bogner2007} S.~K.~Bogner, R.~J.~Furnstahl, and R.~J.~Perry, Phys.~Rev.~C {\bf 75} 061001(R) (2007).
-\bibitem{bogner2010} Bogner S~K, Furnstahl R~J and Schwenk A, Prog. Part. Nucl. Phys. {\bf 65}, 94 (2010).
-\bibitem{morris2015} T.~D.~Morris, N.~M.~Parzuchowski, and S.~k.~Bogner, Phys.~Rev.~C {\bf 92} 034331 (2015).
-\bibitem{hergert2016} H. Hergert, S. K. Bogner, T. D. Morris, A. Schwenk, K. Tsukiyama, Phys.~Rep.~{\bf 621}, 165 (2016); H.~Hergert, Phys.~Scripta, (2016), in press and arXiv:1607.06882.
-\bibitem{golubvanloan1996} G.~H.~Golub and C.~F.~Van Loan, {\em Matrix Computations}, (The John Hopkins University Press, London and Baltimore, 1996, 3rd edition).
-\bibitem{shampine1976} L.~F.~Shampine and M.~K.~Gordon, {\em Computer solution of ordinary differential equations : the initial value problem}, (W.~H.~Freeman, San Francisco, 1975). 
-\bibitem{morris2016} T.~.D.~Morris, {\em Magnus expansion and in-medium similarity renormalization group}, PhD thesis, Michigan State University, (2016).
-\bibitem{kehrein2006} S.~Kehrein, {\em The Flow Equation Approach to Many-Particle Systems}, Springer Tracts in Modern Physics, vol 237, (Springer Verlag, Berlin, 2006)
-\bibitem{tsukiyama2011} K.~Tsukiyama, S.~K.~Bogner, and A.~Schwenk, Phys.~Rev.~Lett.~{\bf 106}, 222502 (2011).
-  222502
-\bibitem{tsukiyama2012}K.~Tsukiyama, S.~K.~Bogner, and A.~Schwenk, Phys.~Rev.~C {\bf 85}, 061304(R) (2012).
-  061304 
-\bibitem{shavittbartlett2009} I.~Shavitt and R.~J.~Bartlett, {\em Many-Body Methods in Chemistry and Physics: Many-body Perturbation Theory and Coupled-Cluster Theory} (Cambridge University Press, 2009).
-
-\bibitem{white2002} S.~R.~White, J.~Chem.~Phys.~{\bf 117}, 7472 (2002).
- 
-\end{thebibliography}
+\bibliographystyle{spphys}
+\bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
+% \bibliography{hh}
     

@@ -1,0 +1,82 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Wegner:1994dk}
+F.~Wegner, Ann. Phys. (Leipzig) \textbf{3}, 77 (1994)
+
+\bibitem{Glazek:1993il}
+S.D. Glazek, K.G. Wilson, Phys. Rev. D \textbf{48}, 5863 (1993)
+
+\bibitem{Bogner:2007od}
+S.K. Bogner, R.J. Furnstahl, R.J. Perry, Phys. Rev. C \textbf{75}, 061001(R)
+  (2007).
+\newblock \doi{10.1103/PhysRevC.75.061001}
+
+\bibitem{Bogner:2010pq}
+S.K. Bogner, R.J. Furnstahl, A.~Schwenk, Prog. Part. Nucl. Phys. \textbf{65},
+  94 (2010).
+\newblock \doi{10.1016/j.ppnp.2010.03.001}
+
+\bibitem{Morris:2015ve}
+T.D. Morris, N.M. Parzuchowski, S.K. Bogner, Phys. Rev. C \textbf{92}, 034331
+  (2015).
+\newblock \doi{10.1103/PhysRevC.92.034331}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.034331}
+
+\bibitem{Hergert:2016jk}
+H.~Hergert, S.K. Bogner, T.D. Morris, A.~Schwenk, K.~Tsukiyama, Physics Reports
+  \textbf{621}, 165 (2016).
+\newblock \doi{http://dx.doi.org/10.1016/j.physrep.2015.12.007}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370157315005414}
+
+\bibitem{Hergert:2016ng}
+H.~{Hergert}, ArXiv e-prints  (2016)
+
+\bibitem{Golub:2013le}
+G.~Golub, C.~Van~Loan, \emph{Matrix Computations}.
+\newblock Johns Hopkins Studies in the Mathematical Sciences (Johns Hopkins
+  University Press, 2013).
+\newblock \urlprefix\url{https://books.google.com/books?id=X5YfsuCWpxMC}
+
+\bibitem{Shampine:1975qq}
+L.F. Shampine, M.K. Gordon, \emph{Computer Solution of Ordinary Differential
+  Equations: The Initial Value Problem} (W. H. Freeman, San Francisco, 1975).
+\newblock \urlprefix\url{https://books.google.com/books?id=3Yl2nQEACAAJ}
+
+\bibitem{Morris:2016xp}
+T.D. Morris, Systematic improvements of ab initio in-medium similarity
+  renormalization group calculations.
+\newblock Ph.D. thesis, Michigan State University (2016).
+\newblock \urlprefix\url{http://etd.lib.msu.edu/islandora/object/etd%3A3864}
+
+\bibitem{Kehrein:2006kx}
+S.~Kehrein, \emph{The Flow Equation Approach to Many-Particle Systems},
+  \emph{Springer Tracts in Modern Physics}, vol. 237 (Springer Berlin /
+  Heidelberg, 2006)
+
+\bibitem{Tsukiyama:2011uq}
+K.~Tsukiyama, S.K. Bogner, A.~Schwenk, Phys. Rev. Lett. \textbf{106}(22),
+  222502 (2011).
+\newblock \doi{10.1103/PhysRevLett.106.222502}
+
+\bibitem{Tsukiyama:2012fk}
+K.~Tsukiyama, S.K. Bogner, A.~Schwenk, Phys. Rev. C \textbf{85}, 061304 (2012).
+\newblock \doi{10.1103/PhysRevC.85.061304}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.061304}
+
+\bibitem{Shavitt:2009}
+I.~Shavitt, R.J. Bartlett, \emph{Many-Body Methods in Chemistry and Physics:
+  MBPT and Coupled-Cluster Theory} (Cambridge University Press, 2009)
+
+\bibitem{White:2002fk}
+S.R. White, J. Chem. Phys. \textbf{117}(16), 7472 (2002).
+\newblock \doi{DOI:10.1063/1.1508370}.
+\newblock \urlprefix\url{http://dx.doi.org/doi/10.1063/1.1508370}
+
+\end{thebibliography}
