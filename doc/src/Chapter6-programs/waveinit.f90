@@ -12,7 +12,7 @@ SUBROUTINE waveinit(zwave,zdualwave,myid)
   CHARACTER*3 trig(0:n_f-1)
   CHARACTER*2 particletype(0:n_f-1)
   
-  IF (n_f .ne. 4) THEN
+  IF (n_f .ne. 2) THEN
      WRITE(*,*)'error '
      WRITE(*,*)' n_f ',n_f
      STOP
@@ -26,16 +26,14 @@ SUBROUTINE waveinit(zwave,zdualwave,myid)
      END DO; END DO
   END DO
   
-  DO npart = 0,3
+  DO npart = 0,1
      px(npart) = 0.D0
      py(npart) = 0.D0
      pz(npart) = 0.D0
      trig(npart) = 'one'
   END DO
-  particletype(0) = 'p+'
-  particletype(1) = 'n+'
-  particletype(2) = 'p-'
-  particletype(3) = 'n-'
+  particletype(0) = 'n+'
+  particletype(1) = 'n-'
   
   DO npart = 0, n_f-1         
      IF (particletype(npart) .eq. 'p+') THEN

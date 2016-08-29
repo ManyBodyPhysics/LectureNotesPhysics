@@ -1,21 +1,21 @@
   ! use D for double precision exponents
   
-  parameter(n_f = 4)
+  parameter(n_f = 2)
   parameter(L = 4)
-  parameter(Lt = 12)  
+  parameter(Lt = 6)  
   parameter(cutoff = 100.D0, temporalcutoff = 150.D0)
   parameter(improveN = 2)
-  parameter(improveP = 2)
+  parameter(improveP = 0)
   parameter(improveD = 0)
-  parameter(c1S0_phys = -6.0D-5)
-  parameter(c3S1_phys = -7.0D-5)
+  parameter(c1S0_phys = -5.615D-5)
+  parameter(c3S1_phys = -6.543D-5)
   
   ! run parameters
   
-  parameter(ntot = 40000)
+  parameter(ntot = 400000)
   parameter(myseed = 123981)
-  parameter(ntherm = 100) 
-  parameter(nprintevery = 5)
+  parameter(ntherm = 1000) 
+  parameter(nprintevery = 500)
   parameter(measureevery = 2)
   parameter(ncheck = 0)
   parameter(nHMC = 10)

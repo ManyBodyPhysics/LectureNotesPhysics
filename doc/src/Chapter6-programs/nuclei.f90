@@ -7,7 +7,6 @@ PROGRAM nuclei
   IMPLICIT complex*16(z)
   
   INCLUDE 'input.f90'
-  INCLUDE 'mpif.h'
       
   DIMENSION s(0:L-1,0:L-1,0:L-1,0:Lt-1)
   DIMENSION p_s(0:L-1,0:L-1,0:L-1,0:Lt-1)
@@ -15,6 +14,7 @@ PROGRAM nuclei
   DIMENSION p_snew(0:L-1,0:L-1,0:L-1,0:Lt-1)
   DIMENSION sHMC(0:L-1,0:L-1,0:L-1,0:Lt-1,0:nHMC)
   DIMENSION p_sHMC(0:L-1,0:L-1,0:L-1,0:Lt-1,0:nHMC)
+  DIMENSION stemp(0:L-1,0:L-1,0:L-1,0:Lt-1)
   
   DIMENSION sI(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
   DIMENSION p_sI(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
@@ -22,6 +22,7 @@ PROGRAM nuclei
   DIMENSION p_sInew(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
   DIMENSION sIHMC(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3,0:nHMC)
   DIMENSION p_sIHMC(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3,0:nHMC)
+  DIMENSION sItemp(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
   
   DIMENSION pion(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
   DIMENSION pionnew(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
@@ -29,6 +30,7 @@ PROGRAM nuclei
   DIMENSION p_pionnew(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
   DIMENSION pionHMC(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3,0:nHMC)
   DIMENSION p_pionHMC(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3,0:nHMC)
+  DIMENSION piontemp(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
   
   DIMENSION dVds(0:L-1,0:L-1,0:L-1,0:Lt-1)
   DIMENSION dVdsI(0:L-1,0:L-1,0:L-1,0:Lt-1,1:3)
@@ -47,22 +49,6 @@ PROGRAM nuclei
   
 !***********************************************************
 
-  CALL MPI_INIT(ierr)
-  CALL MPI_COMM_RANK(MPI_COMM_WORLD,myid,ierr)
-  CALL MPI_COMM_SIZE(MPI_COMM_WORLD,numprocs,ierr)
-  
-  IF (myid .eq. 0) THEN
-     CPUtime_0 = MPI_Wtime()
-  END IF
-  
-  !     improve = 0:  standard lattice 
-  !     improve = 1:  O(a**2)-improved kinetic action
-  !     improve = 2:  O(a**4)-improved kinetic action
-  !     +w0 is the coefficient at the center
-  !     -w1 is the coefficient for the nearest neighbor hop
-  !     +w2 is the coefficient for the next-nearest neighbor hop
-  !     -w3 is the coefficient for the next-next-nearest neighbor hop
-  
   INCLUDE "improve.f90"
   
   !     spin/isospin conventions:
@@ -85,9 +71,6 @@ PROGRAM nuclei
      WRITE(*,'(1X,A,F0.6,1X,A)') '1/a = ',cutoff,'MeV'
      WRITE(*,'(1X,A,F0.6,1X,A)') '1/a_t = ',temporalcutoff,'MeV'
      WRITE(*,'(1X,A,F0.6)') 'atovera = ',atovera
-     WRITE(*,'(1X,A,I0)') 'improveN = ',improveN
-     WRITE(*,'(1X,A,I0)') 'improveP = ',improveP
-     WRITE(*,'(1X,A,I0)') 'improveD = ',improveD
      
      WRITE(*,*) ' '
      WRITE(*,*) '**********'
@@ -125,12 +108,15 @@ PROGRAM nuclei
   END IF
 
 !************************************************************
-  
+
+  myid = 0
+  ! single process version of code
+
   CALL sgrnd(myseed+10*myid)
   
   accept = 0.D0
   zdeterphasebin = 0.D0
-  
+
   DO ndir = 0,3
      DO nii = 0,1; DO ni = 0,1
         ztau2x2(ni,nii,ndir) = 0.D0
@@ -156,11 +142,11 @@ PROGRAM nuclei
         END DO; END DO; END DO
      END DO; END DO
   END DO
-  
+
   CALL waveinit(zwave,zdualwave,myid)
   
 !************************************************************
-  
+
   DO nt = 0,Lt-1
      DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1
         CALL gaussrnd(gr)
@@ -241,8 +227,10 @@ PROGRAM nuclei
           pion,ztau2x2,n_f)            
      CALL getzdualvecs(s,sI,zdualvecs,zdualwave, &
           Lt,0,pion,ztau2x2,n_f)         
+
      CALL getinvcorr(zvecs,zdualvecs,zldeter, &
           zcorrmatrix,zcorrinv,Lt)
+
      aldeterabs = DBLE(zldeter)
      zdeterphase = CDEXP((0.D0,1.D0)*DIMAG(zldeter))
      act = bose - aldeterabs
@@ -343,7 +331,7 @@ PROGRAM nuclei
      END DO
      
 !*************************************************************
-     
+
      ! full steps for sHMC, sIHMC, pionHMC and then 
      ! p_sHMC, p_sIHMC, p_pionHMC in leapfrog succession
      ! last step for p_sHMC, p_sIHMC, p_pionHMC should be a half step
@@ -375,18 +363,32 @@ PROGRAM nuclei
            END DO; END DO; END DO
         END DO
         
-        CALL getzvecs(sHMC(0,0,0,0,nstep+1), &
-             sIHMC(0,0,0,Ltouter,1,nstep+1), &
+        DO nt = 0,Lt-1
+           DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1                  
+              stemp(nx,ny,nz,nt) = sHMC(nx,ny,nz,nt,nstep+1)
+           END DO; END DO; END DO
+        END DO
+        DO iso = 1,3
+           DO nt = 0,Lt-1
+              DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1                  
+                 sItemp(nx,ny,nz,nt,iso) = sIHMC(nx,ny,nz,nt,iso,nstep+1)
+                 piontemp(nx,ny,nz,nt,iso) = pionHMC(nx,ny,nz,nt,iso,nstep+1)
+              END DO; END DO; END DO
+           END DO
+        END DO
+
+        CALL getzvecs(stemp, &
+             sItemp, &
              zvecs,zwave,Lt,0, &
-             pionHMC(0,0,0,Ltouter,1,nstep+1), &
+             piontemp, &
              ztau2x2,n_f)
         
-        CALL getzdualvecs(sHMC(0,0,0,0,nstep+1), &
-             sIHMC(0,0,0,Ltouter,1,nstep+1), &
+        CALL getzdualvecs(stemp, &
+             sItemp, &
              zdualvecs,zdualwave,Lt,0, &
-             pionHMC(0,0,0,Ltouter,1,nstep+1), &
+             piontemp, &
              ztau2x2,n_f)
-        
+
         CALL getinvcorr(zvecs,zdualvecs,zldeter_HMC, &
              zcorrmatrix,zcorrinv,Lt-1)
         
@@ -592,18 +594,13 @@ PROGRAM nuclei
             
          END IF
          
-         IF (MOD(nconfig,nprintevery) .eq. 0 .or. nreadonly .eq. 1) THEN
+         IF (MOD(nconfig,nprintevery) .eq. 0) THEN
             
             IF (myid .eq. 0) THEN
                WRITE(*,*)
-               IF (nreadonly .eq. 0) THEN
-                  WRITE(*,'(A,I0)')'** nconfig ',nconfig
-                  WRITE(*,'(A,I0,2X,A,F9.6)')'** mconfig ',mconfig, &
-                       'acceptance',accept/ntrial
-               ELSE
-                  WRITE(*,'(A,I0,2X,A,I0)')'** nconfig ',nconfig, &
-                      '** mconfig ',mconfig
-               END IF
+               WRITE(*,'(A,I0)')'** nconfig ',nconfig
+               WRITE(*,'(A,I0,2X,A,F9.6)')'** mconfig ',mconfig, &
+                    'acceptance',accept/ntrial
             END IF
             
             IF (mconfig .ge. 1) THEN
@@ -614,41 +611,30 @@ PROGRAM nuclei
                IF (myid .eq. 0) WRITE(*,*)' '
                IF (myid .eq. 0) WRITE(*,*)'**********'
 
-               CALL ave_err(realpartbin,average,error,numprocs,myid)
                IF (myid .eq. 0) THEN
-                  realpart_ave = average/mconfig
-                  realpart_err = error/mconfig
+                  realpart_ave = realpartbin/mconfig
                   WRITE(*,'(1X,A30,E14.6,E14.6)') &
                       'real part of phase', &
-                      realpart_ave,realpart_err
+                      realpart_ave
                END IF
 
-               CALL ave_err(aimagpartbin,average,error,numprocs,myid) 
                IF (myid .eq. 0) THEN
-                  aimagpart_ave = average/mconfig
-                  aimagpart_err = error/mconfig
+                  aimagpart_ave = aimagpartbin/mconfig
                   WRITE(*,'(1X,A30,E14.6,E14.6)') &
                       'imaginary part of phase', &
-                      aimagpart_ave,aimagpart_err
+                      aimagpart_ave
                END IF
                              
-               CALL ave_err(ampbin,average,error,numprocs,myid)
                IF (myid .eq. 0) THEN
-                  raw_ave = average/mconfig
-                  raw_err = error/mconfig
+                  raw_ave = ampbin/mconfig
                   energy_ave = cutoff*dlog(raw_ave/realpart_ave) &
                        /atovera
-                  rel_err = dsqrt((raw_err/raw_ave)**2.D0 &
-                       + (realpart_err/realpart_ave)**2.D0)
-                  energy_err = cutoff*dlog(raw_ave/realpart_ave &
-                       *(1.D0 + rel_err))/atovera &
-                       - energy_ave                  
                   WRITE(*,*)'**********'
                   WRITE(*,'(1X,A,I0,1X)') 'Lt = ',Lt
                   WRITE(*,'(1X,A30,E14.6,E14.6)') &
-                       'energy (MeV)',energy_ave,energy_err
+                       'energy (MeV)',energy_ave
                   WRITE(*,'(1X,A30,E14.6,E14.6)') &
-                       'raw amplitude',raw_ave,raw_err
+                       'raw amplitude',raw_ave
                   WRITE(*,*)''
                END IF
                
@@ -663,22 +649,10 @@ PROGRAM nuclei
 
          END IF 
 
-         IF (myid .eq. 0) THEN
-            CPUtime_1 = MPI_Wtime()
-            CPUtime = CPUtime_1 - CPUtime_0
-            IF (MOD(ntrial,100) .eq. 0) THEN
-               WRITE(*,*) ' '
-               WRITE(*,'(3X,A,I0,2X,A,F0.2)') 'ntrial ',ntrial,'CPUtime ',CPUtime
-            END IF
-         END IF
-        
       END DO
 
 !************************************************************
       
-      CALL MPI_BARRIER(MPI_COMM_WORLD,ierr)
-      CALL MPI_FINALIZE(ierr)
-
       IF (myid .eq. 0) THEN
          WRITE(*,*)'done'
       END IF

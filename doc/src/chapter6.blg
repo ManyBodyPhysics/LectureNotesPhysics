@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter6.aux
 The style file: spphys.bst
@@ -85,12 +85,14 @@ Repeated entry---line 9654 of file lnp.bib
  : @article{Borasoy:2007vy
  :                        ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Ekstrom:2015rta"
+Warning--I didn't find a database entry for "Hagen:2015yea"
 Warning--empty journal in Elhatisari:2016owd
 Warning--empty journal in Lu:2015riz
 Warning--empty journal in Rokash:2015hra
 You've used 50 entries,
             2812 wiz_defined-function locations,
-            910 strings with 11828 characters,
+            914 strings with 11884 characters,
 and the built_in function-call counts, 16664 in all, are:
 = -- 990
 > -- 524
