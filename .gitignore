@@ -1,0 +1,11 @@
+doc/src/lnp.fdb_latexmk
+doc/src/lnp.fls
+doc/src/lnp.log
+doc/src/lnp.out
+doc/src/lnp.pdf
+doc/src/lnp.synctex.gz
+doc/src/lnp.toc
+doc/src/chapter11.aux
+doc/src/chapter8.aux
+doc/src/chapter9.aux
+chapter10.aux
