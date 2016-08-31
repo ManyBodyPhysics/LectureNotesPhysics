@@ -60,9 +60,10 @@
 \newcommand{\ed}[1]{{\color{blue}#1}}
 
 
-%%%%% alias for the figure directory 
+%%%%% aliases for the figure and program directories
 % this will be helpful if we change the  numbering
 \newcommand{\fdir}{Chapter10-figures}
+\newcommand{\pdir}{Chapter10-programs}
 
 
 %%%%%
@@ -422,7 +423,7 @@ relation $\sum_{k=0}^{\infty}\vert k \rangle \langle k \vert = 1$.  As
 demonstrated below via various numerical examples, when we let $s$
 evolve to infinity, the Hamiltonian matrix becomes more and more
 diagonal. The code to solve the coupled ODEs is at
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter10-programs/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
 \begin{lstlisting}
 ! The derative of V as function of a given value of s
 ! n_total stands for the number of basis function k and v is the potential term
@@ -771,6 +772,6 @@ This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University)
 \end{acknowledgement}
 
 \bibliographystyle{spphys}
-\bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
-% \bibliography{hh}
+% \bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
+\bibliography{hh}
     
