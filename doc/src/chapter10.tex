@@ -1,7 +1,75 @@
 % !TEX root = lnp.tex
-\newcommand{\tbd}[1]{{\color{red}[#1]}}
 
-\title{In-Medium Similarity Renormalization Group Approach for Quantum Many-Body Systems}
+%%%%%
+%%%%% Commands for chapter 
+%%%%%
+
+%%%%% isotope notation
+\newcommand{\nuc}[2]{\ensuremath{^{#2}\mathrm{#1}}}
+
+\newcommand{\nn}{\ensuremath{\bar{n}}}
+
+%%%%% observable / interaction name shortcuts
+\newcommand{\NNNLO}{N$^3$LO}
+\newcommand{\NNLO}{NNLO}
+\newcommand{\NNLOsat}{$\text{NNLO}_\text{sat}$}
+\newcommand{\Vlowk}{\ensuremath{V_{\text{low-k}}}}
+\newcommand{\Vsrg}{\ensuremath{V_{\text{SRG}}}}
+
+\newcommand{\Trel}{\ensuremath{\TO_\text{rel}}}
+\newcommand{\Tint}{\ensuremath{\TO_\text{int}}}
+\newcommand{\Tcm}{\ensuremath{\TO_\text{cm}}}
+\newcommand{\Tpair}{\ensuremath{\TO_\text{pair}}}
+\newcommand{\Hint}{\ensuremath{\HO_\text{int}}}
+\newcommand{\Epair}{\ensuremath{E_\text{pair}}}
+\newcommand{\Rch}{\ensuremath{R_\text{ch}}}
+\newcommand{\Hfinal}{\ensuremath{\mkern 3mu\overline{\mkern-3muH}}}
+
+%%%%% flow parameters
+\newcommand{\lambdaSRG}{\ensuremath{\lambda}}
+
+%%%%% basis truncations
+\newcommand{\aHO}{\ensuremath{a_{\text{HO}}}}
+\newcommand{\hw}{\ensuremath{\hbar\omega}}
+\newcommand{\eMax}{\ensuremath{e_{\text{max}}}}
+\newcommand{\lMax}{\ensuremath{l_{\text{max}}}}
+\newcommand{\EMax}{\ensuremath{E_{3\text{max}}}}
+\newcommand{\Nmax}{\ensuremath{N_\text{max}}}
+
+%%%%% units
+% \newcommand{\fm}{\ensuremath{\,\text{fm}}}
+\newcommand{\fmi}{\ensuremath{\,\text{fm}^{-1}}}
+\newcommand{\AMeV}{\ensuremath{\,\text{AMeV}}}
+\newcommand{\keV}{\ensuremath{\,\text{keV}}}
+% \newcommand{\MeV}{\ensuremath{\,\text{MeV}}}
+\newcommand{\MeVi}{\ensuremath{\,\text{MeV}^{-1}}}
+\newcommand{\eV}{\ensuremath{\,\text{eV}}}
+% \newcommand{\GeV}{\ensuremath{\,\text{GeV}}}
+
+%%%%% states and operators
+% \newcommand{\ket}[1]{\ensuremath{\,|{#1}\rangle}}
+% \newcommand{\braket}[2]{\ensuremath{\langle{#1}|{#2}\rangle}}
+\newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
+\newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
+
+%%%%% normal ordering
+\newcommand{\nord}[1]{\left\{#1\right\}}
+
+%%%%% editorial
+\newcommand{\tbd}[1]{{\color{red}#1}}
+\newcommand{\ed}[1]{{\color{blue}#1}}
+
+
+%%%%% alias for the figure directory 
+% this will be helpful if we change the  numbering
+\newcommand{\fdir}{Chapter10-figures}
+
+
+%%%%%
+%%%%% Subject matter
+%%%%%
+
+\title{In-Medium Similarity Renormalization Group Approach to the Nuclear Many-Body Problem}
 
 \author{Scott K.~Bogner, Heiko Hergert, Justin Lietz, Titus D.~Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}
 \institute{Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and Heiko Hergert  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{hergert@nscl.msu.edu}, \and Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Titus Morris  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{morrist@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
@@ -14,9 +82,7 @@ excitations, thereby solving the many-body problem. Starting from a
 pedagogical introduction of the underlying concepts, the IM-SRG flow 
 equations are developed and we study different IM-SRG generators that
 achieve the desired decoupling, and how they affect the details of the IM-SRG results. We compare with the coupled cluster theory results of
-chapter 8, the Monte Carlo results of chapter 9 and the Green's function results of chapter 11.}
-
-\tbd{Change title because we do pairing model?}
+chapter \ref{chapter:cc}, the Monte Carlo results of chapter \ref{chapter:qmc} and the Green's function results of chapter \ref{chapter:scgf}.}
 
 \section{Introduction}
 
@@ -54,6 +120,20 @@ to pure neutron matter. We compare our IM-SRG results to those obtained from cou
 perspectives and research directions.
 
 \section{Similarity Renormalization Group method}
+
+\begin{figure*}[t]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{\fdir/rg_evolution_schematic.pdf}
+  \end{center}
+  \caption{\label{fig:schematic}Schematic illustration of two types of RG evolution 
+    for $NN$ potentials in momentum space: (a) \Vlowk{} running in $\Lambda$, and 
+    (b) SRG running in $\lambdaSRG$ (see main text). Here, $k$ and $k'$ denote the 
+    relative momenta of the initial and final state, respectively. At each $\Lambda_i$ 
+    or $\lambdaSRG_i$, the matrix elements outside of the corresponding 
+    blocks or bands are negligible, implying that high- and low-momentum 
+    states are decoupled.
+  }
+\end{figure*}
 
 We give here a brief overview of the SRG method applied to two simple systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8, the latter as a numerical case study in this chapter. 
 
