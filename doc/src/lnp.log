@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 AUG 2016 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 SEP 2016 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3122,12 +3122,12 @@ Package pdftex.def Info: Chapter6-figures/HSworldlines.png used on input line 6
 (pdftex.def)             Requested size: 232.84627pt x 199.16928pt.
  [193 <./Chapter6-figures/HSworldlines.png>] [194] [195] [196] [197] [198] [199
 ]
-Overfull \hbox (4.35938pt too wide) in paragraph at lines 1113--1114
+Overfull \hbox (4.35938pt too wide) in paragraph at lines 1112--1113
 []$[]$| 
  []
 
 
-Overfull \hbox (4.35938pt too wide) in paragraph at lines 1149--1150
+Overfull \hbox (4.35938pt too wide) in paragraph at lines 1148--1149
 []$[]$| 
  []
 
@@ -3703,26 +3703,13 @@ Overfull \hbox (10.18704pt too wide) in paragraph at lines 5180--5189
 grams / cpp / CCD / src$[]\T1/fve/m/n/10 , abide to this
  []
 
-[307]
-<Chapter8-figures/classabstractspbasis.pdf, id=7862, 501.875pt x 74.90987pt>
-File: Chapter8-figures/classabstractspbasis.pdf Graphic file (type pdf)
-
-<use Chapter8-figures/classabstractspbasis.pdf>
-Package pdftex.def Info: Chapter8-figures/classabstractspbasis.pdf used on inpu
-t line 5232.
-(pdftex.def)             Requested size: 501.87376pt x 74.90968pt.
-
-Overfull \hbox (77.28752pt too wide) in paragraph at lines 5232--5233
- [] 
- []
-
-[308 <./Chapter8-figures/classabstractspbasis.pdf>] (./chapter8.bbl [309]
+[307] [308] (./chapter8.bbl
 Underfull \hbox (badness 1527) in paragraph at lines 107--110
 []\T1/fve/m/n/8.5 A. Ek-ström, G. Baard-sen, C. Forssén, G. Ha-gen, M. Hjorth-J
 ensen, G.R. Jansen, R. Mach-leidt,
  []
 
-)) [310]
+[309])) [310]
 \openout2 = `chapter9.aux'.
 
  (./chapter9.tex [311
@@ -3789,7 +3776,7 @@ converted-to.pdf Chapter9-figures/qvar.eps>
 (epstopdf)             \includegraphics on input line 476.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/qvar-eps-converted-to.pdf, id=8095, 667.49374pt x 473.77pt>
+<Chapter9-figures/qvar-eps-converted-to.pdf, id=8087, 667.49374pt x 473.77pt>
 File: Chapter9-figures/qvar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/qvar-eps-converted-to.pdf>
@@ -3809,7 +3796,7 @@ onverted-to.pdf Chapter9-figures/jas.eps>
 (epstopdf)             \includegraphics on input line 507.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/jas-eps-converted-to.pdf, id=8109, 699.61375pt x 487.8225pt>
+<Chapter9-figures/jas-eps-converted-to.pdf, id=8101, 699.61375pt x 487.8225pt>
 File: Chapter9-figures/jas-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/jas-eps-converted-to.pdf>
@@ -3842,7 +3829,7 @@ f>
 (epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/hists-eps-converted-to.pdf, id=8232, 682.55pt x 465.74pt>
+<Chapter9-figures/hists-eps-converted-to.pdf, id=8224, 682.55pt x 465.74pt>
 File: Chapter9-figures/hists-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/hists-eps-converted-to.pdf>
@@ -3861,7 +3848,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 877.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=8234, 669.50125pt x 466.74
+<Chapter9-figures/dmc_decay-eps-converted-to.pdf, id=8226, 669.50125pt x 466.74
 374pt>
 File: Chapter9-figures/dmc_decay-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_decay-eps-converted-to.pdf>
@@ -3881,7 +3868,7 @@ mc-eps-converted-to.pdf Chapter9-figures/walkers_dmc.eps>
 (epstopdf)             \includegraphics on input line 897.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=8257, 692.5875pt x 485.8
+<Chapter9-figures/walkers_dmc-eps-converted-to.pdf, id=8248, 692.5875pt x 485.8
 15pt>
 File: Chapter9-figures/walkers_dmc-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3901,7 +3888,7 @@ eps-converted-to.pdf Chapter9-figures/dmc_extr.eps>
 (epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=8259, 701.62125pt x 475.777
+<Chapter9-figures/dmc_extr-eps-converted-to.pdf, id=8250, 701.62125pt x 475.777
 5pt>
 File: Chapter9-figures/dmc_extr-eps-converted-to.pdf Graphic file (type pdf)
  <use Chapter9-figures/dmc_extr-eps-converted-to.pdf>
@@ -4024,7 +4011,7 @@ ergence-eps-converted-to.pdf Chapter9-figures/cimc_convergence.eps>
 (epstopdf)             \includegraphics on input line 2741.
 Package epstopdf Info: Output file is already uptodate.
 
-<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8704, 726.715pt x 5
+<Chapter9-figures/cimc_convergence-eps-converted-to.pdf, id=8696, 726.715pt x 5
 05.89pt>
 File: Chapter9-figures/cimc_convergence-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -4033,7 +4020,7 @@ Package pdftex.def Info: Chapter9-figures/cimc_convergence-eps-converted-to.pdf
  used on input line 2741.
 (pdftex.def)             Requested size: 363.3566pt x 252.94437pt.
 
-<Chapter9-figures/cimcccd.pdf, id=8706, 578.16pt x 433.62pt>
+<Chapter9-figures/cimcccd.pdf, id=8698, 578.16pt x 433.62pt>
 File: Chapter9-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter9-figures/cimcccd.pdf>
@@ -4152,7 +4139,7 @@ LaTeX Warning: Citation `Som14a' on page 395 undefined on input line 897.
 
 LaTeX Warning: Citation `RingSchuck' on page 396 undefined on input line 899.
 
-<Chapter11-figures/Pairing_LNP_scgf.pdf, id=9260, 622.325pt x 521.95pt>
+<Chapter11-figures/Pairing_LNP_scgf.pdf, id=9252, 622.325pt x 521.95pt>
 File: Chapter11-figures/Pairing_LNP_scgf.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_LNP_scgf.pdf>
@@ -4160,7 +4147,7 @@ Package pdftex.def Info: Chapter11-figures/Pairing_LNP_scgf.pdf used on input l
 ine 916.
 (pdftex.def)             Requested size: 339.67029pt x 284.8832pt.
 
-<Chapter11-figures/Pairing_LNP_ALL.pdf, id=9263, 622.325pt x 521.95pt>
+<Chapter11-figures/Pairing_LNP_ALL.pdf, id=9255, 622.325pt x 521.95pt>
 File: Chapter11-figures/Pairing_LNP_ALL.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/Pairing_LNP_ALL.pdf>
@@ -4174,7 +4161,7 @@ LaTeX Warning: Reference `chap:chapter8' on page 396 undefined on input line 93
 
 [396] [397 <./Chapter11-figures/Pairing_LNP_scgf.pdf>] [398 <./Chapter11-figure
 s/Pairing_LNP_ALL.pdf>] [399] [400] [401] [402] [403]
-<Chapter11-figures/numerical_scgf_diagrams.pdf, id=9491, 1027.84pt x 770.88pt>
+<Chapter11-figures/numerical_scgf_diagrams.pdf, id=9483, 1027.84pt x 770.88pt>
 File: Chapter11-figures/numerical_scgf_diagrams.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/numerical_scgf_diagrams.pdf>
@@ -4182,7 +4169,7 @@ Package pdftex.def Info: Chapter11-figures/numerical_scgf_diagrams.pdf used on
 input line 1238.
 (pdftex.def)             Requested size: 424.58624pt x 318.4389pt.
  [404 <./Chapter11-figures/numerical_scgf_diagrams.pdf>] [405] [406]
-<Chapter11-figures/cimcccd.pdf, id=9676, 578.16pt x 433.62pt>
+<Chapter11-figures/cimcccd.pdf, id=9668, 578.16pt x 433.62pt>
 File: Chapter11-figures/cimcccd.pdf Graphic file (type pdf)
 
 <use Chapter11-figures/cimcccd.pdf>
@@ -4241,10 +4228,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 28143 strings out of 493089
- 441843 string characters out of 6134842
- 623303 words of memory out of 5000000
- 26667 multiletter control sequences out of 15000+600000
+ 28136 strings out of 493089
+ 441609 string characters out of 6134842
+ 623228 words of memory out of 5000000
+ 26662 multiletter control sequences out of 15000+600000
  159699 words of font info for 277 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,25n,122p,1567b,2117s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4280,10 +4267,10 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect1
 0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on lnp.pdf (427 pages, 5704814 bytes).
+Output written on lnp.pdf (427 pages, 5701992 bytes).
 PDF statistics:
- 10942 PDF objects out of 12825 (max. 8388607)
- 9590 compressed objects within 96 object streams
- 4265 named destinations out of 4296 (max. 500000)
- 2509 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 10934 PDF objects out of 12825 (max. 8388607)
+ 9584 compressed objects within 96 object streams
+ 4264 named destinations out of 4296 (max. 500000)
+ 2504 words of extra memory for PDF output out of 10000 (max. 10000000)
 

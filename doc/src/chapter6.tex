@@ -1,7 +1,7 @@
 \title{Lattice methods and the nuclear few- and many-body problem}
 \author{Dean Lee}
 \institute{Dean Lee \at  Department of Physics, 
-North Carolina State University, Raleigh, NC 27695,  USA, \email{dean\_lee@nscu.edu}}
+North Carolina State University, Raleigh, NC 27695,  USA, \email{dean\_lee@ncsu.edu}}
 \maketitle
 
 \abstract{This chapter builds upon the review of lattice methods and effective
@@ -88,7 +88,7 @@ $2^+_1$ & $-145(2)$ & $-116(2)$ & $-136(2)$ & $-123(2)$ & $-120.70$
 \end{tabular}
 \end{table}
 
-In order to understand the source of this overbinding, the problem was revisited again in Ref.~\cite{Elhatisari:2016owd}.  In that work numerical evidence from {\it ab initio} lattice simulations showed that the problem appears to related the fact that the nuclear forces reside near a quantum phase transition. Using lattice effective field theory, Monte Carlo simulations were performed for systems with up to twenty nucleons. For even and equal numbers of protons and neutrons, a first-order transition was found at zero temperature from a Bose-condensed gas of alpha particles to a nuclear liquid. Whether one has an alpha-particle gas or nuclear liquid is determined by the strength of the alpha-alpha interactions, and the alpha-alpha interactions depend on the strength and locality of the nucleon-nucleon interactions. This insight is useful in improving calculations of nuclear structure and important astrophysical reactions involving alpha capture on nuclei.  These findings also provide a tool to probe the structure of alpha cluster states such as the Hoyle state responsible for the production of carbon in red giant stars and point to a connection between nuclear states and the universal physics of bosons at large scattering length.
+In order to understand the source of this overbinding, the problem was revisited again in Ref.~\cite{Elhatisari:2016owd}.  In that work numerical evidence from {\it ab initio} lattice simulations showed that the problem appears related to the fact that the nuclear forces reside near a quantum phase transition. Using lattice effective field theory, Monte Carlo simulations were performed for systems with up to twenty nucleons. For even and equal numbers of protons and neutrons, a first-order transition was found at zero temperature from a Bose-condensed gas of alpha particles to a nuclear liquid. Whether one has an alpha-particle gas or nuclear liquid is determined by the strength of the alpha-alpha interactions, and the alpha-alpha interactions depend on the strength and locality of the nucleon-nucleon interactions. This insight is useful in improving calculations of nuclear structure and important astrophysical reactions involving alpha capture on nuclei.  These findings also provide a tool to probe the structure of alpha cluster states such as the Hoyle state responsible for the production of carbon in red giant stars and point to a connection between nuclear states and the universal physics of bosons at large scattering length.
 
 Processes such as the scattering of alpha particles,
 the triple-alpha reaction, and
@@ -1077,8 +1077,7 @@ steps needed to calculate the energy of the ground state by computing the ratio 
 
 \section{Codes and Benchmarks}
 
-Complete verisons of the codes discussed in this chapter and developed in the exercises can be found online via
-\href{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter6-programs}{this link}.  In order to run the codes, one must first copy the corresponding initial/final wavefunctions (waveinit\_1S0.f90, waveinit\_3S1.f90, or waveinit\_He4.f90) into the file waveinit.f90 used by the main program nuclei.f90. The number of nucleons is controlled by the parameter n\_f in input.f90 and must correspond to the number of nucleons in waveinit.f90.  
+Complete verisons of the codes discussed in this chapter and developed in the exercises can be found online via \href{http://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter6-programs}{this link}.  In order to run the codes, one must first copy the corresponding initial/final wavefunctions (waveinit\_1S0.f90, waveinit\_3S1.f90, or waveinit\_He4.f90) into the file waveinit.f90 used by the main program nuclei.f90. The number of nucleons is controlled by the parameter n\_f in input.f90 and must correspond to the number of nucleons in waveinit.f90.  
 
 As an example we show the beginning of the input file input.f90 for a two nucleon state with spatial lattice spacing $a = 1/(100\;{\rm MeV})$, temporal lattice spacing $a_t = 1/(150\;{\rm MeV})$, box size $L = 4a$, and Euclidean time extent $L_t = 6a_t$.  We use an $O(a^{4})$-improved lattice action for the nucleon hopping coefficients, $O(a^{0})$-improved lattice action for the pion hopping coefficients, and $O(a^{0})$-improved lattice action for the pion-nucleon coupling. The coefficient of the $^1S_0$ contact interaction is tuned to the physical $^1S_0$ $n-p$ scattering length and is $-5.615\times 10^{-5}\;{\rm MeV}^{-2}$.  The coefficient of the $^3S_1$ contact interaction is tuned to the deuteron binding energy at infinite volume and is $-6.543\times 10^{-5}\;{\rm MeV}^{-2}$.
 
