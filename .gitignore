@@ -24,6 +24,7 @@ temp*
 *.toc
 *.snm
 *.vrb
+*.bbl
 # eclipse files:
 *.cproject
 *.project
