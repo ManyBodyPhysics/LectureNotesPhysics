@@ -393,9 +393,9 @@ from the underlying to the effective picture is called a ``top-down'' approach.
 An alternative procedure, somewhat closer to what we described at the outset, 
 is to start ``bottom up,'' \ie, by simply writing down the effective 
 Lagrangian directly---or more precisely only those terms of the infinitely 
-many which are needed to achieve a given desired accuracy.  Being able to that 
-of course requires that as a first step one has already figures out which terms 
-are allowed and how they should be ordered.
+many which are needed to achieve a given desired accuracy.  Being able to 
+do that of course requires that as a first step one has already figured out 
+which terms are allowed and how they should be ordered.
 
 Our approach here is to work top down in the pedagogical sense, \ie, postpone 
 the discussion of the bottom-up approach and its ingredients until later in 
@@ -759,7 +759,11 @@ antiparticle part of $\varphi(x)$ comes with a factor $\eex^{+\ii p\cdot x}$.
 \label{sec:EFT-NonRelFerm}
 
 For relativistic Dirac fermions, the nonrelativistic reduction can be carried 
-out with the help of a so-called Foldy-Wouthuysen transformation.  The idea 
+out with the help of a so-called Foldy-Wouthuysen transformation.\footnote{An 
+alternative way to perform the nonrelativistic reduction is to introduce a 
+``heavy fermion'' field~\cite{Jenkins:1990jv}.  A comparison of this formalism 
+and the Foldy-Wouthuysen transformation can be found in 
+Ref.~\cite{Gardestig:2007mk}.}  The idea 
 behind the approach is to decouple the particle and antiparticle modes 
 contained together in a four-spinor $\psi$ through a sequence of unitary 
 transformations.  In the following, we demonstrate this procedure, using an 
@@ -898,7 +902,7 @@ Above we have used that
 and $(\gamma^0)^2=\one$.  Collecting everything, we get
 %
 \begin{equation}
- \LL_{\pi N}
+ \LL_{\psi}
  = \tilde{\psi}'^\dagger\left(
  \hat{E} - \frac{\gamma^0\hat{O}^2}{2\MN}
  + \frac{\gamma^0\commbig{\hat{O}}{\hat{E}}}{2\MN}
@@ -1273,7 +1277,7 @@ is derived using the field-theory language in Sec.~\ref{sec:EFT-Bosons}.
 While it is nice and reassuring that we can go back to simple quantum mechanics 
 from the one-body Schr\"odinger Lagrangian discussed so far, this feature is 
 not very relevant in practice.  We can, however, straightforwardly generalize 
-it to the many case.  To that end, consider a Lagrangian that includes a 
+it to the many-body case.  To that end, consider a Lagrangian that includes a 
 two-body interaction, written in terms of a general non-local 
 potential:\footnote{A static (time-independent) potential, as it is more common 
 in quantum mechanics, would be a function only of $\vx$ and $\vy$, and all 
@@ -1326,12 +1330,12 @@ will only get terms that are invariant under ``small'' Lorentz boosts.  More
 precisely, the nonrelativistic operators should be invariant under Galilean 
 transformations (assuming the original theory had rotational invariance, this 
 simply gets inherited by the effective one), and the form of so-called 
-``relativistic corrections'' is determined by the expansion of the dispersion 
-relation:
+``relativistic corrections'' is determined by the expansion of the 
+dispersion relation for positive-energy solutions:
 %
 \begin{equation}
- E^2 = m^2 + p^2
- \implies E = m + \frac{p^2}{2m} - \frac{p^4}{8m^3} + \cdots \,.
+ E = \sqrt{m^2 + p^2}
+ = m + \frac{p^2}{2m} - \frac{p^4}{8m^3} + \cdots \,.
 \end{equation}
 
 We now turn to discussing the bottom-up approach guided by these principles.  
@@ -1519,14 +1523,14 @@ dimensional grounds.
 \label{sec:EFT-FineTuning}
 
 In connection with the previous comment is another point worth stressing already 
-here: n\"ive dimensional analysis resides at the beginning of EFT wisdom, not at 
-the end, and in quite a few cases it turns out to be exactly what the name says: 
-na\"ive.  In other words, the actual scaling of a coupling constant can be quite 
-different from what one would infer by counting dimensions, a scenario that is 
-commonly referred to as ``fine tuning.''  To understand why that is consider, 
-for example, our bosonic toy model from Sec.~\ref{sec:EFT-IntOut-1}, but now 
-assume that there already is a four-$\phi$ contact interaction present prior to 
-integrating out the $\chi$ field:
+here: na\"ive dimensional analysis resides at the beginning of EFT wisdom, not 
+at the end, and in quite a few cases it turns out to be exactly what the name 
+says: na\"ive.  In other words, the actual scaling of a coupling constant can be 
+quite different from what one would infer by counting dimensions, a scenario 
+that is commonly referred to as ``fine tuning.''  To understand why that is 
+consider, for example, our bosonic toy model from Sec.~\ref{sec:EFT-IntOut-1}, 
+but now assume that there already is a four-$\phi$ contact interaction present 
+prior to integrating out the $\chi$ field:
 %
 \begin{equation}
  \LL = {-}\phi^\dagger\left(\dAlem + m_\phi^2\right)\phi
@@ -1639,7 +1643,7 @@ to adjust the coupling constants in such a way that they compensate the wrong
 high-momentum loop contributions in such a way that the physics the EFT is 
 supposed to describe comes out correctly.  For momenta up to $\Mhi$, we 
 trust the EFT, so it makes sense to keep such states in loops.  Hence, one 
-should typically choose $\Lambda > \Mhi$.  Choosing it lower that the 
+should typically choose $\Lambda > \Mhi$.  Choosing it lower than the 
 breakdown scale is possible, but this can induce corrections of the order 
 $Q/\Lambda > Q/\Mhi$, which is not desirable for the power counting.  In the 
 renormalized EFT, any cutoff in the interval $[\Mhi,\infty)$ is thus an 
@@ -1775,7 +1779,8 @@ respectively.
 The contact interactions in Eq.~(\ref{L-2body}) are ill-defined unless an
 ultraviolet cutoff is imposed on the momenta in loop diagrams.
 This can be seen by writing down the off-shell amplitude for two-body
-scattering at second order in perturbation theory:
+scattering at energy $E$ in the center-of-mass frame at second order in 
+perturbation theory:
 %----------------------
 \begin{equation}
  T_2 (E) \approx {-}C_0 - \frac\ii2
@@ -2860,7 +2865,7 @@ rewriting the Lagrangian~\eqref{eq:L-NN} as
  - t^{i\dagger}\left[\sigt
  + \left(\ii \partial_0+\frac{\vNabla^2}{4\MN}\right)\right]t^i
  + \yt\left[t^{i\dagger}\left(N^T P^i_t N\right)+\hc\right] \\
- - s^{\lambda\dagger}\left[\sigs
+ - s^{\lambda\dagger}\left[\sigs +
  \left(\ii \partial_0+\frac{\vNabla^2}{4\MN}\right)\right]s^\lambda
  + \ys\left[s^{\lambda\dagger}\left(N^T P^\lambda_s N\right)+\hc\right]
  + \cdots \,,
@@ -3130,7 +3135,7 @@ where $K$ is the ``kernel'' function
 \label{eq:KS}
 \end{equation}
 %
-\begin{equation}
+\begin{equation}EFT-
  D_\st(q;E) = \Delta_\st\!\left(E-\frac{q^2}{2\MN};q\right) \,,
 \label{eq:D-st}
 \end{equation}
@@ -3631,7 +3636,7 @@ and the energy assigned to the internal nucleon propagator has to be
 ${-}\frac{k_0}{2}-\frac{\gamd^2}{2\MN}+\frac{k^2}{8\MN}$.
 
 The blob in Fig.~\ref{fig:DeutDis} represents the deuteron vertex function 
-calculated in Sec.~\ref{sec:Dibaryons}.  Taking the result found there and 
+calculated in Sec.~\ref{sec:EFT-Dibaryons}.  Taking the result found there and 
 adding the spin-isospin structure, we find
 %
 \begin{equation}
