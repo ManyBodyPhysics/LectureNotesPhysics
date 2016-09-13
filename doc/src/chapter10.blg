@@ -3,44 +3,51 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter10.aux
 The style file: spphys.bst
 Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
-You've used 15 entries,
+Warning--can't use both author and editor fields in Detmold:2015xw
+Warning--empty journal in Lynn:2015eu
+Warning--empty journal in Shirokov:2016wo
+Warning--can't use both author and editor fields in Valdemoro:1987zl
+Warning--can't use both author and editor fields in Mazziotti:2007qe
+Warning--empty booktitle in Griesshammer:2015dp
+You've used 85 entries,
             2812 wiz_defined-function locations,
-            719 strings with 7293 characters,
-and the built_in function-call counts, 4739 in all, are:
-= -- 314
-> -- 114
-< -- 1
-+ -- 48
-- -- 33
-* -- 281
-:= -- 562
-add.period$ -- 16
-call.type$ -- 15
-change.case$ -- 1
+            1281 strings with 25201 characters,
+and the built_in function-call counts, 32163 in all, are:
+= -- 2269
+> -- 904
+< -- 4
++ -- 370
+- -- 273
+* -- 2074
+:= -- 3730
+add.period$ -- 141
+call.type$ -- 85
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 505
-empty$ -- 528
-format.name$ -- 43
-if$ -- 1092
+cite$ -- 91
+duplicate$ -- 3392
+empty$ -- 3181
+format.name$ -- 341
+if$ -- 7271
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 132
-newline$ -- 69
-num.names$ -- 15
-pop$ -- 207
+int.to.str$ -- 85
+missing$ -- 860
+newline$ -- 404
+num.names$ -- 85
+pop$ -- 1180
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 120
+skip$ -- 868
 stack$ -- 0
-substring$ -- 135
-swap$ -- 280
-text.length$ -- 1
+substring$ -- 1161
+swap$ -- 2173
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 24
-width$ -- 17
-write$ -- 155
+warning$ -- 6
+while$ -- 160
+width$ -- 87
+write$ -- 959
+(There were 6 warnings)

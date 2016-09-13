@@ -4,6 +4,7 @@
 %%%%% Commands for chapter 
 %%%%%
 
+
 %%%%% isotope notation
 \newcommand{\nuc}[2]{\ensuremath{^{#2}\mathrm{#1}}}
 
@@ -52,8 +53,30 @@
 \newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
 \newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
 
+
+\newcommand{\op}[1]{\ensuremath{\hat{#1}}}
+\newcommand{\adj}[1]{\ensuremath{#1}^\dag}
+% \newcommand{\vec}[1]{\enusremath{\mathbf{#1}}}
+
+\newcommand{\aO}{\ensuremath{a}}
+\newcommand{\aaO}{\ensuremath{\adj{a}}}
+
+\newcommand{\HO}{\op{H}}
+\newcommand{\TO}{\op{T}}
+\newcommand{\VO}{\op{V}}
+
+\newcommand{\kOV}{\op{\vec{k}}}
+\newcommand{\pOV}{\op{\vec{p}}}
+\newcommand{\qOV}{\op{\vec{q}}}
+
+
 %%%%% normal ordering
 \newcommand{\nord}[1]{\left\{#1\right\}}
+
+
+%%%%% commutator
+\newcommand{\comm}[2]{\ensuremath{[{#1},{#2}]}}
+\newcommand{\acomm}[2]{\ensuremath{ \big\{ {#1}, {#2} \big\} }}
 
 %%%%% editorial
 \newcommand{\tbd}[1]{{\color{red}#1}}
@@ -87,6 +110,185 @@ chapter \ref{chapter:cc}, the Monte Carlo results of chapter \ref{chapter:qmc} a
 
 \section{Introduction}
 
+
+\tbd{[Rework the beginning]}
+An \emph{ab initio} approach attempts to describe nuclear
+structure and dynamics based on fundamental degrees of freedom and their
+interactions. In the Standard Model, the fundamental theory of strong
+interactions is Quantum Chromodynamics (QCD), but a description of nuclear 
+observables on the level of quarks and gluons is not feasible, 
+except for the lightest few-nucleon systems (see, e.g., \cite{Detmold:2015xw}).
+Instead, we start from nuclear interactions that describe low-energy QCD observables in the $NN$ and $3N$
+systems, like scattering data or binding energies. Nowadays, such interactions 
+are derived in Chiral Effective Field Theory (EFT),
+which provides a constructive framework and organizational hierarchy
+for $NN$, $3N$, and higher many-nucleon forces, as well as consistent
+electroweak operators (see, e.g., \cite{Epelbaum:2009ve,Machleidt:2011bh,Epelbaum:2015gf,Entem:2015qf,Gezerlis:2014zr,Lynn:2015eu,Pastore:2009zr,Pastore:2011dq,Piarulli:2013vn,Kolling:2009yq,Kolling:2011bh}).
+Since Chiral EFT is a low-momentum expansion, high-momentum (short-range)
+physics is not explicitly resolved by the theory, but parametrized
+by the so-called low-energy constants (LECs). 
+
+\tbd{[Hierarchy of theories]}
+In principle, the LECs can be determined by matching calculations of
+the same observables in chiral EFT and (Lattice) QCD in the overlap
+region of the two theories. Since such a calculation is currently not 
+feasible, they are
+fit to experimental data, typically in the $\pi{}N$, $NN$, and $3N$ sectors. 
+Recently, Ekstr\"om \emph{et al.} have developed an optimization protocol
+for chiral interactions that gives up on the reductionist approach of
+fixing the LECs in the few-nucleon system, and includes certain many-body
+data in the fit as well. The chosen many-body data, e.g., selected radii, are 
+chosen in order improve the deficient saturation behavior of chiral interactions 
+that are used as input for nuclear many-body calculations. The first interaction
+optimized with this protocol is \NNLOsat{} \cite{Ekstrom:2015fk}, which is
+able to accurately describe the ground-state energies and charge radii of 
+$\nuc{Ca}{40,48}$ at the same time. Following 
+the same philosophy but not the same approach, Shirokov \emph{et al.} have 
+produced Daejeon16, a softened chiral $NN$ interaction that has been tuned 
+for the description of light nuclei without explicit $3N$ forces, to facilitate
+Full CI (FCI) calculations \cite{Shirokov:2004fe,Shirokov:2005bv,Shirokov:2007by,Shirokov:2016wo}.
+
+Renormalization group (RG) methods are natural companions for
+EFTs, because they make it possible to smoothly connect theories with 
+different resolution scales and degrees of freedom. Since they 
+were introduced in low-energy nuclear physics around the start 
+of the millennium \cite{Bogner:2003os,Bogner:2007od,Bogner:2010pq,Furnstahl:2013zt}, 
+they have provided a systematic framework for formalizing many ideas on the 
+renormalization of nuclear interactions and many-body effects that had been 
+discussed in the nuclear structure community since the 1950s. For instance,
+soft and hard-core $NN$ interactions can reproduce scattering data equally
+well, but have significantly different saturation properties, which caused
+the community to move away from the former in the 1970s (see, e.g., \cite{Bethe:1971qf}).
+What was missing at that time was the recognition of the intricate link
+between the off-shell $NN$ interaction and $3N$ forces that was formally
+demonstrated for the first time by Polyzou and Gl\"ockle in 1990 \cite{Polyzou:1990fk}.
+From the modern RG perspective, soft- and hard-core interactions emerge
+as representations of low-energy QCD at different resolution scales, 
+and the dialing of the resolution scale necessarily leads to induced
+$3N$ forces, in such a way that observables (including saturation
+properties) remain invariant under the RG flow (see section \ref{sec:srg} 
+and \cite{Bogner:2010pq,Furnstahl:2013zt}). In conjunction, chiral EFT
+and nuclear RG applications demonstrate that one cannot treat the $NN, 3N, \ldots$
+sectors in isolation from each other.
+
+\tbd{[Contrary to G-matrix....]}In the SRG and other
+modern RG approaches, low- and high-momentum physics are decoupled properly,
+and the resulting low-momentum $NN+3N$ interactions are indeed perturbative
+ \cite{Bogner:2006qf,Bogner:2010pq}. For such interactions, results from 
+finite-order many-body perturbation theory (MBPT) are in good agreement 
+with non-perturbative results if the expansion is based on a Hartree-Fock 
+reference state \cite{Tichai:2016vl,Roth:2010ys}.
+
+Of course, low-momentum $NN+3N$ interactions are well-suited inputs not
+just for MBPT, but for all methods that work in truncated configuration
+spaces. The decoupling of low- and high-momentum modes of the interaction
+leads to a greatly improved convergence behavior, which in turn extends 
+the range of nuclei a many-body method can be applied to. With SRG-evolved
+interactions, the No-Core Shell Model (NCSM) and related FCI methods can
+be extended into the lower $sd-$shell 
+\cite{Barrett:2013oq,Jurgenson:2013fk,Hergert:2013ij,Roth:2014fk}, and 
+methods with systematic many-body truncations like Coupled Cluster (CC)
+are nowadays applied to nuclei as heavy as tin \cite{Binder:2014fk,Hagen:2014ve,Hagen:2016rb}.
+
+In the examples discussed so far, the SRG has been used to ``pre-process''
+free-space interactions that serve as input for nuclear many-body 
+calculations. There is no reason why the idea of decoupling energy 
+(or momentum) scales should not be useful for the treatment of a
+strongly interacting many-body system like the nucleus as well. This
+consideration, then, leads us to the concept of the In-Medium SRG
+(IM-SRG) \cite{Tsukiyama:2011uq,Hergert:2013mi,Hergert:2016jk}. In a 
+nutshell, we want to use SRG-like flow equations to 
+decouple physics at different excitation energy scales of the nucleus, 
+and render the Hamiltonian matrix in configuration space block or 
+band diagonal in the process. This can also be viewed as a re-organization 
+of the many-body expansion, in which correlations that are described 
+explicitly by the configuration space are absorbed into an 
+\emph{RG-improved} Hamiltonian. With an appropriately chosen decoupling 
+strategy, it is even possible to extract eigenvalues and eigenstates
+of the nuclear Hamiltonian, and therefore, the IM-SRG qualifies as an 
+\emph{ab initio} method for solving quantum many-body problems.
+
+
+The idea of using flow equations to solve quantum many-body problems
+was already discussed in Wegner's initial work on the SRG \cite{Wegner:1994dk} 
+(also see \cite{Kehrein:2006kx} and references therein). In the 
+solid-state physics literature, the approach is also known as 
+continuous unitary transformation (CUT) theory, see  
+\cite{Heidbrink:2002kx,Drescher:2011kx,Krull:2012bs,Fauseweh:2013zv,Krones:2015ft}.
+When we discuss our decoupling strategies for the nuclear many-body
+problem, it will become evident that the IM-SRG is related to CC 
+\cite{Shavitt:2009,Hagen:2014ve}, canonical transformation theory (CT) 
+\cite{White:2002fk,Yanai:2006uq,Yanai:2007kx}, and the Irreducible (or
+Anti-Hermitian) Contracted Schr\"odinger Equation (ICSE) approach 
+\cite{Nakatsuji:1976yq,Valdemoro:1987zl,Mukherjee:2001uq,Kutzelnigg:2002kx,
+Kutzelnigg:2004vn,Kutzelnigg:2004ys,Mazziotti:2006fk}, and there is
+even some overlap with purely variational methods (see section \ref{sec:generators}).
+What sets the IM-SRG apart from these methods is that the Hamiltonian 
+instead of the wave function is at the center of attention, in the
+spirit of RG methodology. This seems to be a trivial distinction, but
+there are practical advantages of this viewpoint, e.g., the simultaneous 
+decoupling of ground and excited states (see section \ref{sec:decoupling}), 
+the avoidance of $N$-representability issues \cite{Mazziotti:2007qe}, and
+more. Inspired in part by our work on the IM-SRG in nuclear physics, Evangelista 
+and co-workers have recently presented the Driven SRG for \emph{ab initio}
+calculations in quantum chemistry, which implements IM-SRG transformations 
+in terms of inhomogeneous nonlinear equations rather than flow equations 
+\cite{Evangelista:2014rq,Li:2015nq,Li:2016rm,Hannon:2016lp}. 
+
+
+In this work, we will discuss two distinct implementations of the 
+IM-SRG ideas. The first is the so-called Multireference IM-SRG (MR-IM-SRG),
+which is designed for calculations of the ground-state properties of 
+closed- and open-shell nuclei.  Like most many-body
+approaches, it relies on the organization of the many-body basis
+in terms of a reference state and its excitations. 
+Contrary to approaches like MBPT or FCI, which employ Slater
+determinant reference states, the MR-IM-SRG is built for arbitrary
+correlated reference states. This gives us the greatest possible
+flexibility in the description of correlations: Static correlations,
+e.g., due to intrinsic deformation, can be built into the reference
+state, while dynamic correlations due to the excitation of nucleon pairs, 
+triples, etc. are described by the MR-IM-SRG transformation. 
+
+In the following sections we outline the basic ingredients behind the
+SRG method, with an emphasis on applications to infinite nuclear
+matter, coupling our final results with those of chapter 8, 9 and
+11. The next section presents the essential philosophy of the method,
+which in practice means to solve Schr\"odinger's equation for a
+many-body system in terms of coupled ordinary differential equations
+(ODEs). We present also two simple demonstrations of the SRG method with the true vacuum as reference state. This corresponds in principle to finding all eigenvalues of a matrix by the solution of coupled differential equations (ODEs). 
+However, compared with standard eigenvalue solvers, this is a less efficient way of finding the full spectrum of a matrix. 
+Moreover, with growing dimensionalities, it becomes quickly impossible to store the matrix elements and solve the coupled ODEs. 
+Introducing a reference vacuum as done in chapters 8 and 9, allows us to find approximate solutions to properties  like the  ground state energy and the correlation energy, or selected excited states. This leads us to the
+to the in-medium SRG (IM-SRG) approach discussed in this chapter. 
+We apply thereafter the IM-SRG approach to the simplified pairing  model (presented in chapter 8) and 
+to pure neutron matter. We compare our IM-SRG results to those obtained from coupled cluster theory and many-body perturbation theory of  chapter 8 and quantum Monte Carlo of the previous chapter.  In the final section, we present our conclusions and point  to further
+perspectives and research directions.
+
+\section{The Similarity Renormalization Group}
+
+The basic idea of the Similarity Renormalization Group (SRG) method is 
+quite general: We want to ``simplify'' our system's Hamiltonian
+$\HO(s)$ by means of a continuous unitary transformation that is parametrized
+by a one-dimensional parameter $s$,
+\begin{equation}\label{eq:cut}
+  \hat{H}(s)=\hat{U}(s)\hat{H}(0)\hat{U}^{\dagger}(s)\,.
+\end{equation}
+Here, $\HO(s=0)$ is the starting Hamiltonian. To specify what we mean by ``simpler'',
+it is most useful to think of $\HO$ as a matrix rather than an operator for the
+time being --- in practice, we are forced to work with discrete and finite matrix
+representations of $\HO$ anyway. As in any quantum mechanical problem, we are 
+primarily interested in finding the eigenstates of $\HO$ by diagonalizing its
+matrix representation. This task is simplified if we can construct a unitary 
+transformation that renders the Hamiltonian more and more diagonal as $s$ 
+increases. 
+
+
+
+Of course, this idea is very general, and not necessarily related to renormalization.
+
+
+\tbd{[General Concept, leave nuclear interactions for last subsection, bridge to IM-SRG]}
 The Similarity Renormalization Group (SRG) method was first formulated by
 Wegner \cite{Wegner:1994dk} and Glazek and Wilson \cite{Glazek:1993il}
 to study condensed matter systems and light-front quantum field
@@ -105,38 +307,11 @@ physics applications, where the SRG is used to decouple momentum or
 energy scales, and thereby render the nuclear Hamiltonian more
 suitable for \emph{ab initio} many-body calculations \cite{Bogner:2007od,Bogner:2010pq,Morris:2015ve,Hergert:2016jk,Hergert:2016ng}.
 
-In the following sections we outline the basic ingredients behind the
-SRG method, with an emphasis on applications to infinite nuclear
-matter, coupling our final results with those of chapter 8, 9 and
-11. The next section presents the essential philosophy of the method,
-which in practice means to solve Schr\"odinger's equation for a
-many-body system in terms of coupled ordinary differential equations
-(ODEs). We present also two simple demonstrations of the SRG method with the true vacuum as reference state. This corresponds in principle to finding all eigenvalues of a matrix by the solution of coupled differential equations (ODEs). 
-However, compared with standard eigenvalue solvers, this is a less efficient way of finding the full spectrum of a matrix. 
-Moreover, with growing dimensionalities, it becomes quickly impossible to store the matrix elements and solve the coupled ODEs. 
-Introducing a reference vacuum as done in chapters 8 and 9, allows us to find approximate solutions to properties  like the  ground state energy and the correlation energy, or selected excited states. This leads us to the
-to the in-medium SRG (IM-SRG) approach discussed in this chapter. 
-We apply thereafter the IM-SRG approach to the simplified pairing  model (presented in chapter 8) and 
-to pure neutron matter. We compare our IM-SRG results to those obtained from coupled cluster theory and many-body perturbation theory of  chapter 8 and quantum Monte Carlo of the previous chapter.  In the final section, we present our conclusions and point  to further
-perspectives and research directions.
 
-\section{Similarity Renormalization Group method}
-
-\begin{figure*}[t]
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{\fdir/rg_evolution_schematic.pdf}
-  \end{center}
-  \caption{\label{fig:schematic}Schematic illustration of two types of RG evolution 
-    for $NN$ potentials in momentum space: (a) \Vlowk{} running in $\Lambda$, and 
-    (b) SRG running in $\lambdaSRG$ (see main text). Here, $k$ and $k'$ denote the 
-    relative momenta of the initial and final state, respectively. At each $\Lambda_i$ 
-    or $\lambdaSRG_i$, the matrix elements outside of the corresponding 
-    blocks or bands are negligible, implying that high- and low-momentum 
-    states are decoupled.
-  }
-\end{figure*}
-
-We give here a brief overview of the SRG method applied to two simple systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and the simple pairing model discussed in chapter 8, the latter as a numerical case study in this chapter. 
+% We give here a brief overview of the SRG method applied to two simple 
+% systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and 
+% the simple pairing model discussed in chapter 8, the latter as a numerical 
+% case study in this chapter. 
 
 In the similarity renormalization group (SRG) method, one performs a
 continuous sequence of unitary transformations on a Hamiltonian
@@ -231,7 +406,7 @@ $\mathbf{U}$
 \]
 with $c = \cos \gamma$ and $s = \sin \gamma$. We have then that  $H' = UHU^T$ is diagonal. 
 
-To transform the matrix into one with zero  nondiagonal matrix $H'$ we need to solve
+To transform the matrix into one with zero nondiagonal matrix $H'$ we need to solve
 \[ 
 (H_{22} - H_{11})cs + H_{12}(c^2 - s^2) = 0, 
 \]
@@ -527,6 +702,7 @@ With $\lambda=1$ (or $s=1$), our similarity transformed matrix becomes
 \end{bmatrix}.
 \]
 
+\tbd{
 With $\lambda=0.1$ (or $s=10$), our similarity transformed matrix becomes
 \[
 \begin{bmatrix}
@@ -541,6 +717,7 @@ With $\lambda=0.1$ (or $s=10$), our similarity transformed matrix becomes
 We see clearly that for $\lambda=0.1$, our eigenvalues are equal to
 the exact ones (at the level of six leading digits) and the
 non-diagonal matrix are for all practical purposes equal to zero.
+}
 
 For the simple pairing model, with modest dimensionalities of the
 Hamiltonian matrix, we can solve the flow equations with respect to
@@ -558,10 +735,153 @@ methods discussed in chapters 8, 9 and 11. The final part of this
 chapter is devoted to a presentation of the in-medium SRG approach and
 its applications to the pairing model and infinite nuclear matter.
 
+\subsubsection{Evolution of Nuclear Interactions}
+\begin{figure*}[t]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{\fdir/rg_evolution_schematic.pdf}
+  \end{center}
+  \caption{\label{fig:schematic}Schematic illustration of two types of RG evolution 
+    for $NN$ potentials in momentum space: (a) \Vlowk{} running in $\Lambda$, and 
+    (b) SRG running in $\lambdaSRG$ (see main text). Here, $k$ and $k'$ denote the 
+    relative momenta of the initial and final state, respectively. At each $\Lambda_i$ 
+    or $\lambdaSRG_i$, the matrix elements outside of the corresponding 
+    blocks or bands are negligible, implying that high- and low-momentum 
+    states are decoupled.
+  }
+\end{figure*}
+
+
+In figure \ref{fig:schematic}, we show schematic examples of RG evolutions that are applied to
+nucleon-nucleon interactions in momentum-space representation. Figure \ref{fig:schematic}(a) 
+implements the RG as a decimation: The interaction is evolved to decreasing
+cutoff scales $\Lambda_0 > \Lambda_1 > \Lambda_2$, and we end up with a low-momentum interaction
+\Vlowk{} that only has non-zero matrix elements between states with initial and final 
+relative momenta $k,k'\leq\Lambda$ \cite{Bogner:2003os,Bogner:2010pq}. In contrast, 
+figure \ref{fig:schematic}(b) results from a continuous unitary transformation via the flow 
+equation \eqref{eq:opflow}, using a Wegner-type generator built from the relative kinetic 
+energy in the two-nucleon system:
+\begin{equation}\label{eq:def_srg_generator}
+  \eta(\lambda) \equiv \Big[\,\frac{\kOV^2}{2\mu}, v(\lambda)\Big]\,.
+\end{equation}
+Here, $\kOV=\tfrac{1}{2}(\pOV_1-\pOV_2)$, and $\mu$ is the reduced nucleon mass. We have
+parametrized the transformation with $\lambdaSRG=s^{-1/4}$, which has the 
+dimensions of a momentum (in natural units). As suggested by figure \ref{fig:schematic}(b),
+$\lambdaSRG$ is a measure for the ``width'' of the band-diagonal Hamiltonian in momentum 
+space, i.e., it controls the scale of momentum transfers between nucleons. Because  
+\begin{equation}
+  |\qOV|=|\kOV' - \kOV|\lesssim \lambdaSRG
+\end{equation}
+low- and high-lying momenta are decoupled in a proper RG sense as $\lambdaSRG$ is 
+decreased.
+
+The decoupling of low- and high-lying momenta significantly improves the convergence
+properties of configuration-space based many-body methods, because it prevents the 
+Hamiltonian from scattering nucleon pairs from low to high momentum states. Methods 
+like the NCSM or the IM-SRG discussed below yield converged results in much smaller 
+many-body Hilbert spaces, which in turn makes it possible to
+apply these methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
+ However, this improvement 
+comes at a cost, which is best illustrated by considering the Hamiltonian in a 
+second-quantized form, assuming only a two-nucleon interaction for simplicity:
+\begin{equation}\label{eq:H}
+  \Hint = \Trel + V = \frac{1}{4}\sum_{pqrs} \matrixe{pq}{\frac{\kOV_{12}^2}{2\mu}+v_{12}}{rs}\aaO_p\aaO_q\aO_s\aO_r\,.
+\end{equation}
+If we plug $\Trel$ and $V$ into the commutators in equations \eqref{eq:def_srg_generator} and 
+\eqref{eq:opflow}, we obtain
+\begin{equation}\label{eq:comm2B_vac}
+  \comm{\aaO_i\aaO_j\aO_l\aO_k}{\aaO_p\aaO_q\aO_s\aO_r}=
+  \delta_{lp}\aaO_i\aaO_j\aaO_q\aO_s\aO_r\aO_k + \aaO\aaO\aaO\aO\aO\aO
+  -\delta_{lp}\delta_{kq}\aaO_i\aaO_j\aO_s\aO_r + \aaO\aaO\aO\aO\,, 
+\end{equation}
+where the terms with suppressed indices schematically stand for additional two- and
+three-body operators. Thus, even if we start from a pure two-body interaction, the SRG 
+flow will induce operators of higher rank, i.e., three-, four-, and in general 
+up to $A$-nucleon interactions. Of course, these induced interactions 
+are only probed if we study an $A$-nucleon system. If we truncate the SRG flow equations
+at the two-body level, we preserve the properties of the two-nucleon system, in particular
+phase shifts and the deuteron binding energy. A truncation at the three-body level 
+ensures the invariance of observables in $A=3$ nuclei, 
+e.g.~$\nuc{H}{3}$ and $\nuc{He}{3}$ ground-state energies, and so on. Truncations in the 
+SRG flow equation cause a violation of unitarity that manifests as
+a (residual) dependence of many-body results on $\lambdaSRG$. By varying this parameter, 
+the size of the missing contributions can be assessed (see, e.g., \cite{Bogner:2010pq,
+Jurgenson:2009bs,Hebeler:2012ly,Roth:2011kx,Hergert:2013mi,Hergert:2013ij,Binder:2014fk,
+Soma:2014eu,Griesshammer:2015dp}).
+
+State-of-the-art SRG evolutions of nuclear interactions are nowadays performed in 
+the three-body system, using relative (Jacobi) harmonic oscillator
+\cite{Jurgenson:2009bs,Jurgenson:2011zr,Jurgenson:2013fk}, relative momentum plane
+wave \cite{Hebeler:2012ly}, or momentum-space hypherspherical harmonics representations 
+\cite{Wendt:2013uq}.
+Figure \ref{fig:vsrg_momentum} shows an example of the latter, the evolution of 
+NN and $3N$ matrix elements of a chiral \NNLO{} interaction by Epelbaum, Gl\"ockle,
+and Mei\ss{}ner \cite{Epelbaum:2002nr,Epelbaum:2006mo}, with cutoffs 550/600 MeV. As discussed for our 
+schematic example, both the $NN$ and $3N$ interactions become band diagonal and the SRG 
+decouples the low- and high-momentum regimes as we evolve to lower values of $\lambdaSRG$. 
+In figure \ref{fig:triton}, the same family 
+of SRG-evolved interactions is used to calculate the ground-state energy of the triton,
+as a function of $\lambdaSRG$. If only the $NN$ part of the chiral interaction is used as 
+input, and the SRG generator and flowing Hamiltonian are truncated at the two-body level 
+(curve ``NN-only''), the SRG evolution is not unitary in the three-body system. The 
+energy exhibits a significant dependence on $\lambdaSRG$, on the order of 5--6\%. If the 
+flow equations are truncated at the three-body level instead, induced $3N$ interactions are
+properly included and the unitarity of the transformation is restored (\emph{$NN\!+\!3N$-induced}): 
+The energy does not change as $\lambdaSRG$ is varied. Finally, the curve \emph{$NN\!+\!3N$-full} 
+shows the result for a calculation with initial $NN$ and $3N$ forces, which are consistently 
+SRG-evolved at the three-body level. The triton ground-state energy is again invariant 
+under the SRG flow, and closely reproduces the experimental value that is used as 
+constraint in the adjustment of the $3N$ force's low-energy constants (see, e.g., 
+\cite{Epelbaum:2009ve,Machleidt:2011bh,Gazit:2009qf}).
+
+\begin{figure*}[t]
+  % \setlength{\unitlength}{\textwidth}
+  % \begin{center}
+  %   \includegraphics[width=0.95\unitlength]{fig/Vkk_2_and_3_EGM_550_600.png}
+  % \end{center}  
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{\fdir/srg_evolution_me.pdf}
+  \end{center}    
+  \caption{\label{fig:vsrg_momentum}SRG evolution of a chiral \NNLO{} $NN\!+\!3N$
+  Hamiltonian with cutoffs $550/600$ MeV \cite{Epelbaum:2002nr,Epelbaum:2006mo}
+  in a three-body hyperspherical momentum basis. The figure shows contour
+  plots of the matrix elements as a function of $\lambdaSRG$ in the lowest 
+  hyperspherical partial wave, both for the $3N$ interaction (top panel)
+  and the embedded $NN$ interaction in that
+  partial wave (lower panel). See \cite{Wendt:2013ys} for
+  additional details. Figure courtesy of K.~Wendt.}
+\end{figure*}
+
+\begin{figure*}[t]
+  % \setlength{\unitlength}{\textwidth}
+  % \begin{center}
+  %   \includegraphics[width=0.5\unitlength]{fig/Triton_N2LO.pdf}
+  % \end{center}  
+  \setlength{\unitlength}{\textwidth}
+  \begin{center}
+    \includegraphics[width=0.5\unitlength]{\fdir/srg_evolution_energy.pdf}
+  \end{center}  
+  \caption{\label{fig:triton}Ground state energy of $\nuc{H}{3}$ as a function 
+  of the flow parameter $\lambdaSRG$ for different initial \NNLO{} $NN\!+\!3N$ interactions
+  \cite{Epelbaum:2002nr,Epelbaum:2006mo}. $NN$-only means initial and 
+  induced $3N$ interactions are discarded, $NN\!+\!3N$-induced takes only 
+  induced $3N$ interactions into account, and $3N$-full contains initial
+  $3N$ interactions as well. The black dotted line shows the experimental 
+  binding energy \cite{Wang:2012uq}. Figure courtesy of K.~Hebeler.}
+\end{figure*}
+
+% Pioneering work on implementing the SRG evolution in the lowest partial 
+% waves of the four-body system has been carried out by A.~Calci and 
+% co-workers \cite{Calci:2014xy}, again working in Jacobi HO representation.
+The SRG flow equations force us to manipulate large sections (or the 
+entirety) of the Hamiltonian's spectrum in order to avoid basis 
+truncation artifacts (also cf.~\cite{Roth:2014fk,Binder:2014fk})
+We may wonder, then, if it is possible to avoid the use of matrix 
+representations entirely by solving the operator flow equation 
+\eqref{eq:opflow} directly in the algebra of operators. This is the 
+strategy that we will explore in the following, which will 
+lead us to the formulation of the In-Medium SRG. 
 
 \section{The In-Medium SRG approach}
-
-
 
 Instead of performing SRG in free space, the evolution can be done at
 finite density, that is directly in the $A$-body system
@@ -760,18 +1080,26 @@ results in much better numerical properties.
 
 
 
+\section{Perturbative Analysis}
+
 
 \section{In-medium SRG studies of the pairing model and infinite neutron matter}
 
 \section{Conclusions and perspectives}
+\begin{itemize}
+\item Magnus
+\item Multi-reference
+\item TVS-IMSRG
+\end{itemize}
 
-
-\begin{acknowledgement}
+\section{Acknowledgements}
 This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University).
 \tbd{HH startup, NSF?}
-\end{acknowledgement}
+
+\section*{Appendix: Products and Commutators of Normal-Ordered Operators}
+\addcontentsline{toc}{section}{Appendix}
 
 \bibliographystyle{spphys}
-% \bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
-\bibliography{hh}
+\bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
+% \bibliography{hh}
     
