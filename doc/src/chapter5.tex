@@ -316,9 +316,9 @@ Finally, this form of $K$ also makes the calculation of propagators very simple.
 K^{-1}(\tau,0) &=& D^{-1} X(\phi_{\tau-1})D^{-1}X(\phi_{\tau-2})D^{-1} \cdots X(\phi_0)D^{-1} \cr
 &=& D^{-1}X(\phi_{\tau-1})K^{-1}(\tau-1,0) \ ,
 \eeq
-where $K^{-1}(0,0) = D^{-1}$, and all entries are $V\times V \ , (V=L^3)$ matrices which may be projected onto the desired state. This form suggests a simple iterative approach to calculating propagators: start with a source (a spatial vector projecting onto some desired quantum numbers and interpolating wavefunction), hit it with the kinetic energy operator corresponding to free propagation on the time slice, then hit it with the $\phi$ field operator on the next time link, then another free kinetic energy operator, and so on, finally projecting onto a chosen sink vector. 
+where $K^{-1}(0,0) = D^{-1}$, and all entries are $V\times V$ matrices, with $V=L^3$, which may be projected onto the desired state. This form suggests a simple iterative approach to calculating propagators: start with a source (a spatial vector projecting onto some desired quantum numbers and interpolating wavefunction), hit it with the kinetic energy operator corresponding to free propagation on the time slice, then hit it with the $\phi$ field operator on the next time link, then another free kinetic energy operator, and so on, finally projecting onto a chosen sink vector. 
 
-As will be discussed further in Sec{systematic}, it is often preferable to calculate the kinetic energy operator in momentum space, while the auxiliary field in $X(\phi)$ must be generated in position space. Thus, Fast Fourier Transforms (FFTs) may be used between each operation to quickly translate between the bases. Example code for generating source vectors, kinetic operators, and interaction operators will be provided in later Sections.
+As will be discussed further in \Sec{systematic}, it is often preferable to calculate the kinetic energy operator in momentum space, while the auxiliary field in $X(\phi)$ must be generated in position space. Thus, Fast Fourier Transforms (FFTs) may be used between each operation to quickly translate between the bases. Example code for generating source vectors, kinetic operators, and interaction operators will be provided in later Sections.
 
 A cartoon of this process on the lattice is shown in \Fig{lat}. The choice of $Z_2$ auxiliary fields also simplifies the understanding of how four-fermion interactions are generated. On every time link, imagine performing the sum over $\phi = \pm 1$. If there is only a single fermion propagator on a given link this gives zero contribution because the term is proportional to $\sum_{\phi=\pm 1} \sqrt{g_0} \phi = 0$. However, on time slices where two propagators overlap, we have instead $\sum_{\phi = \pm 1} g_0 \phi^2 = 2 g_0$. In sum, anywhere two fermions exist at the same spacetime point a factor of $g_0$ contributes, corresponding to an interaction.
 
@@ -1334,7 +1334,7 @@ On the other hand, these $s$-wave two-body interactions are not the only possibl
 \beq
 {\mathcal{ O}}_{p\mbox{\tiny -wave}} \sim \psi^{\dagger} \mathbf{\nabla} \psi \cdot \psi^{\dagger} \mathbf{\nabla} \psi \ ,
 \eeq
-and induces errors at ${\mathcal{ O}}\left(b_s n^{1/3})^{3}\right)$. In order to cancel this operator we could in principle add a $\phi$ field which carries momentum and carry out a similar program for tuning the coefficients as we used for the $s$-wave interaction. This destroys the separability of our interaction, however, and may be difficult to implement, in addition to introducing a new source of noise.
+and induces errors at ${\mathcal{ O}}\left((b_s n^{1/3})^{3}\right)$. In order to cancel this operator we could in principle add a $\phi$ field which carries momentum and carry out a similar program for tuning the coefficients as we used for the $s$-wave interaction. This destroys the separability of our interaction, however, and may be difficult to implement, in addition to introducing a new source of noise.
 
 In general, we can determine all possible sources of discretization error as well as their scaling using a method referred to as the Symanzik effective action \cite{Symanzik1,Symanzik2,Symanzik3,Symanzik4,EKLN4}. The basic procedure begins through considering any possible operators (that have not been explicitly tuned) which are allowed by the symmetry of the theory. Because these operators may only be induced through discretization and must disappear in the continuum limit, they should be multiplied by the lattice spacing raised to the appropriate scaling dimension of the operator. We can then determine at what order in $b_s$, relative to the energy, we can expect systematic errors to arise.
 
@@ -1379,7 +1379,7 @@ The relative error in the energy will then be ${\mathcal{ O}}\left(L^{-(9.34-5)}
 
 It turns out that the ground state of three fermions in a harmonic potential is actually not the $s$-wave state, but a $p$-wave state with energy $\sim 4.27\omega$. Thus, we should expect an additional systematic error corresponding to a 3-body $p$-wave operator that contributes at ${\mathcal{ O}}\left(L^{-3.55}\right)$ \cite{2006PhRvL..97o0401W}. Finally, at approximately the same order as the 3-body $s$-wave there is a 2-body $d$-wave operator (four derivatives) with zero anomalous dimension, and therefore contributing at ${\mathcal{ O}}\left(L^{-5}\right)$.
 
-While certainly only the leading error (${\mathcal{ O}}\left(L^{-3}\right)$) will dominate very close to the continuum limit, at a finite lattice spacing we have just demonstrated that there are several sources of error scaling with very similar powers of the lattice spacing. If we wish to eliminate discretization errors through extrapolation to the continuum limit, we must include all possible non-negligible contributions in our extrapolation function. For example, we could employ the following function:
+While certainly only the leading error, $\left({\mathcal{ O}}\left(L^{-3}\right)\right)$, will dominate very close to the continuum limit, at a finite lattice spacing we have just demonstrated that there are several sources of error scaling with very similar powers of the lattice spacing. If we wish to eliminate discretization errors through extrapolation to the continuum limit, we must include all possible non-negligible contributions in our extrapolation function. For example, we could employ the following function:
 \beq
 E(L) = E_0\left[1+a L^{-3} + b L^{-3.55} + c L^{-4.34} + d L^{-5} + \cdots \right] \ ,
 \eeq
@@ -1589,7 +1589,7 @@ The KSW expansion proposed that pion exchange be treated as a series of perturba
 \includegraphics[width=0.1\linewidth]{Chapter5-figures/tree.png} & \sim \frac{g_A^2}{2f_{\pi}^2} f\left(\frac{p}{m_{\pi}}\right) \\
 \end{array} \ ,
 \eeq
-where $g_A$ is the axial coupling, $f_{\pi}$ is the pion decay constant, and $f(p/m_{\pi})$ is a dimensionless function. By comparison, at one loop there is a box diagram,
+where solid lines represent nucleons, dashed lines represent pions, $g_A$ is the axial coupling, $f_{\pi}$ is the pion decay constant, and $f(p/m_{\pi})$ is a dimensionless function. By comparison, at one loop there is a box diagram,
 \beq
 \begin{array}{cc}
 \includegraphics[width=0.1\linewidth]{Chapter5-figures/box.png} & \sim \left(\frac{g_A^2}{2f_{\pi}^2}\right)^2 \frac{M m_{\pi}}{4\pi} \tilde{f}\left(\frac{p}{m_{\pi}}\right)\\
@@ -1601,7 +1601,7 @@ Note that the factor of the nucleon mass, a large energy scale for the effective
 \eeq
 and that the expansion may converge very slowly. In practice, the convergence for this formulation might be acceptable in the $^1S_0$ scattering channel, but is poor in the spin triplet channel. This is likely due to the singular tensor force contribution to the two-nucleon potential in this channel, which we will discuss in a moment \cite{Fleming:1999ee}.
 
-Weinberg's formulation for nuclear EFT involves summing a subset of diagrams non-perturbatively, then using the resulting nucleon-nucleon potential to solve the Schrodinger equation. In doing so we can take into account higher orders in a perturbative expansion that  breaks down or converges slowly. For the pions we can iterate all possible tree level pion exchange diagrams to give the following 1PE potential \cite{Epelbaum:2010nr},
+Weinberg's formulation for nuclear EFT involves summing a subset of diagrams non-perturbatively, by first calculating a nucleon-nucleon potential diagrammatically, then using this potential to solve the Schrodinger equation. In doing so, we can take into account higher orders in a perturbative expansion that  breaks down or converges slowly. For the pions, tree-level pion exchange diagrams give rise to the following 1PE potential \cite{Epelbaum:2010nr}:
 \beq
 V_{\mbox{\tiny 1PE}}(\mathbf{r} = \left(\frac{g_A}{2f_{\pi}}\right)^2 \mathbf{\tau}_1 \cdot \mathbf{\tau}_2 \left[m_{\pi}^2\frac{e^{-m_{\pi}r}}{12\pi r}\left(S_{12}(\hat{r}) \left(1+\frac{3}{m_{\pi}r} + \frac{3}{(m_{\pi}r)^2}\right)+\mathbf{\sigma}_1 \cdot \mathbf{\sigma}_2 \right) -\frac{1}{3}\mathbf{\sigma}_1 \cdot \mathbf{\sigma}_2 \delta^3(r)\right] \ , \cr
 \eeq
