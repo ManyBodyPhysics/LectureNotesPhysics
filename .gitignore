@@ -12,3 +12,7 @@ chapter10.aux
 doc/src/lnp.idx
 doc/src/lnp.ilg
 doc/src/lnp.ind
+doc/src/Chapter10-programs/f95/a.out
+doc/src/Chapter10-programs/f95/constants.mod
+doc/src/Chapter10-programs/f95/inifile.mod
+doc/src/Chapter10-programs/f95/run_test.dat
