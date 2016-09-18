@@ -124,7 +124,7 @@ often assumed to be made of mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
 transitions to quark degrees of freedom at higher densities
-\cite{hh2000,prakash1996,steiner2010}.  In these notes we limit ourselves to matter composed
+\cite{hh2000,prakash1996,prakash2001,steiner2010}.  In these notes we limit ourselves to matter composed
 of neutrons only.  Furthermore, we will also consider matter at
 temperatures much lower than the typical Fermi energies.
 
@@ -295,8 +295,7 @@ matter in $\beta$-equilibrium.  One can extract information about the
 value of the symmetry energy at saturation density $n_0$ from
 systematic studies of the masses of atomic nuclei. However, these
 results are limited to densities around $n_0$ and for proton fractions
-close to $\frac{1}{2}$, see for example the various contributions in
-Ref.~\cite{symmetryenergy2013}.  Typical values for ${\cal S} (n)$ at
+close to $\frac{1}{2}$.  Typical values for ${\cal S} (n)$ at
 $n_0$ are in the range $27-38$ MeV.  For densities greater than $n_0$
 it is more difficult to get a reliable information on the symmetry
 energy, and thereby the related proton fraction.
@@ -468,8 +467,7 @@ quantization it is defined as
 \hat{H}_0=\hat{T} = \sum_{pq} \langle p|\hat{t}|q\rangle a_p^\dagger
 a_q,
 \]
-where the matrix elements $\langle p|\hat{t}|q\rangle$ are defined in
-Eq.~(\ref{eq:kineticenergy}).  The two-body interaction reads
+where the matrix elements $\langle p|\hat{t}|q\rangle$ represent the expectation value of the kinetic energy operator (see the discussion below as well).  The two-body interaction reads
 \[
 \hat{H}_I=\hat{V} = \frac{1}{4} \sum_{pqrs} \langle
 pq|\hat{v}|rs\rangle_{AS} a_p^\dagger a_q^\dagger a_s a_r,
@@ -584,8 +582,7 @@ periodic boundary conditions which limit the allowed wave numbers to
 k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm
 1,\pm 2, \dots
 \]
-The operator for the kinetic energy can be written as, see problem
-\ref{problem:prob8kinetic},
+The operator for the kinetic energy can be written as
 \[
 \hat{T}=\sum_{\mathbf{p}\sigma_p}\frac{\hbar^2k_P^2}{2m}a_{\mathbf{p}\sigma_p}^{\dagger}a_{\mathbf{p}\sigma_p}.
 \]
@@ -680,8 +677,8 @@ gas only, this needs to be replaced by the number of electrons $N$.
 Exercise \ref{problem:spbasissetup} deals with setting up a program
 that establishes the single-particle basis for nuclear matter
 calculations with input a given number of nucleons and a user
-specificied density or Fermi momentum.
-
+specificied density or Fermi momentum. The recent works of Binder {\em et al} \cite{binder2016} and McElvain and Haxton
+\cite{haxton2016} offer interesting perspectives on effective Hamiltonians and choice of basis functions.
 
 \subsection{Two-body interaction}
 
@@ -869,7 +866,7 @@ During the past two decades it has been demonstrated that chiral
 effective field theory represents a powerful tool to deal with
 hadronic interactions at low energy in a systematic and
 model-independent way (see
-Refs.~\cite{weinberg1990,weinberg1991,ordonez1992,ordonez1994,ordonez1996,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,ekstromPRX}).
+Refs.~\cite{weinberg1990,ordonez1996,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,ekstromPRX}).
 Effective field theories (EFTs) are defined in terms of effective Lagrangians which are given by
 an infinite series of terms with increasing number of derivatives
 and/or nucleon fields, with the dependence of each term on the pion
@@ -927,7 +924,7 @@ $C=1$), Eq.~(\ref{eq_nu}) collapses to
 \label{eq_nunn} 
 \end{equation}
 Thus, in terms of naive dimensional analysis or ``Weinberg counting''
-\cite{weinberg1990,weinberg1991}, the various orders of the
+\cite{weinberg1990}, the various orders of the
 irreducible graphs which define the chiral $NN$ potential are given by
 (cf.\ Fig.~\ref{fig_diagNNLO})
 \begin{eqnarray}
@@ -1755,7 +1752,7 @@ With a canonical Hartree-Fock basis our Hamiltonian matrix reads
   considerably the size of the Hamiltonian matrices to be
   diagonalized, but can lead to so-called unlinked contributions, and
   thereby wrong results, for a given expectation value
-  \cite{barrettmusial2007}.  A third possibility is to constrain the
+  \cite{bartlett2007}.  A third possibility is to constrain the
   number of excitations by an energy cutoff. This cutoff defines a
   maximum excitation energy. The maximum excitation energy is normally given by the 
 sum of single-particle energies defined by the unperturbed one-body part of the Hamiltonian.
@@ -1899,7 +1896,7 @@ energy of Eq.~(\ref{eq:correlationenergy}).  These
 compute expectation values of other operators,
     as well as transition probabilities. Moreover, correlations are easy to understand in terms of contributions
     to a given operator beyond the Hartree-Fock contribution. 
-For larger dimensionalities $d$, with $d > 10^5$, iterative Krylov methods \cite{krylov} like Lanczos' \cite{lanczos} or Davidson's \cite{davidson} 
+For larger dimensionalities $d$, with $d > 10^5$, iterative Krylov methods \cite{golubvanloan} like Lanczos' \cite{lanczos} or Davidson's \cite{davidson1989,davidson1993} 
 algorithms are frequently used. These methods yield, with a finite number of iteration, only a subset of all eigenvalues of interest. Lanczos' algorithm converges to the extreme values, yielding the lowest-lying and highest-lying eigenstates, see for example Ref.~\cite{golubvanloan} for a proof. 
 
 With the eigenvectors we can compute
@@ -2080,7 +2077,7 @@ where the reference energy is given by
   $E$. Not much has been gained thus from a practical computational
   point of view.
 
-  In Brilluoin-Wigner perturbation theory \cite{haxton,shavittbartlett2009} it is customary to set
+  In Brilluoin-Wigner perturbation theory \cite{shavittbartlett2009} it is customary to set
   $\omega=E$. This results in the following perturbative expansion for
   the energy $\Delta E$
   \begin{align}
@@ -2178,7 +2175,7 @@ where the reference energy is given by
   system, and applies equally well to both nuclear matter and
   closed-shell nuclei such as the doubly magic nucleus $^{40}$Ca.  
 We assume the reader is familiar 
-with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{svavittbartlett2009}.
+with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{shavittbartlett2009}.
 \begin{figure}[hbtp]
     \includegraphics[width=\linewidth]{Chapter8-figures/mbpt.pdf}
       \caption{Diagrams which enter the definition of the ground-state
@@ -2242,7 +2239,7 @@ have an even number of hole lines and closed loops, resulting thus in a positive
   $V(|{\mathbf r}|)$ becomes meaningless. A perturbative expansion in terms of
 such interaction matrix elements may thus lead to a slowly converging expansion.
 A standard recipe to circumvent such problems has been to sum up 
-a selected class of correlations. We discuss such possibilities in section \ref{sec:cc}.  
+a selected class of correlations. We discuss such possibilities in section \ref{sec:chap8cctheory}.  
 
 
 
@@ -2345,7 +2342,7 @@ interactions.  There are however classes of correlations which can be
 summed up to infinite order in the interaction.  The hope is that such
 correlations can mitigate specific convergence issues, although there
 is no a priori guarantee thereof.  Examples are the so-called TDA and
-RPA class of diagrams \cite{ripkablaizot}, as well as the resummation
+RPA class of diagrams \cite{blaizot}, as well as the resummation
 of two-particle-two-hole correlations discussed in chapter 11. If we limit ourselves to the
 resummation of two-particle correlations only, these lead us to the
 so-called $G$-matrix resummation of diagrams, see for example Ref.~\cite{day1967}.
@@ -2368,9 +2365,9 @@ operators $T$ acting on a reference state $\mid\Phi\rangle$.
 We will discuss how to define the operators later in this work. This simple
 ansatz carries enormous power. It leads to a non-perturbative many-body
 theory that includes summation of ladder diagrams \cite{brueckner1955}, ring
-diagrams \cite{GB1957}, and an infinite-order
+diagrams \cite{brandow1967}, and an infinite-order
 generalization of many-body perturbation theory
-\cite{Bart_silver74, Bart_silver76}.
+\cite{bartlett1981}.
 Developments and applications of coupled cluster theory took
 different routes in chemistry and nuclear physics. In quantum
 chemistry, coupled cluster developments and applications have proven
@@ -2382,7 +2379,7 @@ used in the computations. Most of these problems have been overcome
 during the last decade and coupled cluster theory is one of the
 computational methods of preference for doing nuclear physics, with
   applications ranging from light nuclei to medium-heavy nuclei, see
-  for example the recent reviews by Hagen {\em et al} \cite{papenbrock2014,hagen2016}.
+  for example the recent reviews by Hagen {\em et al} \cite{hagen2014,hagen2016}.
 
 
 \subsection{A quick tour of Coupled Cluster theory}
@@ -2860,7 +2857,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   amplitudes. These serve as important benchmarks when we are to develop a many-body code.
 The standard method for solving these equations is to
   set up an iterative scheme where method's like Newton's method or
-  similar root searching methods are used to find the amplitudes see for example Ref.~\cite{hagen2007}.
+  similar root searching methods are used to find the amplitudes see for example Ref.~\cite{baran2008}.
 
   Iterative solvers need a guess for the amplitudes. A good starting
   point is to use the correlated wave operator from perturbation
@@ -3784,7 +3781,7 @@ approximated our problem with periodic boundary conditions,
   chosen anti-periodic boundary conditions,
   $\mathop{\phi(x_{i})}=-\mathop{\phi(x_{i}+L)}$. The difference
   between these two shows how the correlation energy contains
-  finite-size effects \cite{finitesize}. One solution to this problem is by integrating
+  finite-size effects \cite{gros1992,gros1996,shepherd2016}. One solution to this problem is by integrating
   over solutions between periodic and anti-periodic conditions, known
   as twist-averaging \cite{twistaverage}. First, we multiply the single-particle states by
   a phase for each direction, characterized by a twist-angle,
@@ -4646,11 +4643,7 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
 
   Our specific model consists of $N$ doubly-degenerate and equally
   spaced single-particle levels labelled by $p=1,2,\dots$ and spin
-  $\sigma=\pm 1$.  These states are schematically portrayed in
-  Fig.~\ref{fig:schematic}.  The first two single-particle levels
-  define a possible model space, indicated by the label $\mathcal{P}$.
-  The remaining states span the excluded space $\mathcal{Q}$.
-
+  $\sigma=\pm 1$.  
   We write the Hamiltonian as
   \[ \hat{H} = \hat{H}_0 + \hat{V} , \]
   where
@@ -4716,9 +4709,9 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
 
   \item[d)] Construct thereafter the Hamiltonian matrix for a system
     with no broken pairs and total spin $S=0$ for the case of the four
-    lowest single-particle levels indicated in the
-    Fig.~\ref{fig:schematic}. Our system consists of four particles
-    only.  Our single-particle space consists of only the four lowest
+    lowest single-particle levels. Our system consists of four particles
+    only that can occupy four doubly degenerate single-particle states.  
+Our single-particle space consists of only the four lowest
     levels $p=1,2,3,4$.  You need to set up all possible Slater
     determinants.  Find all eigenvalues by diagonalizing the
     Hamiltonian matrix.  Vary your results for values of $g\in
@@ -4738,12 +4731,11 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   \psi_p = \sum_{\lambda} C_{p\lambda}\psi_{\lambda}.
   \]
   where in our case $p=1,2,3,4$ and $\lambda=1,2,3,4$, that is the
-  first four lowest single-particle orbits of
-  Fig.~\ref{fig:schematic}.  Set up the Hartree-Fock equations for
+  first four lowest single-particle orbits.  Set up the Hartree-Fock equations for
   this system by varying the coefficients $C_{p\lambda}$ and solve
   them for values of $g\in [-1,1]$.  Comment your results and compare
   with the exact solution. Discuss also which diagrams in
-  Fig.~\ref{fig:diagrams} that can be affected by a Hartree-Fock
+  Fig.~\ref{fig:goldstone} that can be affected by a Hartree-Fock
   basis. Compute the total binding energy using a Hartree-Fock basis
   and comment your results.
 
@@ -4751,7 +4743,7 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
     Rayleigh-Schr\"odinger perturbation theory to third order in the
     interaction.  If we exclude the first order contribution, all
     possible diagrams (so-called anti-symmetric Goldstone diagrams)
-    are shown in Fig.~\ref{fig:diagrams}.
+    are shown in Fig.~\ref{fig:goldstone}.
 
 
   Based on the form of the interaction, which diagrams contribute to
@@ -4764,7 +4756,7 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   Hartree-Fock basis.
 
 
-  Diagram 1 in Fig.~\ref{fig:diagrams} represents a second-order
+  Diagram 1 in Fig.~\ref{fig:goldstone} represents a second-order
   contribution to the energy and a so-called $2p-2h$ contribution to
   the intermediate states. Write down the expression for the wave
   operator in this case and compare the possible contributions with
