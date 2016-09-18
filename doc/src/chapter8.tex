@@ -315,10 +315,10 @@ a one-body part and a two-body part
 \end{equation}
 with
 \begin{equation}
-  H_0=\sum_{i=1}^A \hat{h}_0(x_i).
+  \hat{H}_0=\sum_{i=1}^A \hat{h}_0(x_i), 
 \label{hinuclei}
 \end{equation}
-The one-body operator is defined as
+being the so-called unperturbed part of the Hamiltonian defined by the one-body operator
 \[
 \hat{h}_0(x_i)=\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i),
 \]
@@ -332,6 +332,10 @@ potentials are fully possible, such as one derived from the
 self-consistent solution of the Hartree-Fock equations to be discussed
 below. Since we will work with infinite matter and plane wave basis states, the one-body operator is
 simply given by the kinetic energy operator.
+Finally, the term $\hat{H}_I$ represents the residual two-body interaction 
+\[
+  \hat{H}_I= \sum_{i < j}^A \hat{v}(r_{ij}).
+\]
 
 Our Hamiltonian is invariant under the permutation (interchange) of
 two particles.  Since we deal with fermions however, the total wave
@@ -755,8 +759,7 @@ two-body quantum numbers for the spin $S$ of two spin-1/2 fermions as
 \]
 The coefficients $\langle \frac{1}{2}\sigma_p\frac{1}{2}\sigma_q\vert
 SS_z\rangle$ are so-called Clebsch-Gordan recoupling coefficients.  We
-will assume that our interactions break charge and isospin
-symmetry. We will refer to $T_z=0$ as the $pn$ (proton-neutron)
+will assume that our interactions conserve charge. We will refer to $T_z=0$ as the $pn$ (proton-neutron)
 channel, $T_z=-1$ as the $pp$ (proton-proton) channel and $T_z=1$ as
 the $nn$ (neutron-neutron) channel.
 
@@ -2360,7 +2363,7 @@ of a many-body system $\mid\Psi\rangle$
 can be formulated as an exponential of correlation
 operators $T$ acting on a reference state $\mid\Phi\rangle$.
 \begin{equation}
-\mid\Psi\rangle = \exp\left(-\hat{T}\right)\mid\Phi\rangle,
+\mid\Psi\rangle = \exp\left(\hat{T}\right)\mid\Phi\rangle,
 \end{equation}
 We will discuss how to define the operators later in this work. This simple
 ansatz carries enormous power. It leads to a non-perturbative many-body
@@ -2815,15 +2818,13 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   Wick's theorem), for all $i > j$ and all $a > b$,
   \begin{align}
   0 = \langle ab \vert \hat{v} \vert ij \rangle +
-  \left(\epsilon_a+\epsilon_b-\epsilon_i-\epsilon_j\right)t_{ij}^{ab}
-  & \nonumber \\ +\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert
+  \left(\epsilon_a+\epsilon_b-\epsilon_i-\epsilon_j\right)t_{ij}^{ab}+\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert
   cd \rangle t_{ij}^{cd}+\frac{1}{2}\sum_{kl} \langle kl \vert \hat{v}
   \vert ij \rangle t_{kl}^{ab}+\hat{P}(ij\vert ab)\sum_{kc} \langle kb
   \vert \hat{v} \vert cj \rangle t_{ik}^{ac} & \nonumber
   \\ +\frac{1}{4}\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle
   t_{ij}^{cd}t_{kl}^{ab}+\hat{P}(ij)\sum_{klcd} \langle kl \vert
-  \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}& \nonumber
-  \\ -\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
+  \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
   cd \rangle t_{ik}^{dc}t_{lj}^{ab}-\frac{1}{2}\hat{P}(ab)\sum_{klcd}
   \langle kl \vert \hat{v} \vert cd \rangle t_{lk}^{ac}t_{ij}^{db},&
   \label{eq:ccd}
@@ -3018,22 +3019,19 @@ When building up a numerical project there are several elements you should think
   earlier, the CCD equations can be written as
   \begin{align}
   \left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)t_{ij}^{ab}
-  = \langle ab \vert \hat{v} \vert ij \rangle & \nonumber
-  \\ +\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle
+  = \langle ab \vert \hat{v} \vert ij \rangle+\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle
   t_{ij}^{cd}+\frac{1}{2}\sum_{kl} \langle kl \vert \hat{v} \vert ij
   \rangle t_{kl}^{ab}+\hat{P}(ij\vert ab)\sum_{kc} \langle kb \vert
   \hat{v} \vert cj \rangle t_{ik}^{ac} & \nonumber
   \\ +\frac{1}{4}\sum_{klcd} \langle kl \vert \hat{v} \vert cd \rangle
   t_{ij}^{cd}t_{kl}^{ab}+\hat{P}(ij)\sum_{klcd} \langle kl \vert
-  \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}& \nonumber
-  \\ -\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
+  \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
   cd \rangle t_{ik}^{dc}t_{lj}^{ab}-\frac{1}{2}\hat{P}(ab)\sum_{klcd}
   \langle kl \vert \hat{v} \vert cd \rangle t_{lk}^{ac}t_{ij}^{db},&
   \label{eq:ccd2}
   \end{align}
   for all $i < j$ and all $a < b$, using the standard notation that
-  $a,b,...$ are particle states and $i,j,...$ are hole states. With
-  the CCD correlation energy given by
+  $a,b,...$ are particle states and $i,j,...$ are hole states. The CCD correlation energy is given by
   \begin{equation}
   \Delta E_{CCD} = \frac{1}{4} \sum_{ijab}
   \braket{ij|\hat{v}|ab}t^{ab}_{ij}.
@@ -3043,22 +3041,20 @@ When building up a numerical project there are several elements you should think
   (\ref{eq:ccd2}) as a series of iterative nonlinear algebraic
   equations
   \begin{align}
-  t_{ij}^{ab}{}^{(n+1)} = \frac{1}{\epsilon^{ab}_{ij}} \bigg(\langle
-  ab \vert \hat{v} \vert ij \rangle & \nonumber
-  \\ +\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle
+  t_{ij}^{ab}{}^{(n+1)}& = \frac{1}{\epsilon^{ab}_{ij}} \bigg(\langle
+  ab \vert \hat{v} \vert ij \rangle +\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle
   t_{ij}^{cd}{}^{(n)}+\frac{1}{2}\sum_{kl} \langle kl \vert \hat{v}
   \vert ij \rangle t_{kl}^{ab}{}^{(n)}+\hat{P}(ij\vert ab)\sum_{kc}
-  \langle kb \vert \hat{v} \vert cj \rangle t_{ik}^{ac}{}^{(n)} &
-  \nonumber \\ +\frac{1}{4}\sum_{klcd} \langle kl \vert \hat{v} \vert
+  \langle kb \vert \hat{v} \vert cj \rangle t_{ik}^{ac}{}^{(n)} & 
+  \nonumber \\ & +\frac{1}{4}\sum_{klcd} \langle kl \vert \hat{v} \vert
   cd \rangle
   t_{ij}^{cd}{}^{(n)}t_{kl}^{ab}{}^{(n)}+\hat{P}(ij)\sum_{klcd}
   \langle kl \vert \hat{v} \vert cd \rangle
-  t_{ik}^{ac}{}^{(n)}t_{jl}^{bd}{}^{(n)}& \nonumber
-  \\ -\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
+  t_{ik}^{ac}{}^{(n)}t_{jl}^{bd}{}^{(n)} \nonumber \\ &-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
   cd \rangle
   t_{ik}^{dc}{}^{(n)}t_{lj}^{ab}{}^{(n)}-\frac{1}{2}\hat{P}(ab)\sum_{klcd}
   \langle kl \vert \hat{v} \vert cd \rangle
-  t_{lk}^{ac}{}^{(n)}t_{ij}^{db}{}^{(n)} \bigg),&
+  t_{lk}^{ac}{}^{(n)}t_{ij}^{db}{}^{(n)} \bigg),
   \label{eq:ccd3}
   \end{align}
   for all $i < j$ and all $a < b$, where $\epsilon^{ab}_{ij} =
@@ -3066,19 +3062,18 @@ When building up a numerical project there are several elements you should think
   $t_{ij}^{ab}{}^{(n)}$ is the $t$ amplitude for the nth iteration of
   the series. This way, given some starting guess
   $t_{ij}^{ab}{}^{(0)}$, we can generate subsequent $t$ amplitudes
-  that converges to some value. Discussion of the mathematical details
-  regarding convergence will be presented below; for now we will talk
-  about implementing these equations into a computer program and
+  that converge to some value. Discussions of the mathematical details
+  regarding convergence will be presented below; for now we will mainly focus
+  on implementing these equations into a computer program and
   assume convergence. In pseudocode, the function that updates the $t$
   amplitudes looks like
-
 \begin{svgraybox}
   \begin{algorithmic} 
-  \State CCD\_Update() \For{$i \in \{0,N_{fermi}-1\}$ } \For{$j \in
-    \{0,N_{fermi}-1\}$ } \For{$a \in \{N_{fermi},N_{sp}-1\}$ } \For{$b
-    \in \{N_{fermi},N_{sp}-1\}$ } \State $\text{sum} \gets
+  \State CCD\_Update() \For{$i \in \{0,N_{\mathrm{Fermi}}-1\}$ } \For{$j \in
+    \{0,N_{\mathrm{Fermi}}-1\}$ } \For{$a \in \{N_{\mathrm{Fermi}},N_{sp}-1\}$ } \For{$b
+    \in \{N_{\mathrm{Fermi}},N_{sp}-1\}$ } \State $\text{sum} \gets
   \text{TBME}[\text{index}(a,b,i,j)$] \For{$c \in
-    \{N_{fermi},N_{sp}-1\}$ } \For{$d \in \{N_{fermi},N_{sp}-1\}$ }
+    \{N_{\mathrm{Fermi}},N_{sp}-1\}$ } \For{$d \in \{N_{\mathrm{Fermi}},N_{sp}-1\}$ }
   \State $\text{sum} \gets \text{sum} +
   0.5\times\text{ME}[\text{index}(a,b,c,d)] \times
   t\_\text{amplitudes}\_\text{old}[\text{index}(c,d,i,j)]$ \EndFor
@@ -3089,7 +3084,7 @@ When building up a numerical project there are several elements you should think
   \EndFor \EndFor \EndFor
   \end{algorithmic}
 \end{svgraybox} 
- Where $N_{fermi}$ is the fermi level and $N_{sp}$ is the total
+ Here we have defined $N_{\mathrm{Fermi}}$ to be the fermi level while $N_{sp}$ is the total
   number of single particle (s.p.) states, indexed from 0 to
   $N_{sp}-1$. At the most basic level, the CCD equations are just the
   addition of many products containing $t_{ij}^{ab}$ amplitudes and
@@ -3170,7 +3165,7 @@ resulting in the correlation energy
   Hartree-Fock operator, $\left(\hat{u}+\hat{u}_{\text{HF}}\right)\vert
   p\rangle=\epsilon_{p}\vert p\rangle$. In the pairing model, this
   condition is already fulfilled. All we have to do is define the
-  lowest $N_{\mathrm{Fermi}}$ states as holes and  redefine the single-particle
+  lowest $N_{\mathrm{\mathrm{Fermi}}}$ states as holes and  redefine the single-particle
   energies,
   \begin{equation}\label{eq:pairingsp}
   \epsilon_q = h_{qq} + \sum_{i} \braket{qi|\hat{v}|qi}.
@@ -3506,34 +3501,34 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   they can be rewritten using intermediates as
 
   \begin{align}
-  0 = \braket{ab|\hat{v}|ij} + \hat{P}(ab) \sum_{c} \braket{b| \chi
+  0 &= \braket{ab|\hat{v}|ij} + \hat{P}(ab) \sum_{c} \braket{b| \chi
     |c} \braket{ac| t |ij} - \hat{P}(ij) \sum_{k} \braket{k| \chi |j}
-  \braket{ab| t |ik} & \nonumber \\ + \frac{1}{2}\sum_{cd} \braket{ab|
+  \braket{ab| t |ik} \nonumber \\ &+ \frac{1}{2}\sum_{cd} \braket{ab|
     \chi |cd} \braket{cd| t |ij} + \frac{1}{2} \sum_{kl} \braket{ab| t
-    |kl} \braket{kl| \chi |ij} \\ + \hat{P}(ij)\hat{P}(ab) \sum_{kc}
-  \braket{ac| t |ik}\braket{kb| \chi |cj} & \nonumber
+    |kl} \braket{kl| \chi |ij} \\ &+ \hat{P}(ij)\hat{P}(ab) \sum_{kc}
+  \braket{ac| t |ik}\braket{kb| \chi |cj}, \nonumber
   \end{align}
   for all $i,j,a,b$, the reason why these indices are now unrestricted
   will be explained later. The intermediates $\chi$ are defined as
   \begin{equation}
   \braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld}
-  \braket{bd|t|kl} \braket{kl|v|cd}
+  \braket{bd|t|kl} \braket{kl|v|cd},
   \end{equation}
   \begin{equation}
   \braket{k| \chi |j} = \braket{k|f|j} + \frac{1}{2} \sum_{cdl}
-  \braket{kl|v|cd} \braket{cd|t|jl}
+  \braket{kl|v|cd} \braket{cd|t|jl},
   \end{equation}
   \begin{equation}
   \braket{kl| \chi |ij} = \braket{kl|v|ij} + \frac{1}{2} \sum_{cd}
-  \braket{kl|v|cd} \braket{cd|t|ij}
+  \braket{kl|v|cd} \braket{cd|t|ij},
   \label{eq:mtxEx}
   \end{equation}
   \begin{equation}
   \braket{kb| \chi |cj} = \braket{kb|v|cj} + \frac{1}{2} \sum_{dl}
-  \braket{kl|v|cd} \braket{db|t|lj}
+  \braket{kl|v|cd} \braket{db|t|lj},
   \end{equation}
   \begin{equation}
-  \braket{ab| \chi |cd} = \braket{ab|v|cd}
+  \braket{ab| \chi |cd} = \braket{ab|v|cd}.
   \end{equation}
 
 
@@ -3708,49 +3703,60 @@ With the definition of the intermediates and appropriate matrix-matrix multiplic
   systematic way. Summations are constructed by placing two
   structures next to each other in such a way that the inner summed
   indices are of the same channel. The resulting structure is indexed
-  by the outer channels as shown here
-  \begin{align}
-  \braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld}
-  \braket{bd|t|kl} \braket{kl|v|cd} &\rightarrow f_{c}^{b}\left(
-  K\left( b\right),K\left( c\right)\right)\\ \nonumber & -
-  \frac{1}{2}t_{kl}^{bd}\left( K\left( b\right),K_{b}\left(
-  kld\right)\right) v_{cd}^{kl}\left( K_{c}\left(
-  kld\right),K\left( c\right)\right) \\ \braket{k| \chi |j} =
-  \braket{k|f|j} + \frac{1}{2} \sum_{cdl} \braket{kl|v|cd}
-  \braket{cd|t|jl} &\rightarrow f_{j}^{k}\left( K\left(
-  k\right),K\left( j\right)\right) \\ \nonumber &+ \frac{1}{2}v_{cd}^{kl}\left(
-  K\left( k\right),K_{k}\left( cdl\right)\right)
-  t_{jl}^{cd}\left( K_{j}\left( cdl\right),K\left( j\right)\right)
-  \\ \braket{kl| \chi |ij} = \braket{kl|v|ij} + \frac{1}{2} \sum_{cd}
-  \braket{kl|v|cd} \braket{cd|t|ij} &\rightarrow v_{ij}^{kl}\left(
-  T\left( kl\right),T\left( ij\right)\right)\\ \nonumber  &+ 
+  by the outer channels as shown here for several of the intermediates defined above
+  \[
+  \braket{b| \chi |c} = \braket{b|f|c} - \frac{1}{2} \sum_{kld}\braket{bd|t|kl} \braket{kl|v|cd} \rightarrow f_{c}^{b}\left(
+  K\left( b\right),K\left( c\right)\right) -\frac{1}{2}t_{kl}^{bd}\left( K\left( b\right),K_{b}\left(kld\right)\right) v_{cd}^{kl}
+\left( K_{c}\left(kld\right),K\left( c\right)\right),
+\]
+\[
+\braket{kl| \chi |ij} = \braket{kl|v|ij} + \frac{1}{2} \sum_{cd}
+  \braket{kl|v|cd} \braket{cd|t|ij} \rightarrow v_{ij}^{kl}\left(
+  T\left( kl\right),T\left( ij\right)\right)+ 
   \frac{1}{2}v_{cd}^{kl}\left( T\left( kl\right),T\left(
   cd\right)\right) t_{ij}^{cd}\left( T\left( cd\right),T\left(
-  ij\right)\right) \\ \braket{kb| \chi |cj} = \braket{kb|v|cj} +
-  \frac{1}{2} \sum_{dl} \braket{kl|v|cd} \braket{db|t|lj} &\rightarrow
-  v_{cj}^{kb}\left( X\left( kc\right),X\left( jb\right)\right)\\ \nonumber  &+
-  \frac{1}{2}v_{cd}^{kl}\left( X\left( kc\right),X\left(
-  dl\right)\right) t_{lj}^{db}\left( X\left( dl\right),X\left(
-  jb\right)\right) \\ \braket{ab| \chi |cd} = \braket{ab|v|cd}
-  &\rightarrow v_{cd}^{ab}\left( T\left( ab\right),T\left(
-  cd\right)\right) \\ \sum_{c} \braket{b| \chi |c} \braket{ac| t |ij}
-  &\rightarrow \chi_{c}^{b}\left( K\left( b\right),K\left(
+  ij\right)\right),
+\]
+\[
+\braket{kb| \chi |cj} = \braket{kb|v|cj} +\frac{1}{2} \sum_{dl} \braket{kl|v|cd} \braket{db|t|lj} \rightarrow
+  v_{cj}^{kb}\left( X\left( kc\right),X\left( jb\right)\right)+\frac{1}{2}v_{cd}^{kl}\left( X\left( kc\right),X\left(
+  dl\right)\right) t_{lj}^{db}\left( X\left( dl\right),X\left(jb\right)\right),
+\]
+\[
+\braket{ab| \chi |cd} = \braket{ab|v|cd}
+  \rightarrow v_{cd}^{ab}\left( T\left( ab\right),T\left(
+  cd\right)\right),
+\]
+\[
+\sum_{c} \braket{b| \chi |c} \braket{ac| t |ij}
+  \rightarrow \chi_{c}^{b}\left( K\left( b\right),K\left(
   c\right)\right)\cdot t_{ij}^{ac}\left( K\left( c\right), K_{c}\left(
-  ija\right)\right) \\ \sum_{k} \braket{k| \chi |j} \braket{ab| t |ik}
-  &\rightarrow \chi_{j}^{k}\left( K\left( j\right),K\left(
+  ija\right)\right),
+\]
+\[
+\sum_{k} \braket{k| \chi |j} \braket{ab| t |ik}
+  \rightarrow \chi_{j}^{k}\left( K\left( j\right),K\left(
   k\right)\right)\cdot t_{ik}^{ab}\left( K\left( c\right), K_{c}\left(
-  ija\right)\right) \\ \sum_{cd} \braket{ab| \chi |cd} \braket{cd| t
-    |ij} &\rightarrow \chi_{cd}^{ab}\left( T\left( ab\right),T\left(
+  ija\right)\right),
+\] 
+\[
+\sum_{cd} \braket{ab| \chi |cd} \braket{cd| t
+    |ij} \rightarrow \chi_{cd}^{ab}\left( T\left( ab\right),T\left(
   cd\right)\right)\cdot t_{ij}^{cd}\left( T\left( cd\right),T\left(
-  ij\right)\right) \\ \sum_{kl} \braket{ab| t |kl} \braket{kl| \chi
-    |ij} &\rightarrow t_{kl}^{ab}\left( T\left( ab\right),T\left(
-  kl\right)\right)\cdot \chi_{ij}^{kl}\left( T\left( kl\right),T\left(
-  ij\right)\right) \\ \sum_{kc} \braket{ac| t |ik}\braket{kb| \chi
+  ij\right)\right),
+\] 
+\[
+\sum_{kl} \braket{ab| t |kl} \braket{kl| \chi |ij} \rightarrow t_{kl}^{ab}\left( T\left( ab\right),T\left(
+  kl\right)\right)\cdot \chi_{ij}^{kl}\left( T\left( kl\right),T\left(ij\right)\right),
+\]
+and finally
+\[
+\sum_{kc} \braket{ac| t |ik}\braket{kb| \chi
     |cj} = \sum_{kc} \braket{ai^{-1}| t |kc^{-1}}\braket{kc^{-1}| \chi
-    |jb^{-1}} &\rightarrow t_{ik}^{ac}\left( X\left( ia\right),X\left(
+    |jb^{-1}} \rightarrow t_{ik}^{ac}\left( X\left( ia\right),X\left(
   kc\right)\right)\cdot \chi_{cj}^{kb}\left( X\left( kc\right),X\left(
-  jb\right)\right)
-  \end{align}
+  jb\right)\right).
+\]
 Figure \ref{fig:fig1} displays the convergence of the energy per particle for pure neutron matter as function of number particles 
 for  the CCD approximation with the Minnesota potential for different with $\mathrm{N_{max}=20}$.
   \begin{figure}
