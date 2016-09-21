@@ -52,6 +52,10 @@ struct Input_Parameters{
   int Shells; // total number of shells
   int MBPT_Approx; // 2 for MBPT2, 3 for MBPT3_pp
   int MBPT_Function; // 0 for serial, 1 for parallel, 2 for block serial, 3 for block parallel, 4 for block M-M
+
+  int numberOfProtons;
+  int numberOfNeutrons;
+
 };
 
 struct State{
