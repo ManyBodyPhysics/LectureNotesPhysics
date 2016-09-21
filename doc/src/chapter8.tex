@@ -28,14 +28,14 @@
 \abstract{We present a computational approach to infinite
   nuclear matter employing Hartree-Fock theory, many-body perturbation
   theory and coupled cluster theory. These lectures are closely linked
-  with those in chapters 9, 10 and 11 and serve as input for the
+  with those of chapters 9, 10 and 11 and serve as input for the
   correlation functions employed in Monte Carlo calculations in
   chapter 9, the in-medium similarity renormalization group theory of
   dense fermionic systems of chapter 10 and the Green's function
   approach in chapter 11.  We provide extensive code examples and
   benchmark calculations, allowing thereby an eventual reader to start
   writing her/his own codes. We start with an object-oriented serial
-  code and end with in-depth discussions on strategies for porting the
+  code and end with discussions on strategies for porting the
   code to present and planned high-performance computing facilities. }
 
 
@@ -52,8 +52,7 @@ neutron star offers an intriguing interplay between nuclear processes
 and astrophysical observables, spanning many orders of magnitude in
 density and several possible compositions of matter, from the crust of
 the star to a possible quark matter phase in its interior, see for
-example
-Refs.~\cite{lattimer2007,lattimer2012,weber1999,hh2000}
+example Refs.~\cite{shapiro,prakash2001,Lattimer2007,steiner2010,steiner2012,lattimer2012,weber1999,hh2000}
 for discussions.  A central issue in studies of infinite nuclear
 matter is the determination of the equation of state (EoS), which can
 in turn be used to determine properties like the mass range, the
@@ -72,14 +71,14 @@ algorithmic development of first principle (or {\em ab initio})
 methods for solving the nuclear many-body problem. Linked with a
 similar progress in the derivation of nuclear forces based on
 effective field theory (EFT), see chapters four, five and six of the
-present text and Refs.~\cite{vankolck1994,machleidt2011,epelbaum2009},
+present text and Refs.~\cite{vankolck1999,machleidt2011,epelbaum2009},
 we are now in a situation where reliable results can be provided at
 different levels of approximation.  The nuclear Hamiltonians which are
 now used routinely in nuclear structure and nuclear matter
 calculations, include both nucleon-nucleon ($NN$) and three-nucleon forces (3NFs) derived from EFT, see for
 example
-Refs.~\cite{binder2013,hergert2013,roth2012,hagen2012a,hagen2012b,cipollone2013,carbone2013}.
-Parallel to the development of nuclear forces from EFT, which employs
+Refs.~\cite{hagen2014,hagen2016,roth2012,binder2013,hergert2016,navratil2016,steiner2012,carbone2013,steiner2012}.
+Parallel to the development of nuclear forces from EFT, which employ
 symmetries of quantum chromodynamics, there are recent and promising
 approaches to derive the EoS using forces constrained from lattice
 quantum chromodynamics calculations \cite{tetsuo2013}, see chapters 2
@@ -91,14 +90,14 @@ developments are nicely summarized in for example the review of Day
 \cite{day1967} from 1967. These early state-of-the-art calculations
 were performed using what is known as Brueckner-Bethe-Goldstone theory
 \cite{brueckner1954,brueckner1955}, see for example
-Refs.\cite{hh2000,baldo2012,baldo2012a} for recent reviews and
+Refs.\cite{hh2000,baldo2012,baldo2012a,coraggio2013} for recent reviews and
 developments.  In these calculations, mainly particle-particle
 correlations were summed to infinite order.  Other correlations were
 often included in a perturbative way. A systematic inclusion of other
 correlations in a non-perturbative way are nowadays accounted for in
 many-body methods like coupled cluster theory
-\cite{bartlett2007,shavittbartlett2009}, various Monte Carlo methods
-\cite{gandolfi2009,lovato2012}, Green's function approaches
+\cite{bartlett2007,shavittbartlett2009,hagen2014,hagen2016,binder2013,jansen2016}, various Monte Carlo methods
+\cite{carlson2003,gandolfi2009,gandolfi2009b,gezerlis2010,gandolfi2012,lovato2012,carlson2016}, Green's function approaches
 \cite{baldo2012a,carbone2013,dickhoff2004} and density functional
 theories \cite{erler2013}, just to mention a few of the actual
 many-body methods which are used for nuclear matter studies. Many of these methods
@@ -107,7 +106,7 @@ are discussed in detail in this and the following chapters.
 
 The aim of this part of the lectures (comprising this chapter and the
 three subsequent ones) is to provide the necessary ingredients for
-perfoming studies of neutron star matter (or matter in
+performing studies of neutron star matter (or matter in
 $\beta$-equilibrium) and symmetric nuclear matter.  We will mainly
 focus on pure neutron matter, but the framework and formalism can
 easily be extended to other dense and homogeneous fermionic systems
@@ -124,7 +123,7 @@ often assumed to be made of mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
 transitions to quark degrees of freedom at higher densities
-\cite{hh2000,prakash1996,prakash2001,steiner2010}.  In these notes we limit ourselves to matter composed
+\cite{hh2000,Lattimer2007,prakash1996,steiner2010}.  In these notes we limit ourselves to matter composed
 of neutrons only.  Furthermore, we will also consider matter at
 temperatures much lower than the typical Fermi energies.
 
@@ -184,9 +183,9 @@ where $b_1$ and $b_2$ refer to different types of baryons, for example
 a neutron and a proton.  The symbol $l$ is either an electron or a
 muon and $\bar{\nu}_l $ and $\nu_l$ their respective anti-neutrinos
 and neutrinos. Leptons like muons appear at a density close to nuclear
-matter saturation density, the latter being
+matter saturation density $\rho_0$, the latter being
 \[
-     n_0 \approx 0.16 \pm 0.02 \hspace{0.1cm} \mathrm{fm}^{-3},
+     \rho_0 \approx 0.16 \pm 0.02 \hspace{0.1cm} \mathrm{fm}^{-3},
 \]
 with a corresponding energy per baryon ${\cal E}_0$ for symmetric
 nuclear matter at saturation density of
@@ -198,105 +197,70 @@ studies. From the energy per baryon, we can define the pressure $P$
 which counteracts the gravitional forces and hinders the gravitational
 collapse of a neutron star. The pressure is defined through the
 relation
-\begin{equation}
-    P=n^2\frac{\partial {\cal E}}{\partial n}= n\frac{\partial
-      \varepsilon}{\partial n}-\varepsilon,
-\end{equation}
-where $\varepsilon$ is the energy density.  Similarly, the chemical
+\[
+    P=\rho^2\frac{\partial {\cal E}}{\partial \rho}= \rho\frac{\partial
+      \varepsilon}{\partial \rho}-\varepsilon,
+\]
+where $\varepsilon$ is the energy density and $\rho$ the density.  Similarly, the chemical
 potential for particle species $i$ is given by
-\begin{equation}
-     \mu_i = \left(\frac{\partial \varepsilon}{\partial n_i}\right).
-     \label{eq:chemicalpotdef}
-\end{equation}
+\[
+     \mu_i = \left(\frac{\partial \varepsilon}{\partial \rho_i}\right).
+\]
 In calculations of properties of neutron star matter in
 $\beta$-equilibrium, we need to calculate the energy per baryon ${\cal E}$ 
 for several proton fractions $x_p$. The proton fraction
 corresponds to the ratio of protons as compared to the total nucleon
 number ($Z/A$). It is defined as
-\begin{equation}
-    x_p = \frac{n_p}{n},
-\end{equation}
-where $n=n_p+n_n$ is the total baryonic density if neutrons and
-protons are the only baryons present. If this is the case, the total
+\[
+    x_p = \frac{\rho_p}{\rho},
+\]
+where $\rho=\rho_p+\rho_n$ is the total baryonic density if neutrons and
+protons are the only baryons present (the subscripts used here,
+$n,p,e,\mu$, refer to neutrons, protons, electrons and
+muons, respectively).
+If this is the case, the total
 Fermi momentum $k_F$ and the Fermi momenta $k_{Fp}$, $k_{Fn}$ for
 protons and neutrons, respectively, are related to the total nucleon density $n$ by
-\begin{align}
-     n = & \frac{2}{3\pi^2} k_F^3 \nonumber \\ = & x_p n + (1-x_p) n
-     \nonumber \\ = & \frac{1}{3\pi^2} k_{Fp}^3 + \frac{1}{3\pi^2}
-     k_{Fn}^3.
-    \label{eq:densi}
-\end{align}
-The energy per baryon will thus be labelled as ${\cal E}(n,x_p)$. The
-quantity ${\cal E}(n,0)$ refers then to the energy per baryon for pure
-neutron matter while ${\cal E}(n,\frac{1}{2})$ is the
-corresponding value for symmetric nuclear matter. Furthermore, in this work, subscripts
-$n,p,e,\mu$ will always refer to neutrons, protons, electrons and
-muons, respectively.
-
-
-Since the mean free path of a neutrino in a neutron star is bigger
-than the typical radius of such a star ($\sim 10$ km), we will
-throughout assume that neutrinos escape freely from the neutron star,
-see for example Ref.~\cite{prakash2006} for a discussion on trapped
-neutrinos. Eq.~(\ref{eq:betadecay}) yields then the following
-conditions for matter in $\beta$-equilibrium with for example
-nucleonic degrees freedom only
-\begin{equation}
-    \mu_n=\mu_p+\mu_e,
-     \label{eq:npebetaequilibrium}
-\end{equation}
-and
-\begin{equation}
-     n_p = n_e,
-     \label{eq:chargeconserv}
-\end{equation}
-where $\mu_i$ and $n_i$ refer to the chemical potential and number
-density in fm$^{-3}$ of particle species $i$.  If muons are present as
-well, we need to modify the equation for charge conservation,
-Eq. (\ref{eq:chargeconserv}), to read
 \[
-     n_p = n_e+n_{\mu},
+     \rho = \frac{2}{3\pi^2} k_F^3 = x_p \rho + (1-x_p) \rho= \frac{1}{3\pi^2} k_{Fp}^3 + \frac{1}{3\pi^2}k_{Fn}^3.
 \]
-and require that $\mu_e = \mu_{\mu}$.
+The energy per baryon will thus be labelled as ${\cal E}(\rho,x_p)$. The
+quantity ${\cal E}(\rho,0)$ refers then to the energy per baryon for pure
+neutron matter while ${\cal E}(\rho,\frac{1}{2})$ is the
+corresponding value for symmetric nuclear matter. 
 
 An important ingredient in the discussion of the EoS and the criteria
 for matter in $\beta$-equilibrium is the so-called symmetry energy
-${\cal S} (n)$, defined as the difference in energy for symmetric
+${\cal S} (\rho)$, defined as the difference in energy for symmetric
 nuclear matter and pure neutron matter
-\begin{equation}
-      {\cal S} (n) = {\cal E} (n,x_p=0) - {\cal E} (n,x_p=1/2 ).
-      \label{eq:symenergy}
-\end{equation}
+\[
+      {\cal S} (\rho) = {\cal E} (\rho,x_p=0) - {\cal E} (\rho,x_p=1/2 ).
+\]
 If we expand the energy per baryon in the case of nucleonic degrees of
 freedom only in the proton concentration $x_p$ about the value of the
 energy for SNM ($x_p=\frac{1}{2}$), we obtain,
-\begin{equation}
-     {\cal E} (n,x_p)={\cal E} (n,x_p=\frac{1}{2})+
-     \frac{1}{2}\frac{d^2 {\cal E}}{dx_p^2}
-     (n)\left(x_p-1/2\right)^2+\dots ,
-     \label{eq:energyexpansion}
-\end{equation}
+\[
+     {\cal E} (\rho,x_p)={\cal E} (n,x_p=\frac{1}{2})+
+     \frac{1}{2}\frac{d^2 {\cal E}}{dx_p^2}(\rho)\left(x_p-1/2\right)^2+\dots ,
+\]
 where the term $d^2 {\cal E}/dx_p^2$ is to be associated with the
-symmetry energy ${\cal S} (n)$ in the empirical mass formula. If we
+symmetry energy ${\cal S} (\rho)$ in the empirical mass formula. If we
 assume that higher order derivatives in the above expansion are small,
-then through the conditions for $\beta$-equilbrium of
-Eqs.~(\ref{eq:npebetaequilibrium}) and (\ref{eq:chargeconserv}) and
-Eq.~(\ref{eq:chemicalpotdef}) we can define the proton fraction by the
+then through the conditions for $\beta$-equilbrium (see for example Ref.~\cite{hh2000}) we can define the proton fraction by the
 symmetry energy as
-\begin{equation}  
-    \hbar c\left(3\pi^2nx_p\right)^{1/3} = 4{\cal S}
-    (n)\left(1-2x_p\right),
-    \label{eq:crudeprotonfraction}
-\end{equation}
+\[
+    \hbar c\left(3\pi^2\rho x_p\right)^{1/3} = 4{\cal S}
+    (\rho)\left(1-2x_p\right),
+\]
 where the electron chemical potential is given by $\mu_e = \hbar c
 k_F$, i.e.\ ultrarelativistic electrons are assumed.  Thus, the
 symmetry energy is of paramount importance for studies of neutron star
 matter in $\beta$-equilibrium.  One can extract information about the
-value of the symmetry energy at saturation density $n_0$ from
+value of the symmetry energy at saturation density $\rho_0$ from
 systematic studies of the masses of atomic nuclei. However, these
-results are limited to densities around $n_0$ and for proton fractions
-close to $\frac{1}{2}$.  Typical values for ${\cal S} (n)$ at
-$n_0$ are in the range $27-38$ MeV.  For densities greater than $n_0$
+results are limited to densities around $\rho_0$ and for proton fractions
+close to $\frac{1}{2}$.  Typical values for ${\cal S} (\rho)$ at
+$\rho_0$ are in the range $27-38$ MeV \cite{horowitz2014}.  For densities greater than $\rho_0$
 it is more difficult to get a reliable information on the symmetry
 energy, and thereby the related proton fraction.
 
@@ -338,16 +302,7 @@ Finally, the term $\hat{H}_I$ represents the residual two-body interaction
 
 Our Hamiltonian is invariant under the permutation (interchange) of
 two particles.  Since we deal with fermions however, the total wave
-function is anti-symmetric.  Let $\hat{P}$ be an operator which
-interchanges two particles.  Due to the symmetries we have ascribed to
-our Hamiltonian, this operator commutes with the total Hamiltonian,
-\[
-[\hat{H},\hat{P}] = 0,
- \]
-meaning that a many-body eigenstate $\Psi_{\lambda}(x_1, x_2, \dots ,
-x_A)$ of $\hat{H}$ is an eigenfunction of $\hat{P}$ as well.
-
-In our case we assume that we can approximate the exact eigenfunction
+function is anti-symmetric and we assume that we can approximate the exact eigenfunction
 for say the ground state with a Slater determinant
 \begin{equation}
    \Phi_0(x_1, x_2,\dots ,x_A,\alpha,\beta,\dots,
@@ -382,7 +337,7 @@ same).  As a practical matter, however, Slater determinants beyond
 $N=4$ quickly become unwieldy. Thus we turn to the occupation
   representation or second quantization to simplify
 calculations. For a good introduction to second quantization see for
-examples Ref.~\cite{shavittbartlett2009}.
+example Refs.~\cite{blaizot,Dickhoff2008,Mattuck1992,shavittbartlett2009}.
 
 We start with a set of orthonormal single-particle states $\{
 \psi_{\alpha}(x) \}$.  To each single-particle state
@@ -421,7 +376,7 @@ a^\dagger_{\alpha} a^\dagger_{\beta} a^\dagger_{\delta} \ldots |0\rangle,
 \]
 where each index $\alpha,\beta,\delta, \ldots$ has to be unique.
 
-We will now find it convenient to define a Fermi level and introduce a
+We will now find it convenient to define a Fermi (F) level and introduce a
 new reference vacuum. The Fermi level is normally  defined in terms of all
 occupied single-particle states below a certain
 single-particle energy.  With the definition of a Fermi level, we can
@@ -575,6 +530,9 @@ function for either spin up or down nucleons
   \\ 0 \end{array}\right) \hspace{0.5cm}
 \xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
 \]
+As an interesting aside, the recent works of Binder {\em et al} \cite{binder2016} and McElvain and Haxton
+\cite{haxton2016} offer new perspectives on the construction of effective Hamiltonians and choices of basis functions.
+
 
 We focus first on the kinetic energy operator.  We assume that we have
 periodic boundary conditions which limit the allowed wave numbers to
@@ -638,9 +596,9 @@ for energies less than or equal to $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le
 
 
 Continuing in this way we get for $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}=4$ a
-total of 22 additional states, resulting in $76$ as a new magic
+total of 12 additional states, resulting in $66$ as a new magic
 number. For the lowest six energy values the degeneracy in energy
-gives us $2$, $14$, $38$, $54$, $76$ and $114$ as magic numbers. These
+gives us $2$, $14$, $38$, $54$, $66$ and $114$ as magic numbers. These
 numbers will then define our Fermi level when we compute the energy in
 a Cartesian basis. When performing calculations based on many-body
 perturbation theory, coupled cluster theory or other many-body
@@ -653,10 +611,10 @@ neutrons, the above magic numbers become $4, 28, 76, 108, 132, 228,
 
 Every number of particles for filled shells defines also the number of
 particles to be used in a given calculation. The number of particles
-can in turn be used to define the density $n$ (or the Fermi momentum)
+can in turn be used to define the density $\rho$ (or the Fermi momentum)
 of the system via
 \[
-n = g \frac{k_F^3}{6\pi^2},
+\rho = g \frac{k_F^3}{6\pi^2},
 \]
 where $k_F$ is the Fermi momentum and the degeneracy $g$, which is two
 for one type of spin-$1/2$ particles and four for symmetric nuclear
@@ -665,7 +623,7 @@ particles $A$ and the Fermi momentum $k_F$, we can define the length
 $L$ of the box used with periodic boundary contributions via the
 relation
 \[
-  V= L^3= \frac{A}{n}.
+  V= L^3= \frac{A}{\rho}.
 \]
 With $L$ we can to define the spacing between various
 $k$-values given by
@@ -674,11 +632,10 @@ $k$-values given by
 \]
 Here, $A$ is the number of nucleons. If we deal with the electron
 gas only, this needs to be replaced by the number of electrons $N$.
-Exercise \ref{problem:spbasissetup} deals with setting up a program
+Exercise \ref{problem:spbasissetup} deals with the set up of a program
 that establishes the single-particle basis for nuclear matter
 calculations with input a given number of nucleons and a user
-specificied density or Fermi momentum. The recent works of Binder {\em et al} \cite{binder2016} and McElvain and Haxton
-\cite{haxton2016} offer interesting perspectives on effective Hamiltonians and choice of basis functions.
+specificied density or Fermi momentum. 
 
 \subsection{Two-body interaction}
 
@@ -866,7 +823,7 @@ During the past two decades it has been demonstrated that chiral
 effective field theory represents a powerful tool to deal with
 hadronic interactions at low energy in a systematic and
 model-independent way (see
-Refs.~\cite{weinberg1990,ordonez1996,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,ekstromPRX}).
+Refs.~\cite{weinberg1990,ordonez1996,vankolck1994,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,ekstromPRX}).
 Effective field theories (EFTs) are defined in terms of effective Lagrangians which are given by
 an infinite series of terms with increasing number of derivatives
 and/or nucleon fields, with the dependence of each term on the pion
@@ -926,7 +883,7 @@ $C=1$), Eq.~(\ref{eq_nu}) collapses to
 Thus, in terms of naive dimensional analysis or ``Weinberg counting''
 \cite{weinberg1990}, the various orders of the
 irreducible graphs which define the chiral $NN$ potential are given by
-(cf.\ Fig.~\ref{fig_diagNNLO})
+(see Fig.~\ref{fig_diagNNLO})
 \begin{eqnarray}
 V_{\rm LO} & = & V_{\rm ct}^{(0)} + V_{1\pi}^{(0)}
 \label{eq_VLO}
@@ -937,7 +894,7 @@ V_{2\pi}^{(2)}
 \label{eq_VNNLO}
 \end{eqnarray}
 where the superscript denotes the order $\nu$ of the low-momentum
-expansion.  LO stands for leading order, NLO for next-to-leading order
+expansion, LO stands for leading order, NLO for next-to-leading order
 and NNLO stands for next-to-next-to leading order.  Contact potentials
 carry the subscript ``ct'' and pion-exchange potentials can be
 identified by an obvious subscript.
@@ -963,27 +920,27 @@ corrections, the on-shell 1PE has the form of Eq.~(\ref{eq:eq_1PEci})
 to all orders.
 
 It is well known that for high-precision $NN$ potentials, charge
-dependence is important.  Therefore, we will take the charge
-dependence of the 1PE into account.  Defining a pion-mass dependent
+dependence is important.  To take into account the charge
+dependence of the 1PE contribution we define a pion-mass dependent
 1PE by
 \[
 V_{1\pi} (m_\pi) \equiv - \,
 %\frac{1}{(2\pi)^3} \,
 \frac{g_A^2}{4f_\pi^2} \, \frac{ \vec \sigma_1 \cdot \vec q \,\, \vec
-  \sigma_2 \cdot \vec q} {q^2 + m_\pi^2} \,,
+  \sigma_2 \cdot \vec q} {q^2 + m_\pi^2}.
 \]
-the 1PE for proton-proton ($pp$) and neutron-neutron ($nn$) scattering
-is
+The 1PE for proton-proton ($pp$) and neutron-neutron ($nn$) terms
+are then given by
 \[
 V_{1\pi}^{(pp)} ({\vec k}~', \vec k) = V_{1\pi}^{(nn)} ({\vec k}~',
 \vec k) = V_{1\pi} (m_{\pi^0}) \,,
 \]
-while for neutron-proton ($np$) scattering we have
+while for the neutron-proton ($np$) part  we have
 \[
 V_{1\pi}^{(np)} ({\vec k}~', \vec k) = -V_{1\pi} (m_{\pi^0}) +
 (-1)^{T+1}\, 2\, V_{1\pi} (m_{\pi^\pm}) \,,
 \]
-where $T$ denotes the isospin of the two-nucleon system.  We use
+where $T$ denotes the isospin of the two-nucleon system.  The pion masses are defined  as
 $m_{\pi^0}=134.9766$ MeV and $m_{\pi^\pm}=139.5702$ MeV.  For the
 leading-order, next-to-leading order and NNLO, we refer the reader to
 Refs.~\cite{machleidt2011,ekstromPRX}.  The final interaction at
@@ -997,7 +954,7 @@ order NNLO is multiplied with the following factors
 \end{equation}
 with $E_p=\sqrt{M_N^2+p^2}$ and where the factor $1/(2\pi)^3$ is just
 added for convenience.  The potential $\widehat{V}$ satisfies the
-nonrelativistic Lippmann-Schwinger (LS) equation,
+nonrelativistic Lippmann-Schwinger (LS) equation, see Ref.~\cite{machleidt2011} for discussions,
 \begin{equation}
  \widehat{T}({\vec k}~',{\vec k})= \widehat{V}({\vec k}~',{\vec k})+
  \int d^3p''\: \widehat{V}({\vec k}~',{\vec k}~'')\: \frac{M_N} {{
@@ -1013,13 +970,13 @@ p^2 = \frac12 M_N T_{\rm lab} \,,
 \end{equation}
 where $T_{\rm lab}$ denotes the kinetic energy of the incident nucleon
 in the laboratory system (``Lab.\ Energy'').  For $np$ scattering, we
-have
+have the relations
 \begin{eqnarray}
 M_N &=& \frac{2M_pM_n}{M_p+M_n} = 938.9182 \mbox{ MeV, and} \\ p^2 & =
 & \frac{M_p^2 T_{\rm lab} (T_{\rm lab} + 2M_n)} {(M_p + M_n)^2 +
   2T_{\rm lab} M_p} \,,
 \end{eqnarray}
-which is based upon relativistic kinematics.
+which are based upon relativistic kinematics.
 
 Iteration of $\widehat V$ in the Lippman-Schwinger equation, Eq.~(\ref{eq_LS}),
 requires cutting $\widehat V$ off for high momenta to avoid
@@ -1044,54 +1001,14 @@ interaction diagrams, see Fig.~\ref{fig_diagNNLO}. In chiral
 perturbation theory, the orders are generated systematically, and at a
 given chiral order the number of Feynman diagrams is
 finite. Consistency requires that a calculation includes all diagrams
-which are present at the chosen order. In this work we employ chirally
-consistent many-body calculations including all NNLO nuclear
-interactions.
-
+which are present at the chosen order. 
 There are in total five contact terms that determine the strength of
 the NNLO three-nucleon force (3NF); $c_1,c_3,$ and $c_4$ are
 associated with the three-body two-pion-exchange (2PE) diagram, $c_D$
 and $c_E$ determine the strength of the one-pion-exchange plus contact
 (1PE) diagram and the pure contact (CNT) diagram,
-respectively. Following the notation of Ref.~\cite{epelbaum2002} the
-three-body diagrams are given by
-\begin{equation}
-V^{\textnormal{2PE}}_{ijk} = \sum_{i \neq j \neq k} \frac{1}{2} \left(
-\frac{g_A}{f_{\pi}} \right)^2 \frac{(\vec{\sigma_i} \cdot
-  \vec{q_i})(\vec{\sigma_j}\cdot \vec{q_j})}{(\vec{q_i}^2 +
-  m_{\pi)}^2)(\vec{q_j}^2 + m_{\pi)}^2)} F_{ijk}^{\alpha \beta}
-\tau_i^{\alpha}\tau_{j}^{\beta} \,,
-\end{equation}
-where $q_{i}$ denotes the momentum transfer associated with nucleon
-$i$, and
-\begin{align}
-F_{ijk}^{\alpha \beta} ={}& \delta^{\alpha \beta} \left[
-  -\frac{4c_1m_{\pi}^2}{f_{\pi}^2} +
-  \frac{2c_3}{f_{\pi}^2}\vec{q_i}\cdot
-  \vec{q_j}\right]\\ {}&+\sum_{\gamma}\frac{c_4}{f_{\pi}^2}\epsilon^{\alpha
-  \beta \gamma} \tau_{k}^{\gamma} \vec{\sigma_k} \cdot [\vec{q_i}
-  \times \vec{q_j}] \,.
-\end{align}
-For this diagram, no new parameters are introduced since the
-$c_1,c_3,c_4$ appear already in the 2PE two-nucleon interaction. The
-remaining two three-body terms are given by
-\begin{equation}
-V^{\textnormal{1PE}}_{ijk} = -\sum_{i \neq j \neq k}
-\frac{g_A}{8f_{\pi}^2} \frac{c_D}{f_{\pi}^2\Lambda_{\chi}} \frac{
-  (\vec{\sigma_j} \cdot \vec{q_j})}{(\vec{q_j}^2 + m_{\pi}^2)} (\tau_i
-\cdot \tau_j)(\vec{\sigma_i}\cdot \vec{\sigma_j})
-\end{equation}
-and
-\begin{equation}
-V^{\textnormal{CNT}}_{ijk} = \frac{1}{2}\sum_{i \neq j \neq k}
-\frac{c_E}{f_{\pi}^4 \Lambda_{\chi}} (\tau_i \cdot \tau_j)
-\end{equation}
-with $\Lambda_{\chi}=700$ MeV. Following~\cite{navratil2007}, we use a
-regulator depending on the momentum-transfer $q$,
-\begin{equation}
-f(q) = \exp[-q^4/\Lambda]
-\end{equation}
-and thus obtain a local three-body force.
+respectively. The work of Refs.~\cite{epelbaum2002,epelbaum2009} 
+gives an extensive discussions of these terms and we refer the reader to these references for further details.
 
 \section{Hartree-Fock theory}\label{sec:chap8hf}
 
@@ -1131,7 +1048,7 @@ meaning that
 \langle p|\hat{u}^{\mathrm{HF}}|q\rangle = \sum_{i\le F} \langle pi |
 \hat{V} | qi\rangle.
 \]
-The so-called Hartree-Fock potential $\hat{u}^{\mathrm{HF}}$ brings an
+The so-called Hartree-Fock potential $\hat{u}^{\mathrm{HF}}$ adds an
 explicit medium dependence due to the summation over all
 single-particle states below the Fermi level $F$. It brings also in an
 explicit dependence on the two-body interaction (in nuclear physics we
@@ -1195,13 +1112,12 @@ basis. The expectation value for the energy with the ansatz $\Phi_0$
 for the ground state reads (see problem \ref{problem:referenceE}, with
 application to infinite nuclear matter)
 \[
-  E[\Phi_0] = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
-  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle
+  E[\Phi_0] = \sum_{\mu\le F} \langle \mu | h | \mu \rangle +
+  \frac{1}{2}\sum_{{\mu},{\nu}\le F} \langle
   \mu\nu|\hat{v}|\mu\nu\rangle.
 \]
 Now we are interested in defining a new basis defined in terms of a
-chosen basis as defined in Eq.~(\ref{eq:newbasis}). We can then
-rewrite the energy functional as
+chosen basis as defined in Eq.~(\ref{eq:newbasis}). We define the energy functional as
 \begin{equation}
   E[\Phi^{HF}] = \sum_{i\le F} \langle i | h | i \rangle +
   \frac{1}{2}\sum_{ij\le F}\langle
@@ -1209,9 +1125,6 @@ rewrite the energy functional as
 \end{equation}
 where $\Phi^{HF}$ is the new Slater determinant defined by the new
 basis of Eq.~(\ref{eq:newbasis}).
-
-
-
 
 
 Using Eq.~(\ref{eq:newbasis}) we can rewrite
@@ -1225,7 +1138,7 @@ Eq.~(\ref{FunctionalEPhi2}) as
 \end{equation}
 
 
-We wish now to minimize the above functional. We introduce a set of
+In order to find the variational minimum of the above functional, we introduce a set of
 Lagrange multipliers, noting that since $\langle i | j \rangle =
 \delta_{i,j}$ and $\langle \alpha | \beta \rangle =
 \delta_{\alpha,\beta}$, the coefficients $C_{i\gamma}$ obey the
@@ -1291,7 +1204,7 @@ The Hartree-Fock equations are solved in an iterative way starting
 with a guess for the coefficients $C_{j\gamma}=\delta_{j,\gamma}$ and
 solving the equations by diagonalization till the new single-particle
 energies $\epsilon_i^{\mathrm{HF}}$ do not change anymore by a
-prefixed quantity.
+user defined small  quantity.
 
 Normally we assume that the single-particle basis $|\beta\rangle$
 forms an eigenbasis for the operator $\hat{h}_0$, meaning that the
@@ -1528,10 +1441,7 @@ if __name__ == '__main__':
   of a system that allows us to compare exact solutions with
   those defined by many-body perturbation theory to a given order in
   the interaction, coupled cluster theory, Green's function theory and
-  the Similarity Renormalization Group (SRG). Many-body perturbation
-  theory and coupled cluster theory are discussed in this chapter,
-  while various SRG approaches are discussed in Chapter 10. Green's
-  function theory is discussed in Chapter 11.
+  the Similarity Renormalization Group (SRG). 
 
   In order to familiarize the reader with these approximative
   many-body methods, we start with the general definition of the full
@@ -1712,7 +1622,7 @@ A given
   transformation where matrix elements of the type 
 $\langle 0p-0h\vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 |\hat{H}|\Phi_{i}^{a}\rangle=0$.
 With a canonical Hartree-Fock basis our Hamiltonian matrix reads
-  \begin{table}[h]
+\begin{table}[h]
   \begin{center}
   \begin{tabular}{cccccccc}
   \hline \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ $0p-0h$ } &
@@ -1731,13 +1641,15 @@ With a canonical Hartree-Fock basis our Hamiltonian matrix reads
   \end{tabular}
   \end{center}
   \end{table}
+
+
   If we do not make any truncations in the possible sets of Slater
   determinants (many-body states) we can make by distributing $A$
   nucleons among $n$ single-particle states, we call such a
   calculation for a full configuration interaction (FCI) approach.  If
   we make truncations, we have several different possibilities to
   reduce the dimensionality of the problem.  A well-known example is
-  the standard nuclear shell-model. For the shell model, we define an
+  the standard nuclear shell-model. For the nuclear shell model we define an
   effective Hilbert space with respect to a given core. The
   calculations are normally then performed for all many-body states
   that can be constructed from the effective Hilbert spaces. This
@@ -1759,7 +1671,7 @@ sum of single-particle energies defined by the unperturbed one-body part of the 
 A commonly used basis in nuclear physics is the harmonic oscillator. The 
 cutoff in energy is then defined by the maximum number of harmonic oscillator excitations.
 If we do not define a core, this defines normally what is
-  called the no-core shell-model approach \cite{navratil2009}.
+  called the no-core shell-model approach, see for example Refs.~\cite{navratil2009,navratil2016}.
 
 
   \subsection{A non-practical way of solving the eigenvalue problem}
@@ -1768,9 +1680,8 @@ If we do not define a core, this defines normally what is
   perturbation theory), we will rewrite Eq.~(\ref{eq:fullci}) as a set
   of coupled non-linear equations in terms of the unknown coefficients
   $C_H^P$.  To obtain the eigenstates and eigenvalues in terms of
-  non-linear equations is, from a computational perspective as 
-  inefficient as finding the roots (and thereby eigenvalues) of the
-  characteristic polynomial. However, this digression serves the scope
+  non-linear equations is less efficient than using standard eigenvalue solvers \cite{golubvanloan}.
+  However, this digression serves the scope
   of linking full configuration interaction theory with approximative
   solutions to the many-body problem.
 
@@ -1896,7 +1807,7 @@ energy of Eq.~(\ref{eq:correlationenergy}).  These
 compute expectation values of other operators,
     as well as transition probabilities. Moreover, correlations are easy to understand in terms of contributions
     to a given operator beyond the Hartree-Fock contribution. 
-For larger dimensionalities $d$, with $d > 10^5$, iterative Krylov methods \cite{golubvanloan} like Lanczos' \cite{lanczos} or Davidson's \cite{davidson1989,davidson1993} 
+For larger dimensionalities $d$, with $d > 10^5$, iterative methods \cite{golubvanloan} like Lanczos' \cite{lanczos} or Davidson's \cite{davidson1989,davidson1993} 
 algorithms are frequently used. These methods yield, with a finite number of iteration, only a subset of all eigenvalues of interest. Lanczos' algorithm converges to the extreme values, yielding the lowest-lying and highest-lying eigenstates, see for example Ref.~\cite{golubvanloan} for a proof. 
 
 With the eigenvectors we can compute
@@ -1907,9 +1818,8 @@ With the eigenvectors we can compute
   \]
 The energy of  the ground state is then
   \[
-  E=E_{\mathrm{Ref}}+\Delta E,
+  E=E_{\mathrm{Ref}}+\Delta E.
   \]
-where $E_{\mathrm{Ref}}$ is the reference energy.
   However, as we have seen, even for a
   small case like the four first major shells and 
   oxygen-16 with 16 active nucleons, the dimensionality becomes quickly intractable. If we
@@ -2123,13 +2033,13 @@ where the reference energy is given by
 
 
 
-  Recalling that $\hat{Q}$ commutes with $\hat{H_0}$ and since $\Delta
+  The operator $\hat{Q}$ commutes with $\hat{H_0}$ and since $\Delta
   E$ is a constant we obtain that
   \[
   \hat{Q}\Delta E\vert \Phi_0\rangle = \hat{Q}\Delta E\vert
   \hat{Q}\Phi_0\rangle = 0.
   \]
-  Inserting this results in the expression for the energy results in
+  Inserting this result in the expression for the energy gives us
   \[
   \Delta E=\langle \Phi_0\vert
   \left(\hat{H}_I+\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I+
@@ -2140,13 +2050,12 @@ where the reference energy is given by
 
 
 
-  We can now expand this expression in terms of a perturbative expression in
-  terms of $\hat{H}_I$ where we iterate the last expression in terms
-  of $\Delta E$, that is 
+  We can now perturbatively expand this expression in terms of the interaction
+   $\hat{H}_I$, which is assumed to be small. We obtain then
   \[
-  \Delta E=\sum_{i=1}^{\infty}\Delta E^{(i)}.
+  \Delta E=\sum_{i=1}^{\infty}\Delta E^{(i)},
   \]
-  We get the following expression for $\Delta E^{(i)}$
+  with the following expression for $\Delta E^{(i)}$
   \[
   \Delta E^{(1)}=\langle \Phi_0\vert \hat{H}_I\vert \Phi_0\rangle,
   \] 
@@ -2234,9 +2143,8 @@ have an even number of hole lines and closed loops, resulting thus in a positive
   for $V$ have a strong short-range repulsive core. Hence, matrix
   elements involving $V(|{\mathbf r}|)$, will result in large (or
   infinitely large for a potential with a hard core) and repulsive
-  contributions to the ground-state energy. Thus, the diagrammatic
-  expansion for the ground-state energy in terms of the potential
-  $V(|{\mathbf r}|)$ becomes meaningless. A perturbative expansion in terms of
+  contributions to the ground-state energy. 
+  A perturbative expansion in terms of
 such interaction matrix elements may thus lead to a slowly converging expansion.
 A standard recipe to circumvent such problems has been to sum up 
 a selected class of correlations. We discuss such possibilities in section \ref{sec:chap8cctheory}.  
@@ -2247,7 +2155,7 @@ a selected class of correlations. We discuss such possibilities in section \ref{
 
   In section \ref{sec:chap8fci} we showed that we could rewrite the exact state
   function for the ground state as a linear expansion in terms of all
-  possible Slater determinants.  We expanded then (as an example) our
+  possible Slater determinants.  We expanded  our
   exact state function for the ground state as
   \[
   |\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
@@ -2332,7 +2240,7 @@ specific correlations and we can make comparisons with exact
 calculations like those provided by configuration interaction theory.
 The advantage of for example Rayleigh-Schr\"odinger perturbation
 theory is that at every order in the interaction, we know how to
-calculate all contributions since they can be either tabulated or
+calculate all contributions. The two-body matrix elements can for example  be tabulated or
 computed on the fly.  However, many-body perturbation theory suffers
 from not being variational theory and there is no guarantee that
 higher-order terms will improve the order-by-order convergence.  It is
@@ -2342,7 +2250,7 @@ interactions.  There are however classes of correlations which can be
 summed up to infinite order in the interaction.  The hope is that such
 correlations can mitigate specific convergence issues, although there
 is no a priori guarantee thereof.  Examples are the so-called TDA and
-RPA class of diagrams \cite{blaizot}, as well as the resummation
+RPA classes of diagrams \cite{blaizot,Dickhoff2008,Mattuck1992}, as well as the resummation
 of two-particle-two-hole correlations discussed in chapter 11. If we limit ourselves to the
 resummation of two-particle correlations only, these lead us to the
 so-called $G$-matrix resummation of diagrams, see for example Ref.~\cite{day1967}.
@@ -2354,7 +2262,7 @@ many-body method of this chapter, coupled cluster theory.
 
 \section{Coupled cluster theory}\label{sec:chap8cctheory}
   
-Coester and Kummel developed the ideas that led to coupled cluster
+Coester and K\"{u}mmel \cite{coester1958,coester1960,kuemmel1978} developed the ideas that led to coupled cluster
 theory in the late 1950s. The basic idea is that the correlated wave function
 of a many-body system $\mid\Psi\rangle$
 can be formulated as an exponential of correlation
@@ -2375,16 +2283,17 @@ to be extremely useful, see for example the review by Barrett and
 Musial as well as the recent textbook by Shavitt and Bartlett \cite{shavittbartlett2009}.
 Many previous applications to nuclear physics struggled with the
 repulsive character of the nuclear forces and limited basis sets
-used in the computations. Most of these problems have been overcome
+used in the computations \cite{kuemmel1978}. Most of these problems have been overcome
 during the last decade and coupled cluster theory is one of the
 computational methods of preference for doing nuclear physics, with
   applications ranging from light nuclei to medium-heavy nuclei, see
-  for example the recent reviews by Hagen {\em et al} \cite{hagen2014,hagen2016}.
+  for example the recent reviews \cite{hagen2014,hagen2016} and 
+Refs.~\cite{binder2013,jansen2016}. 
 
 
 \subsection{A quick tour of Coupled Cluster theory}
 
-  The ansatz for the wavefunction (ground state) is given by
+  The ansatz for the ground state  is given by
   \begin{equation}
      \vert \Psi_0\rangle = \vert \Psi_{CC}\rangle = e^{\hat{T}} \vert
      \Phi_0\rangle = \left( \sum_{n=1}^{A} \frac{1}{n!} \hat{T}^n
@@ -2440,7 +2349,7 @@ For the full derivation of these expressions, see for example Ref.~\cite{shavitt
 
 A much used approximation is to truncate the cluster operator
 $\hat{T}$ at the $n=2$ level. This defines the so-called singles and
-doubles approximation to the coupled cluster wavefunction, normally
+doubles approximation to the coupled cluster state function, normally
 shortened to CCSD.
 The coupled cluster wavefunction is now given by
   \begin{equation}
@@ -2519,7 +2428,7 @@ We write out the commutator  as
         &= \sum_{pqia} f_q^p t_i^a \left( \normord{a_p^\dagger a_q} \normord{a_a^\dagger a_i} -
                 \normord{a_a^\dagger a_i} \normord{a_p^\dagger a_q} \right).
     \end{align*}
-We have skipped here the curly brackets that indicate that the chains of operators are normal ordered with respect to the new reference state. 
+We have kept here the curly brackets that indicate that the chains of operators are normal ordered with respect to the new reference state. 
 If we consider the second set of operators and rewrite them with curly brackets (bringing back the normal ordering) we have
         \begin{align*}
             \left\{a_a^\dagger a_i\right\} \left\{a_p^\dagger a_q \right\} &= \normord{a_a^\dagger a_i a_p^\dagger a_q}
@@ -2744,7 +2653,7 @@ The contribution from the $\hat{T}^2$ is given by
   \Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle t_{i}^{a}+\frac{1}{2} \sum_{ijab} \bra{ij}\hat{v}\ket{ab} t_i^a t_j^b+
   \frac{1}{4}\sum_{ijab}\langle ij | \hat{v}| ab \rangle t_{ij}^{ab}.
   \end{equation}
-We leave it as a challenge to the reader to derive the corresponding equations for the Hamiltonian matrix elements of Eq.~\ref{eq:amplitudeeq}.
+We leave it as a challenge to the reader to derive the corresponding equations for the Hamiltonian matrix elements of Eq.~(\ref{eq:amplitudeeq}).
 
 
   There are several interesting features with the coupled cluster
@@ -2857,7 +2766,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   amplitudes. These serve as important benchmarks when we are to develop a many-body code.
 The standard method for solving these equations is to
   set up an iterative scheme where method's like Newton's method or
-  similar root searching methods are used to find the amplitudes see for example Ref.~\cite{baran2008}.
+  similar root searching methods are used to find the amplitudes, see for example Ref.~\cite{baran2008}.
 
   Iterative solvers need a guess for the amplitudes. A good starting
   point is to use the correlated wave operator from perturbation
@@ -3194,7 +3103,7 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   10\delta -g
   \end{bmatrix}
   \]
-  The following python program diagonalizes the above Hamiltonian
+  The python program at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
@@ -3221,153 +3130,6 @@ which translates into
   \]
  This expression can be used to check the results
   for any value of $g$ and provides thereby an important test of  our codes.
-See \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} for the Python code shown here.
-\begin{lstlisting}
-#!/usr/bin/python
-from sympy import *
-from pylab import *
-import matplotlib.pyplot as plt
-
-below_fermi = (0,1,2,3)
-above_fermi = (4,5,6,7)
-states = [(1,1),(1,-1),(2,1),(2,-1),(3,1),(3,-1),(4,1),(4,-1)]
-N = 8
-g = Symbol('g')
-
-def h0(p,q):
-    if p == q:
-        p1, s1 = states[p]
-        return (p1 - 1)
-    else:
-        return 0
-
-def f(p,q):
-    if p == q:
-        return 0
-    s = h0(p,q)
-    for i in below_fermi:
-        s += assym(p,i,q,i)
-        return s
-
-
-def assym(p,q,r,s):
-    p1, s1 = states[p]
-    p2, s2 = states[q]
-    p3, s3 = states[r]
-    p4, s4 = states[s]
-
-    if p1 != p2 or p3 != p4:
-        return 0
-    if s1 == s2 or s3 == s4:
-        return 0
-    if s1 == s3 and s2 == s4:
-        return -g/2.
-    if s1 == s4 and s2 == s3:
-        return g/2.
-
-def eps(holes, particles):
-    E = 0
-    for h in holes:
-        p, s = states[h]
-        E += (p-1)
-    for p in particles:
-        p, s = states[p]
-        E -= (p-1)
-    return E
-
-
-# Diagram 1
-s1 = 0
-for a in above_fermi:
-    for b in above_fermi:
-        for i in below_fermi:
-            for j in below_fermi:
-                s1 += 0.25*assym(a,b,i,j)*assym(i,j,a,b)/eps((i,j),(a,b))
-
-
-# Diagram 3
-s3 = 0
-for a in above_fermi:
-   for b in above_fermi:
-       for c in above_fermi:
-           for i in below_fermi:
-               for j in below_fermi:
-                   for k in below_fermi:
-                       s3 += assym(i,j,a,b)*assym(a,c,j,k)*assym(b,k,c,i)
-                             /eps((i,j),(a,b))/eps((k,j),(a,c))
-
-# Diagram 4
-s4 = 0
-for a in above_fermi:
-    for b in above_fermi:
-        for c in above_fermi:
-            for d in above_fermi:
-                for i in below_fermi:
-                    for j in below_fermi:
-                        s4 += 0.125*assym(i,j,a,b)*assym(a,b,c,d)*assym(c,d,i,j)
-                               /eps((i,j),(a,b))/eps((i,j),(c,d))
-
-# Diagram 5
-s5 = 0
-for a in above_fermi:
-    for b in above_fermi:
-        for i in below_fermi:
-            for j in below_fermi:
-                for k in below_fermi:
-                    for l in below_fermi:
-                        s5 += 0.125*assym(i,j,a,b)*assym(k,l,i,j)*assym(a,b,k,l)
-                              /eps((i,j),(a,b))/eps((k,l),(a,b))
-
-# Diagram 8 
-s8 = 0
-for a in above_fermi:
-    for b in above_fermi:
-        for i in below_fermi:
-            for j in below_fermi:
-                for k in below_fermi:
-                    s8 -= 0.5*assym(i,j,a,b)*assym(a,b,i,k)*f(k,j)
-                            /eps((i,j),(a,b))/eps((i,k),(a,b))
-
-# Diagram 9 
-s9 = 0
-for a in above_fermi:
-    for b in above_fermi:
-        for c in above_fermi:
-            for i in below_fermi:
-                for j in below_fermi:
-                    s9 += 0.5*assym(i,j,a,b)*assym(a,c,i,j)*f(b,c)
-                        /eps((i,j),(a,b))/eps((i,j),(a,c))
-
-ga = linspace(-1,1,20)
-e1 = []
-corr2 = []
-corr3 = []
-
-for g_val in ga:
-    H1 = matrix([[2-g_val , -g_val/2.,  -g_val/2., -g_val/2., -g_val/2.,     0],
-                         [-g_val/2.,   4-g_val,  -g_val/2., -g_val/2.,    0., -g_val/2.],
-                         [-g_val/2., -g_val/2.,    6-g_val,     0, -g_val/2., -g_val/2.],
-                 [-g_val/2., -g_val/2.,      0,   6-g_val, -g_val/2., -g_val/2.],
-                 [-g_val/2.,     0,  -g_val/2., -g_val/2.,   8-g_val, -g_val/2.],
-                 [0    , -g_val/2.,  -g_val/2., -g_val/2., -g_val/2.,  10-g_val]])
-
-    u1, v1 = linalg.eig(H1)
-    e1.append(min(u1))
-    corr2.append((s1).subs(g,g_val))
-    corr3.append((s1+s3+s4+s5).subs(g,g_val))
-
-exact = e1 - (2-ga)
-
-plt.axis([-1,1,-0.5,0.05])
-plt.xlabel(r'Interaction strength, $g$', fontsize=16)
-plt.ylabel(r'Correlation energy', fontsize=16)
-exact = plt.plot(ga, exact,'b-*',linewidth = 2.0, label = 'Exact')
-mbpt2 = plt.plot(ga, corr2,'r:.', linewidth = 2.0, label = 'MBPT2')
-mbpt3 = plt.plot(ga, corr3, 'm:v',linewidth = 2.0, label = 'MBPT3')
-plt.legend()
-plt.savefig('perturbationtheory.pdf', format='pdf')
-plt.show()
-\end{lstlisting}
 Figure \ref{fig:diagpairing} shows the resulting correlation energies for the exact case, MBPT2 and MBPT3.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/perturbationtheory.pdf}
@@ -3781,7 +3543,7 @@ approximated our problem with periodic boundary conditions,
   chosen anti-periodic boundary conditions,
   $\mathop{\phi(x_{i})}=-\mathop{\phi(x_{i}+L)}$. The difference
   between these two shows how the correlation energy contains
-  finite-size effects \cite{gros1992,gros1996,shepherd2016}. One solution to this problem is by integrating
+  finite-size effects \cite{gros1992,gros1996,shepherd2012,shepherd2016}. One solution to this problem is by integrating
   over solutions between periodic and anti-periodic conditions, known
   as twist-averaging \cite{twistaverage}. First, we multiply the single-particle states by
   a phase for each direction, characterized by a twist-angle,
@@ -4371,14 +4133,14 @@ in Monte Carlo calculations.
   Table \ref{tab:table1}.  You need to define the number of particles
   $A$ and the density of the system using
   \[
-  n = g \frac{k_F^3}{6\pi^2}.
+  \rho = g \frac{k_F^3}{6\pi^2}.
   \]
   Here you can either define the density itself or the Fermi momentum
   $k_F$.  With the density/Fermi momentum and a fixed number of
   nucleons $A$, we can define the length $L$ of the box used with our
   periodic boundary contributions via the relation
   \[
-    V= L^3= \frac{A}{n}.
+    V= L^3= \frac{A}{\rho}.
   \]
   We can then can use $L$ to define the spacing between various
   $k$-values, that is
@@ -5164,113 +4926,6 @@ for n in range(nshell):
 
   Wick's theorem provides us with an algebraic method for easy
   determination of the terms that contribute to the matrix element.
-
-  \section*{Code structure with benchmark calculations}
-In section \ref{sec:chap8numproject} we emphasized several elements we
-feel are important during the various development stages of a
-numerical project. Here we would like to reiterate some of these. In
-particular we would like to stress modularization of code and
-refactoring into general classes which can easily be extended upon in
-order to accomodate new physical systems and/or many-methods.
-
-The codes of this chapter, listed at the link
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/CCD/src},
-abide to this general philosophy via two major general classes, one
-for the physical systems under study and one for the specific
-many-body methods. The latter allows us, in a fairly straightforward
-way to add new many-body methods like the in-medium similarity
-renormalization group approach of chapter 10 or to extend our nuclear
-matter calculations to systems like the homogenous electron gas in two
-or three dimensions.
-
-To be more explicit, the general class  {\em abstractSPbasis} allows easily for extensions the homogenous electron gas or systems like quantum dots.  The abstract class is defined as (for the complete code see the above link)
-\begin{lstlisting}
-#ifndef ABSTRACTSPBASIS_HPP
-#define ABSTRACTSPBASIS_HPP
-
-class abstractSPbasis{
-public:
-  // double g;
-  // double density;
-  // double r_s;
-  // int tzMax;
-  // int nMax;
-  // int shellMax;
-  int Nspstates;
-  int Nparticles;
-  int Nchannels;
-  int ** indexMap;
-  double * spEnergy;
-  channelBundle * chanValue;
-  channelBundle * chanModValue;
-
-  abstractSPbasis() {}
-  // abstractSPbasis(double densityIn, int tzMaxIn, int shellMaxIn, int NparticlesIn);
-  virtual void generateIndexMap() = 0;
-  virtual void generateBasis() = 0;
-  virtual int checkSympqrs(int p, int q, int r, int s) = 0;
-  virtual int checkModSympqrs(int p, int q, int r, int s) = 0;
-  virtual int checkChanSym(int p, int q, int ichan) = 0;  
-  virtual int checkChanModSym(int p, int q, int ichan) = 0;  
-  virtual void setUpTwoStateChannels() = 0;
-  virtual void printBasis() = 0;
-  virtual void deallocate() = 0;  
-
-  virtual double calc_TBME(int p, int q, int r, int s) = 0;
-};
-#endif /*ABSTRACTSPBASIS_HPP*/
-\end{lstlisting} 
-This class defines general quantum numbers and functions that can in turn be inhereted by other systems.
-As an example, the class that is used in the infinite matter calculations is shown here.
-\begin{lstlisting}
-#ifndef INFMATTER_HPP
-#define INFMATTER_HPP
-
-#include "abstractSPbasis.hpp"
-
-// struct channelBundle{
-//   int chanNx;
-//   int chanNy;
-//   int chanNz;
-//   int chanSz;
-//   int chanTz; 
-// };
-
-class infMatterSPBasis: public abstractSPbasis{
-public:
-   double density;
-   int tzMax;
-   int nMax;
-   int shellMax;
-  // int Nspstates;
-  // int Nparticles;
-  // int Nchannels;
-  // int ** indexMap;
-  // double * spEnergy;
-  // channelBundle * chanValue;
-  // channelBundle * chanModValue;
-
-  infMatterSPBasis(double densityIn, int tzMaxIn, int shellMaxIn, int NparticlesIn);// : abstractSPbasis(densityIn, tzMaxIn, shellMaxIn, NparticlesIn) {}
-  void generateIndexMap();
-  void generateBasis();
-  int checkSympqrs(int p, int q, int r, int s);
-  int checkModSympqrs(int p, int q, int r, int s);
-  int checkChanSym(int p, int q, int ichan);
-  int checkChanSym2(int p, int q, int chanNx, int chanNy, int chanNz, int chanSz, int chanTz);
-int checkChanModSym2(int p, int q, int chanNx, int chanNy, int chanNz, int chanSz, int chanTz);
-  int checkChanModSym(int p, int q, int ichan);  
-  void setUpTwoStateChannels();
-  void printBasis();
-  void deallocate();
-
-  double calc_TBME(int p, int q, int r, int s);
-  int spinExchangeMtxEle(int i, int j, int k, int l);
-  int kron_del(int i, int j);
-
-};
-
-#endif /* INFMATTER_HPP */
-\end{lstlisting}
 
   \begin{acknowledgement}
   We are much indebted to Thomas Papenbrock for many discussions on
