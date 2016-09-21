@@ -41,7 +41,7 @@ void Build_Model_Space(Input_Parameters &Parameters, Model_Space &Space);
 int Chan_2bInd(const Model_Space &Space, const State &State);
 int kron_del(const int &i, const int &j);
 int spinExchangeMtxEle(const int &i, const int &j, const int &k, const int &l);
-double vint_Minnesota_Momentum(const Model_Space &Space, const int &qi, const int &qj, const int &qk, const int &ql, const double &L);
+double V_Minnesota(const Model_Space &Space, const int &qi, const int &qj, const int &qk, const int &ql, const double &L);
 
 struct Input_Parameters{
   int Nshells; //number of neutrons shells

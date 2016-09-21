@@ -11,7 +11,7 @@ void MBPT2_0(const Input_Parameters &Parameters, const Model_Space &Space)
       for(int a = Space.indhol; a < Space.indtot; ++a){
 	for(int b = Space.indhol; b < Space.indtot; ++b){
 	  if(a == b){ continue; }
-	  energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	  energy0 = V_Minnesota(Space, i, j, a, b, L);
 	  energy0 *= energy0;
 	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	  energy += energy0;
@@ -37,7 +37,7 @@ void MBPT2_1(const Input_Parameters &Parameters, const Model_Space &Space)
 	for(int a = Space.indhol; a < Space.indtot; ++a){
 	  for(int b = Space.indhol; b < Space.indtot; ++b){
 	    if(a == b){ continue; }
-	    energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	    energy0 = V_Minnesota(Space, i, j, a, b, L);
 	    energy0 *= energy0;
 	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	    energy += energy0;
@@ -67,7 +67,7 @@ void MBPT2_2(const Input_Parameters &Parameters, const Model_Space &Space, const
       for(int pp = 0; pp < npp; ++pp){
 	a = Chan.ppvec[chan][2*pp];
 	b = Chan.ppvec[chan][2*pp + 1];
-	energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	energy0 = V_Minnesota(Space, i, j, a, b, L);
 	energy0 *= energy0;
 	energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	energy += energy0;
@@ -98,7 +98,7 @@ void MBPT2_3(const Input_Parameters &Parameters, const Model_Space &Space, const
 	for(int pp = 0; pp < npp; ++pp){
 	  a = Chan.ppvec[chan][2*pp];
 	  b = Chan.ppvec[chan][2*pp + 1];
-	  energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	  energy0 = V_Minnesota(Space, i, j, a, b, L);
 	  energy0 *= energy0;
 	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	  energy += energy0;
@@ -138,7 +138,7 @@ void MBPT2_4(const Input_Parameters &Parameters, const Model_Space &Space, const
 	  a = Chan.ppvec[chan][2*pp];
 	  b = Chan.ppvec[chan][2*pp + 1];
 	  idx = hh * npp + pp;
-	  energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	  energy0 = V_Minnesota(Space, i, j, a, b, L);
 	  V1[idx] = energy0 / (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	  idx = pp * nhh + hh;
 	  V2[idx] = energy0;
@@ -170,13 +170,13 @@ void MBPT3_0(const Input_Parameters &Parameters, const Model_Space &Space)
       for(int a = Space.indhol; a < Space.indtot; ++a){
 	for(int b = Space.indhol; b < Space.indtot; ++b){
 	  if(a == b){ continue; }
-	  energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	  energy0 = V_Minnesota(Space, i, j, a, b, L);
 	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	  for(int c = Space.indhol; c < Space.indtot; ++c){
 	    for(int d = Space.indhol; d < Space.indtot; ++d){
 	      if(c == d){ continue; }
-	      energy1 = vint_Minnesota_Momentum(Space, a, b, c, d, L);
-	      energy1 *= vint_Minnesota_Momentum(Space, c, d, i, j, L);
+	      energy1 = V_Minnesota(Space, a, b, c, d, L);
+	      energy1 *= V_Minnesota(Space, c, d, i, j, L);
 	      energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
 	      energy += energy0 * energy1;
 	    }
@@ -203,13 +203,13 @@ void MBPT3_1(const Input_Parameters &Parameters, const Model_Space &Space)
 	for(int a = Space.indhol; a < Space.indtot; ++a){
 	  for(int b = Space.indhol; b < Space.indtot; ++b){
 	    if(a == b){ continue; }
-	    energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	    energy0 = V_Minnesota(Space, i, j, a, b, L);
 	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	    for(int c = Space.indhol; c < Space.indtot; ++c){
 	      for(int d = Space.indhol; d < Space.indtot; ++d){
 		if(c == d){ continue; }
-		energy1 = vint_Minnesota_Momentum(Space, a, b, c, d, L);
-		energy1 *= vint_Minnesota_Momentum(Space, c, d, i, j, L);
+		energy1 = V_Minnesota(Space, a, b, c, d, L);
+		energy1 *= V_Minnesota(Space, c, d, i, j, L);
 		energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
 		energy += energy0 * energy1;
 	      }
@@ -240,13 +240,13 @@ void MBPT3_2(const Input_Parameters &Parameters, const Model_Space &Space, const
       for(int pp0 = 0; pp0 < npp; ++pp0){
 	a = Chan.ppvec[chan][2*pp0];
 	b = Chan.ppvec[chan][2*pp0 + 1];
-	energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	energy0 = V_Minnesota(Space, i, j, a, b, L);
 	energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	for(int pp1 = 0; pp1 < npp; ++pp1){
 	  c = Chan.ppvec[chan][2*pp1];
 	  d = Chan.ppvec[chan][2*pp1 + 1];
-	  energy1 = vint_Minnesota_Momentum(Space, a, b, c, d, L);
-	  energy1 *= vint_Minnesota_Momentum(Space, c, d, i, j, L);
+	  energy1 = V_Minnesota(Space, a, b, c, d, L);
+	  energy1 *= V_Minnesota(Space, c, d, i, j, L);
 	  energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
 	  energy += energy0 * energy1;
 	}
@@ -277,13 +277,13 @@ void MBPT3_3(const Input_Parameters &Parameters, const Model_Space &Space, const
 	for(int pp0 = 0; pp0 < npp; ++pp0){
 	  a = Chan.ppvec[chan][2*pp0];
 	  b = Chan.ppvec[chan][2*pp0 + 1];
-	  energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	  energy0 = V_Minnesota(Space, i, j, a, b, L);
 	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	  for(int pp1 = 0; pp1 < npp; ++pp1){
 	    c = Chan.ppvec[chan][2*pp1];
 	    d = Chan.ppvec[chan][2*pp1 + 1];
-	    energy1 = vint_Minnesota_Momentum(Space, a, b, c, d, L);
-	    energy1 *= vint_Minnesota_Momentum(Space, c, d, i, j, L);
+	    energy1 = V_Minnesota(Space, a, b, c, d, L);
+	    energy1 *= V_Minnesota(Space, c, d, i, j, L);
 	    energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
 	    energy += energy0 * energy1;
 	  }
@@ -325,7 +325,7 @@ void MBPT3_4(const Input_Parameters &Parameters, const Model_Space &Space, const
 	  i = Chan.hhvec[chan][2*hh];
 	  j = Chan.hhvec[chan][2*hh + 1];
 	  idx = hh * npp + pp0;
-	  energy0 = vint_Minnesota_Momentum(Space, i, j, a, b, L);
+	  energy0 = V_Minnesota(Space, i, j, a, b, L);
 	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
 	  V1[idx] = energy0;
 	}
@@ -333,7 +333,7 @@ void MBPT3_4(const Input_Parameters &Parameters, const Model_Space &Space, const
 	  c = Chan.ppvec[chan][2*pp1];
 	  d = Chan.ppvec[chan][2*pp1 + 1];
 	  idx = pp0 * npp + pp1;
-	  V2[idx] = vint_Minnesota_Momentum(Space, a, b, c, d, L);
+	  V2[idx] = V_Minnesota(Space, a, b, c, d, L);
 	}
       }
     }
@@ -520,7 +520,7 @@ void Build_Model_Space(Input_Parameters &Parameters, Model_Space &Space)
   for(int p = 0; p < Space.indtot; ++p){
     for(int i = 0; i < Space.indhol; ++i){
       if(p == i){ continue; }
-      Space.qnums[p].energy += 2*vint_Minnesota_Momentum(Space, p, i, p, i, L);
+      Space.qnums[p].energy += 2*V_Minnesota(Space, p, i, p, i, L);
     }
   }
 
