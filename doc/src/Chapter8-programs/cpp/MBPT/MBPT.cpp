@@ -8,10 +8,9 @@ int main(int argc, char * argv[])
 
   // setup structures to time functions
   struct timespec time1, time2, time3;
-  double elapsed1 = 0.0, elapsed2 = 0.0;
+  double elapsed1 = 0.0, elapsed2 = 0.0, elapsed3 = 0.0;
 
   // set number of threads for parallel functions
-  omp_set_num_threads(4);
   std::cout << std::setprecision(12);
 
   // get input parameters
@@ -21,7 +20,12 @@ int main(int argc, char * argv[])
   Parameters.Nshells = atoi(argv[4]);
   Parameters.MBPT_Approx = atoi(argv[5]);
   Parameters.MBPT_Function = atoi(argv[6]);
+
+  clock_gettime(CLOCK_MONOTONIC, &time1);
   Build_Model_Space(Parameters, Space);
+  clock_gettime(CLOCK_MONOTONIC, &time2);
+  elapsed3 = (time2.tv_sec - time1.tv_sec);
+  elapsed3 += (time2.tv_nsec - time1.tv_nsec) / 1000000000.0;
   
   clock_gettime(CLOCK_MONOTONIC, &time1); // time1 before channel function
 
@@ -54,7 +58,12 @@ int main(int argc, char * argv[])
   elapsed2 = (time3.tv_sec - time2.tv_sec);
   elapsed2 += (time3.tv_nsec - time2.tv_nsec) / 1000000000.0;
   
-  std::cout << "size = " << Space.indtot << ",  Approx = " << Parameters.MBPT_Approx << ",  Function = " << Parameters.MBPT_Function << ",  time1 = " << elapsed1 << ",  time2 = " << elapsed2 << std::endl << std::endl;
+  std::cout << "size = " << Space.indtot << ", # of protons = "
+      << Parameters.numberOfProtons << ", # of neutrons = " << Parameters.numberOfNeutrons << std::endl;
+  std::cout << "Approx = " << Parameters.MBPT_Approx << ",  Function = " << Parameters.MBPT_Function << std::endl;
   
+  std::cout << "Time to setup modelspace = " << elapsed3 << std::endl;
+  std::cout << "Time to setup channels = " << elapsed1 << std::endl;
+  std::cout << "Time to run MBPT = " << elapsed2 << std::endl;
   return 0;
 }
