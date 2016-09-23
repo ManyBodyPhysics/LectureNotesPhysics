@@ -30,7 +30,7 @@ int main(int argc, char * argv[])
   clock_gettime(CLOCK_MONOTONIC, &time1); // time1 before channel function
 
   // setup channels for MBPT_Function == 2, 3, 4
-  if(Parameters.MBPT_Function > 1){
+  if(Parameters.MBPT_Function > 1 && Parameters.MBPT_Function < 5){
     Setup_Channels_MBPT(Parameters, Space, Chan);
   }
   
@@ -45,6 +45,7 @@ int main(int argc, char * argv[])
     else if(Parameters.MBPT_Function == 2){ MBPT2_2(Parameters, Space, Chan); }
     else if(Parameters.MBPT_Function == 3){ MBPT2_3(Parameters, Space, Chan); }
     else if(Parameters.MBPT_Function == 4){ MBPT2_4(Parameters, Space, Chan); }
+    else if(Parameters.MBPT_Function == 5){ MBPT2_5(Parameters, Space); }
   }
   else if(Parameters.MBPT_Approx == 3){
     if(Parameters.MBPT_Function == 0){ MBPT3_0(Parameters, Space); }

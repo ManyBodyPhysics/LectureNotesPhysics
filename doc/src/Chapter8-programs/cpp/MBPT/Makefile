@@ -1,7 +1,7 @@
 # http://mrbook.org/blog/tutorials/make/
 # http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 
-CFLAGS = -Wall -fopenmp -static
+CFLAGS = -Wall -fopenmp
 CC=g++
 ifdef DEBUG
 	CFLAGS += -g -fbounds-check -ftrapv -pedantic-errors

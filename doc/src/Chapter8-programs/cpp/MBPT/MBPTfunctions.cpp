@@ -159,6 +159,84 @@ void MBPT2_4(const Input_Parameters &Parameters, const Model_Space &Space, const
   std::cout << "DeltaE for MBPT(2)_4 = " << energy << std::endl;
 }
 
+void MBPT2_5(const Input_Parameters &Parameters, const Model_Space &Space) {
+
+  double *v = setup_minnesota_potential_hhpp(Parameters, Space);
+  double *denominators = setup_vector_of_twobody_denominators_hhpp(Space);
+
+  int number_of_elements = pow(Space.indhol,2)*pow(Space.indpar,2);
+
+  double energy = 0.0;
+  for ( int i = 0; i < number_of_elements; i++ ) {
+    energy += v[i]*v[i]/denominators[i];
+  }
+  energy *= 0.25;
+
+  std::cout << "DeltaE for MBPT(2)_5 = " << energy << std::endl;
+}
+
+double * setup_minnesota_potential_hhpp (const Input_Parameters &Parameters, const Model_Space &Space) {
+
+  int number_of_elements = pow(Space.indhol,2)*pow(Space.indpar,2);
+  double initial_value = 0.0;
+  double *v = allocate_and_initialize_double_vector(number_of_elements, initial_value);
+
+  double L = pow((Parameters.P + Parameters.N)/Parameters.density, 1./3.);
+  int number_of_occupied_states = Space.indhol;
+  int number_of_unoccupied_states = Space.indpar;
+
+  for (int i = 0; i < number_of_occupied_states; ++i) {
+    for (int j = 0; j < number_of_occupied_states; ++j) {
+      if (i == j) { continue; }
+      for (int a = 0; a < number_of_unoccupied_states; ++a) {
+        for (int b = 0; b < number_of_unoccupied_states; ++b) {
+          if (a == b) { continue; }
+          v[get_index(Space, i, j, a, b)] =
+            V_Minnesota(Space, i, j, a+number_of_occupied_states, b+number_of_occupied_states, L);
+        }
+      }
+    }
+  }
+  return v;
+}
+
+double * allocate_and_initialize_double_vector(int number_of_elements, double value) {
+  double *vector = new double[number_of_elements];
+  for ( int i = 0; i < number_of_elements; i++ ) {
+    vector[i] = value;
+  }
+  return vector;
+}
+
+int get_index(const Model_Space &Space, int i, int j, int a, int b) {
+  return i*pow(Space.indpar,2)*Space.indhol + j*pow(Space.indpar,2) + a*Space.indpar + b;
+}
+
+double * setup_vector_of_twobody_denominators_hhpp (const Model_Space &Space) {
+
+  int number_of_elements = pow(Space.indhol,2)*pow(Space.indpar,2);
+  double initial_value = 1.0;
+  double *denominators = allocate_and_initialize_double_vector(number_of_elements, initial_value);
+
+  int number_of_occupied_states = Space.indhol;
+  int number_of_unoccupied_states = Space.indpar;
+
+  for (int i = 0; i < number_of_occupied_states; ++i) {
+    for (int j = 0; j < number_of_occupied_states; ++j) {
+      if (i == j) { continue; }
+      for (int a = 0; a < number_of_unoccupied_states; ++a) {
+        for (int b = 0; b < number_of_unoccupied_states; ++b) {
+          if (a == b) { continue; }
+          denominators[get_index(Space, i, j, a, b)] =
+                Space.qnums[i].energy + Space.qnums[j].energy -
+                Space.qnums[a+Space.indhol].energy - Space.qnums[b+Space.indhol].energy;
+        }
+      }
+    }
+  }
+  return denominators;
+}
+
 void MBPT3_0(const Input_Parameters &Parameters, const Model_Space &Space)
 {
   double L = pow((Parameters.P + Parameters.N)/Parameters.density, 1./3.);

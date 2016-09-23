@@ -25,11 +25,16 @@ struct State;
 struct Model_Space;
 struct Channels;
 
+double * setup_minnesota_potential_hhpp (const Input_Parameters &Parameters, const Model_Space &Space);
+double * allocate_and_initialize_double_vector(int number_of_elements, double value);
+int get_index(const Model_Space &Space, int i, int j, int a, int b);
+double * setup_vector_of_twobody_denominators_hhpp (const Model_Space &Space);
 void MBPT2_0(const Input_Parameters &Parameters, const Model_Space &Space);
 void MBPT2_1(const Input_Parameters &Parameters, const Model_Space &Space);
 void MBPT2_2(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan);
 void MBPT2_3(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan);
 void MBPT2_4(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan);
+void MBPT2_5(const Input_Parameters &Parameters, const Model_Space &Space);
 void MBPT3_0(const Input_Parameters &Parameters, const Model_Space &Space);
 void MBPT3_1(const Input_Parameters &Parameters, const Model_Space &Space);
 void MBPT3_2(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan);
@@ -94,4 +99,7 @@ struct Channels{
   int** ppvec;
 };
 
+typedef struct tensorSizeRank4 {
+  int size1, size2, size3, size4;
+} tensorSizeRank4;
 #endif
