@@ -71,13 +71,13 @@ algorithmic development of first principle (or {\em ab initio})
 methods for solving the nuclear many-body problem. Linked with a
 similar progress in the derivation of nuclear forces based on
 effective field theory (EFT), see chapters four, five and six of the
-present text and Refs.~\cite{vankolck1999,machleidt2011,epelbaum2009},
+present text and Refs.~\cite{Weinberg:1990rz,Weinberg:1991um,Ordonez:1992xp,Ordonez:1993tn,vanKolck:1994yi,vankolck1999,machleidt2011,epelbaum2009},
 we are now in a situation where reliable results can be provided at
 different levels of approximation.  The nuclear Hamiltonians which are
 now used routinely in nuclear structure and nuclear matter
 calculations, include both nucleon-nucleon ($NN$) and three-nucleon forces (3NFs) derived from EFT, see for
 example
-Refs.~\cite{hagen2014,hagen2016,roth2012,binder2013,hergert2016,navratil2016,steiner2012,carbone2013,steiner2012}.
+Refs.~\cite{Hagen:2015yea,Ekstrom:2015rta,hagen2016,coraggio2014,sammarruca2015,roth2012,binder2013,hergert2016,navratil2016,steiner2012,carbone2013,steiner2012}.
 Parallel to the development of nuclear forces from EFT, which employ
 symmetries of quantum chromodynamics, there are recent and promising
 approaches to derive the EoS using forces constrained from lattice
@@ -90,21 +90,20 @@ developments are nicely summarized in for example the review of Day
 \cite{day1967} from 1967. These early state-of-the-art calculations
 were performed using what is known as Brueckner-Bethe-Goldstone theory
 \cite{brueckner1954,brueckner1955}, see for example
-Refs.\cite{hh2000,baldo2012,baldo2012a,coraggio2013} for recent reviews and
+Refs.~\cite{hh2000,baldo2012,baldo2012a,coraggio2013,coraggio2014,sammarruca2015} for recent reviews and
 developments.  In these calculations, mainly particle-particle
 correlations were summed to infinite order.  Other correlations were
 often included in a perturbative way. A systematic inclusion of other
 correlations in a non-perturbative way are nowadays accounted for in
 many-body methods like coupled cluster theory
-\cite{bartlett2007,shavittbartlett2009,hagen2014,hagen2016,binder2013,jansen2016}, various Monte Carlo methods
-\cite{carlson2003,gandolfi2009,gandolfi2009b,gezerlis2010,gandolfi2012,lovato2012,carlson2016}, Green's function approaches
-\cite{baldo2012a,carbone2013,dickhoff2004} and density functional
-theories \cite{erler2013}, just to mention a few of the actual
+\cite{bartlett2007,shavittbartlett2009,baardsen2013,hagenmatter,Hagen:2015yea,hagen2016,binder2013,jansen2016} (this chapter), various Monte Carlo methods
+\cite{carlson2003,gandolfi2009,gandolfi2009b,gezerlis2010,gandolfi2012,lovato2012,gezerlis2013,carlson2016} (chapter 9), Green's function approaches
+\cite{baldo2012a,carbone2013,ch11_Soma2014s2n,dickhoff2004} (chapter 11) and similarity renormalization group methods \cite{morris2015,hergert2016} (chapter 10), just to mention a few of the actual
 many-body methods which are used for nuclear matter studies. Many of these methods
 are discussed in detail in this and the following chapters.
 
 
-The aim of this part of the lectures (comprising this chapter and the
+The aim of this part of the present lecture notes (comprising this chapter and the
 three subsequent ones) is to provide the necessary ingredients for
 performing studies of neutron star matter (or matter in
 $\beta$-equilibrium) and symmetric nuclear matter.  We will mainly
@@ -123,7 +122,7 @@ often assumed to be made of mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
 transitions to quark degrees of freedom at higher densities
-\cite{hh2000,Lattimer2007,prakash1996,steiner2010}.  In these notes we limit ourselves to matter composed
+\cite{hh2000,Lattimer2007,prakash1996,steiner2010}.  In this chapter we limit ourselves to matter composed
 of neutrons only.  Furthermore, we will also consider matter at
 temperatures much lower than the typical Fermi energies.
 
@@ -337,7 +336,7 @@ same).  As a practical matter, however, Slater determinants beyond
 $N=4$ quickly become unwieldy. Thus we turn to the occupation
   representation or second quantization to simplify
 calculations. For a good introduction to second quantization see for
-example Refs.~\cite{blaizot,Dickhoff2008,Mattuck1992,shavittbartlett2009}.
+example Refs.~\cite{blaizot,Ch11_Dickhoff2008,Ch11_Mattuck1992,shavittbartlett2009}.
 
 We start with a set of orthonormal single-particle states $\{
 \psi_{\alpha}(x) \}$.  To each single-particle state
@@ -823,7 +822,7 @@ During the past two decades it has been demonstrated that chiral
 effective field theory represents a powerful tool to deal with
 hadronic interactions at low energy in a systematic and
 model-independent way (see
-Refs.~\cite{weinberg1990,ordonez1996,vankolck1994,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,ekstromPRX}).
+Refs.~\cite{weinberg1990,ordonez1996,vankolck1994,vankolck1999,machleidt2011,epelbaum2009,ekstrom2013,Ekstrom:2015rta,ekstromPRX}).
 Effective field theories (EFTs) are defined in terms of effective Lagrangians which are given by
 an infinite series of terms with increasing number of derivatives
 and/or nucleon fields, with the dependence of each term on the pion
@@ -863,7 +862,7 @@ NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.
 Below we revisit briefly the formalism and results presented in
 Refs.~\cite{ekstromPRX}. For further details on chiral effective
 field theory and nuclear interactions, see for example
-Refs.~\cite{machleidt2011,epelbaum2009,ekstrom2013}
+Refs.~\cite{machleidt2011,epelbaum2009,ekstrom2013,Ekstrom:2015rta,ekstromPRX}
 \begin{figure}[t]\centering
 %\vspace*{-0.25cm}
 \scalebox{0.14}{\includegraphics{Chapter8-figures/diagNNLO.pdf}}
@@ -2086,7 +2085,7 @@ where the reference energy is given by
 We assume the reader is familiar 
 with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{shavittbartlett2009}.
 \begin{figure}[hbtp]
-    \includegraphics[width=\linewidth]{Chapter8-figures/mbpt.pdf}
+    \includegraphics[width=0.7\linewidth,angle=90]{Chapter8-figures/mbpt.pdf}
       \caption{Diagrams which enter the definition of the ground-state
       correlation energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
       \label{fig:goldstone}
@@ -2250,7 +2249,7 @@ interactions.  There are however classes of correlations which can be
 summed up to infinite order in the interaction.  The hope is that such
 correlations can mitigate specific convergence issues, although there
 is no a priori guarantee thereof.  Examples are the so-called TDA and
-RPA classes of diagrams \cite{blaizot,Dickhoff2008,Mattuck1992}, as well as the resummation
+RPA classes of diagrams \cite{blaizot,Ch11_Dickhoff2008,Ch11_Mattuck1992}, as well as the resummation
 of two-particle-two-hole correlations discussed in chapter 11. If we limit ourselves to the
 resummation of two-particle correlations only, these lead us to the
 so-called $G$-matrix resummation of diagrams, see for example Ref.~\cite{day1967}.
@@ -2263,10 +2262,10 @@ many-body method of this chapter, coupled cluster theory.
 \section{Coupled cluster theory}\label{sec:chap8cctheory}
   
 Coester and K\"{u}mmel \cite{coester1958,coester1960,kuemmel1978} developed the ideas that led to coupled cluster
-theory in the late 1950s. The basic idea is that the correlated wave function
+theory in the late 1950s. The correlated wave function
 of a many-body system $\mid\Psi\rangle$
 can be formulated as an exponential of correlation
-operators $T$ acting on a reference state $\mid\Phi\rangle$.
+operators $T$ acting on a reference state $\mid\Phi\rangle$,
 \begin{equation}
 \mid\Psi\rangle = \exp\left(\hat{T}\right)\mid\Phi\rangle,
 \end{equation}
@@ -2287,7 +2286,7 @@ used in the computations \cite{kuemmel1978}. Most of these problems have been ov
 during the last decade and coupled cluster theory is one of the
 computational methods of preference for doing nuclear physics, with
   applications ranging from light nuclei to medium-heavy nuclei, see
-  for example the recent reviews \cite{hagen2014,hagen2016} and 
+  for example the recent reviews \cite{Hagen:2015yea,hagen2016} and 
 Refs.~\cite{binder2013,jansen2016}. 
 
 
@@ -2338,7 +2337,7 @@ the similarity transformed Hamiltonian $\overline{H}$ is expanded
             \ldots \left[ \hat{H}_N, \hat{T} \right], \ldots \hat{T}
             \right] +\dots
       \end{equation}
-  and simplified using the connected cluster theorem
+  and simplified using the connected cluster theorem \cite{shavittbartlett2009}
       \begin{equation}
           \overline{H}= \hat{H}_N + \left( \hat{H}_N \hat{T}\right)_c
           + \frac{1}{2} \left( \hat{H}_N \hat{T}^2\right)_c + \dots +
@@ -2667,7 +2666,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   be included due to too large dimensionalities.  However, Coupled
   Cluster theory is non-variational and if we want to find properties
   of excited states, additional calculations via for example equation
-  of motion methods are needed \cite{shavittbartlett2009,hagen2014}.
+  of motion methods are needed \cite{shavittbartlett2009,Hagen:2015yea}.
   If correlations are strong, a single-reference ansatz may not be the
   best starting point and a multi-reference approximation is needed
   \cite{jansen2015}. Furthermore, we cannot quantify properly the
@@ -2822,18 +2821,18 @@ The standard method for solving these equations is to
   \frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle
   \frac{1}{\omega-\epsilon_c-\epsilon_d}\tau_{ij}^{cd}(\omega),
   \]
-  where we have indicated an explicit energy dependence. This
+  where we have inserted an explicit energy dependence via the parameter $\omega$. This
   equation, transforming a two-particle configuration into a single
-  index, can be transformed into a matrix inversion problem.  Solving
+  index, can be rewritten as  a matrix inversion problem.  Solving
   the equations for a fixed energy $\omega$ allows us to compare
   directly with results from Green's function theory when only
   two-particle intermediate states are included.
 
-  To solve Eq. (\ref{eq:ccd1}), we would thus start with a guess for
+  To solve Eq.~(\ref{eq:ccd1}), we start with a guess for
   the unknown amplitudes, normally using the wave operator defined by
-  first order in perturbation theory, leading to a zeroth
-  approximation to the energy given by second-order perturbation
-  theory for the correlation energy.  A simple approach to the
+  first order in perturbation theory, leading to a zeroth-order
+  approximation for the correlation energy given by second-order perturbation
+  theory.  A simple approach to the
   solution of Eq.~(\ref{eq:ccd1}), is to thus to
   \begin{enumerate}
   \item Start with a guess for the amplitudes and compute the zeroth
@@ -2843,8 +2842,7 @@ The standard method for solving these equations is to
     via for example your root-finding method of choice (Newton's
     method or modifications thereof can be used) and continue these
     iterations till the correlation energy does not change more than a
-    prefixed quantity $\lambda$; $\Delta E_{\mathrm{CCD}}^{(i)}-\Delta
-    E_{\mathrm{CCD}}^{(i-1)} \le \lambda$.
+    prefixed quantity $\lambda$; $\Delta E_{\mathrm{CCD}}^{(i)}-\Delta E_{\mathrm{CCD}}^{(i-1)} \le \lambda$.
 
   \item It is common during the iterations to scale the amplitudes
     with a parameter $\alpha$, with $\alpha \in (0,1]$ as
@@ -2871,7 +2869,7 @@ The standard method for solving these equations is to
 \section{Developing a numerical project}\label{sec:chap8numproject}
 
 When developing numerical projects we would like to emphasize some
-topics we feel can help in structuring a large computational project.
+general aspects  we feel can help in structuring a large computational project.
 Amongst these, the validation and verification of the correctness of
 the employed algorithms and programs are central issues which can
 save you a lot of time when developing a numerical project. In the
@@ -2883,7 +2881,7 @@ cluster equations, the in-medium similarity renormalization group
 approach of chapter 10 and the Green's function approach of chapter
 11. 
 
-It is also important to develop an understanding of how our
+It is also important to develop an understanding of how and why our
 algorithms can go wrong and how they can be implemented in order to
 run as efficiently as possible. When working on a numerical project it
 is important to keep in mind that computing covers numerical as well
@@ -2918,11 +2916,28 @@ When building up a numerical project there are several elements you should think
 
 
 \subsection{Developing a CCD code for infinite matter}
-  This section will focus on writing a working CCD code from
-  scratch. If you are familiar with writing quantum many-body physics
-  codes, feel free to skip ahead as we are going to go into some
-  detail about implementing CCD as a computer code now. As we saw
-  earlier, the CCD equations can be written as
+  This section focuses on writing a working CCD code from
+  scratch. What follows serves also the scope of outlining how to start a numerical project.  We will assume that you have 
+opted for a specific mathematical method for solving Schr\"odinger's equation. Here the mathematics is  given by the CCD equations.  
+Our basic steps can then be split up as follows 
+  \begin{itemize}
+\item Write a first version of the CCD  code which is as close as possible to the mathematics of your equations. In this stage we will not 
+focus on high-performance computing aspects and code efficiency.
+\item Try to find possible benchmarks you can test your code against. In our case, the pairing model serves as an excellent testcase. 
+\item With a functioning code that reproduces possible analytical and/or numerical results, we can start to analyze our code. In particular, if there are mathematical operations which can be simplified and/or can be represented in simpler ways etc etc. The modified code can hopefully reduce memory needs and time spent on computations.
+\end{itemize}
+In this specific section, we will try to follow the above three steps,
+with less attention on speed and numerical efficiency.  Our aim is to
+have a code which passes central tests and can be properly validated
+and verified.  If you are familiar with high-performance computing
+topics, you are obviously not limited to follow the basic steps
+outlined here.  However, when developing a numerical project we have
+often found it easier and less error-prone to start with the basic
+mathematical expressions. In the subsequent section we will however
+delve into high-performance computing topics. A good read on developing numerical projects and clear code is Martin's recent text \cite{martin2015}.
+We recommend it highly and have borrowed many ideas and coding philosophies therefrom. 
+
+We start with implementing the CCD equations as they stand here 
   \begin{align}
   \left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)t_{ij}^{ab}
   = \langle ab \vert \hat{v} \vert ij \rangle+\frac{1}{2}\sum_{cd} \langle ab \vert \hat{v} \vert cd \rangle
@@ -2981,7 +2996,7 @@ When building up a numerical project there are several elements you should think
   \text{TBME}[\text{index}(a,b,i,j)$] \For{$c \in
     \{N_{\mathrm{Fermi}},N_{sp}-1\}$ } \For{$d \in \{N_{\mathrm{Fermi}},N_{sp}-1\}$ }
   \State $\text{sum} \gets \text{sum} +
-  0.5\times\text{ME}[\text{index}(a,b,c,d)] \times
+  0.5\times\text{TBME}[\text{index}(a,b,c,d)] \times
   t\_\text{amplitudes}\_\text{old}[\text{index}(c,d,i,j)]$ \EndFor
   \EndFor \State ...  \State sum $\gets$ sum + (all other terms)
   \State ...  \State energy\_denom =
@@ -3000,7 +3015,7 @@ When building up a numerical project there are several elements you should think
   of the CCD equations would be to create two four-dimensional arrays to store the
   objects. However, it is often more convenient to work with simple
   one-dimensional arrays instead. The function $index()$ maps the four
-  indices onto one index so that a one-dimensional array can be used. An example
+  indices onto one index so that a one-dimensional array can be used. An example of a brute force implementation 
   of such a function is
 \begin{svgraybox} 
  \begin{algorithmic}
@@ -3015,7 +3030,7 @@ When building up a numerical project there are several elements you should think
   automatically zero. This means that we need to discuss more efficient storage
   strategies later. Notice also that we are looping over all
   indices $i,j,a,b$, rather than the restricted indices. This means that we
-  are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow. However, it is often less error-prone and simpler write. 
+  are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow. 
 Below we will however unrestrict these indices in order to achieve a better speed up of our code. 
 
    The goal of our code is to calculate the correlation energy,
@@ -3031,7 +3046,7 @@ Below we will however unrestrict these indices in order to achieve a better spee
   \begin{equation}
   \eta > | \Delta E_{CCD}^{(n+1)} - \Delta E_{CCD}^{(n)} |.
   \end{equation}
-  The basic structure of the iterative process will look like
+  The basic structure of the iterative process looks like
 \begin{svgraybox}
   \begin{algorithmic}
     \While {(abs(energy\_Diff) $>$ tolerance)} \State CCD\_Update()
@@ -3043,18 +3058,17 @@ Below we will however unrestrict these indices in order to achieve a better spee
   \end{algorithmic}
 \end{svgraybox}
   Prior to this algorithm, the $t$ amplitudes should be initalized,
-  $t_{ij}^{ab}{}^{(0)}$. A particularly convenient choice, as discussed above, is to set
-  $t_{ij}^{ab}{}^{(0)} = 0$. Notice that if this starting point is
-  used, then
+  $t_{ij}^{ab}{}^{(0)}$. A particularly convenient choice, as discussed above, is to 
+use many-body perturbation theory for the wave operator with
   \begin{equation}
-  t_{ij}^{ab}{}^{(1)} = \frac{\langle ab \vert \hat{v} \vert ij\rangle}{\epsilon^{ab}_{ij}},
+  t_{ij}^{ab}{}^{(0)} = \frac{\langle ab \vert \hat{v} \vert ij\rangle}{\epsilon^{ab}_{ij}},
   \label{eq:ccdGuess}
   \end{equation}
-resulting in the correlation energy
+which results in the correlation energy
   \begin{equation}
-  \Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ij \vert \hat{v} \vert ab \rangle\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}},
+  \Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ij \vert \hat{v} \vert ab \rangle\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}}.
   \end{equation}
-  which is the result from many-body perturbation theory to second order (MBPT2).  This is a very useful result, as one iteration
+  This is our familiar result from many-body perturbation theory to second order (MBPT2).  This is a very useful result, as one iteration
   of the CCD equations can be ran, and checked against MBPT2 to give
   some confidence that everything is working correctly. Additionally, running a program using a minimal test case is another useful way to make sure that a program is working correctly. For this purpose, we turn our attention to the simple pairing model Hamiltonian of problem \ref{problem:pairingmodel},
   \begin{equation}
@@ -3103,7 +3117,7 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   10\delta -g
   \end{bmatrix}
   \]
-  The python program at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
+  The python program (included for pedagogical purposes only) at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
@@ -3136,30 +3150,44 @@ Figure \ref{fig:diagpairing} shows the resulting correlation energies for the ex
     \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
     \label{fig:diagpairing}
   \end{figure}
-We note from the above program that we have coded the expressions for the various diagrams
-following strictly the mathematical expressions of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5}).
-This means that for every diagram we loop explicitely  over every single-particle state. As we will
-  see later, this is extremely inefficient from a computational point
-  of view. In our discussions below, we will rewrite
-  the computations of most diagrams in terms of efficient
-  matrix-matrix multiplications or matrix-vector multiplications.  
-  Figure \ref{fig:diagpairing} shows us that the approximation to both
-  second and third order are very good when the interaction strength
-  is small and contained in the interval $g\in[-0.5,0.5]$, but as the
-  interaction gets stronger in absolute value the agreement  with the exact reference energy for  MBPT2 and MBPT3 worsens. We also note
-  that the third-order result is actually worse than the second order
-  result for larger values of the interaction strength, indicating
-  that there is no guarantee that higher orders in many-body
-  perturbation theory may reduce the relative error in a systematic
-  way.  Adding fourth order contributions as shown in Fig.~\ref{fig:pairingccmbpt4}
-  for negative interaction strengths gives a
-  better result than second and third order, while for $g>0$ the
-  relative error is worse.  The fourth order contributions (not shown in the above figure) include also four-particle-four-hole correaltions.
-However, the disagreement for stronger interaction values hints at  the possibility that many-body perturbation theory may not converge order by order.  Perturbative studies of nuclear systems may thus be questionable, unless selected contributions that soften the interactions are properly softened.   
- We note also the non-variational character
-  of many-body perturbation theory, with results at different levels of many-body perturbation theory either
-  overshooting or undershooting the true ground state correlation energy. 
-The coupled cluster results are included in Fig.~\ref{fig:pairingccmbpt4} where we display the difference between the exact correlation energy and the correlation energy obtained with many-body perturbation theory to fourth order.  The MBPT4 results show a better agreement with experiment, but here as well for larger positive values of the interaction, we see clear signs of deviations. 
+We note from the above program that we have coded the expressions for
+the various diagrams following strictly the mathematical expressions
+of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5}).  This means
+that for every diagram we loop explicitely over every single-particle
+state. As we will see later, this is extremely inefficient from a
+computational point of view. In our discussions below, we will rewrite
+the computations of most diagrams in terms of efficient matrix-matrix
+multiplications or matrix-vector multiplications.  Figure
+\ref{fig:diagpairing} shows us that the approximation to both second
+and third order are very good when the interaction strength is small
+and contained in the interval $g\in[-0.5,0.5]$, but as the interaction
+gets stronger in absolute value the agreement with the exact reference
+energy for MBPT2 and MBPT3 worsens. We also note that the third-order
+result is actually worse than the second order result for larger
+values of the interaction strength, indicating that there is no
+guarantee that higher orders in many-body perturbation theory may
+reduce the relative error in a systematic way.  Adding fourth order
+contributions as shown in Fig.~\ref{fig:pairingccmbpt4} for negative
+interaction strengths gives a better result than second and third
+order, while for $g>0$ the relative error is worse.  The fourth order
+contributions (not shown in the above figure) include also
+four-particle-four-hole correaltions.  However, the disagreement for
+stronger interaction values hints at the possibility that many-body
+perturbation theory may not converge order by order.  Perturbative
+studies of nuclear systems may thus be questionable, unless selected
+contributions that soften the interactions are properly softened.  We
+note also the non-variational character of many-body perturbation
+theory, with results at different levels of many-body perturbation
+theory either overshooting or undershooting the true ground state
+correlation energy.  The coupled cluster results are included in
+Fig.~\ref{fig:pairingccmbpt4} where we display the difference between
+the exact correlation energy and the correlation energy obtained with
+many-body perturbation theory to fourth order.  The MBPT4 results show
+a better agreement with the exact solution, but here as well for
+larger positive values of the interaction, we see clear signs of
+deviations. Coupled cluster theory with doubles only shows a very good
+agreement with the exact results. For larger values of $g$ one will
+however observe larger discrepancies.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/CCDMBPT4theory.pdf}
     \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to fourth order (MBPT4) for a range of interaction values.}
@@ -3330,25 +3358,44 @@ We can then rewrite the correlation energy from MBPT2 as
   \Delta E_{MBPT2} = \frac{1}{4}\hat{A}\times \hat{B}.
 \end{equation}
 Figure \ref{fig:speedup1} shows the difference between the brute force summation over single-particle states
-of Eq.~(\ref{eq:bruteforceMBPT}) and the smarter matrix-matrix multiplication of Eq.~(\ref{eq:smartMBPT}) for a given number  of basis states.
+of Eq.~(\ref{eq:bruteforceMBPT}) and the smarter set up in terms of indices including two-body configurations only, that is Eq.~(\ref{eq:smartMBPT}).
 In these calculations we have only considered pure neutron matter with $N=14$ neutrons and a density $n=0.08$ fm$^{-3}$ and plane wave single-particle states with periodic boundary conditions, allowing for up to 
-$1600$ single-particle basis states. The Minnesota interaction model has been used in these calculations.  
+$1600$ single-particle basis states. The Minnesota interaction model \cite{minnesota} has been used in these calculations.  
 \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/blockvsfull_log.png}
     \caption{MBPT2 contribution to the correlation for pure neutron matter with $N=14$ neutrons and periodic boundary conditions. Up to approximately 1600 single-particle states have been included in the sums over intermediate states in Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT})}. 
     \label{fig:speedup1}
   \end{figure}
-With $40$ single-particle shells, see Table \ref{tab:table1} for example, we have in total  $2713$ single-particle states. 
-Using the matrix-matrix algorithm the final calculation time is $2.4$ s (this is the average time from ten numerical experiments).
-The total time using the brute force is $100.6$ s (again the average of ten numerical experiments), resulting in a speed up of 42. It is useful to dissect the final time in terms of different operations.
-For the matrix-matrix multiplication most of the time is spent setting up the matrix elements for the two-body channels and to load the matrix elements. The final matrix-matrix multiplication takes only $1\%$ of the total time. For the brute force algorithm, the multiplication and summation over the various single-particle states takes almost half of the total time. In our discussion on high-performance computing below, we will discuss in more detail the program used to obtain these results.
+With $40$ single-particle shells, see Table \ref{tab:table1} for
+example, we have in total $2713$ single-particle states.  Using the
+smarter algorithm the final calculation time is $2.4$ s (this is the
+average time from ten numerical experiments).  The total time using
+the brute force summation over single-particle indices is $100.6$ s
+(again the average of ten numerical experiments), resulting in a speed
+up of 42. It is useful to dissect the final time in terms of different
+operations.  For the smarter algorithm most of the time is spent
+setting up the matrix elements for the two-body channels and to load
+the matrix elements. The final matrix-matrix multiplication takes only
+$1\%$ of the total time. For the brute force algorithm, the
+multiplication and summation over the various single-particle states
+takes almost half of the total time. Here we have deliberately only
+focused on the difference between the two ways of computing
+Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}). We have, on
+purpose, not performed a proper timing analysis. In this section we
+have chosen to focus on the development of a program which produces
+the correct results.  The true elephant in the room, in terms of
+computational time, is our computation of the matrix elements of the
+nucleon-nucleon potential. We have deliberately omitted the time spent on setting up the interactions here.
+We will come back to a proper performance
+analysis and high-performance computing issues in the next
+section. For the rest of this section we wil focus on various physics
+applications of our newly developed CCD code.
 
-
-
-With the definition of the intermediates and appropriate matrix-matrix multiplications and  a working CCD program, we can move on to more
-  realistic cases. One such case is infinite nuclear matter using a
-  plane-wave basis. These states are solutions to the free-particle
-  Hamiltonian,
+With the definition of the intermediates and appropriate matrix-matrix
+multiplications and a working CCD program, we can move on to more
+realistic cases. One such case is infinite nuclear matter using a
+plane-wave basis. These states are solutions to the free-particle
+Hamiltonian,
   \begin{equation}
   \frac{-\hbar^2}{2m}\nabla^2\mathop{\phi(\vec{x})}=\epsilon\mathop{\phi(\vec{x})}.
   \end{equation}
@@ -3517,11 +3564,11 @@ and finally
   jb\right)\right).
 \]
 Figure \ref{fig:fig1} displays the convergence of the energy per particle for pure neutron matter as function of number particles 
-for  the CCD approximation with the Minnesota potential for different with $\mathrm{N_{max}=20}$.
+for  the CCD approximation with the Minnesota interaction model  \cite{minnesota} for different with $\mathrm{N_{max}=20}$.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig1.pdf}
     \caption{Energy per particle of pure neutron matter computed in
-      the CCD approximation with the Minnesota potential for different
+      the CCD approximation with the Minnesota interaction model  \cite{minnesota} for different
       numbers of particles with $\mathrm{N_{max}=20}$.}
     \label{fig:fig1}
   \end{figure}
@@ -3530,7 +3577,7 @@ a fixed number of neutrons $N=114$.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig2.pdf}
     \caption{Energy per particle of pure neutron matter computed in
-      the CCD approximation with the Minnesota potential for different
+      the CCD approximation with the Minnesota interaction model  \cite{minnesota} for different
       model space sizes with $\mathrm{A=114}$.}
     \label{fig:fig2}
   \end{figure}
@@ -3559,9 +3606,9 @@ approximated our problem with periodic boundary conditions,
   Adding these phases changes the single-particle energies, the
   correction of which disappear as $L\rightarrow\infty$, depending on
   $\vec{\theta}$ and thus changes the shell structure so that hole
-  states can jump up to particle states and vis a versa. So it's
+  states can jump up to particle states and {\em vice versa}. It is thence
   necessary to fill hole states separately for each
-  $\vec{\theta}$. Integration over some quantitiy is approximated by a
+  $\vec{\theta}$. Integration over a quantitiy is approximated by a
   weighted sum, such as Gauss-Legendre quadrature, over the quantity
   for each set of twist angles. The algorithm becomes then
 \begin{svgraybox}
@@ -3586,20 +3633,23 @@ approximated our problem with periodic boundary conditions,
   energy per particle and the Hartree-Fock energy per particle, which
   avoids the full CCD calculation. These calculations can be compared
   to the exact values for infinite matter, which are calculated by
-  integrating the the relevent values up to the fermi surface
-  \begin{align}
-    \text{T}_{\text{inf}}=\frac{3\hbar^{2}k_{f}^{2}}{10m}
-    \\ \text{HF}_{\text{inf}}=\frac{1}{\mathop{(2\pi)^{6}}}\frac{L^{3}}{2\rho}\int_{0}^{k_{f}}d\vec{k}_{1}\int_{0}^{k_{f}}d\vec{k}_{2}\braket{\vec{k}_{1}\vec{k}_{2}|\hat{v}|\vec{k}_{1}\vec{k}_{2}}
-  \end{align}
+  integrating the the relevent values up to the fermi surface. The kinetic energy is given by
+  \[
+\text{T}_{\text{inf}}=\frac{3\hbar^{2}k_{f}^{2}}{10m},
+\]
+while the potential energy to first order (corresponding to the Hartree-Fock contribution) reads
+\[
+\text{HF}_{\text{inf}}=\frac{1}{\mathop{(2\pi)^{6}}}\frac{L^{3}}{2\rho}\int_{0}^{k_{f}}d\vec{k}_{1}\int_{0}^{k_{f}}d\vec{k}_{2}\braket{\vec{k}_{1}\vec{k}_{2}|\hat{v}|\vec{k}_{1}\vec{k}_{2}}.
+\]
 Figure \ref{fig:fig3} shows the CCD kinetic energy of pure neutron
-      matter computed with the Minnesota potential as a function of
+      matter computed with the Minnesota interaction model  \cite{minnesota} as a function of
       the number of particles for both periodic boundary conditions (PBC)
       and twist-averaged boundary conditions (TABC5). We see clearly that the 
 twist-averaged boundary conditions soften the dependence on finite size effects. 
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig3.pdf}
     \caption{Finite-size effects in the kinetic energy of pure neutron
-      matter computed with the Minnesota potential as a function of
+      matter computed with the Minnesota interaction model  \cite{minnesota} as a function of
       the number of particles for both periodic boundary conditions (PBC)
       and twist-averaged boundary conditions (TABC5).}
     \label{fig:fig3}
@@ -3609,43 +3659,83 @@ obtained with Minnesota interaction using both periodic and twist-average bounda
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/fig4.pdf}
     \caption{Finite-size effects in the Hartree-Fock energy of pure
-      neutron matter computed with the Minnesota potential as a
+      neutron matter computed with the Minnesota interaction model  \cite{minnesota} as a
       function of the number of particles for both periodic boundary (PBC)
       conditions and twist-averaged boundary conditions (TABC5).}
     \label{fig:fig4}
   \end{figure}
 The results show again a weaker dependence on finite size effects.
 
-The codes we have developed for obtaining these results, with
-benchmarks and selected computations, are discussed in more detail in
-the appendix.  The discussions hitherto have focused on the
-development of an efficient and flexible many-body code. As discussed
-in the appendix, the codes have been structured in a very flexible
-way, allowing the user to study and add different physical systems,
+With all these ingredients, we can now compute the final CCD energy and thereby the equation of state for infinite neutron matter.
+Figure \ref{fig:finalccdenergy} displays the total CCD energy (including the reference energy) as well as the reference energy
+obtained with the Minnesota interaction model. The computations have been performed with $N=66$ neutrons and a maximum number of single-particle states constrained by $N_{max}=36$. This corresponds to $2377$ single-particle states. 
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Chapter8-figures/finalccenergy.pdf}
+    \caption{Energy per particle for pure neutron matter as function of density from coupled cluster calculations with doubles correlations  only. The reference energy is included for comparison. The results have been obtained with Minnesota interaction model using periodic  boundary conditions and $N=66$ neutrons and single-particle states up to $N_{max}=36$ ($2377$ single-particle states. }  
+    \label{fig:finalccdenergy}
+  \end{figure}
+We see from this figure that the correlations brought by coupled cluster theory are at the order of $10\%$ roughly of the reference energy. It means that for this system (neutrons only) with the Minnesota potential, higher-order correlations can most likely be treated in a perturbative way. Many-body perturbation theory to second order gives results which are very close to our CCD results, as seen in 
+Table \ref{tab:ecomparison}.
+\begin{table}
+\caption{CCD and MBPT2 results for infinite neutron matter with $N=66$ neutrons and a maximum number of single-particle states constrained by $N_{max}=36$. }\label{tab:ecomparison}
+  \begin{center}
+      \begin{tabular}{| l | l | l |}
+      \hline Density $\rho$ fm$^{-3}$ & $E_{MBPT2}$ & $E_{CCD}$
+      \\ \hline 0.04 & 6.472   & 6.468    \\ \hline
+      0.06 & 7.919  & 7.932   \\ \hline
+      0.08 & 9.075  & 7.932    \\ \hline
+      1.0 & 9.577 &  10.074  \\  \hline
+      1.2 & 10.430 & 10.885   \\ \hline
+      1.4 & 11.212 & 11.565   \\  \hline
+      1.6 & 11.853  & 12.136    \\  \hline
+      1.8 & 12.377 & 12.612   \\ \hline
+      2.0 & 12.799 & 13.004   \\ \hline
+      \end{tabular}
+  \end{center}
+\end{table}
+For low densities we observe a good agreement while higher densities
+bring in particle-particle correlations that become more important as
+the density increases. Coupled cluster theory sums to infinite order for
+example particle-particle correlations and with increasing densities
+this is reflected in differences between the two many-body
+approximations.  The above results agree well with the recent coupled
+cluster calculations of Refs.~\cite{baardsen2013,hagenmatter}, obtained with
+interaction models from effective field theory.  With the inclusion of
+proton correlations as well as other potential models we may expect 
+larger differences between
+different methods and interactions.  In chapters 9, 10 and 11 we compare the above results with 
+those obtained wit Monte Carlo methods, the in-medium renormalization group approach and Green's function theory.
+
+The discussions hitherto have focused on the
+development of an efficient and flexible many-body code. The codes have been structured 
+to allow users and developers to study and add different physical systems,
 spanning from the simple pairing model to quantum dots and infinite
 nuclear matter. Structuring the codes in for a example an abstract
 system class and a solver class allows an eventual user to study
 different physical systems and add new many-body solvers without
-having to write a totally new program. The structure of the program
-discussed in the appendix of this chapter adhere to this philosophy, and as demonstrated in chapter 11, 
+having to write a totally new program. As demonstrated in chapter 11, 
 with few additions one can add 
 the widely popular similarity renormalization group method. We discuss this in more detail in chapter 11. 
 
 Till now we have limited our discussion to the construction of a
-many-body code, including elements like how to structure a code in
+many-body code following the undrlying mathematical expressions, 
+including elements like how to structure a code in
 terms of functions, how to modularize the code, how to develop classes
-(see the appendix) and how to verify and validate our computations
-(our checks provided by the simple pairing model and many-body
-perturbation theory to second order) against known results.  With the
-rewriting of our equations in terms of efficient matrix and vector
-operations we have also shown how to make our code more efficient.
-Matrix and vector operations can easily be parallelized. Such
-algorithmic improvements are necessary in order to be able to study
-complicated physical systems.  Our codes can also be easily parallelized in order to run on shared memory architectures using either OpenMP \cite{openmp} and/or MPI/OpenMPI \cite{mpi,openmpi}.
-However, we have till now not touched
-upon topics like parallelization and an efficient utilization of exisiting and future
-high-performance facility and possible improvements and bottlenecks which our codes can face. We end thus this section with a brief discussion
-of high-performance computing topics of relevance for wave function based methods. We will focus on many-body perturbation theory to second order and the two algorithms discussed in Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}). 
+and how to verify and validate our computations (our checks provided
+by the simple pairing model and many-body perturbation theory to
+second order) against known results.  With the rewriting of our
+equations in terms of efficient matrix and vector operations we have
+also shown how to make our code more efficient.  Matrix and vector
+operations can easily be parallelized. Such algorithmic improvements
+are necessary in order to be able to study complicated physical
+systems.  Our codes can also be easily parallelized in order to run on
+shared memory architectures using either OpenMP \cite{openmp} and/or
+MPI/OpenMPI \cite{mpi,openmpi}.  However, we have till now not touched
+upon topics like parallelization and an efficient utilization of
+exisiting and future high-performance facility and possible
+improvements and bottlenecks which our codes can face. We end thus
+this chapter with a discussion of high-performance computing topics of
+relevance for wave function based methods. 
 
 
 \subsection{High-performance computing and analysis of the MBPT program}
@@ -4030,7 +4120,22 @@ The last function is slightly different from its MBPT2 counterpart where loops o
   \label{fig:fig6}
 \end{figure}
 
-Figure\ref{fig:fig6} shows the run times from the MBPT3 functions and the channel setup function up to 28 major shells with 14 neutrons at a density 0f $0.08 fm^{-3}$. The obvious difference between MBPT2 and MBPT3 is the massive increase in computation time. For example, the largest case with the first function would take approximately eight months to compute. Because of this, the first two functions had to be extrapolated for the larger cases. Again, there is a clear improvement from the first to the second function, from the third to the fourth, and by first computing the symmetry channels. In this case, however, the scaling of the channel function is dwarfed by the $h^2p^4$ scaling of the sum. In addition, the optimized matrix-matrix multiplication improves the computation time by another order of magnitude by using an intermediate matrix. Because all many-body methods include similar sums to MBPT and also utilize interactions that benefit from exploiting its symmetries, all of these strategies can be used to make computation times managable for many methods.
+Figure \ref{fig:fig6} shows the run times from the MBPT3 functions and
+the channel setup function up to 28 major shells with 14 neutrons at a
+density 0f $0.08 fm^{-3}$. The obvious difference between MBPT2 and
+MBPT3 is the massive increase in computation time. For example, the
+largest case with the first function would take approximately eight
+months to compute. Because of this, the first two functions had to be
+extrapolated for the larger cases. Again, there is a clear improvement
+from the first to the second function, from the third to the fourth,
+and by first computing the symmetry channels. In this case, however,
+the scaling of the channel function is dwarfed by the $h^2p^4$ scaling
+of the sum. In addition, the optimized matrix-matrix multiplication
+improves the computation time by another order of magnitude by using
+an intermediate matrix. Because all many-body methods include similar
+sums to MBPT and also utilize interactions that benefit from
+exploiting its symmetries, all of these strategies can be used to make
+computation times managable for many methods.
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that
@@ -4050,7 +4155,7 @@ should however, with the inputs from chapters 2-6, be able to have a
 better of understanding of nuclear forces and how these can be derived
 from the underlying theory for the strong force and effective field
 theory.  The last exercise in this chapter replaces the simple Minnesota potential with
-realistic interaction from effective field theory. 
+realistic interactions from effective field theory. 
 
 
 
