@@ -3,4 +3,4 @@
 module load openblas
 
 make clean
-PROFILE=1 make
+OPTIMIZE=1 make

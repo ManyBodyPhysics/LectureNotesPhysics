@@ -4,7 +4,7 @@
 CFLAGS = -Wall -fopenmp
 CC=g++
 ifdef DEBUG
-	CFLAGS += -g -fbounds-check -ftrapv -pedantic-errors
+	CFLAGS += -g -fbounds-check -ftrapv
 else
 	CFLAGS += -O2
 endif
