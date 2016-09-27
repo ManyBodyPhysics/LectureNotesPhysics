@@ -116,7 +116,7 @@ or
 \right ] \langle R\vert\,,
 \end{equation}
 where $V$ is the interparticle potential. 
-Substituting this form into Eq. \ref{eqchap9.s}, operating from the
+Substituting this form into Eq. (\ref{eqchap9.s}), operating from the
 left with $\langle R\vert$ gives the Schr\"odinger differential equation
 \begin{equation}
 \left [
@@ -581,7 +581,7 @@ and he uses the same functions for $|\phi_m\rangle$, so that
 When evaluated in the position representation, the $O^m$ for $m>0$ correspond
 to multiplying by the derivative of the logarithm of the trial function.
 Substituting these expressions, and dividing by $\langle \Psi_T|\Psi_T\rangle$,
-Eq. \ref{eq.power} becomes
+Eq. (\ref{eq.power}) becomes
 \begin{eqnarray}
 \label{eq.first}
 \frac{\langle \Psi_T |O^m (\Lambda-H) |\Psi_T\rangle}
@@ -594,7 +594,7 @@ to get $\Delta \alpha_n$.
 
 Alternatively, the $m=0$ and $n=0$ terms can be separated. Writing
 the trial function expectation of an operator $O$ as $\langle O\rangle$,
-Eq. \ref{eq.first} becomes
+Eq. (\ref{eq.first}) becomes
 \begin{eqnarray}
 \label{eq.m0}
 \langle \Lambda - H \rangle = \Delta \alpha_0 + \sum_{n=1} \langle O^n\rangle
@@ -603,7 +603,7 @@ Eq. \ref{eq.first} becomes
 \langle O^m (\Lambda-H) \rangle = \langle O^m\rangle \Delta \alpha_0
 + \sum_{n=1} \langle O^m O^n\rangle \Delta \alpha_n & m > 0 \,.
 \end{eqnarray}
-Substituting Eq. \ref{eq.m0} into Eq. \ref{eq.mneq0} gives
+Substituting Eq. \ref{eq.m0} into Eq. (\ref{eq.mneq0}) gives
 \begin{equation}
 \label{eq:srpar}
 \langle O^m(\Lambda - H) \rangle -\langle \Lambda - H\rangle \langle O^m\rangle
@@ -611,7 +611,7 @@ Substituting Eq. \ref{eq.m0} into Eq. \ref{eq.mneq0} gives
 \langle O^n\rangle \right ] \Delta \alpha_n \,.
 \end{equation}
 Solving gives $\Delta \alpha_{n>0}$ and
-Eq. \ref{eq.m0} then gives the value for $\Delta \alpha_0$.
+Eq. (\ref{eq.m0}) then gives the value for $\Delta \alpha_0$.
 
 In either case, the result gives an approximation to the next trial
 function as a linear combination of the original function and its
@@ -651,9 +651,9 @@ reweighting technique presented in the previous section.
 
 When the parameters are far away from the minimum this approach can be less stable 
 than the previous one giving rise to large parameter variations that
-invalidate the linear approximation Eq.~\ref{eq:psiprime}. A quick strategy is then to use 
-the solution of Eq.~\eqref{eq:srpar} early on in the optimization process and then switch to
-Eq.~\eqref{eq:lmpar} when the resulting norm of the variation is below some threshold.
+invalidate the linear approximation Eq.~(\ref{eq:psiprime}). A quick strategy is then to use 
+the solution of Eq.~(\eqref{eq:srpar}) early on in the optimization process and then switch to
+Eq.~(\eqref{eq:lmpar}) when the resulting norm of the variation is below some threshold.
 
 \section{Projection Monte Carlo Methods in coordinate space}
 %\subsection{Propagation in imaginary time}
@@ -1295,7 +1295,7 @@ V_\Omega(R)=\left\{
  the weight they will receive from our algorithm, but with this weight
  multiplied by their expected survival probability. The imaginary time
  Schr\"odinger equation is self adjoint, so the optimum importance
- function is the desired function\cite{xxx2010}. Typically, a trial
+ function is the desired function. Typically, a trial
  function that can be efficiently evaluated is determined variationally
  and used as an approximation to the optimum trial function. Usually
  this trial wave function is used as the importance
@@ -1477,6 +1477,7 @@ V_\Omega(R)=\left\{
  {\langle \Psi_T|R S\rangle}
  + ... \right )
  \nonumber\\
+ \label{eq.hsimp}
  \end{eqnarray}
  
  Notice that if we were to expand $T(X)/W(X,R_i,S_i)$ it would
@@ -1506,6 +1507,7 @@ V_\Omega(R)=\left\{
  \frac{\langle \Psi_T|O_n|R S\rangle}{\langle \Psi_T|R S\rangle}
  \right ]^2 \right \}
  \nonumber\\
+ \label{eq.hsimpexpanded}
  \end{eqnarray}
  where in the last line, we have written the linear term in $x$ in the
  exponent, and included a canceling term so that only
@@ -1533,7 +1535,7 @@ V_\Omega(R)=\left\{
  \subsubsection{Diffusion Monte Carlo without importance sampling}
  It is helpful to apply the formalism above to derive
  the well known central potential
- diffusion Monte Carlo algorithm\cite{anderson1976}.
+ diffusion Monte Carlo algorithm\cite{Anderson76}.
  The Hamiltonian is
  \begin{equation}
  H = \sum_{j=1}^A \sum_{\alpha=1}^3 \frac{p_{j\alpha}^2}{2m} + V(R)
@@ -1670,7 +1672,7 @@ V_\Omega(R)=\left\{
  
  \subsection{Fixed-phase importance-sampled Diffusion Monte Carlo}
  \label{sec:fixedph}
- The fixed-phase approximation\cite{ortiz1993} was developed to extend the
+ The fixed-phase approximation\cite{Ortiz93} was developed to extend the
  fixed-node approximation to electrons in a magnetic field where the
  ground-state wave function is complex. The approximation enforces the
  trial function's phase as the phase for the calculated ground state.
@@ -1944,8 +1946,8 @@ V_\Omega(R)=\left\{
  Hubbard-Stratonovich transformation integrates the auxiliary field over
  all real values with a gaussian weight. With importance sampling, the
  gaussian for $x_n$ is shifted by $i\sqrt{\lambda_n \Delta t}\langle O_n\rangle$
- as shown in the last line of Eq. \ref{eq.hsimpexpanded}.
- As Zhang and Krakauer\cite{zhang2003} showed for electronic structure problems,
+ as shown in the last line of Eq. (\ref{eq.hsimpexpanded}).
+ As Zhang and Krakauer\cite{Zhang2003} showed for electronic structure problems,
  it is equally valid to integrate the auxiliary field over any shifted
  contour, and by shifting the contour so that $x_n$ becomes complex
  and takes on the values
@@ -2275,7 +2277,7 @@ eigenstate of the hamiltonian $H$:
 \label{ci_evol}
 \Psi_{\tau + \Delta\tau} (\mathbf{m}) = \sum_{\mathbf{n}} \langle \mathbf{m} \lvert P \rvert \mathbf{n} \rangle \Psi_{\tau} (\mathbf{n}) .
 \end{equation}
-with a suitable projecton operator $P$ (cf. Eq.~\eqref{eq.afdmc} and discussion above). 
+with a suitable projecton operator $P$ (cf. Eq.~(\eqref{eq.afdmc}) and discussion above). 
 In order to illustrate how the evolution in \eqref{ci_evol} can be implemented in a stochastic way, it will be usefull
 first to express the matrix elements of $P$ as follows
 \begin{equation}
@@ -2294,7 +2296,7 @@ p(\mathbf{m},\mathbf{n}) = \frac{\langle \mathbf{m} \lvert P \rvert \mathbf{n} \
 At this point, provided the matrix elements $\langle \mathbf{m} \lvert P \rvert \mathbf{n} \rangle \geq 0$ we can interpret 
 $p(\mathbf{m},\mathbf{n})$ for fixed $\mathbf{n}$ as (normalized) probability distribution for the states $\mathbf{m}$ and 
 $g(\mathbf{n})$ as a weight factor. This is analogous to what was done in Section~\ref{sec:dmccoord} for the conventional coordinate--space formulations  
-where now $p$ takes the place of the gaussian Eq.~\eqref{eq:gaussprop} while $g$ replaces the weight Eq.~\eqref{eq:propw}.
+where now $p$ takes the place of the gaussian Eq.~(\eqref{eq:gaussprop}) while $g$ replaces the weight Eq.~(\eqref{eq:propw}).
 
 Imagine now that at a given imaginary--time $\tau$ the wave--function $\Psi_{\tau}$ is non--negative in configuration 
 space
@@ -2316,7 +2318,7 @@ This suggests the following procedure for the stochastic imaginary--time evoluti
 In order to improve efficiency one can include a {\it branching} step where the new configuration in $\mathbf{m}$
 is replicated according to its weight as explained in Sec.~\ref{sec:dmccoord}.
 
-Expectation values of observables can then be estimated as usual (cf. Eq.~\eqref{eq:mixedobs}) with the mixed estimator
+Expectation values of observables can then be estimated as usual (cf. Eq.~(\eqref{eq:mixedobs})) with the mixed estimator
 \begin{equation}
 \begin{split}
 \langle O\rangle_{mixed} &= \frac{\langle \Psi_T\lvert O \rvert \Psi(\tau)\rangle}{\langle \Psi_T\vert \Psi(\tau)\rangle}= \frac{  \sum_l^{N_{w}} w(\mathbf{m}_{l}) \langle \Psi_T\lvert O \rvert \mathbf{m}_{l}\rangle}{\sum_l^{N_{w}}w(\mathbf{m}_{l})\Psi_T(\mathbf{m}_{l})}
@@ -2355,7 +2357,7 @@ from the exponential propagator
 in analogy to Eq.~\eqref{eq:gentauprop}, but now without any limitation on the choice of the imaginary time step $\Delta \tau$ that can be chosen
 arbitrarily large. We leave the discussion of its details in Sec.~\ref{sec:expprop}.
 
-In our discussion so far we have assumed that the matrix elements on the projector that defines $p(\mathbf{m},\mathbf{n})$ in Eq.~\eqref{eq:CIMC_prob} are
+In our discussion so far we have assumed that the matrix elements on the projector that defines $p(\mathbf{m},\mathbf{n})$ in Eq.~(\eqref{eq:CIMC_prob}) are
 actually positive definite. Under general circumstances however this is not the case. This clearly prevents the interpretation 
 of $p({\bf m},{\bf n})$ as a probability distribution invalidating the naive approach employed above. In order to circumvent the problem we can use the same idea behind the
 fixed node (phase) approximation introduced in Sec.~\label{sec:fn}
@@ -2470,7 +2472,7 @@ in CC theory is hierarchically divided as
 \begin{equation}
 \hat{T}=\hat{T}_1+\hat{T}_2 + \hat{T}_3+\cdots 
 \end{equation}
-counting the number of creation/annihilation operators that compose them. The firt two terms are:
+counting the number of creation/annihilation operators that compose them. The first two terms are:
 \begin{equation}
 \hat{T}_1=\sum_{\alpha,\beta \in \mathcal{S}} t_\alpha^\beta a^{\dagger}_\beta a_\alpha
  \;\quad\; \hat{T}_2=\frac{1}{4}\sum_{\alpha,\beta,\gamma,\delta \in \mathcal{S}} t_{\alpha\beta}^{\gamma\delta} a^{\dagger}_\gamma a^{\dagger}_\delta a_\alpha a_\beta \;\;\; \cdots
@@ -2479,7 +2481,7 @@ The final state $\vert \Psi_{CC}\rangle$ will then be uniquely identified by the
 to single and double particle-hole excitations respectively. The exponentiated form of the CC wave-functions enables to effectively include
 some correlations up to the maximum N-particle N-hole in a relatively compact way.
 
-But is the wave--function in Eq.~\eqref{eq:ccwf} also quick to evaluate?
+But is the wave--function in Eq.~(\eqref{eq:ccwf}) also quick to evaluate?
 In order to simplify the discussion we will focus here on the case of a homogeneous system 
 that can be described dropping the one-particle--one-hole excitation operator $\hat{T}_1$ in 
 the expansion (which do not contribute due to translational invariance)\footnote{Extension to singlets (p-h states) and triplets (3p-3h states) is simple}. 
@@ -2498,7 +2500,7 @@ that can be generated from ${\bf m}$. Eventually (the proof is tedious but strai
 \end{equation}
 assuming $p_1<p_2<\dots<p_M$ and $h_1<h_2<\dots<h_M$. The normalization is fixed in such a way that $\langle \Phi_{HF}\vert \Psi_{CC}\rangle = 1$.
 
-One way to implement Eq.~\eqref{eq:ccdeval} is for instance trough a recursive function that takes as input some K-particle--K-hole state and 
+One way to implement Eq.~(\eqref{eq:ccdeval}) is for instance trough a recursive function that takes as input some K-particle--K-hole state and 
 returns $1.0$ for $K=0$, the correct amplitude $t_{ij}^{ab}$ for $K=2$ and for $K>2$ calls itself again removing two particle and two hole states.
 Clearly this approach becomes slow when states with large values of $K$ are sampled often during the random walk. Just to give an idea, for
 calculations of pure neutron matter with soft Chiral EFT interactions we have $K\leq6$ at densities $\rho\approx0.08 fm^{-3}$ (cf. discussion in~\cite{Rrapaj16})
@@ -2510,10 +2512,10 @@ of the following non--linear equation:
 \label{eq_CCD}
 \langle \Phi^{\gamma\delta}_{\alpha\beta} \lvert \hat{H} \left( 1+\hat{T}_2+\frac{1}{2}\hat{T}^2_2\right) \rvert\Phi_{HF} \rangle= \left( \frac{1}{4}\sum_{\alpha,\beta,\gamma,\delta \in \mathcal{S}} \langle \alpha\beta\lvert\rvert \gamma\delta\rangle t_{\alpha\beta}^{\gamma\delta}\right) t_{\alpha\beta}^{\gamma\delta}
 \end{equation}
-where $\langle \alpha\beta\lvert\rvert \gamma\delta\rangle$ are the anti-symmetrized two-body matrix elements of the interaction defined in Eq.~\eqref{eq_ham}.
+where $\langle \alpha\beta\lvert\rvert \gamma\delta\rangle$ are the anti-symmetrized two-body matrix elements of the interaction defined in Eq.~(\eqref{eq_ham}).
 
-Solving Eq.~\eqref{eq_CCD} is in general a very expensive computational problem and within 
-the fixed--node approach all that matters are the signs in Eq.~\eqref{sign_function}. It could 
+Solving Eq.~(\eqref{eq_CCD}) is in general a very expensive computational problem and within 
+the fixed--node approach all that matters are the signs in Eq.~(\eqref{CCDMC:ham_sign}). It could 
 then be possible to find cheaper approximate ways to determine the doubles coefficients $t_{\alpha\beta}^{\gamma\delta}$ 
 while still preserving a good quality in the fixed--node approximation. A quite precise and very
 cheap approximation that have been used successfully is to obtain the coefficients within second 
@@ -2521,18 +2523,18 @@ order Moeller--Plesset perturbation theory:
 \begin{equation}
 t_{\alpha\beta}^{\gamma\delta} = \frac{\langle \alpha\beta\lvert\rvert \gamma\delta\rangle }{\eta_\alpha+\eta_\beta-\eta_\gamma-\eta_\delta} \quad  \text{with} \quad \eta_i=\epsilon_i+\sum_{k\in\mathcal{S}} \langle ik\lvert\rvert ik\rangle
 \end{equation}
-and $\epsilon_i$ are the single particle energies appearing in the one body part of the Hamiltonian Eq.~\eqref{eqham}.
+and $\epsilon_i$ are the single particle energies appearing in the one body part of the Hamiltonian Eq.~(\eqref{eqham}).
 This is equivalent to truncating the self--consistent solution of \eqref{eq_CCD} after the first iteration.
 
 \subsection{Propagator sampling with no time-step error}
 \label{sec:expprop}
 As we pointed out before, in simulations employing the linear propagator \eqref{eq:prop} raising the dimension of the basis set has a detrimental effect on the efficiency 
-of the algorithm since in order to satisfy the bound Eq.~\eqref{eq_bound_on_tau} we are forced to employ
+of the algorithm since in order to satisfy the bound Eq.~(\eqref{eq_bound_on_tau}) we are forced to employ
 an exceedingly small time step. Moreover, in practice values of $\tau$ much smaller than the
 maximum value are usually employed due to the difficulty in obtaining reliable estimates of $E_{max}$ in realistic situations.
 
 To further complicate the scenario, when lattice fixed-node(fixed-phase) methods are employed this maximum value is reduced even further because the diagonal
-matrix elements of $P$ gets pushed towards the negative region by the addition of the sign--violating contributions $\sum_{\mathbf{m}} h_{\mathbf{m}\mathbf{n}}$ in Eq.~\eqref{mh2}. 
+matrix elements of $P$ gets pushed towards the negative region by the addition of the sign--violating contributions $\sum_{\mathbf{m}} h_{\mathbf{m}\mathbf{n}}$ in Eq.~(\eqref{mh2}). 
 If this method is used to control the sign--problem additional care has to be devoted in the choice of the time--step, greatly deteriorating the efficiency of the overall scheme.
 
 In a discrete space however we can cope with the problem by using an algorithm firstly introduced by Trivedi and Ceperley~\cite{Trivedi90}, which shares 
@@ -2597,7 +2599,7 @@ where we have implicitly defined the off--diagonal sum
 \label{eq:hoffd}
 \widetilde{H}^{off}_{\mathbf{n}} = \sum_{\mathbf{m}\neq \mathbf{n}} \widetilde{H}_{\mathbf{m},\mathbf{n}} <0
 \end{equation}
-and the inequality holds thanks to Eq.~\eqref{eq:hoffdpd}.
+and the inequality holds thanks to Eq.~(\eqref{eq:hoffdpd}).
 
 The elapsed time between consecutive off--diagonal moves is therefore distributed as an exponential 
 distribution $f_{\mathbf{n}}(\tau)$ with average time given by
@@ -2648,13 +2650,13 @@ P_2(\mathbf{m},\mathbf{n})=1/N_{conn}
 The first option is clearly more expensive per iteration than the second since an explicit calculation of the off-diagonal sum $\widetilde{H}^{off}_{\mathbf{n}}$ is 
 needed in order to normalize $P_1$. In the uniform sampling case however the weights $w_{\mathbf{m},\mathbf{n}}$ can have large fluctuations
 forcing the use of smaller time-steps to keep them under control. In our case since we already need to compute the off-diagonal
-sum in order to generate the fixed-phase hamiltonian Eq.~\eqref{mh1} and Eq.~\eqref{mh2} the heat-bath sampling comes with no additional
+sum in order to generate the fixed-phase hamiltonian Eq.~(\eqref{mh1}) and Eq.~(\eqref{mh2}) the heat-bath sampling comes with no additional
 cost. It is worth noting that other choice can be made that are more efficient when fixed-node(phase) is not employed at all \cite{Holmes16}
 or when the transformation that produces $\mathcal{H}_\gamma$ is carried out only approximately \cite{Kolodrubetz12}.
 
 Finally, in order for the measurements along the path to be unbiased we want to define equidistant "time-slices" along the random walk. In 
 order to this we simply choose a target time-step $\tau_t$ at the beginning then for each move we first sample a value of $\tau_{\xi}$ 
-from Eq.~\eqref{sampled_tau}, if $\tau_{\xi} > \tau_t$ we set $\tau=\tau_t$ and use correspondingly a diagonal move if instead $\tau_{\xi} < \tau_t$ 
+from Eq.~(\eqref{sampled_tau}), if $\tau_{\xi} > \tau_t$ we set $\tau=\tau_t$ and use correspondingly a diagonal move if instead $\tau_{\xi} < \tau_t$ 
 we have to sample an off--diagonal move. The process is preformed until the sum of all the sampled $\tau_{\xi}$ reaches the target time $\tau_t$. 
 The final algorithm for a single walker at $\rvert \mathbf{n}\rangle$ is then as follows: 
 \begin{svgraybox}
@@ -2682,7 +2684,7 @@ The final algorithm for a single walker at $\rvert \mathbf{n}\rangle$ is then as
 \EndLoop
 \end{algorithmic}
 \end{svgraybox}
-where the function $HeatBath[P,\mathbf{n}]$ generates a new configuration according to the probability $P$ (eg. Eq.~\eqref{eq:heba}) starting 
+where the function $HeatBath[P,\mathbf{n}]$ generates a new configuration according to the probability $P$ (eg. Eq.~(\eqref{eq:heba})) starting 
 from the current state $\mathbf{n}$. In Problem~\ref{prob:heatbath} you will try to devise an implementation of this function.
 
 As a final remark, it is evident that the most expensive part of the algorithm is the computation of the local energy $E_L(\mathbf{n}$ since it will require
@@ -2806,7 +2808,7 @@ Finally, the hardest wall to climb remains the solution of the Fermion sign prob
   \end{prob}
   \begin{prob}
   \label{prob:egamma}
-	Show that the given two fixed-phase energies $E_{a}$ and $E_{b}$ obtained using the hamiltonians $\mathcal{H}_{\gamma}$ defined in Eq.~\eqref{mh1} and Eq.~\eqref{mh2} 
+	Show that the given two fixed-phase energies $E_{a}$ and $E_{b}$ obtained using the hamiltonians $\mathcal{H}_{\gamma}$ defined in Eq.~(\eqref{mh1}) and Eq.~(\eqref{mh2}) 
 	with $\gamma=a$ and $\gamma=b$ ($a,b\geq 0$) the linear extrapolation to $\gamma=-1$ (remember that $\mathcal{H}_{-1}=H$) is still an upper bound. 
 	(Hint: show that $E_\gamma$ is a convex function of the parameter $\gamma$).
   \end{prob}
@@ -2918,7 +2920,10 @@ D. M. Ceperley and B. J. Alder, Phys. Rev. Lett. {\bf 45}, 566 (1980)
 W. M. C. Foulkes, L. Mitas, R. J. Needs, and G. Rajagopal, Rev. Mod. Phys. 73, 33 (2001)
 \bibitem{Ortiz93}
 G. Ortiz, D. M. Ceperley, and R. M. Martin, Phys. Rev. Lett. {\bf 71}, 2777 (1993)
-\bibitem{Zhang03}
+\bibitem{carlson1993}
+J. Carlson, V. R. Pandharipande, and R. Schiavilla,
+Phys. Rev. C {\bf 47}, 484 (1993) 
+\bibitem{Zhang2003}
 S. Zhang and H. Krakauer,  Phys. Rev. Lett. {\bf 90}, 136401 (2003)
 \bibitem{Booth09}
 G. H. Booth, A. J. W. Thom, and A. Alavi,  J. Chem. Phys. {\bf 131}, 054106 (2009)
