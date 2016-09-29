@@ -1,6 +1,7 @@
 #include "mbpt2V05.hpp"
 
 mbpt2V05::mbpt2V05(twobodyPotential &potential, Model_Space &space) {
+  mbpt2V05::name = "mbpt2V05";
   mbpt2V05::potential = &potential;
   mbpt2V05::modelspace = space;
 

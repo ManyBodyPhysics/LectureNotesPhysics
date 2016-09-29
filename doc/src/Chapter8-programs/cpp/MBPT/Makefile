@@ -18,7 +18,7 @@ ifdef OPTIMIZE
 endif
 
 LIBS= -lopenblas
-EXECUTABLES = MBPT
+EXECUTABLES = mbpt.x
 
 O_FILES = $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 
@@ -29,4 +29,4 @@ $(EXECUTABLES): $(O_FILES)
 	$(CC) $(CFLAGS) -c -o $@ $< 
 
 clean:
-	rm *.o *~ *# 
+	rm *.o *~ *# ${EXECUTABLES}

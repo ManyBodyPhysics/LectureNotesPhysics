@@ -1,15 +1,17 @@
-#include "mbpt2V00.hpp"
+#include "mbpt2V06.hpp"
+#include "minnesota_potential.hpp"
 
-mbpt2V00::mbpt2V00(twobodyPotential &potential, Model_Space &space) {
-  mbpt2V00::name = "mbpt2V00";
-  mbpt2V00::potential = &potential;
-  mbpt2V00::modelspace = space;
+mbpt2V06::mbpt2V06(Input_Parameters &parameters, Model_Space &space) {
+  mbpt2V06::name = "mbpt2V06";
+  mbpt2V06::modelspace = space;
 
   number_of_occupied_states = space.indhol;
   number_of_unoccupied_states = space.indpar;
+  L = pow((parameters.numberOfParticles)/parameters.density, 1./3.);
+
 }
 
-double mbpt2V00::getEnergy() {
+double mbpt2V06::getEnergy() {
   double energy0;
   double energy = 0.0;
   for(int i = 0; i < modelspace.indhol; ++i){
@@ -18,7 +20,7 @@ double mbpt2V00::getEnergy() {
       for(int a = modelspace.indhol; a < modelspace.indtot; ++a){
         for(int b = modelspace.indhol; b < modelspace.indtot; ++b){
           if(a == b){ continue; }
-          energy0 = potential->get_element(modelspace.qnums, i, j, a, b);
+          energy0 = V_Minnesota(modelspace, i, j, a, b, L);
           energy0 *= energy0;
           energy0 /= (modelspace.qnums[i].energy + modelspace.qnums[j].energy -
                           modelspace.qnums[a].energy - modelspace.qnums[b].energy);

@@ -11,14 +11,12 @@ minnesotaPotential::minnesotaPotential(int numberOfParticles, double density) {
 }
 
 
-int kroneckerDelta(const int &i, const int &j)
-{
+int kroneckerDelta(const int &i, const int &j) {
   if(i != j){ return 0; }
   return 1;
 }
 
-int spinExchangeTerm(const int &i, const int &j, const int &k, const int &l)
-{
+int spinExchangeTerm(const int &i, const int &j, const int &k, const int &l) {
   if(i == l && j == k){ return 1; }
   else{ return 0; }
 }

@@ -3,6 +3,7 @@
 #include "minnesota_potential.hpp"
 
 mbpt2V04::mbpt2V04(Input_Parameters &parameters, Model_Space &space, Channels &channels) {
+  mbpt2V04::name = "mbpt2V04";
   mbpt2V04::modelspace = space;
   mbpt2V04::channels = channels;
 
