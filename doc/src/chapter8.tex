@@ -3072,7 +3072,7 @@ which results in the correlation energy
   of the CCD equations can be ran, and checked against MBPT2 to give
   some confidence that everything is working correctly. Additionally, running a program using a minimal test case is another useful way to make sure that a program is working correctly. For this purpose, we turn our attention to the simple pairing model Hamiltonian of problem \ref{problem:pairingmodel},
   \begin{equation}
-  \hat{H}_0 = \xi \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p
+  \hat{H}_0 = \delta \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p
     \sigma}\label{eq:sppairing}
   \end{equation}
   \begin{equation}
@@ -3091,7 +3091,7 @@ which results in the correlation energy
   \epsilon_q = h_{qq} + \sum_{i} \braket{qi|\hat{v}|qi}.
   \end{equation}
   To be more specific, let us look at the pairing model with four
-  particles and eight single-particle states. These states (with $\xi =1.0$) could be labeled as shown in 
+  particles and eight single-particle states. These states (with $\delta =1.0$) could be labeled as shown in 
 Table \ref{tab:pairingmodelsp}.
 \begin{table}
 \caption{Single-particle states and their quantum numbers and their energies from Eq.~(\ref{eq:pairingsp}). The degeneracy for every quantum number $p$ is equal to 2 due to the two possible spin values.} \label{tab:pairingmodelsp}
@@ -4515,7 +4515,7 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   \[ \hat{H} = \hat{H}_0 + \hat{V} , \]
   where
   \[
-  \hat{H}_0=\xi\sum_{p\sigma}(p-1)a_{p\sigma}^{\dagger}a_{p\sigma}
+  \hat{H}_0=\delta\sum_{p\sigma}(p-1)a_{p\sigma}^{\dagger}a_{p\sigma}
   \]
   and
   \[
@@ -4523,8 +4523,8 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   a^{\dagger}_{p-}a_{q-}a_{q+}.
   \]
   Here, $H_0$ is the unperturbed Hamiltonian with a spacing between
-  successive single-particle states given by $\xi$, which we will set
-  to a constant value $\xi=1$ without loss of generality. The two-body
+  successive single-particle states given by $\delta$, which we will set
+  to a constant value $\delta=1$ without loss of generality. The two-body
   operator $\hat{V}$ has one term only. It represents the pairing
   contribution and carries a constant strength $g$.
 
@@ -4562,7 +4562,7 @@ Show also that diagrams (2), (6)-(7) and (10)-(16) are zero in infinite matter d
   \hat{P}^{-}_p = a_{p-}a_{p+},
   \]
   respectively.
-  \item[b)] Show that you can rewrite the Hamiltonian (with $\xi=1$)
+  \item[b)] Show that you can rewrite the Hamiltonian (with $\delta=1$)
     as
   \[
   \hat{H}=\sum_{p\sigma}(p-1)a_{p\sigma}^{\dagger}a_{p\sigma}
