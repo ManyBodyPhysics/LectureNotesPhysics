@@ -522,8 +522,9 @@ PROGRAM  pairing
      ENDDO
   ENDDO
   !     then the diagonal 3body unperturbed part
-  DO i=1,pq_confs
+  DO i=1,3
      toper(i,i) = delta*i*2.d0
+     toper(i+3,i+3) = delta*(i+2)*2.d0
   ENDDO
   hoper = toper+voper
   WRITE(6,*) 'Hamiltonian matrix'
