@@ -3,51 +3,54 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter10.aux
 The style file: spphys.bst
 Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
+Warning--I didn't find a database entry for "Carlsson:2015fk"
+Warning--I didn't find a database entry for "Stroberg:2015qr"
 Warning--can't use both author and editor fields in Detmold:2015xw
 Warning--empty journal in Lynn:2015eu
 Warning--empty journal in Shirokov:2016wo
 Warning--can't use both author and editor fields in Valdemoro:1987zl
 Warning--can't use both author and editor fields in Mazziotti:2007qe
 Warning--empty booktitle in Griesshammer:2015dp
-You've used 85 entries,
+Warning--empty journal in Entem:2015hl
+You've used 135 entries,
             2812 wiz_defined-function locations,
-            1281 strings with 25201 characters,
-and the built_in function-call counts, 32163 in all, are:
-= -- 2269
-> -- 904
-< -- 4
-+ -- 370
-- -- 273
-* -- 2074
-:= -- 3730
-add.period$ -- 141
-call.type$ -- 85
-change.case$ -- 4
-chr.to.int$ -- 0
-cite$ -- 91
-duplicate$ -- 3392
-empty$ -- 3181
-format.name$ -- 341
-if$ -- 7271
+            1661 strings with 38528 characters,
+and the built_in function-call counts, 52514 in all, are:
+= -- 3533
+> -- 1679
+< -- 7
++ -- 664
+- -- 514
+* -- 3434
+:= -- 6154
+add.period$ -- 213
+call.type$ -- 135
+change.case$ -- 6
+chr.to.int$ -- 6
+cite$ -- 142
+duplicate$ -- 5518
+empty$ -- 5111
+format.name$ -- 619
+if$ -- 11796
 int.to.chr$ -- 0
-int.to.str$ -- 85
-missing$ -- 860
-newline$ -- 404
-num.names$ -- 85
-pop$ -- 1180
+int.to.str$ -- 135
+missing$ -- 1445
+newline$ -- 626
+num.names$ -- 135
+pop$ -- 1923
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 868
+skip$ -- 1371
 stack$ -- 0
-substring$ -- 1161
-swap$ -- 2173
-text.length$ -- 4
+substring$ -- 1859
+swap$ -- 3578
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 6
-while$ -- 160
-width$ -- 87
-write$ -- 959
-(There were 6 warnings)
+warning$ -- 7
+while$ -- 260
+width$ -- 138
+write$ -- 1500
+(There were 9 warnings)

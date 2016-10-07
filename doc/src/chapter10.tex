@@ -3,6 +3,8 @@
 %%%%%
 %%%%% Commands for chapter 
 %%%%%
+\newcommand{\trace}{\mathrm{tr}\,}
+\newcommand{\tr}{\trace}
 
 
 %%%%% isotope notation
@@ -53,6 +55,8 @@
 \newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
 \newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
 
+\newcommand{\totd}[2]{\ensuremath{ \frac{d {#1}} {d {#2}} }}
+
 
 \newcommand{\op}[1]{\ensuremath{\hat{#1}}}
 \newcommand{\adj}[1]{\ensuremath{#1}^\dag}
@@ -62,8 +66,16 @@
 \newcommand{\aaO}{\ensuremath{\adj{a}}}
 
 \newcommand{\HO}{\op{H}}
+\newcommand{\PO}{\op{P}}
 \newcommand{\TO}{\op{T}}
+\newcommand{\UO}{\op{U}}
 \newcommand{\VO}{\op{V}}
+
+\newcommand{\etaO}{\op{\eta}}
+
+\newcommand{\UUO}{\adj{\op{U}}}
+
+\newcommand{\eetaO}{\adj{\op{\eta}}}
 
 \newcommand{\kOV}{\op{\vec{k}}}
 \newcommand{\pOV}{\op{\vec{p}}}
@@ -71,7 +83,8 @@
 
 
 %%%%% normal ordering
-\newcommand{\nord}[1]{\left\{#1\right\}}
+% \newcommand{\nord}[1]{\left\{#1\right\}}
+\newcommand{\nord}[1]{\big\{#1\big\}}
 
 
 %%%%% commutator
@@ -266,40 +279,130 @@ to pure neutron matter. We compare our IM-SRG results to those obtained from cou
 perspectives and research directions.
 
 \section{The Similarity Renormalization Group}
-
+\subsection{Concept}
 The basic idea of the Similarity Renormalization Group (SRG) method is 
 quite general: We want to ``simplify'' our system's Hamiltonian
 $\HO(s)$ by means of a continuous unitary transformation that is parametrized
 by a one-dimensional parameter $s$,
 \begin{equation}\label{eq:cut}
-  \hat{H}(s)=\hat{U}(s)\hat{H}(0)\hat{U}^{\dagger}(s)\,.
+  \HO(s)=\UO(s)\HO(0)\UUO(s)\,.
 \end{equation}
-Here, $\HO(s=0)$ is the starting Hamiltonian. To specify what we mean by ``simpler'',
-it is most useful to think of $\HO$ as a matrix rather than an operator for the
-time being --- in practice, we are forced to work with discrete and finite matrix
-representations of $\HO$ anyway. As in any quantum mechanical problem, we are 
-primarily interested in finding the eigenstates of $\HO$ by diagonalizing its
-matrix representation. This task is simplified if we can construct a unitary 
-transformation that renders the Hamiltonian more and more diagonal as $s$ 
-increases. 
-
-
-
-Of course, this idea is very general, and not necessarily related to renormalization.
-
-
-\tbd{[General Concept, leave nuclear interactions for last subsection, bridge to IM-SRG]}
-The Similarity Renormalization Group (SRG) method was first formulated by
-Wegner \cite{Wegner:1994dk} and Glazek and Wilson \cite{Glazek:1993il}
-to study condensed matter systems and light-front quantum field
-theories, respectively.  From a mathematical point of view, the
-philosophy behind the SRG is to render the Hamiltonian $\hat{H}(s)$
-diagonal via a continuous unitary transformation
-\begin{equation}\label{eq:cut}
-  \hat{H}(s)=\hat{U}(s)\hat{H}(0)\hat{U}^{\dagger}(s)\,,
+By convention, $\HO(s=0)$ is the starting Hamiltonian. To specify what we mean by 
+simplifying $\HO$, it is useful to briefly think of it as a matrix rather than an 
+operator. As in any quantum-mechanical problem, we are primarily interested in 
+finding the eigenstates of $\HO$ by diagonalizing its matrix representation. This task 
+is made easier if we can construct a unitary transformation that renders the Hamiltonian 
+more and more diagonal as $s$ increases. Mathematically, we want to split the Hamiltonian 
+into suitably defined diagonal and off-diagonal parts,
+\begin{equation}
+  \HO(s) = \HO_d(s) + \HO_{od}(s)\,,
 \end{equation}
-where $H(s=0)$ is the starting Hamiltonian and $s$ denotes the so-called flow
-parameter, for reasons that will become apparent shortly. In practice, the demand 
+and find $\UO(s)$ so that
+\begin{equation}\label{eq:trafo_goal}
+  \HO(s)\underset{s\to\infty}{\longrightarrow}\HO_d(s)\,,\quad \HO_{od}(s)\underset{s\to\infty}{\longrightarrow} 0\,.
+\end{equation}
+
+To implement the continuous unitary transformation, we take the derivative of
+Eq.~\eqref{eq:cut} with respect to $s$ to obtain 
+\begin{equation}
+  \totd{\HO(s)}{s} = \totd{\UO(s)}{s}\HO(0)\UUO(s) + \UO(s)\HO(0)\totd{\UUO(s)}{s}
+                   = \totd{\UO(s)}{s}\UUO(s)\HO(s) + \HO(s)\UO(s)\totd{\UUO(s)}{s}\,.
+\end{equation}
+Since $\UO(s)$ is supposed to be unitary, we also have
+\begin{equation}
+  \totd{}{s}\left(\UO(s)\UUO(s)\right) = \totd{}{s} \left(\op{1}\right) = 0 \quad \Longrightarrow 
+  \quad \totd{\UO(s)}{s}\UUO(s) = - \UO(s)\totd{\UUO(s)}{s}\,.
+\end{equation}
+Defining the anti-Hermitian operator
+\begin{equation}\label{eq:def_eta}
+  \etaO(s) \equiv \totd{\UO(s)}{s} \UUO(s) = - \eetaO(s)\,,
+\end{equation}
+we can write the differential equation for the $s$-dependent Hamiltonian as
+\begin{equation} \label{eq:opflow}
+  \totd{}{s} \HO(s) = \comm{\etaO(s)}{\HO(s)}\,.
+\end{equation}
+This is the SRG \emph{flow equation} for the Hamiltonian, which describes the 
+evolution of $\HO(s)$ under the action of a dynamical generator $\etaO(s)$. 
+Since we are considering a \emph{unitary} transformation, the spectrum of the 
+Hamiltonian is preserved\footnote{There are mathematical subtleties due to 
+$\HO(s)$ being an operator that is only bounded from below, and having a 
+spectrum that is part discrete, part continuous (see, e.g., \cite{Bach:2010zr,Boutin:2016ef})
+. In practice, we are forced
+to work with approximate, finite-dimensional matrix representations of $\HO(s)$
+in any case.}. Thus, the SRG is related to so-called isospectral flows, a class 
+of transformations which has been studied extensively in the mathematics literature 
+(see, e.g., \cite{Brockett:1991kx,Chu:1994vn,Chu:1995ys,Bach:2010zr,Boutin:2016ef}).
+
+The flow equation \eqref{eq:imsrgode} is the most practical way of implementing
+an SRG evolution: We can obtain $\HO(s)$ by integrating Eq.~\eqref{eq:imsrgode} 
+numerically, without explicitly constructing the unitary transformation itself. 
+Formally, we can also obtain $\UO(s)$ by rearranging Eq.~\eqref{eq:def_eta} into
+\begin{equation}
+  \totd{}{s}\UO(s) = \etaO(s)\UO(s)\,.
+\end{equation}
+The solution to this differential equation is given by the $S$-ordered 
+exponential
+\begin{align}
+  U(s) &= \mathcal{S}\exp \int^s_0 ds'\,\eta(s') \label{eq:def_U_pathexp}\,,
+\end{align}
+because the generator changes dynamically during the flow. This formal expression 
+needs to be evaluated either as a product of infinitesimal unitary transformations,
+\begin{align}       \label{eq:def_U_expds}
+   U(s) &= \lim_{N\to\infty}\prod^{N}_{i=0} e^{\eta(s_i)\delta s_i}\,,\quad s_{i+1}=s_i+\delta s_i\,,\quad \sum_{i}\delta s_i=s\,,
+\end{align}
+or through series expansion:
+\begin{align}     \label{eq:def_U_series}
+   U(s) &= \sum_n \frac{1}{n!}\int^s_0 ds_1 \int^s_0 ds_2 \ldots 
+          \int^s_0 ds_n \mathcal{S}\{\eta(s_1)\ldots\eta(s_n)\}\,.
+\end{align}
+Here, the $S$-ordering operator $\mathcal{S}$ ensures that the flow parameters in the 
+appearing in the integrands are always in descending order,
+$s_1 > s_2 > \ldots$. Neither Eq.~\eqref{eq:def_U_expds} nor Eq.~\eqref{eq:def_U_series} 
+can be written as a single, proper exponential or some other simple operator structure. 
+We would need to use these complicated expressions to construct 
+$\HO(s)=\UO(s)\HO(0)\UUO(s)$, and to make matters even worse, Eqs.~\eqref{eq:def_U_expds}
+and \eqref{eq:def_U_series} depend on the generator at \emph{all intermediate points} 
+of the flow trajectory. The associated storage needs would make numerical applications
+impractical or entirely unfeasible.
+
+Let us focus on the flow equation \eqref{eq:opflow}, then, and specify a
+generator that will transform the Hamiltonian to the desired structure 
+(Eq.~\eqref{eq:trafo_goal}). Inspired by the work of Brockett \cite{Brockett:1991kx} 
+on the so-called double-bracket flow, Wegner \cite{Wegner:1994dk} proposed the generator
+\begin{equation}\label{eq:def_Wegner_general}
+  \etaO(s) \equiv \comm{H_d(s)}{H_{od}(s)}\,.
+\end{equation}
+A fixed point of the SRG flow is reached when $\etaO(s)$ vanishes. At finite $s$, this 
+can occur if $\HO_d(s)$ and $\HO_{od}(s)$ happen to commute, e.g., due to a degeneracy 
+in the spectrum of $\HO(s)$. A second fixed point at $s\to\infty$ exists if $\HO_{od}(s)$ 
+vanishes as required. For the Wegner generator, we can derive the following relation
+between $\HO_{od}(s)$ and $\etaO(s)$ (see Problem \ref{problem:steepest_descent}):
+\begin{equation} \label{eq:steepest_descent}
+  \totd{}{s}\tr\left(\HO^2_{od}(s)\right) = -2 \tr\left(\etaO^\dag(s)\etaO(s)\right).
+\end{equation}
+The traces are nothing but the squared Hilbert-Schmidt norms of $H_{od}(s)$ and $\etaO(s)$,
+e.g.,
+\begin{equation}
+  ||\eta||^2_{HS}\equiv\tr\left(\eetaO\etaO\right)\,.
+\end{equation}
+Since norms are positive semi-definite by construction, Eq.~\eqref{eq:steepest_descent} 
+implies that the norm of $\HO_{od}(s)$ --- and therefore the operator itself --- are monotonously 
+driven to zero as we evolve $s\to\infty$, just as intended \cite{Wegner:1994dk,Kehrein:2006kx}.
+
+
+
+As you may have noticed, the \tbd{ideas we have discussed here are completely general,
+and we did not refer specifically to renormalization group methods [gah].}
+
+Note that the label diagonal does not need to mean strict diagonality here, but rather refers
+to a desired structure that the Hamiltonian will assume in the limit $s\to\infty$. By working
+in bases that are ordered by momenta or energies, the capability to impose structure on the 
+Hamiltonian allows us to make an explicit connection with renormalization group (RG) ideas.
+
+
+
+
+In practice, the demand 
 for strict diagonality is usually relaxed to requiring band- or block-diagonality 
 of the Hamiltonian matrix in a chosen basis
 These specific cases are realized in nuclear
@@ -308,87 +411,16 @@ energy scales, and thereby render the nuclear Hamiltonian more
 suitable for \emph{ab initio} many-body calculations \cite{Bogner:2007od,Bogner:2010pq,Morris:2015ve,Hergert:2016jk,Hergert:2016ng}.
 
 
-% We give here a brief overview of the SRG method applied to two simple 
-% systems,  a $2\times 2$ matrix and its pertinent eigenvalue problem and 
-% the simple pairing model discussed in chapter 8, the latter as a numerical 
-% case study in this chapter. 
-
 In the similarity renormalization group (SRG) method, one performs a
 continuous sequence of unitary transformations on a Hamiltonian
 operator $\hat H$ to evolve it into a more ``amenable'' form, which
 generally implies decoupling a small model space of interest from its
-complement.  The sequence is parameterized by a continuous variable
-$s$ known as the \textit{flow parameter}, which by convention we
-define to be $0$ at the beginning of the sequence.  Upon reaching $s$,
-the transformed Hamiltonian is given by
-\begin{align*}
-  \tilde H(s) \equiv \hat U(s) \hat H \hat U(s)
-\end{align*}
-where $U(s)$ describes the product of all such transformations since $s = 0$.
-At every step $s'$, the differential unitary transformation is described by
-the exponential of an antihermitian operator $\eta(s)$, known as the
-\textit{generator} of the transformation.  When ``integrated'' as a product,
-the full transformation $\hat U(s)$ is recovered
-\begin{align*}
-  \hat U(s) = \lim_{\Delta s' \to 0} \prod_{s' = 0}^{s' = s}
-  \mathrm e^{\hat \eta(s') \Delta s'}
-\end{align*}
-The evolution of the Hamiltonian itself is governed by a differential
-equation, commonly referred to as the flow equation:
-\begin{gather} \label{eq:imsrgode}
-  \frac{d}{d s} \tilde H(s) = [\hat \eta(s), \tilde H(s)]
-\end{gather}
-which allows $\tilde H(s)$ to be evaluated without explicitly constructing the
-full transformation $\hat U(s)$.
+complement.  
 
- Introducing a flow parameter $s$, there exits a unitary
- transformation $U_s$, such that
-\begin{equation}
- \hat{H}_s = U_s^\dagger \hat{H} U_s \equiv \hat{H}^{\rm d}_s + \hat{H}^{\rm od}_s,
-\end{equation}
-with the relations $U_{s=0} = \mathbf{1}$, and $\hat{H}_{s= 0} =
-\hat{H}$.  The transformation $U_s$ is parametrized as
-\[
-U_s = T_s \exp \left(\int_0^s \! ds'\hat{\eta}_{s'} \right),
-\]
-where the anti-hermitian operator $\hat{\eta}_s$ serves as generator
-of the transformation. With $T_s$ we denote $s$-ordering, which is
-defined equivalently to usual time-ordering.  Taking the derivative of
-$\hat{H}_s$ with respect to $s$ gives
-\begin{equation}
- \frac{d \hat{H}_s}{ds} = \frac{d U_s}{ds}\hat{H} U_s^\dagger + U_s
- \hat{H} \frac{d U_s^\dagger}{ds}.
-\label{eq:flowlong}
-\end{equation}
-Utilizing that for our particular form of $U_s$, we have that 
-\begin{equation}
-\hat{\eta}_s = \frac{d U_s}{ds} U_s^\dagger = - U_s \frac{d
-  U_s^\dagger}{ds} = -\hat{\eta}_s,
-\label{eq:eta}
-\end{equation} 
-we obtain that 
-\begin{equation} 
-\frac{d \hat{H}_s}{ds} = \hat{\eta}_s \hat{H}_s
-- \hat{H}_s \hat{\eta}_s = \left[\hat{\eta}_s, \hat{H}_s \right].
-\label{eq:flowEquations}
-\end{equation}
+ 
 
-This is the key expression of the SRG method, describing the flow
-of the Hamiltonian.  The specific unitary transformation is determined
-by the choice of $\hat{\eta}_s$.  Through different choices of
-$\hat{\eta}_s$, the SRG evolution can be adapted to the features of a
-particular problem.
-Naively, one could try to solve the flow equation \eqref{eq:flowEquations} by
-choosing a suitable basis of the many-body Hilbert space and turning
-Eq.~\eqref{eq:flowEquations} into a matrix differential equation, but such an
-approach would ultimately amount to a diagonalization of the many-body
-Hamiltonian. To make matters worse, implementing the flow means we
-would deal with the Hamiltonian's full spectrum rather than just some
-extremal eigenvalues that can be extracted efficiently in
-state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
-\cite{Golub:2013le}.
 
-\subsection{Simple demonstration of the SRG method}
+\subsection{A Two-Dimensional Toy Problem}
 
 In order to get a better understanding of the SRG method, let us first consider  
 a simple $2\times 2$ matrix and compare \eqref{eq:flowEquations} with standard diagonalization algorithms like 
@@ -636,6 +668,7 @@ SUBROUTINE derivative(v, dv)
 
 END SUBROUTINE derivative
 \end{lstlisting}
+
 If we wish to solve the above equations for a nuclear interaction in a
 partial wave basis using relative coordinates for the momenta $k$, the explicit equations
 become \cite{Bogner:2007od} (with normalization
@@ -881,7 +914,18 @@ representations entirely by solving the operator flow equation
 strategy that we will explore in the following, which will 
 lead us to the formulation of the In-Medium SRG. 
 
-\section{The In-Medium SRG approach}
+\section{\label{sec:imsrg}The In-Medium SRG approach}
+Naively, one could try to solve the flow equation \eqref{eq:flowEquations} by
+choosing a suitable basis of the many-body Hilbert space and turning
+Eq.~\eqref{eq:flowEquations} into a matrix differential equation, but such an
+approach would ultimately amount to a diagonalization of the many-body
+Hamiltonian. To make matters worse, implementing the flow means we
+would deal with the Hamiltonian's full spectrum rather than just some
+extremal eigenvalues that can be extracted efficiently in
+state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
+\cite{Golub:2013le}.
+
+
 
 Instead of performing SRG in free space, the evolution can be done at
 finite density, that is directly in the $A$-body system
@@ -1085,21 +1129,689 @@ results in much better numerical properties.
 
 \section{In-medium SRG studies of the pairing model and infinite neutron matter}
 
-\section{Conclusions and perspectives}
+\section{\label{sec:perspectives}Conclusions and perspectives}
 \begin{itemize}
 \item Magnus
 \item Multi-reference
 \item TVS-IMSRG
 \end{itemize}
 
+
+In this work, we have presented a comprehensive review of the IM-SRG
+as a powerful \emph{ab initio} method for nuclei. The IM-SRG employs
+the flow-equation formulation of the SRG to decouple an $A$-body
+reference state from particle-hole excitations, thus solving the
+many-body Schr\"odinger equation. Compared to other \emph{ab initio}
+approaches for medium-mass nuclei, we have shown that the IM-SRG is
+competitive with CC and SCGF calculations, both in terms of accuracy and of
+computational efficiency.
+
+In the IM-SRG, the Hamiltonian is normal ordered with respect to the
+reference state and typically truncated at the normal-ordered two-body
+level. In this way, 3N interactions can be naturally included in a
+normal-ordered two-body approximation. Due to the many ongoing
+developments of 3N forces, we have focused in this review on a
+detailed derivation at the NN level, but discuss highlights of first
+IM-SRG calculation including 3N interactions in Sec.~\ref{sec:3N}.
+
+Going beyond the closed-shell or single-reference version, the IM-SRG
+has been recently generalized to a multi-reference formulation, as
+discussed in Sec.~\ref{sec:mrimsrg}. The multi-reference IM-SRG (MR-IM-SRG) is
+based on a generalized version of normal-ordering and Wick's
+theorem. In principle, one can use 
+arbitrary reference states that are
+characterized by one-, two- and three-body density matrices. In the
+first multi-reference applications, particle-number-projected
+Hartree-Fock-Bogoliubov states were used as reference states for
+describing the even nuclei throughout semi-magic isotopic chains.
+
+A great asset of the IM-SRG is the flexibility and simplicity of its
+basic concept. Through different choices of generators and decoupling
+patterns, the numerical characteristics and efficiency of the methods
+can be controlled and tailored for specific applications. The
+in-medium evolved Hamiltonian is directly accessible, Hermitian and readily
+usable for subsequent nuclear structure calculations.
+
+As a specific application that exploits this flexibility,
+nonperturabtive derivations of valence-space Hamiltonians have been
+achieved. In the IM-SRG for open-shell nuclei, states with $A_v$
+particles in the valence space are additionally decoupled from those
+containing non-valence admixtures. This gives the energy of the
+closed-shell core (as in the standard IM-SRG), but also valence-space
+single-particle energies and residual interactions. The resulting
+valence-space Hamiltonian can then be diagonalized using large-scale
+shell-model methods. The IM-SRG provides for the first time a
+nonperturbative derivation of effective interactions in the shell
+model based on nuclear forces without adjustments. This is discussed
+in Sec.~\ref{sec:shell_model}.
+
+Finally, we highlight novel technical advances of the Magnus expansion
+for effective operators in Sec.~\ref{sec:magnus}. This enables a
+consistent evolution of operators in the IM-SRG for applications to
+nuclear structure, electroweak transitions, and for key matrix elements
+needed for fundamental symmetry tests.
+
+\subsection{Technical Advances: Magnus Expansion and Effective Operators}
+\label{sec:magnus}
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.6\columnwidth]{\fdir/HEG_diffstepsizes}
+\caption{\label{fig:timestep_HEG}
+(Color online) Flowing IM-SRG(2) and Magnus(2) correlation energy for 
+the electron gas, $E_0(s)-E_{\rm HF}$, for Wigner-Seitz radii of a)
+$r_s=5.0$ and b) $r_s=0.5$. The solid black line corresponds to the
+IM-SRG(2) results using an adaptive solver based on the
+Adams-Bashforth method, while the other lines correspond to Magnus(2)
+and IM-SRG(2) results using different Euler step sizes. The red
+circles denote the quasi-exact FCIQMC results of
+Ref.~\cite{Shepherd:2012hl}.}
+\end{center}
+\end{figure}
+
+Despite modest computational scaling and the flexibility to tailor the
+generator to different systems, IM-SRG calculations based on the
+direct integration of Eqs.~(\ref{eq:opflow}) and~(\ref{eq:obsflow}) are
+limited by the memory demands of the ODE solver. The use of a
+high-order solver is essential, as the accumulation of time-step
+errors destroys the unitary equivalence between $H(s)$ and $H(0)$ even
+if no truncations are made in the flow equations. State-of-the-art
+solvers can require the storage of 15-20 copies of the solution vector
+in memory, which is the main computational bottleneck of the method.
+What is worse, the dimensionality of the flow equations roughly
+doubles for each additional observable one wishes to calculate, and
+each operator can evolve with rather different timescales than the
+Hamiltonian, increasing the likelihood of the ODEs becoming
+stiff.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.6\columnwidth]{\fdir/O16_diffstepsizes}
+\caption{\label{fig:timestep_O16}
+(Color online) Flowing IM-SRG(2) and Magnus(2) ground-state energy, 
+$E_0(s)$, for $^{16}$O starting from the N$^3$LO NN interaction of
+Entem and Machleidt~\cite{Entem:2003th,Machleidt:2011bh} evolved by
+the free-space SRG to a) $\lambda=2.7$ fm$^{-1}$ and $\lambda = 2.0$
+fm$^{-1}$. The solid black line corresponds to IM-SRG(2) results using
+an adaptive solver based on the Adams-Bashforth method, while the
+other lines correspond to Magnus(2) and IM-SRG(2) results using
+different Euler step sizes. The calculations were done in an
+$e_{max}=8$ model space, with $\hbar\omega = 24$~MeV for the
+underlying harmonic-oscillator basis.}
+\end{center}
+\end{figure}
+
+To bypass these limitations, an improved formulation of the IM-SRG was
+proposed in Ref.~\cite{Morris:2015ve} that utilizes the Magnus
+expansion from the theory of matrix differential
+equations~\cite{Magnus:1954xy,Blanes:2009fk}.  In essence, the problem
+is recast so that rather than solving flow equations for the
+Hamiltonian and other operators of interest, one solves flow equations
+for the anti-Hermitian operator $\Omega(s)$, where $U(s) =
+e^{\Omega(s)}$. The unitary operator $U(s)$ is then used to transform
+the Hamiltonian and any other operators of interest via the
+Baker-Cambell-Hausdorff (BCH) formula. The advantage of the Magnus
+formulation stems from the fact that the flow equations for
+$\Omega(s)$ can be solved using a simple first-order Euler step method
+without any loss of accuracy, resulting in substantial memory savings
+and a modest reduction in CPU time.  In the conventional approach,
+time-step errors accumulate directly in the evolved $H(s)$,
+necessitating the use of a high-order solver to preserve an acceptable
+level of accuracy.  In the Magnus formulation, even though sizable
+time-step errors accumulate in $\Omega(s)$ with a first-order method, 
+upon exponentiation the transformation is still unitary, and
+the transformed $H(s)=\UO(s)H\UUO(s)$ is unitarily equivalent to
+the initial Hamiltonian modulo any truncations made in evaluating the BCH formula.  For
+further details on the implementation of the Magnus formulation, see
+Ref.~\cite{Morris:2015ve}.
+
+The insensitivity to time-step errors is illustrated in
+Figs.~\ref{fig:timestep_HEG} and~\ref{fig:timestep_O16}, which show
+the 0-body part of the flowing Hamiltonian $H(s)$ versus the flow
+parameter for the electron gas, where we plot $E_0(s)-E_\text{HF}$ as an
+approximation of the correlation energy at large $s$, and for
+$^{16}$O, respectively. The black solid lines denote the results of a
+standard IM-SRG(2) calculation using the predictor-corrector solver of
+Shampine and Gordon, while the other curves denote IM-SRG(2) and
+Magnus(2) calculations using a first-order Euler method with different
+step sizes $\delta s$. For the electron gas, the exact full
+configuration quantum Monte Carlo (FCIQMC)
+results~\cite{Shepherd:2012hl} are shown for
+reference. Unsurprisingly, the IM-SRG(2) calculations using a
+first-order Euler method are very poor, with the various step sizes
+converging to different large-$s$ limits. The Magnus(2) calculations,
+on the other hand, converge to the same large-$s$ limit in excellent
+agreement with the standard IM-SRG(2) and the FCIQMC results.
+
+The evaluation of general operators poses considerable computational
+challenges in the conventional formulation of the IM-SRG. In the
+Magnus expansion formulation, the evolution of additional operators is
+relatively straightforward since the dimensionality of the flow
+equations is fixed, regardless of how many additional operators are
+being evolved. Proof-of-principle operator evolutions have been
+carried out for for the momentum distribution in the electron gas, and
+the generalized center-of-mass Hamiltonian in $^{16}$O with encouraging
+results~\cite{Morris:2015ve}.  The relative ease of performing
+operator evolution is especially encouraging for shell model
+applications, as it opens up the exciting possibility for consistent,
+nonperturbative calculations of both Shell-Model Hamiltonians and
+effective electroweak operators (e.g., the $0\nu\beta\beta$ matrix
+element, quenching of Gamow-Teller strength, etc.) relevant for
+studies of fundamental symmetries in nuclei.
+
+
+% \subsection{Medium-Mass Nuclei with Three-Nucleon Forces}
+% \label{sec:3N}
+
+% \begin{figure}[t]
+%   \setlength{\unitlength}{0.8\textwidth}
+%   \begin{picture}(1.0000,0.800)
+%     \put(-0.0500,0.3200){\small\input{fig/chi2b3bi_srgXXXX_Eint.tex}}
+%     \put(-0.0500,0.0000){\small\input{fig/chi2b3b400_srgXXXX_Eint.tex}}
+%   \put(1.0000,0.5200){\parbox{0.1600\unitlength}{
+%     \framebox{
+%     \begin{tabular*}{0.16\unitlength}{l@{\extracolsep\fill}l}
+%          \multicolumn{2}{c}{\footnotesize $\lambda[\fmi]$} \\
+%          \scriptsize\symbolcircle[FGBlue]     & \footnotesize2.24 \\
+%          \scriptsize\symbolbox[FGRed]         & \footnotesize2.00 \\
+%          \scriptsize\symboldiamond[FGGreen]   & \footnotesize1.88 \\
+%          \scriptsize\symboltriangle[FGOrange] & \footnotesize$\infty$
+%     \end{tabular*}
+%     }
+%     }
+%   }
+%   \end{picture}
+%   \vspace{-30pt}
+%   \caption{\label{fig:chi2b3bXXXX_srgXXXX_Eint}
+%     IM-SRG(2) ground-state energies per nucleon for light and medium-mass closed-shell isotopes from chiral NN and NN+3N interactions at different resolution scales $\lambda$ (see text). Experimental values (black bars) taken from \cite{Wang:2012uq}. \emph{Top panel:} Bare \NNNLO at $\lambda=\infty$, and \NNNLO plus induced 3N interactions for $\lambda<\infty$. \emph{Bottom panel:} \NNNLO NN plus local \NNLO interaction with initial cutoff $\LambdaNNN=400\,\MeV$, evolved to lower resolution scale.
+%   }
+% \end{figure}
+
+% For most of the present work, we have focused on bare or softened
+% chiral NN interactions only for the sake of simplicity. Key aspects of
+% the IM-SRG, like the convergence behavior of ground-state energies as
+% a function of the single-particle basis size or the diagrammatic
+% content of the infinite-order summation, the reshuffling of many-body
+% correlations into the zero-body part of the flowing Hamiltonian, etc.,
+% are primarily governed by the resolution scale of the input
+% Hamiltonian. Similar features are expected (and found) regardless of
+% whether it contains NN, 3N, or higher many-body interactions. Despite
+% open issues pertaining to power counting and renormalizability, chiral
+% NN+3N interactions have been used in a variety of \emph{ab initio} nuclear
+% structure and reaction calculations, and these calculations in turn
+% provide new opportunities for testing the performance of chiral input
+% Hamiltonians.
+% % \cite{Barrett:2013oq,Navratil:2007ve,Hagen:2014ve,Roth:2011kx,Roth:2012qf,Binder:2013zr,Hergert:2013mi,Jurgenson:2013fk,Hergert:2013ij,Cipollone:2013uq,Hupin:2013uq,Binder:2014fk,Soma:2014eu,Bogner:2014tg,Epelbaum:2014kx,Lahde:2014vn}.
+
+% The inclusion of 3N interactions in the IM-SRG framework is
+% straightforward, especially if we content ourselves with the IM-SRG(2)
+% truncation. In that case, any initial 3N interaction only needs to be
+% considered when the initial Hamiltonian is normal ordered, and its
+% contributions added with proper pre-factors to the normal-ordered
+% zero-, one-, and two-body parts of the Hamiltonian according to
+% Eqs.~\eqref{eq:E0}--\eqref{eq:Gamma}.
+
+% In Fig.~\ref{fig:chi2b3bXXXX_srgXXXX_Eint}, we give a summary overview
+% of the IM-SRG(2) ground-state energies of a range of closed-shell
+% nuclei up to $\nuc{Ni}{56}$, obtained with chiral NN+3N
+% interactions. In the top panel, we compare our usual bare \NNNLO
+% interaction with cutoff $\LambdaNN=500\,\MeV$ to Hamiltonians with a
+% lower resolution scale $\lambda$, but contrary to earlier sections
+% like Sec.~\ref{sec:numerics}, we include 3N interactions which are
+% induced by the change of $\lambda$. The g.s.~energies depend on
+% $\lambda$ because the free-space SRG evolution to lower resolution
+% scale as well as the IM-SRG evolution to solve the many-body problem
+% cannot be performed exactly. Thus, the spectrum of the bare
+% $\lambda=\infty$ NN interaction is no longer perfectly unitarily
+% equivalent to the spectrum of the NN+3N interaction with
+% $\lambda<\infty$.
+
+% Theoretical uncertainties due to the use of finite HO configuration
+% spaces, both for the free-space SRG evolution in Jacobi coordinates,
+% and the IM-SRG evolution in coupled single-particle bases, can be
+% controlled to much better than 1\% (see
+% Sec.~\ref{sec:numerics_convergence} and
+% Refs. \cite{Binder:2013zr,Hergert:2013mi,Roth:2014fk,Binder:2014fk}),
+% so the sources of the $\lambda$-dependence are the omission of induced
+% 4N,...,$A$N interactions, the omission of the residual 3N
+% interaction in the initial Hamiltonian, and the use of the IM-SRG(2)
+% truncation. In Ref.~\cite{Hergert:2013mi}, we analyzed these
+% uncertainties in detail, and quantified them to be on the level of
+% 3-4\% for the studied nuclei in the range
+% $\lambda=1.88,\ldots2.24\fmi$. For $\nuc{He}{4}$ and $\nuc{O}{16}$, we
+% benefitted from the ability to benchmark the IM-SRG(2) directly
+% against exact NCSM and importance-truncated NCSM results. Beyond that,
+% our results were consistent with CCSD and $\Lambda-$CCSD(T) results
+% using the same Hamiltonian.
+
+% The energy band we obtain by varying $\lambda$ spans an energy
+% interval that is comparable to the uncertainty given above, but we
+% have to be careful how we interpret this feature due to the use of a
+% truncated many-body method. As we have seen and discussed throughout
+% Sec.~\ref{sec:numerics}, methods like IM-SRG or CC benefit
+% significantly from the increasing perturbativeness of the nuclear
+% Hamiltonian as $\lambda$ is lowered. For soft interactions, more and
+% more ground-state energy is already recovered by low-order terms in
+% the MBPT series, and the IM-SRG(2) gives a more and more accurate
+% approximation of the exact result.
+
+% For the bare interaction, on the other hand, the error associated with
+% the many-body truncation is more substantial. Unfortunately, exact
+% calculations with methods like the (IT-)NCSM also fail to reach
+% convergence for all but the lightest nuclei with the bare \NNNLO
+% interaction, and this limited availability of benchmarks makes it hard
+% to quantify the size of the missing many-body contributions in the
+% IM-SRG(2). The size extensivity of methods like IM-SRG and CC
+% guarantees linear scaling of the ground-state energy with the mass
+% number $A$, but in order to infer ground-state energies and their
+% uncertainties for heavier nuclei from this property, the density has
+% to be (at least approximately) constant. The importance of shell and
+% surface effects for nuclear structure phenomena shows that this would
+% be an over-simplification, and thereby limits the usefulness of simple
+% energy scaling arguments.
+
+% Let us now consider the impact of including a chiral 3N interaction in
+% the initial Hamiltonian as well. Here, we have used a local \NNLO
+% interaction with a reduced cutoff $\LambdaNNN=400\,\MeV$, and
+% low-energy constants (LECs) $c_D=-0.2$ and $c_E=0.098$
+% \cite{Navratil:2007ve,Gazit:2009qf,Roth:2011kx}. The LECs are fixed by
+% fitting the triton beta decay half-life and $\nuc{He}{4}$ ground-state
+% energy. In Ref.~\cite{Roth:2011kx} and subsequent works,
+% $\LambdaNNN=400\,\MeV$ was advocated over the naively consistent
+% choice $\LambdaNNN=500\,\MeV$ for practical reasons: For the harder
+% input 3N interaction, a change of resolution scale induces strong 4N
+% interactions. We can see from the bottom panel of
+% Fig.~\ref{fig:chi2b3bXXXX_srgXXXX_Eint} that the $\lambda$ dependence
+% gets considerably reduced, but there are still signficant deficiencies
+% in reproducing the experimental ground-state energy for these NN+3N
+% interactions.
+
+\subsection{The Multi-Reference IM-SRG}
+\label{sec:mrimsrg}
+
+The IM-SRG formalism and applications presented so far use a single
+Slater determinant as the reference state, ideally a solution of the
+Hartree-Fock equations (cf.~Sec.~\ref{sec:refstate}). Thus, the
+standard IM-SRG belongs to the class of single-reference methods, such
+as finite-order MBPT or CC. In nuclear physics, these approach are
+only appropriate for the description of nuclei around (sub-)shell
+closures.
+
+In open-shell nuclei, correlations cause the emergence of phenomena
+like nuclear superfluidity or intrinsic deformation. With
+reference-state constructions, one can attempt to capture these
+effects at the mean-field level to some extent, by breaking symmetries
+either spontaneously or explicitly. Pairing correlations can be
+treated in the Hartree-Fock-Bogoliubov (HFB) formalism, which is
+formulated in terms of Slater determinants of fermionic
+quasi-particles that are superpositions of particles and
+holes. Intrinsic deformation will develop if the single-particle basis
+is not symmetry restricted, e.g., in an $m$-scheme formalism, and
+rotational symmetry breaking is energetically favored.
+
+An $m$-scheme IM-SRG or CC calculation may be able to converge to a
+solution if the excitation spectrum of the symmetry-broken reference
+state has a sufficiently large gap, i.e., a single dominant
+configuration. If such a solution is found, one must eventually
+restore the broken symmetries through the application of projection
+methods, which have a long track record in nuclear physics (see, e.g.,
+\cite{Peierls:1973fk,Ring:1980bb,Egido:1982sd,Robledo:1994qf,Flocard:1997fx,Sheikh:2000xx,Dobaczewski:2007hh,Bender:2009rv,Duguet:2009ph,Lacroix:2009aj,Lacroix:2012vn,Duguet:2015ye}). At
+this point, one is no longer dealing with a single-reference problem,
+although the projected states retain an imprint of the original
+symmetry-broken (single-)reference states that simplifies practical
+implementations.
+
+In the domain of exotic neutron-rich nuclei, the single-reference
+paradigm may also break down. The complex interplay of nuclear
+interactions, many-body correlations, and, in the dripline region,
+continuum effects, can cause strong competition between configurations
+with different intrinsic structures. This manifests in phenomena like
+the erosion and emergence of shell closures
+\cite{Wienholtz:2013bh,Holt:2014vn,Soma:2014eu,Hergert:2014vn}, or the
+appearance of the so-called islands of inversion (see, e.g.,
+\cite{Brown:2010xr}). Their description requires a true
+multi-reference treatment.
+
+The Multi-Reference IM-SRG (MR-IM-SRG) is capable of dealing with the
+aforementioend scenarios
+\cite{Hergert:2013ij,Hergert:2014vn,Hergert:2015qd}. It generalizes
+the IM-SRG formalism discussed in this work to arbitrary correlated
+reference states, using the multi-reference normal ordering and Wick's
+theorem developed by Kutzelnigg and Mukherjee
+\cite{Kutzelnigg:1997fk,Mukherjee:1997yg}. The idea of decoupling the
+ground state from excitations readily carries over, except that
+excited states are given by
+\begin{equation*}
+\nord{\aaO_i\aO_j\!}\!\ket{\Phi},\,\nord{\aaO_i\aaO_j\aO_l\aO_k\!}\!\ket{\Phi},\ldots\,,
+\end{equation*}
+and the single-particle states are no longer of pure particle or hole
+character.  The flow equation formulation of the MR-IM-SRG makes it
+possible to avoid complications due to the non-orthogonality and
+possible linear dependency of these general excitations (see
+\cite{Hergert:2015qd} for more details).
+
+While only one-body density matrices appear in the contractions of the
+standard Wick's theorem (see Eqs.~\eqref{eq:def_particle_contraction}
+and \eqref{eq:def_hole_contraction}), additional contractions that
+involve two- and higher-body density matrices enter that encode the
+correlation content of the reference state. In the MR-IM-SRG
+framework, correlations that are hard to capture as few-body
+excitations of the reference state can be built directly into the
+reference state.
+
+% \begin{figure}[t]
+%   \setlength{\unitlength}{0.7\textwidth}
+%   \begin{center}
+%     % \hspace{-0.05\unitlength}\input{fig/chi2b3b400_srg0800_OXX_methods_new}
+%   \end{center}
+%   \vspace{-30pt}
+%   \caption{\label{fig:mrimsrg_OXX} Ground-state energies of the oxygen isotopes from MR-IM-SRG
+%     and other many-body approaches, based on the NN+3N-full interaction with 
+%     $\Lambda_\text{3N}=400\,\MeV$, evolved to the resolution scale $\lambda=1.88\fmi$
+%     ($\lambda=2.0\fmi$ for the Green's Function ADC(3) results, cf.~\cite{Cipollone:2013uq}).
+%     Black bars indicate experimental data \cite{Wang:2012uq}.
+%     See Ref.~\cite{Hergert:2013ij} for additional details. 
+%   }
+% \end{figure}
+
+In a first applications of the MR-IM-SRG framework, we have used
+spherical, particle-number projected HFB vacua to compute the
+ground-state energies of the even oxygen isotopes, starting from
+chiral NN+3N forces \cite{Hergert:2013ij}. This work improved on
+previous Shell Model \cite{Otsuka:2010cr,Holt:2013fk} and CC studies
+\cite{Hagen:2012oq}, that included NN+3N interactions in MBPT or for
+the latter with 3N forces in a more phenomenological, nuclear-matter
+based normal ordering.  Based on a Hamiltonian that is entirely fixed
+in the $A=3,4$ system and consistently evolved to lower resolution, we
+found that MR-IM-SRG, various CC methods, and the importance-truncated
+NCSM consistently predict the neutron dripline in $\nuc{O}{24}$ if
+chiral 3N forces are included (see Fig.~\ref{fig:mrimsrg_OXX}), as
+pointed out in the context of the Shell Model in
+Ref.~\cite{Otsuka:2010cr}.
+
+Encouraged by this success, we moved on to the calcium and nickel
+isotopic chains \cite{Hergert:2014vn}, where importance-truncated NCSM
+calculations are no longer feasible. The same family of chiral NN+3N
+Hamiltonians that successfully reproduce the oxygen ground-state
+energies overestimate the binding energies in these isotopes by
+several hundred keV per nucleon, in MR-IM-SRG and CC (also see
+\cite{Roth:2012qf,Binder:2013zr,Binder:2014fk}), as well as the
+second-order Gor'kov Green's Function approach \cite{Soma:2014eu}.
+The revelation of these deficiencies has led to a variety of efforts
+to improve on the chiral interactions
+\cite{Ekstrom:2015fk,Hagen:2015ve,Epelbaum:2015fb,Epelbaum:2015gf,Entem:2015hl,Entem:2015qf,Carlsson:2015fk,Gezerlis:2014zr,Piarulli:2015rm,Lynn:2015eu}.
+
+\begin{figure}[t]
+  \setlength{\unitlength}{0.72\textwidth}
+  \begin{center}
+    % \hspace{-0.07\unitlength}\input{fig/chi2b3bXXX_srgXXXXJ_CaXX_S2N_standalone}
+  \end{center}
+  \vspace{-30pt}
+  \caption{\label{fig:mrimsrg_CaXX} 
+    MR-IM-SRG results for Ca two-neutron separation energies, 
+    for chiral NN+3N interactions 
+    with different cutoffs in the 3N sector, and a range of resolution scales 
+    from $\lambda=1.88\fmi$ (open symbols) to $2.24\fmi$ (solid symbols).
+    Black bars indicate experimental data \cite{Wang:2012uq,Wienholtz:2013bh}.
+    See Ref.~\cite{Hergert:2014vn} for additional details. 
+    }
+\end{figure}
+
+Contrary to the ground-state energies, chiral NN+3N forces reproduce
+relative quantities like the two-neutron separation energies quite
+well, aside from the exaggerated $N=20$ shell closure
+(Fig.~\ref{fig:mrimsrg_CaXX}).  In particular, they show signals of
+sub-shell closures in $\nuc{Ca}{52,54}$, in agreement with
+Shell Model calculations based on NN+3N interactions in MBPT
+\cite{Holt:2014vn,Wienholtz:2013bh}. These observations indicate which
+terms in the chiral input Hamiltonian may be deficient, and this
+information can be used in future optimizations.
+
+Ongoing work focuses on three interconnected main directions:
+\emph{(i)} the extension of the MR-IM-SRG to the evaluation of general
+observables (see Sec.~\ref{sec:magnus}), \emph{(ii)} the description
+of deformed nuclei, and \emph{(iii)} the integration of MR-IM-SRG and
+Equation-of-Motion methods \cite{Rowe:1968eq} for the spectroscopy of
+medium-mass and heavy neutron-rich nuclei.
+
+\subsection{Non-Perturbative Shell-Model Interactions}
+\label{sec:shell_model}
+
+For open-shell systems, rather than solving the full $A$-body problem,
+it is profitable to follow the Shell Model paradigm by constructing
+and diagonalizing an effective Hamiltonian in which the active degrees
+of freedom are $A_v$ valence nucleons confined to a few orbitals near
+the Fermi level. Both phenomenological and microscopic
+implementations of the Shell Model have been used with success to
+understand and predict the evolution of shell structure, properties of
+ground and excited states, and electroweak transitions
+\cite{Brown:2001rg,Caurier:2005qf,Otsuka:2013vn}.
+
+Recent microscopic Shell-Model studies have revealed the impact of 3N
+forces in predicting ground- and excited-state properties in neutron-
+and proton-rich nuclei
+\cite{Otsuka:2010cr,Holt:2012fk,Holt:2013fk,Holt:2013hc,Holt:2013cr,Gallant:2012kx,Wienholtz:2013bh,Holt:2014vn}.
+Despite the novel insights gained from these studies, they make
+approximations that are difficult to benchmark. The microscopic
+derivation of the effective valence-space Hamiltonian relies on MBPT
+\cite{Hjorth-Jensen:1995ys}, where order-by-order convergence is unclear. Even with
+efforts to calculate particular classes of diagrams nonperturbatively
+\cite{Holt:2005mi}, results are sensitive to the HO frequency $\hw$ (due
+to the core), and the choice of valence space
+\cite{Holt:2012fk,Holt:2013fk,Holt:2013hc}. A nonperturbative method to
+address these issues was developed in
+\cite{Lisetskiy:2008fk,Lisetskiy:2009uq,Dikmen:2015fk}, which generates valence-space
+interactions and operators by projecting their full NCSM counterparts
+into a given valence space.
+
+To overcome these limitations in heavier systems, the IM-SRG can be
+extended to derive effective valence-space Hamiltonians and operators
+nonperturbatively.  Calculations without initial 3N forces
+\cite{Tsukiyama:2012fk} indicated that an \emph{ab initio} description
+of ground and excited states for open-shell nuclei may be possible
+with this approach.
+
+The utility of the IM-SRG lies in the freedom to tailor the definition
+of $H^{\rm{od}}$ to a specific problem.  For instance, to construct a
+Shell Model Hamiltonian for a nucleus comprised of $A_v$ valence
+nucleons outside a closed core, we define a HF reference state
+$\ket{\Phi}$ for the core with $A_c$ particles, and split the
+single-particle basis into hole ($h$), valence ($v$), and non-valence
+($q$) particle states.  Treating all $A$ nucleons as active, i.e.,
+without a core approximation, we eliminate matrix elements which
+couple $\ket{\Phi}$ to excitations, just as in IM-SRG ground-state
+calculations \cite{Tsukiyama:2011uq,Hergert:2013mi,Hergert:2013ij}. In
+addition, we decouple states with $A_v$ particles in the valence
+space, \mbox{$:\!\aaO_{v_1}\ldots\aaO_{v_{A_v}}\!\!:\!\!\ket{\Phi}$},
+from states containing non-valence states.
+
+\begin{figure}[t]
+\begin{center}
+% \minipage{0.335\textwidth}
+% \includegraphics[width=\linewidth,clip=]{fig/22O_arnps}
+% \endminipage\hfill
+% \minipage{0.3\textwidth}
+% \includegraphics[width=\linewidth,clip=]{fig/23O_arnps}
+% \endminipage\hfill
+% \minipage{0.3\textwidth}
+% \includegraphics[width=\linewidth,clip=]{fig/24O_arnps}
+% \endminipage
+\end{center}
+\caption{Excited-state spectra of $^{22,23,24}$O based on chiral NN+3N
+interactions and compared with experiment. Figures adapted from
+Ref.~\cite{Bogner:2014tg}. The MBPT results are performed in an extended
+$sdf_{7/2}p_{3/2}$ space~\cite{Holt:2013fk} based on low-momentum NN+3N
+interactions, while the IM-SRG~\cite{Bogner:2014tg} and CC effective
+interaction (CCEI)~\cite{Jansen:2014qf} results are in the $sd$ shell from
+the SRG-evolved NN+3N-full Hamiltonian with $\hbar \omega=20$~MeV
+(CCEI and dotted IM-SRG) and $\hbar \omega=24$~MeV (solid IM-SRG). The
+dashed lines show the neutron separation energy.
+Figure taken from Ref.~\cite{Hebeler:2015xq}.\label{fig:Ospectra}}
+\end{figure}
+
+After the IM-SRG derivation of the valence-space Hamiltonian, the
+$A$-dependent Hamiltonian is diagonalized in the valence space to
+obtain the ground and excited states. For the oxygen isotopes, a good
+description of the experimental spectra is found
+(Fig.~\ref{fig:Ospectra}).  Recently, these calculations were extended
+to nearby F, Ne, and Mg isotopes showing excellent agreement with new
+measurements in $^{24}$F~\cite{Caceres:2015fk} and that deformation
+can emerge from these \emph{ab initio}
+calculations~\cite{Stroberg:2015qr}. Future directions include
+extending the valence space, which will give access to the
+island-of-inversion region and potentially the full $sd$-shell (and
+higher) neutron dripline.
+
+
+
 \section{Acknowledgements}
 This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University).
 \tbd{HH startup, NSF?}
 
+
+\section{Problems}
+\begin{prob}\label{problem:steepest_descent}
+  Prove Eq.~\eqref{eq:steepest_descent}.
+\end{prob}
+
 \section*{Appendix: Products and Commutators of Normal-Ordered Operators}
 \addcontentsline{toc}{section}{Appendix}
+In this appendix, we collect the basic expressions for products and commutators of
+normal-ordered one- and two-body operators. All single-particle indices refer to 
+the natural orbital basis, where the one-body density matrix is diagonal
+\begin{equation}
+  \rho_{kl} = \matrixe{\Phi}{\aaO_{l}\aO_{k}}{\Phi}  = n_k \delta_{kl}\,,\quad n_k\in\{0,1\}\,,
+\end{equation}
+(notice the convention for the indices of $\rho$, cf.~\cite{Ring:1980bb}). We also
+define the hole density matrix
+\begin{equation}
+  \bar\rho_{kl} \equiv \matrixe{\Phi}{\aO_{k}\aaO_{l}}{\Phi}  = \delta_{kl} - \rho_{kl} \equiv \nn_k\delta_{kl}
+\end{equation}
+whose eigenvalues are 
+\begin{equation}
+  \nn_{k}  = 1 - n_{k}\,,
+\end{equation}
+i.e., 0 for occupied and 1 for unoccupied single-particle states. Finally, 
+we will again use the permutation symbol $\PO_{ij}$ to interchange the indices 
+in any expression, 
+\begin{equation}\label{eq:def_Pij}
+  \PO_{ij} g(\ldots,i,\ldots,j) \equiv g(\ldots,j,\ldots,i)\,
+\end{equation}
+(see section \ref{sec:imsrg} and chapter \ref{chapter:cc}).
+
+\subsection{Operator Products}
+\begin{align}
+  \nord{\aaO_{a}\aO_{b}}\nord{\aaO_{k}\aO_{l}}
+  &=\nord{\aaO_{a}\aaO_{k}\aO_{l}\aO_{b}}
+    -n_a\delta_{al}\nord{\aaO_{k}\aO_{b}}
+    +\nn_b\delta_{bk}\nord{\aaO_{a}\aO_{l}}
+    +n_a\nn_b\delta_{al}\delta_{bk}
+\end{align}
+
+
+
+\begin{align}
+  \nord{\aaO_{a}\aO_{b}}\nord{\aaO_{k}\aaO_{l}\aO_{n}\aO_{m}}
+  &=\nord{\aaO_{a}\aaO_{k}\aaO_{l}\aO_{n}\aO_{m}\aO_{b}}
+    +\left(1-\PO_{mn}\right)n_a\delta_{an}\nord{\aaO_{k}\aaO_{l}\aO_{m}\aO_{b}}
+    -\left(1-\PO_{kl}\right)\nn_b\delta_{bl}\nord{\aaO_{a}\aaO_{k}\aO_{n}\aO_{m}}\notag\\
+  &\hphantom{=}  
+    -\left(1-\PO_{kl}\right)\left(1-\PO_{mn}\right)n_{a}\nn_{b}\delta_{am}\delta_{bl}\nord{\aaO_{k}\aO_{n}}
+\end{align}
+
+
+
+\begin{align}
+  &\nord{\aaO_{a}\aaO_{b}\aO_{d}\aO_{c}}\nord{\aaO_{k}\aaO_{l}\aO_{n}\aO_{m}}
+  \notag\\
+  &=\nord{\aaO_{a}\aaO_{b}\aaO_{k}\aaO_{l}\aO_{n}\aO_{m}\aO_{d}\aO_{c}}
+    \notag\\
+  &\hphantom{=}
+    +(1-\PO_{ab})(1-\PO_{mn})n_a\delta_{am}\nord{\aaO_{b}\aaO_{k}\aaO_{l}\aO_{n}\aO_{d}\aO_{c}}
+    -(1-\PO_{cd})(1-\PO_{kl})\nn_c\delta_{ck}\nord{\aaO_{a}\aaO_{b}\aaO_{l}\aO_{n}\aO_{m}\aO_{d}}
+  \notag\\
+%  
+  &\hphantom{=}
+    +(1-\PO_{mn})n_an_b\delta_{am}\delta_{bn}\nord{\aaO_{k}\aaO_{l}\aO_{d}\aO_{c}}
+    +(1-\PO_{cd})\nn_c\nn_d\delta_{ck}\delta_{dl}\nord{\aaO_{a}\aaO_{b}\aO_{n}\aO_{m}}
+  \notag\\
+  &\hphantom{=}
+    +(1-\PO_{ab})(1-\PO_{cd})(1-\PO_{kl})(1-\PO_{mn})n_a\nn_c\delta_{am}\delta_{ck}\nord{\aaO_{b}\aaO_{l}\aO_{n}\aO_{d}}
+  \notag\\
+%   
+  &\hphantom{=}
+  +(1-\PO_{ab})(1-\PO_{kl})(1-\PO_{mn})
+    n_b \nn_c \nn_d \delta_{bn}\delta_{ck}\delta_{dl}
+    \nord{\aaO_{a}\aO_{m}}
+  \notag\\
+%
+  &\hphantom{=}
+   +(1-\PO_{cd})(1-\PO_{kl})(1-\PO_{mn})
+     \nn_d n_a n_b \delta_{dl}\delta_{an}\delta_{bm}
+    \nord{\aaO_{k}\aO_{c}}
+  \notag\\
+%
+%
+%
+  &\hphantom{=}
+    + (1-\PO_{kl})(1-\PO_{mn})n_a n_b \nn_c \nn_d  \delta_{am}\delta_{bn}\delta_{ck}\delta_{dl}
+\end{align}
+
+\subsection{Commutators}
+
+\begin{align}
+  \comm{\nord{\aaO_{a}\aO_{b}}}{\nord{\aaO_{k}\aO_{l}}}
+  &=\delta_{bk}\nord{\aaO_{a}\aO_{l}}-\delta_{al}\nord{\aaO_{k}\aO_{b}}+(n_{a}-n_{b})\delta_{al}\delta_{bk}
+\end{align}
+
+
+\begin{align}
+  \comm{\nord{\aaO_{a}\aO_{b}}}{\nord{\aaO_{k}\aaO_{l}\aO_{n}\aO_{m}}}
+  &
+    =\left(1-\PO_{kl}\right)\delta_{bk}\nord{\aaO_{a}\aaO_{l}\aO_{n}\aO_{m}}
+    -\left(1-\PO_{mn}\right)\delta_{am}\nord{\aaO_{k}\aaO_{l}\aO_{n}\aO_{b}}
+    \notag\\
+  &\hphantom{=}  
+    +\left(1-\PO_{kl}\right)\left(1-\PO_{mn}\right)(n_a-n_b)\delta_{an}\delta_{bl}\nord{\aaO_{k}\aO_{m}}
+\end{align}
+
+
+\begin{align}
+  &\comm{\nord{\aaO_{a}\aaO_{b}\aO_{d}\aO_{c}}}{\nord{\aaO_{k}\aaO_{l}\aO_{n}\aO_{m}}}
+  \notag\\
+  &=
+    \left(1-\PO_{ab}\right)\left(1-\PO_{mn}\right)\delta_{am}\nord{\aaO_{b}\aaO_{k}\aaO_{l}\aO_{n}\aO_{d}\aO_{c}}
+    -\left(1-\PO_{cd}\right)\left(1-\PO_{kl}\right)\delta_{kc}\nord{\aaO_{a}\aaO_{b}\aaO_{l}\aO_{n}\aO_{m}\aO_{d}}
+  \notag\\
+%  
+  &\hphantom{=}
+    +(1-\PO_{cd})\left(\nn_{c}\nn_{d} - n_c n_d \right)\delta_{ck}\delta_{dl}\nord{\aaO_{a}\aaO_{b}\aO_{n}\aO_{m}}
+    +(1-\PO_{ab})\left(n_a n_b -\nn_{a} \nn_{b} \right)\delta_{am}\delta_{bn}\nord{\aaO_{k}\aaO_{l}\aO_{d}\aO_{c}}
+  \notag\\
+  &\hphantom{=}
+    +(1-\PO_{ab})(1-\PO_{cd})(1-\PO_{kl})(1-\PO_{mn})\left(n_{b} - n_{d}\right)\delta_{bn}\delta_{dl}
+    \nord{\aaO_{a}\aaO_{k}\aO_{m}\aO_{c}}
+  \notag\\
+%
+  &\hphantom{=}
+   +(1-\PO_{ab})(1-\PO_{mn})\left(n_{b}\nn_{c}\nn_{d} - \nn_{b}n_{c}n_{d}\right)\delta_{bn}\delta_{ck}\delta_{dl}
+   \nord{\aaO_{a}\aO_{m}}
+  \notag\\
+% 
+  &\hphantom{=}
+   -(1-\PO_{cd})(1-\PO_{kl})\left(n_{d}\nn_{a}\nn_{b} - \nn_{d}n_{a}n_{b}\right)\delta_{dl}\delta_{am}\delta_{bn}
+   \nord{\aaO_{k}\aO_{c}}
+  \notag\\
+% 
+% 
+  &\hphantom{=}
+  +(1-\PO_{ab})(1-\PO_{cd})
+    \left(n_{a} n_{b} \nn_{c} \nn_{d} - \nn_{a} \nn_{b} n_{c} n_{d}\right)\delta_{am}\delta_{bn}\delta_{ck}\delta_{dl}
+% 
+\end{align}
+
 
 \bibliographystyle{spphys}
 \bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
 % \bibliography{hh}
-    
+

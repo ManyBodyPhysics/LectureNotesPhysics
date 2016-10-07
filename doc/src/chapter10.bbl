@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -334,8 +334,30 @@ K.P. Hannon, C.~Li, F.A. Evangelista, The Journal of Chemical Physics
 \newblock
   \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/144/20/10.1063/1.4951684}
 
-\bibitem{Glazek:1993il}
-S.D. Glazek, K.G. Wilson, Phys. Rev. D \textbf{48}, 5863 (1993)
+\bibitem{Bach:2010zr}
+V.~Bach, J.B. Bru, Journal of Evolution Equations \textbf{10}, 425 (2010).
+\newblock \doi{10.1007/s00028-010-0055-1}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/s00028-010-0055-1}
+
+\bibitem{Boutin:2016ef}
+B.~Boutin, N.~Raymond, Journal of Evolution Equations pp. 1--22 (2016).
+\newblock \doi{10.1007/s00028-016-0337-3}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/s00028-016-0337-3}
+
+\bibitem{Brockett:1991kx}
+R.~Brockett, Linear Algebra and its Applications \textbf{146}(0), 79  (1991).
+\newblock \doi{http://dx.doi.org/10.1016/0024-3795(91)90021-N}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/002437959190021N}
+
+\bibitem{Chu:1994vn}
+M.T. Chu, Fields Institute Communications \textbf{3} (1994)
+
+\bibitem{Chu:1995ys}
+M.T. Chu, Linear Algebra and its Applications \textbf{215}(0), 261  (1995).
+\newblock \doi{10.1016/0024-3795(93)00091-D}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/002437959300091D}
 
 \bibitem{Morris:2015ve}
 T.D. Morris, N.M. Parzuchowski, S.K. Bogner, Phys. Rev. C \textbf{92}, 034331
@@ -474,5 +496,268 @@ M.~Wang, G.~Audi, A.~Wapstra, F.~Kondev, M.~MacCormick, X.~Xu, B.~Pfeiffer,
 K.~Tsukiyama, S.K. Bogner, A.~Schwenk, Phys. Rev. C \textbf{85}, 061304 (2012).
 \newblock \doi{10.1103/PhysRevC.85.061304}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.061304}
+
+\bibitem{Shepherd:2012hl}
+J.J. Shepherd, G.H. Booth, A.~Alavi, J. Chem. Phys. \textbf{136}(24), 244101
+  (2012).
+\newblock
+  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/136/24/10.1063/1.4720076}
+
+\bibitem{Entem:2003th}
+D.R. Entem, R.~Machleidt, Phys. Rev. C \textbf{68}(4), 041001 (2003).
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.68.041001}
+
+\bibitem{Magnus:1954xy}
+W.~Magnus, Comm. Pure Appl. Math. \textbf{7}(4), 649 (1954).
+\newblock \doi{10.1002/cpa.3160070404}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1002/cpa.3160070404}
+
+\bibitem{Blanes:2009fk}
+S.~Blanes, F.~Casas, J.~Oteo, J.~Ros, Phys. Rept. \textbf{470}(5--6), 151
+  (2009).
+\newblock \doi{http://dx.doi.org/10.1016/j.physrep.2008.11.001}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370157308004092}
+
+\bibitem{Peierls:1973fk}
+R.E. Peierls, Proc. R. Soc. London A \textbf{333}(1593), 157 (1973).
+\newblock
+  \urlprefix\url{http://rspa.royalsocietypublishing.org/content/333/1593/157.abstract
+  N2 - For quantum systems with a symmetry it is often convenient to start from
+  a simple soluble model lacking the symmetry, and restore the symmetry by
+  projection. If this is done for all eigenstates of the model system, one
+  obtains an overcomplete set of basis functions, which is not suitable for
+  standard perturbation theory. The paper develops a method by which one can do
+  perturbation theory in this situation. The method is illustrated by
+  application to the problem of the centre-of-mass motion of a nucleus, the
+  symmetry being the translational and Galileo invariance.}
+
+\bibitem{Ring:1980bb}
+P.~Ring, P.~Schuck, \emph{The Nuclear Many-Body Problem}, 1st edn. (Springer,
+  1980)
+
+\bibitem{Egido:1982sd}
+J.L. Egido, P.~Ring, Nucl. Phys. A \textbf{383}, 189 (1982)
+
+\bibitem{Robledo:1994qf}
+L.M. Robledo, Phys. Rev. C \textbf{50}, 2874 (1994).
+\newblock \doi{10.1103/PhysRevC.50.2874}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.50.2874}
+
+\bibitem{Flocard:1997fx}
+H.~Flocard, N.~Onishi, Ann. Phys. \textbf{254}, 275 (1997)
+
+\bibitem{Sheikh:2000xx}
+J.A. Sheikh, P.~Ring, Nucl. Phys. A \textbf{665}, 71 (2000)
+
+\bibitem{Dobaczewski:2007hh}
+J.~Dobaczewski, M.V. Stoitsov, W.~Nazarewicz, P.G. Reinhard, Phys. Rev. C
+  \textbf{76}, 054315 (2007).
+\newblock \doi{10.1103/PhysRevC.76.054315}
+
+\bibitem{Bender:2009rv}
+M.~Bender, T.~Duguet, D.~Lacroix, Phys. Rev. C \textbf{79}, 044319 (2009).
+\newblock \doi{10.1103/PhysRevC.79.044319}
+
+\bibitem{Duguet:2009ph}
+T.~Duguet, M.~Bender, K.~Bennaceur, D.~Lacroix, T.~Lesinski, Phys. Rev. C
+  \textbf{79}, 044320 (2009).
+\newblock \doi{10.1103/PhysRevC.79.044320}
+
+\bibitem{Lacroix:2009aj}
+D.~Lacroix, T.~Duguet, M.~Bender, Phys. Rev. C \textbf{79}, 044318 (2009)
+
+\bibitem{Lacroix:2012vn}
+D.~Lacroix, D.~Gambacurta, Phys. Rev. C \textbf{86}, 014306 (2012).
+\newblock \doi{10.1103/PhysRevC.86.014306}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.86.014306}
+
+\bibitem{Duguet:2015ye}
+T.~Duguet, J. Phys. G \textbf{42}(2), 025107 (2015).
+\newblock \urlprefix\url{http://stacks.iop.org/0954-3899/42/i=2/a=025107}
+
+\bibitem{Wienholtz:2013bh}
+F.~Wienholtz, D.~Beck, K.~Blaum, C.~Borgmann, M.~Breitenfeldt, R.B. Cakirli,
+  S.~George, F.~Herfurth, J.D. Holt, M.~Kowalska, S.~Kreim, D.~Lunney,
+  V.~Manea, J.~Menendez, D.~Neidherr, M.~Rosenbusch, L.~Schweikhard,
+  A.~Schwenk, J.~Simonis, J.~Stanja, R.N. Wolf, K.~Zuber, Nature
+  \textbf{498}(7454), 346 (2013).
+\newblock \urlprefix\url{http://dx.doi.org/10.1038/nature12226}
+
+\bibitem{Holt:2014vn}
+J.D. Holt, J.~Men\'endez, J.~Simonis, A.~Schwenk, Phys. Rev. C \textbf{90},
+  024312 (2014).
+\newblock \doi{10.1103/PhysRevC.90.024312}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.90.024312}
+
+\bibitem{Brown:2010xr}
+B.A. Brown, Physics \textbf{3}, 104 (2010).
+\newblock \doi{10.1103/Physics.3.104}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/Physics.3.104}
+
+\bibitem{Hergert:2015qd}
+H.~Hergert, Phys. Rev. C  (2015)
+
+\bibitem{Kutzelnigg:1997fk}
+W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{107}(2), 432 (1997).
+\newblock \doi{10.1063/1.474405}.
+\newblock \urlprefix\url{http://link.aip.org/link/?JCP/107/432/1}
+
+\bibitem{Mukherjee:1997yg}
+D.~Mukherjee, Chem. Phys. Lett. \textbf{274}(5--6), 561 (1997).
+\newblock \doi{http://dx.doi.org/10.1016/S0009-2614(97)00714-8}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0009261497007148}
+
+\bibitem{Otsuka:2010cr}
+T.~Otsuka, T.~Suzuki, J.D. Holt, A.~Schwenk, Y.~Akaishi, Phys. Rev. Lett.
+  \textbf{105}, 032501 (2010).
+\newblock \doi{10.1103/PhysRevLett.105.032501}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.105.032501}
+
+\bibitem{Holt:2013fk}
+J.~Holt, J.~Men\'{e}ndez, A.~Schwenk, Eur. Phys. J. A \textbf{49}(3), 1 (2013).
+\newblock \doi{10.1140/epja/i2013-13039-2}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1140/epja/i2013-13039-2}
+
+\bibitem{Hagen:2012oq}
+G.~Hagen, M.~Hjorth-Jensen, G.R. Jansen, R.~Machleidt, T.~Papenbrock, Phys.
+  Rev. Lett. \textbf{108}, 242501 (2012).
+\newblock \doi{10.1103/PhysRevLett.108.242501}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.108.242501}
+
+\bibitem{Hagen:2015ve}
+G.~Hagen, A.~Ekstrom, C.~Forssen, G.R. Jansen, W.~Nazarewicz, T.~Papenbrock,
+  K.A. Wendt, S.~Bacca, N.~Barnea, B.~Carlsson, C.~Drischler, K.~Hebeler,
+  M.~Hjorth-Jensen, M.~Miorelli, G.~Orlandini, A.~Schwenk, J.~Simonis, Nature
+  Physics \textbf{12}, 186 (2015).
+\newblock \urlprefix\url{http://dx.doi.org/10.1038/nphys3529}
+
+\bibitem{Epelbaum:2015fb}
+E.~Epelbaum, H.~Krebs, U.G. Mei{\ss}ner, Eur. Phys. J. A \textbf{51}(5), 1
+  (2015).
+\newblock \doi{10.1140/epja/i2015-15053-8}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1140/epja/i2015-15053-8}
+
+\bibitem{Entem:2015hl}
+D.R. Entem, N.~Kaiser, R.~Machleidt, Y.~Nosyk,   (2015)
+
+\bibitem{Piarulli:2015rm}
+M.~Piarulli, L.~Girlanda, R.~Schiavilla, R.N. P\'erez, J.E. Amaro, E.R.
+  Arriola, Phys. Rev. C \textbf{91}, 024003 (2015).
+\newblock \doi{10.1103/PhysRevC.91.024003}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.91.024003}
+
+\bibitem{Rowe:1968eq}
+D.J. Rowe, Rev. Mod. Phys. \textbf{40}, 153 (1968)
+
+\bibitem{Brown:2001rg}
+B.A. Brown, Prog. Part. Nucl. Phys. \textbf{47}(2), 517 (2001).
+\newblock \doi{http://dx.doi.org/10.1016/S0146-6410(01)00159-4}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0146641001001594}
+
+\bibitem{Caurier:2005qf}
+E.~Caurier, G.~Mart\'{\i}nez-Pinedo, F.~Nowacki, A.~Poves, A.P. Zuker, Rev.
+  Mod. Phys. \textbf{77}, 427 (2005).
+\newblock \doi{10.1103/RevModPhys.77.427}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.77.427}
+
+\bibitem{Otsuka:2013vn}
+T.~Otsuka, Phys. Scripta \textbf{2013}(T152), 014007 (2013).
+\newblock \urlprefix\url{http://stacks.iop.org/1402-4896/2013/i=T152/a=014007}
+
+\bibitem{Holt:2012fk}
+J.D. Holt, T.~Otsuka, A.~Schwenk, T.~Suzuki, J. Phys. G \textbf{39}(8), 085111
+  (2012).
+\newblock \urlprefix\url{http://stacks.iop.org/0954-3899/39/i=8/a=085111}
+
+\bibitem{Holt:2013hc}
+J.D. Holt, J.~Men\'{e}ndez, A.~Schwenk, Phys. Rev. Lett. \textbf{110}, 022502
+  (2013).
+\newblock \doi{10.1103/PhysRevLett.110.022502}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.110.022502}
+
+\bibitem{Holt:2013cr}
+J.D. Holt, J.~Men\'{e}ndez, A.~Schwenk, J. Phys. G \textbf{40}(7), 075105
+  (2013).
+\newblock \urlprefix\url{http://stacks.iop.org/0954-3899/40/i=7/a=075105}
+
+\bibitem{Gallant:2012kx}
+A.T. Gallant, J.C. Bale, T.~Brunner, U.~Chowdhury, S.~Ettenauer, A.~Lennarz,
+  D.~Robertson, V.V. Simon, A.~Chaudhuri, J.D. Holt, A.A. Kwiatkowski,
+  E.~Man\'e, J.~Men\'endez, B.E. Schultz, M.C. Simon, C.~Andreoiu, P.~Delheij,
+  M.R. Pearson, H.~Savajols, A.~Schwenk, J.~Dilling, Phys. Rev. Lett.
+  \textbf{109}, 032506 (2012).
+\newblock \doi{10.1103/PhysRevLett.109.032506}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.109.032506}
+
+\bibitem{Hjorth-Jensen:1995ys}
+M.~Hjorth-Jensen, T.T.S. Kuo, E.~Osnes, Phys. Rept. \textbf{261}(3--4), 125
+  (1995).
+\newblock \doi{http://dx.doi.org/10.1016/0370-1573(95)00012-6}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0370157395000126}
+
+\bibitem{Holt:2005mi}
+J.D. Holt, J.W. Holt, T.T.S. Kuo, G.E. Brown, S.K. Bogner, Phys. Rev. C
+  \textbf{72}, 041304 (2005).
+\newblock \doi{10.1103/PhysRevC.72.041304}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.72.041304}
+
+\bibitem{Lisetskiy:2008fk}
+A.F. Lisetskiy, B.R. Barrett, M.K.G. Kruse, P.~Navr\'{a}til, I.~Stetcu, J.P.
+  Vary, Phys. Rev. C \textbf{78}, 044302 (2008).
+\newblock \doi{10.1103/PhysRevC.78.044302}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.78.044302}
+
+\bibitem{Lisetskiy:2009uq}
+A.F. Lisetskiy, M.K.G. Kruse, B.R. Barrett, P.~Navr\'{a}til, I.~Stetcu, J.P.
+  Vary, Phys. Rev. C \textbf{80}, 024315 (2009).
+\newblock \doi{10.1103/PhysRevC.80.024315}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.80.024315}
+
+\bibitem{Dikmen:2015fk}
+E.~Dikmen, A.F. Lisetskiy, B.R. Barrett, P.~Maris, A.M. Shirokov, J.P. Vary,
+  Phys. Rev. C \textbf{91}, 064301 (2015).
+\newblock \doi{10.1103/PhysRevC.91.064301}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.91.064301}
+
+\bibitem{Bogner:2014tg}
+S.K. Bogner, H.~Hergert, J.D. Holt, A.~Schwenk, S.~Binder, A.~Calci,
+  J.~Langhammer, R.~Roth, Phys. Rev. Lett. \textbf{113}, 142501 (2014).
+\newblock \doi{10.1103/PhysRevLett.113.142501}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.113.142501}
+
+\bibitem{Jansen:2014qf}
+G.R. Jansen, J.~Engel, G.~Hagen, P.~Navratil, A.~Signoracci, Phys. Rev. Lett.
+  \textbf{113}, 142502 (2014).
+\newblock \doi{10.1103/PhysRevLett.113.142502}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.113.142502}
+
+\bibitem{Hebeler:2015xq}
+K.~Hebeler, J.D. Holt, J.~Men{\'e}ndez, A.~Schwenk, Annual Review of Nuclear
+  and Particle Science \textbf{65}(1), 457 (2015).
+\newblock \doi{10.1146/annurev-nucl-102313-025446}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1146/annurev-nucl-102313-025446}
+
+\bibitem{Caceres:2015fk}
+L.~C\'{a}ceres, A.~Lepailleur, O.~Sorlin, M.~Stanoiu, D.~Sohler,
+  Z.~Dombr\'{a}di, S.K. Bogner, B.A. Brown, H.~Hergert, J.D. Holt, A.~Schwenk,
+  F.~Azaiez, B.~Bastin, C.~Borcea, R.~Borcea, C.~Bourgeois, Z.~Elekes,
+  Z.~F\"{u}l\"{o}p, S.~Gr\'{e}vy, L.~Gaudefroy, G.F. Grinyer,
+  D.~Guillemaud-Mueller, F.~Ibrahim, A.~Kerek, A.~Krasznahorkay, M.~Lewitowicz,
+  S.M. Lukyanov, J.~Mr\'{a}zek, F.~Negoita, F.~de~Oliveira, Y.E.
+  Penionzhkevich, Z.~Podoly\'{a}k, M.G. Porquet, F.~Rotaru, P.~Roussel-Chomaz,
+  M.G. Saint-Laurent, H.~Savajols, G.~Sletten, J.C. Thomas, J.~Tim\`{a}r,
+  C.~Timis, Z.~Vajta, Phys. Rev. C \textbf{92}, 014327 (2015).
+\newblock \doi{10.1103/PhysRevC.92.014327}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.014327}
 
 \end{thebibliography}
