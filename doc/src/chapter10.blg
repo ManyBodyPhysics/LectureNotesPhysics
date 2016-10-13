@@ -12,45 +12,45 @@ Warning--can't use both author and editor fields in Valdemoro:1987zl
 Warning--can't use both author and editor fields in Mazziotti:2007qe
 Warning--empty booktitle in Griesshammer:2015dp
 Warning--empty journal in Entem:2015hl
-You've used 135 entries,
+You've used 134 entries,
             2812 wiz_defined-function locations,
-            1661 strings with 38528 characters,
-and the built_in function-call counts, 52514 in all, are:
-= -- 3533
-> -- 1679
+            1655 strings with 38312 characters,
+and the built_in function-call counts, 52179 in all, are:
+= -- 3507
+> -- 1675
 < -- 7
-+ -- 664
-- -- 514
-* -- 3434
-:= -- 6154
-add.period$ -- 213
-call.type$ -- 135
++ -- 662
+- -- 513
+* -- 3413
+:= -- 6114
+add.period$ -- 211
+call.type$ -- 134
 change.case$ -- 6
 chr.to.int$ -- 6
-cite$ -- 142
-duplicate$ -- 5518
-empty$ -- 5111
-format.name$ -- 619
-if$ -- 11796
+cite$ -- 141
+duplicate$ -- 5485
+empty$ -- 5075
+format.name$ -- 618
+if$ -- 11717
 int.to.chr$ -- 0
-int.to.str$ -- 135
-missing$ -- 1445
-newline$ -- 626
-num.names$ -- 135
-pop$ -- 1923
+int.to.str$ -- 134
+missing$ -- 1437
+newline$ -- 621
+num.names$ -- 134
+pop$ -- 1914
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1371
+skip$ -- 1360
 stack$ -- 0
-substring$ -- 1859
-swap$ -- 3578
+substring$ -- 1840
+swap$ -- 3559
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 260
-width$ -- 138
-write$ -- 1500
+while$ -- 258
+width$ -- 137
+write$ -- 1488
 (There were 9 warnings)
