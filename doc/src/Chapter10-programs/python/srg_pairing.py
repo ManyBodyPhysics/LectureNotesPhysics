@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #------------------------------------------------------------------------------
-# pairing.py
+# srg_pairing.py
 #
 # author:   H. Hergert 
 # version:  1.0.1
