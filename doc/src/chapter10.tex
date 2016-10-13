@@ -638,43 +638,82 @@ relation $\sum_{k=0}^{\infty}\vert k \rangle \langle k \vert = 1$.  As
 demonstrated below via various numerical examples, when we let $s$
 evolve to infinity, the Hamiltonian matrix becomes more and more
 diagonal. The code to solve the coupled ODEs is at
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_pairing.py}: 
 \begin{lstlisting}
-! The derative of V as function of a given value of s
-! n_total stands for the number of basis function k and v is the potential term
-! The terms onebodyenergy  represent the eigenenergies of the non-interacting Hamiltonian H_0
-SUBROUTINE derivative(v, dv)
-  IMPLICIT NONE
-  INTEGER ::  ij, i, j, k
-  REAL(8) :: sum, v(:), dv(:), k1, k2, p
-  REAL(8), ALLOCATABLE :: vij(:,:)
+import numpy as np
+from numpy import array, dot, diag, reshape
+from scipy.linalg import eigvalsh
+from scipy.integrate import odeint
 
-  ALLOCATE(vij(n_total,n_total)) 
-  ij = 0
-  DO j = 1, n_total
-     DO i = j, n_total
-        ij = ij + 1
-        vij(i,j) = v(ij)
-        vij(j,i) = v(ij)
-     ENDDO
-  ENDDO
-  ij = 0
-  DO i = 1, n_total
-     k1 = onebodyenergy(i) 
-     DO j = i, n_total
-        k2 = onebodyenergy(j) 
-        ij = ij + 1
-        sum = 0_dp
-        DO k = 1, n_total
-           p = onebodyenergy(k) 
-           sum = sum +  (k1+k2-2.0*p)*vij(j,k)*vij(k,i) 
-        ENDDO
-        dv(ij) =  sum - (k2-k1)*(k2-k1)*vij(j,i)
-     ENDDO
-  ENDDO
-  DEALLOCATE(vij)
+# Hamiltonian for the pairing model
+def Hamiltonian(delta,g):
 
-END SUBROUTINE derivative
+  H = array(
+      [[2*delta-g,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g,          0.],
+       [   -0.5*g, 4*delta-g,     -0.5*g,     -0.5*g,        0.,     -0.5*g ], 
+       [   -0.5*g,    -0.5*g,  6*delta-g,         0.,    -0.5*g,     -0.5*g ], 
+       [   -0.5*g,    -0.5*g,         0.,  6*delta-g,    -0.5*g,     -0.5*g ], 
+       [   -0.5*g,        0.,     -0.5*g,     -0.5*g, 8*delta-g,     -0.5*g ], 
+       [       0.,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g, 10*delta-g ]]
+    )
+
+  return H
+
+# commutator of matrices
+def commutator(a,b):
+  return dot(a,b) - dot(b,a)
+
+# derivative / right-hand side of the flow equation
+def derivative(y, t, dim):
+
+  # reshape the solution vector into a dim x dim matrix
+  H = reshape(y, (dim, dim))
+
+  # extract diagonal Hamiltonian...
+  Hd  = diag(diag(H))
+
+  # ... and construct off-diagonal the Hamiltonian
+  Hod = H-Hd
+
+  # calculate the generator
+  eta = commutator(Hd, Hod)
+
+  # dH is the derivative in matrix form 
+  dH  = commutator(eta, H)
+
+  # convert dH into a linear array for the ODE solver
+  dydt = reshape(dH, -1)
+    
+  return dydt
+
+
+
+#------------------------------------------------------------------------------
+# Main program
+#------------------------------------------------------------------------------
+
+g     = 0.5
+delta = 1
+
+H0    = Hamiltonian(delta, g)
+dim   = H0.shape[0]
+
+# calculate exact eigenvalues
+eigenvalues = eigvalsh(H0)
+
+# turn initial Hamiltonian into a linear array
+y0  = reshape(H0, -1)                 
+
+# flow parameters for snapshot images
+flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
+
+# integrate flow equations - odeint returns an array of solutions,
+# which are 1d arrays themselves
+ys  = odeint(derivative, y0, flowparams, args=(dim,))
+
+# reshape individual solution vectors into dim x dim Hamiltonian
+# matrices
+Hs  = reshape(ys, (-1, dim,dim))
 \end{lstlisting}
 
 If we wish to solve the above equations for a nuclear interaction in a
@@ -699,34 +738,9 @@ the parameter $\lambda \equiv s^{-1/4}$. This parameter  provides a measure of t
 spread of the off-diagonal strength when $s$ or $\lambda$ are evolved. The replacement of $s$ by $\lambda$ introduces a multiplicative factor 
 of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
 
-Returning to our pairing problem, in order to run the Fortran program {\em pairing.f90}, which is easily compiled with any available Fortran compiler, the reader needs to specify the relevant input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well
-\begin{svgraybox}
-\begin{lstlisting}
-# Parameters for the simple pairing model code
-# It reads the variable names and corresponding values as 
-# variable = something
-# You can have as many blank lines as you want.   
-# to the left is btw the comment sign. But do not change the leftmost
-# text string, which is needed by the code to identify which variable
-# is used. 
+\tbd{[...]}
 
-# Dimensionless units are used throughout
-# output_run is prefixed to output file for optional printouts, tests etc.
-output_run = run_test.dat
-
-# Give the size of the matrix
-dimension_matrix = 6
-
-
-# The values of delta, g, lambda and starting point
-value_delta = 1.0
-value_g = 0.5
-value_lambda = 1.0
-value_startpoint = 40.0
-\end{lstlisting}
-\end{svgraybox}
-The program employs $\lambda$ as flow parameter instead of $s$. This means that the starting point for solving the differential equations
-should be as large as possible. The smaller the value of $\lambda$, the closer to zero are the non-diagonal matrix elements. 
+The smaller the value of $\lambda$, the closer to zero are the non-diagonal matrix elements. 
 In the examples here we have chosen 
 $g=-0.5$ and the single-particle energy strength $\delta=1$. The resulting exact eigenavalues by diagonalizing the above $6\times 6$ matrix (to six leading digits) are
 $1.42705,   3.48610,  11.5572,   9.53081, 7.47926,   5.51955$.
@@ -1831,7 +1845,100 @@ in any expression,
 
 
 \section*{Appendix: SRG Evolution in Fortran}
+The code to solve the coupled ODEs is at
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/f95} and here we show the function which sets up the derivative of Eq.~(\ref{eq:diffeq}). 
+\begin{lstlisting}
+! The derative of V as function of a given value of s
+! n_total stands for the number of basis function k and v is the potential term
+! The terms onebodyenergy  represent the eigenenergies of the non-interacting Hamiltonian H_0
+SUBROUTINE derivative(v, dv)
+  IMPLICIT NONE
+  INTEGER ::  ij, i, j, k
+  REAL(8) :: sum, v(:), dv(:), k1, k2, p
+  REAL(8), ALLOCATABLE :: vij(:,:)
 
+  ALLOCATE(vij(n_total,n_total)) 
+  ij = 0
+  DO j = 1, n_total
+     DO i = j, n_total
+        ij = ij + 1
+        vij(i,j) = v(ij)
+        vij(j,i) = v(ij)
+     ENDDO
+  ENDDO
+  ij = 0
+  DO i = 1, n_total
+     k1 = onebodyenergy(i) 
+     DO j = i, n_total
+        k2 = onebodyenergy(j) 
+        ij = ij + 1
+        sum = 0_dp
+        DO k = 1, n_total
+           p = onebodyenergy(k) 
+           sum = sum +  (k1+k2-2.0*p)*vij(j,k)*vij(k,i) 
+        ENDDO
+        dv(ij) =  sum - (k2-k1)*(k2-k1)*vij(j,i)
+     ENDDO
+  ENDDO
+  DEALLOCATE(vij)
+
+END SUBROUTINE derivative
+\end{lstlisting}
+
+\tbd{[Change as needed.]
+
+If we wish to solve the above equations for a nuclear interaction in a
+partial wave basis using relative coordinates for the momenta $k$, the explicit equations
+become \cite{Bogner:2007od} (with normalization
+so that $1 = \frac{2}{\pi}\int_0^\infty|q\rangle q^2\,dq \langle q |$
+and in units where $\hbar^2/M = 1$),
+%
+\begin{equation}
+  \frac{d(\langle k \vert \hat{V}(s) \vert k'\rangle)}{ds} =- (k^2 - k'{}^2)^2\langle k \vert \hat{V}(s) \vert k'\rangle
+    + \frac{2}{\pi}\int_0^{\infty}q^2dq
+      (k^2 + k'{}^2 - 2q^2)\langle k \vert \hat{V}(s) \vert q\rangle\langle q \vert \hat{V}(s) \vert k'\rangle).
+\end{equation}
+By discretizing the relative momentum space on a grid of Gaussian integration points, 
+we obtain a simple (but nonlinear) system of first-order
+coupled differential equations,
+with the boundary condition that $\langle k \vert \hat{V}(s) \vert k'\rangle$ at the initial
+value of $s$ is equal to the initial potential.
+
+Instead of the parameter $s$ which is being evolved to $\infty$, we could define 
+the parameter $\lambda \equiv s^{-1/4}$. This parameter  provides a measure of the
+spread of the off-diagonal strength when $s$ or $\lambda$ are evolved. The replacement of $s$ by $\lambda$ introduces a multiplicative factor 
+of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
+
+Returning to our pairing problem, in order to run the Fortran program {\em pairing.f90}, which is easily compiled with any available Fortran compiler, the reader needs to specify the relevant input parameters to the pairing model in the file {\em pairing.ini}, displayed here as well.
+
+}
+\begin{svgraybox}
+\begin{lstlisting}
+# Parameters for the simple pairing model code
+# It reads the variable names and corresponding values as 
+# variable = something
+# You can have as many blank lines as you want.   
+# to the left is btw the comment sign. But do not change the leftmost
+# text string, which is needed by the code to identify which variable
+# is used. 
+
+# Dimensionless units are used throughout
+# output_run is prefixed to output file for optional printouts, tests etc.
+output_run = run_test.dat
+
+# Give the size of the matrix
+dimension_matrix = 6
+
+
+# The values of delta, g, lambda and starting point
+value_delta = 1.0
+value_g = 0.5
+value_lambda = 1.0
+value_startpoint = 40.0
+\end{lstlisting}
+\end{svgraybox}
+The program employs $\lambda$ as flow parameter instead of $s$. This means that the starting point for solving the differential equations
+should be as large as possible. The smaller the value of $\lambda$, the closer to zero are the non-diagonal matrix elements. 
 \bibliographystyle{spphys}
 \bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
 % \bibliography{hh}
