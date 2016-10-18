@@ -4,8 +4,8 @@
 # imsrg_pairing.py
 #
 # author:   H. Hergert 
-# version:  1.0.1
-# date:     Oct 12, 2016
+# version:  1.2
+# date:     Oct 18, 2016
 # 
 # tested with Python v2.7
 # 
@@ -208,7 +208,7 @@ def inverse_ph_transform_2B(Gamma_ph, bas2B, idx2B, basph2B, idxph2B):
 # generators
 #-----------------------------------------------------------------------------------
 def eta_brillouin(f, Gamma, user_data):
-  dim1B     = user_data["dim"]
+  dim1B     = user_data["dim1B"]
   particles = user_data["particles"]
   holes     = user_data["holes"]
   idx2B     = user_data["idx2B"]
@@ -238,7 +238,7 @@ def eta_brillouin(f, Gamma, user_data):
 
 
 def eta_white(f, Gamma, user_data):
-  dim1B     = user_data["dim"]
+  dim1B     = user_data["dim1B"]
   particles = user_data["particles"]
   holes     = user_data["holes"]
   idx2B     = user_data["idx2B"]
@@ -261,7 +261,7 @@ def eta_white(f, Gamma, user_data):
       for k in holes:
         for l in holes:
           denom = ( 
-            f[i,i] + f[j,j] - f[k,k] - f[l,l] 
+            f[i,i] + f[j,j] - f[k,k] - f[l,l]  
             + Gamma[idx2B[(i,j)],idx2B[(i,j)]] 
             + Gamma[idx2B[(k,l)],idx2B[(k,l)]]
             - Gamma[idx2B[(i,k)],idx2B[(i,k)]] 
@@ -279,7 +279,7 @@ def eta_white(f, Gamma, user_data):
 
 
 def eta_white_atan(f, Gamma, user_data):
-  dim1B     = user_data["dim"]
+  dim1B     = user_data["dim1B"]
   particles = user_data["particles"]
   holes     = user_data["holes"]
   idx2B     = user_data["idx2B"]
@@ -318,116 +318,23 @@ def eta_white_atan(f, Gamma, user_data):
 
   return eta1B, eta2B
 
-# def eta1B_brillouin(f, Gamma, idx2B, occ1B, occB_2B, occC_2B, holes, particles):
-#   dim = f.shape[0]
-#   eta1B  = np.zeros_like(f)
-
-#   for i in particles:
-#     for j in holes:
-#       # (1-n_i)n_j - n_i(1-n_j) = n_j - n_i
-#       eta1B[i, j] =  f[i,j]
-#       eta1B[j, i] = -f[i,j]
-
-#   return eta1B
-
-# def eta2B_brillouin(f, Gamma, bas2B, idx2B, holes, particles):
-#   # dim = Gamma.shape[0]
-#   eta2B = np.zeros_like(Gamma)
-
-#   for i in particles:
-#     for j in particles:
-#       for k in holes:
-#         for l in holes:
-#           val = Gamma[idx2B[(i,j)], idx2B[(k,l)]]
-
-#           eta2B[idx2B[(i,j)],idx2B[(k,l)]] = val
-#           eta2B[idx2B[(k,l)],idx2B[(i,j)]] = -val
-
-#   return eta2B
-
-
-# def eta1B_white_atan(f, Gamma, idx2B, occ1B, occB_2B, occC_2B, holes, particles):
-#   dim = f.shape[0]
-#   eta1B  = np.zeros_like(f)
-
-#   for i in particles:
-#     for j in holes:
-#       denom = f[i,i] - f[j,j] + Gamma[idx2B[(i,j)], idx2B[(i,j)]]
-#       val = 0.5 * np.arctan(2 * f[i,j]/denom)
-#       eta1B[i, j] =  val
-#       eta1B[j, i] = -val 
-
-#   return eta1B
-
-# def eta2B_white_atan(f, Gamma, bas2B, idx2B, holes, particles):
-#   # dim = Gamma.shape[0]
-#   eta2B = np.zeros_like(Gamma)
-
-#   for i in particles:
-#     for j in particles:
-#       for k in holes:
-#         for l in holes:
-#           denom = ( 
-#             f[i,i] + f[j,j] - f[k,k] - f[l,l] 
-#             + Gamma[idx2B[(i,j)],idx2B[(i,j)]] 
-#             + Gamma[idx2B[(k,l)],idx2B[(k,l)]] 
-#             - Gamma[idx2B[(i,k)],idx2B[(i,k)]] 
-#             - Gamma[idx2B[(i,l)],idx2B[(i,l)]] 
-#             - Gamma[idx2B[(j,k)],idx2B[(j,k)]] 
-#             - Gamma[idx2B[(j,l)],idx2B[(j,l)]] 
-#           )
-
-#           val = 0.5 * np.arctan(2 * Gamma[idx2B[(i,j)], idx2B[(k,l)]] / denom)
-
-#           eta2B[idx2B[(i,j)],idx2B[(k,l)]] = val
-#           eta2B[idx2B[(k,l)],idx2B[(i,j)]] = -val
-
-#   return eta2B
-
-
-# def eta1B_white(f, Gamma, idx2B, occ1B, occB_2B, occC_2B, holes, particles):
-#   dim = f.shape[0]
-#   eta1B  = np.zeros_like(f)
-
-
-#   for i in particles:
-#     for j in holes:
-#       denom = f[i,i] - f[j,j] + Gamma[idx2B[(i,j)], idx2B[(i,j)]]
-#       val = f[i,j]/denom
-#       eta1B[i, j] =  val
-#       eta1B[j, i] = -val 
-
-#   return eta1B
-
-# def eta2B_white(f, Gamma, bas2B, idx2B, holes, particles):
-#   # dim = Gamma.shape[0]
-#   eta2B = np.zeros_like(Gamma)
-
-#   for i in particles:
-#     for j in particles:
-#       for k in holes:
-#         for l in holes:
-#           denom = ( 
-#             f[i,i] + f[j,j] - f[k,k] - f[l,l] 
-#             + Gamma[idx2B[(i,j)],idx2B[(i,j)]] 
-#             + Gamma[idx2B[(k,l)],idx2B[(k,l)]]
-#             - Gamma[idx2B[(i,k)],idx2B[(i,k)]] 
-#             - Gamma[idx2B[(i,l)],idx2B[(i,l)]] 
-#             - Gamma[idx2B[(j,k)],idx2B[(j,k)]] 
-#             - Gamma[idx2B[(j,l)],idx2B[(j,l)]] 
-#           )
-
-#           val = Gamma[idx2B[(i,j)], idx2B[(k,l)]] / denom
-
-#           eta2B[idx2B[(i,j)],idx2B[(k,l)]] = val
-#           eta2B[idx2B[(k,l)],idx2B[(i,j)]] = -val
-
-#   return eta2B
 
 #-----------------------------------------------------------------------------------
 # derivatives 
 #-----------------------------------------------------------------------------------
-def imsrg2_dE(eta1B, eta2B, f, Gamma, idx2B, holes, particles):
+def flow_imsrg2(eta1B, eta2B, f, Gamma, user_data):
+
+  dim1B     = user_data["dim1B"]
+  holes     = user_data["holes"]
+  particles = user_data["particles"]
+  bas2B     = user_data["bas2B"]
+  idx2B     = user_data["idx2B"]
+  occB_2B   = user_data["occB_2B"]
+  occC_2B   = user_data["occC_2B"]
+  occphA_2B = user_data["occphA_2B"]
+
+  #############################        
+  # zero-body flow equation
   dE = 0.0
 
   for a in holes:
@@ -440,18 +347,17 @@ def imsrg2_dE(eta1B, eta2B, f, Gamma, idx2B, holes, particles):
         for d in particles:
           dE += 0.5 * eta2B[idx2B[(a,b)], idx2B[(c,d)]] * Gamma[idx2B[(c,d)], idx2B[(a,b)]]
 
-  return dE
 
-def imsrg2_df(eta1B, eta2B, f, Gamma, idx2B, occB_2B, occC_2B, holes, particles):
-  dim = f.shape[0]
+  #############################        
+  # one-body flow equation  
   df  = np.zeros_like(f)
 
   # 1B - 1B
   df += commutator(eta1B, f)
 
   # 1B - 2B
-  for i in range(dim):
-    for j in range(dim):
+  for i in range(dim1B):
+    for j in range(dim1B):
       for a in holes:
         for b in particles:
           df[i,j] += (
@@ -464,8 +370,8 @@ def imsrg2_df(eta1B, eta2B, f, Gamma, idx2B, occB_2B, occC_2B, holes, particles)
   # 2B - 2B
   # n_a n_b nn_c + nn_a nn_b n_c = n_a n_b + (1 - n_a - n_b) * n_c
   etaGamma = dot(eta2B, dot(occB_2B, Gamma))
-  for i in range(dim):
-    for j in range(dim):
+  for i in range(dim1B):
+    for j in range(dim1B):
       for c in holes:
         df[i,j] += (
           0.5*etaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
@@ -473,28 +379,25 @@ def imsrg2_df(eta1B, eta2B, f, Gamma, idx2B, occB_2B, occC_2B, holes, particles)
         )
 
   etaGamma = dot(eta2B, dot(occC_2B, Gamma))
-  for i in range(dim):
-    for j in range(dim):
-      for c in range(dim):
+  for i in range(dim1B):
+    for j in range(dim1B):
+      for c in range(dim1B):
         df[i,j] += (
           0.5*etaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
           + transpose(etaGamma)[idx2B[(c,i)], idx2B[(c,j)]] 
         )
-  
-  return df
 
 
-
-def imsrg2_dGamma(eta1B, eta2B, f, Gamma, bas2B, idx2B, basph2B, idxph2B, occB_2B, occphA_2B, occ1B):
-  dim    = f.shape[0]
+  #############################        
+  # two-body flow equation  
   dGamma = np.zeros_like(Gamma)
 
   # 1B - 2B
-  for i in range(dim):
-    for j in range(dim):
-      for k in range(dim):
-        for l in range(dim):
-          for a in range(dim):
+  for i in range(dim1B):
+    for j in range(dim1B):
+      for k in range(dim1B):
+        for l in range(dim1B):
+          for a in range(dim1B):
             dGamma[idx2B[(i,j)],idx2B[(k,l)]] += (
               eta1B[i,a] * Gamma[idx2B[(a,j)],idx2B[(k,l)]] 
               + eta1B[j,a] * Gamma[idx2B[(i,a)],idx2B[(k,l)]] 
@@ -525,70 +428,7 @@ def imsrg2_dGamma(eta1B, eta2B, f, Gamma, bas2B, idx2B, basph2B, idxph2B, occB_2
   # transform back to standard representation
   etaGamma    = inverse_ph_transform_2B(etaGamma_ph, bas2B, idx2B, basph2B, idxph2B)
 
-
-  # etaGamma2 = np.zeros_like(dGamma)
-  # for i1, (i, j) in enumerate(bas2B):
-  #   for i2, (k, l) in enumerate(bas2B):
-  #     # term1 = 0.
-  #     # term2 = 0.
-  #     # term3 = 0.
-  #     # term4 = 0.
-  #     for a in range(dim):
-  #       for b in range(dim):
-  #         # etaGamma2[i1,i2] += occA_2B[idx2B[(a,b)],idx2B[(a,b)]] * (
-  #         # eta2B[idx2B[(i,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # -  Gamma[idx2B[(i,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # -  eta2B[idx2B[(j,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,i)], idx2B[(a,l)]]
-  #         # +  Gamma[idx2B[(j,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,i)], idx2B[(a,l)]])
-  #         # term1 += (occ1B[a] - occ1B[b]) * eta2B[idx2B[(i,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # term2 -= (occ1B[a] - occ1B[b]) * Gamma[idx2B[(i,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # term3 -= (occ1B[a] - occ1B[b]) * eta2B[idx2B[(j,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,i)], idx2B[(a,l)]]
-  #         # term4 += (occ1B[a] - occ1B[b]) * Gamma[idx2B[(j,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,i)], idx2B[(a,l)]]
-
-  #         etaGamma2[i1,i2] += (occ1B[a] - occ1B[b]) * (
-  #         eta2B[idx2B[(i,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,j)], idx2B[(a,l)]]
-  #         -  Gamma[idx2B[(i,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,j)], idx2B[(a,l)]]
-  #         -  eta2B[idx2B[(j,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,i)], idx2B[(a,l)]]
-  #         +  Gamma[idx2B[(j,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,i)], idx2B[(a,l)]])
-
-  #         # print i1, i2, (i,j), (k,l), a, b, etaGamma2[i1,i2]
-  #         # etaGamma2[i1,i2] += (
-  #         # eta2B[idx2B[(i,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # -  Gamma[idx2B[(i,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # -  eta2B[idx2B[(j,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,i)], idx2B[(a,l)]]
-  #         # +  Gamma[idx2B[(j,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,i)], idx2B[(a,l)]])
-  
-  # etaGamma3_ph = np.zeros_like(dGamma)
-  # for i1, (i, j) in enumerate(basph2B):
-  #   for i2, (k, l) in enumerate(basph2B):
-  #     for a in range(dim):
-  #       for b in range(dim):
-  #         # etaGamma3_ph[i1,i2] += (occ1B[a] - occ1B[b]) * (
-  #         # eta2B_ph[idxph2B[(i,j)], idxph2B[(a,b)]] * Gamma_ph[idxph2B[(a,b)], idxph2B[(k,l)]]
-  #         # -  Gamma_ph[idxph2B[(i,j)], idxph2B[(a,b)]] * eta2B_ph[idxph2B[(a,b)], idxph2B[(k,l)]]
-  #         # -  eta2B_ph[idxph2B[(l,j)], idxph2B[(a,b)]] * Gamma_ph[idxph2B[(a,b)], idxph2B[(k,i)]]
-  #         # +  Gamma_ph[idxph2B[(l,j)], idxph2B[(a,b)]] * eta2B_ph[idxph2B[(a,b)], idxph2B[(k,i)]])
-  #         etaGamma3_ph[i1,i2] += (occ1B[a] - occ1B[b]) * (
-  #         eta2B_ph[idxph2B[(i,j)], idxph2B[(a,b)]] * Gamma_ph[idxph2B[(a,b)], idxph2B[(k,l)]]
-  #         -  Gamma_ph[idxph2B[(i,j)], idxph2B[(a,b)]] * eta2B_ph[idxph2B[(a,b)], idxph2B[(k,l)]])
-
-  #         # print i1, i2, (i,j), (k,l), a, b, etaGamma3_ph[i1,i2]
-
-  #         # etaGamma2[i1,i2] += (
-  #         # eta2B[idx2B[(i,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # -  Gamma[idx2B[(i,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,j)], idx2B[(a,l)]]
-  #         # -  eta2B[idx2B[(j,a)], idx2B[(k,b)]] * Gamma[idx2B[(b,i)], idx2B[(a,l)]]
-  #         # +  Gamma[idx2B[(j,a)], idx2B[(k,b)]] * eta2B[idx2B[(b,i)], idx2B[(a,l)]])
-
-  # etaGamma3 = inverse_ph_transform_2B(etaGamma3_ph, bas2B, idx2B, basph2B, idxph2B)
-  # print np.linalg.norm(etaGamma3-transpose(etaGamma3),ord='fro')
-  # work = np.zeros_like(etaGamma)
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     work[i1, i2] -= 0.5*(etaGamma3[i1, i2] - etaGamma3[idx2B[(j,i)], i2] 
-  #     - etaGamma3[i1, idx2B[(l,k)]] - etaGamma3[idx2B[(j,i)], idx2B[(l,k)]])
-  # etaGamma3 = work  
-
+  # commutator / antisymmetrization
   work = np.zeros_like(etaGamma)
   for i1, (i,j) in enumerate(bas2B):
     for i2, (k,l) in enumerate(bas2B):
@@ -598,74 +438,12 @@ def imsrg2_dGamma(eta1B, eta2B, f, Gamma, bas2B, idx2B, basph2B, idxph2B, occB_2
         - etaGamma[i1, idx2B[(l,k)]] 
         + etaGamma[idx2B[(j,i)], idx2B[(l,k)]]
       )
-      # print "%10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f"%(
-      # etaGamma[i1, i2], etaGamma[idx2B[(j,i)], i2], etaGamma[i1, idx2B[(l,k)]], etaGamma[idx2B[(j,i)], idx2B[(l,k)]], 
-      # work[i1, i2], work[idx2B[(j,i)], i2], work[i1, idx2B[(l,k)]], work[idx2B[(j,i)], idx2B[(l,k)]],
-      # etaGamma2[i1, i2], etaGamma2[idx2B[(j,i)], i2], etaGamma2[i1, idx2B[(l,k)]], etaGamma2[idx2B[(j,i)], idx2B[(l,k)]]
-      # )
   etaGamma = work
 
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     if etaGamma[i1,i2] != 0.0 or etaGamma2[i1,i2] != 0.0 or etaGamma3[i1,i2] != 0.0:
-  #       print i1, i2, (i,j), (k,l)
-  #       print "%10.8f %10.8f %10.8f %10.8f | %10.8f %10.8f %10.8f %10.8f | %10.8f %10.8f %10.8f %10.8f"%(
-  #       etaGamma[i1, i2], etaGamma[idx2B[(j,i)], i2], etaGamma[i1, idx2B[(l,k)]], etaGamma[idx2B[(j,i)], idx2B[(l,k)]],
-  #       etaGamma2[i1, i2], etaGamma2[idx2B[(j,i)], i2], etaGamma2[i1, idx2B[(l,k)]], etaGamma2[idx2B[(j,i)], idx2B[(l,k)]],
-  #       etaGamma3[i1, i2], etaGamma3[idx2B[(j,i)], i2], etaGamma3[i1, idx2B[(l,k)]], etaGamma3[idx2B[(j,i)], idx2B[(l,k)]]
-  #       )
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     if etaGamma[i1,i2] != etaGamma2[i1,i2]:
-  #       print i1, i2, (i,j), (k,l)
-  #       print "%10.8f %10.8f %10.8f %10.8f | %10.8f %10.8f %10.8f %10.8f"%(
-  #       etaGamma[i1, i2], etaGamma[idx2B[(j,i)], i2], etaGamma[i1, idx2B[(l,k)]], etaGamma[idx2B[(j,i)], idx2B[(l,k)]],
-  #       etaGamma2[i1, i2], etaGamma2[idx2B[(j,i)], i2], etaGamma2[i1, idx2B[(l,k)]], etaGamma2[idx2B[(j,i)], idx2B[(l,k)]]
-  #       )
-
-  # print np.linalg.norm(etaGamma, ord='fro')
-  # print np.linalg.norm(etaGamma2, ord='fro')
-  # print np.linalg.norm(etaGamma3, ord='fro')
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     if etaGamma[i1,i2] != etaGamma2[i1,i2] or etaGamma2[i1,i2] != etaGamma3[i1,i2] or etaGamma[i1,i2] != etaGamma3[i1,i2] :
-  #       print i1, i2, (i,j), (k,l), 
-  #       print "%10.8f %10.8f %10.8f "%(
-  #       etaGamma[i1,i2], etaGamma2[i1,i2], etaGamma3[i1,i2]      
-  #       )
-
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     if work[i1,i2]  != etaGamma2[i1,i2]:
-  #       print i1, i2, (i,j), (k,l), work[i1,i2], etaGamma2[i1,i2]
-  #       print "%10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f %10.8f"%(      
-  #       work[i1, i2], work[idx2B[(j,i)], i2], work[i1, idx2B[(l,k)]], work[idx2B[(j,i)], idx2B[(l,k)]],
-  #       etaGamma2[i1, i2], etaGamma2[idx2B[(j,i)], i2], etaGamma2[i1, idx2B[(l,k)]], etaGamma2[idx2B[(j,i)], idx2B[(l,k)]]
-  #       )
-
-  # print np.linalg.norm(work - transpose(work), ord='fro')
-  # print np.linalg.norm(etaGamma2 - transpose(etaGamma2), ord='fro')
-
-  # antisymmetrize indices and add to derivative
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     # dGamma[i1, i2] += etaGamma2[i1, i2]
-  #     dGamma[i1, i2] += etaGamma[i1, i2]
+  dGamma += etaGamma
 
 
-
-  # add to derivative
-  # dGamma += etaGamma
-
-  # for i1, (i,j) in enumerate(bas2B):
-  #   for i2, (k,l) in enumerate(bas2B):
-  #     if dGamma[i1,i2] != 0.0:
-  #       print i1, i2, (i,j), (k,l)
-  #       print "%10.8f %10.8f %10.8f %10.8f"%(      
-  #       dGamma[i1, i2], dGamma[idx2B[(j,i)], i2], dGamma[i1, idx2B[(l,k)]], dGamma[idx2B[(j,i)], idx2B[(l,k)]]
-  #       )
-
-  return dGamma
+  return dE, df, dGamma
 
 
 #-----------------------------------------------------------------------------------
@@ -687,8 +465,8 @@ def get_operator_from_y(y, dim1B, dim2B):
 
 
 def derivative_wrapper(y, t, user_data):
-  dim1B = user_data["dim"]
-  dim2B = dim*dim
+  dim1B = user_data["dim1B"]
+  dim2B = dim1B*dim1B
 
 
   holes     = user_data["holes"]
@@ -703,9 +481,10 @@ def derivative_wrapper(y, t, user_data):
   occC_2B   = user_data["occC_2B"]
   occphA_2B = user_data["occphA_2B"]
   calc_eta  = user_data["calc_eta"]
+  calc_rhs  = user_data["calc_rhs"]
 
   # extract operator pieces from solution vector
-  E, f, Gamma = get_operator_from_y(y, dim, dim2B)
+  E, f, Gamma = get_operator_from_y(y, dim1B, dim2B)
 
 
   # calculate the generator
@@ -716,10 +495,10 @@ def derivative_wrapper(y, t, user_data):
   eta1B, eta2B = calc_eta(f, Gamma, user_data)
 
   # calculate the right-hand side
-  dE     = imsrg2_dE(eta1B, eta2B, f, Gamma, idx2B, holes, particles)
-  df     = imsrg2_df(eta1B, eta2B, f, Gamma, idx2B, occB_2B, occC_2B, holes, particles)
-  dGamma = imsrg2_dGamma(eta1B, eta2B, f, Gamma, bas2B, idx2B, basph2B, idxph2B, occB_2B, occphA_2B, occ1B)
-
+  # dE     = imsrg2_dE(eta1B, eta2B, f, Gamma, idx2B, holes, particles)
+  # df     = imsrg2_df(eta1B, eta2B, f, Gamma, idx2B, occB_2B, occC_2B, holes, particles)
+  # dGamma = imsrg2_dGamma(eta1B, eta2B, f, Gamma, bas2B, idx2B, basph2B, idxph2B, occB_2B, occphA_2B, occ1B)
+  dE, df, dGamma = calc_rhs(eta1B, eta2B, f, Gamma, user_data)
 
   # convert derivatives into linear array
   dydt   = np.append([dE], np.append(reshape(df, -1), reshape(dGamma, -1)))
@@ -791,12 +570,12 @@ delta      = 1
 particles  = 4
 
 # setup shared data
-dim        = 8
+dim1B     = 8
 
 holes     = range(particles)
-particles = range(particles,dim)
+particles = range(particles,dim1B)
 
-bas1B     = range(dim)
+bas1B     = range(dim1B)
 bas2B     = construct_basis_2B(holes, particles)
 bas3B     = construct_basis_3B(holes, particles)
 basph2B   = construct_basis_ph2B(holes, particles)
@@ -811,8 +590,10 @@ occC_2B   = construct_occupationC_2B(bas2B, occ1B)
 
 occphA_2B = construct_occupationA_2B(basph2B, occ1B)
 
+# store shared data in a dictionary, so we can avoid passing the basis
+# lookups etc. as separate parameters all the time
 user_data  = {
-  "dim":        dim, 
+  "dim1B":      dim1B, 
   "holes":      holes,
   "particles":  particles,
   "bas1B":      bas1B,
@@ -825,7 +606,8 @@ user_data  = {
   "occB_2B":    occB_2B,
   "occC_2B":    occC_2B,
   "occphA_2B":  occphA_2B,
-  "calc_eta":   eta_white_atan
+  "calc_eta":   eta_brillouin,      # specify the generator (function object)
+  "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
 }
 
 # set up initial Hamiltonian
@@ -838,6 +620,6 @@ Gamma = Gamma0(delta, g, bas2B, idx2B)
 y0   = np.append([E], np.append(reshape(f, -1), reshape(Gamma, -1)))
 
 # integrate flow equations 
-ys  = odeint(derivative_wrapper, y0, [0, 7], args=(user_data,))
+ys  = odeint(derivative_wrapper, y0, [0, 1], args=(user_data,))
 
 
