@@ -4,7 +4,7 @@
 # imsrg_pairing.py
 #
 # author:   H. Hergert 
-# version:  1.2
+# version:  1.3
 # date:     Oct 18, 2016
 # 
 # tested with Python v2.7
@@ -319,6 +319,137 @@ def eta_white_atan(f, Gamma, user_data):
   return eta1B, eta2B
 
 
+def eta_wegner(f, Gamma, user_data):
+
+  dim1B     = user_data["dim1B"]
+  holes     = user_data["holes"]
+  particles = user_data["particles"]
+  bas2B     = user_data["bas2B"]
+  idx2B     = user_data["idx2B"]
+  occB_2B   = user_data["occB_2B"]
+  occC_2B   = user_data["occC_2B"]
+  occphA_2B = user_data["occphA_2B"]
+
+
+  # split Hamiltonian in diagonal and off-diagonal parts
+  fd      = np.zeros_like(f)
+  fod     = np.zeros_like(f)
+  Gammad  = np.zeros_like(Gamma)
+  Gammaod = np.zeros_like(Gamma)
+
+  for i in particles:
+    for j in holes:
+      fod[i, j] = f[i,j]
+      fod[j, i] = f[j,i]
+  fd = f - fod
+
+  for i in particles:
+    for j in particles:
+      for k in holes:
+        for l in holes:
+          Gammaod[idx2B[(i,j)], idx2B[(k,l)]] = Gamma[idx2B[(i,j)], idx2B[(k,l)]]
+          Gammaod[idx2B[(k,l)], idx2B[(i,j)]] = Gamma[idx2B[(k,l)], idx2B[(i,j)]]
+  Gammad = Gamma - Gammaod
+
+
+  #############################        
+  # one-body flow equation  
+  eta1B  = np.zeros_like(f)
+
+  # 1B - 1B
+  eta1B += commutator(fd, fod)
+
+  # 1B - 2B
+  for i in range(dim1B):
+    for j in range(dim1B):
+      for a in holes:
+        for b in particles:
+          eta1B[i,j] += (
+            fd[a,b] * Gammaod[idx2B[(b, i)], idx2B[(a, j)]] 
+            - fd[b,a] * Gammaod[idx2B[(a, i)], idx2B[(b, j)]] 
+            - fod[a,b] * Gammad[idx2B[(b, i)], idx2B[(a, j)]] 
+            + fod[b,a] * Gammad[idx2B[(a, i)], idx2B[(b, j)]]
+          )
+
+  # 2B - 2B
+  # n_a n_b nn_c + nn_a nn_b n_c = n_a n_b + (1 - n_a - n_b) * n_c
+  GammaGamma = dot(Gammad, dot(occB_2B, Gammaod))
+  for i in range(dim1B):
+    for j in range(dim1B):
+      for c in holes:
+        eta1B[i,j] += (
+          0.5*GammaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
+          - transpose(GammaGamma)[idx2B[(c,i)], idx2B[(c,j)]]
+        )
+
+  GammaGamma = dot(Gammad, dot(occC_2B, Gammaod))
+  for i in range(dim1B):
+    for j in range(dim1B):
+      for c in range(dim1B):
+        eta1B[i,j] += (
+          0.5*GammaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
+          + transpose(GammaGamma)[idx2B[(c,i)], idx2B[(c,j)]] 
+        )
+
+
+  #############################        
+  # two-body flow equation  
+  eta2B = np.zeros_like(Gamma)
+
+  # 1B - 2B
+  for i in range(dim1B):
+    for j in range(dim1B):
+      for k in range(dim1B):
+        for l in range(dim1B):
+          for a in range(dim1B):
+            eta2B[idx2B[(i,j)],idx2B[(k,l)]] += (
+              fd[i,a] * Gammaod[idx2B[(a,j)],idx2B[(k,l)]] 
+              + fd[j,a] * Gammaod[idx2B[(i,a)],idx2B[(k,l)]] 
+              - fd[a,k] * Gammaod[idx2B[(i,j)],idx2B[(a,l)]] 
+              - fd[a,l] * Gammaod[idx2B[(i,j)],idx2B[(k,a)]]
+              - fod[i,a] * Gammad[idx2B[(a,j)],idx2B[(k,l)]] 
+              - fod[j,a] * Gammad[idx2B[(i,a)],idx2B[(k,l)]] 
+              + fod[a,k] * Gammad[idx2B[(i,j)],idx2B[(a,l)]] 
+              + fod[a,l] * Gammad[idx2B[(i,j)],idx2B[(k,a)]]
+            )
+
+  
+  # 2B - 2B - particle and hole ladders
+  # Gammad.occB.Gammaod
+  GammaGamma = dot(Gammad, dot(occB_2B, Gammaod))
+
+  eta2B += 0.5 * (GammaGamma - transpose(GammaGamma))
+
+  # 2B - 2B - particle-hole chain
+  
+  # transform matrices to particle-hole representation and calculate 
+  # Gammad_ph.occA_ph.Gammaod_ph
+  Gammad_ph = ph_transform_2B(Gammad, bas2B, idx2B, basph2B, idxph2B)
+  Gammaod_ph = ph_transform_2B(Gammaod, bas2B, idx2B, basph2B, idxph2B)
+
+  GammaGamma_ph = dot(Gammad_ph, dot(occphA_2B, Gammaod_ph))
+
+  # transform back to standard representation
+  GammaGamma    = inverse_ph_transform_2B(GammaGamma_ph, bas2B, idx2B, basph2B, idxph2B)
+
+  # commutator / antisymmetrization
+  work = np.zeros_like(GammaGamma)
+  for i1, (i,j) in enumerate(bas2B):
+    for i2, (k,l) in enumerate(bas2B):
+      work[i1, i2] -= (
+        GammaGamma[i1, i2] 
+        - GammaGamma[idx2B[(j,i)], i2] 
+        - GammaGamma[i1, idx2B[(l,k)]] 
+        + GammaGamma[idx2B[(j,i)], idx2B[(l,k)]]
+      )
+  GammaGamma = work
+
+  eta2B += GammaGamma
+
+
+  return eta1B, eta2B
+
+
 #-----------------------------------------------------------------------------------
 # derivatives 
 #-----------------------------------------------------------------------------------
@@ -606,7 +737,7 @@ user_data  = {
   "occB_2B":    occB_2B,
   "occC_2B":    occC_2B,
   "occphA_2B":  occphA_2B,
-  "calc_eta":   eta_brillouin,      # specify the generator (function object)
+  "calc_eta":   eta_wegner,         # specify the generator (function object)
   "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
 }
 
