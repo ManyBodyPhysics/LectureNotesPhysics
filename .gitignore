@@ -16,3 +16,7 @@ doc/src/Chapter10-programs/f95/a.out
 doc/src/Chapter10-programs/f95/constants.mod
 doc/src/Chapter10-programs/f95/inifile.mod
 doc/src/Chapter10-programs/f95/run_test.dat
+srg_toy_flow-eps-converted-to.pdf
+doc/src/chapter10.fdb_latexmk
+doc/src/chapter10.fls
+doc/src/chapter10.log
