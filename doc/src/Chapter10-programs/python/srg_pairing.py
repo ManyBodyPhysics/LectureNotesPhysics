@@ -117,7 +117,7 @@ def myPlotSettings(ax):
   ax.yaxis.set_major_formatter(formatter)
   ax.tick_params(axis='both',which='major',width=1.5,length=8)
   ax.tick_params(axis='both',which='minor',width=1.5,length=5)
-  ax.tick_params(axis='both',width=2,length=10,labelsize=16)
+  ax.tick_params(axis='both',width=2,length=10,labelsize=20)
   for s in ['left', 'right', 'top', 'bottom']:
     ax.spines[s].set_linewidth(2)
   ax.set_xlim([0.0007,13])  

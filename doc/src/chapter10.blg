@@ -10,47 +10,49 @@ Warning--empty journal in Lynn:2015eu
 Warning--empty journal in Shirokov:2016wo
 Warning--can't use both author and editor fields in Valdemoro:1987zl
 Warning--can't use both author and editor fields in Mazziotti:2007qe
+Warning--empty note in Hjorth-Jensen:2015mz
+Warning--can't use both author and editor fields in Hindmarsh:1983pd
 Warning--empty booktitle in Griesshammer:2015dp
 Warning--empty journal in Entem:2015hl
-You've used 134 entries,
+You've used 140 entries,
             2812 wiz_defined-function locations,
-            1655 strings with 38312 characters,
-and the built_in function-call counts, 52179 in all, are:
-= -- 3507
-> -- 1675
-< -- 7
-+ -- 662
-- -- 513
-* -- 3413
-:= -- 6114
-add.period$ -- 211
-call.type$ -- 134
-change.case$ -- 6
-chr.to.int$ -- 6
-cite$ -- 141
-duplicate$ -- 5485
-empty$ -- 5075
-format.name$ -- 618
-if$ -- 11717
+            1696 strings with 39509 characters,
+and the built_in function-call counts, 53968 in all, are:
+= -- 3618
+> -- 1722
+< -- 12
++ -- 681
+- -- 526
+* -- 3511
+:= -- 6316
+add.period$ -- 214
+call.type$ -- 140
+change.case$ -- 10
+chr.to.int$ -- 12
+cite$ -- 149
+duplicate$ -- 5688
+empty$ -- 5282
+format.name$ -- 635
+if$ -- 12134
 int.to.chr$ -- 0
-int.to.str$ -- 134
-missing$ -- 1437
-newline$ -- 621
-num.names$ -- 134
-pop$ -- 1914
+int.to.str$ -- 140
+missing$ -- 1489
+newline$ -- 642
+num.names$ -- 140
+pop$ -- 2012
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1360
+skip$ -- 1401
 stack$ -- 0
-substring$ -- 1840
-swap$ -- 3559
-text.length$ -- 5
+substring$ -- 1855
+swap$ -- 3670
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 258
-width$ -- 137
-write$ -- 1488
-(There were 9 warnings)
+warning$ -- 9
+while$ -- 267
+width$ -- 143
+write$ -- 1541
+(There were 11 warnings)

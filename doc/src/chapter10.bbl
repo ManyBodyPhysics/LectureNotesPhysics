@@ -374,16 +374,41 @@ G.~Golub, C.~Van~Loan, \emph{Matrix Computations}.
   University Press, 2013).
 \newblock \urlprefix\url{https://books.google.com/books?id=X5YfsuCWpxMC}
 
+\bibitem{Press:2007vn}
+W.H. Press, S.A. Teukolsky, W.T. Vetterling, B.P. Flannery, \emph{Numerical
+  Recipes: The Art of Scientific Computing}, 3rd edn. (Cambridge University
+  Press, 2007)
+
 \bibitem{Shampine:1975qq}
 L.F. Shampine, M.K. Gordon, \emph{Computer Solution of Ordinary Differential
   Equations: The Initial Value Problem} (W. H. Freeman, San Francisco, 1975).
 \newblock \urlprefix\url{https://books.google.com/books?id=3Yl2nQEACAAJ}
 
-\bibitem{Morris:2016xp}
-T.D. Morris, Systematic improvements of ab initio in-medium similarity
-  renormalization group calculations.
-\newblock Ph.D. thesis, Michigan State University (2016).
-\newblock \urlprefix\url{http://etd.lib.msu.edu/islandora/object/etd%3A3864}
+\bibitem{Landau:2012zr}
+R.H. Landau, M.J. Paez, C.C. Bordeianu, \emph{A Survey of Computational
+  Physics: Introductory Computational Science} (Princeton University Press,
+  2012)
+
+\bibitem{Hjorth-Jensen:2015mz}
+M.~Hjorth-Jensen, Computational physics (2015)
+
+\bibitem{Hindmarsh:1983pd}
+A.C. Hindmarsh, \emph{ODEPACK, A Systematized Collection of ODE Solvers}
+  (North-Holland Publishing Company, Amsterdam, 1983), \emph{IMACS Transactions
+  on Scientific Computation}, vol.~1, p.~54
+
+\bibitem{Radhakrishnan:1993fk}
+K.~Radhakrishnan, A.C. Hindmarsh, Description and use of lsode, the livermore
+  solver for ordinary differential equations.
+\newblock Tech. Rep. UCRL-ID-113855, Lawrence Livermore National Laboratory
+  (1993)
+
+\bibitem{Brown:1989qd}
+P.N. Brown, A.C. Hindmarsh, Applied Mathematics and Computation \textbf{31}, 40
+  (1989).
+\newblock \doi{http://dx.doi.org/10.1016/0096-3003(89)90110-0}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0096300389901100}
 
 \bibitem{Roth:2011kx}
 R.~Roth, J.~Langhammer, A.~Calci, S.~Binder, P.~Navr\'atil, Phys. Rev. Lett.
@@ -486,6 +511,12 @@ D.~Gazit, S.~Quaglioni, P.~Navr\'atil, Phys. Rev. Lett. \textbf{103}, 102502
 M.~Wang, G.~Audi, A.~Wapstra, F.~Kondev, M.~MacCormick, X.~Xu, B.~Pfeiffer,
   Chin. Phys. C \textbf{36}(12), 1603 (2012).
 \newblock \urlprefix\url{http://stacks.iop.org/1674-1137/36/i=12/a=003}
+
+\bibitem{Morris:2016xp}
+T.D. Morris, Systematic improvements of ab initio in-medium similarity
+  renormalization group calculations.
+\newblock Ph.D. thesis, Michigan State University (2016).
+\newblock \urlprefix\url{http://etd.lib.msu.edu/islandora/object/etd%3A3864}
 
 \bibitem{Tsukiyama:2012fk}
 K.~Tsukiyama, S.K. Bogner, A.~Schwenk, Phys. Rev. C \textbf{85}, 061304 (2012).

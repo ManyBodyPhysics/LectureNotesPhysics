@@ -406,8 +406,8 @@ renormalization ideas by imposing a block or band-diagonal structure on
 the representation of operators in bases that are organized by momentum
 or energy. This implies a decoupling of low and high momenta or energies
 in the renormalization group sense. We will conclude this section with a
-brief discussion of the SRG evolution of nuclear forces in order to render 
-the nuclear Hamiltonian more suitable for \emph{ab initio} many-body 
+brief discussion of how this SRG decoupling of scales is used to render  
+nuclear Hamiltonians more suitable for \emph{ab initio} many-body 
 calculations \cite{Bogner:2007od,Bogner:2010pq,Morris:2015ve,Hergert:2016jk,Hergert:2016ng}.
 
 
@@ -576,84 +576,176 @@ figure.
   }
 \end{figure}
 
-\subsection{The pairing model}
-Let us now apply the above flow equations to the simple pairing model discussed in chapter 8. 
+\subsection{The Pairing Model}
+\subsubsection{Preliminaries}
+\begin{table}[t]
+  \begin{center}
+      \begin{tabular*}{0.25\textwidth}{@{\extracolsep\fill}|c|c|r|r|}
+      \hline 
+      state & $p$ & $2s_z$ & $\varepsilon$
+      \\ \hline 
+      $0$ & $1$ & $ 1$ & $     0 $ \\ 
+      $1$ & $1$ & $-1$ & $     0 $ \\ 
+      $2$ & $2$ & $ 1$ & $ \delta$ \\ 
+      $3$ & $2$ & $-1$ & $ \delta$ \\ 
+      $4$ & $3$ & $ 1$ & $2\delta$ \\ 
+      $5$ & $3$ & $-1$ & $2\delta$ \\ 
+      $6$ & $4$ & $ 1$ & $3\delta$ \\ 
+      $7$ & $4$ & $-1$ & $3\delta$ \\ \hline
+      \end{tabular*}
+  \end{center}
+  \caption{\label{tab:srg_pairing_sp}Single-particle states and their quantum numbers and their energies from Eq.~(\ref{eq:def_pairing_hamiltonian}). The degeneracy for every quantum number $p$ is equal to 2 due to the two possible spin values.} 
+\end{table}
 
+As our second example for diagonalizing matrices by means of SRG flows, we will
+consider the pairing model that was discussed in the context of Hartree-Fock and
+beyond-HF methods in chapter \ref{chapter:cc}. In second quantization, the 
+pairing Hamiltonian is given by
+\begin{equation}\label{eq:def_pairing_hamiltonian}
+  \HO = \delta \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p\sigma}
+        -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+}\,,
+\end{equation}
+where $\delta$ controls the spacing of single-particle levels that are indexed
+by a principal quantum number $p$ and their spin projection $\sigma$ (see 
+Tab.~\ref{tab:srg_pairing_sp}), and $g$ the strength of the pairing interaction. 
 
-In chapter 8 we presented a simple pairing model, which for the case of four doubly degenerate single-particle states and 
-four fermions resulted in the following Hamiltonian matrix
- \[
-  H = \begin{bmatrix}
-  2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\ -g/2 & 4\delta -g &
-  -g/2 & -g/2 & -0 & -g/2 \\ -g/2 & -g/2 & 6\delta -g & 0 & -g/2 &
-  -g/2 \\ -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\ -g/2 & 0 & -g/2
-  & -g/2 & 8\delta-g & -g/2 \\ 0 & -g/2 & -g/2 & -g/2 & -g/2 &
-  10\delta -g
-  \end{bmatrix},
-  \]
-where $g$ represents the strength of the two-body interaction and $\delta$ is a constant that defines the single-particle energies, see the discussions in chapter 8.  The above Hamiltonian matrix represents the case where no pairs of fermions are broken, resulting in six possible Slater determinats that span the actual model space.
-
-We restate the equations for the various parts of the Hamiltonian here, namely
- \[
-  \hat{H}_0 = \delta \sum_{p \sigma} (p-1) a^{\dagger}_{p \sigma} a_{p\sigma},
-  \]
-for the one-body part
-and 
-  \[
-  \hat{V} = -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+},
-  \]
-for the two-body interaction. The parameters $\delta$ and $g$ are constants.
-The single-particle operator $\hat{H}_0$ defines the operator $\hat{T}$ above. We will let $\hat{V}$ have an explicit $s$ dependence. 
-In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{Shampine:1975qq}.
-We follow Wegner's formulation \cite{Wegner:1994dk} in terms of a flow equation
-for the Hamiltonian.
-The initial  Hamiltonian $\hat{H} = \hat{H}_0 + \hat{V}=\hat{T}+\hat{V}$, where $\hat{H}_0=\hat{T}$ is independent of $s$ and
-represents the non-interacting part of the Hamiltonian, is transformed by the 
-unitary operator $\hat{U}(s)$ according to
-\[ 
-\hat{H}(s) = \hat{U}(s)\hat{H}(s=0)\hat{U}(s)^T, 
-\]
-which results in the equation
-\[
-  \frac{d\hat{H}(s)}{ds}= [\eta(s),\hat{H}(s)],
-\]
-with
-\[
-   \eta(s) = \frac{d\hat{U}(s)}{ds} \hat{U}^\dagger(s) = -\eta^\dagger(s).
-\]
-Choosing $\eta(s)$ specifies the transformation.
-Here we make perhaps the simplest choice \cite{Wegner:1994dk},
+We will consider the case of 4 particles in 8 single-particle states. Following
+the Full Configuration Interaction (FCI) approach discussed in chapter \ref{chapter:cc},
+we can construct a many-body basis of Slater determinants by placing
+our 4 particles into the 8 single-particle basis states. Since each
+single-particle state can only be occupied by one particle, there are
 \begin{equation}
-  \eta(s) =  [\hat{H}_0, \hat{H}(s)]
-  \label{eq:choice},
+  \begin{pmatrix} 8 \\ 4\end{pmatrix} = 70
 \end{equation}
-which gives the flow equation,
+unique configurations. The specific form of the pairing interaction
+implies that the total spin projection $S_z = \sum_{n=1}^4 s_z^{(n)}$ 
+is conserved, and the Hamiltonian will have a block diagonal structure.
+The possible values for $S_z$ are $-2,-1,0,1,2$, depending on the number
+of particles in states with spin up or spin down. The dimension can be
+calculated via
 \begin{equation}
-  \frac{d\hat{H}(s)}{ds}=  [ [\hat{H}_0, \hat{H}(s)], \hat{H}(s)].
-  \label{eq:commutator}
+ d_{S_z} = \begin{pmatrix} 4 \\ N_{+}\end{pmatrix} \times 
+           \begin{pmatrix} 4 \\ N_{-}\end{pmatrix}\,,
 \end{equation}
-%
-Other choices will be discussed below, see also
-Refs.~\cite{Hergert:2016jk,Hergert:2016ng,Morris:2016xp} for a detailed discussion of
-possible similarity transformations.  The derivative of the
-Hamiltonian involves only the potential since we have assumed that
-$\hat{H}_0$ is independent of the flow parameter $s$. With a given
-basis $k$ the derivative of $\hat{V}$ evolves as, using dimensionless
-units and specifying $\hat{V}(s) = \langle k \vert \hat{V}(s) \vert
-k'\rangle$, we obtain
-\begin{equation} \frac{d(\langle k \vert \hat{V}(s) \vert k'\rangle)}{ds} =- (\varepsilon_k -\varepsilon_{k'} )^2\langle k \vert \hat{V}(s) \vert k'\rangle
-    + \sum_{q=0}^{\infty}(\varepsilon_k + \varepsilon_{k'} - 2\varepsilon_{q})\langle k \vert \hat{V}(s) \vert q\rangle\langle q \vert \hat{V}(s) \vert k'\rangle.
-      \label{eq:diffeq}
+which yields 
+\begin{equation}
+ d_{\pm 2} = 1\,, \quad d_{\pm 1} = 16\,, \quad d_{0} = 32\,.
 \end{equation}
-Here the quantity $\varepsilon_k$ represents the single-particle
-energies arising from the non-interacting Hamiltonian. We have assumed
-that the basis $k$ forms an eigenbasis for the non-interacting
-Hamiltonian $\hat{H}_0$ and we have used the discrete completeness
-relation $\sum_{k=0}^{\infty}\vert k \rangle \langle k \vert = 1$.  As
-demonstrated below via various numerical examples, when we let $s$
-evolve to infinity, the Hamiltonian matrix becomes more and more
-diagonal. The code to solve the coupled ODEs is at
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_pairing.py}: 
+Since the pairing interaction only couples pairs of single-particle 
+states with the same principal quantum number but opposite spin
+projection, it does not break pairs of particles that occupy such 
+states --- in other words, the number of particle pairs is another
+conserved quantity, which allows us to decompose the $S_z$ blocks
+into even smaller sub blocks. As in chapter 8, we consider the $S_z=0$
+sub block with two particle pairs, which is six-dimensional. In this
+block, the Hamiltonian is represented by the matrix (suppressing
+block indices)
+\begin{equation}\label{eq:def_h_matrix}
+  H = \begin{pmatrix}
+  2\delta -g  &      -g/2  &       -g/2 &      -g/2 &      -g/2 &        0 \\ 
+         -g/2 & 4\delta -g &       -g/2 &      -g/2 &        -0 &     -g/2 \\ 
+         -g/2 &       -g/2 & 6\delta -g &         0 &      -g/2 &     -g/2 \\ 
+         -g/2 &       -g/2 &          0 & 6\delta-g &      -g/2 &     -g/2 \\ 
+         -g/2 &          0 &       -g/2 &      -g/2 & 8\delta-g &     -g/2 \\ 
+            0 &       -g/2 &       -g/2 &      -g/2 &      -g/2 & 10\delta -g
+  \end{pmatrix}\,.
+\end{equation}
+
+\subsubsection{SRG Flow for the Pairing Hamiltonian}
+As in earlier sections, we split the Hamiltonian matrix \eqref{eq:def_h_matrix}
+into diagonal and off-diagonal parts:
+\begin{equation}
+  H_d(s) = \mathrm{diag}(E_0(s)\,,\ldots,E_5(s))\,,\quad H_{od}(s) = H(s) - H_{d}(s)\,,
+\end{equation}
+with initial values defined by Eq.~\eqref{eq:def_h_matrix}. Since $H_d(s)$
+is diagonal throughout the flow per construction, the Slater determinants
+that span our specific subspace are the eigenstates of this matrix. In our 
+basis representation, Eq.~\eqref{eq:opflow} can be written as
+\begin{align}
+  \totd{}{s}\matrixe{i}{\HO}{j}
+  &=\sum_k\left(\matrixe{i}{\etaO}{k}\matrixe{k}{\HO}{j}-\matrixe{i}{\HO}{k}\matrixe{k}{\etaO}{j}\right)\notag\\
+  &=-\left(E_i-E_j\right)\matrixe{i}{\etaO}{j}
+    +\sum_k\left(\matrixe{i}{\etaO}{k}\matrixe{k}{\HO_{od}}{j}-\matrixe{i}{\HO_{od}}{k}\matrixe{k}{\etaO}{j}\right),
+\end{align}
+where $\matrixe{i}{\HO_{od}}{i}=0$ and block indices as well as the $s$-dependence
+have been suppressed for brevity. The Wegner generator, Eq.~\eqref{eq:def_Wegner_general}, 
+is given by
+\begin{equation}
+  \matrixe{i}{\etaO}{j}=\matrixe{i}{\comm{\HO_d}{\HO_{od}}}{j}=(E_i-E_j)\matrixe{i}{\HO_{od}}{j}\,,
+\end{equation}
+and inserting this into the flow equation, we obtain
+\begin{align}
+  \totd{}{s}\matrixe{i}{\HO}{j}
+  =-\left(E_i-E_j\right)^2\matrixe{i}{\HO_{od}}{j}
+  +\sum_k\left(E_i+E_j-2E_k\right)\matrixe{i}{\HO_{od}}{k}\matrixe{k}{\HO_{od}}{j}\,,\label{eq:schema_wegner}
+\end{align}
+Let us assume that the transformation generated by $\etaO$ truly suppresses 
+$\HO_{od}$, and consider the asymptotic behavior for large flow parameters 
+$s>s_0\gg0$. If $||\HO_{od}(s_0)||\ll 1$ in some suitable norm, the second 
+term in the flow equation can be neglected compared to the first one. For
+the diagonal and off-diagonal matrix elements, this implies
+\begin{align}
+  \totd{E_i}{s} &= \totd{}{s} \matrixe{i}{\HO_d}{i} = 2\sum_k (E_i - E_k) \matrixe{i}{\HO_{od}}{k}\matrixe{k}{\HO_{od}}{i}
+  \approx0
+\end{align}
+and
+\begin{align}
+  \totd{}{s}\matrixe{i}{\HO}{j}
+  \approx-\left(E_i-E_j\right)^2\matrixe{i}{\HO_{od}}{j}\,,
+\end{align}
+respectively. Thus, the diagonal matrix elements will be (approximately)
+constant in the asymptotic region,
+\begin{equation}
+  E_i(s) \approx E_i(s_0)\,,\quad s>s_0\,,
+\end{equation}
+which in turn allows us to integrate the flow equation for the off-diagonal
+matrix elements. We obtain
+\begin{equation}\label{eq:def_hod_general}
+  \matrixe{i}{\HO_{od}(s)}{j} \approx \matrixe{i}{\HO_{od}(s_0)}{j}\,e^{-(E_i-E_j)^2 (s-s_0)}\,, \quad s>s_0\,,
+\end{equation}
+i.e., the off-diagonal matrix elements are suppressed exponentially, as for the
+$2\times2$ matrix toy problem discussed in the previous section. If the pairing
+strength $g$ is sufficiently small that $\HO^2_{od}(0)\sim \mathcal{O}(g^2)$ can 
+be neglected, we expect to see the exponential suppression of the off-diagonal 
+matrix elements from the very onset of the flow. 
+
+Our solution for the off-diagonal matrix elements, Eq.~\eqref{eq:def_hod_general},
+shows that the characteristic decay scale for each matrix element is determined 
+by the square of the energy difference between the states it couples, 
+$(\Delta E_{ij})^2 = (E_i-E_j)^2$. Thus, states with larger energy differences
+are decoupled before states with small energy differences, which means that 
+the Wegner generator generates a proper renormalization group transformation.
+Since we want to diagonalize \eqref{eq:def_h_matrix} in the present example,
+we are only interested in the limit $s\to\infty$, and it does not really matter
+whether the transformation is an RG or not. Indeed, there are alternative choices
+for the generator which are more efficient in achieving the desired diagonalization
+(see section \ref{sec:generator} and Refs.~\cite{Hergert:2016jk,Hergert:2016ng}).
+The RG property will matter in our discussion of SRG-evolved nuclear interactions 
+in the next section.
+
+% \tbd{
+% In order to solve the coupled ODEs, we use the ODE solver developed by Gordon and Shampine, see for example Ref.~\cite{Shampine:1975qq}.
+% }
+
+\subsubsection{Implementation}
+We are now ready to discuss the implementation of the SRG flow for the pairing
+Hamiltonian. The main numerical task is the integration of the flow equations,
+a system of first order ODEs. Readers who are interested in learning the 
+nuts-and-bolts details of implementing an ODE solver are referred to the excellent 
+discussion in \cite{Press:2007vn}, while higher-level discussions of the algorithms
+can be found, e.g., in \cite{Shampine:1975qq,Landau:2012zr,Hjorth-Jensen:2015mz}.
+A number of powerful ODE solvers have been developed over the past decades and 
+integrated into readily available libraries, and we choose to rely one of these 
+here, namely ODEPACK (see \url{www.netlib.org/odepack} and 
+\cite{Hindmarsh:1983pd,Radhakrishnan:1993fk,Brown:1989qd}). The SciPy package
+provides convenient Python wrappers for the ODEPACK solvers.
+
+The following listing shows the essential part of our Python implementation of
+the SRG flow for the pairing model. The full code with additional features can 
+be downloaded from 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_pairing.py}.
+
+
 \begin{lstlisting}
 import numpy as np
 from numpy import array, dot, diag, reshape
@@ -731,6 +823,91 @@ ys  = odeint(derivative, y0, flowparams, args=(dim,))
 Hs  = reshape(ys, (-1, dim,dim))
 \end{lstlisting}
 
+
+The routine \texttt{Hamiltonian} sets up the Hamiltonian matrix \eqref{eq:def_h_matrix}
+for general values of $\delta$ and $g$. The right-hand side of the flow equation
+is implemented in the routine \texttt{derivative}, which splits $H(s)$
+in diagonal and off-diagonal parts, and calculates both the generator and
+the commutator $\comm{\etaO}{\HO}$ using matrix products. Since the
+interface of essentially all ODE libraries require the ODE system and
+derivative to be passed as a one-dimensional array, NumPy's \texttt{reshape}
+functionality used to rearrange these arrays into $6\times 6$ matrices 
+and back again.
+
+The main routine calls the ODEPACK wrapper \texttt{odeint}, passing 
+the initial Hamiltonian as a one-dimensional array \texttt{y0} as well
+as a list of flow parameters $s$ for which a solution is requested. The 
+routine \texttt{odeint} returns these solutions as a list of arrays.
+
+
+\subsubsection{A Numerical Example}
+\begin{figure*}[t]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{\fdir/{srg_pairing_delta1.0_g0.5}.pdf}
+  \end{center}    
+  \caption{\label{fig:srg_pairing}SRG evolution of the pairing Hamiltonian with
+  $\delta=1, g=0.5$. The 
+  figures show snapshots of the Hamiltonian's matrix representation at various 
+  stages of the flow, indicated by the flow parameters $s$. Note the essentially 
+  logarithmic scales of the positive and negative matrix elements, which are bridged
+  by a linear scale in the vicinity of 0.}
+\end{figure*}
+
+As a numerical example, we solve the pairing Hamiltonian for $\delta=1.0$
+and $g=0.5$. In Fig.~\ref{fig:srg_pairing}, we show snapshots of the matrix
+$H(s)$ at different stages of the flow. We can nicely see how the SRG evolution
+drives the off-diagonal matrix elements to zero. The effect becomes noticeable 
+on our logarithmic color scale around $s=0.05$, where the outermost off-diagonal 
+matrix elements start to lighten. At $s=0.1$, $H_{05}(s)$ has been reduced by
+four to five orders of magnitude, and at $s=1.0$, essentially all of the 
+off-diagonal matrix elements have been affected to some extent. Note that the
+strength of the suppression depends on the distance from the diagonal, aside from 
+$H_{05}$ itself, which has a slightly larger absolute value than $H_{04}$ and
+$H_{15}$. The overall behavior is as expected from our approximate solution 
+\eqref{eq:def_hod_general}, and the specific deviations can be explained by 
+the approximate nature of that result. Once we have reached $s=10$, the matrix
+is essentially diagonal, with off-diagonal matrix elements reduced to  
+$10^{-10}$ or less. Only the $2\times2$ block spanned by the states labeled 2
+and 3 has slightly larger off-diagonal matrix elements remaining, which is 
+due to the degeneracy of the corresponding eigenvalues.
+
+\begin{figure*}[t]
+  \setlength{\unitlength}{\textwidth}
+  \begin{picture}(1.0000,0.4000)
+    \put(0.0300,0.0300){\includegraphics[width=0.45\unitlength]{\fdir/{srg_pairing_diag_delta1.0_g0.5}.pdf}}
+    \put(0.0100,0.0400){\begin{sideways}\parbox{0.3500\unitlength}{\centering$ E_i, H_{ii}(s)$ }\end{sideways}}
+    \put(0.0200,0.0150){\parbox{0.500\unitlength}{\centering$s$}}
+    \put(0.5200,0.0300){\includegraphics[width=0.46\unitlength]{\fdir/{srg_pairing_diag-eval_delta1.0_g0.5}.pdf}}    
+    \put(0.5000,0.0400){\begin{sideways}\parbox{0.3500\unitlength}{\centering$ H_{ii}(s) - E_i$ }\end{sideways}}
+    \put(0.5200,0.0150){\parbox{0.500\unitlength}{\centering$s$}}
+
+  \end{picture}
+  \caption{\label{fig:srg_pairing_diags}SRG evolution of the pairing Hamiltonian
+  with $\delta=1, g=0.5$. The left panel shows the diagonal matrix elements $H_{ii}(s)$ as a function of
+  the flow parameter $s$ (dashed lines)  and
+  the corresponding eigenvalues (solid lines), the right panel the difference of
+  the two numbers. The color coding is the same in both panels.}
+\end{figure*}
+
+In Fig.~\ref{fig:srg_pairing_diags}, we compare the flowing diagonal matrix
+elements $H_{ii}(s)$ to the eigenvalues of the pairing Hamiltonian. As
+we have just mentioned, the pairing Hamiltonian has a doubly degenerate 
+eigenvalue $E_2=E_3=6\delta-g$, which is why we see only five curves
+in these plots. For our choice of parameters, the diagonal matrix elements
+are already in fairly good agreement with the eigenvalues to begin with. Focusing
+on the right-hand panel of the figure in particular, we see that $H_{00}$ (blue) 
+and $H_{11}$ (red) approach their eigenvalues from above, while 
+$H_{44}$ (orange) and $H_{55}$ (light blue) approach from below as we evolve
+to large $s$. It is interesting that the diagonal matrix elements 
+are already practically identical to the eigenvalues once we have 
+integrated up to $s=1.0$, despite the non-vanishing off-diagonal matrix elements 
+that are visible in the $s=1.0$ snapshot shown in Fig.~\ref{fig:srg_pairing}.
+
+
+\subsection{Evolution of Nuclear Interactions}
+\subsubsection{Motivation}
+\subsubsection{SRG Flow Equations}
+\subsubsection{Induced Interactions}
 If we wish to solve the above equations for a nuclear interaction in a
 partial wave basis using relative coordinates for the momenta $k$, the explicit equations
 become \cite{Bogner:2007od} (with normalization
@@ -755,74 +932,8 @@ of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sn
 
 \tbd{[...]}
 
-The smaller the value of $\lambda$, the closer to zero are the non-diagonal matrix elements. 
-In the examples here we have chosen 
-$g=-0.5$ and the single-particle energy strength $\delta=1$. The resulting exact eigenavalues by diagonalizing the above $6\times 6$ matrix (to six leading digits) are
-$1.42705,   3.48610,  11.5572,   9.53081, 7.47926,   5.51955$.
-
-With $\lambda=1$ (or $s=1$), our similarity transformed matrix becomes
-\[
-\begin{bmatrix}
-0.142706E+01 &   -.473950E-02  &   -.213293E-07  &   0.160910E-10  &   -.139603E-10  &   0.127066E-07 \\
-    -.473950E-02   &  0.348610E+01  &   -.401318E-02  &   -.274470E-07   &  -.103994E-11  &   0.174969E-10 \\
-    -.213293E-07   &  -.401318E-02   &  0.551954E+01   &  -.393739E-05   &  -.278160E-07   &  -.129686E-10 \\
-    0.160910E-10   &  -.274470E-07   &  -.393739E-05   &  0.747927E+01   &  -.437695E-02  &   -.204824E-07 \\
-    -.139603E-10   &  -.103994E-11   &  -.278160E-07   &  -.437695E-02   &  0.953081E+01  &   -.375229E-02 \\
-    0.127066E-07   &  0.174969E-10   &  -.129686E-10   &  -.204824E-07   &  -.375229E-02  &   0.115572E+02
-\end{bmatrix}.
-\]
-
-\tbd{
-With $\lambda=0.1$ (or $s=10$), our similarity transformed matrix becomes
-\[
-\begin{bmatrix}
-0.142705E+01 &   -.413102-179 &   0.000000E+00 &   0.000000E+00 &   0.516773-184 &   -.652307E-07 \\
-    -.413102-179   &  0.348610E+01  &   -.556534-177  &   0.000000E+00  &   0.000000E+00  &   -.101304-186 \\
-    0.000000E+00   &  -.556534-177  &   0.551955E+01   &  -.119801-173  &   0.000000E+00   &  0.000000E+00 \\
-    0.000000E+00   &  0.000000E+00   &  -.119801-173   &  0.747926E+01   &  -.168573-178   &  0.000000E+00 \\
-    0.516773-184   &  0.000000E+00   &  0.000000E+00   &  -.168573-178   &  0.953081E+01   &  -.209242-176 \\
-    -.652307E-07   &  -.101304-186   &  0.000000E+00   &  0.000000E+00   &  -.209242-176   &  0.115572E+02
-\end{bmatrix}.
-\]
-We see clearly that for $\lambda=0.1$, our eigenvalues are equal to
-the exact ones (at the level of six leading digits) and the
-non-diagonal matrix are for all practical purposes equal to zero.
-}
-
-\begin{figure*}[t]
-  \begin{center}
-    \includegraphics[width=0.95\textwidth]{\fdir/{srg_pairing_delta1.0_g0.5}.pdf}
-  \end{center}    
-  \caption{\label{fig:srg_pairing}SRG evolution of the pairing Hamiltonian.}
-\end{figure*}
-
-For the simple pairing model, with modest dimensionalities of the
-Hamiltonian matrix, we can solve the flow equations with respect to
-the physical vacuum state by setting up the full Hamiltonian matrix,
-and solve Eq.~(\ref{eq:flowEquations}) as a set of coupled first-order
-differential equations. However, since the size of the problem grows
-enormously with the number of particles and the size of the model
-space, the applicability of this free-space SRG method is restricted
-to comparatively small systems. This leads us to approximations to the
-solution of the full set of coupled ODEs. In particular we will here
-discuss the in-medium SRG approach, where a new reference vacuum is
-introduced (normally defined by the Hartree-Fock state discussed in
-chapters 8 and 9). This will allow us to make links with the many-body
-methods discussed in chapters 8, 9 and 11. The final part of this
-chapter is devoted to a presentation of the in-medium SRG approach and
-its applications to the pairing model and infinite nuclear matter.
-
-\begin{figure*}[t]
-  \setlength{\unitlength}{\textwidth}
-  \begin{picture}(1.0000,0.3000)
-    \put(0.0000,0.0000){\includegraphics[width=0.49\unitlength]{\fdir/{srg_pairing_diag_delta1.0_g0.5}.pdf}}
-    \put(0.5000,0.0000){\includegraphics[width=0.5\unitlength]{\fdir/{srg_pairing_diag-eval_delta1.0_g0.5}.pdf}}    
-  \end{picture}
-  \caption{\label{fig:srg_pairing_diags}SRG evolution of the pairing Hamiltonian.}
-\end{figure*}
 
 
-\subsubsection{Evolution of Nuclear Interactions}
 \begin{figure*}[t]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{\fdir/rg_evolution_schematic.pdf}
@@ -1091,7 +1202,7 @@ v_{pqij}\eta_{ijrs}^{(2)}\right)\notag \\ & -\sum_{ia} \left(1-
 \end{align}
 Note that for brevity, we have skipped the explicit $s$-dependence in the equations.
 
-\subsection{Choice of generator}
+\subsection{\label{sec:generator}Choice of generator}
 To determine the specific unitary transformation, one needs to specify
 the generator~$\hat{\eta}$. Through different choices, the SRG flow
 can be adapted to the features of a particular problem.\\
@@ -1170,6 +1281,23 @@ results in much better numerical properties.
 
 {\bf add more? Magnus discussion ? derivation of the equations?}
 
+
+% \begin{table}[t]
+%   \begin{center}
+%       \begin{tabular}{| l | l | l | l | l |}
+%       \hline State Label & p & 2s$_z$ & E & type\\ \hline 
+%       0 & 1 &  1 & -g/2  & hole \\ 
+%       1 & 1 & -1 & -g/2  & hole \\ 
+%       2 & 2 &  1 & 1-g/2 & hole \\ 
+%       3 & 2 & -1 & 1-g/2 & hole \\ 
+%       4 & 3 & 1 & 2 & particle \\ 
+%       5 & 3 & -1 & 2 & particle \\ 
+%       6 & 4 & 1 & 3 & particle \\ 
+%       7 & 4 & -1 & 3 & particle \\ \hline
+%       \end{tabular}
+%   \end{center}
+%   \caption{\label{tab:imsrg_pairing_reference}Single-particle states and their quantum numbers and their energies from Eq.~(\ref{eq:pairingsp}). The degeneracy for every quantum number $p$ is equal to 2 due to the two possible spin values.} 
+% \end{table}
 
 
 \section{Perturbative Analysis}
