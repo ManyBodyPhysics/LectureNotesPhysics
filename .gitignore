@@ -20,3 +20,6 @@ srg_toy_flow-eps-converted-to.pdf
 doc/src/chapter10.fdb_latexmk
 doc/src/chapter10.fls
 doc/src/chapter10.log
+doc/src/Chapter10-figures/srg_evolution_energy.old.pdf
+doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler.agr
+doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler_modified.agr
