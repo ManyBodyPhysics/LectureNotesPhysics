@@ -278,6 +278,40 @@ def eta_white(f, Gamma, user_data):
   return eta1B, eta2B
 
 
+def eta_white_mp(f, Gamma, user_data):
+  dim1B     = user_data["dim1B"]
+  particles = user_data["particles"]
+  holes     = user_data["holes"]
+  idx2B     = user_data["idx2B"]
+
+  # one-body part of the generator
+  eta1B  = np.zeros_like(f)
+
+  for i in particles:
+    for j in holes:
+      denom = f[i,i] - f[j,j]
+      val = f[i,j]/denom
+      eta1B[i, j] =  val
+      eta1B[j, i] = -val 
+
+  # two-body part of the generator
+  eta2B = np.zeros_like(Gamma)
+
+  for i in particles:
+    for j in particles:
+      for k in holes:
+        for l in holes:
+          denom = ( 
+            f[i,i] + f[j,j] - f[k,k] - f[l,l]  
+          )
+
+          val = Gamma[idx2B[(i,j)], idx2B[(k,l)]] / denom
+
+          eta2B[idx2B[(i,j)],idx2B[(k,l)]] = val
+          eta2B[idx2B[(k,l)],idx2B[(i,j)]] = -val
+
+  return eta1B, eta2B
+
 def eta_white_atan(f, Gamma, user_data):
   dim1B     = user_data["dim1B"]
   particles = user_data["particles"]
@@ -460,6 +494,8 @@ def flow_imsrg2(eta1B, eta2B, f, Gamma, user_data):
   particles = user_data["particles"]
   bas2B     = user_data["bas2B"]
   idx2B     = user_data["idx2B"]
+  basph2B   = user_data["basph2B"]
+  idxph2B   = user_data["idxph2B"]
   occB_2B   = user_data["occB_2B"]
   occC_2B   = user_data["occC_2B"]
   occphA_2B = user_data["occphA_2B"]
@@ -504,8 +540,8 @@ def flow_imsrg2(eta1B, eta2B, f, Gamma, user_data):
   for i in range(dim1B):
     for j in range(dim1B):
       for c in holes:
-        df[i,j] += (
-          0.5*etaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
+        df[i,j] += 0.5*(
+          etaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
           + transpose(etaGamma)[idx2B[(c,i)], idx2B[(c,j)]]
         )
 
@@ -513,8 +549,8 @@ def flow_imsrg2(eta1B, eta2B, f, Gamma, user_data):
   for i in range(dim1B):
     for j in range(dim1B):
       for c in range(dim1B):
-        df[i,j] += (
-          0.5*etaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
+        df[i,j] += 0.5*(
+          etaGamma[idx2B[(c,i)], idx2B[(c,j)]] 
           + transpose(etaGamma)[idx2B[(c,i)], idx2B[(c,j)]] 
         )
 
@@ -695,62 +731,66 @@ def W0(delta, g, bas3B, idx3B):
 # Main program
 #------------------------------------------------------------------------------
 
+def main():
+  g          = 0.5
+  delta      = 1
+  particles  = 4
 
-g          = 0.5
-delta      = 1
-particles  = 4
+  # setup shared data
+  dim1B     = 8
 
-# setup shared data
-dim1B     = 8
+  holes     = range(particles)
+  particles = range(particles,dim1B)
 
-holes     = range(particles)
-particles = range(particles,dim1B)
+  bas1B     = range(dim1B)
+  bas2B     = construct_basis_2B(holes, particles)
+  bas3B     = construct_basis_3B(holes, particles)
+  basph2B   = construct_basis_ph2B(holes, particles)
 
-bas1B     = range(dim1B)
-bas2B     = construct_basis_2B(holes, particles)
-bas3B     = construct_basis_3B(holes, particles)
-basph2B   = construct_basis_ph2B(holes, particles)
+  idx2B     = construct_index_2B(bas2B)
+  idxph2B   = construct_index_2B(basph2B)
 
-idx2B     = construct_index_2B(bas2B)
-idxph2B   = construct_index_2B(basph2B)
+  occ1B     = construct_occupation_1B(bas1B, holes, particles)
+  occA_2B   = construct_occupationA_2B(bas2B, occ1B)
+  occB_2B   = construct_occupationB_2B(bas2B, occ1B)
+  occC_2B   = construct_occupationC_2B(bas2B, occ1B)
 
-occ1B     = construct_occupation_1B(bas1B, holes, particles)
-occA_2B   = construct_occupationA_2B(bas2B, occ1B)
-occB_2B   = construct_occupationB_2B(bas2B, occ1B)
-occC_2B   = construct_occupationC_2B(bas2B, occ1B)
+  occphA_2B = construct_occupationA_2B(basph2B, occ1B)
 
-occphA_2B = construct_occupationA_2B(basph2B, occ1B)
+  # store shared data in a dictionary, so we can avoid passing the basis
+  # lookups etc. as separate parameters all the time
+  user_data  = {
+    "dim1B":      dim1B, 
+    "holes":      holes,
+    "particles":  particles,
+    "bas1B":      bas1B,
+    "bas2B":      bas2B,
+    "basph2B":    basph2B,
+    "idx2B":      idx2B,
+    "idxph2B":    idxph2B,
+    "occ1B":      occ1B,
+    "occA_2B":    occA_2B,
+    "occB_2B":    occB_2B,
+    "occC_2B":    occC_2B,
+    "occphA_2B":  occphA_2B,
+    "calc_eta":   eta_white_mp,         # specify the generator (function object)
+    "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
+  }
 
-# store shared data in a dictionary, so we can avoid passing the basis
-# lookups etc. as separate parameters all the time
-user_data  = {
-  "dim1B":      dim1B, 
-  "holes":      holes,
-  "particles":  particles,
-  "bas1B":      bas1B,
-  "bas2B":      bas2B,
-  "basph2B":    basph2B,
-  "idx2B":      idx2B,
-  "idxph2B":    idxph2B,
-  "occ1B":      occ1B,
-  "occA_2B":    occA_2B,
-  "occB_2B":    occB_2B,
-  "occC_2B":    occC_2B,
-  "occphA_2B":  occphA_2B,
-  "calc_eta":   eta_wegner,         # specify the generator (function object)
-  "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
-}
-
-# set up initial Hamiltonian
-E     = E0(delta, g)
-f     = f0(delta, g, bas1B, holes, particles)
-Gamma = Gamma0(delta, g, bas2B, idx2B)
-
-
-# reshape Hamiltonian into a linear array (initial ODE vector)
-y0   = np.append([E], np.append(reshape(f, -1), reshape(Gamma, -1)))
-
-# integrate flow equations 
-ys  = odeint(derivative_wrapper, y0, [0, 1], args=(user_data,))
+  # set up initial Hamiltonian
+  E     = E0(delta, g)
+  f     = f0(delta, g, bas1B, holes, particles)
+  Gamma = Gamma0(delta, g, bas2B, idx2B)
 
 
+  # reshape Hamiltonian into a linear array (initial ODE vector)
+  y0   = np.append([E], np.append(reshape(f, -1), reshape(Gamma, -1)))
+
+  # integrate flow equations 
+  ys  = odeint(derivative_wrapper, y0, [0,10], rtol=1.0e-8, atol=1.0e-8, args=(user_data,))
+
+
+
+# run main routine
+if __name__ == "__main__": 
+  main()
