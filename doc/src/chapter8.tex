@@ -3208,13 +3208,27 @@ caption=Block-sparse implementation of a MBPT3 diagram. \label{code:mbpt3V02}]
 \end{table}
 
     
-    Table \ref{tab:mbpt3V02_runtime} shows the total run time of this program for different
-    modelspace sizes and number of particles. Again it is clear that we need to
-    speed things up if we want to run realistic cases.
+Table \ref{tab:mbpt3V02_runtime} shows the total run time of this program for different
+modelspace sizes and number of particles. Again it is clear that we need to
+speed things up if we want to run realistic cases.
 
-    The profile in Listing XXX shows that the calls to the Minnesota potential
-    is still the most time-consuming function, but the number of times this
-    function is called seems too high. Indeed, we see that we call the potential
+\begin{table}[hbt]
+\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V02}
+using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V02}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 90.76    177.21   177.21 6068445596     0.00     0.00  V_Minnesota(...)
+  8.76    194.31    17.11                             mbpt3V02::getEnergy()
+\end{verbatim}
+\end{table}
+
+    The profile in Table \ref{profile:mbpt3V02} shows that the calls to the Minnesota potential
+    is still the most time-consuming function, and that this
+    function is called over six billion times. Indeed, we see that we call the potential
     function in the innermost loop which means that we calculate the same matrix
     element multiple times. Let's change the code so that we calculate the
     elements once and store them for reuse. This will require more memory, but
@@ -3225,10 +3239,14 @@ caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
 in memory. \label{code:mbpt3V05}]
 {Chapter8-programs/cpp/MBPT/mbpt3V05.cpp}
 
-    Listing \ref{code:mbpt3V05}  shows the new version where we
-    have also replaced the explicit summation with matrix products.
+Listing \ref{code:mbpt3V05}  shows the new version where we
+have also replaced the explicit summation with matrix products. We should note
+that the code is getting more and more complicated the more optimizations we
+introduce. This is very common and one of the reasons we should get the simple
+versions working first. The more complicated the code, the easier it it to
+introduce errors and it is more difficult to spot them.
     
-\begin{table}
+\begin{table}[h]
 \caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V05}
 using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V05}
 \begin{verbatim}
@@ -3239,67 +3257,108 @@ Each sample counts as 0.01 seconds.
  time   seconds   seconds    calls  ms/call  ms/call  name    
  91.16     14.59    14.59 484191644     0.00     0.00  V_Minnesota(...)
   7.68     15.82     1.23                             mbpt3V05::getEnergy()
-
 \end{verbatim}
 \end{table}
+
     Table \ref{profile:mbpt3V05}
-    shows the profile. We have reduced the number of calls to the potential
+    shows the profile of this new version. We have reduced the number of calls to the potential
     function and the total run time has been reduced accordingly.  However, the
     time spent in calculating the potential function still dominates the total
     run time. While we don't want to spend any more time a optimizing this
     potential, we want to use the profile to discuss some potential directions
     to move in. 
+
+\begin{table}[h]
+\caption{Flat profile for the MBPT3 implmentation in Listing
+\ref{code:mbpt3V05} compiled with the -static flag enabled using 3196 states
+calculating nuclear matter with 14 protons and 14
+neutrons}\label{profile:mbpt3V05_v2}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 68.06     44.68    44.68                             __ieee754_exp_avx
+ 21.26     58.64    13.96 484191644     0.00     0.00  V_Minnesota(...)
+  5.37     62.17     3.53                             exp
+  2.18     63.60     1.43                             mbpt3V05::getEnergy()
+  0.94     64.22     0.62                             dgemm_otcopy
+  0.55     64.58     0.36                             dgemm_kernel
+  0.53     64.93     0.35                             __mpexp_fma4
+  0.25     65.09     0.17                             __floor_sse41
+\end{verbatim}
+\end{table}
     First, let's turn on a new link flag -static to include calls to library
-    functions in the profile. Listing XXX shows the new profile. While the
-    profiler now seems a little bit confused about which functions are being
-    called, it is clear that almost 80\% of the total run time is spent in some
-    version of an exponential function. To get more information than this we
-    would have to compile the standard c libraries with the -pg option also, but
-    we have enough information to continue. Listing XXX shows the relevant parts
-    of the minnesota potential code. The exponential function is called 6 times
-    for each matrix element. By using the exponent rules, we can rewrite the
-        exponential as a product of multiple exponential functions that is
-        composed of factors of exp(q1x*q2x), exp(q1y*q2y), and exp(q1z*q2z). By
-        pre-computing these exponential functions we can reduce the number of
-        calls to the exponential function from around 400 million in our test
-        case to around 7 million. That should take a big chunk out of the run
-        time for this program. We leave this as an exercise for the reader.
-        The next level of optimization we can do is try to leverage all the cpu
-        cores that are available on modern hardware. We can do this is several
-        ways. First we can introduce openMP directives into our code, like we
-        have shown in Listing XXX. This will enable multiple execution streams
-        that all share the same view of memory, so we have to use a reduction
-        clause on the energy variable to make sure the threads work on their own
-        copy and then add the different contributions in the end. In this case
-        this is done under the hood and the only thing we have to do is add
-        these directives. Table XXX shows the total run time for different
-        number of threads. Ideally this should scale linearly with the number of
-        threads since we have divided the workload evenly between the number of
-        cores. In reality we are seeing contention for memory resources which
-        slows things down. Especially in the minnesota potential function, the
-        different threads are using a lot of the same memory to access the
-        single particle data in a non-contiguous way, which creates this
-        contention.
-        The simplest way to exploit all the compute units on the machine you are
-        working on is to introduce OpenMp or OpenACC directives. Since OpenACC
-        is not yet generally available in open-source compilers (gcc 6.0
-        includes support for OpenACC, but it's not enabled by default), we will
-        only use OpenMP in this text. Both OpenMP and OpenACC will eventually
-        allow your code to be run on accellerators like GPU's and multi-core
-        architectures like the Intel Phi as well as regular CPU's, but they have
-        very different strategies to accomplish this. While OpenMP forces the
-        developer to explicitly map the parallelism onto the hardware, OpenACC
-        takes a more descriptive approach. With OpenACC directive you tell the
-        compiler what can be run in parallel and the compiler figures out the
-        best way to run this on the available hardware.
+    functions in the profile. Table \ref{profile:mbpt3V05_v2} shows the new
+    profile. The profile is now alot more busy and it shows a longer runtime
+    than the previous profile. This is because gprof doesn't sample time spent
+    in dynamically linked libraries. The total runtiem in this profile
+    corresponds better with Table \ref{tab:mbpt3V02_runtime}, but it's also more
+    difficult to read. What is clear is that the call to the function labelled
+    \verb;__ieee754_exp_avx; takes up almost 70 \% of the run time. This is the
+    calls to the exponential function in the potential code.
+
+\lstinputlisting[language=c++,numbers=left,firstline=145,lastline=162,
+caption=Relevant section of the Minnesota potential function. \label{code:minnesota}]
+{Chapter8-programs/cpp/MBPT/minnesota_potential.cpp}
+
+Listing \ref{code:minnesota} shows the relevant parts of the potential function.
+Note that the profile doesn't list the number of calls to the exponential
+function because the c standard libary hasn't been instrumented with the -pg
+compiler flag.
+    
+The exponential function is called 6 times for each matrix element. By using
+the exponent rules, we can rewrite the exponential as a product of multiple
+exponential functions that is composed of factors of exp(q1x*q2x),
+exp(q1y*q2y), and exp(q1z*q2z). By pre-computing these exponential functions
+we can reduce the number of calls to the exponential function by a couple of
+orders of magnitude and take a big chunk out of the run time for this
+program. We leave this as an exercise for the reader.
+
+The next level of optimization we can do is try to leverage all the cpu
+cores that are available on modern hardware. We can do this is several
+ways. First we can introduce openMP directives into our code, like we
+have shown in Listing \ref{code:mbpt3V04}. This will enable multiple execution streams
+that all share the same view of memory, so we have to use a reduction
+clause on the energy variable to make sure the threads work on their own
+copy and then add the different contributions in the end. In this case
+this is done under the hood and the only thing we have to do is add
+these directives. Figure \ref{fig:mbpt3_omp} shows the total run time for different
+number of threads. Ideally this should scale linearly with the number of
+threads since we have divided the workload evenly between the number of
+cores. In reality we are seeing contention for memory resources which
+slows things down. Especially in the minnesota potential function, the
+different threads are using a lot of the same memory to access the
+single particle data in a non-contiguous way, which creates this
+contention.
+The simplest way to exploit all the compute units on the machine you are
+working on is to introduce OpenMp or OpenACC directives. Since OpenACC
+is not yet generally available in open-source compilers (gcc 6.0
+includes support for OpenACC, but it's not enabled by default), we will
+only use OpenMP in this text. Both OpenMP and OpenACC will eventually
+allow your code to be run on accellerators like GPU's and multi-core
+architectures like the Intel Phi as well as regular CPU's, but they have
+very different strategies to accomplish this. While OpenMP forces the
+developer to explicitly map the parallelism onto the hardware, OpenACC
+takes a more descriptive approach. With OpenACC directive you tell the
+compiler what can be run in parallel and the compiler figures out the
+best way to run this on the available hardware.
         
 \lstinputlisting[language=c++,numbers=left,firstline=16,lastline=69,
 caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
 in memory and openmp directives. \label{code:mbpt3V04}]
 {Chapter8-programs/cpp/MBPT/mbpt3V04.cpp}
 
+\begin{figure}
+\includegraphics[width=\linewidth]{Chapter8-figures/omp_scaling.pdf}
+\caption{Total runtime for the mbpt3 code in in Listing \ref{code:mbpt3V04}
+uwing different number of OpenMP threads on a 16 code node of a Cray XK7.}
+\label{fig:mbpt3_omp}
+\end{figure}
 A simple OpenMp version
-of MBPT3 with OpenMP is shown in Listing \ref{code:mbpt3V04} and Figure XXX shows the
+of MBPT3 with OpenMP is shown in Listing \ref{code:mbpt3V04} and Figure
+\ref{fig:mbpt3_omp} shows the
 total execution time using different number of cores on a Cray XK7 node
 on Titan at OLCF.
 
