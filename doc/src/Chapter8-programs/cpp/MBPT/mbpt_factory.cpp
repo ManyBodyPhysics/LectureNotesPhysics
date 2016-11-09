@@ -14,6 +14,7 @@
 #include "mbpt3V02.hpp"
 #include "mbpt3V03.hpp"
 #include "mbpt3V04.hpp"
+#include "mbpt3V05.hpp"
 #include "timer.hpp"
 
 bool needChannels(Input_Parameters &parameters) {
@@ -132,6 +133,11 @@ mbSolver* mbpt3Factory(Input_Parameters &parameters, Model_Space &modelspace, Ch
     case 4:
     {
       solver = (mbSolver*) new mbpt3V04(parameters, modelspace, channels);
+      break;
+    }
+    case 5:
+    {
+      solver = (mbSolver*) new mbpt3V05(parameters, modelspace, channels);
       break;
     }
   }
