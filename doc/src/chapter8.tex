@@ -2978,24 +2978,22 @@ not valid.
 
 \subsection{Tracking changes}
 If you're not using a tool to track the changes you make to your code, now is
-the time to start. The authors are using git, an open-source version-control
-system that can run on Linux, OsX and Windows, but there are other alternatives
-out there. If we track our changes it is easier to correct a mistake when it
-inevitably creeps into our code. We can always go back to previous versions that
-we know worked and by using branches, we can work on different versions on our
-code simultaneously, for example a production branch where we know everything
-works and a development branch where we implement new features. There are also
-code repositories where you can store a copy of your code for free, without
-worrying about things getting lost. The source codes discussed in this book are
-hosted on GitLab, which uses git to track all changes done to your code. Hosting
-your code here also makes it easier to synchronize your work between multiple
-machines. Multiple people can work on the same code at the same time and share
-changes without worrying about losing each others contribution. And if you
-couple this with the automatic testing we discussed earlier, we have a very
-robust system in place for developing software. Secondary benefits of using a
-repository service like GitLab includes never loosing your code to hardware or
-software problems and easy synchronization of your code between different
-machines where you develop and run your code.
+the time to start. There are several tools available~\cite{refneeded}, but the
+authors are using git~\cite{refneeded}, an open-source version-control system
+that can run on Linux, OSX, and Windows. By tracking changes, it's easier to
+correct a mistake when it inevitably creeps into the code. It is possible to go
+back to a previously validated version and by using branches, you can work on
+different versions of the code simultaneously. For example, you can create a
+production branch where everything is validated and ready to run, and you can
+create a development branch to implement new features.  There are also code
+repositories where you can store a copy of your code for free, without worrying
+about things getting lost. The source codes discussed in this book are hosted on
+GitLab~\cite{refneeded}, which uses git to track all changes to the code. By
+using a service like this, it is easier to synchronize code between multiple
+machines. Multiple developers can work on the same code at the same time and
+share changes without worrying about losing contributions. It can also become
+the official public repository of your software to enable your peers to verify
+your work.
 
 \subsection{Profile-guided optimization}
 In this section we will demonstrate the use of a simple profiler to help us
