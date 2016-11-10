@@ -2911,51 +2911,70 @@ from perturbation theory to specific terms in the solution of the coupled
 cluster equations, the in-medium similarity renormalization group approach of
 chapter 10 and the Green's function approach of chapter 11.
 
-\subsection{Test-driven development}
-To ensure that our results are correct, we have to test our code. But code can
-be tested in many different ways and on different levels. Most of us are used to
-comparing our results against benchmarks, against other peoples implementations,
-and even analytical results where those are available. These types of tests are
-called validation tests or even acceptance tests. Some of us even have these
-tests automated so they can be run at any time to ensure that changes haven't
-introduced errors into our code. It's very easy to introduce an error in one
-part of the code that has consequences in a completely different part that has
-already been tested and validated. Writing and running automated tests can help
-spot these mistakes early, while our recent changes are all fresh in memory. 
-We can also write a form of tests called unit tests. These are tests that work
-on individual components of the code in isolation. For example, if one part of
-your code solves a differential equation of a certain kind, you could test the
-solver on many different differential equations, both easy and hard, and compare
-to known results. This requires the development of separate test executables
-that uses your code differently that your main program. The consequences of
-using this approach are manifold. First, you will have a higher degree of
-confidence in your code, because you  know the individual pieces work
-independently. Second, you will develop a programming style that favors highly
-decoupled units because such units are easier to test. Last, your tests become
-the documentation of how your code is supposed to be used. This might not seem
-important while your are actively working on a project, but it will be
-invaluable down the line when you want add new features to this code after some
-time away from. Also, if you ever share your code, these tests will be the way
-your user will start to understand it.
-To complement the validation tests and unit tests, we also try to write
-integration tests where different units are tested in combination. To many this
-might seem like to much testing and that you will spend more time writing tests
-than solving the scientific question you set out to solve. In many cases this is
-true, but the alternative is to spend all that time and more debugging your
-application when you find out that your program as a whole does not solve the
-problem you want it to solve. In a way, debugging code is not so different than
-writing tests. The only difference is when you think about testing from the
-start, your application evolves to become testable. If you application is not
-testable, then debugging becomes much more difficult and is slow and tedious
-work.
-The last question that has to be addressed, is when do we write these tests. In
-the literature on test-driven development it is advocated that tests should
-always be written first. First you write a failing test, then you write the
-parts that make it succeed, last, you clean up and refactor the code before you
-start the cycle all over again. Does it work? The authors only have a limited
-experience with this development style and have only just begun to use it
-rigorously, but from that experience we must say that is has certainly made it
-more efficient to develop working code.
+\subsection{Validation and verification}
+The single most important thing in a numerical experiment is to get the correct
+answer. A close second is to be confident that the answer is correct and why. A
+lucky coincidence must be distinguisable from a consistently correct result. The
+only way to do this is to validate the code by writing and running tests -- lots
+of tests. Ideally, every aspect of a code should be tested and it should be
+possible to run the tests automatically. As most of you have probably
+experienced, it's very easy to introduce errors into a project. And very often,
+symptoms of the errors are not visible where the errors have been introduced. By
+having a large set of automated tests and running them often, symptoms of errors
+can be discovered quickly and the errors tracked down while recent changes are
+fresh in memory.
+
+As scientists we are trained to validate our methods and findings. By applying
+the same rigourous process to our software, we can achieve the same level of
+confidence in our code as we have for the rest of our work. We advocate testing
+at three distinct levels. Let's start with discussing validation tests, as this
+is the type of test you are probably most familiar with. In a validation test,
+you application is run as in production and the test fails if it cannot
+reproduce a known result. The known result could be a published benchmark, a
+simplified model where analytical results are available, an approximate result
+from a different method, or even an earlier result from the same code. We will
+discuss this type of testing further in section \ref{sec:ccdcode}.
+
+Analogous to testing individual components in a physical experiment, is a type
+of test called a unit test. This is a very fine-grained test that will typically
+only test a class or a procedure at a time. This is where you test that a data
+structure has been correctly filled, that an algorithm works appropriatly, that
+a file has been read correctly, and basically every other component test you can
+think of. It does take a little more work to setup as testing need to be done
+outside of your normal program flow. Typically this involves writing different
+executables that creates the necessary dependencies before testing a component.
+The advantages of writing unit tests are manifold. First, because you know that
+the individual pieces of your code work independently, you will achieve a higher
+degree of confidence in your results. Second, you will develop a programming
+style that favors highly decoupled units because such units are easier to test.
+This allows talking about the code at a higher level of abstraction, which helps
+understanding. Last, your tests become the documentation of how your code is
+supposed to be used. This might not seem important while your are actively
+working on a project, but it will be invaluable down the line when you want add
+new features after some time away. Also, when you share your code as part of the
+scientific process, these tests will be the way your peers will start to
+understand your work.
+
+While validation tests test your code at the coursest level, and unit tests test
+your code at the finest level, integration tests test how your components work
+together. If, for example, your program solves differential equations as parts
+of a larger problem, the components that make up your differential-equation
+solver can be tested alone. If your solver can solve a set of representative
+problems that either has an anlytical solution or can be worked out using some
+other tool, you can be more confident that it will work on your specific
+problem.  Moreover, writing integration tests pushes you to develop more general
+components. Instead of writing a routine that only solves the differential
+equations you need, you write a solver that can solve many different types of
+differential equations. This allows your components to be reused in other
+projects and by other people.
+
+To many, this rigourous approach to testing software might seem like a waste of
+time. Our view is that testing software is crucial to the scientific process and
+we should strive to apply the same level of rigour to our software as we do to
+every other aspect of our work. On a more pragmatic level, you can either spend
+your time writing tests and make sure your components work, or you can spend
+your time debugging when something goes wrong and worry that your results are
+not valid.
 
 \subsection{Tracking changes}
 If you're not using a tool to track the changes you make to your code, now is
@@ -3332,7 +3351,7 @@ of MBPT3 with OpenMP is shown in Listing \ref{code:mbpt3V04} and Figure
 total execution time using different number of cores on a Cray XK7 node
 on Titan at OLCF.
 
-\subsection{Developing a CCD code for infinite matter}
+\subsection{Developing a CCD code for infinite matter\label{sec:ccdcode}}
   This section focuses on writing a working CCD code from
   scratch. What follows serves also the scope of outlining how to start a numerical project.  We will assume that you have 
 opted for a specific mathematical method for solving Schr\"odinger's equation. Here the mathematics is  given by the CCD equations.  
