@@ -2867,79 +2867,49 @@ The standard method for solving these equations is to
   Eq. (\ref{eq:ccd}).
 
 \section{Developing a numerical project}\label{sec:chap8numproject}
-As computational  scientists we work at the intersection of our own scientific
-domain, mathematic and computer science. Most of us have a deep formal education
-in the first two subjects, but are not well versed in the computer science
-aspects of our work. For many of us, the software engeneeing aspects of our work
-has been thought of as something you pick up along the way and not worth
-spending efforts on during our formal education. Of course, there are exceptions
-but this chapter is not written for them.
-There is a rich scientific literature and textbooks dedicated to the topic of
-software engineering. There are many philosophies and schools of thoughts on how
-to write software and what programming paradigms are best suited for particular
-jobs. You could get lost in the literature trying to find the one true way. In
-this book we take a more pragmatic approach and present a few key strategies to
-make our jobs a little bit easier and ensure that the results we present are
-correct.
-Most of us don't write scientific software as part of big teams or for
-customers, but are rather solo writers that seek to answer a scientific
-question. As such, our priorities are somewhat different than a team of
-developers writing software for a paying client. Therefore, we rarely need the
-strict and formal ways of approaching code that are necessary in large teams.
-However, we will try to capture the essence of these philosophies and extract
-those components that are useful and necessary in our own work.
-As writers of scientific software, our main concern in that our results are
-correct. We will focus on the tools and strategies that we use to ensure
-correctness, but also on tools and strategies to avoid losing work and as our
-projects grow, a development style that encourages many small independent parts
-that can be tested separately and reused in other projects and continuous
-improvements of the design.
+A successful numerical project relies on us having expertise in several scientific and
+engineering disciplines. We need a thourough understanding of the relevant scientific
+domain to ask the right questions and interpret the results, but the tools we
+use requires a proficiency in mathematics to develop models and work out
+analytical results, in numerics to choose the correct algorithms, in computer
+science to understand what can go wrong with our algorithms when the problem is
+discretized and solved on a digital computer, and in software engineering to
+develop and maintain a computer program that solves our problem.
 
-When developing numerical projects we would like to emphasize some
-general aspects  we feel can help in structuring a large computational project.
-Amongst these, the validation and verification of the correctness of
-the employed algorithms and programs are central issues which can
-save you a lot of time when developing a numerical project. In the
-discussions below we will use repeatedly the simple pairing model of
-problem \ref{problem:pairingmodel}.  This model allows for benchmarks
-against exact results. In addition, it provides analytical answers to
-several approximations, from perturbation theory to specific terms in the solution of the coupled
-cluster equations, the in-medium similarity renormalization group
-approach of chapter 10 and the Green's function approach of chapter
-11. 
+Indenpendent of your scientific background, you are probably also educated in
+mathematics and numerics. Unfortunatly, the computer science and
+software engeneering aspects of computing are often neglected and thought of as
+skills you pick up along the way. This is a problem for many reasons. First,
+running a numerical project is very similar to running a
+physical experiment. Your codes are the blueprints the compiler uses to build
+the experiment from the components of the computer. It is unthinkable to publish
+results from a physical experiment without a thourogh understanding of the
+experimental
+equipment. Second, the blueprints are not only used to tell the compiler what to
+build, but also by humans to understand what is beeing built, how to fix
+it if something goes wrong, and how to improve it. If the blueprints are not
+properly written and readable, human understanding is lost. Last, components of an experiment
+are always tested individually to establish tolerances and that they work
+according to specification. In software engineering, this corresponds to writing
+testable code where you can be confident in the quality of each piece. These are
+skills many writers of scientific software never learn and as a consequence
+many numerical experiments are not properly understood and are never independently
+verified.
 
-It is also important to develop an understanding of how and why our
-algorithms can go wrong and how they can be implemented in order to
-run as efficiently as possible. When working on a numerical project it
-is important to keep in mind that computing covers numerical as well
-as symbolic computing and paper and pencil solutions. Furthermore,
-version control is something we strongly recommend. It does not only
-save you time in case you struggle with odd errors in a new version of
-your code. It allows you also to make science reproducible.  Making
-your codes available to a larger audience and provinding proper
-benchmarks allows fellow scientists to test what you have developed,
-and perhaps come with considerable improvements and/or find flaws
-or errors you were not aware of. 
-Sharing your codes using for example modern version control
-software makes thus your science reproducible and adds in a natural
-way a sound ethical scientific element to what you develop.
-In the discussions below, you will thus find several links to our 
-common repository for the codes that we have developed.
-
-
-When building up a numerical project there are several elements you should think of, amongst these we take the liberty of mentioning the following:
-\begin{itemize}
-\item Structure a code in terms of functions.
-\item Modularize your codes.
-\item Be able to  read input data flexibly.
-\item Write unit tests (test functions) and let your code undergo heavy testing.
-\item Refactor code in terms of classes (instead of functions only).
-\item Conduct and automate large-scale numerical experiments.
-\item New code is added in a modular fashion to a library (modules).
-\item Programs are run through convenient user interfaces.
-\item Use scripts in order to automatize  tedious manual work.
-\item Make sure your scientific investigations are reproducible and document properly your results.
-\end{itemize}
+In this section we will focus on some key tools and strategies that we feel are
+important for developing and running a numerical experiment. Our main concerns
+are that our results can be validated, independently verified, and run
+efficiently. In addition, we will discuss tools that makes the whole process somewhat easier. We will
+cover testing, tracking changes with version control software, public code
+repositories, and touch upon simple profiling tools to guide the optimization
+process. Finally we will present a numerical project where we have developed a
+code to calculate properties of nuclear matter using coupled-cluster
+theory. Here, we will make extensive use of the simple pairing model of problem
+\ref{problem:pairingmodel}. This model allows for benchmarks against exact
+results. In addition, it provides analytical answers to several approximations,
+from perturbation theory to specific terms in the solution of the coupled
+cluster equations, the in-medium similarity renormalization group approach of
+chapter 10 and the Green's function approach of chapter 11.
 
 \subsection{Test-driven development}
 To ensure that our results are correct, we have to test our code. But code can
