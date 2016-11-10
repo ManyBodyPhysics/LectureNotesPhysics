@@ -2996,27 +2996,36 @@ the official public repository of your software to enable your peers to verify
 your work.
 
 \subsection{Profile-guided optimization}
-In this section we will demonstrate the use of a simple profiler to help us
-guide our developments efforts in a situation where we have working code, but it
-either takes too long to run or uses too much resources when faced with
-realistic cases. For this purpose we will use diagrams from many-body
-perturbation theory (MBPT) to second (MBPT2) and third (MBPT3) order with a
-two-body Hamiltonian where the Minnesota potential has been used as the two-body
-interaction.
+The aim of this subsection is to discuss in more detail how we can make the
+computations discussed in connection with equations
+Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient using
+physical constraints, algorithm improvements, and parallel processing. For
+pedagocical reasons, we will use the MBPT parts of the program due to their
+simplicity while still containing the important elements of a larger, more
+complicated calculation.  The codes can be found at the github link
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
+In this section we will demonstrate the use of a simple profiler to help
+guide our development efforts. Our starting point are naiive implementations of
+MBPT2 and MBPT3 diagrams that take too long to run. For reference, we calculate
+properties of nuclear matter and construct our Hamiltonian in a free-wave basis
+using the Minnesota potential discussed in section \ref{refneeded}. As the model
+is not as important as the performance in this section, we postpne a discussion
+the model to section \ref{sec:ccdcode}.
+
 \lstinputlisting[language=c++,numbers=left,firstline=14,lastline=34,
 caption=Trivial implementation of a MBPT2 diagram. \label{code:mbpt2V06}]
 {Chapter8-programs/cpp/MBPT/mbpt2V06.cpp}
 
-Listing \ref{code:mbpt2V06} shows a possible early implementation of a diagram from
-MBPT2. This function has a loop over all single-particle indices and calls the
+Listing \ref{code:mbpt2V06} shows a possible early implementation to solve eq.
+\ref{refneeded} from MBPT2. This function has a loop over all single-particle indices and calls the
 V\_Minnesota function to calculate the two-body interaction for each set of
 indices. The energy denominators are calculated from the single-particle
-energies stored in the modelspace structure and everything is accumulated into
+energies stored in the modelspace structure and partial results are accumulated into
 the energy variable.
 
 \begin{table}
-\caption{Total runtime for the trivial MBPT2 implementation in Listing 
-    \ref{code:mbpt2V06} for different model spaces.}\label{tab:mbpt2V06_runtime}
+\caption{Total runtime for the MBPT2 implementation in Listing 
+    \ref{code:mbpt2V06} for different model spaces and particle numbers.}\label{tab:mbpt2V06_runtime}
   \begin{center}
       \begin{tabular}{cccc}
       \hline
@@ -3047,25 +3056,21 @@ the energy variable.
 
 Table \ref{tab:mbpt2V06_runtime} shows the total execution time for this
 application for different sized model spaces and number of particles on a local
-workstation. Your runtimes will be different. This code
-quickly becomes too slow when the size of the model space is increased or the
-number of particles increase. This problem is excasperated since larger
-modelspaces are needed when we have more particles in the system.
-We want to decrease the run time of the application, but it can be difficult to
+workstation. Your runtimes will be different. Our goals are converged
+calculations of pure neutron matter as well as nuclear matter, where the number
+of states and the number of protons and neutrons goes to infinity. It suffices
+to say that we can't reach our goals with this code.
+
+We want to decrease the run time of this application, but it can be difficult to
 decide where we should spend our time improving this code. Our first order of
-business is to observe what goes on inside our program. For that we will use a
-profiling tool called gprof \cite{refneeded}, an open-source tool available on any
-unix/linux system where the gnu compiler collection is available. To use gprof
-we must first compile and link our code using the -pg flag. This flag enables
-some instrumentation of your code so that call graph information and sampling
-information is collected when you run your program. When this new
-executable is run, it generates a sampling file that can be analyzed with gprof.
-Calling gprof application-name will generate a flat profile of the run that
-lists the total run time spent in different functions. It will also generate a
-call graph that also shows how the functions were called. 
+business is to observe what goes on inside the program. For that we will use a
+profiling tool called gprof~\cite{refneeded}.
+To use gprof the code must first be compiled and linked with the -pg flag. This flag enables
+the collection of runtime information so that a call graph and a profile can be
+constructed when your program is run.
 
 \begin{table}
-\caption{Flat profile for the MBPT2 implmentation in Listing \ref{code:mbpt2V06}
+\caption{Flat profile for the MBPT2 implementation in Listing \ref{code:mbpt2V06}
 using 1598 states calculating pure neutron matter with 54 neutrons}\label{profile:mbpt2V06}
 \begin{verbatim}
 Flat profile:
@@ -3078,35 +3083,35 @@ Each sample counts as 0.01 seconds.
   2.35     45.27     1.07                             spinExchangeTerm(...)
 \end{verbatim}
 \end{table}
-Table \ref{profile:mbpt2V06} shows the
-top few lines of the flat profile generated for our first MBPT2 version. The
-leftmost column shows the percentage of the run time spent in the different
-functions and it shows that about 58 \% of the time is spent in the potential
-function, while about 40 \% is spent in the loops in the MBPT2 function. The
-remaining couple of percent is spent in the spinExchangeTerm function which is
-called from the potential function.
-The potential function is the most expensive function but clearly, we don't want
-to spend too much time on improving the code for this
-potential since we are using it only for testing purposes, but what we can do is
-reduce the number of times this function is called. The 4th column shows that
-for this particular instance, the minnsota potential was called 2.5 billion
-    times. However, due to known symmetries of the nuclear interaction
-    we know that most of these calls result in a matrix element of zero. If we
-    can exploit this structure to reduce the number of calls to the potential
-    function we will greatly reduce the total run time of this program.
-    There are certain physical properties that a nuclear potential must fulfill.
-    It must preserve energy, spin and type of particle. Wee can use this to
-    build a block-sparse representation of this operator where we calculate in
-    advance the combinations of i, j, a, and b that fulfill these conditions.
+Table \ref{profile:mbpt2V06} shows the top few lines of the flat profile
+generated for MBPT2 version in Listing \ref{code:mbpt2V06}. The leftmost column
+shows the percentage of run time spent in the different functions and it shows
+that about 58 \% of the time is spent calculating the potential while about 40
+\% is spent in the loops in the actual MBPT2 function. The remaining couple of
+percent is spent in the spinExchangeTerm function which is called from the
+potential function.  Even though the application spends most of its time
+generating the potential, we don't want to spend too much time on improving this
+code. We use the Minnesota potential for testing and benchmark purposes only and
+it will not be used for production runs. It is, however, possible to reduce the
+number of times this function is called.  The 4th column in table
+\ref{profile:mbpt2V06} shows that for this particular instance, the potential
+function was called 2.5 billion times. However, due to known symmetries of the
+nuclear interaction we know that most of these calls result in a matrix element
+of zero. If we can exploit this structure to reduce the number of calls to the
+potential function we will greatly reduce the total run time of this program.
+The details of how this is done is presented in section \ref{sec:ccdcode}.
 
 \lstinputlisting[language=c++,numbers=left,firstline=15,lastline=41,
 caption=Block-sparse implementation of a MBPT2 diagram. \label{code:mbpt2V02}]
 {Chapter8-programs/cpp/MBPT/mbpt2V02.cpp}
 
-Listing \ref{code:mbpt2V02} shows a version of this code where the potentialfunction is
-only called when we know it will produce a non-zero matrix element. For
-every dense block or channel that we have pre computed, we only loop over the
-single-particle indices matching that channel.
+Listing \ref{code:mbpt2V02} shows a version of this code where the potential function is
+not called when we know ithe matrix element is zero. This code loops over
+channels, which are the dense blocks of the full interaction. We have
+pre-computed the two-body configurations allowed in each channel and store them
+in the channels structure. The potential is computed in the same way as before,
+but for fewer combinations of indices.
+
 \begin{table}
 \caption{Flat profile for the MBPT2 implmentation in Listing \ref{code:mbpt2V02}
 using 1598 states calculating pure neutron matter with 54 neutrons}\label{profile:mbpt2V02}
@@ -3122,12 +3127,7 @@ Each sample counts as 0.01 seconds.
   8.34      0.12     0.01        1    10.00    30.01  Setup_Channels_MBPT(...)
 \end{verbatim}
 \end{table}
-    The profile in Table \ref{profile:mbpt2V02} shows that that the
-    potential function is now only called 2.5 million times, a reduction of three
-    orders of magnitude. It still takes up almost two thirds of the total run
-    time and the functions that build the channel structure uses the remaining
-    third of the run time, but the total runtime has now been reduced by several
-    orders of magnitude.
+
 \begin{table}
 \caption{Total runtime for different MBPT2 implementations for different model spaces.}\label{tab:mbpt2V02_runtime}
   \begin{center}
@@ -3158,14 +3158,66 @@ Each sample counts as 0.01 seconds.
   \end{center}
 \end{table}
 
-    Let's move on MBPT3 where the diagrams have higher computational complexity.
+The profile in Table \ref{profile:mbpt2V02} shows that the
+potential function is now only called 2.5 million times, a reduction of three
+orders of magnitude. Table \ref{tab:mbpt2V02_runtime} summarizes the execution
+times of these two versions of MBPT2.
+
 \lstinputlisting[language=c++,numbers=left,firstline=15,lastline=47,
 caption=Block-sparse implementation of a MBPT3 diagram. \label{code:mbpt3V02}]
 {Chapter8-programs/cpp/MBPT/mbpt3V02.cpp}
 
-    We already know that a block-sparse representation is necessary, so let's
-    start by showing a version of a MBPT3 diagram using this strategy in Listing
-    \ref{code:mbpt3V02}.
+\begin{table}[hbt]
+\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V02}
+using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V02}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 90.76    177.21   177.21 6068445596     0.00     0.00  V_Minnesota(...)
+  8.76    194.31    17.11                             mbpt3V02::getEnergy()
+\end{verbatim}
+\end{table}
+Listing \ref{code:mbpt3V02} shows an implementation of MBPT3 that uses a
+block-sparse representation of the interaction. Compared to MBPT2 it loops over
+two additional particle indices which increases the computational complexity
+by several orders of magnitude. However, we are now calculating the interaction
+many more times than what is necessary. The profile in Table
+\ref{profile:mbpt3V02} shows that we calculated over six 
+billion matrix elements. By moving the construction of the interaction out of
+the main loops and storing the elements, we can eliminate these redundant calls
+to the potential function at the expense of using memory to store the elements. 
+
+\lstinputlisting[language=c++,numbers=left,firstline=16,lastline=65,
+caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
+in memory. \label{code:mbpt3V05}]
+{Chapter8-programs/cpp/MBPT/mbpt3V05.cpp}
+
+Listing \ref{code:mbpt3V05} shows the new version of the code that stores matrix
+elements of the interaction. The explicit summation to calculate the energy can now be done by
+using matrix products by calling the blas dgemm wrappers \verb;RM_dgemm; and
+\verb;RMT_dgemm;. Note that the code has grown more complicated for every new
+optimization we have introduced. This increases the possibility of introducing
+errors significantly. It's a good thing we have tests to make sure that the
+results haven't changed between versions. Table \ref{profile:mbpt3V05} shows the
+profile for this version and we have reduced the number of calls the potential
+function considerably.
+    
+\begin{table}[h]
+\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V05}
+using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V05}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 91.16     14.59    14.59 484191644     0.00     0.00  V_Minnesota(...)
+  7.68     15.82     1.23                             mbpt3V05::getEnergy()
+\end{verbatim}
+\end{table}
     
 \begin{table}
 \caption{Total runtime for the MBPT3 implementation in Listing 
@@ -3194,66 +3246,16 @@ caption=Block-sparse implementation of a MBPT3 diagram. \label{code:mbpt3V02}]
   \end{center}
 \end{table}
 
-    
-Table \ref{tab:mbpt3V02_runtime} shows the total run time of this program for different
-modelspace sizes and number of particles. Again it is clear that we need to
-speed things up if we want to run realistic cases.
+Table \ref{tab:mbpt3V02_runtime} summarizes the execution times so far. 
 
-\begin{table}[hbt]
-\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V02}
-using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V02}
-\begin{verbatim}
-Flat profile:
-
-Each sample counts as 0.01 seconds.
-  %   cumulative   self              self     total           
- time   seconds   seconds    calls  ms/call  ms/call  name    
- 90.76    177.21   177.21 6068445596     0.00     0.00  V_Minnesota(...)
-  8.76    194.31    17.11                             mbpt3V02::getEnergy()
-\end{verbatim}
-\end{table}
-
-    The profile in Table \ref{profile:mbpt3V02} shows that the calls to the Minnesota potential
-    is still the most time-consuming function, and that this
-    function is called over six billion times. Indeed, we see that we call the potential
-    function in the innermost loop which means that we calculate the same matrix
-    element multiple times. Let's change the code so that we calculate the
-    elements once and store them for reuse. This will require more memory, but
-    we can worry about that later.
-    
-\lstinputlisting[language=c++,numbers=left,firstline=16,lastline=65,
-caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
-in memory. \label{code:mbpt3V05}]
-{Chapter8-programs/cpp/MBPT/mbpt3V05.cpp}
-
-Listing \ref{code:mbpt3V05}  shows the new version where we
-have also replaced the explicit summation with matrix products. We should note
-that the code is getting more and more complicated the more optimizations we
-introduce. This is very common and one of the reasons we should get the simple
-versions working first. The more complicated the code, the easier it it to
-introduce errors and it is more difficult to spot them.
-    
-\begin{table}[h]
-\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V05}
-using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V05}
-\begin{verbatim}
-Flat profile:
-
-Each sample counts as 0.01 seconds.
-  %   cumulative   self              self     total           
- time   seconds   seconds    calls  ms/call  ms/call  name    
- 91.16     14.59    14.59 484191644     0.00     0.00  V_Minnesota(...)
-  7.68     15.82     1.23                             mbpt3V05::getEnergy()
-\end{verbatim}
-\end{table}
-
-    Table \ref{profile:mbpt3V05}
-    shows the profile of this new version. We have reduced the number of calls to the potential
-    function and the total run time has been reduced accordingly.  However, the
-    time spent in calculating the potential function still dominates the total
-    run time. While we don't want to spend any more time a optimizing this
-    potential, we want to use the profile to discuss some potential directions
-    to move in. 
+Table \ref{profile:mbpt3V05} shows that the potential function is still the most
+expensive function in our program, but we would like to get a more detailed
+profile of this function. The code to calculate the potential is filled with
+calls to the exponential function which is part of the standard library. Since
+we have linked to the standard library dynamically, gprof is not able to show
+time spent in these functions. We can get a little bit more detail by linking
+statically. This is done by introducing the -static flag to the compiler. Table
+\ref{profile:mbpt3V05_v2} shows the new profile.
 
 \begin{table}[h]
 \caption{Flat profile for the MBPT3 implmentation in Listing
@@ -3276,61 +3278,37 @@ Each sample counts as 0.01 seconds.
   0.25     65.09     0.17                             __floor_sse41
 \end{verbatim}
 \end{table}
-    First, let's turn on a new link flag -static to include calls to library
-    functions in the profile. Table \ref{profile:mbpt3V05_v2} shows the new
-    profile. The profile is now alot more busy and it shows a longer runtime
-    than the previous profile. This is because gprof doesn't sample time spent
-    in dynamically linked libraries. The total runtiem in this profile
-    corresponds better with Table \ref{tab:mbpt3V02_runtime}, but it's also more
-    difficult to read. What is clear is that the call to the function labelled
-    \verb;__ieee754_exp_avx; takes up almost 70 \% of the run time. This is the
-    calls to the exponential function in the potential code.
 
-\lstinputlisting[language=c++,numbers=left,firstline=145,lastline=162,
-caption=Relevant section of the Minnesota potential function. \label{code:minnesota}]
-{Chapter8-programs/cpp/MBPT/minnesota_potential.cpp}
+The profile is now alot more busy and it shows a longer runtime
+than the previous profile. This is because gprof doesn't sample time spent
+in dynamically linked libraries. The total runtime in this profile
+corresponds better with Table \ref{tab:mbpt3V02_runtime}, but it's also more
+difficult to read. What is clear is that the call to the function labelled
+\verb;__ieee754_exp_avx; takes up almost 70 \% of the run time. This is the
+calls to the exponential function in the potential code. If we can reduce the
+number of evaluations of the exponential function, we can further reduce the run
+time of this application. We leave that as an exercise to the reader.
 
-Listing \ref{code:minnesota} shows the relevant parts of the potential function.
-Note that the profile doesn't list the number of calls to the exponential
-function because the c standard libary hasn't been instrumented with the -pg
-compiler flag.
-    
-The exponential function is called 6 times for each matrix element. By using
-the exponent rules, we can rewrite the exponential as a product of multiple
-exponential functions that is composed of factors of exp(q1x*q2x),
-exp(q1y*q2y), and exp(q1z*q2z). By pre-computing these exponential functions
-we can reduce the number of calls to the exponential function by a couple of
-orders of magnitude and take a big chunk out of the run time for this
-program. We leave this as an exercise for the reader.
-
-The next level of optimization we can do is try to leverage all the cpu
-cores that are available on modern hardware. We can do this is several
-ways. First we can introduce openMP directives into our code, like we
-have shown in Listing \ref{code:mbpt3V04}. This will enable multiple execution streams
-that all share the same view of memory, so we have to use a reduction
-clause on the energy variable to make sure the threads work on their own
-copy and then add the different contributions in the end. In this case
-this is done under the hood and the only thing we have to do is add
-these directives. Figure \ref{fig:mbpt3_omp} shows the total run time for different
-number of threads. Ideally this should scale linearly with the number of
-threads since we have divided the workload evenly between the number of
-cores. In reality we are seeing contention for memory resources which
-slows things down. Especially in the minnesota potential function, the
-different threads are using a lot of the same memory to access the
-single particle data in a non-contiguous way, which creates this
-contention.
-The simplest way to exploit all the compute units on the machine you are
-working on is to introduce OpenMp or OpenACC directives. Since OpenACC
-is not yet generally available in open-source compilers (gcc 6.0
-includes support for OpenACC, but it's not enabled by default), we will
-only use OpenMP in this text. Both OpenMP and OpenACC will eventually
-allow your code to be run on accellerators like GPU's and multi-core
-architectures like the Intel Phi as well as regular CPU's, but they have
-very different strategies to accomplish this. While OpenMP forces the
-developer to explicitly map the parallelism onto the hardware, OpenACC
-takes a more descriptive approach. With OpenACC directive you tell the
-compiler what can be run in parallel and the compiler figures out the
-best way to run this on the available hardware.
+The next level of optimization that we will discuss here is the introduction of
+parallelism. Most modern computers have more than one cpu core available for
+computation, but the codes we have presented so far will only run on one of
+these cores. The simplest way to make this code run in parallel is to introduce
+OpenMP~\cite{refneeded} directives. This will split the work between multiple
+execution streams that all share the same view of memory. Listing
+\ref{code:mbpt3V04} shows a new version of the MBPT3 function where we have
+introduced OpenMP directives in lines 19 and 21. The first line marks the start
+of a parallel region and defines which variables the cores can share and
+which must be duplicated. The second line defines a parallel loop, where each
+core is responsible for only a section of the loop. As long as we have enough
+work in the outermost loop, this strategy will work quite well as shown in
+Figure \ref{fig:mbpt3_omp}. Here we show the total run time of this code using
+different number of cores compared to the best run times we could have gotten
+with this approach if our parallel regions scaled perfectly with the number of
+cores. In reality this never happens. In this particular case, we could have
+made the potential function more cache friendly. With this version the different
+cores are fighting eachother for access to memory and cache, which reduces
+performance somewhat. Any further optimization of this code would yield
+diminishing returns
         
 \lstinputlisting[language=c++,numbers=left,firstline=16,lastline=69,
 caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
@@ -3343,11 +3321,6 @@ in memory and openmp directives. \label{code:mbpt3V04}]
 uwing different number of OpenMP threads on a 16 code node of a Cray XK7.}
 \label{fig:mbpt3_omp}
 \end{figure}
-A simple OpenMp version
-of MBPT3 with OpenMP is shown in Listing \ref{code:mbpt3V04} and Figure
-\ref{fig:mbpt3_omp} shows the
-total execution time using different number of cores on a Cray XK7 node
-on Titan at OLCF.
 
 \subsection{Developing a CCD code for infinite matter\label{sec:ccdcode}}
   This section focuses on writing a working CCD code from
