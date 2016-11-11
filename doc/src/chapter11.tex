@@ -1,3 +1,8 @@
+
+
+%\usepackage{calrsfs}
+%\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+
 \title{Self-consistent Green's function approaches}
 \author{Carlo~Barbieri and Arianna Carbone}
 \institute{
@@ -21,10 +26,11 @@ The  paring and neutron matter models introduced in previous chapters are solved
 \section{Introduction}
 
 Ab-intio methods that present polynomial scaling with the number of particles have proven highly useful in reaching
-finite systems of rather large sizes up to medium mass nuclei~\cite{ch11_Soma2014s2n,ch11_Binder2014ccSn132,ch11_Hergert2014Ni} and even infinite matter~\cite{ch11_Frick2003,ch11_Baardsen2013ccNM,ch11_Carbone2014}. Most approaches of this type that are discussed in previous chapters aim at the direct evaluation of the ground state energy of the system, where several other quantities of interests can be addressed in a second stage through the equation of motion and particle removal or attachment techniques.
+finite systems of rather large sizes up to medium mass nuclei~\cite{ch11_Soma2014s2n,ch11_Barbieri2014qmbt17,ch11_CCM_2014rev} %ch11_Binder2014ccSn132} %,ch11_Hergert2014Ni}
+and even infinite matter~\cite{ch11_Frick2003,ch11_Baardsen2013ccNM,ch11_Carbone2014}. Most approaches of this type that are discussed in previous chapters aim at the direct evaluation of the ground state energy of the system, where several other quantities of interests can be addressed in a second stage through the equation of motion and particle removal or attachment techniques.
 %
 Here, we will follow a different route and focus on gaining from the start a global  view of the spectral structure of a system of fermions. Our approach will be that of calculating directly the self-energy (also know as {\em mass operator}), which describes the 
-complete response of a particle embedded in the true ground state of the system. This not only provides an effective in medium interaction for the nucleon, but it is also the optical potential for elastic scattering and it yields the spectral information relative to the attachment and removal of a particle.   Once the  one body Green's function has been obtained, the total energy of the system is calculated, as the final step, by means of appropriate sum rules~\cite{ch11_dickhoff2004}.
+complete response of a particle embedded in the true ground state of the system. This not only provides an effective in medium interaction for the nucleon, but it is also the optical potential for elastic scattering and it yields the spectral information relative to the attachment and removal of a particle.   Once the  one body Green's function has been obtained, the total energy of the system is calculated, as the final step, by means of appropriate sum rules~\cite{ch11_Koltun1974KSR,ch11_dickhoff2004}.
 
 Two main approaches have become standard choices for calculations of Green's functions in nuclear many-body theory.
 %
@@ -35,10 +41,10 @@ ADC($n$) methods are part of a larger class of approaches based on intermediate-
 The other method consists in solving directly the nucleon-nucleon ladder scattering matrix for dressed particles in the medium, which can be done effectively in a finite temperature formalism~\cite{ch11_Frick2004PhD,ch11_Rios2007PhD}. Hence, this makes possible to study thermodynamic properties of the infinite and liquid matter. For these studies to be reliable, it is mandatory to ensure the satisfaction of fundamental conservation laws and to maintain thermodynamic consistency in the infinite size limit. We show here how to achieve this by preforming fully {\em self-consistent} calculations of the Green's function. In this context, `self-consistency' means that the information on the ground state and excitations of the systems are not obtained from a reference state but taken directly from the true correlated wave function. To achieve this, the computed spectral function is fed back into the working equations and calculations are repeated until a consistency between input and output is obtained.  This approach 
 is referred to as self-consistent Green's function (SCGF) method and it is always implemented, partially or in full, for nuclear structure applications.
 
-Very recent advances in computational applications concern the extension of SCGF theory to the Gorkov-Nambu formalism for the breaking on particle number symmetry~\cite{ch11_VdSluys1993,ch11_Soma2011GkvI,ch11_Idini2012}. This allows to  treat pairing systematically in systems with degenerate reference states and, therefore, calculate directly open-shell nuclei. As a result, this developments have  opened the possibility of  studying large set of semi-magic nuclei that were previously beyond the reach of ab-initio theory. We will not discuss the Gorkov-SCGF approach here, but we will focus on the fundamental features of the standard approaches instead. The interested reader is referred to recent literature on the topic~\cite{ch11_Soma2011GkvI,ch11_Soma2013rc,ch11_Soma2014Lanc}.
+Very recent advances in computational applications concern the extension of SCGF theory to the Gorkov-Nambu formalism for the breaking on particle number symmetry~\cite{ch11_VdSluys1993,ch11_Soma2011GkvI,ch11_Idini2012}. This allows to  treat pairing systematically in systems with degenerate reference states and, therefore, calculate directly open-shell nuclei. As a result, this developments have  opened the possibility of  studying large set of semi-magic nuclei that were previously beyond the reach of {\emph ab initio} theory. We will not discuss the Gorkov-SCGF approach here, but we will focus on the fundamental features of the standard approaches instead. The interested reader is referred to recent literature on the topic~\cite{ch11_Soma2011GkvI,ch11_Soma2013rc,ch11_Soma2014Lanc,ch11_Cipollone2015OxChain}.
 
 In the process of discussing the relevant working equations  of SCGF theory, we will also deal with applications to the same pairing model and the neutron matter with the Minnesota potential already discussed in chapters~8 and~9.  Together with presenting the most important steps for their numerical implementations, this book provides two examples of working codes in FORTRAN and C++ that can solve these models.  Results for the self-energy and spectral functions  should serve to gain a deeper understanding of the many-body physics that is embedded in the SCGF method.
- In discussing this, we will also present a final benchmark among the converged results from other methods discussed in this book: coupled cluster (chapter~8),  Monte Carlo (chapter~9),  in-medium similarity renormalization group (chapter~10),  and SCGF~(this chapter).
+ In discussing this, we will also present a final benchmark among the converged results obtained in other chapters of this book: coupled cluster (chapter~8),  Monte Carlo (chapter~9)  and SCGF~(this chapter).
 
 %We introduce the concept of many-particle Green's function in Section~\ref{sec:scgf_defs} and discuss the relation between the one-body spectral function and experimental data. This will also allow us to cover the main sum rules needed to extract the total binding energy of the system and any one-body observable.
  %This will also allow us to cover the main sum rules needed to extract the total binding energy of the system and any one-body observable.
@@ -68,9 +74,9 @@ For $t>t'$, Eq.~\eqref{eq:g1Time} gives the probability amplitude to add a parti
 In spite of being the simplest type of propagator, the one-body Green's function does contain a wealth of information regarding single particle behavior inside the many-body system, one-body observables, the total binding energy, and even elastic nucleon-nucleus scattering.
 %
 The propagation of a particle or a hole excitation correspond to the time evolution of an intermediate many-body system with $A+1$ or $A-1$ particles.
-One can better  understand the physics information included in Eq.~\eqref{eq:g1Time} from considering the eigenstates $\vert\Psi^{A+1}_n\rangle$, $\vert\Psi^{A-1}_k\rangle$ and eigenvalues $E^{A+1}_n$, $E^{A-1}_k$ of these intermediate systems. By expanding on these eigenstates and Fourier transforming from time to frequency, one arrives at the Lehmann representation of the one-body Green's function~\cite{ch11_Lehmann1954}:
+One can better  understand the physics information included in Eq.~\eqref{eq:g1Time} from considering the eigenstates $\vert\Psi^{A+1}_n\rangle$, $\vert\Psi^{A-1}_k\rangle$ and eigenvalues $E^{A+1}_n$, $E^{A-1}_k$ of these intermediate systems. By expanding on these eigenstates and Fourier transforming from time to frequency, one arrives at the spectral representation of the one-body Green's function:
 \begin{eqnarray}
- g_{\alpha\beta}(\omega) ~&=&~ \int d\tau \; e^{i\omega\tau} g_{\alpha\beta}(\tau)
+ g_{\alpha\beta}(\omega) ~&=&~ \int {\rm d}\tau \; e^{i\omega\tau} g_{\alpha\beta}(\tau)
  \nonumber \\
  &=&~
  \sum_n  \frac{ 
@@ -86,7 +92,8 @@ One can better  understand the physics information included in Eq.~\eqref{eq:g1T
         ~+~ \sum_k \frac{\pazocal{Y}^{k}_\alpha  (\pazocal{Y}^{k}_\beta)^*}{\hbar\omega  - \varepsilon^-_{k} - i\eta}  \; ,
 \label{eq:g1Leh}
 \end{eqnarray}
-where the operators $a^\dagger_\alpha$ and~$a_\alpha$ are now in Sch\"ordinger picture.
+where the operators $a^\dagger_\alpha$ and~$a_\alpha$ are now in Sch\"ordinger picture. 
+Eq.~\eqref{eq:g1Leh} was derived by a number of authors in the 1950s but is usually referred to as the `Lehmann' representation in many-body physcis~\cite{ch11_Umezawa1951spRep,ch11_Kallen1952SpRep,ch11_Lehmann1954}.
 %
 For the rest of this chapter (with the only exception of Appendix 1) we will work in dimensionless $\hbar=c=1$ units to avoid carrying over unnecessary  $\hbar$ terms.
 %
@@ -136,7 +143,7 @@ In both cases, by recursively substituting the exact Green's function (indicated
  
  A full knowledge of the self-energy  $\Sigma^{\star}(\omega)$ (see Eqs.~(\ref{eq:Dyson})) would yield the exact solution for $g(\omega)$ but in practice this has to be approximated somehow.
  Standard perturbation theory,  expands $\Sigma^{\star}(\omega)$ in a series of terms that depend on the interactions and on the unperturbed propagator $g^{(0)}(\omega)$.  However, it is also possible to rearrange the 
-perturbative expansion in diagrams that depend only on the exact dressed propagator itself (that is, $\Sigma^{\star}=\Sigma^{\star}[g(\omega)]$).  Since any propagator in this diagrammatic expansion is already dressed, one only need to consider a smaller set of contributions---the so-called  {\em skeleton} diagrams.
+perturbative expansion in diagrams that depend only on the exact dressed propagator itself (that is, $\Sigma^{\star}=\Sigma^{\star}[g(\omega)]$).  Since any propagator in this diagrammatic expansion is already dressed, one only needs to consider a smaller set of contributions---the so-called  {\em skeleton} diagrams.
 These are diagrams that  do not explicitly include any self-energy insertion, as these are already generated by Eqs.~\eqref{eq:Dyson}. 
 We will discuss these aspects in more detail in Sec.~\ref{sec:pertexp}.
 %
@@ -174,7 +181,7 @@ The particle part, $S^p_{\alpha \alpha}(\omega)$, is the joint probability of ad
 \includegraphics[height=0.38\textwidth]{Chapter11-figures/Fig_Ni56_SctFn.pdf}
 \caption{
 Calculated single-particle spectral function for the addition and removal of a neutron to and form $^{56}$Ni, from Ref.~\cite{ch11_Barbieri2009Ni}. The diagonal part, $S_{r,r}(\omega)$, is
-shown in coordinate space. Energies below the Fermi level, $E_F$ correspond to the  one-hole spectral function $S^h_{r,r}(\omega)$  which describes
+shown in coordinate space. Energies below the Fermi level $E_F$ correspond to the  one-hole spectral function $S^h_{r,r}(\omega)$  which describes
 the distribution of nucleons in energy and coordinate space. Integrating over all the quasihole energies yields the matter  density distribution, Eq.~\eqref{eq:rho_r}.
 Energies above $E_F$ are for the one-particle spectral function $S^p_{r,r}(\omega)$.}
 \label{fig:ScptFnctN56}
@@ -197,7 +204,7 @@ The energy distribution of spectroscopic factors is given by
           ~+~  \sum_n  SF_k^- \, \delta( \omega - E^A_0 + E^{A-1}_k ) \; ,
 \label{eq:SFvsE}
 \end{eqnarray}
-where each $\delta$-peak corresponds to eigenstate of a neighboring isotope with $A\pm1$ particles. these quasiparticle energy are directly observed in nucleon addition and removal experiments.
+where each $\delta$-peak corresponds to eigenstates of a neighboring isotope with $A\pm1$ particles. These quasiparticle energy are directly observed in nucleon addition and removal experiments.
 %
 Note that the total strength  seen in such experiment results from a convolution of the spectroscopic amplitudes and the dynamics of the reaction mechanisms. Hence, while the quasiparticle energies appearing in the poles of Eq.~\eqref{eq:g1Leh} are strictly observed, the magnitude of the spectral strength $S(\omega)$ only gives a semi-quantitative description of the observed cross sections.
 
@@ -206,7 +213,7 @@ Note that the total strength  seen in such experiment results from a convolution
 Any one-body observable can be calculated via the one-body density matrix $\rho_{\alpha\beta}$, which is obtained from $g_{\alpha\beta}(\omega)$ as follows:
 \begin{equation}
  \rho_{\alpha \beta} ~\equiv ~ \langle\Psi_0^A\vert a^{\dag}_{\beta}a_{\alpha} \vert\Psi_0^A\rangle
-  ~=~  \int_{-\infty}^{\varepsilon^-_0}S^h_{\alpha\beta}(\omega)~d\omega=\sum_k ({\pazocal Y}^k_{\beta})^*{\pazocal Y}^k_{\alpha} .
+  ~=~  \int_{-\infty}^{\varepsilon^-_0}S^h_{\alpha\beta}(\omega)~{\rm d}\omega=\sum_k ({\pazocal Y}^k_{\beta})^*{\pazocal Y}^k_{\alpha} .
  \label{eq:OBDM}
 \end{equation}
 The expectation value of a one-body operator, ${\widehat O}^{1B}$, can then be written in terms of the ${\pazocal Y}$ amplitudes as:
@@ -219,22 +226,23 @@ However, evaluating two- and many-nucleon observables requires the knowledge of 
 Eq.~\eqref{eq:OBDM} also implies that the density profile of the system can be obtained by integrating over the hole  spectral function in coordinate space (cf. Fig.~\ref{fig:ScptFnctN56}):
 \begin{equation}
   \label{eq:rho_r}
-   \rho({\bf r})  =  \int_{-\infty}^{\varepsilon^-_0}S^h_{{\bf r},{\bf r}}(\omega)~d\omega \; .
+   \rho({\bf r})  =  \int_{-\infty}^{\varepsilon^-_0}S^h_{{\bf r},{\bf r}}(\omega)~{\rm d}\omega \; .
 \end{equation}
 Likewise, a second sum (or integration) over the coordinate space yields the total number of particles,
 \begin{equation}
-  \int d\,{\bf r} \,  \int_{-\infty}^{\varepsilon^-_0} d\omega \; S^h_{{\bf r},{\bf r}}(\omega) ~=~
-   \sum_\alpha \int_{-\infty}^{\varepsilon^-_0} \, S^h_{\alpha\alpha}(\omega)~d\omega ~=~ A \; .
+  \int {\rm d}\,{\bf r} \,  \int_{-\infty}^{\varepsilon^-_0} S^h_{{\bf r},{\bf r}}(\omega)~{\rm d}\omega \;  ~=~
+   \sum_\alpha \int_{-\infty}^{\varepsilon^-_0} \, S^h_{\alpha\alpha}(\omega)~{\rm d}\omega ~=~ A \; .
+   \label{eq:part_num}
 \end{equation}
 
 A very special case is the Koltun sum-rule that allows calculating the total energy of the system by means of the exact one-body propagator alone, $g(\omega)$~\cite{ch11_Galitskii1958KSR,ch11_Koltun1974KSR}. 
 This relation is exact for any Hamiltonian containing at most one- and two body interactions.  When many-particle interactions are present, it is necessary 
-to correct for the over countings that arise from these additional terms~\cite{ch11_Carbone2013Nov}. For the specific case in which a three-body interaction $\widehat{W}$ in included, the exact relation for the ground state energy is given by the following modified Koltun rule:
+to correct for the over countings that arise from these additional terms~\cite{ch11_Carbone2013Nov}. For the specific case in which a three-body interaction $\widehat{W}$ is included, the exact relation for the ground state energy is given by the following modified Koltun rule:
 \begin{equation}
   \label{eq:Koltun_hW}
   E^A_0 = \sum_{\alpha\beta} \frac{1}{2} 
             \int_{-\infty}^{\varepsilon^-_0}  [\,T_{\alpha\beta}+\omega\,\delta_{\alpha\beta}\, ]
-            \, S^h_{\beta\alpha}(\omega) \; d\omega
+            \, S^h_{\beta\alpha}(\omega) \; {\rm d}\omega
             ~-~  \frac{1}{2} \langle \widehat W\rangle \, .
 \end{equation}
 This still relies on the use of a one-body propagator but
@@ -249,7 +257,7 @@ Thankfully, in most cases the total strength of $\widehat{W}$ is much smaller th
 As a typical example in finite nuclei, the error from this approximation has been estimated not to exceed 250~keV for the total binding energies for $^{16}$O and $^{24}$O~\cite{ch11_Cipollone2013prl}. However, the accuracy of Eq.~\eqref{eq:Wddd} is not guaranteed and needs to be verified case by case.
 
 
-\subsection{Perturbation expansion of the Green 's function}
+\subsection{Perturbation expansion of the Green's function}
 \label{sec:pertexp}
 
 In order to understand the following sections and to devise appropriate approximations to the self-energy $\Sigma^{\star}(\omega)$ it is necessary to understand the basic elements of perturbation theory.  These will be also fundamental to derive all-order summation schemes leading to non perturbative solutions and to discuss the concept of self-consistency. We summarize here the material needed to understand the following sections, while the full set of Feynman rules is reviewed in  Appendix 1.
@@ -340,7 +348,7 @@ one-, two,- and three-body interactions entering Eq.~\eqref{eq:H} and wavy lines
 \end{figure}
 
 
-If three- or many-body forces are included in the Hamiltonian, the number of Feynman diagrams that need to be considered at a given order increases very rapidly. In this case it becomes very useful and instructive to restrict the attention to an even smaller class on diagrams that are  {\em interaction-irreducible}~\cite{ch11_Carbone2013Nov}. An interaction vertex is said to be reducible if the whole diagram can be disconnected in two parts by cutting the vertex itself. In general, this happens for an $m$-body interaction when there is a smaller number of $n$ lines ($n < m$) that leave the interaction, may interact only among themselves, and eventually all return to it. The net outcome is that one is left with a ($m-n$)-body operator that results from the average interactions with other $n$-spectator nucleons. This plays the role of a system dependent effective force that is irreducible. Fig.~\ref{fig:EffOps} shows diagrammatically how  $\widehat{V}$ and $\widehat{W}$  can be reduced to  one- and two-body {\em effective interactions} in this way.
+If three- or many-body forces are included in the Hamiltonian, the number of Feynman diagrams that need to be considered at a given order increases very rapidly. In this case it becomes very useful and instructive to restrict the attention to an even smaller class of diagrams that are  {\em interaction-irreducible}~\cite{ch11_Carbone2013Nov}. An interaction vertex is said to be reducible if the whole diagram can be disconnected in two parts by cutting the vertex itself. In general, this happens for an $m$-body interaction when there is a smaller number of $n$ lines ($n < m$) that leave the interaction, may interact only among themselves, and eventually all return to it. The net outcome is that one is left with a ($m-n$)-body operator that results from the average interactions with other $n$-spectator nucleons. This plays the role of a system dependent effective force that is irreducible. Fig.~\ref{fig:EffOps} shows diagrammatically how  $\widehat{V}$ and $\widehat{W}$  can be reduced to  one- and two-body {\em effective interactions} in this way.
 %
 Hence, for a system with up to three-body forces, we define an effective Hamiltonian
 \begin{equation}
@@ -410,7 +418,7 @@ interaction that are reduced to effective one-body interactions, hence:
    \label{eq:UeffSig}
 \end{equation}
 which defines $\Sigma^{(\infty)}$ by comparison with Eq.~\eqref{eq:U_eff}.
-The two terms that contribute to $\Sigma^{(\infty)}$ represent extensions of the Hartree-Fock potentials to correlated 
+The two terms that contribute to $\Sigma^{(\infty)}$ represent extensions of the Hartree-Fock (HF) potentials to correlated 
 ground states.  The correlated Hartree-Fock potential from ${\widehat V}$ is the only effective operator
 when just two-body forces are present. In this case there is very little gain in using the concept of the effective Hamiltonian~\eqref{eq:Heff}.
 However, with three-body interactions, additional effective interaction terms appear in both $\widetilde U$ and $\widetilde V$. 
@@ -423,7 +431,7 @@ All interaction-irreducible contributions to the proper self-energy up to third 
 
 \vskip .3 cm
 \noindent
-{\bf Example 11.1} Calculate the Feynman-Galitskii propagator, $G^{II,f}(\tau)$, that corresponds to the propagation of two particles or two holes that do not interact with each other.
+{\bf Example 11.1.} Calculate the Feynman-Galitskii propagator, $G^{II,f}(\tau)$, that corresponds to the propagation of two particles or two holes that do not interact with each other.
 
 \vskip 0.2 cm
 This is the lowest order approximation to the two-times and two-body propagator
@@ -433,17 +441,17 @@ which evolves two particle from states $\alpha$ and $\beta$ to  states  $\gamma$
        \, a^I_\beta(\tau)  \, a^I_\alpha(\tau) \, {a_{\gamma}^I}^\dag(0) \, {a_{\delta}^I}^\dag(0) \, ]  \vert\Phi_0^A\rangle
 \nonumber \\
  &=& i g^{(0)}_{\alpha\gamma}(\tau) \; \, g^{(0)}_{\beta\delta}(\tau)  ~-~ i  g^{(0)}_{\alpha\delta}(\tau) \; \, g^{(0)}_{\beta\gamma}(\tau)
- ~ \equiv ~  G^{II\, (0),f}_{\alpha \beta, \gamma \delta}(\tau)   - G^{II\, (0),f}_{\alpha \delta, \gamma \beta}(\tau) \; .
+ ~ \equiv ~  G^{II\, (0),f}_{\alpha \beta, \gamma \delta}(\tau)   - G^{II\, (0),f}_{\alpha \beta, \delta\gamma}(\tau) \; .
 \label{eq:FeynGalvsG2}
 \end{eqnarray}
 The Feynman-Galitskii propagator is precisely defined as the non antisymmetrized part of Eq.~\eqref{eq:FeynGalvsG2}.  We  now transform this to frequency space and apply the Feynman rules of Appendix~1 %~\ref{app:Feyn_rules}
 to calculate the  $G^{II,f}$ for the more general case of two {\em dressed} propagator lines:
 \begin{eqnarray}
-G^{II,f}_{\alpha \beta, \gamma \delta}(\omega) &=& \int d\tau \; e^{i\omega \tau} \, G^{II,f}_{\alpha \beta, \gamma \delta}(\tau)
-~=~ (-i) \int \frac {d \omega_1}{2\pi} 
+G^{II,f}_{\alpha \beta, \gamma \delta}(\omega) &=& \int {\rm d}\tau \; e^{i\omega \tau} \, G^{II,f}_{\alpha \beta, \gamma \delta}(\tau)
+~=~ (-i) \int \frac {{\rm d} \omega_1}{2\pi} 
   \; i \,  g_{\alpha\gamma}(\omega-\omega_1) \; i \, g_{\beta\delta}(\omega_1)
 \label{eq:GIIf_int} \\ \nonumber
-&=& - \int \frac {d  \omega_1}{2\pi i}  
+&=& - \int \frac {{\rm d}  \omega_1}{2\pi i}  
   \left\{ \frac{(\pazocal{X}^{n_1}_\alpha)^*  \pazocal{X}^{n_1}_\gamma}{\omega - \omega_1  - \varepsilon^+_{n_1} + i\eta} 
         + \frac{\pazocal{Y}^{k_1}_\alpha  (\pazocal{Y}^{k_1}_\gamma)^*}{\omega - \omega_1  - \varepsilon^-_{k_1} - i\eta}  \right\}
           \left\{ \frac{(\pazocal{X}^{n_2}_\beta)^*  \pazocal{X}^{n_2}_\delta}{\omega_1  - \varepsilon^+_{n_2} + i\eta} 
@@ -479,21 +487,21 @@ two dressed but non interacting spectator nucleons.
 
 \vskip 0.3 cm
 \noindent
-{\bf Example 11.2} Calculate the expression for the second order contribution to $\Sigma^\star(\omega)$ from two-nucleon interactions only.
+{\bf Example 11.2.} Calculate the expression for the second order contribution to $\Sigma^\star(\omega)$ from two-nucleon interactions only.
 
 \vskip 0.2 cm
 This is the  diagram of Fig.~\ref{fig:2ndOrd}a). By applying the Feynman rules of Appendix 1 we have:
 \begin{eqnarray}
  \Sigma^{(2,2N)}_{\alpha\beta}(\omega) &=&
-  - \frac{(i)^2}{2} \int \frac {d \omega_1}{2\pi} \frac {d \omega_2}{2\pi}  V_{\alpha\sigma,\gamma\delta} 
+  - \frac{(i)^2}{2} \int \frac {{\rm d} \omega_1}{2\pi} \frac {d \omega_2}{2\pi}  V_{\alpha\sigma,\gamma\delta} 
          \,  g_{\gamma\mu}(\omega+\omega_2-\omega_1) \, g_{\delta\nu}(\omega_1) \, g_{\lambda\sigma}(\omega_2) 
            \, V_{\mu \nu, \beta \lambda}
 \nonumber \\
-   &=& + \frac{1}{2} \int \frac {d \omega_2}{2\pi i} V_{\alpha\sigma,\gamma\delta} \; 
+   &=& + \frac{1}{2} \int \frac {{\rm d} \omega_2}{2\pi i} V_{\alpha\sigma,\gamma\delta} \; 
      G^{II,f}_{\gamma \delta, \mu \nu}(\omega+\omega_2)   \, g_{\lambda\sigma}(\omega_2) 
            \, V_{\mu \nu, \beta \lambda}
 \nonumber \\
-  &=& \frac{1}{2}   \int \frac {d \omega_2}{2\pi i} \, V_{\alpha\sigma,\gamma\delta} \,
+  &=& \frac{1}{2}   \int \frac {{\rm d} \omega_2}{2\pi i} \, V_{\alpha\sigma,\gamma\delta} \,
   \left\{
     \frac{(\pazocal{X}^{n_1}_\gamma \pazocal{X}^{n_2}_\delta)^*  \pazocal{X}^{n_1}_\mu \pazocal{X}^{n_2}_\nu}
                       {\omega  + \omega_2  - (\varepsilon^+_{n_1}  + \varepsilon^+_{n_2}) + i\eta} 
@@ -551,7 +559,7 @@ where repeated greek indices are summed over implicitly but we show the explicit
 \section{The Algebraic Diagrammatic Construction method}
 \label{sec:scgf_adc}
 
-The most general form of the irreducible self-energy is given by Eq.~\eqref{eq:SigSplit}. The $\Sigma^{(\infty)}$  is defined by the mean-field diagrams of Fig.~\ref{fig:EffOps}a) and Eq.~\eqref{eq:U_eff}, while $\widetilde\Sigma(\omega)$ has a Lehmann representation as seen in the examples of Eqs.~\eqref{eq:Sig_2nd} and~\eqref{eq:Sig_2nd_3b}. Similarly to the case of a propagator, the  pole structure of the energy-dependent part is dictated by the principle of causality with the correct boundary conditions coded by the  $\pm i\eta$ terms at the denominators.  This implies a dispersion relation that  can link the real and imaginary parts of the self-energy~\cite{ch11_MahauxSartor91,ch11_Dickhoff2008}.  Correspondingly, the direct coupling of single particle orbits to  ISCs (of 2p1h and 2h1p character or more complex) imposes  the separable structure of the residues. In this section we consider the case of a  finite system, for which it is useful to use a discretized single particle basis $\{\alpha\}$ as the model space. 
+The most general form of the irreducible self-energy is given by Eq.~\eqref{eq:SigSplit}. The $\Sigma^{(\infty)}$  is defined by the mean-field diagrams of Fig.~\ref{fig:EffOps}a) and Eq.~\eqref{eq:U_eff}, while $\widetilde\Sigma(\omega)$ has a Lehmann representation as seen in the examples of Eqs.~\eqref{eq:Sig_2nd} and~\eqref{eq:Sig_2nd_3b}. Similarly to the case of a propagator, the  pole structure of the energy-dependent part is dictated by the principle of causality with the correct boundary conditions coded by the  $\pm i\eta$ terms in the denominators.  This implies a dispersion relation that  can link the real and imaginary parts of the self-energy~\cite{ch11_MahauxSartor91,ch11_Dickhoff2008}.  Correspondingly, the direct coupling of single particle orbits to  ISCs (of 2p1h and 2h1p character or more complex) imposes  the separable structure of the residues. In this section we consider the case of a  finite system, for which it is useful to use a discretized single particle basis $\{\alpha\}$ as the model space. 
 %
 From now on we will use the Einstein convention that repeated indices ($n$, $k$, $\alpha$...) are summed over even if not explicitly stated.
 %
@@ -568,7 +576,7 @@ The expansion of the self-energy at second order in perturbation theory triviall
  \label{eq:ADC2_MEC}
 \begin{align}
  M_{\alpha,r} ={}& %\sum_{\mu \nu \lambda}
-     \pazocal{X}^{n_1}_\mu \pazocal{X}^{n_2}_\nu  \pazocal{Y}^{k_3}_\lambda  V_{\mu \nu, \beta \lambda}
+     \pazocal{X}^{n_1}_\mu \pazocal{X}^{n_2}_\nu  \pazocal{Y}^{k_3}_\lambda  V_{\mu \nu, \alpha \lambda}
   \label{eq:ADC2_M}  \\
  E^>_{r,r'} ={}& diag \left\{ \,\varepsilon^+_{n_1} + \varepsilon^+_{n_2} - \varepsilon^-_{k_3}  \, \right\}
  \label{eq:ADC2_Efw}  \\
@@ -580,7 +588,7 @@ and
 \begin{subequations}
 \label{eq:ADC2_NED}
 \begin{align}
- N_{\alpha,s}  ={}& \pazocal{Y}^{k_1}_\mu \pazocal{Y}^{k_2}_\nu \pazocal{X}^{n_3}_\lambda  V_{\mu \nu, \beta \lambda}
+ N_{\alpha,s}  ={}& V_{\alpha \lambda, \mu \nu} \pazocal{Y}^{k_1}_\mu \pazocal{Y}^{k_2}_\nu \pazocal{X}^{n_3}_\lambda  
    \label{eq:ADC2_N}  \\
  E^<_{s,s'}  ={}& diag \left\{ \, \varepsilon^-_{k_1} + \varepsilon^-_{k_2} - \varepsilon^+_{n_3} \, \right\} 
    \label{eq:ADC2_Ebk}  \\
@@ -605,19 +613,19 @@ As we will discuss in the next section, Eqs.~\eqref{eq:ADC2_MEC} and \eqref{eq:A
 Unfortunately, $\Sigma^\star(\omega)$ loses its analytical form of Eq.~\eqref{eq:ADC_SE_form} as soon as one moves to higher orders in perturbation theory. To demonstrate this, let us calculate the contribution of the third order 'ladder' diagram of Fig.~\ref{fig:3rdOrd}a). By exploiting Feynman rules
 and Eq.~\eqref{eq:GIIf_int} we obtain
 \begin{align}
-  \Sigma^{(3,ld)}_{\alpha\beta}(\omega)={}& - \frac{i^3}{4} \int \frac{d\omega_1}{2\pi} \int \frac{d\omega_2}{2\pi} \int \frac{d\omega_3}{2\pi} 
+  \Sigma^{(3,ld)}_{\alpha\beta}(\omega)={}& - \frac{i^3}{4} \int \frac{{\rm d}\omega_1}{2\pi} \int \frac{{\rm d}\omega_2}{2\pi} \int \frac{{\rm d}\omega_3}{2\pi} 
   V_{\alpha\sigma,\gamma\delta} 
          \,  g_{\gamma\gamma'}(\omega+\omega_3-\omega_1) \, g_{\delta\delta'}(\omega_1) 
            \, V_{\gamma' \delta', \mu' \nu'}
-  \nonumber \\ && \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \times
+  \nonumber \\ {}& \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \times
     \,  g_{\mu'\mu}(\omega+\omega_3-\omega_2) \, g_{\nu'\nu}(\omega_2) \, V_{\mu \nu, \beta \lambda} \,  g_{\lambda\sigma}(\omega_3) 
 \nonumber \\
-  ={}&  \frac{1}{4}  \int \frac{d\omega_3}{2\pi i} 
+  ={}&  \frac{1}{4}  \int \frac{{\rm d}\omega_3}{2\pi i} 
   V_{\alpha\sigma,\gamma\delta} 
          \,  G^{II,f}_{\gamma\delta, \gamma' \delta'}(\omega+\omega_3) \,  
            \, V_{\gamma' \delta', \mu' \nu'}     \,  G^{II,f}_{\mu' \nu', \mu \nu}(\omega+\omega_3) \, V_{\mu \nu, \beta \lambda}  \, g_{\lambda\sigma}(\omega_3) 
 \nonumber \\
-  ={}&  \frac{1}{4}  \int \frac{d\omega_3}{2\pi i} 
+  ={}&  \frac{1}{4}  \int \frac{{\rm d}\omega_3}{2\pi i} 
     V_{\alpha\sigma,\gamma\delta} \,
   \left\{
     \frac{(\pazocal{X}^{n_1}_\gamma \pazocal{X}^{n_2}_\delta)^*  \pazocal{X}^{n_1}_{\gamma'} \pazocal{X}^{n_2}_{\delta'}}
@@ -645,7 +653,7 @@ we will focus only on the three integrals that contribute to the forward propaga
  we have:
  \begin{align}
   \Sigma^{(ld,>)}_{\alpha\beta}(\omega) ={}& 
- \frac{1}{4}  \int \frac{d\omega_3}{2\pi i} 
+ \frac{1}{4}  \int \frac{{\rm d}\omega_3}{2\pi i} 
     V_{\alpha\sigma,\gamma\delta} \,
   \left\{
  -  \frac{ \pazocal{Y}^{k_1}_\gamma \pazocal{Y}^{k_2}_\delta \, ( \pazocal{Y}^{k_1}_{\gamma'} \pazocal{Y}^{k_2}_{\delta'})^*}
@@ -661,7 +669,7 @@ we will focus only on the three integrals that contribute to the forward propaga
    \left\{  \frac{\pazocal{Y}^{k_3}_\lambda  (\pazocal{Y}^{k_3}_\sigma)^*}{\omega_3  - \varepsilon^-_{k_3} - i\eta}  \right\}
      \nonumber \\
      &+
- \frac{1}{4}  \int \frac{d\omega_3}{2\pi i} 
+ \frac{1}{4}  \int \frac{{\rm d}\omega_3}{2\pi i} 
     V_{\alpha\sigma,\gamma\delta} \,
   \left\{
     \frac{(\pazocal{X}^{n_1}_\gamma \pazocal{X}^{n_2}_\delta)^*  \pazocal{X}^{n_1}_{\gamma'} \pazocal{X}^{n_2}_{\delta'}}
@@ -677,7 +685,7 @@ we will focus only on the three integrals that contribute to the forward propaga
    \left\{  \frac{\pazocal{Y}^{k_3}_\lambda  (\pazocal{Y}^{k_3}_\sigma)^*}{\omega_3  - \varepsilon^-_{k_3} - i\eta}  \right\}
      \nonumber \\
  &+
- \frac{1}{4}  \int \frac{d\omega_3}{2\pi i} 
+ \frac{1}{4}  \int \frac{{\rm d}\omega_3}{2\pi i} 
     V_{\alpha\sigma,\gamma\delta} \,
   \left\{
     \frac{(\pazocal{X}^{n_1}_\gamma \pazocal{X}^{n_2}_\delta)^*  \pazocal{X}^{n_1}_{\gamma'} \pazocal{X}^{n_2}_{\delta'}}
@@ -735,7 +743,7 @@ we will focus only on the three integrals that contribute to the forward propaga
     & +~  M^{(1) \, \dagger}\frac1{\omega - E^> + i \eta}C^{(ld)}\frac1{\omega - E^> + i \eta}M^{(1)}  \; ,
 \label{eq:LaddEg2}
  \end{align}
-where $M^{(1)}$ and $E^>$ are the same as in Eqs.~\eqref{eq:ADC2_MEC}. The 2p1h ladder interaction $C^{(ld)}$ is at first order in $V$, while the coupling matrix $ M^{(2,ld)}$ is at second order. These can be read from the previous lines of Eq.~\eqref{eq:LaddEg2} and turn out to be (showing all summations explicitly):
+where $M^{(1)}$ and $E^>$ are the same as in Eqs.~\eqref{eq:ADC2_MEC} and the factors 1/2 are again absorbed by summing over configurations $r$ and $r'$. The 2p1h ladder interaction $C^{(ld)}$ is at first order in $V$, while the coupling matrix $ M^{(2,ld)}$ is at second order. These can be read from the previous lines of Eq.~\eqref{eq:LaddEg2} and turn out to be (showing all summations explicitly):
 \begin{align}
 M^{(2,ld)}_{r,\alpha} ={}&  \sum_{k_4, \, k_5} \quad \sum_{\substack{ \alpha ,\, \beta ,\, \gamma, \,  \delta \\ \mu ,\, \nu , \, \lambda}} 
   \frac{   \pazocal{X}^{n_1}_{\gamma} \pazocal{X}^{n_2}_{\delta} \;  V_{\gamma \delta, \sigma \zeta} \;
@@ -784,7 +792,7 @@ If then one adds an extra term that is quadratic in  $M^{(2,ld)}$, this lead to:
 \end{equation}
 which now contains {\em all}  the perturbation theory terms at second~\eqref{eq:Sig_2nd} and third order~\eqref{eq:LaddEg2} while preserving the expected analytical form for~$\widetilde\Sigma(\omega)$ of Eq.~\eqref{eq:ADC_SE_form}.
 
-It can be shown that the summation implicit in Eq.~\eqref{eq:pp_ladder} is equivalent to a full resummation of two-particle ladder diagrams in the Tamn-Dancoff approximation (TDA)~\cite{ch11_RingSchuck}. In this sum the remaining quasi hole state appearing in the 2p1h ISC remains uncoupled from the ladder series, as it can be seen from the first term in the series, in Fig.~\ref{fig:3rdOrd}a).  Likewise, one would find that the remaining backward-going terms in Eq.~\eqref{eq:LaddEg1} would lead to resumming the two-hole TDA ladders within the 2h1p configurations. Instead, diagram in Fig.~\ref{fig:3rdOrd}b) involves a resummation of ph ring diagrams. Extensions of these series to random-phase approximation (RPA) is also possible, this would introduce a larger set of high-order Goldstone diagrams but it would not be required to enforce consistency with perturbation theory at third-order.
+It can be shown that the summation implicit in Eq.~\eqref{eq:pp_ladder} is equivalent to a full resummation of two-particle ladder diagrams in the Tamn-Dancoff approximation (TDA)~\cite{ch11_RingSchuck}. In this sum the remaining quasi hole state appearing in the 2p1h ISC remains uncoupled from the ladder series, as it can be seen in Fig.~\ref{fig:3rdOrd}a), which is the first term in the series.  Likewise, one would find that the remaining backward-going terms in Eq.~\eqref{eq:LaddEg1} would lead to resumming the two-hole TDA ladders within the 2h1p configurations. Instead, diagram in Fig.~\ref{fig:3rdOrd}b) involves a resummation of ph ring diagrams. Extensions of these series to random-phase approximation (RPA) is also possible, this would introduce a larger set of high-order Goldstone diagrams but it would not be required to enforce consistency with perturbation theory at third-order.
 
 \vskip 0.3 cm
 \noindent
@@ -812,7 +820,7 @@ for Eq.~\eqref{eq:ADC_SE_form}:
 \begin{align}
   \Sigma^{\star}(\omega) ={}&  - \widehat{U}  ~+~   \Sigma^{(\infty)} 
   \nonumber \\
-   +~& M^{(1) \, \dagger}\frac1{\omega - E^> -C + i \eta}M^{(1)} +N^{(1)}\frac1{\omega - E^< -D - i \eta}N^{(1) \, \dagger}
+   +~& M^{(1) \, \dagger}\frac1{\omega - E^>  + i \eta}M^{(1)} +N^{(1)}\frac1{\omega - E^<  - i \eta}N^{(1) \, \dagger}
     \nonumber \\
   +~& M^{(2) \, \dagger}\frac1{\omega - E^> + i \eta}M^{(1)}  +   M^{(1) \, \dagger}\frac1{\omega - E^> + i \eta}M^{(2)}
 %  \nonumber \\
@@ -864,20 +872,20 @@ V_{\mu \nu, \alpha \lambda} ~+~
                   {2 \, [\varepsilon^-_{k_4} + \varepsilon^-_{k_5} - \varepsilon^+_{n_1}  - \varepsilon^+_{n_2}]} \, V_{\mu \nu, \alpha \lambda}
  \label{eq:ADC3_M} \\
  &{}+ \frac{
-{\pazocal Y}^{k}_{\sigma} {\pazocal X}^{n_2}_{\rho}
-v_{\rho \delta, \sigma \gamma}
+{\pazocal Y}^{k_3}_{\sigma} {\pazocal X}^{n_2}_{\rho}
+V_{\rho \delta, \sigma \gamma}
 {\pazocal Y}^{k_5}_{\gamma} {\pazocal X}^{n_6}_{\delta}
-}{(\varepsilon^-_{k} - \varepsilon^+_{n_2} + \varepsilon^-_{k_5} - \varepsilon^+_{n_6})}
+}{[\varepsilon^-_{k_3} - \varepsilon^+_{n_2} + \varepsilon^-_{k_5} - \varepsilon^+_{n_6}]}
  {\pazocal X}^{n_1}_{\mu} ({\pazocal Y}^{k_5}_{\nu} {\pazocal X}^{n_6}_{\lambda})^* \,
-v_{\mu \nu, \alpha \lambda}
+V_{\mu \nu, \alpha \lambda}
  ~-~
 \frac{
-{\pazocal Y}^{k}_{\sigma} {\pazocal X}^{n_1}_{\rho}
-v_{\rho \delta, \sigma \gamma}
+{\pazocal Y}^{k_3}_{\sigma} {\pazocal X}^{n_1}_{\rho}
+V_{\rho \delta, \sigma \gamma}
 {\pazocal Y}^{k_5}_{\gamma} {\pazocal X}^{n_6}_{\delta}
-}{(\varepsilon^-_{k} - \varepsilon^+_{n_1} + \varepsilon^-_{k_5} - \varepsilon^+_{n_6})}
+}{[\varepsilon^-_{k_3} - \varepsilon^+_{n_1} + \varepsilon^-_{k_5} - \varepsilon^+_{n_6}]}
  {\pazocal X}^{n_2}_{\mu} ({\pazocal Y}^{k_5}_{\nu} {\pazocal X}^{n_6}_{\lambda})^* \,
-v_{\mu \nu, \alpha \lambda}
+V_{\mu \nu, \alpha \lambda}
  \nonumber \\
  \nonumber \\
   E^>_{r,r'} ={}& diag \left\{ \,\varepsilon^+_{n_1} + \varepsilon^+_{n_2} - \varepsilon^-_{k_3}  \, \right\}
@@ -902,24 +910,24 @@ and
 \label{eq:ADC3_NED}
 \begin{align}
  N_{\alpha,s} ={}& V_{\alpha \lambda, \mu \nu}  {\pazocal Y}^{k_1}_{\mu} {\pazocal Y}^{k_2}_{\nu} {\pazocal X}^{n_3}_{\lambda} \,
-~+~ \frac{
-({\pazocal Y}^{k_1}_{\sigma} {\pazocal Y}^{k_2}_{\rho})^*
-v_{\sigma \rho,\gamma \delta}
- ({\pazocal X}^{n_7}_{\gamma} {\pazocal X}^{n_8}_{\delta})^*
+~+~
+V_{\alpha \lambda, \mu \nu}  \,  {\pazocal X}^{n_1}_{\lambda} ( {\pazocal X}^{n_7}_{\mu} {\pazocal X}^{n_8}_{\nu} )^*
+\frac{
+ {\pazocal X}^{n_7}_{\gamma} {\pazocal X}^{n_8}_{\delta}
+V_{\sigma \rho,\gamma \delta}
+ {\pazocal Y}^{k_1}_{\sigma} {\pazocal Y}^{k_2}_{\rho}
 }{2 \, [\varepsilon^-_{k_1} + \varepsilon^-_{k_2} - \varepsilon^+_{n_7} - \varepsilon^+_{n_8}]}
-{\pazocal X}^{n_7}_{\mu} {\pazocal X}^{n_8}_{\nu} {\pazocal X}^{n}_{\lambda} \,
-v_{\mu \nu, \alpha \lambda}
   \label{eq:ADC3_N} \\
 &{} +
 V_{\alpha \lambda, \mu \nu}
-({\pazocal Y}^{k_1}_{\mu})^* {\pazocal X}^{n_5}_{\nu} {\pazocal Y}^{k_6}_{\lambda} \,
+{\pazocal Y}^{k_1}_{\mu} ({\pazocal X}^{n_5}_{\nu} {\pazocal Y}^{k_6}_{\lambda})^* \,
 \frac{
 {\pazocal X}^{n_5}_{\gamma} {\pazocal Y}^{k_6}_{\delta} V_{\rho \gamma, \sigma \delta }
 {\pazocal Y}^{k_2}_{\sigma} {\pazocal X}^{n_3}_{\rho}
 }{[\varepsilon^-_{k_2} - \varepsilon^+_{n_3} + \varepsilon^-_{k_6} - \varepsilon^+_{n_5}]}
 -
-({\pazocal Y}^{k_2}_{\mu})^* {\pazocal X}^{n_5}_{\nu} {\pazocal Y}^{k_6}_{\lambda} \,
 V_{ \alpha \lambda, \mu \nu}
+{\pazocal Y}^{k_2}_{\mu} ({\pazocal X}^{n_5}_{\nu} {\pazocal Y}^{k_6}_{\lambda})^* \,
 \frac{
 {\pazocal X}^{n_5}_{\gamma} {\pazocal Y}^{k_6}_{\delta} V_{\rho \gamma, \sigma \delta  }
 {\pazocal Y}^{k_1}_{\sigma} {\pazocal X}^{n_3}_{\rho}
@@ -951,12 +959,12 @@ with the Pauli principle.  Note that  these equations apply to the case of  two-
 %\hspace{0.05\textwidth}
 \includegraphics[height=0.21\textwidth]{Chapter11-figures/fig11_5_c.pdf}   \hspace{0.1\textwidth}
 \includegraphics[height=0.21\textwidth]{Chapter11-figures/fig11_5_d.pdf}
-\caption{Self-energy insertion diagrams that appear, up to third order, in the perturbative expansion for $\widetilde\Sigma(\omega)$ with two- and three-nucleon interactions. These non-skeleton diagrams need to be considered  when the reference propagators are not self-consistent.  Diagrams a) and b) involve only one- and two-body interactions and results from self-energy insertion into the diagram of Fig.~\ref{fig:2ndOrd}a).  With the inclusion of three-nucleon interactions, the diagrams c) and d) arise from the one of Fig.~\ref{fig:2ndOrd}b).  When an Hartree-Fock reference state is used all these contributions cancel out (see {\bf Exercise 11.5}). }
+\caption{Self-energy insertion diagrams that appear, at third order, in the perturbative expansion for $\widetilde\Sigma(\omega)$ with two- and three-nucleon interactions. These non-skeleton diagrams need to be considered  when the reference propagators are not self-consistent.  Diagrams a) and b) involve only one- and two-body interactions and results from self-energy insertion into the diagram of Fig.~\ref{fig:2ndOrd}a).  With the inclusion of three-nucleon interactions, the diagrams c) and d) arise from the one of Fig.~\ref{fig:2ndOrd}b).  When an Hartree-Fock reference state is used all these contributions cancel out (see {\bf Exercise 11.5}). }
 \label{fig:SEins_3ndOrd}
 \end{center}
 \end{figure}
 
-To remain consistent with the ADC(n) formulation,  the static self-energy $\Sigma^{(\infty)}$ must also be computed at least to the same order $n$. However, this involves a large number of non-skeleton diagrams when self-consistency is not implemented. In practice, it is relatively inexpensive to compute it directly from dressed propagators, as given by Eqs.~\eqref{eq:SigSplit} and~\eqref{eq:U_eff} and therefore if can be iterated to self-consistency.
+To remain consistent with the ADC($n$) formulation,  the static self-energy $\Sigma^{(\infty)}$ must also be computed at least to the same order $n$. However, this involves a large number of non-skeleton diagrams when self-consistency is not implemented. In practice, it is relatively inexpensive to compute it directly from dressed propagators, as given by Eqs.~\eqref{eq:SigSplit} and~\eqref{eq:U_eff} and therefore if can be iterated to self-consistency.
 This prescription, in which $\widetilde\Sigma(\omega)$ is calculated from an unperturbed reference state $g^{0)}(\omega)$ but $\Sigma^{(\infty)}$
 is obtained self-consistently, is often used in nuclear physics applications and we refer to it as the {\em sc0} approximation~\cite{ch11_Soma2014Lanc}.
 When dealing with the Coulomb force in molecular systems, the dynamic self-energy can be simply calculated in terms of a Hartree-Fock reference state.  In nuclear physics, an Hartree-Fock reference state is adequate only if the chosen Hamiltonian is particularly soft.  Otherwise, it is necessary to optimize the reference state by choosing a $\widehat{H}_0$ and $g^{0)}(\omega)$  that better represent the correlated single particle energies in the dressed propagator. In all cases, at least the {\em sc0} approach to $\Sigma^{(\infty)}$ is always required when computing finite nuclei and infinite nucleonic matter.
@@ -969,15 +977,35 @@ The so-called \hbox{\em 2p1h-TDA} method is an extension of the second order sch
 %
 In nuclear physics applications, the description of collective excitations often requires that  particle-hole configurations are diagonalized at least in the random phase approximation (RPA) scheme. While this is similar to the TDA all-order summations included in 2p1h-TDA and in ADC(3), extra ground state correlations effect from the RPA series are deemed important to reproduce collective modes typical of nuclear systems~\cite{ch11_RingSchuck}.
 %
-To account for these effects on needs to separate the partial summations in the pp, hh and ph channels, substitute them with equivalent RPA series and  recouple these through a Faddeev-like expansion, in order to eventually reconstruct the self-energy~\cite{ch11_Danielewicz1994OMP,ch11_Barbieri2001frpa}.
-The Faddeev-RPA (FRPA)  method contains the ADC(3) in full but it also generates additional ground state correlation terms that are induced by the RPA summation and are at fourth and higher order in the perturbative expansion of the self-energy. A working implementation of the FRPA approach has been formulated in Refs.~\cite{ch11_Barbieri2001frpa,ch11_Barbieri2007Atoms,ch11_Degroote2011frpa}.
+To account for these effects on needs to separate the partial summations in the pp, hh and ph channels, substitute them with equivalent RPA series and  recouple these through a Faddeev-like expansion, in order to eventually reconstruct the self-energy~\cite{ch11_Danielewicz1994OMP,ch11_Barbieri2001frpa,ch11_Barbieri2003ExO16}.
+The Faddeev-RPA (FRPA)  method contains the ADC(3) in full but it also generates additional ground state correlation terms that are induced by the RPA summation and are at fourth and higher order in the perturbative expansion of the self-energy. The working implementation of the FRPA approach has been formulated in Refs.~\cite{ch11_Barbieri2001frpa,ch11_Barbieri2007Atoms,ch11_Degroote2011frpa}.
+
+  Another important extension of the ADC(3) framework comes from the realization that Eqs.~\eqref{eq:MNexp} still imply the truncation of a perturbative expansion. This causes the energy denominators in Eqs.~\eqref{eq:ADC3_M} and~\eqref{eq:ADC3_N} to become unstable if the system is close to being degenerate. The way out from this situation is again to perform an all-orders summation. Since the coupling matrices correspond to specific energy-independent parts  of Goldstone diagrams, they can be resummed in the same way as for the coupled cluster (CC) technique~\cite{ch11_Barb_unp}. We show this for the second term on the right hand side of~\eqref{eq:ADC3_M}, which can be rewritten as follows:
+ \begin{align}
+  \frac{   \pazocal{X}^{n_1}_{\gamma} \pazocal{X}^{n_2}_{\delta} \;  V_{\gamma \delta, \sigma \zeta} \;
+ \pazocal{Y}^{k_4}_{\sigma} \pazocal{Y}^{k_5}_{\zeta} \, (\pazocal{Y}^{k_4}_\mu \pazocal{Y}^{k_5}_\nu)^*  \pazocal{Y}^{k_3}_\lambda  }
+                  {2 \, [\varepsilon^-_{k_4} + \varepsilon^-_{k_5} - \varepsilon^+_{n_1}  - \varepsilon^+_{n_2}]} \, V_{\mu \nu, \alpha \lambda}
+   \quad \longrightarrow {}& \quad
+  \frac{1}{2}  \;  t^{(0)}{}^{n_1 \, n_2}_{k_4 \, k_5} \; (\pazocal{Y}^{k_4}_\mu \pazocal{Y}^{k_5}_\nu)^*  \pazocal{Y}^{k_3}_\lambda   \, V_{\mu \nu, \alpha \lambda}  \; ,
+ \label{eq:ADC3CCM}
+ \end{align}
+ where the amplitude
+ \begin{align}
+    t^{(0)}{}^{n_1 \, n_2}_{k_4 \, k_5} \equiv {}& 
+    \frac{   \pazocal{X}^{n_1}_{\gamma} \pazocal{X}^{n_2}_{\delta} \;  V_{\gamma \delta, \sigma \zeta} \; \pazocal{Y}^{k_4}_{\sigma} \pazocal{Y}^{k_5}_{\zeta}   }
+     { \varepsilon^-_{k_4} + \varepsilon^-_{k_5} - \varepsilon^+_{n_1}  - \varepsilon^+_{n_2} }
+ \label{eq:dressed_t2}
+ \end{align}
+generalizes the zeroth approximation to the CC operator~$\hat{T}_2$ (see Section 8.6.3).  In case of a dressed propagator, the spectroscopic amplitudes $\pazocal{X}$~($\pazocal{Y}$) accounts for the fragmentation of single particle strength. However, for a standard mean-field reference, they simply select the particle~(hole) reference orbits and $t^{(0)}$ is exactly the same as for the CC approach. In order to mitigate effects of the perturbative truncation in Eqs.~\eqref{eq:ADC3_M} and ~\eqref{eq:ADC3_N} (and to resum the 2p-2h ISCs) one simply substitutes $t^{(0)}$ with the corresponding CC solution.  In general, when $t$ is compuded using the CC doubles (CCD) approximation we refer to the whole self-energy as the ADC(3)-D approximation, when $t$ is obtained by resumming both singles and doubles (CCSD) lead to the ADC(3)-SD approximation, and so on.  In Sec.~\ref{sec:pairing_model}, we  will see a case when these corrections are important.
+
+The working equations for the self-energy at the ADC(4) level and beyond are discussed in Ref.~\cite{ch11_Schirmer1983ADCn}.
 
 
 \vskip .3 cm
 \noindent
 {\bf Exercise 11.4.}  Calculate the ladder and ring diagrams in Fig.~\ref{fig:3rdOrd}  and prove Eqs.~\eqref{eq:ADC3_MEC} and~\eqref{eq:ADC3_NED} in full.
 [Hint: for the ring diagrams it is simpler to first perform integrations for the free polarization propagator,
-$\Pi^f_{\alpha\beta,\gamma\delta}(\omega)=\int \frac{d \, \omega_1}{2\pi i} g_{\alpha\gamma}(\omega+\omega_1)g_{\delta\beta}(\omega_1)$,
+$\Pi^f_{\alpha\beta,\gamma\delta}(\omega)=\int \frac{{\rm d} \, \omega_1}{2\pi i} g_{\alpha\gamma}(\omega+\omega_1)g_{\delta\beta}(\omega_1)$,
 which describes  non interacting particle-hole states.]
 
 \vskip .3 cm
@@ -998,9 +1026,10 @@ the (orthogonal) single particle wave functions are the solutions of $\{T + \Sig
 
 
 \subsection{Solving the Dyson equation}
+\label{sec:DysonDiag}
 
- Once we have  a suitable approximation to the self-energy, it is necessary to solve the Dyson equations~\eqref{eq:Dyson}
- to obtain the single particle propagator, the  associated  observables and the  spectral function. The latter will also yield spectroscopic amplitudes and their spectroscopic factor for the addition and removal of a nucleon form the correlated state $|\Psi^A_0\rangle$.  In doing this, Eqs.~\eqref{eq:Dyson} takes the form of a one-body Schr\"odinger equation for the scattering of a particle or a hole inside the medium. Given that all the Cauchy integrals associated with Feynman diagrams have been carried out, we can safely take the limit $\pm i \eta \rightarrow 0$ in all denominators for simplicity. The same equation applies to states both above and below the Fermi surface.
+ Once we have  a suitable approximation to the self-energy, it is necessary to solve the Dyson equation~\eqref{eq:Dyson}
+ to obtain the single particle propagator, the  associated  observables and the  spectral function. The latter will also yield spectroscopic amplitudes and their spectroscopic factor for the addition and removal of a nucleon form the correlated state $|\Psi^A_0\rangle$.  In doing this, Eqs.~\eqref{eq:Dyson} take the form of a one-body Schr\"odinger equation for the scattering of a particle or a hole inside the medium. Given that all the Cauchy integrals associated with Feynman diagrams have been carried out, we can safely take the limit $\pm i \eta \rightarrow 0$ in all denominators for simplicity. The same equation applies to states both above and below the Fermi surface.
  Thus, it is convenient to take a general index $i$ and using $\varepsilon_i$ and $\pazocal Z^i$ to label energies and spectroscopic amplitudes for all quasiparticle and quasihole states. Specifically,
  \begin{equation}
 \varepsilon_i \longrightarrow \left\{
@@ -1012,7 +1041,7 @@ the (orthogonal) single particle wave functions are the solutions of $\{T + \Sig
 \pazocal Z^i_\alpha  \longrightarrow \left\{
 \begin{array}{lcl}
 \pazocal X^n_\alpha & \quad & \hbox{for $i$=$n$, particle,} \\ ~ \\
-\pazocal Y^k_\alpha &  & \hbox{for $i$=$k$, hole.}
+(\pazocal Y^k_\alpha)^* &  & \hbox{for $i$=$k$, hole.}
 \end{array} \right.
 \label{eq:Z_ampl}
 \end{equation}
@@ -1044,7 +1073,7 @@ where the potential $\widehat{U}$ defining the unperturbed state completely canc
 acts as the non-local and energy dependent potential that accounts for the motion of both particles and holes inside the system and for their
 coupling intermediate excitations.
 At positive energies ($\omega > 0$) this equation describes the elastic scattering of a nucleon off the $|\Psi^A_0\rangle$ ground
-states and the self-energy can be identified with a fully microscopic optical potential~\cite{ch11_Capuzzi1996,ch11_Cederbaum2001,ch11_Barbieri2005}.
+state and the self-energy can be identified with a fully microscopic optical potential~\cite{ch11_Capuzzi1996,ch11_Cederbaum2001,ch11_Barbieri2005}.
 In this case the spectroscopic amplitudes $\pazocal Z^i$ correspond to scattering wave functions with the usual asymptotic
 normalization.
 Instead, at $\omega < 0$, Eq.~\eqref{eq:DysSchrod}  describes the transition to states of $|\Psi^{A\pm1}_i\rangle$ with bound amplitudes.
@@ -1062,20 +1091,20 @@ single-particle propagator is the solution of an effective one-body Schr\"odinge
 hole propagating inside the correlated system. The energy dependence of  $\Sigma^\star(\omega)$  and its non-locality are a consequence of the underlying  many-body dynamics. Eq.~\eqref{eq:SFnorm1} also shows that the reduction of spectral strength commonly observed in correlated systems arises from the dispersion
 properties of the self-energy.
 
- In spite of its beauty, Eq.~\eqref{eq:DysSchrod} is also the worst starting point to solve the Dyson equation in a discretized finite basis. Unless one is interested in just a few solutions near the Fermi surface or the model space is extremely small, this approach will require high computational times due to the large amounts of diagonalizations required to extract the correct eigenvalues. The reason is that root-finding algorithms are needed to match the eigenvalues $\varepsilon_i$ with the argument of  $\Sigma^\star(\varepsilon_i)$ but simple searching algorithms may miss a large amount of solutions. The consequences of missing a large portion of spectral strength are that wrong results would be obtained for the ground state observables computed as in Sec.~\ref{sec:scgf_obs}. This can also deteriorate the self-consistency already at the level of the static self-energy, $\Sigma^{(\infty)}=\widetilde{U}$.  If Eq.~\eqref{eq:DysSchrod} must be used, it is possible to gather all the necessary solutions by starting from extremely fine energy meshes to be sure that all eigenvalues are bracketed first. However, this easily becomes suicidal in terms of the increase of computing time.
+ In spite of its beauty, Eq.~\eqref{eq:DysSchrod} is also the worst starting point to solve the Dyson equation in a discretized finite basis. Unless one is interested in just a few solutions near the Fermi surface or the model space is extremely small, this approach will require high computational times due to the large amounts of diagonalizations required to extract the correct eigenvalues. The reason is that root-finding algorithms are needed to match the eigenvalues $\varepsilon_i$ with the argument of  $\Sigma^\star(\varepsilon_i)$, but simple searching algorithms may miss a large amount of solutions. The consequences of missing a large portion of spectral strength are that wrong results would be obtained for the ground state observables computed as in Sec.~\ref{sec:scgf_obs}. This can also deteriorate the self-consistency already at the level of the static self-energy, $\Sigma^{(\infty)}=\widetilde{U}$.  If Eq.~\eqref{eq:DysSchrod} must be used, it is possible to gather all the necessary solutions by starting from extremely fine energy meshes to be sure that all eigenvalues are bracketed first. However, this easily becomes suicidal in terms of the increase of computing time.
  %
 We discuss here a different approach that is not affected by these problems and that will also give some further insight into the physics content of the Dyson equation.
 
 First, for each solution of the Dyson equation we define two new vectors $\pazocal{W}^i$ and  $\pazocal{V}^i$ which live in the ISCs space as follows:
 \begin{align}
  %\sum_{r'}   \;
- [\omega - E -C ]_{r,r'}  \, \pazocal{W}^i_{r'}  ~\equiv{}&~
+ [\omega - E^> -C ]_{r,r'}  \, \pazocal{W}^i_{r'}  ~\equiv{}&~
   % \sum_\delta \;
 M_{r,\delta}   Z^i_\delta  \; ,
  %\label{eq:defW} \\
  \nonumber \\
  %\sum_{s'}  \;
-  [\omega - E -D ]_{s,s'} \, \pazocal{V}^i_{s'} ~\equiv{}&~
+  [\omega - E^< -D ]_{s,s'} \, \pazocal{V}^i_{s'} ~\equiv{}&~
  % \sum_\delta \;
    N^\dagger_{s,\delta}    Z^i_\delta \; ,
  \label{eq:defWV}
@@ -1085,9 +1114,9 @@ where we have let $i\eta\rightarrow 0$ as this is no longer needed in a finite a
 \left( \begin{array}{ccccc}
  \widehat{T} + \Sigma^{(\infty)}  &~&   M^\dagger   &~&  N~  \\
 &&\\
-    M   &&  C  && \\
+    M   &&  E^>+C  && \\
     &&\\
-    N^\dagger    &&      &&  D
+    N^\dagger    &&      &&  E^<+D
 \end{array} \right)
 \left( \begin{array}{c}
 \pazocal{Z}^i \\ ~ \\ \pazocal{W}^i \\~ \\ \pazocal{V}^i
@@ -1104,7 +1133,7 @@ and the normalization condition~\eqref{eq:SFnorm1} becomes
 \label{eq:SFnorm2}
 \end{equation}
 
-The advantage of Eq.~\eqref{eq:DysMtx} is that it linearizes the Dyson equation and yields all solutions in one single diagonalization. Although the dimension of the Dyson equation is much larger than a one-body Schr\"odinger problem and that it requires substantial amount of memory storage, it typically provides the full spectral strength 100 times faster than using Eq.~\eqref{eq:DysSchrod} directly. Furthermore, it is possible to reduce the dimensionality of the eigenvalue problem by projecting matrices $C$ and $D$ (separately!) onto smaller Lanczos/Krylov subspaces~\cite{ch11_Schirmer1989BlkLanc,ch11_Soma2014Lanc}. In this way one reduces the number of poles of $g(\omega)$ far away from the Fermi surface---where only their averages is physically meaningful---but conserves the overall strength needed to compute ground state observables.
+The advantage of Eq.~\eqref{eq:DysMtx} is that it linearizes the Dyson equation and yields all solutions in one single diagonalization. Although the dimension of the Dyson equation is much larger than a one-body Schr\"odinger problem and that it requires substantial amount of memory storage, it typically provides the full spectral strength 100 times faster than using Eq.~\eqref{eq:DysSchrod} directly. Furthermore, it is possible to reduce the dimensionality of the eigenvalue problem by projecting matrices $[E^>+C]$ and $[E^<+D]$  (separately!) onto smaller Lanczos/Krylov subspaces~\cite{ch11_Schirmer1989BlkLanc,ch11_Soma2014Lanc}. In this way one reduces the number of poles of $g(\omega)$ far away from the Fermi surface---where only their averages is physically meaningful---but conserves the overall strength needed to compute ground state observables.
 
 Eq.~\eqref{eq:DysMtx} also puts in evidence how the Dyson equation is very closely related to a configuration interaction (CI) approach. For solutions ($\varepsilon^+_n$,$\pazocal{X}^n$) in the single particle spectrum,  the eigenstates of $|\Psi^{A+1}_n\rangle$ are expanded in terms of 1p configurations (from the $\widehat{T} + \Sigma^{(\infty)}$ sector) and 2p1h or larger configurations, which is evident from the matrix $C$, in Eq.~\eqref{eq:ADC3_C}. However, additional 2h1p configurations are included through matrix $D$. This is in spirit very similar to how ground state correlations are included in the random phase approximation approach~\cite{ch11_RingSchuck}. Furthermore,  the  matrices that couples these subspaces are the same as in CI only at first order ($M^{(1)}$ and $N^{(1)}$). The eigenstates of Eq.~\eqref{eq:DysMtx} will approach the exact solution as the approximation of the self-energy is systematically improved. Similarly, the propagation of hole states that correspond to the eigenstates of $|\Psi^{A-1}_k\rangle$ are obtained in a CI fashion.
 Eq.~\eqref{eq:SFnorm2} is then the natural normalization condition for the CI expansion and shows that the spectroscopic amplitudes are the projection of more complex many-body wave functions onto a single-particle space.
@@ -1122,174 +1151,583 @@ conjugate Dyson equation~\eqref{eq:Dyson_b} to obtain the normalization conditio
 
 
 \subsection{A simple pairing model}
+\label{sec:pairing_model}
+
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{Chapter11-figures/Pairing_LNP_scgf.pdf}
-\caption{Correlation energy for the pairing Hamiltonian of Eq.~\eqref{eq:H_pair} obtained for different  ADC($n$) approximations
-to the self-energy in a $sc0$ scheme. The purple line shows the exact results from full CI theory.  }
-\label{fig:pairng_adc}
+\caption{Correlation energy for the pairing Hamiltonian of Eq.~\eqref{eq:H_pair} as a function of the coupling $g$, obtained for different  ADC($n$) approximations to the self-energy in a {\em sc0} scheme. The dotted, dot-dashed, short dashed and full lines are all obtained from the HF reference of Eq.~\eqref{eq:pair_gHF} and show successive approximations of the ADC($n$) hierarchy [respectively: ADC(2), 2p1h-TDA, ADC(3) and ADC(3)-D]. The long dashed line is the same ADC(3) truncation but based on the unperturbed reference propagator of Eq.~\eqref{eq:pair_h0}. The purple line shows the exact result calculated  from a full configuration interaction diagonalization.  }
+\label{fig:pairing_adc}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{Chapter11-figures/Pairing_LNP_ALL.pdf}
-\caption{Correlation energy for the pairing Hamiltonian of Eq.~\eqref{eq:H_pair} obtained for different
-many-body methods discussed in this book. The purple line is the exact results from full CI theory. Various CC approximations (as discussed in
-chapter 8), the  second order perturbation theory (MBPT2)  and ADC(3) results are shown.}
-\label{fig:pairng_all}
+\caption{Correlation energy for the pairing Hamiltonian of Eq.~\eqref{eq:H_pair} as a function of the coupling $g$,  for  different
+many-body methods discussed in this book. The purple line is the exact results from  configuration interaction theory. 
+The results for  second order perturbation theory (MBPT2), for the  CC-corrected ADC(3)-D and  for the standard CC with doubles (CCD)  are compared.}
+\label{fig:pairing_all}
 \end{center}
 \end{figure}
 
-As a first application of the ADC formalism, we consider here the paring Hamiltonian discussed in chapter~8. This is a system of  four spin-1/2 fermions in a 4-level model space that interact through a pairing force:
-  \begin{equation}
-   \widehat{H} = \widehat{H}_0 +  \widehat{V} = \delta \sum_{p=1}^4  \sum_{\sigma=+, -} (p-1) a^{\dagger}_{p \sigma} a_{p \sigma}
- ~-~ \frac{g}{2} \sum_{p, q=1}^4 a^{\dagger}_{p+}a^{\dagger}_{p-}  a_{q-}a_{q+}
+As a first demonstration  of the ADC formalism, we consider the pairing Hamiltonian already discussed in chapter~8. This is a system of  four spin-1/2 fermions in a 4-level model space that interact through a pairing force:
+  \begin{align}
+   \widehat{H} ={}& \widehat{H}_0 +  \widehat{V} = \xi \sum_{p=1}^4 ~ \sum_{\sigma=+, -} (p-1) a^{\dagger}_{p \sigma} a_{p \sigma}
+ ~-~ \frac{g}{2} \sum_{p, q=1}^4 a^{\dagger}_{p+}a^{\dagger}_{p-}  a_{q-}a_{q+} \; .
 \label{eq:H_pair}
-\end{equation}
+\end{align}
 
 
-In spite of its simplicity,  the model of Eq.~\eqref{eq:H_pair} is a particularly difficult test for many-body approximations based on ISRs because the Hamiltonian does not contain leading order contributions that connect single particle excitation with 2p1h/2h1p configurations in the ground state. This means that the dominant many-body effect accounted in ADC(2,3) or CCSD calculations are suppressed and  higher configurations of 2p2h dominate.
+In spite of its simplicity,  this model poses a particularly difficult test for many-body approximations based on ISRs because the Hamiltonian~\eqref{eq:H_pair} does not allow for admixtures of leading order excitation, that is of the particle-hole type. The ground state contains only 2p2h and higher excitations. Correspondingly, the pairing interactions $\widehat{V}$ cannot couple particle states to 2p1h configurations, neither hole states with  2h1p ones.  This is obvious looking at  the  leading terms, Eqs.~\eqref{eq:ADC2_M} and~\eqref{eq:ADC2_N}, that would involve interactions between a particle and a hole (which  cannot be connected by pairing)  but it applies to the full ADC(3) couplings~\eqref{eq:ADC3_M} and~\eqref{eq:ADC3_N} as well. It follows  that  the spectra for  particle attachment and removal are dominated  by 3p2h and 3h2p ISCs. These are partially included in the Dyson equation by couplings between particles and backward going, 2h1p, terms in the self-energy (or between holes and the forward 2p1h terms). However, a complete account of them would require many-body truncations at the ADC(4) level and higher.  Luckily, it is still possible to reach rather accurate results as demonstrated by Figs.~\ref{fig:pairing_adc} and~\ref{fig:pairing_all}.
+
+The unperturbed propagator, associated with the $\widehat{H}_0$ part of Eq.~\eqref{eq:H_pair}, is given by
+  \begin{align}
+   g^{(0)}_{p \sigma_p \, ,\, q \sigma_q}(\omega) ={}& \delta_{p q} \delta_{\sigma_p \,  \sigma_q} 
+   \left\{ \sum_{n=3,4}  \;  \frac {\delta_{n \,  p} }{ \omega - \varepsilon^{(0)}_n + i\eta}
+   ~+~ \sum_{k=1,2 }  \;  \frac {\delta_{k \, p} }{ \omega - \varepsilon^{(0)}_k - i\eta}
+\right\}  
+\label{eq:pair_h0}
+\end{align}
+where $\varepsilon^{(0)}_p = \xi (p-1)$ are the unperturbed single particle energies and the gap at the Fermi surface is \hbox{$E^{(0)}_{ph} = \varepsilon^{(0)}_3 - \varepsilon^{(0)}_2 = \xi$}.  
+For this particular model, the unperturbed state is also the same state that solves the HF equations. Thus, the HF propagator is written exactly in the
+same way but with only a shift in the single particle energies of the hole states (see also  Section 8.7.1 and Tab. 8.4):
+  \begin{align}
+   g^{HF}_{p \sigma_p \, ,\, q \sigma_q}(\omega) ={}& \delta_{p q} \delta_{\sigma_p \,  \sigma_q} 
+   \left\{ \sum_{n=3, 4}  \;  \frac {\delta_{n \,  p} }{ \omega - \varepsilon^{HF}_n + i\eta}
+   ~+~ \sum_{k=1, 2}  \;  \frac {\delta_{k \, p} }{ \omega - \varepsilon^{HF}_k - i\eta}
+\right\}  
+\label{eq:pair_gHF}
+\end{align}
+where
+  \begin{align}
+  \varepsilon^{HF}_p ={}& \left\{ 
+  \begin{array}{lcl}
+    \xi (p-1) \; , &   \qquad & \hbox{for~} p=3,4 \\
+    ~\\
+    \xi (p-1) - g/2 \; , &   \qquad & \hbox{for~} p=1,2    
+  \end{array}
+  \right.
+  \label{eq:pair_ehf}
+\end{align}
+and the particle-hole gap now depends on the coupling constant, \hbox{$E^{HF}_{ph} = \varepsilon^{HF}_3 - \varepsilon^{HF}_2 = \xi + g/2$}.  One may chose either  of these propagators as the reference state for calculating the ADC($n$) self-energy. However,  $g^{(0)}(\omega)$ will also require  additional corrections terms for the interactions matrices $C$ and $D$, as seen in {\bf Exercise 11.5}.  In practice, these corrections are already included in the shifts of Eq.~\eqref{eq:pair_ehf} and the HF reference is normally a better starting point for calculating the self-energy.
 
 
+We now set $\xi=1$ and  perform calculations at different levels of approximations in the ADC($n$) approach, by using the $g^{HF}(\omega)$ as reference (except when indicated)  and by calculating $\Sigma^{(\infty)}$ self-consistently in the {\em sc0} scheme.  After solving the Dyson equation, we extract the ground state energy from the Koltun sum rule~\eqref{eq:Koltun_hW}  and calculate the correlation energy $\Delta E=E_{g.s.} - (2\xi - g)$. 
+%
+ The result of the ADC(2) equations~\eqref{eq:ADC2_MEC} and~\eqref{eq:ADC2_NED}  is shown by the dotted line in Fig.~\ref{fig:pairing_adc}. 
+ The 2p1h-TDA approximation improves upon this by  using  the interaction matrices from Eqs.~\eqref{eq:ADC3_C} and~\eqref{eq:ADC3_D},
+ which resums infinite ladders of 2p and 2h states. However, this brings only a very small improvement to this system.
+ %
+The ADC(3) approximation gives better results and it is shown for  both the $g^{(0)}(\omega)$ and $g^{HF}(\omega)$ choices of the reference state  with long dashed and short dashed lines, respectively.  Remarkably,  these results depend strongly on the reference state and  are much closer to the exact solution for the $g^{(0)}(\omega)$ case, which should be a poorer choice. Furthermore, $g^{HF}(\omega)$ behaves erratically for negative values of $g$, corresponding to a  repulsive pairing interaction $\widehat{V}$.  These two calculations differ only in the single particle energies used to calculate the 
+coupling matrices $M$ and $N$. Such behavior is simply explained by the dependence of $E^{HF}_{ph}$ on $g$, which can make the denominator in Eqs.~\eqref{eq:ADC3_C} and~\eqref{eq:ADC3_D}  very small and causes the breakdown of the perturbation expansion~\eqref{eq:MNexp}.
+%
+To resolved his problem we substitute the $t^{(0)}$ of Eq.~\eqref{eq:dressed_t2} with the converged solution from the CCD equations. The resulting ADC(3)-D is now completely independent of the choice between the two reference states and it also reproduces the exact result closely. This is shown by the two solid lines in Fig.~\ref{fig:pairing_adc}.
 
 
-We perform calculations at different levels of approximation in the ADC($n$) scheme. First, we implement the ADC(2) equations~\eqref{eq:ADC2_MEC} and~\eqref{eq:ADC2_NED} and a hybrid scheme in which the matrices $M$ and $N$ remain the same as in ADC(2) but with the use of the third order  expressions
-for $C$ and $D$. The latter approximation in commonly referred to as `extended-ADC(2)' and includes the all order summations of ladder and ring diagrams. However, it misses third order contributions to the coupling matrices that are important to obtain correct separation energies  for addition and removal of a particle.  The results for the correlation energies are compared to the exact full-configuration interaction (FCI) results in Fig.~\ref{fig:pairng_adc}, where it is seen that the extended-ADC(2)
-gives a small improvement for a repulsive  interaction ($g<0$), but it deteriorates for attractive pairing.
-The complete ADC(3) approximation corrects the issues of the extended-ADC(2) and becomes very close the the exact result for a repulsive pairing. However, for $g>0$, it does not improve upon the simple ADC(2).  This is mostly because of the lack of direct terms in Hamiltonian~\eqref{eq:H_pair} that connects single particle states to 2p2h and 4p4h configurations...
+Fig.~\ref{fig:pairing_all}  compares the ADC(3) approach with  CC  and second order perturbation theory.  
+The ADC(3)-D and CCD methods perform similarly at $g<0$, where they are both close to the exact solution all the way to $g\approx-1.3$. For smaller values of the coupling the CCD iterations stop converging. At large positive values of $g$ (corresponding to attractive pairing) the two approaches eventually deviate from the exact result but with CCD being slightly better. 
+%
+Clearly the full ADC(3)-D is a more complex calculations than CCD but leads to  similar results for the binding energy. On the other hand, this does not only yield the ground state energy but also the whole spectral function for the addition and removal of a particle is generated when solving the Dyson equation~\eqref{eq:DysSchrod} or~\eqref{eq:DysMtx}.  The next section will demonstrate examples of the self-energy and the spectral distribution obtained when calculating the single particle propagator.
 
 
-
-A comparison with the CC approach and MBPT is presented in Fig.~\ref{fig:pairng_all}.
-The ADC(3) and CCD methods perform similarly at $g<0$, where they are both close to the exact solution. They deviate by similar amounts for attractive pairing but in opposite directions.
-
-The FORTRAN code that generated these results is available online at  {\sloppy  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter11-programs/Pair_Model}}. We will not discuss this code here, but we will give a detailed discussion of how to structure a similar ADC($n$) code for infinite matter computations in the next section.
+The FORTRAN code that generated these results is available online at  {\sloppy  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter11-programs/Pair_Model}}. We do not examine this code here but we will give a detailed discussion of how to structure a complex ADC($n$) code for infinite matter computations in the next section.
 
 
-\section{A computational project in infinite matter}
+\section{Numerical solutions for infinite matter}
 \label{sec:scgf_comp}
 
 
-In this section we discuss how to approach  ADC(3) calculations for infinite matter. We will do this
-using the C++ programming language and will refer to the numerical code provided within this chapter at the {\sloppy
-URL:  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter11-programs/Inf_Matter}.}
+In this section we discuss how to implement the calculation of the self-energy and the single particle propagator
+in the ADC($n$) formalism. We will demonstrate this for the case of infinite nucleonic matter and use our
+results to discuss  general  features of the spectral function.
+%
+A general code that can solve for both symmetric and pure neutron matter up to ADC(3)
+is provided with  this chapter at the {\sloppy
+URL  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter11-programs/Inf_Matter}. } 
+We will
+use the  C++ programming language and will refer to this code for describing the technical details of the implementation.
+%
+We then show results based on the Minnesota nuclear potential from Ref.~\cite{ch11_minnesota}. This is a very simplified model of the nuclear 
+interaction that allows for an easy implementation. On the other hand, it still retains some physical properties of
+ the nuclear Hamiltonian that will allow us to discuss the basic properties of the spectral function
+of  nucleonic matter (and of infinite fermionic systems in general).  The reader interested in these  aspects could refer directly
+to Sec.~\ref{sec:scgf_comp_results}.
 
-\iffalse
+
+
+\subsection{Computational details for ADC($n$)}
+\label{sec:scgf_comp_code}
+
 The first fundamental step  to set up a SCGF computation is the choice of the model space. For
 infinite matter, translational invariance imposes that the Dyson equation is diagonal in momentum  and
 therefore it becomes much easier to solve the problem in momentum space. However, there remain two possible
 choices for how to encode single particle degrees of freedom.
-The first one is to subdivide the infinite space in  boxes of finite length  and to impose periodic boundary conditions
+The first one is to subdivide the infinite space in  boxes of finite size  and to impose periodic boundary conditions
 (see also chapter 8). In this way, the number of fermions included in each box is finite and determined by the particle
 density of the system. The resulting model space is naturally expressed by a set of discretized single particle
-states and equations in the form of Eqs.~\eqref{eq:ADC3_MEC}, \eqref{eq:ADC3_NED} and \eqref{eq:DysMtx}, and it
-can be solve directly as ti would be done for a finte system in a box.  Numerical results then need to be converged
-with respect to the truncation of the k-space inside each box.   We will follow this approach for the present
+states and one solves the working equations in the form of Eqs.~\eqref{eq:ADC3_MEC}, \eqref{eq:ADC3_NED} and \eqref{eq:DysMtx}.
+This path requires  the same technical steps needed to calculate  finite systems in a box. 
+Numerical results then need to be converged with respect to the truncation of the k-space (and, for an infinite system, with respect to the
+number of  nucleons inside each periodic box).   We will follow this approach for the present
 computational project.
 The other approach is to retain the full momentum space and write the SCGF equations already in the full
-thermodynamic limit. This approach is more suitable to solve the Dyson equation at finite temperatures and
-in a full SCGF fashion and will be discussed further in Sections~\ref{sec:scgf_finiteT}. % and~\ref{sec:scgf_comp_finiteT}.
+thermodynamic limit. This choice is best suited to solve the Dyson equation at finite temperatures and
+in a full SCGF fashion and will be discussed further in Section~\ref{sec:scgf_finiteT}. % and~\ref{sec:scgf_comp_finiteT}.
 
 
 \vskip 0.5 cm
-{\em Construction of the model space.}
-
+{\bf Construction of the model space.}
+For simplicity, we assume a total number $A$ of nucleons in each (cubic) periodic box. For 
+boxes of  length $L$, the density and the Fermi momentum are expressed, respectively as ($\hbar$=1):
+\begin{align}
+  \rho = \frac{A}{L}  \qquad  \qquad  & \hbox{and}  \qquad  \qquad  p_F =  \sqrt[\leftroot{-1}\uproot{2}\scriptstyle 3]{ \frac{6 \pi^2 \rho}{\nu} } \, ,
+  \label{eq:pf_vs_rho}
+\end{align}
+where $\nu$ is twice the  number of different  spin-$\frac 1 2$ fermions
+and the basis states are defined by the cartesian quantum numbers $n_x$, $n_y$, $n_z$=\,0, 1, 2...  with momentum
+\begin{align}
+  {\bf p} =  \frac{2 \pi}{L}  \left(  \begin{array}{c}  n_x \\n_y  \\ n_z   \end{array} \right) \, .
+\end{align}
+The kinetic energies, and hence the unperturbed single particle energies, will depend \hbox{on $|{\bf p}|^2$} and hence the values
+of $N_{sq}=n_x^2+n_y^2+n_z^2$ define a set of separate shells. Since we need closed shell reference states, only certain
+values for the number of nucleons in each box,  $A$, are possible. The size of the model space is given by 
+$N_{sq}^{\rm max} = \max \{n_x^2+n_y^2+n_z^2\}$.
+%
+The construction of the single particle model space is then straightforward. We will do it constructing a specific class 
+with pointers to arrays for each relevant quantum number and additional arrays for the kinetic energies or any
+other useful quantity associated with each state.
 
 \lstset{language=c++}
 \begin{lstlisting}
-    i_count = 0;
+class SpBasisK {
+
+  public:
+    int SpNmax, SpNAlloc;      // total number of s.p. states and allocated space
+    int *nx, *ny, *nz, *spin;  // quantum numbers
+    double *e_kin;  // kinetic energy
+    
+    double Lbox;  // periodic box side
+    int N_holes;   // number of nucleons in a box (# of occupied states)  
+    
+    // grouping s.p. states of equal symmetry
+    int N_grps;  //  number of different groups
+    int *gr_mlt, *gr_rep;
+    
+    // functions
+  public:
+    void Build_sp_basis(int, double);
+    
+    int Build_groups_table(void );
+    
+  };
+\end{lstlisting}
+
+The constructor for the model space will be necessary to order the basis with increasing values of $N_{sq}$, so that 
+the orbits corresponding to the $A$ hole states come first. This becomes useful later to construct ISCs.
+%
+We first count the total number of possible $(n_x, n_y, n_z)$ configurations. Once it is known how many single particle $\vec k$ states there are, we can allocate arrays in memory to store the relevant quantum numbers of each of them:
+
+\lstset{language=c++}
+\begin{lstlisting}
+const double PI          = 3.141592653589793; 
+const double hbarc       = 197.326968;  // [MeV*fm]
+const double NUCLEONmass = 939.565;     // [MeV]
+
+void SpBasisK::Build_sp_basis(int Nsq_max, double Lbox, int A) {
+
+  int imax = sqrt(double Nsq_max) + 1; // max value of |n_x|, |n_y| or |n_z|
+  
+  int i_count = 0;  // counts the number of basis states:
+  for (int ix=-imax; ix<=imax; ++ix)
+    for (int iy=-imax; iy<=imax; ++iy)
+      for (int iz=-imax; iz<=imax; ++iz)
+        if (ix*ix + iy*iy + iz*iz <= nsq_mx) ++i_count;
+  
+  
+  SpNAlloc = 2 * i_count; //  2 is the spin-1/2 degeneracy
+  
+  cout << "\n Allocating space for "<< SpNAlloc << " sp states... \n";
+  
+  nx    = new int[SpNAlloc];  // Allocate basis' arrays
+  ny    = new int[SpNAlloc];
+  nz    = new int[SpNAlloc];
+  spin  = new int[SpNAlloc];
+  e_kin = new double[SpNAlloc];
+  
+  double xek;
+  
+  cout << "\n Single particle basis:\n ----------------------";
+  cout << "\n  orbit    n_x   n_y   n_z    Nsq     E_kin\n";
+  
+  i_count = 0;
+  for (int isq=0; isq<=nsq_mx; ++isq) {
     for (int ix=-imax; ix<=imax; ++ix)
       for (int iy=-imax; iy<=imax; ++iy)
         for (int iz=-imax; iz<=imax; ++iz) {
-          itest = ix*ix + iy*iy + iz*iz;
-          if ((nsq_mn <= itest) && (itest <= nsq_mx)) ++i_count;
-        }
-\end{lstlisting}
-Once we know how many single particle $\vec k$ states we have, we can allocate
-arrays in memory to store the relevant quantum numbers of each of them:
-\begin{lstlisting}
-  int i1 = this->Count_sp_basis(0, nsq_mx, imax);
-
-  SpNAlloc = (ch_max - ch_min + 1) * 2 * i1 + 10; // +10 for safety
-
-  cout << "\n allocating space for "<< SpNAlloc << " sp states... \n";
-
-  nx    = new int[SpNAlloc];
-  ny    = new int[SpNAlloc];
-  nz    = new int[SpNAlloc];
-  nsq   = new int[SpNAlloc];
-  spin  = new int[SpNAlloc];
-  chrg  = new int[SpNAlloc];
-  k     = new double[SpNAlloc];
-  e_kin = new double[SpNAlloc];
-  e_HF  = new double[SpNAlloc];
-  e_sp  = new double[SpNAlloc];
-  group = new int[SpNAlloc];
-
-  int ich, is;
-
-  double xk = 0.0, xek = 0.0;
-
-  i1 = 0;
-  for (int isq=0; isq<=nsq_mx; ++isq) {
-    for (int ix=-imax; ix<=imax; ++ix) {
-      for (int iy=-imax; iy<=imax; ++iy) {
-        for (int iz=-imax; iz<=imax; ++iz) {
           if ((ix*ix + iy*iy + iz*iz) != isq) continue;
+          
+          xek = double(isq) * pow((hbarc * 2.0 * PI / Lbox),  2.0) / 2.0 / NUCLEONmass;
+          cout <<i_count <<"  " <<ix <<"  " <<iy <<"  " <<iz <<"  " <<isq <<"  " <<xek <<endl;
+          
+          for (int is=-1; is<2; is+=2) {
+            nx[i_count] = ix;
+            ny[i_count] = iy;
+            nz[i_count] = iz;
+            spin[i_count] = is;
+            e_kin[i_count] = xek;
+            ++i_count;
+          }
+          
+        }  // end of ix, iy, iz loop
+  } // end of isq loop
+  SpNmax = i_count;
 
-          xek = double(isq);
-          xk  = sqrt(xek) * 2.0 * PI / Lbox;
-          xek = xk * xk * MeVfm * MeVfm / 2.0 / NUCLEONmass;  //nuc_mass_ave;
-          cout << i1 << "  " << ix << "  " << iy << "  " << iz << "  ";
-          cout << isq << "  " << xk << "  " << xek << endl;
+  this->N_holes = A; // very important! Must set the # of occupied states
 
-          for (ich=ch_min; ich<=ch_max; ++ich)
-            for (is=-1; is<2; is+=2) {
-              nx[i1] = ix;
-              ny[i1] = iy;
-              nz[i1] = iz;
-             nsq[i1] = isq;
-            spin[i1] = is;
-            chrg[i1] = ich;
-               k[i1] = xk;
-           e_kin[i1] = xek;
-            e_HF[i1] = 0.0;
-            e_sp[i1] = 0.0;
-           group[i1] = -100;
-            ++i1;
-            }
+  return;}
+\end{lstlisting}
 
-        }
+
+
+
+\vskip 0.5 cm
+{\bf Construction of ISCs.}
+Due to translational invariance the Dyson equation~\eqref{eq:Dyson} separates in a set of uncoupled equations
+for each  values of $\{{\bf p}_i, s_{z}^i \}$ in the model space (where $s_{z}$ is the spin component and $i$ labels
+the basis states):
+\begin{align}
+   g({\bf p}_i, s^i_z; \omega) = g^{(0)}({\bf p}_i, s^i_z; \omega) + g^{(0)}({\bf p}_i, s^i_z; \omega) \, \Sigma^\star({\bf p}_i, s^i_z; \omega) \,  g({\bf p}_i, s^i_z; \omega) \; .
+\end{align}
+This diagonal equation can be formally inverted as shown in Eqs.~\eqref{eq:G_algebraic}  and~\eqref{eq:S_self_all} below. However, we will solve for all of its eigenstates instead and this is better done by diagonalizing Eq.~\eqref{eq:DysMtx}.  For each state $i$, we need to generate
+tables for the relevant 2p1h and 2h1p ISCs and then calculate the elements of  the Dyson matrix. 
+One can build a class whose objects are associated to  a particular orbit of the given model space  and then construct the ISCs  
+in accordance with the conservation  of momentum and other symmetries of the Hamiltonian, which are implicit in the matrix elements or the coupling ($M$ and $N$) and interaction ($C$ and $D$) matrices.
+Schematically, looking only at the 2p1h indices for simplicity, this will be:
+%
+\lstset{language=c++}
+\begin{lstlisting}
+class ADC3BasisK {
+  
+  public:
+    int *Bas_2p1h, *Bas_2h1p; // pointers to 2p1h/2h1p bases
+    int Nbas_2p1h, Nbas_2h1p; // dimensions of the 2p1h/2h1p bases
+    
+    int iSpLoc; // to keep the overall k-channel in s.p. basis
+    SpBasisK *SpBasLoc;
+    
+    // functions
+  public:
+    void Build_2p1h_basis(SpBasisK*, int );
+  };
+
+void ADC3BasisK::Build_2p1h_basis(SpBasisK *InBasis, int isp) {
+
+  this->SpBasLoc = InBasis; // keep track of the basis and the s.p. states associated
+  this->iSpLoc = isp;       // to this 2p1h ICSs, for use by other functions
+
+  Nbas_2p1h = ... ;  // number of expected 2p1h configurations
+  
+  if (NULL != Bas_2p1h) delete [] Bas_2p1h;
+  this->Bas_2p1h = new int[3*(Nbas_2p1h)];  // need 3 indices for each config (n1, n2, k3)
+  
+  int    k3_x, k3_y, k3_z, k3_sp;
+
+  i_count = 0;
+  for (int n1=SpBasLoc->N_holes; n1<SpBasLoc->SpNmax; ++n1) {
+    
+    for (int n2=n1+1; n2<SpBasLoc->SpNmax; ++n2) { // n1 < n2 due to Pauli
+
+      // expected q.#s for 3rd index (k3), imposed by the Hamiltonian's symmetries:
+      k3_x  = SpBasLoc->nx[n1]   + SpBasLoc->nx[n2]   - SpBasLoc->nx[isp];
+      k3_y  = SpBasLoc->ny[n1]   + SpBasLoc->ny[n2]   - SpBasLoc->ny[isp];
+      k3_z  = SpBasLoc->nz[n1]   + SpBasLoc->nz[n2]   - SpBasLoc->nz[isp];
+      k3_sp = SpBasLoc->spin[n1] + SpBasLoc->spin[n2] - SpBasLoc->spin[isp];
+      
+      for (int k3=0; k3<SpBasLoc->N_holes; ++k3) {
+        if ( (k3_x != SpBasLoc->nx[k3])  ||  (k3_y        != SpBasLoc->ny[k3]      ) ||
+               (k3_z != SpBasLoc->nz[k3]) || (k3_sp != SpBasLoc->spin[k3]) ) continue;
+        
+        this->Bas_2p1h[3*i_count    ] = n1;
+        this->Bas_2p1h[3*i_count + 1] = n2;
+        this->Bas_2p1h[3*i_count + 2] = k3;
+
       }
     }
   }
-  SpNmax = i1;
+  if (i_count > Nbas_2p1h) {/* This is a trouble */} else {Nbas_2p1h = i_count;}
+
+  return;}
+\end{lstlisting}
+
+
+\vskip 0.5 cm
+{\bf Spectral representation.}
+Both the propagator and the self-energy have spectral representations in terms of poles, with residues in separable form. Hence, we can devise a general class that could store both objects. Specifically, by using the conservation of spin and the fact that the propagator is diagonal in momentum space, one can write the Lehman representation~\eqref{eq:g1Leh} as
+\begin{align}
+   g({\bf p}_i, s_z^i; \omega) ={}& \sum_n \frac{~~ S^{p}({\bf p}_i, s_z^i; \varepsilon^{{\bf p}_i +}_n ) ~~}{\omega - \varepsilon^{{\bf p}_i +}_n + i \Gamma}
+        ~ + ~                                     \sum_k \frac{~~ S^{h}({\bf p}_i, s_z^i; \varepsilon^{{\bf p}_i -}_k ) ~~}{\omega - \varepsilon^{{\bf p}_i -}_k - i \Gamma} \; ,
+\label{eq:MattK_gsp_Leh}
+\end{align}
+where $S^{p(h)}({\bf p}_i, s_z^i; \omega )$ are the particle and hole parts of the spectral function [see Eqs.~\eqref{eq:SpSh}]. Hence, it is simpler and more
+efficient to store the full residues rather than separate spectroscopic amplitudes. The self-energy can be casted in the same simple pole structure 
+by diagonalizing the interactions matrices. Assuming that \hbox{$U_C \,(E^>+C) \, U_C^\dagger = \diag(\lambda_C)$} and \hbox{$U_D \, (E^<+D) \, U_D^\dagger = \diag(\lambda_D)$},
+with $\lambda_{C,D}$ being the eigenvalues, we  rewrite Eq.~\eqref{eq:ADC_SE_form} as follows:
+\begin{align}
+   \Sigma^\star({\bf p}_i, s_z^i; \omega) ={}& \Sigma^{(\infty)}({\bf p}_i, s_z^i) 
+       ~ + ~      \sum_r\frac{ | \widetilde{M}_{r\, ; \, {\bf p}_i, s_z^i} |^2 }{ ~~ \omega -  \lambda_C^r + i \Gamma ~~}
+       ~ + ~      \sum_q \frac{ | \widetilde{N}_{{\bf p}_i, s_z^i \, ; \, q} |^2 }{ ~ \omega -  \lambda_D^q - i \Gamma ~} \; ,
+\label{eq:MattK_Sig_Leh}
+\end{align}
+where $\widetilde{M} = U_C^\dagger M$  and $\widetilde{N} = N U_D^\dagger$.  
+A full pre-diagonalization of the interaction matrices $C$ and $D$ is not needed to construct the Dyson matrix. Thus, storing the self-energy in the form of Eq.~\eqref{eq:MattK_Sig_Leh} is  needed only if  self-energy is to be calculated for specific values of its arguments (for example to plot it). However, in most cases, a reduction of these matrices through a Lanczos algorithm is still necessary to reduce the dimensionality of the problem, as discussed below here. The resulting tridiagonal matrices can be accommodated in the same structure as for the propagator by simply adding an extra array for the sub-diagonal elements.
+%
+Thus, the class for the Lehman representation has  the following structure:
+\lstset{language=c++}
+\begin{lstlisting}
+class SpctDist {
+
+  public:
+    SpBasisK *SpBasLoc;  // associated s.p. basis
+    
+    int N_LEH_ALLOC; // number of Lehmann representations to store
+  
+    int     *N_fw_pls,     *N_bk_pls,  *N_PLS_ALLOC;
+    double **ek_fw,       **ek_bk; // - poles of the propagator/self-energy
+    double **eb_fw,       **eb_bk; // - eb_xx Lanczos subdiagonal for storing self-energy
+    double **Sk_fw,       **Sk_bk; // - this is the FULL residue (not the amplitude X,Y)
+    double *Sig_inf;  // static self-energy
+
+  // functions
+  public:
+    SpctDist(SpBasisK* ); // constructor
+    int add_k_channel(int, int, double*, double*, int, double*, double*,
+                            double in_Sig_inf=0.0, double *B_fw_in=NULL, double *B_bk_in=NULL);
+  };
+
+void SpctDist::SpctDist(SpBasisK *InBasis ) {
+  //
+  //  Use constructor to initialize the object with a table
+  // of pointers for all basis states
+  
+  this->SpBasLoc = InBasis; // keeps track of the associated model space
+
+  N_LEH_ALLOC = this->SpBasLoc->SpNmax;
+
+
+  Sig_inf = new double[N_LEH_ALLOC];
+
+  N_fw_pls    = new int[N_LEH_ALLOC];        N_bk_pls = new int[N_LEH_ALLOC];
+  N_PLS_ALLOC = new int[N_LEH_ALLOC];
+  ek_fw       = new double*[N_LEH_ALLOC];    ek_bk    = new double*[N_LEH_ALLOC];
+  Sk_fw       = new double*[N_LEH_ALLOC];    Sk_bk    = new double*[N_LEH_ALLOC];
+  eb_fw       = new double*[N_LEH_ALLOC];    eb_bk    = new double*[N_LEH_ALLOC];
+  
+  for (int isp=0; isp<N_LEH_ALLOC; ++isp) {
+    Sig_inf[isp] = 0.0;
+    
+    N_fw_pls  [isp] = -100;    N_bk_pls  [isp] = -100;
+    N_PLS_ALLOC[isp] = -100;
+    ek_fw[isp]      = NULL;    ek_bk[isp]      = NULL;
+    Sk_fw[isp]      = NULL;    Sk_bk[isp]      = NULL;
+    eb_fw[isp]      = NULL;    eb_bk[isp]      = NULL;
+  }
+  
+  return;}
+
+void SpctDist::add_k_channel(int i_Leh, int N_fw_in, double *A_fw_in, double *E_fw_in,
+                                        int N_bk_in, double *A_bk_in, double *E_bk_in,
+                                        double in_Sig_inf /*=0.0*/,
+                                        double *B_fw_in/*=NULL*/, double *B_bk_in/*=NULL*/){
+  //
+  //  This function is to load and store the spectral representation of a s.p. propagator
+  // or a self-energy, if the additional array for the subdiagonal elements the self-energy
+  // are not provided, they are set automatically to zero.
+
+  //  Allocate memory for the basis' state  i_Leh; only one array is allocate for both hole
+  // and particle poles, the xx_fw[] arrays will just point to where the particles begin
+  N_PLS_ALLOC[i_Leh] = N_bk_in + N_fw_in;
+  ek_bk[i_Leh] = new double[N_PLS_ALLOC[i_Leh]];  ek_fw[i_Leh] = ek_bk[i_Leh] + N_bk_in;
+  eb_bk[i_Leh] = new double[N_PLS_ALLOC[i_Leh]];  eb_fw[i_Leh] = eb_bk[i_Leh] + N_bk_in;
+  Sk_bk[i_Leh] = new double[N_PLS_ALLOC[i_Leh]];  Sk_fw[i_Leh] = Sk_bk[i_Leh] + N_bk_in;
+  
+  // store hole poles
+  N_bk_pls[i_Leh] = N_bk_in;
+  for (int ibk=0; ibk<N_bk_in; ++ibk) {
+    ek_bk[i_Leh][ibk] = E_bk_in[ibk];
+    Sk_bk[i_Leh][ibk] = A_bk_in[ibk];
+    eb_bk[i_Leh][ibk] = 0.0;
+    if (NULL != B_bk_in) eb_bk[i_Leh][ibk] = B_bk_in[ibk];
+  }
+  
+  // store particle pole
+  N_fw_pls[i_Leh] = N_fw_in;
+  for (int ifw=0; ifw<N_fw_in; ++ifw) {
+    ek_fw[i_Leh][ifw] = E_fw_in[ifw];
+    Sk_fw[i_Leh][ifw] = A_fw_in[ifw];
+    eb_fw[i_Leh][ifw] = 0.0;
+    if (NULL != B_fw_in) eb_fw[i_Leh][ifw] = B_fw_in[ifw];
+  }
+
+  Sig_inf[i_Leh] = in_Sig_inf;  // stores the static self-energy
+  
+  return;}
+   
 \end{lstlisting}
 
 \vskip 0.5 cm
-{\em Construction of ISCs.}
+The above classes simplify the calculation of quantities related to SCGF. For example, let us assume a function, {\verb Vpotential(ia,ib,ic,id) }, that returns the matrix elements  of the two-body interaction.% ,  where |\verb ia|, |\berb ib|, ...  are indices pointing to the states in out model spade object.
+The ADC(2) coupling matrix~\eqref{eq:ADC2_M} could be calculated using the following code:
+\lstset{language=c++}
+\begin{lstlisting}
+// Configurations for s.p. state iL:
+ADC3BasisK ISC2p1h(); ISC2p1h.Build_2p1h_basis(SpBasis, iL);
+
+// Array to store the coupling matrix M:
+M_rp = new double[ISC2p1h.Nbas_2p1h];
+
+for (ir = 0; ir<ISC2p1h.Nbas_2p1h; ++ir) {
+  // no need to loop over s.p. states since we are diagonal in the channel ia
+  
+  // Single particle states for the ir-th 2p1h configuration:
+  im = Bas_2p1h[3*ir ];
+  iv = Bas_2p1h[3*ir + 1 ];
+  iL = Bas_2p1h[3*ir + 2 ];
+  
+  // Apply Eq. (11.28a) [a HF ref. state is assumed here... X=Y=1]
+  M_rp[ir] = V_potential(im,iv,ia,iL);
+}
+\end{lstlisting}
+
+
+Likewise, the correlated HF diagram that contributes to $\Sigma^{(\infty)}$ [second term on the right hand side of Eq.~\eqref{eq:U_eff}] could be obtained
+as follows:
+\lstset{language=c++}
+\begin{lstlisting}
+// To calculate the HF potential (V_HF) between states ia and ib we do:
+
+double Sh, Vhf_ab;
+int nHoles;
+SpctDist  SpProp;  // sp propagators, contains the spectral distribution of every (p_i,s_z)
+
+Vhf_ab = 0.0;
+for (ic = 0; ic<Nocc; ++ic) {
+  nHoles = SpProp.N_bk_poles[ic];
+  Sh = 0.0;
+  for (int k=0; k<nHoles; ++k) Sh += SpProp[ic].Sh[k];
+    Vhf_ab += V_potential(ia,ic,ib,ic) * Sh;
+    }
+\end{lstlisting}
+
 
 \vskip 0.5 cm
-{\em Two body interaction: Minnesota potential}
+{\bf Reducing the computational load.}
+  Practical applications often require rather large model spaces to achieve convergence.  This poses a major hindrance 
+since the number of ISCs can grow very fast with the size of the space. The strongest constraint comes from
+2p1h configurations (that is, the dimension of the $C$ matrix), which increases quadratically with the 
+number of unoccupied states and linearly with the number of occupied ones. As a consequence, it is almost never possible
+to attempt a fully self-consistent calculations of the dynamic self-energy because these would be based on the huge number of poles in 
+Eqs.~\eqref{eq:g1Leh} or~\eqref{eq:MattK_gsp_Leh}. 
+In fact, the dimensionality wall not only  prohibits going beyond a {\em sc0} calculation but the dimensions of the Dyson matrix
+can become prohibitive even for a mean-field reference state and  models spaces of moderate size.
 
-\vskip 0.5 cm
-{\em Hartree-fock theory}
+As already mentioned in Sec.~\ref{sec:DysonDiag},
+the way out from this situation is to substitute the denominators in the Lehmann representation of the self-energy~\eqref{eq:MattK_Sig_Leh}
+with a much smaller numbers of effective poles.  This is done by projecting the sub-matrices $E^>+C$ and $E^<+D$ onto Krylov spaces of much smaller dimensions by using a Lanczos algorithm (or Block Lanczos, in the general case when the self-energy is not diagonal in ${\bf p}_i$)~\cite{ch11_MatrixComputations}.  This approach is usually more efficient if the vectors corresponding to the columns of $M$ and $N^\dagger$ are taken as the pivots.
+%
+For example, if $\pazocal{L}$ is the \hbox{$N_{\rm red}\times N_{\rm 2p1h}$} projection matrix from the full space of 2p1h configurations to the Krylov space of dimension $N_{\rm red}$~($<< N_{\rm 2p1h}$), then the third term on the right hand side of Eq.~\eqref{eq:ADC_SE_form} is modified as follows:
+\begin{align}
+   M^\dagger \, \frac1{\omega - [E^> +C] + i \eta} \, M    {}&  \quad  \longrightarrow \quad
+   M^\dagger  \pazocal{L}^\dagger \,  \frac1{\omega -  \, \pazocal{L}[E^> +C] \pazocal{L}^\dagger \, + i \eta} \, \pazocal{L} M
+      \label{eq:sigma_Lanc}
+\end{align}
+and similarly for the 2h1p sector.  In most cases, a number of Lanczos vectors between $N_{\rm red}=$~50 and 300 is sufficient, depending on model space size and the  accuracy required.  The reason for choosing a Krylov type of projection to reduce the dimensionality of the Dyson eigenvalue problem is that this allows to preserve two  crucial properties of the spectral distribution of $\Sigma^\star(\omega)$. First, the lowest $2N_{\rm red}$ moments of the spectral distribution are conserved, which guarantees to reproduce well the average spectral function at medium and large energies. Second, the eigenvectors at the extremes of the (2p1h or the 2h1p) spectrum converge first in the Lanczos algorithm. This implies that the self-energy and the particle attachment/removal distribution converge fast to the exact one near the Fermi energy. For this reason it is crucial that both the $E^>+C$ and $E^<+D$ matrices are projected and that they are handled separately.
+See eRef.~\cite{ch11_Soma2014Lanc} for details of the implementation in the SCGF approach.
 
-\vskip 0.5 cm
-{\em Constructing the Dyson matrix}
-
-\vskip 0.5 cm
-{\em Numerical solutions at ASDC(20 and ADC(3) level}
 
 
+In addition to the dimensions problem, one also needs to diagonalise Eq.~\eqref{eq:DysMtx} for each separate channel (${\bf p}_i, \, s_z^i$) in the basis.
+On the other hand, some single particle states are equivalent. For example, the momentum states with $n_x$=3, $n_y$=2 and $n_z$=1 is the same
+as $n_x$=2, $n_y$=-3 and $n_z$=1 except for a rotation around the $z$-axis. Likewise, $n_x$=3, $n_y$=2 and $n_z$=-1 differs only by a parity inversion.
+The diagonalization of each of these channel would yield exactly the same results and needs to be performed only once.  The obvious procedure is that of grouping the model space states according to the same symmetries of the Hamiltonian. In this way, Eq.~\eqref{eq:DysMtx} is typically solved a few tens of times even when the model space is two orders of magnitude larger. 
+%
+For an Hamiltonian that is invariant under rotation, parity inversion and spin flipping, the algorithm to separate the basis in groups of the same symmetry is as follows:
+\lstset{language=c++}
+\begin{lstlisting}
+int SpBasisK::Build_groups_table(void ) {
+  
+  int AbsN_mx = ...  // Maximum absolute value of n_x, n_y or n_z
+  
+  int N_ALLOC_GRPS = ...  //Max number of different groups expected
+  
+  gr_rep = new int[N_ALLOC_GRPS]; // for each group, keep track of a representative state
+  gr_mlt = new int[N_ALLOC_GRPS]; // number of basis states belonging to a group
+  
+  int  i_mult, i_rep, n1, n2, n3, itmp;
+  
+  int count=0;
+  for (int i1=0; i1<=AbsN_mx; ++i1)
+    for (int i2=i1; i2<=AbsN_mx; ++i2)
+      for (int i3=i2; i3<=AbsN_mx; ++i3) {
+        
+        i_mult = 0;
+        i_rep = -100;
+        for (int isp=0; isp<this->SpNmax; ++isp) {
+          
+          n1 = abs(nx[isp]);   n2 = abs(ny[isp]);   n3 = abs(nz[isp]);
+          
+          if (n1 > n2) {itmp=n1; n1=n2; n2=itmp;}  //  order the q.#s of the orbit isp in
+          if (n1 > n3) {itmp=n1; n1=n3; n3=itmp;}  // increasing values, according 
+          if (n2 > n3) {itmp=n2; n2=n3; n3=itmp;}  // to i1 < i2 < i3
+          
+          if ((n1==i1) && (n2==i2) && (n3==i3)) {
+            ++i_mult;
+            if (i_rep < 0) i_rep = isp;
+          }
+          
+        }  // end loop over isp
+        
+        if (i_rep >= 0) {
+          gr_mlt[count] = i_mult;
+          gr_rep[count] = i_rep;
+          ++count;
+        }
+        
+      }
+  
+  this->N_grps = count;
+  
+  cout << "\n\n A total of " << N_grps << " independent groups of single particle basis \n";
+  cout <<        "states has been found. All states within a group are equivalent \n";
+  cout <<        "under rotation, spin and/or parity inversion.\n";
+  
+  return N_grps;}
+\end{lstlisting}
 
+
+
+\subsection{Spectral function in pure neutron and symmetric nuclear matter}
+\label{sec:scgf_comp_results}
+
+
+
+We test the ADC approach for pure neutron matter (PNM) and symmetric nuclear matter (SNM) using the Minnesota nuclear force~\cite{ch11_minnesota}. This is a simple semi-realistic potential that contains only central terms, for different spin and isospin, but no tensor force. It has often been used in structure studies of light neutron-rich nuclei, although it  fails to  predict any saturation of infinite nuclear matter up to very high densities.  Nevertheless, it is a good toy model for describing certain salient features of nucleonic matter and of quantum liquids in general.
+%
+In pure neutron matter, we computed  A=N=66 neutrons in a model space truncated at $N_{sq}^{\rm max}$=36, which is enough to converge the total energy per particle. For symmetric nuclear matter, we fill the same unperturbed orbits with Z=66 protons and N=66 neutron. Thus, we have a total of A=132 nucleons and truncate the model space at $N_{sq}^{\rm max}$=26. This requires up to 30~Gb of memory but it 
+is still small enough to be computed on a high-end desktop.  In both cases,  the Dyson equation is solved for each value of the momentum ${\bf p}_i$ as discussed above. We retained $N_{\rm red}$=300 Lanczos vectors in every channel, which is even more than necessary for converging the binding energies and spectral functions with respect to the Krylov projection. 
+
+
+Total energies per particle are shown in Fig.~\ref{fig:minn_adc_eos}, for the reference state (which is HF) and for different approximations that show the convergence with respect to the many-body truncation: in order ADC(2), 2p1h-TDA and ADC(3).
+%
+These plots already demonstrate one general feature of infinite nucleonic matter: PNM is relatively weakly correlated and may allow for solutions in MBPT, while SNM is more correlated and  requires more sophisticated  all-orders methods. The correlations energy with respect to the HF reference, $E_{\rm corr.}=Eg.s. - E_{HF}$, varies between 0.5 and 2~MeV for neutrons but it is twice as much ($\approx$4 MeV) for symmetric matter and independent of the density (note the different scales in the two panels). 
+%
+Furthermore, the ADC(2) energies for PNM are already very close to the full ADC(3) calculations, showing that the many-body truncation is extremely well converged. In SNM, the situation is different and  truncations beyond the second  order contribute to  the calculated  correlation energy.  The difference between 2p1h-TDA and the ADC(3) is always about 300~keV/A and the trend shows convergence of the many-body truncation.
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.45\textwidth]{Chapter11-figures/cimcccd.pdf}
-\includegraphics[width=0.45\textwidth]{Chapter11-figures/cimcccd.pdf}
-\caption{Equation of state for pure neutron matter (left) and symmetric nuclear matter (right) as predicted by for the Minnesota two-nucleon interaction. Different curves show results for different ADC($n$) approximations. The ADC(2) (dashed lines), 2p1h-TDA (long dashed line) and full ADC(3) (don-dashed lines) are calculated with an Hartree-Fock reference state and single particle energies. The full line gives results for ADC(3) with a self-consistent unperturbed single particle energies.}
+\includegraphics[width=0.46\textwidth]{Chapter11-figures/PNM_conv_ADC.pdf}  \hspace{0.06\textwidth}
+\includegraphics[width=0.46\textwidth]{Chapter11-figures/SNM_conv_ADC.pdf}
+\caption{Equation of state for PNM (left) and SNM (right) as predicted by for the Minnesota two-nucleon interaction. Different curves show results for different ADC approximations. The ADC(2) (filled squares), 2p1h-TDA (dot-dashed line) and full ADC(3) (full lines) are calculated using a Hartree-Fock reference state and unperturbed single particle energies.}
 \label{fig:minn_adc_eos}
 \end{center}
 \end{figure}
@@ -1297,46 +1735,88 @@ arrays in memory to store the relevant quantum numbers of each of them:
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[width=0.45\textwidth]{Chapter11-figures/cimcccd.pdf}
-\includegraphics[width=0.45\textwidth]{Chapter11-figures/cimcccd.pdf}
-\caption{Spectral function of pure neutron matter (left) and symmetric nuclear matter (right) at nominal saturation density ($\rho=0.16$~fm$^{-3}$) from ADC(3)---3D plot. }
+\includegraphics[width=0.86\textwidth]{Chapter11-figures/spect_funct_3D_pnm.pdf} \\  \vspace{0.06\textwidth}
+\includegraphics[width=0.86\textwidth]{Chapter11-figures/spect_funct_3D_snm.pdf} \\
+\caption{Spectral function of PNM (top) and SNM (bottom) at nominal saturation density ($\rho=0.16$~fm$^{-3}$) from ADC(3).
+The correlated strength distribution is folded with Lorentzians along the energy axis. The isolated vertical lines mark the unperturbed HF spectrum and are normalized to the same height assumed for the Lorentzians, so that a visual comparison with the correlated distribution is meaningful.
+The thick line at constant $\omega$ marks the Fermi energy, $E_F$, for the correlated ADC(3) results, which separates the quasihole from the quasiparticle spectrum.
+}
 \label{fig:minn_adc_sfnct}
 \end{center}
 \end{figure}
 
 
-%We show here the result form pure neutron matter calculated with the Minnesota interactions.
+The resulting spectral functions from ADC(3) are shown in Fig.~\ref{fig:minn_adc_sfnct} and compared to the unperturbed (HF) reference state.
+Since we are working in a discrete basis, the results are given for the cartesian momenta ${\bf p}_i$ and only  discrete quasiparticle energies 
+are obtained from  Eq.~\eqref{eq:DysMtx} [also compare Eqs.~\eqref{eq:SpSh} and~\eqref{eq:MattK_gsp_Leh}].
+In order to give a clearer visualization of the  spectral distribution, we fold each state along the energy axis with Lorentzians of width $\Gamma$=1.2~MeV near the Fermi energy and $\Gamma$=7~MeV otherwise.
+%
+The corresponding expression of the spectral function in the HF approximation has no fragmentation and displays only isolated \hbox{$\delta$-peaks} for each momenta:
+ \begin{align}
+S^{HF}({\bf p}, s_z; \, \omega) ={}& S^{h, HF}({\bf p}, s_z; \, \omega) +  S^{p, HF}({\bf p}, s_z; \, \omega) =  \delta\Big(\omega- \varepsilon^{HF}({\bf p})\Big) \; ,   \label{eq:Spw_HF}
+\end{align} 
+where $\varepsilon^{HF}({\bf p})=\frac{p^2}{2m}+v_{HF}({\bf p})$ are the HF single particle energies. Eq.~\eqref{eq:Spw_HF} is plotted as separate spikes in Fig.~\ref{fig:minn_adc_sfnct}, with their height  taken to be  the same as for the (normalized) Lorentzians near the Fermi surface. Thus, the unperturbed spectral function can be visually compared to the fragmented distribution plotted for the ADC(3).
 
-Fig.~\ref{fig:minn_SE} shows the self-energy for momentum $k=2 K_F/3$  for nominal saturation density...
+ Fig.~\ref{fig:minn_adc_sfnct} shows all the general characteristics of the spectral distribution for infinite systems. 
+At the HF level, each nucleon has an energy spectrum $\varepsilon^{HF}({\bf p})$ that follows the parabolic trend of its kinetic energy but it is otherwise shifted in energy due to the mean-field HF potential.  The density $\rho$ determines the momentum $p_F$ of the last occupied state according to Eq.~\eqref{eq:pf_vs_rho}, which in turn sets the Fermi energy, $E_F^{(HF)}=\varepsilon^{HF}(p_F)$.
+%
+When correlations are included the spectrum becomes  fragmented. Again, it is seen that PNM (top panel) is only weakly correlated  and the quasiparticle peaks are almost unchanged near the Fermi surface. Only deeply bound neutrons, at the smallest momenta, are sensibly fragmented.  On the other hand, the correlated spectral function of  SNM is much more fragmented, some particle strength is visible for small momenta $p<p_F$ and likewise there is a small occupation of states with $p>p_F$. Integrating $S({\bf p}, s_z; \, \omega)$ over the energy interval $]-\infty, E_F]$ yields the momentum distribution (per unit volume), while further integrating over momenta gives the total nucleon density $\rho$ [see Eq.~\eqref{eq:part_num}].
 
-\begin{figure}[ht]
+
+
+\begin{figure}[tb]
 \begin{center}
-\includegraphics[width=0.45\textwidth]{Chapter11-figures/cimcccd.pdf}
-\includegraphics[width=0.45\textwidth]{Chapter11-figures/cimcccd.pdf}
-\caption{Nucleon self-energy, $\Sigma(k,\omega)$ of pure neutron matter (left) and symmetric nuclear matter (right) at nominal saturation density ($\rho=0.16$~fm$^{-3}$) from ADC(3).  Values for $k=0$,$K_F/2$,$3K_F/2$. }
-\label{fig:minn_SE}
+\includegraphics[width=0.46\textwidth]{Chapter11-figures/real_self_energy_pnm.pdf}  \hspace{0.05\textwidth}
+\includegraphics[width=0.472\textwidth]{Chapter11-figures/real_self_energy_snm.pdf}
+\caption{Real part of the nuclear self-energy, ${\rm Re} \; \Sigma(p,\omega)$, of PNM (left) and SNM (right) at nominal saturation density ($\rho=0.16$~fm$^{-3}$), obtained from ADC(3).  The Fermi momentum is $k_F$=1.68~fm$^{-1}$ for PNM and $k_F$=1.33~fm$^{-1}$ for SNM.  This is shown for fixed momenta at  $p=0$ fm$^{-1}$, at  $p\approx0.87p_F$ (just below $p_F$) and at $p\approx1.42p_F$ (above $p_F$).}
+\label{fig:minn_ReSE}
 \end{center}
 \end{figure}
 
 
-We finally compare results for different methods discussed in this book in Fig.~\ref{fig:minn_all}...
-
-\begin{figure}[ht]
+\begin{figure}[tb]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{Chapter11-figures/cimcccd.pdf}
-\caption{Total correlation energy for pure nuclear matter obtained from different methods presented in this book. This would include CCD, IM-SRG and ADC(3) in
-a discretized cartesian basis and CIMC calculations.}
+\includegraphics[width=0.46\textwidth]{Chapter11-figures/imag_self_energy_pnm.pdf}  \hspace{0.06\textwidth}
+\includegraphics[width=0.46\textwidth]{Chapter11-figures/imag_self_energy_snm.pdf}
+\caption{Imaginary part of the nuclear self-energy, ${\rm Im} \, \Sigma(p,\omega)$, of PNM (left) and SNM (right) at nominal saturation density ($\rho=0.16$~fm$^{-3}$), as calculated from  ADC(3).  The Fermi momentum is $k_F$=1.68~fm$^{-1}$ for PNM and $k_F$=1.33~fm$^{-1}$ for SNM. Values for  momenta fixed at  $p=0$ fm$^{-1}$, at  $p\approx0.87p_F$ and $p\approx1.42p_F$ are shown. }
+\label{fig:minn_ImSE}
+\end{center}
+\end{figure}
+
+The real and imaginary parts of the self-energy, $\Sigma^\star({\bf p}_i, s_z^i; \omega)$, are shown in Figs.~\ref{fig:minn_ReSE} and ~\ref{fig:minn_ImSE} for values of the 
+momentum ${\bf p}_i$ both below and above $p_F$.  Also in this plots, the discrete energy poles are folded by taking a finite value of $\Gamma$ in Eq.~\eqref{eq:MattK_Sig_Leh},
+which correspond to using finite width Lorentzians for the imaginary part.
+%
+In Fig.~\ref{fig:minn_ReSE}, bot PNM and SNM have a similar dependence on momentum that comes form the kinetic energy term in $\Sigma^{(\infty)}({\bf p})$ but there is more attraction in the second case. This is due to the additional attractive force between protons and neutrons, which makes SNM bound. Superimposed to this trend is the energy dependence  coming form the coupling to ISCs, which fragments and spreads the single particle strength over different energies. 
+%
+The imaginary part of the self-energy encodes the strength of the absorption effects that mix single particle degrees of freedom to ISCs ones. Thus, it is also directly connected to the mean free path of nucleons in the system~\cite{ch11_Rios2012MFP}. This term is always positive~(negative) for energies below~(above) the fermi surface. 
+ For ${\bf p}_i\approx$~0 the absorption is strongest at low energies.  As one increases $p$, this becomes weak in the hole energy region and much more stronger correlations are seen for quasiparticle energies and momenta outside the Fermi sea.  Once again the PNM panel shows weak and more isolated peaks, while SNM is characterized by stronger fragmentation and absorption (hence,  a more collective behavior).
+
+
+
+Most of the qualitative features of these self-energies and of the spectral functions just shown are general to extended correlated fermion systems and are  also seen, for example, in the electron gas or liquid $^3$He. It is interesting to compare the plots of Fig.~\ref{fig:minn_adc_sfnct} to the analogous distribution of a finite system, like the one shown in Fig.~\ref{fig:ScptFnctN56}. In the latter case, the spectral function displays orbits form the shell structure rather than peaks  distributed according to kinetic energy. In all cases, correlations alter the simple mean-field view. However, the strength near the Fermi energy tends to remain dominated by single particle structures because of the low density of ISCs (2p1h, 2h1p and beyond) in that region.
+
+
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Chapter11-figures/PNM_Ecorr_Comp.pdf}
+\caption{Total correlation energy for pure neutron matter obtained from the CCD, the configuration interaction Monte Carlo (CIMC) and the ADC(3)-{\em sc0} methods presented in this book. }
 \label{fig:minn_all}
 \end{center}
 \end{figure}
 
-\fi
+
+Figure~\ref{fig:minn_all} compares the results for PNM with  the coupled cluster and Monte Carlo methods introduced in previous chapters.  Note that we show the correlation energies, rather than the energy per particle, to amplify differences among many-body methods. The largest discrepancy is at the lowest density and amounts to $\approx$50~keV/A. This is 10\% of the correlation energy but less than 0.5\% of the total energy.  At larger densities, all methods agree to higher accuracy.  It is interesting to see that ADC(3) initially follows configuration interaction Monte Carlo (CIMC) and then shifts to being closer to CCD as the density increases.
+
+
+
 
 
 \section{Self-consistent Green's functions at finite temperature in the thermodynamic limit}
 \label{sec:scgf_finiteT}
 
-In the following we want to concentrate on the study of an infinite system at finite temperature; we will then set ourselves in the thermodynamic limit, i.e. number of particles $N$ and volume $V$ tending at infinity with density $\rho=N/V$ kept constant. The may-body SCGF approach at finite temperature is particularly suited for this kind of study because it is thermodynamically consistent, meaning that a quantity calculated from the microscopic point of view yields the same results as the thermodynamical macroscopic quantity~\cite{ch11_Baym1962}. This consistency is strictly related to the fact that a fully dressed propagator, obtained via iterative solution of Dyson's equation Eqs.~(\ref{eq:Dyson}), is used in the calculation of the partition function in the Luttinger-Ward formalism~\cite{ch11_Luttinger1960}, from which one extracts the thermodynamical properties of the system. Furthermore, it can be demonstrated that this method fulfills the Hugenholtz van-Hove theorem~\cite{ch11_Hugenholtz1958}, and this once again relates to the fact that the conservation laws of particle number, momentum and energy are preserved in this kind of approximation~\cite{ch11_Baym1961,ch11_Baym1962}.
+In the following we want to concentrate on the study of an infinite system at finite temperature; we will then set ourselves in the thermodynamic limit, i.e. number of particles $N$ and volume $V$ tending at infinity with density $\rho=N/V$ kept constant. The may-body SCGF approach at finite temperature is particularly suited for this kind of study because it is thermodynamically consistent, meaning that a quantity calculated from the microscopic point of view yields the same results as the thermodynamical macroscopic quantity~\cite{ch11_Baym1962}. This consistency is strictly related to the fact that a fully dressed propagator, obtained via iterative solution of Dyson's equation, Eqs.~(\ref{eq:Dyson}), is used in the calculation of the partition function in the Luttinger-Ward formalism~\cite{ch11_Luttinger1960}, from which one extracts the thermodynamical properties of the system. Furthermore, it can be demonstrated that this method fulfills the Hugenholtz van-Hove theorem~\cite{ch11_Hugenholtz1958}, and this once again relates to the fact that the conservation laws of particle number, momentum and energy are preserved in this kind of approximation~\cite{ch11_Baym1961,ch11_Baym1962}.
 
 We will show in this section how to calculate the self-consistent propagator in the ladder approximation, a specific approximation for the self-energy $\Sigma^\star(\omega)$ where particle-particle and hole-hole intermediate scattering states are resummed to all orders in the so called in-medium T-matrix. We will be working with the effective Hamiltonian of Eq.~\eqref{eq:Heff}, considering the two-body averaged three-body force that enters $\widetilde U$ as given in Eq.~\eqref{eq:ueff_3b_first}, and disregarding all irreducible three-body terms. The Koltun sum rule of Eq.~\eqref{eq:Koltun_hW} will then be used to obtain the total energy of the many-body system. The great advantage of working at finite temperature is that the appearance of pairing when considering hole-hole intermediate states is washed out by the thermal effects~\cite{ch11_Alm1996}. Recently an improved treatment of pairing in the SCGF method when going to zero temperature has been presented by the Authors of Ref.~\cite{ch11_ding2016}. Within the Luttinger-Ward formalism, the entropy can then be calculated via the knowledge of the self-consistent propagator, and from the entropy all other thermodynamical quantities are accessible. We will not treat here the calculation of the entropy, for a detailed description we refer the reader to Chapter 3 of Ref.~\cite{ch11_Rios2007PhD}.
 
@@ -1445,9 +1925,9 @@ with $\omega_+=\omega+i\eta$. At this point, exploiting the Plemelj identity,
 one can separate the real and imaginary part of the retarded propagator, and it can be checked that the imaginary part of the retarded propagator coincides with the spectral function up to a factor:
 \begin{equation}
 \label{eq:spec_img}
-A({\bf p},\omega)=-2{\rm Im}g({\bf p},\omega_+)\,.
+A({\bf p},\omega)=-2 \, {\rm Im} \, g({\bf p},\omega_+)\,.
 \end{equation}
-The Dyson's equation given in Eq.~\eqref{eq:Dyson} can be rewritten in an algebraic form as follows:
+Furthermore, the Dyson equation given in Eq.~\eqref{eq:Dyson} can be rewritten in an algebraic form as follows:
 \begin{equation}
 g({\bf p},\omega_+)=\frac{1}{[g^{(0)}({\bf p},\omega_+)]^{-1}-\Sigma^\star({\bf p},\omega_+)}\,,
 \label{eq:G_algebraic}
@@ -1455,8 +1935,8 @@ g({\bf p},\omega_+)=\frac{1}{[g^{(0)}({\bf p},\omega_+)]^{-1}-\Sigma^\star({\bf 
 and combining Eq.~(\ref{eq:G_algebraic}) with Eq.~(\ref{eq:spec_img}),
 one can express the spectral function as:
 \begin{equation}
-A({\bf p},\omega)=\frac{-2\mathrm{Im}\Sigma^\star({\bf p},\omega_+)}
-{[\omega-\frac{p^2}{2m}-\mathrm{Re}\Sigma^\star({\bf p},\omega)]^2+[\rm{Im}\Sigma^\star({\bf p},\omega_+)]^2} \,.
+A({\bf p},\omega)=\frac{-2 \, \mathrm{Im} \, \Sigma^\star({\bf p},\omega_+)}
+{[\omega-\frac{p^2}{2m}-\mathrm{Re}\Sigma^\star({\bf p},\omega)]^2+[\rm{Im} \, \Sigma^\star({\bf p},\omega_+)]^2} \,.
 \label{eq:spectral_fun}
 \end{equation}
 The numerical self-consistent solution that one has to perform is the one given by Eq.~(\ref{eq:spectral_fun}). Self-consistency is achieved once the spectral function inserted in the calculation of the irreducible self-energy is equal to the one obtained by solving Eq.~(\ref{eq:spectral_fun}).
@@ -1468,22 +1948,25 @@ g({\bf p},\omega)=\int_{\varepsilon_\textrm F}^\infty\mathrm d\omega'\frac{S^p({
 \label{eq:Lehm_infty}
 \end{equation}
 The $S^p({\bf p},\omega)$ and $S^h({\bf p},\omega)$ correspond to the particle and hole spectral functions, which were already introduced in Eqs.~(\ref{eq:SpSh}). Notice however that, unlike in Eqs.~(\ref{eq:SpSh}), we have introduced one single Fermi energy $\varepsilon_\textrm F$ ($\varepsilon_\textrm F$ = $\varepsilon_0^+$ = $\varepsilon_0^-$) in the integrals domain. This is a consequence of using a plane-wave basis in momentum space. In an uncorrelated system, this energy defines the last filled level and hence corresponds to the energy needed to remove a particle from the many-body ground state. In the case of an interacting system, not in the superfluid nor in the superconducting phase, $\varepsilon_\textrm F$ equals the chemical potential $\mu$, and corresponds to the minimum energy necessary to add or remove a particle to/from the many-body system. Consequently, the expression for the spectral function given in Eq.~(\ref{eq:spectral_fun}) can be divided into two parts:
-\begin{eqnarray}
-S^p({\bf p},\omega)&=&-\frac{1}{\pi}\frac{\mathrm{Im}\Sigma^\star({\bf p},\omega)}
-{(\omega-\frac{p^2}{2m}-\mathrm{Re}\Sigma^\star({\bf p},\omega))^2+(\rm{Im}\Sigma^\star({\bf p},\omega))^2} \quad \omega>\varepsilon_\textrm F\,,\qquad\,\,\,
+\begin{subequations}
+\label{eq:S_self_all}
+\begin{align}
+S^p({\bf p},\omega)={}&-\frac{1}{\pi}\frac{\mathrm{Im} \, \Sigma^\star({\bf p},\omega)}
+{(\omega-\frac{p^2}{2m}-\mathrm{Re} \, \Sigma^\star({\bf p},\omega))^2+(\rm{Im} \, \Sigma^\star({\bf p},\omega))^2} \quad \omega>\varepsilon_\textrm F\,,\qquad\,\,\,
 \label{eq:Sp_self}
 \\ 
-S^h({\bf p},\omega)&=&\frac{1}{\pi}\frac{\mathrm{Im}\Sigma^\star({\bf p},\omega)}
-{(\omega-\frac{p^2}{2m}-\mathrm{Re}\Sigma^\star({\bf p},\omega))^2+(\rm{Im}\Sigma^\star({\bf p},\omega))^2} \quad\,\,\,\, \omega<\varepsilon_\textrm F\,,\quad
+S^h({\bf p},\omega)={}&\frac{1}{\pi}\frac{\mathrm{Im} \, \Sigma^\star({\bf p},\omega)}
+{(\omega-\frac{p^2}{2m}-\mathrm{Re} \, \Sigma^\star({\bf p},\omega))^2+(\rm{Im} \, \Sigma^\star({\bf p},\omega))^2} \quad\,\,\,\, \omega<\varepsilon_\textrm F\,,\quad
 \label{eq:Sh_self}
-\end{eqnarray}
+\end{align}
+\end{subequations}
 resembling the structure of Eqs.~(\ref{eq:SpSh}).
 
 In the next subsection we will briefly sketch the steps that have to be taken to perform the numerical implementation of Eq.~(\ref{eq:spectral_fun}) at finite temperature.
 
 \subsection{Numerical implementation: details and tips}
-We show in Fig.~\ref{fig:num_impl} a schematic representation of how the numerical code works when considering both two-body and three-body forces. %Depending on the starting point of the iteration procedure, $\sim15$ iterations are needed to obtain converged results. These could be less for low densities and high temperatures, and if the starting point is a converged iteration for another density, temperature state of the system. The number of iterations for convergence increase for lower temperatures and high densities. 
-The fundamental quantities that one has to calculate are the first-order two-body Green's function, the in-medium $T$-matrix and the irreducible self-energy, which are depicted in the the three blue boxes in Fig.~\ref{fig:num_impl}, with their respective Feynman diagrams (rules for writing Feynman diagrams are given in Appendix 1). Diagrams are a direct way to write down the complicated mathematical expressions that one has to solve numerically. The one-body and two-body effective nuclear potentials are depicted in the center orange boxes. These are similar to the contributions which where given in Fig.~\ref{fig:EffOps}, except for the first term in the one-body effective potential, which is zero in infinite matter, and the last term which in our case is only the first-order two-body averaged three-nucleon force, with the correct multiplying factor, as in Eq.~\eqref{eq:ueff_3b_first}~\cite{ch11_Carbone2013NM3nf,ch11_Carbone2014}. As can be seen from the graph in Fig.~\ref{fig:num_impl}, all quantities, in blue or orange boxes, are fed with the spectral function, the left red box, which is then iteratively calculated solving Dyson's equation, Eq.~(\ref{eq:spectral_fun}). The self-consistency reached is checked by comparing the chemical potential from the previous iteration with the new one calculated after solving Eq.~(\ref{eq:spectral_fun}).
+We show in Fig.~\ref{fig:num_impl} a schematic representation of how the numerical code works when considering both two-body and three-body forces, i.e. working with Hamiltonian $\tilde H$ of Eq.~\eqref{eq:Heff} and disregarding irreducible three-body terms. %Depending on the starting point of the iteration procedure, $\sim15$ iterations are needed to obtain converged results. These could be less for low densities and high temperatures, and if the starting point is a converged iteration for another density, temperature state of the system. The number of iterations for convergence increase for lower temperatures and high densities. 
+The fundamental quantities that one has to calculate are the first-order two-body Green's function, the in-medium $T$-matrix and the irreducible self-energy, which are depicted in the three blue boxes of Fig.~\ref{fig:num_impl}, with their respective Feynman diagrams (rules for writing Feynman diagrams are given in Appendix 1). Diagrams are a direct way to write down the complicated mathematical expressions that one has to solve numerically. The one-body and two-body effective nuclear potentials are depicted in the center orange boxes. These are similar to the contributions which where given in Fig.~\ref{fig:EffOps}, except for the first term in the one-body effective potential, which is zero in infinite matter, and the last term which in our case is only the first-order two-body averaged three-nucleon force, with the correct multiplying factor, as in Eq.~\eqref{eq:ueff_3b_first}~\cite{ch11_Carbone2013NM3nf,ch11_Carbone2014}. As can be seen from the graph in Fig.~\ref{fig:num_impl}, all quantities, in blue or orange boxes, are fed with the spectral function, the left red box, which is then iteratively calculated solving Dyson's equation, Eq.~(\ref{eq:spectral_fun}). The self-consistency reached is checked by comparing the chemical potential from the previous iteration with the new one calculated after solving Eq.~(\ref{eq:spectral_fun}).
 
 For clarity, we will distinguish between the wording \emph{calculation} and \emph{iteration}: we will refer to \emph{calculation} as the set of several \emph{iterations} necessary to get to a converged result for the spectral function, so an \emph{iteration} is exactly what is depicted in Fig.~~\ref{fig:num_impl}. For a more in depth explanation of the numerical details the reader can refer to Refs.~\cite{ch11_Frick2004PhD,ch11_Rios2007PhD}.\\
 
@@ -1511,20 +1994,20 @@ We will now enumerate the steps to perform a complete iteration.\\
 \label{eq:chempot_micro}
 \end{equation}
 \begin{itemize}
-\item {\bf Numerical tips for the $\mu$ mesh:} One chooses a sample mesh of chemical potentials $\mu$ to insert in the Fermi-Dirac function $f(\omega,\mu)$ and then solves Eq.~(\ref{eq:chempot_micro}). For each mesh point $\mu$ one gets a value of density $\rho$. Parametrizing $\rho$ as a function of $\mu$, one can then encounter the value of $\mu$ which corresponds to the external density. The mesh of $\mu$ can be initially distributed around the value of the single-particle spectrum calculated at $p_{\rm F}$ (in the case of a zero temperature calculation it holds the relation $\varepsilon(p_{\rm F})=\mu$), and then adjust the mesh testing if the limits include the value of the external density. However, it must be noted that the single-particle spectrum $\varepsilon({\bf p})$ comes from a previous calculation, as also the chemical potential which enters the spectral function in Eq.~(\ref{eq:chempot_micro}), so its has to be kept in mind that in the solution of Eq.~(\ref{eq:chempot_micro}) one is considering two different chemical potentials, which will end up coinciding at the end of the convergence loop of iterations.
+\item {\bf Numerical tips for the $\mu$ mesh:} One chooses a sample mesh of chemical potentials $\mu$ to insert in the Fermi-Dirac function $f(\omega,\mu)$ and then solves Eq.~(\ref{eq:chempot_micro}). For each mesh point $\mu$ one gets a value of density $\rho$. Parametrizing $\rho$ as a function of $\mu$, one can then encounter the value of $\mu$ which corresponds to the external density. The mesh of $\mu$ can be initially distributed around the value of the single-particle spectrum calculated at $p_{\rm F}$ (in the case of a zero temperature calculation it holds the relation $\varepsilon(p_{\rm F})=\mu$), and then adjust the mesh testing if the limits include the value of the external density. However, it must be noted that the single-particle spectrum $\varepsilon({\bf p})$ in both $A({\bf p},\omega)$ and $f(\omega,\mu)$ comes from a previous calculation, as also the chemical potential which enters the spectral function in Eq.~(\ref{eq:chempot_micro}), so it has to be kept in mind that in the solution of Eq.~(\ref{eq:chempot_micro}) one is considering two different chemical potentials, but solving just for one; these will end up coinciding at the end of the convergence loop of iterations.
 \end{itemize}
 
 \noindent {\bf 2.} As a second step one solves a self-consistent equation in the energy to find a new single-particle spectrum:
 \begin{equation}
-\varepsilon({\bf p})=\frac{p^2}{2m}+{\rm Re}\Sigma({\bf p},\varepsilon({\bf p}))\,,
+\varepsilon({\bf p})=\frac{p^2}{2m}+{\rm Re} \, \Sigma({\bf p},\varepsilon({\bf p}))\,,
 \end{equation}
 which will be used throughout the iteration. 
  
-\noindent{\bf 3.} At this point the imaginary part of the first-order two-body Green's function can be calculated. The first order approximation of the two-body propagator corresponds to the independent propagation of two fully dressed particles. This includes two terms, a direct and an exchange one, as depicted diagrammatically in Fig.~\ref{fig:num_impl}. The $G^{II,f}_{pphh}$ was already defined in Eq.~\eqref{eq:FeynGalvsG2}, however here we consider dressed single-particle propagators, $g^{(0)}\rightarrow g$.
+\noindent{\bf 3.} At this point the imaginary part of the first-order two-body Green's function can be calculated. The first order approximation of the two-body propagator corresponds to the independent propagation of two fully dressed particles. This includes two terms, a direct and an exchange one, as depicted diagrammatically in Fig.~\ref{fig:num_impl}. The $G^{II,f}_{pphh}$ was already defined in Eq.~\eqref{eq:FeynGalvsG2}, however here we consider dressed single-particle propagators, $g^{(0)}\rightarrow g$ and both direct and exchange term grouped in $G^{II,f}_{pphh}$.
 The imaginary part of this quantity reads:
 \begin{equation}
 \label{eq:gII_imag}
-{\rm Im}G^{II,f}_{pphh}(\Omega_+;{\bf p},{\bf p'}) = -\frac{1}{2}\int_{-\infty}^{+\infty}\frac{{\rm d}{\omega}}{2\pi}A({\bf p},\omega)A({\bf p'},\Omega-\omega)[1-f(\omega)-f(\Omega-\omega)]\,.
+{\rm Im} \, G^{II,f}_{pphh}(\Omega_+;{\bf p},{\bf p'}) = -\frac{1}{2}\int_{-\infty}^{+\infty}\frac{{\rm d}{\omega}}{2\pi}A({\bf p},\omega)A({\bf p'},\Omega-\omega)[1-f(\omega)-f(\Omega-\omega)]\,.
 \end{equation}
 where $\Omega_+$ is the sum of the energies of the two particles close to the real axis. This expression is derived from a sum over Matsubara frequencies of a function with a double pole on the real-energy axis via use of the Cauchy theorem~\cite{ch11_Rios2007PhD}.
 \begin{itemize}
@@ -1533,12 +2016,12 @@ where $\Omega_+$ is the sum of the energies of the two particles close to the re
 
 \noindent{\bf 4.} From the imaginary part it is then possible to obtain the real-part of the first-order two-body Green's function via a dispersion relation:
 \begin{equation}
-{\rm Re}G^{II,f}_{pphh}(\Omega_+;{\bf p},{\bf p'}) = -{\pazocal P}\int_{-\infty}^{+\infty}\frac{{\rm d}{\Omega'}}{\pi}\frac{{\rm Im}G^{II,f}_{pphh}(\Omega_+;{\bf p},{\bf p'})}{\Omega-\Omega'}\,.
+{\rm Re} \, G^{II,f}_{pphh}(\Omega_+;{\bf p},{\bf p'}) = -{\pazocal P}\int_{-\infty}^{+\infty}\frac{{\rm d}{\Omega'}}{\pi}\frac{{\rm Im} \, G^{II,f}_{pphh}(\Omega_+;{\bf p},{\bf p'})}{\Omega-\Omega'}\,.
 \end{equation}
 
 \noindent{\bf 5.} An angle average is then necessary to calculate $G^{II,f}_{pphh}$. This average is necessary to circumvent the coupling of partial waves with different total angular momentum $J$ which appear in $G^{II,f}_{pphh}$. The average is performed over the angle formed by the center of mass momentum ${\bf P}={\bf p}+{\bf p'}$ and the relative momentum of the two nucleons ${\bf k}=({\bf p}-{\bf p'})/2$. This strategy will facilitate the solution of a Lippmann-Schwinger type equation to evaluate the effective interaction in the medium, known as the in-medium T-matrix. The average reads:
 \begin{equation}
-\overline{G^{II,f}_{pp,hh}}(\Omega;{\bf P},{\bf k})=\frac{1}{2}\int_{-1}^{+1}{\rm d\,cos}\theta G^{II,f}_{pp,hh}(\Omega;|{\bf P}/2+{\bf k}|,|{\bf P}/2-{\bf k}|)\,.
+\overline{G^{II,f}_{pp,hh}}(\Omega;{\bf P},{\bf k})=\frac{1}{2}\int_{-1}^{+1}{\rm d\,cos}\theta~G^{II,f}_{pp,hh}(\Omega;|{\bf P}/2+{\bf k}|,|{\bf P}/2-{\bf k}|)\,.
 \end{equation}
 
 \noindent{\bf 6.} The two-body angle-averaged propagator together with the nuclear potential are then used to obtain the in-medium T-matrix. As explained previously, this is a ladder resummation of particle-particle and hole-hole diagrams, this differs with respect to the Brueckner G-matrix presented in Chapter 8 because it includes hole-hole diagrams and considers the full off-shell description of the spectral function. As seen from Fig.~\ref{fig:num_impl}, the potential to be included is the sum of a bare two-body potential and an averaged three-body one. Details on the numerical solution for the averaged three-body force are given in the next section, while working equations for three-nucleon chiral forces will be given in Appendix 2. The Lippmann-Schwinger type equation to be solved reads:
@@ -1554,7 +2037,7 @@ At low temperatures, the appearance of bound states signals the onset of the pai
 
 \noindent{\bf 7.} The remaining step in the SCGF method is the calculation of the self-energy from the T-matrix. The first quantity to be obtained is the imaginary part of the self-energy, Im$\Sigma^\star$:
 \begin{equation}
-{\rm Im}\Sigma^\star({\bf p},\omega_+)=\int\frac{{\rm d}{\bf p'}}{2\pi^3}\int_{-\infty}^{+\infty}\frac{{\rm d}{\omega'}}{2\pi}\langle{\bf pp'}|{\rm Im}{\rm T}(\omega+\omega'_+,{\bf P})|{\bf pp'}\rangle A({\bf p'},\omega')[f(\omega')+b(\omega+\omega')]\,;
+{\rm Im} \, \Sigma^\star({\bf p},\omega_+)=\int\frac{{\rm d}{\bf p'}}{2\pi^3}\int_{-\infty}^{+\infty}\frac{{\rm d}{\omega'}}{2\pi}\langle{\bf pp'}|{\rm Im} \, {\rm T}(\omega+\omega'_+,{\bf P})|{\bf pp'}\rangle A({\bf p'},\omega')[f(\omega')+b(\omega+\omega')]\,;
 \end{equation}
 We recall that this expression is also obtained from a summation over Matsubara frequencies of a function with two poles on the real energy axis~\cite{ch11_Rios2007PhD}. 
 \begin{itemize}
@@ -1563,7 +2046,7 @@ We recall that this expression is also obtained from a summation over Matsubara 
  
 \noindent{\bf 8}. The real part of the self-energy is then obtained by means of a dispersion relation from the imaginary part: 
 \begin{equation}
-{\rm Re}\Sigma^\star({\bf p},\omega_+)=\Sigma^{(\infty)}({\bf p})-{\pazocal P}\int_{-\infty}^{+\infty}\frac{{\rm d}{\lambda}}{\pi}\frac{{\rm Im}\Sigma^\star({\bf p},\lambda_+)}{\omega-\lambda}\,.
+{\rm Re} \, \Sigma^\star({\bf p},\omega_+)=\Sigma^{(\infty)}({\bf p})-{\pazocal P}\int_{-\infty}^{+\infty}\frac{{\rm d}{\lambda}}{\pi}\frac{{\rm Im} \, \Sigma^\star({\bf p},\lambda_+)}{\omega-\lambda}\,.
 \label{eq:self_en}
 \end{equation}
 The $\Sigma^{(\infty)}$ is the correlated Hartree-Fock part of the single-particle self-energy as described by Eq.~\eqref{eq:UeffSig}, where we now consider the two-body averaged three-body interaction as given in Eq.~\eqref{eq:ueff_3b_first}. Eq.~(\ref{eq:self_en}) can then be explicitly written as:
@@ -1589,7 +2072,7 @@ which is analogous to Eq.~(\ref{eq:Koltun_hW}).
 
 \subsection{Averaged three-body forces: numerical details.}
 \label{subsec:average_3bf}
-The inclusion of one-body averaged three-nucleon forces $\widetilde V^\mathrm{3NF}$ enters the calculations presented in the previous section, as it is shown in Eqs.~(\ref{eq:t-matrix}) and (\ref{eq:HF_self}). This average corresponds to a trace over the spin/isospin quantum numbers of the averaged particle, in this case the third particle, and by an integration over its momentum ${\bf p_3}$:
+The inclusion of one-body averaged three-nucleon forces $\widetilde V^\mathrm{3NF}$ enters the calculations presented in the previous section, as it is shown in Eqs.~(\ref{eq:t-matrix}), (\ref{eq:HF_self}) and \eqref{3B_exp}. This average corresponds to a trace over the spin/isospin quantum numbers of the averaged particle, in this case the third particle, and by an integration over its momentum ${\bf p_3}$:
 \begin{equation}
 %\nn &&
 \langle {\bf p'_1 p'_2}|\widetilde V^\mathrm{3NF}|{\bf p_1 p_2}\rangle_A =
@@ -1610,7 +2093,7 @@ n({\bf p})=\int_{-\infty}^{+\infty}\frac{{\rm d}\omega}{2\pi}A({\bf p},\omega)f(
 Let us give some details on the numerical implementation for the calculation of Eq.~\eqref{eq:dd3bf_new} regarding the mesh of the internal momentum ${\bf p_3}$ and the calculation of the momentum distribution $n({\bf p_3})$ via Eq.~\eqref{eq:mom_dist}:
 \begin{itemize}
 \item We start with the definition of the mesh necessary to calculate the integral over the internal momenta ${\bf p_3}$. Considering that in the integral we deal with a dressed distribution function $n({\bf p_3})$, which may have populated states at high momentum, we need to cover momenta up to a certain high value in which it is sure that the $n({\bf p_3})$ has reached zero. One can choose an arbitrary number $imesh$ of Gauss-Legendre meshes (in the example shown below, $imesh=4$), with each mesh spanning a region of width $2/3 p_{\rm F}$. This width is chosen to cover accurately the behavior of the distribution function from momenta lower to those higher than $p_\textrm F$. Finally, high momenta are reached through a tangential mesh. We have 100  points in the Gauss-Legendre meshes, and 50 in the tangential one. 
-\item We then need to calculate the momentum distribution function via solution of Eq.~(\ref{eq:mom_dist}); in order to do so the spectral function coming from the previous iterative step has to be used. The values of the imaginary and real part of the self-energy are stored at each iterative step for different points in the energy and momentum space: for the momentum mesh we have $N_k=70$, for single-particle momenta going from 0 to 3000 MeV; for the energy mesh we interpolate through a spline the values of the imaginary and real part of the self-energy to a fine linear energy mesh of $N_{\omega,\textrm{spline}}=30000$ in a smaller range of values from $\approx$[-2000:5000] MeV. These values are used to calculate the spectral function (see Eq.~(\ref{eq:spectral_fun})) necessary to evaluate correctly Eq.~(\ref{eq:mom_dist}). The integral in Eq.~(\ref{eq:mom_dist}) is then performed via a trapezoidal integral in the energy range. Finally we perform a linear interpolation of the obtained values of $n({\bf p})$ to the mesh of ${\bf p_3}$ defined for the integration of the quantities in the averaged force, Eq.~\eqref{eq:dd3bf_new}. Extrapolated values of $n({\bf p_3})$ are set to zero.
+\item We then need to calculate the momentum distribution function via solution of Eq.~(\ref{eq:mom_dist}); in order to do so the spectral function coming from the previous iterative step has to be used. The values of the imaginary and real part of the self-energy are stored at each iterative step for different points in the energy and momentum space: for the momentum mesh we have $N_k=70$, for single-particle momenta going from 0 to 3000 MeV; for the energy mesh we interpolate through a spline the values of the imaginary and real part of the self-energy to a fine linear energy mesh of $N_{\omega,\textrm{spline}}=30000$ in a smaller range of values from $\approx$[-2000:5000] MeV. These values are used to calculate the spectral function (see Eq.~(\ref{eq:spectral_fun})) necessary to evaluate correctly Eq.~(\ref{eq:mom_dist}). The integral in Eq.~(\ref{eq:mom_dist}) is then performed via the trapezoidal rule in the energy range. Finally we perform a linear interpolation of the obtained values of $n({\bf p})$ to the mesh of ${\bf p_3}$ defined for the integration of the quantities in the averaged force, Eq.~\eqref{eq:dd3bf_new}. Extrapolated values of $n({\bf p_3})$ are set to zero.
 \end{itemize}
 
 \noindent
@@ -1747,17 +2230,17 @@ Here we show a simple Fortran code to perform the previous two steps (gauss() is
  \end{lstlisting}
  \vspace*{0.3cm}
 
-We note that the chemical potential $\mu$ enters the calculation of the averaged three-body force, via the momentum distribution, for this reason it is best to perform Eq.~\eqref{eq:dd3bf_new} after step one of the iterative procedure presented in the previous section. For futher details on including three-body forces in a SCGF infinite matter calculation we refer the reader to Ref.~\cite{ch11_Carbone2014PhD}.
+We note that the chemical potential $\mu$ enters the calculation of the averaged three-body force, via the momentum distribution, for this reason it is best to perform Eq.~\eqref{eq:dd3bf_new} after step one of the iterative procedure presented in the previous section. For further details on including three-body forces in a SCGF infinite matter calculation we refer the reader to Ref.~\cite{ch11_Carbone2014PhD}.
 
 
 \section{Concluding remarks}
-This chapter concludes an overview of the major methods based on Fock space, which are covered in chapters 8, 10 and 11 of this book. All these approaches have the common feature that their computing requirements scale only polynomially with the increase of particle number. This feature has permitted to push {\em ab-initio} studies of atomic nuclei up to medium-mass isotopes: a progress that would have seemed unthinkable until just a decade ago. 
+This chapter concludes an overview of the major methods based on Fock space, which are covered in chapters 8, 10 and 11 of this book. All these approaches have the common feature that their computing requirements scale only polynomially with the increase of particle number. This feature has permitted to push {\em ab initio} studies of atomic nuclei up to medium-mass isotopes: a progress that would have seemed unthinkable until just a decade ago. 
 %
 
-Here, we have focused on many-body Green's function theory, which is arguably the most complex of these formalisms but it has the advantage of providing a unique and global view of the many-particle structure and dynamics.   The spectral function is extracted directly from the physics information contained in the one-body Green's function and gives an intuitive understanding of correlations (beyond shell structure) of the system. Besides, expectation values of observables can be calculated easily, including binding energies.
+Here, we have focused on many-body Green's function theory, which is arguably the most complex of these formalisms but it has the advantage of providing a unique and global view of the many-particle structure and dynamics.   The spectral function is extracted directly from the physics information contained in the one-body Green's function and gives an intuitive understanding of correlations (beyond the simple shell structure) of the system. Besides, expectation values of observables can be calculated easily, including binding energies.
 %
-The formalism of SCGF is so vast that even a dedicated monograph would not be able to cover it in full. In this chapter, we have focused on presenting the two most important techniques that are currently used in modern {\em ab-initio} nuclear theory.
- In the first case, the Algebraic Diagrammatic Construction method proves to be particularly suited for the study of finite nuclei, but can as well be applied to infinite matter, as was demonstrated in this chapter. In the second case, we looked at how one can solve the  Dyson's equation directly in momentum space for extended systems.  This is an important aspect since the formalism allows to construct a fully-dressed propagator at finite temperature, which grants the method to be thermodynamically consistent, preserving all the fundamental laws of conservation. 
+The formalism of SCGF is so vast that even a dedicated monograph would not be able to cover it in full. In this chapter, we have focused on presenting the two most important techniques that are currently used in modern {\em ab initio} nuclear theory.
+ In the first case, the Algebraic Diagrammatic Construction method proves to be particularly suited for the study of finite nuclei, but can as well be applied to infinite matter, as was demonstrated in this chapter. In the second case, we looked at how one can solve the  Dyson equation directly in momentum space for extended systems.  The latter is an important aspect since the formalism allows to construct a fully-dressed propagator at finite temperature, which grants the method to be thermodynamically consistent, preserving all the fundamental laws of conservation. 
 %
 %
 For these cases we also discussed the most relevant steps and knowhow necessary for implementing SCGF calculations. Furthermore, we provided working numerical codes that can solve the same toy models used as examples throughout this book: a four-level pairing Hamiltonian and neutron matter with a Minnesota force.   While these applications are simple, the codes we provide already contain the most crucial elements and could be easily extended to real applications (in nuclear physics and other fields too!). We hope this chapter can be the starting point for readers interested in working with many-body Green's functions, starting from the sample codes presented and making use of numerous tips provided for the numerical solutions.
@@ -1776,9 +2259,9 @@ With still much room for further development, Fock space methods, and the SCGF a
 
 
 \begin{acknowledgement}
-We Thank A. Cipollone, W. H. Dickhoff, T. Duguet, K. Hebeler, M. Hjorth-Jensen, H. Muther, A. Polls, A. Rios, J. Schirmer, A. Schwenk, V. Som\`a and D. Van Neck  for several fruitful collaborations and  enlightening discussions over the years.
+We thank A. Cipollone, W. H. Dickhoff, C. Drischler, T. Duguet, K. Hebeler, M. Hjorth-Jensen, J. W. Holt, A. Lovato, G. Mart\'inez-Pinedo, H. M\"uther, P. Navr\'atil, A. Polls, A. Rios, J. Schirmer, A. Schwenk, V. Som\`a and D. Van Neck  for several fruitful collaborations and  enlightening discussions over the years.
 %
-This work was supported by the Science and Technology Facilities Council (STFC) under Grant No. ST/L005743/1, % 
+This work was supported by the UK Science and Technology Facilities Council (STFC) under Grant No. ST/L005743/1, % 
 the  Deutsche Forschungsgemeinschaft through Grant SFB 1245
 and by the Alexander von Humboldt Foundation through a Humboldt Research Fellowship for Postdoctoral Researchers.
 \end{acknowledgement}
@@ -1896,6 +2379,7 @@ G^{(0)}_{\lambda\gamma}(\omega_1+\omega_2-\omega)
 \widetilde{V}_{\sigma\tau,\beta\chi}
 G^{(0)}_{\chi\theta}(\omega_3+\omega_4-\omega)  \, .
 \end{eqnarray}
+ 
 
 
 \section*{Appendix 2: Chiral next-to-next-to-leading order three-nucleon forces}
@@ -2098,6 +2582,11 @@ The isoscalar part of the density-dependent potential appearing in $\widetilde V
 
 \bibliographystyle{spphys}
 \bibliography{lnp}
+
+
+
+
+
 
 
 
