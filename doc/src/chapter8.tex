@@ -636,7 +636,7 @@ that establishes the single-particle basis for nuclear matter
 calculations with input a given number of nucleons and a user
 specificied density or Fermi momentum. 
 
-\subsection{Two-body interaction}
+\subsection{Two-body interaction\label{sec:interaction}}
 
 As mentioned above, we will employ a plane wave basis for our
 calculations of infinite matter properties. With a cartesian basis it
@@ -2867,55 +2867,462 @@ The standard method for solving these equations is to
   Eq. (\ref{eq:ccd}).
 
 \section{Developing a numerical project}\label{sec:chap8numproject}
+A successful numerical project relies on us having expertise in several scientific and
+engineering disciplines. We need a thourough understanding of the relevant scientific
+domain to ask the right questions and interpret the results, but the tools we
+use requires a proficiency in mathematics to develop models and work out
+analytical results, in numerics to choose the correct algorithms, in computer
+science to understand what can go wrong with our algorithms when the problem is
+discretized and solved on a digital computer, and in software engineering to
+develop and maintain a computer program that solves our problem.
 
-When developing numerical projects we would like to emphasize some
-general aspects  we feel can help in structuring a large computational project.
-Amongst these, the validation and verification of the correctness of
-the employed algorithms and programs are central issues which can
-save you a lot of time when developing a numerical project. In the
-discussions below we will use repeatedly the simple pairing model of
-problem \ref{problem:pairingmodel}.  This model allows for benchmarks
-against exact results. In addition, it provides analytical answers to
-several approximations, from perturbation theory to specific terms in the solution of the coupled
-cluster equations, the in-medium similarity renormalization group
-approach of chapter 10 and the Green's function approach of chapter
-11. 
+Indenpendent of your scientific background, you are probably also educated in
+mathematics and numerics. Unfortunatly, the computer science and
+software engeneering aspects of computing are often neglected and thought of as
+skills you pick up along the way. This is a problem for many reasons. First,
+running a numerical project is very similar to running a
+physical experiment. Your codes are the blueprints the compiler uses to build
+the experiment from the components of the computer. It is unthinkable to publish
+results from a physical experiment without a thourogh understanding of the
+experimental
+equipment. Second, the blueprints are not only used to tell the compiler what to
+build, but also by humans to understand what is beeing built, how to fix
+it if something goes wrong, and how to improve it. If the blueprints are not
+properly written and readable, human understanding is lost. Last, components of an experiment
+are always tested individually to establish tolerances and that they work
+according to specification. In software engineering, this corresponds to writing
+testable code where you can be confident in the quality of each piece. These are
+skills many writers of scientific software never learn and as a consequence
+many numerical experiments are not properly understood and are never independently
+verified.
 
-It is also important to develop an understanding of how and why our
-algorithms can go wrong and how they can be implemented in order to
-run as efficiently as possible. When working on a numerical project it
-is important to keep in mind that computing covers numerical as well
-as symbolic computing and paper and pencil solutions. Furthermore,
-version control is something we strongly recommend. It does not only
-save you time in case you struggle with odd errors in a new version of
-your code. It allows you also to make science reproducible.  Making
-your codes available to a larger audience and provinding proper
-benchmarks allows fellow scientists to test what you have developed,
-and perhaps come with considerable improvements and/or find flaws
-or errors you were not aware of. 
-Sharing your codes using for example modern version control
-software makes thus your science reproducible and adds in a natural
-way a sound ethical scientific element to what you develop.
-In the discussions below, you will thus find several links to our 
-common repository for the codes that we have developed.
+In this section we will focus on some key tools and strategies that we feel are
+important for developing and running a numerical experiment. Our main concerns
+are that our results can be validated, independently verified, and run
+efficiently. In addition, we will discuss tools that makes the whole process somewhat easier. We will
+cover testing, tracking changes with version control software, public code
+repositories, and touch upon simple profiling tools to guide the optimization
+process. Finally we will present a numerical project where we have developed a
+code to calculate properties of nuclear matter using coupled-cluster
+theory. Here, we will make extensive use of the simple pairing model of problem
+\ref{problem:pairingmodel}. This model allows for benchmarks against exact
+results. In addition, it provides analytical answers to several approximations,
+from perturbation theory to specific terms in the solution of the coupled
+cluster equations, the in-medium similarity renormalization group approach of
+chapter 10 and the Green's function approach of chapter 11.
 
+\subsection{Validation and verification}
+The single most important thing in a numerical experiment is to get the correct
+answer. A close second is to be confident that the answer is correct and why. A
+lucky coincidence must be distinguisable from a consistently correct result. The
+only way to do this is to validate the code by writing and running tests -- lots
+of tests. Ideally, every aspect of a code should be tested and it should be
+possible to run the tests automatically. As most of you have probably
+experienced, it's very easy to introduce errors into a project. And very often,
+symptoms of the errors are not visible where the errors have been introduced. By
+having a large set of automated tests and running them often, symptoms of errors
+can be discovered quickly and the errors tracked down while recent changes are
+fresh in memory.
 
-When building up a numerical project there are several elements you should think of, amongst these we take the liberty of mentioning the following:
-\begin{itemize}
-\item Structure a code in terms of functions.
-\item Modularize your codes.
-\item Be able to  read input data flexibly.
-\item Write unit tests (test functions) and let your code undergo heavy testing.
-\item Refactor code in terms of classes (instead of functions only).
-\item Conduct and automate large-scale numerical experiments.
-\item New code is added in a modular fashion to a library (modules).
-\item Programs are run through convenient user interfaces.
-\item Use scripts in order to automatize  tedious manual work.
-\item Make sure your scientific investigations are reproducible and document properly your results.
-\end{itemize}
+As scientists we are trained to validate our methods and findings. By applying
+the same rigourous process to our software, we can achieve the same level of
+confidence in our code as we have for the rest of our work. We advocate testing
+at three distinct levels. Let's start with discussing validation tests, as this
+is the type of test you are probably most familiar with. In a validation test,
+you application is run as in production and the test fails if it cannot
+reproduce a known result. The known result could be a published benchmark, a
+simplified model where analytical results are available, an approximate result
+from a different method, or even an earlier result from the same code. We will
+discuss this type of testing further in section \ref{sec:ccdcode}.
 
+Analogous to testing individual components in a physical experiment, is a type
+of test called a unit test. This is a very fine-grained test that will typically
+only test a class or a procedure at a time. This is where you test that a data
+structure has been correctly filled, that an algorithm works appropriatly, that
+a file has been read correctly, and basically every other component test you can
+think of. It does take a little more work to setup as testing need to be done
+outside of your normal program flow. Typically this involves writing different
+executables that creates the necessary dependencies before testing a component.
+The advantages of writing unit tests are manifold. First, because you know that
+the individual pieces of your code work independently, you will achieve a higher
+degree of confidence in your results. Second, you will develop a programming
+style that favors highly decoupled units because such units are easier to test.
+This allows talking about the code at a higher level of abstraction, which helps
+understanding. Last, your tests become the documentation of how your code is
+supposed to be used. This might not seem important while your are actively
+working on a project, but it will be invaluable down the line when you want add
+new features after some time away. Also, when you share your code as part of the
+scientific process, these tests will be the way your peers will start to
+understand your work.
 
-\subsection{Developing a CCD code for infinite matter}
+While validation tests test your code at the coursest level, and unit tests test
+your code at the finest level, integration tests test how your components work
+together. If, for example, your program solves differential equations as parts
+of a larger problem, the components that make up your differential-equation
+solver can be tested alone. If your solver can solve a set of representative
+problems that either has an anlytical solution or can be worked out using some
+other tool, you can be more confident that it will work on your specific
+problem.  Moreover, writing integration tests pushes you to develop more general
+components. Instead of writing a routine that only solves the differential
+equations you need, you write a solver that can solve many different types of
+differential equations. This allows your components to be reused in other
+projects and by other people.
+
+To many, this rigourous approach to testing software might seem like a waste of
+time. Our view is that testing software is crucial to the scientific process and
+we should strive to apply the same level of rigour to our software as we do to
+every other aspect of our work. On a more pragmatic level, you can either spend
+your time writing tests and make sure your components work, or you can spend
+your time debugging when something goes wrong and worry that your results are
+not valid.
+
+\subsection{Tracking changes}
+If you're not using a tool to track the changes you make to your code, now is
+the time to start. There are several tools available, but the
+authors are using git~(\url{https://git-scm.com/}), an open-source version-control system
+that can run on Linux, OSX, and Windows. By tracking changes, it's easier to
+correct a mistake when it inevitably creeps into the code. It is possible to go
+back to a previously validated version and by using branches, you can work on
+different versions of the code simultaneously. For example, you can create a
+production branch where everything is validated and ready to run, and you can
+create a development branch to implement new features.  There are also code
+repositories where you can store a copy of your code for free, without worrying
+about things getting lost. The source codes discussed in this book are hosted on
+GitLab~(\url{https://about.gitlab.com/}), which uses git to track all changes to the code. By
+using a service like this, it is easier to synchronize code between multiple
+machines. Multiple developers can work on the same code at the same time and
+share changes without worrying about losing contributions. It can also become
+the official public repository of your software to enable your peers to verify
+your work.
+
+\subsection{Profile-guided optimization}
+The aim of this subsection is to discuss in more detail how we can make the
+computations discussed in connection with equations
+Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient using
+physical constraints, algorithm improvements, and parallel processing. For
+pedagocical reasons, we will use the MBPT parts of the program due to their
+simplicity while still containing the important elements of a larger, more
+complicated calculation.  The codes can be found at the github link
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
+We will demonstrate the use of a simple profiler to help
+guide our development efforts. Our starting point are naiive implementations of
+MBPT2 and MBPT3 diagrams that take too long to run. For reference, we calculate
+properties of nuclear matter and construct our Hamiltonian in a free-wave basis
+using the Minnesota~\cite{minnesota} potential discussed in section \ref{sec:interaction}. As the model
+is not as important as the performance in this section, we postpone a discussion of
+the model to section \ref{sec:ccdcode}.
+
+\lstinputlisting[language=c++,numbers=left,firstline=14,lastline=34,
+caption=Trivial implementation of a MBPT2 diagram. \label{code:mbpt2V06}]
+{Chapter8-programs/cpp/MBPT/mbpt2V06.cpp}
+
+Listing \ref{code:mbpt2V06} shows a possible early implementation to solve eq.
+\ref{eq:bruteforceMBPT} from MBPT2. This function has a loop over all single-particle indices and calls the
+V\_Minnesota function to calculate the two-body interaction for each set of
+indices. The energy denominators are calculated from the single-particle
+energies stored in the modelspace structure and partial results are accumulated into
+the energy variable.
+
+\begin{table}
+\caption{Total runtime for the MBPT2 implementation in Listing 
+    \ref{code:mbpt2V06} for different model spaces and particle numbers.}\label{tab:mbpt2V06_runtime}
+  \begin{center}
+      \begin{tabular}{cccc}
+      \hline
+      Number of & Number of & Number of & Runtime (s) \\
+      states & protons & neutrons & Listing \ref{code:mbpt2V06}\\
+      \hline
+      \hline
+        342 & 0 & 2 & $< 0.01$ \\
+         & 0 & 14 & $0.15$ \\
+         & 0 & 38 & $1.00$ \\
+         & 0 & 54 & $1.81$ \\
+         684 & 2 & 2 & $0.88$ \\
+         & 14 & 14 & $2.43$ \\
+         & 38 & 38 & $15.7$ \\
+         & 54 & 54 & $28.2$ \\
+         1598 & 0 & 2 & $0.04$ \\
+         & 0 & 14 & $3.32$ \\
+         & 0 & 38 & $25.0$ \\
+         & 0 & 54 & $58.9$ \\
+         3196 & 2 & 2 & $0.88$ \\
+         & 14 & 14 & $54.3$ \\
+         & 38 & 38 & $399$ \\
+         & 54 & 54 & $797$ \\
+      \hline
+      \end{tabular}
+  \end{center}
+\end{table}
+
+Table \ref{tab:mbpt2V06_runtime} shows the total execution time for this
+application for different sized model spaces and number of particles on a local
+workstation. Your runtimes will be different. Our goals are converged
+calculations of pure neutron matter as well as nuclear matter, where the number
+of states and the number of protons and neutrons goes to infinity. It suffices
+to say that we can't reach our goals with this code.
+
+We want to decrease the run time of this application, but it can be difficult to
+decide where we should spend our time improving this code. Our first order of
+business is to observe what goes on inside the program. For that we will use a
+profiling tool called gprof~(\url{https://sourceware.org/binutils/docs/gprof/})
+To use gprof the code must first be compiled and linked with the -pg flag. This flag enables
+the collection of runtime information so that a call graph and a profile can be
+constructed when your program is run.
+
+\begin{table}
+\caption{Flat profile for the MBPT2 implementation in Listing \ref{code:mbpt2V06}
+using 1598 states calculating pure neutron matter with 54 neutrons}\label{profile:mbpt2V06}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 58.01     26.26    26.26 2523524846     0.00     0.00  V_Minnesota(...)
+ 39.64     44.21    17.95                             mbpt2V06::getEnergy()
+  2.35     45.27     1.07                             spinExchangeTerm(...)
+\end{verbatim}
+\end{table}
+Table \ref{profile:mbpt2V06} shows the top few lines of the flat profile
+generated for MBPT2 version in Listing \ref{code:mbpt2V06}. The leftmost column
+shows the percentage of run time spent in the different functions and it shows
+that about 58 \% of the time is spent calculating the potential while about 40
+\% is spent in the loops in the actual MBPT2 function. The remaining couple of
+percent is spent in the spinExchangeTerm function which is called from the
+potential function.  Even though the application spends most of its time
+generating the potential, we don't want to spend too much time on improving this
+code. We use the Minnesota potential for testing and benchmark purposes only and
+it will not be used for production runs. It is, however, possible to reduce the
+number of times this function is called.  The 4th column in table
+\ref{profile:mbpt2V06} shows that for this particular instance, the potential
+function was called 2.5 billion times. However, due to known symmetries of the
+nuclear interaction we know that most of these calls result in a matrix element
+of zero. If we can exploit this structure to reduce the number of calls to the
+potential function we will greatly reduce the total run time of this program.
+The details of how this is done is presented in section \ref{sec:ccdcode}.
+
+\lstinputlisting[language=c++,numbers=left,firstline=15,lastline=41,
+caption=Block-sparse implementation of a MBPT2 diagram. \label{code:mbpt2V02}]
+{Chapter8-programs/cpp/MBPT/mbpt2V02.cpp}
+
+Listing \ref{code:mbpt2V02} shows a version of this code where the potential function is
+not called when we know ithe matrix element is zero. This code loops over
+channels, which are the dense blocks of the full interaction. We have
+pre-computed the two-body configurations allowed in each channel and store them
+in the channels structure. The potential is computed in the same way as before,
+but for fewer combinations of indices.
+
+\begin{table}
+\caption{Flat profile for the MBPT2 implmentation in Listing \ref{code:mbpt2V02}
+using 1598 states calculating pure neutron matter with 54 neutrons}\label{profile:mbpt2V02}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 66.69      0.08     0.08  2520526     0.00     0.00  V_Minnesota(...)
+ 16.67      0.10     0.02  4770508     0.00     0.00  Chan_2bInd(...)
+  8.34      0.11     0.01        1    10.00    10.00  Build_Model_Space(...)
+  8.34      0.12     0.01        1    10.00    30.01  Setup_Channels_MBPT(...)
+\end{verbatim}
+\end{table}
+
+\begin{table}
+\caption{Total runtime for different MBPT2 implementations for different model spaces.}\label{tab:mbpt2V02_runtime}
+  \begin{center}
+      \begin{tabular}{ccccc}
+      \hline
+      Number of & Number of & Number of & \multicolumn{2}{c}{Runtime (s)} \\
+      states & protons & neutrons & Listing \ref{code:mbpt2V06} & Listing \ref{code:mbpt2V02}\\
+      \hline
+      \hline
+        342 & 0 & 2 & $< 0.01$ & $< 0.01$ \\
+         & 0 & 14 & $0.15$ & $< 0.01$\\
+         & 0 & 38 & $1.00$ & $0.03$\\
+         & 0 & 54 & $1.81$ & $0.05$\\
+         684 & 2 & 2 & $0.88$ & $< 0.01$\\
+         & 14 & 14 & $2.43$ & $0.04$ \\
+         & 38 & 38 & $15.7$ & $0.19$ \\
+         & 54 & 54 & $28.2$ & $0.31$ \\
+         1598 & 0 & 2 & $0.04$ & $< 0.01$\\
+         & 0 & 14 & $3.32$ & $0.03$ \\
+         & 0 & 38 & $25.0$ & $0.23$ \\
+         & 0 & 54 & $58.9$ & $0.44$\\
+         3196 & 2 & 2 & $0.88$ & $< 0.01$ \\
+         & 14 & 14 & $54.3$ & $0.21$ \\
+         & 38 & 38 & $399$ & $1.40$ \\
+         & 54 & 54 & $797$ & $2.67$ \\
+      \hline
+      \end{tabular}
+  \end{center}
+\end{table}
+
+The profile in Table \ref{profile:mbpt2V02} shows that the
+potential function is now only called 2.5 million times, a reduction of three
+orders of magnitude. Table \ref{tab:mbpt2V02_runtime} summarizes the execution
+times of these two versions of MBPT2.
+
+\lstinputlisting[language=c++,numbers=left,firstline=15,lastline=47,
+caption=Block-sparse implementation of a MBPT3 diagram. \label{code:mbpt3V02}]
+{Chapter8-programs/cpp/MBPT/mbpt3V02.cpp}
+
+\begin{table}[hbt]
+\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V02}
+using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V02}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 90.76    177.21   177.21 6068445596     0.00     0.00  V_Minnesota(...)
+  8.76    194.31    17.11                             mbpt3V02::getEnergy()
+\end{verbatim}
+\end{table}
+Listing \ref{code:mbpt3V02} shows an implementation of MBPT3 that uses a
+block-sparse representation of the interaction. Compared to MBPT2 it loops over
+two additional particle indices which increases the computational complexity
+by several orders of magnitude. However, we are now calculating the interaction
+many more times than what is necessary. The profile in Table
+\ref{profile:mbpt3V02} shows that we calculated over six 
+billion matrix elements. By moving the construction of the interaction out of
+the main loops and storing the elements, we can eliminate these redundant calls
+to the potential function at the expense of using memory to store the elements. 
+
+\lstinputlisting[language=c++,numbers=left,firstline=16,lastline=65,
+caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
+in memory. \label{code:mbpt3V05}]
+{Chapter8-programs/cpp/MBPT/mbpt3V05.cpp}
+
+Listing \ref{code:mbpt3V05} shows the new version of the code that stores matrix
+elements of the interaction. The explicit summation to calculate the energy can now be done by
+using matrix products by calling the blas dgemm wrappers \verb;RM_dgemm; and
+\verb;RMT_dgemm;. Note that the code has grown more complicated for every new
+optimization we have introduced. This increases the possibility of introducing
+errors significantly. It's a good thing we have tests to make sure that the
+results haven't changed between versions. Table \ref{profile:mbpt3V05} shows the
+profile for this version and we have reduced the number of calls the potential
+function considerably.
+    
+\begin{table}[h]
+\caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V05}
+using 3196 states calculating nuclear matter with 14 protons and 14 neutrons}\label{profile:mbpt3V05}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 91.16     14.59    14.59 484191644     0.00     0.00  V_Minnesota(...)
+  7.68     15.82     1.23                             mbpt3V05::getEnergy()
+\end{verbatim}
+\end{table}
+    
+\begin{table}
+\caption{Total runtime for the MBPT3 implementation in Listing 
+    \ref{code:mbpt3V02} for different model spaces.}\label{tab:mbpt3V02_runtime}
+  \begin{center}
+      \begin{tabular}{ccccc}
+      \hline
+      Number of & Number of & Number of & \multicolumn{2}{c}{Runtime (s)} \\
+      states & protons & neutrons & Listing \ref{code:mbpt3V02} & Listing \ref{code:mbpt3V05} \\
+      \hline
+      \hline
+        342 & 0 & 2 & $0.08$ & $0.02$\\
+         & 0 & 14 & $2.38$ & $0.31$\\
+         & 0 & 38 & $9.20$ & $0.49$\\
+         684 & 2 & 2 & $1.05$ & $0.18$\\
+         & 14 & 14 & $27.8$ & $2.00$\\
+         & 38 & 38 & $107$ & $3.18$\\
+         1598 & 0 & 2 & $1.81$ & $0.46$\\
+         & 0 & 14 & $80.0$ & $10.5$\\
+         & 0 & 38 & $456$ & $29.8$\\
+         3196 & 2 & 2 & $23.1$ & $4.00$\\
+         & 14 & 14 & $884$ & $69.8$\\
+         & 38 & 38 & $> 10^3$ & $190$\\
+      \hline
+      \end{tabular}
+  \end{center}
+\end{table}
+
+Table \ref{tab:mbpt3V02_runtime} summarizes the execution times so far. 
+
+Table \ref{profile:mbpt3V05} shows that the potential function is still the most
+expensive function in our program, but we would like to get a more detailed
+profile of this function. The code to calculate the potential is filled with
+calls to the exponential function which is part of the standard library. Since
+we have linked to the standard library dynamically, gprof is not able to show
+time spent in these functions. We can get a little bit more detail by linking
+statically. This is done by introducing the -static flag to the compiler. Table
+\ref{profile:mbpt3V05_v2} shows the new profile.
+
+\begin{table}[h]
+\caption{Flat profile for the MBPT3 implmentation in Listing
+\ref{code:mbpt3V05} compiled with the -static flag enabled using 3196 states
+calculating nuclear matter with 14 protons and 14
+neutrons}\label{profile:mbpt3V05_v2}
+\begin{verbatim}
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 68.06     44.68    44.68                             __ieee754_exp_avx
+ 21.26     58.64    13.96 484191644     0.00     0.00  V_Minnesota(...)
+  5.37     62.17     3.53                             exp
+  2.18     63.60     1.43                             mbpt3V05::getEnergy()
+  0.94     64.22     0.62                             dgemm_otcopy
+  0.55     64.58     0.36                             dgemm_kernel
+  0.53     64.93     0.35                             __mpexp_fma4
+  0.25     65.09     0.17                             __floor_sse41
+\end{verbatim}
+\end{table}
+
+The profile is now alot more busy and it shows a longer runtime
+than the previous profile. This is because gprof doesn't sample time spent
+in dynamically linked libraries. The total runtime in this profile
+corresponds better with Table \ref{tab:mbpt3V02_runtime}, but it's also more
+difficult to read. What is clear is that the call to the function labelled
+\verb;__ieee754_exp_avx; takes up almost 70 \% of the run time. This is the
+calls to the exponential function in the potential code. If we can reduce the
+number of evaluations of the exponential function, we can further reduce the run
+time of this application. We leave that as an exercise to the reader.
+
+The next level of optimization that we will discuss here is the introduction of
+parallelism. Most modern computers have more than one cpu core available for
+computation, but the codes we have presented so far will only run on one of
+these cores. The simplest way to make this code run in parallel is to introduce
+OpenMP~(\url{http://www.openmp.org/}) directives. This will split the work between multiple
+execution streams that all share the same view of memory. Listing
+\ref{code:mbpt3V04} shows a new version of the MBPT3 function where we have
+introduced OpenMP directives in lines 19 and 21. The first line marks the start
+of a parallel region and defines which variables the cores can share and
+which must be duplicated. The second line defines a parallel loop, where each
+core is responsible for only a section of the loop. As long as we have enough
+work in the outermost loop, this strategy will work quite well as shown in
+Figure \ref{fig:mbpt3_omp}. Here we show the total run time of this code using
+different number of cores compared to the best run times we could have gotten
+with this approach if our parallel regions scaled perfectly with the number of
+cores. In reality this never happens. In this particular case, we could have
+made the potential function more cache friendly. With this version the different
+cores are fighting eachother for access to memory and cache, which reduces
+performance somewhat. Any further optimization of this code would yield
+diminishing returns
+        
+\lstinputlisting[language=c++,numbers=left,firstline=16,lastline=69,
+caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
+in memory and openmp directives. \label{code:mbpt3V04}]
+{Chapter8-programs/cpp/MBPT/mbpt3V04.cpp}
+
+\begin{figure}
+\includegraphics[width=\linewidth]{Chapter8-figures/omp_scaling.pdf}
+\caption{Total runtime for the mbpt3 code in in Listing \ref{code:mbpt3V04}
+uwing different number of OpenMP threads on a 16 code node of a Cray XK7.}
+\label{fig:mbpt3_omp}
+\end{figure}
+
+\subsection{Developing a CCD code for infinite matter\label{sec:ccdcode}}
   This section focuses on writing a working CCD code from
   scratch. What follows serves also the scope of outlining how to start a numerical project.  We will assume that you have 
 opted for a specific mathematical method for solving Schr\"odinger's equation. Here the mathematics is  given by the CCD equations.  
@@ -2949,7 +3356,7 @@ We start with implementing the CCD equations as they stand here
   \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
   cd \rangle t_{ik}^{dc}t_{lj}^{ab}-\frac{1}{2}\hat{P}(ab)\sum_{klcd}
   \langle kl \vert \hat{v} \vert cd \rangle t_{lk}^{ac}t_{ij}^{db},&
-  \label{eq:ccd2}
+  \label{eq:ccd2b}
   \end{align}
   for all $i < j$ and all $a < b$, using the standard notation that
   $a,b,...$ are particle states and $i,j,...$ are hole states. The CCD correlation energy is given by
@@ -2959,7 +3366,7 @@ We start with implementing the CCD equations as they stand here
   \label{eq:ccdcorr}
   \end{equation}
   One way to solve these equations, is to write equation
-  (\ref{eq:ccd2}) as a series of iterative nonlinear algebraic
+  (\ref{eq:ccd2b}) as a series of iterative nonlinear algebraic
   equations
   \begin{align}
   t_{ij}^{ab}{}^{(n+1)}& = \frac{1}{\epsilon^{ab}_{ij}} \bigg(\langle
@@ -3281,7 +3688,7 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   Since the calculation of all  zeros can now be avoided,
   improvements in speed and memory will now follow. To get a handle on
   how these CCD calculations are implemented we need only to look at the
-  most expensive sum in equation \ref{eq:ccd2}. This corresponds to
+  most expensive sum in equation \ref{eq:ccd2b}. This corresponds to
   the sum over $klcd$. Since this sum is repeated for all $i < j$ and
   $a < b$, it means that these equations will scale as
   $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However,

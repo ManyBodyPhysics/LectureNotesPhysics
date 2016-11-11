@@ -1,21 +1,32 @@
 # http://mrbook.org/blog/tutorials/make/
 # http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 
+CFLAGS = -Wall -fopenmp
 CC=g++
-#CFLAGS= -Wall -g -fbounds-check -ftrapv -pedantic-errors #-o3 #-Wextra -pedantic -std=c++11
-CFLAGS= -Wall -O3 -pg -static
-CXXFLAGS= -fopenmp
-#LIBS= -llapack -lblas -lgfortran -lm
-LIBS= -lopenblas# -lm
-EXECUTABLES = MBPT
+ifdef DEBUG
+	CFLAGS += -g -fbounds-check -ftrapv
+else
+	CFLAGS += -O2
+endif
+
+ifdef PROFILE
+	CFLAGS += -pg
+endif
+
+ifdef OPTIMIZE
+	CFLAGS += -O3
+endif
+
+LIBS= -lopenblas
+EXECUTABLES = mbpt.x
 
 O_FILES = $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 
 $(EXECUTABLES): $(O_FILES)
-	$(CC) $(CXXFLAGS) $(CFLAGS) -o $@ $^ $(LIBS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 %.o: %.cpp  
-	$(CC) $(CXXFLAGS) $(CFLAGS) -c -o $@ $< 
+	$(CC) $(CFLAGS) -c -o $@ $< 
 
 clean:
-	rm *.o *~ *# 
+	rm *.o *~ *# ${EXECUTABLES}
