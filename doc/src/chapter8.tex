@@ -636,7 +636,7 @@ that establishes the single-particle basis for nuclear matter
 calculations with input a given number of nucleons and a user
 specificied density or Fermi momentum. 
 
-\subsection{Two-body interaction}
+\subsection{Two-body interaction\label{sec:interaction}}
 
 As mentioned above, we will employ a plane wave basis for our
 calculations of infinite matter properties. With a cartesian basis it
@@ -2978,8 +2978,8 @@ not valid.
 
 \subsection{Tracking changes}
 If you're not using a tool to track the changes you make to your code, now is
-the time to start. There are several tools available~\cite{refneeded}, but the
-authors are using git~\cite{refneeded}, an open-source version-control system
+the time to start. There are several tools available, but the
+authors are using git~(\url{https://git-scm.com/}), an open-source version-control system
 that can run on Linux, OSX, and Windows. By tracking changes, it's easier to
 correct a mistake when it inevitably creeps into the code. It is possible to go
 back to a previously validated version and by using branches, you can work on
@@ -2988,7 +2988,7 @@ production branch where everything is validated and ready to run, and you can
 create a development branch to implement new features.  There are also code
 repositories where you can store a copy of your code for free, without worrying
 about things getting lost. The source codes discussed in this book are hosted on
-GitLab~\cite{refneeded}, which uses git to track all changes to the code. By
+GitLab~(\url{https://about.gitlab.com/}), which uses git to track all changes to the code. By
 using a service like this, it is easier to synchronize code between multiple
 machines. Multiple developers can work on the same code at the same time and
 share changes without worrying about losing contributions. It can also become
@@ -3004,12 +3004,12 @@ pedagocical reasons, we will use the MBPT parts of the program due to their
 simplicity while still containing the important elements of a larger, more
 complicated calculation.  The codes can be found at the github link
 \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
-In this section we will demonstrate the use of a simple profiler to help
+We will demonstrate the use of a simple profiler to help
 guide our development efforts. Our starting point are naiive implementations of
 MBPT2 and MBPT3 diagrams that take too long to run. For reference, we calculate
 properties of nuclear matter and construct our Hamiltonian in a free-wave basis
-using the Minnesota potential discussed in section \ref{refneeded}. As the model
-is not as important as the performance in this section, we postpne a discussion
+using the Minnesota~\cite{minnesota} potential discussed in section \ref{sec:interaction}. As the model
+is not as important as the performance in this section, we postpone a discussion of
 the model to section \ref{sec:ccdcode}.
 
 \lstinputlisting[language=c++,numbers=left,firstline=14,lastline=34,
@@ -3017,7 +3017,7 @@ caption=Trivial implementation of a MBPT2 diagram. \label{code:mbpt2V06}]
 {Chapter8-programs/cpp/MBPT/mbpt2V06.cpp}
 
 Listing \ref{code:mbpt2V06} shows a possible early implementation to solve eq.
-\ref{refneeded} from MBPT2. This function has a loop over all single-particle indices and calls the
+\ref{eq:bruteforceMBPT} from MBPT2. This function has a loop over all single-particle indices and calls the
 V\_Minnesota function to calculate the two-body interaction for each set of
 indices. The energy denominators are calculated from the single-particle
 energies stored in the modelspace structure and partial results are accumulated into
@@ -3064,7 +3064,7 @@ to say that we can't reach our goals with this code.
 We want to decrease the run time of this application, but it can be difficult to
 decide where we should spend our time improving this code. Our first order of
 business is to observe what goes on inside the program. For that we will use a
-profiling tool called gprof~\cite{refneeded}.
+profiling tool called gprof~(\url{https://sourceware.org/binutils/docs/gprof/})
 To use gprof the code must first be compiled and linked with the -pg flag. This flag enables
 the collection of runtime information so that a call graph and a profile can be
 constructed when your program is run.
@@ -3293,7 +3293,7 @@ The next level of optimization that we will discuss here is the introduction of
 parallelism. Most modern computers have more than one cpu core available for
 computation, but the codes we have presented so far will only run on one of
 these cores. The simplest way to make this code run in parallel is to introduce
-OpenMP~\cite{refneeded} directives. This will split the work between multiple
+OpenMP~(\url{http://www.openmp.org/}) directives. This will split the work between multiple
 execution streams that all share the same view of memory. Listing
 \ref{code:mbpt3V04} shows a new version of the MBPT3 function where we have
 introduced OpenMP directives in lines 19 and 21. The first line marks the start
@@ -3356,7 +3356,7 @@ We start with implementing the CCD equations as they stand here
   \hat{v} \vert cd \rangle t_{ik}^{ac}t_{jl}^{bd}-\frac{1}{2}\hat{P}(ij)\sum_{klcd} \langle kl \vert \hat{v} \vert
   cd \rangle t_{ik}^{dc}t_{lj}^{ab}-\frac{1}{2}\hat{P}(ab)\sum_{klcd}
   \langle kl \vert \hat{v} \vert cd \rangle t_{lk}^{ac}t_{ij}^{db},&
-  \label{eq:ccd2}
+  \label{eq:ccd2b}
   \end{align}
   for all $i < j$ and all $a < b$, using the standard notation that
   $a,b,...$ are particle states and $i,j,...$ are hole states. The CCD correlation energy is given by
@@ -3366,7 +3366,7 @@ We start with implementing the CCD equations as they stand here
   \label{eq:ccdcorr}
   \end{equation}
   One way to solve these equations, is to write equation
-  (\ref{eq:ccd2}) as a series of iterative nonlinear algebraic
+  (\ref{eq:ccd2b}) as a series of iterative nonlinear algebraic
   equations
   \begin{align}
   t_{ij}^{ab}{}^{(n+1)}& = \frac{1}{\epsilon^{ab}_{ij}} \bigg(\langle
@@ -3688,7 +3688,7 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   Since the calculation of all  zeros can now be avoided,
   improvements in speed and memory will now follow. To get a handle on
   how these CCD calculations are implemented we need only to look at the
-  most expensive sum in equation \ref{eq:ccd2}. This corresponds to
+  most expensive sum in equation \ref{eq:ccd2b}. This corresponds to
   the sum over $klcd$. Since this sum is repeated for all $i < j$ and
   $a < b$, it means that these equations will scale as
   $\mathcal{O}(n_{p}^{4} n_{h}^{4})$. However,
