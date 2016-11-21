@@ -64,9 +64,9 @@ explosions.
 The determination and our understanding of the EoS for dense nuclear
 matter is intimately linked with our capability to solve the nuclear
 many-body problem. In particular, to be able to provide precise
-constraints on the role of correlations beyond the mean field, is
-crucial for improved and controlled calculations of the EoS of
-nucleonic matter.  In recent years, there has been a considerable
+constraints on the role of correlations beyond the mean field is
+crucial for improved and controlled calculations of the EoS.  
+In recent years, there has been a considerable
 algorithmic development of first principle (or {\em ab initio})
 methods for solving the nuclear many-body problem. Linked with a
 similar progress in the derivation of nuclear forces based on
@@ -118,7 +118,7 @@ single-particle basis, in terms of plane waves, is unchanged under
 Hartree-Fock calculations.
 
 Neutron star matter at densities of 0.1 fm$^{-3}$ and greater, is
-often assumed to be made of mainly neutrons, protons, electrons and
+often assumed to consist mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
 transitions to quark degrees of freedom at higher densities
@@ -173,11 +173,10 @@ is composed of various baryons and leptons in chemical and charge
 equilibrium.  The equilibrium conditions are governed by the weak
 processes (normally referred to as the processes for
 $\beta$-equilibrium)
-\begin{equation} 
+\begin{equation*} 
       b_1 \rightarrow b_2 + l +\bar{\nu}_l \hspace{1cm} b_2 +l
       \rightarrow b_1 +\nu_l,
-      \label{eq:betadecay}
-\end{equation}
+\end{equation*}
 where $b_1$ and $b_2$ refer to different types of baryons, for example
 a neutron and a proton.  The symbol $l$ is either an electron or a
 muon and $\bar{\nu}_l $ and $\nu_l$ their respective anti-neutrinos
@@ -270,16 +269,16 @@ chapter and the three subsequent ones.  We will assume that the
 interacting part of the Hamiltonian can be approximated by a two-body
 interaction.  This means that our Hamiltonian is written as the sum of
 a one-body part and a two-body part
-\begin{equation}
+\begin{equation*}
     \hat{H} = \hat{H}_0 + \hat{H}_I = \sum_{i=1}^A \hat{h}_0(x_i) +
     \sum_{i < j}^A \hat{v}(r_{ij}),
 \label{Hnuclei}
-\end{equation}
+\end{equation*}
 with
-\begin{equation}
+\begin{equation*}
   \hat{H}_0=\sum_{i=1}^A \hat{h}_0(x_i), 
 \label{hinuclei}
-\end{equation}
+\end{equation*}
 being the so-called unperturbed part of the Hamiltonian defined by the one-body operator
 \[
 \hat{h}_0(x_i)=\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i),
@@ -303,7 +302,7 @@ Our Hamiltonian is invariant under the permutation (interchange) of
 two particles.  Since we deal with fermions however, the total wave
 function is anti-symmetric and we assume that we can approximate the exact eigenfunction
 for say the ground state with a Slater determinant
-\begin{equation}
+\begin{equation*}
    \Phi_0(x_1, x_2,\dots ,x_A,\alpha,\beta,\dots,
    \sigma)=\frac{1}{\sqrt{A!}}  \left| \begin{array}{ccccc}
      \psi_{\alpha}(x_1)& \psi_{\alpha}(x_2)& \dots & \dots &
@@ -311,8 +310,8 @@ for say the ground state with a Slater determinant
      \dots & \psi_{\beta}(x_A)\\ \dots & \dots & \dots & \dots & \dots
      \\ \dots & \dots & \dots & \dots & \dots
      \\ \psi_{\sigma}(x_1)&\psi_{\sigma}(x_2)& \dots & \dots &
-     \psi_{\sigma}(x_A)\end{array} \right|, \label{eq:HartreeFockDet}
-\end{equation}
+     \psi_{\sigma}(x_A)\end{array} \right|,
+\end{equation*}
 where $x_i$ stand for the coordinates and spin values of particle
 $i$ and $\alpha,\beta,\dots, \gamma$ are quantum numbers needed to
 describe remaining quantum numbers.
@@ -411,7 +410,7 @@ We can rewrite the ansatz for the ground state as
 where we have introduced the shorthand labels for states below the
 Fermi level $F$ as $i,j,\ldots \leq F$. For single-particle states
 above the Fermi level we reserve the labels $a,b,\ldots > F$, while
-the labels $p,q, \ldots$ represent any possible single particle state.
+the labels $p,q, \ldots$ represent any possible single-particle state.
 
 
 Since our focus is on infinite systems, the one-body part of the
@@ -439,14 +438,14 @@ pqr|\hat{v}_3|stu\rangle_{AS} a_p^\dagger a_q^\dagger a_r^\dagger a_u
 a_t a_s,
 \]
 with the anti-symmetrized matrix element
-\begin{align}
+\begin{align*}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle
             pqr|\hat{v}_3|stu\rangle + \langle
             pqr|\hat{v}_3|tus\rangle + \langle
             pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle
             - \langle pqr|\hat{v}_3|tsu\rangle - \langle
             pqr|\hat{v}_3|uts\rangle.
-\end{align}
+\end{align*}
 In this and the forthcoming chapters we will limit ourselves to
 two-body interactions at most.  Throughout this chapter and the subsequent three we will drop the subscript $AS$ and use only anti-symmetrized matrix elements.
 
@@ -506,10 +505,10 @@ where
 The last term on the right hand side represents a medium modification
 to the single-particle Hamiltonian due to the two-body interaction.
 Finally, the two-body interaction is given by
-\begin{equation}\label{eq:hvn}	     
+\begin{equation*}
 \hat{V}_N = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle
 \left\{a^\dagger_p a^\dagger_q a_s a_r\right\}.
-\end{equation}	     
+\end{equation*}	     
 
 \subsection{Single-particle basis for infinite matter}
 
@@ -546,27 +545,27 @@ The operator for the kinetic energy can be written as
 When using periodic boundary conditions, the discrete-momentum
 single-particle basis functions (excluding spin and/or isospin degrees
 of freedom) result in the following single-particle energy
-\begin{align}
+\begin{align*}
   \varepsilon_{n_{x}, n_{y}, n_{z}} = \frac{\hbar^{2}}{2m} \left(
   \frac{2\pi }{L}\right)^{2} \left( n_{x}^{2} + n_{y}^{2} +
   n_{z}^{2}\right)=\frac{\hbar^2}{2m}\left(k_{n_x}^2+k_{n_y}^2+k_{n_z}^2\right),
-\end{align} 
+\end{align*} 
 for a three-dimensional system with
 \[
-k_{n_i}=\frac{2\pi n_i}{L} \hspace{0.1cm} n_i = 0, \pm 1, \pm 2,
+k_{n_i}=\frac{2\pi n_i}{L}, \hspace{0.2cm} n_i = 0, \pm 1, \pm 2,
 \dots,
 \]
 We will select the single-particle basis such that both the occupied
-and unoccupied single-particle spaces have a closed-shell
+and unoccupied single-particle states have a closed-shell
 structure. This means that all single-particle states corresponding to
 energies below a chosen cutoff are included in the basis. We study
 only the unpolarized spin phase, in which all orbitals are occupied
 with one spin-up and one spin-down fermion (neutrons and protons in
 our case).  With the kinetic energy rewritten in terms of the
-discretized momenta we can set up a similar table and obtain (assuming
+discretized momenta we can set up a list  and obtain (assuming
 identical particles one and including spin up and spin down solutions)
 for energies less than or equal to $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le
-3$, as shown in Table \ref{tab:table1}
+3$, as shown in for example Table \ref{tab:table1}
 \begin{table}
 \begin{center}
 \caption{Total number of particle filling $N_{\uparrow \downarrow }$
@@ -640,8 +639,8 @@ specificied density or Fermi momentum.
 
 As mentioned above, we will employ a plane wave basis for our
 calculations of infinite matter properties. With a cartesian basis it
-means that we can calculate directly the various matrix elements, as
-discussed in the previous subsection. However, a cartesian basis
+means that we can calculate directly the various matrix elements. 
+However, a cartesian basis
 represents an approximation to the thermodynamical limit. In order to
 compare the stability of our basis with results from the
 thermodynamical limit, it is convenient to rewrite the nucleon-nucleon
@@ -728,22 +727,22 @@ klm_l\rangle.
 In terms of the relative and center-of-mass momenta $\mathbf{k}$ and
 $\mathbf{K}$, the potential in momentum space is related to the
 nonlocal operator $V(\mathbf{r},\mathbf{r}')$ by
-\begin{equation}
+\begin{equation*}
       \langle \mathbf{k'K'}\vert \hat{v} \vert \mathbf{k'K} \rangle=
       \int d\mathbf{r}d \mathbf{r'} e^{-\imath
         \mathbf{k'r'}}V(\mathbf{r'},\mathbf{r}) e^{\imath \mathbf{kr}}
       \delta(\mathbf{K},\mathbf{K'}).
-\end{equation}
+\end{equation*}
 We will assume that the interaction is spherically symmetric and use
 the partial wave expansion of the plane waves in terms of spherical
 harmonics.  This means that we can separate the radial part of the
 wave function from its angular dependence. The wave function of the
 relative motion is described in terms of plane waves as
-\begin{equation}
+\begin{equation*}
        e^{\imath \mathbf{kr}} = \langle\mathbf{r}\vert
        \mathbf{k}\rangle = 4\pi \sum_{lm} \imath ^{l} j_{l} (kr)
        Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{lm}(\mathbf{\hat{r}}),
-\end{equation}
+\end{equation*}
 where $j_l$ is a spherical Bessel function and $Y_{lm}$ the spherical
 harmonic.  This partial wave basis is useful for defining the operator
 for the nucleon-nucleon interaction, which is symmetric with respect
@@ -752,39 +751,34 @@ imply that the interaction is diagonal with respect to the quantum
 numbers of total angular momentum $J$, spin $S$ and isospin $T$. Using
 the above plane wave expansion, and coupling to final $J$, $S$ and $T$
 we get
-\begin{equation}
+\begin{equation*}
       \langle \mathbf{k'}\vert V \vert \mathbf{k}\rangle = (4\pi)^2
       \sum_{JM}\sum_{lm}\sum_{l'm'} \imath ^{l+l'}
       Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{l'm'}(\mathbf{\hat{k}'}) {\cal
         C}_{m'M_SM}^{l'SJ}{\cal C}_{mM_SM}^{lSJ} \langle k'l'STJM
       \vert V \vert klSTJM \rangle,
-\label{eq:vpartial}
-\end{equation}
+\end{equation*}
 where we have defined
-\begin{equation}
+\begin{equation*}
     \langle k'l'STJM\vert V \vert klSTJM\rangle = \int
     j_{l'}(k'r')\langle l'STJM\vert V(r',r)\vert lSTJM \rangle j_l(kr)
     {r'}^2 dr' r^2 dr.
-\end{equation}
+\end{equation*}
 We have omitted the momentum of the center-of-mass motion $\mathbf{K}$
 and the corresponding orbital momentum $L$, since the interaction is
-diagonal in these variables. The potentials we will employ in this
-work, like those of the Bonn group, are all non-local potentials
-defined in momentum space, and we will therefore not need the last
-equation.
-
+diagonal in these variables. 
 
 The interaction we will use for these calculations is a semirealistic
 nucleon-nucleon potential known as the Minnesota potential
 \cite{minnesota} which has the form, $V_{\alpha}\left(
 r\right)=V_{\alpha}\exp{(-\alpha r^{2})}$. The spin and isospin
 dependence of the Minnesota potential is given by,
-\begin{equation}
+\begin{equation*}
 V\left( r\right)=\frac{1}{2}\left( V_{R}+\frac{1}{2}\left(
 1+P_{12}^{\sigma}\right) V_{T}+\frac{1}{2}\left(
 1-P_{12}^{\sigma}\right) V_{S}\right)\left(
 1-P_{12}^{\sigma}P_{12}^{\tau}\right),
-\end{equation}
+\end{equation*}
 where $P_{12}^{\sigma}=\frac{1}{2}\left(
 1+\sigma_{1}\cdot\sigma_{2}\right)$ and
 $P_{12}^{\tau}=\frac{1}{2}\left( 1+\tau_{1}\cdot\tau_{2}\right)$ are
@@ -796,10 +790,10 @@ thereby the relative momentum
 $\vec{q}=\frac{1}{2}\left(\vec{k}_{p}-\vec{k}_{q}-\vec{k}_{r}+\vec{k}_{s}\right)$. Omitting
 spin and isospin dependencies, the momentum space version of the
 interaction reads
-\begin{equation}
+\begin{equation*}
 \langle \mathbf{k}_p \mathbf{k}_q \vert V_{\alpha}\vert
 \mathbf{k}_r\mathbf{k}_s\rangle=\frac{V_{\alpha}}{L^{3}}\left(\frac{\pi}{\alpha}\right)^{3/2}\exp{(\frac{-q^{2}}{4\alpha})}\delta_{\vec{k}_{p}+\vec{k}_{q},\vec{k}_{r}+\vec{k}_{s}}
-\end{equation}
+\end{equation*}
 The various parameters defining the interaction model used in this
 work are listed in Table \ref{tab:minnesotatab}.
 \begin{table}
@@ -846,17 +840,17 @@ nucleons is given in terms of naive dimensional analysis by:
 \label{eq_nu} 
 \end{equation}
 with
-\begin{equation}
+\begin{equation*}
 \Delta_i \equiv d_i + \frac{n_i}{2} - 2 \, ,
-\label{eq_Deltai}
-\end{equation}
+\end{equation*}
 where $A$ labels the number of nucleons, $C$ denotes the number of separately connected pieces and $L$
 the number of loops in the diagram; $d_i$ is the number of derivatives
 or pion-mass insertions and $n_i$ the number of nucleon fields
 (nucleon legs) involved in vertex $i$; the sum runs over all vertices
 contained in the diagram under consideration.  Note that $\Delta_i
-\geq 0$ for all interactions allowed by chiral symmetry.  In this work
-we will focus on optimized two- and three-nucleon forces at order
+\geq 0$ for all interactions allowed by chiral symmetry.  In this work we will focus on the 
+simple Minnesota model discussed above. It is however possible, see also the exercises, to
+include two- and three-nucleon forces at order
 NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.  
 
 Below we revisit briefly the formalism and results presented in
@@ -875,23 +869,22 @@ Refs.~\cite{machleidt2011,epelbaum2009,ekstrom2013,Ekstrom:2015rta,ekstromPRX}
 \end{figure}
 For an irreducible $NN$ diagram (``two-nucleon potential'', $A=2$,
 $C=1$), Eq.~(\ref{eq_nu}) collapses to
-\begin{equation} 
+\begin{equation*} 
 \nu = 2L + \sum_i \Delta_i \, .
-\label{eq_nunn} 
-\end{equation}
+\end{equation*}
 Thus, in terms of naive dimensional analysis or ``Weinberg counting''
 \cite{weinberg1990}, the various orders of the
 irreducible graphs which define the chiral $NN$ potential are given by
 (see Fig.~\ref{fig_diagNNLO})
-\begin{eqnarray}
+\begin{eqnarray*}
 V_{\rm LO} & = & V_{\rm ct}^{(0)} + V_{1\pi}^{(0)}
 \label{eq_VLO}
 \\ V_{\rm NLO} & = & V_{\rm LO} + V_{\rm ct}^{(2)} + V_{1\pi}^{(2)} +
 V_{2\pi}^{(2)}
-\label{eq_VNLO}
+\label{eq_VNLO*}
 \\ V_{\rm NNLO} & = & V_{\rm NLO} + V_{1\pi}^{(3)} + V_{2\pi}^{(3)}
-\label{eq_VNNLO}
-\end{eqnarray}
+\label{eq_VNNLO*}
+\end{eqnarray*}
 where the superscript denotes the order $\nu$ of the low-momentum
 expansion, LO stands for leading order, NLO for next-to-leading order
 and NNLO stands for next-to-next-to leading order.  Contact potentials
@@ -945,36 +938,35 @@ leading-order, next-to-leading order and NNLO, we refer the reader to
 Refs.~\cite{machleidt2011,ekstromPRX}.  The final interaction at
 order NNLO is multiplied with the following factors
 \cite{machleidt2011},
-\begin{equation}
+\begin{equation*}
 \widehat{V}({\vec k}~',{\vec k}) \equiv \frac{1}{(2\pi)^3}
 \sqrt{\frac{M_N}{E_{p'}}}\: {V}({\vec p}~',{\vec p})\:
 \sqrt{\frac{M_N}{E_{p}}}
-\label{eq_minrel1}
-\end{equation}
+\end{equation*}
 with $E_p=\sqrt{M_N^2+p^2}$ and where the factor $1/(2\pi)^3$ is just
 added for convenience.  The potential $\widehat{V}$ satisfies the
 nonrelativistic Lippmann-Schwinger (LS) equation, see Ref.~\cite{machleidt2011} for discussions,
-\begin{equation}
+\begin{equation*}
  \widehat{T}({\vec k}~',{\vec k})= \widehat{V}({\vec k}~',{\vec k})+
  \int d^3p''\: \widehat{V}({\vec k}~',{\vec k}~'')\: \frac{M_N} {{
      k}^{2}-{k''}^{2}+i\epsilon}\: \widehat{T}({\vec k}~'',{\vec k})
  \, .
 \label{eq_LS}
-\end{equation}
+\end{equation*}
 In $pp$ scattering, we use $M_N=M_p=938.2720$ MeV, and in $nn$
 scattering, $M_N=M_n=939.5653$ MeV.  Moreover, the on-shell momentum
 is simply
-\begin{equation}
+\begin{equation*}
 p^2 = \frac12 M_N T_{\rm lab} \,,
-\end{equation}
+\end{equation*}
 where $T_{\rm lab}$ denotes the kinetic energy of the incident nucleon
 in the laboratory system (``Lab.\ Energy'').  For $np$ scattering, we
 have the relations
-\begin{eqnarray}
+\begin{eqnarray*}
 M_N &=& \frac{2M_pM_n}{M_p+M_n} = 938.9182 \mbox{ MeV, and} \\ p^2 & =
 & \frac{M_p^2 T_{\rm lab} (T_{\rm lab} + 2M_n)} {(M_p + M_n)^2 +
   2T_{\rm lab} M_p} \,,
-\end{eqnarray}
+\end{eqnarray*}
 which are based upon relativistic kinematics.
 
 Iteration of $\widehat V$ in the Lippman-Schwinger equation, Eq.~(\ref{eq_LS}),
@@ -983,16 +975,16 @@ infinities.  This is consistent with the fact that ChPT is a
 low-momentum expansion which is valid only for momenta $Q \ll
 \Lambda_\chi \approx 1$ GeV.  Therefore, the potential $\widehat V$ is
 multiplied with the regulator function $f(k',k)$,
-\begin{equation}
+\begin{equation*}
 {\widehat V}(\vec{ k}~',{\vec k}) \longmapsto {\widehat V}(\vec{
   k}~',{\vec k}) \, f(k',k)
-\end{equation}
+\end{equation*}
 with
-\begin{equation}
-f(p',p) = \exp[-(p'/\Lambda)^{2n}-(p/\Lambda)^{2n}] \,.
+\begin{equation*}
+f(p',p) = \exp[-(p'/\Lambda)^{2n}-(p/\Lambda)^{2n}],
 \label{eq:eq_f}
-\end{equation}
-
+\end{equation*}
+as a possible example.
 
 Up to NNLO in chiral perturbation theory there are, in addition to the
 two-body interaction diagrams discussed above, also a few three-body
@@ -1024,13 +1016,13 @@ with the Hartree-Fock Hamiltonian defined as
 \]
 
 The term $\hat{u}^{\mathrm{HF}}$ is a single-particle potential to be
-determined by the HF algorithm. The HF algorithm means to choose
+determined by the HF algorithm. The HF algorithm means to select
 $\hat{u}^{\mathrm{HF}}$ in order to have
 \[ \langle \hat{H} \rangle = E^{\mathrm{HF}}= \langle \Phi_0^{HF} | \hat{H}|\Phi_0^{HF} \rangle,
 \]
 as a local minimum with a Slater determinant
 $\Phi_0^{HF}$ being the ansatz for the ground state.  The variational
-principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the representing the exact
+principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ representing the exact
 ground state energy.
 
 We will show that the Hartree-Fock Hamiltonian $\hat{h}^{\mathrm{HF}}$
@@ -1267,8 +1259,10 @@ energies and $m$ is the number of single-particle states.
 \end{svgraybox}
 The following simple Python program implements the above algorithm using the density matrix formalism outlined above.
 We have omitted the functions that set up the single-particle basis and the anti-symmetrized two-body interaction matrix elements.
-These have to be provided, see \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/hfnuclei.py}
+These have to be provided, see \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/python/hfnuclei.py}
 for full code and matrix elements.
+
+https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs
 \begin{lstlisting}
 # We skip here functions that set up the one- and two-body parts of the Hamiltonian 
 # These functions need to be defined by the user. The two-body interaction below is
@@ -2266,9 +2260,9 @@ theory in the late 1950s. The correlated wave function
 of a many-body system $\mid\Psi\rangle$
 can be formulated as an exponential of correlation
 operators $T$ acting on a reference state $\mid\Phi\rangle$,
-\begin{equation}
-\mid\Psi\rangle = \exp\left(\hat{T}\right)\mid\Phi\rangle,
-\end{equation}
+\begin{equation*}
+\mid\Psi\rangle = \exp\left(\hat{T}\right)\mid\Phi\rangle.
+\end{equation*}
 We will discuss how to define the operators later in this work. This simple
 ansatz carries enormous power. It leads to a non-perturbative many-body
 theory that includes summation of ladder diagrams \cite{brueckner1955}, ring
@@ -2293,32 +2287,32 @@ Refs.~\cite{binder2013,jansen2016}.
 \subsection{A quick tour of Coupled Cluster theory}
 
   The ansatz for the ground state  is given by
-  \begin{equation}
+  \begin{equation*}
      \vert \Psi_0\rangle = \vert \Psi_{CC}\rangle = e^{\hat{T}} \vert
      \Phi_0\rangle = \left( \sum_{n=1}^{A} \frac{1}{n!} \hat{T}^n
      \right) \vert \Phi_0\rangle,
-  \end{equation}
+  \end{equation*}
   where $A$ represents the maximum number of particle-hole excitations
   and $\hat{T}$ is the cluster operator defined as
-  \begin{align}
+  \begin{align*}
               \hat{T} &= \hat{T}_1 + \hat{T}_2 + \ldots + \hat{T}_A
               \\ \hat{T}_n &= \left(\frac{1}{n!}\right)^2
               \sum_{\substack{ i_1,i_2,\ldots i_n \\ a_1,a_2,\ldots
                   a_n}} t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}
               a_{a_1}^\dagger a_{a_2}^\dagger \ldots a_{a_n}^\dagger
               a_{i_n} \ldots a_{i_2} a_{i_1}.
-          \end{align}
+          \end{align*}
       The energy is given by
-      \begin{equation}
+      \begin{equation*}
           E_{\mathrm{CC}} = \langle\Phi_0\vert \overline{H}\vert
           \Phi_0\rangle,
-      \end{equation}
+      \end{equation*}
       where $\overline{H}$ is a similarity transformed Hamiltonian
-      \begin{align}
+      \begin{align*}
           \overline{H}&= e^{-\hat{T}} \hat{H}_N e^{\hat{T}}
           \\ \hat{H}_N &= \hat{H} - \langle\Phi_0\vert \hat{H} \vert
           \Phi_0\rangle.
-      \end{align}
+      \end{align*}
 
       The coupled cluster energy is a function of the unknown cluster
       amplitudes $t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}$, given by
@@ -2338,11 +2332,11 @@ the similarity transformed Hamiltonian $\overline{H}$ is expanded
             \right] +\dots
       \end{equation}
   and simplified using the connected cluster theorem \cite{shavittbartlett2009}
-      \begin{equation}
+      \begin{equation*}
           \overline{H}= \hat{H}_N + \left( \hat{H}_N \hat{T}\right)_c
           + \frac{1}{2} \left( \hat{H}_N \hat{T}^2\right)_c + \dots +
           \frac{1}{n!} \left( \hat{H}_N \hat{T}^n\right)_c +\dots
-      \end{equation}
+      \end{equation*}
 We will discuss parts of the the derivation below.
 For the full derivation of these expressions, see for example Ref.~\cite{shavittbartlett2009}. 
 
@@ -2351,10 +2345,10 @@ $\hat{T}$ at the $n=2$ level. This defines the so-called singles and
 doubles approximation to the coupled cluster state function, normally
 shortened to CCSD.
 The coupled cluster wavefunction is now given by
-  \begin{equation}
+  \begin{equation*}
               \vert \Psi_{CC}\rangle = e^{\hat{T}_1 + \hat{T}_2} \vert
               \Phi_0\rangle
-  \end{equation}
+  \end{equation*}
   where
           \begin{align*}
               \hat{T}_1 &= \sum_{ia} t_{i}^{a} a_{a}^\dagger a_i
@@ -2400,23 +2394,23 @@ The coupled cluster wavefunction is now given by
 We can obtain a similar expression for the correlation energy using coupled cluster theory. 
 Using Eq.~(\ref{eq:bch}) we can write the expression for the coupled cluster  ground state energy as an infinite sum over nested commutators
         \begin{align*}
-            E_{CC} &= \bra{\Psi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
+            E_{CC} &= \bra{\Phi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
                 \frac{1}{2} \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right] \\
                 & \qquad + \frac{1}{3!} \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right] \\
-                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] +... \Bigr) \ket{\Psi_0}. \\
+                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] +... \Bigr) \ket{\Phi_0}. \\
         \end{align*}
 One can show that this infinite series truncates naturally at a given order of nested commutators \cite{shavittbartlett2009}. 
 Let us demonstrate briefly how we can construct the expressions for the correlation 
 energy by approximating $\hat{T}$ at the CCSD level, that is $\hat{T}\approx \hat{T}_1+\hat{T}_2$.
         The first term is zero by construction
         \begin{equation*}
-            \bra{\Psi_0} \hat{H}_N \ket{\Psi_0} = 0.
+            \bra{\Phi_0} \hat{H}_N \ket{\Phi_0} = 0.
         \end{equation*}       
      The second term can be split into the following contributions
         \begin{align*}
-        \bra{\Psi_0}\left[ \hat{H}_N, \hat{T} \right]\ket{\Psi_0} & = 
-            \bra{\Psi_0} \Bigl(\left[ \hat{F}_N, \hat{T}_1 \right] + \left[ \hat{F}_N, \hat{T}_2 \right]
-            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Psi_0}.
+        \bra{\Phi_0}\left[ \hat{H}_N, \hat{T} \right]\ket{\Phi_0} & = 
+            \bra{\Phi_0} \Bigl(\left[ \hat{F}_N, \hat{T}_1 \right] + \left[ \hat{F}_N, \hat{T}_2 \right]
+            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Phi_0}.
     \end{align*}
 Let us start with $\left[ \hat{F}_N, \hat{T}_1 \right]$, where the one-body operator $\hat{F}_N$ is defined in Eq.~(\ref{eq:hfn}). 
 In the equations below we employ the shorthand $f^p_q = \langle p\vert \hat{f} \vert q\rangle$.  
@@ -2663,8 +2657,8 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   possible in standard FCI calculations. Typical FCI calculations for
   light nuclei $A\le 16$ can be performed in at most some few harmonic
   oscillator shells. For heavier nuclei, at most two major shells can
-  be included due to too large dimensionalities.  However, Coupled
-  Cluster theory is non-variational and if we want to find properties
+  be included due to too large dimensionalities.  However, coupled
+  cluster theory is non-variational and if we want to find properties
   of excited states, additional calculations via for example equation
   of motion methods are needed \cite{shavittbartlett2009,Hagen:2015yea}.
   If correlations are strong, a single-reference ansatz may not be the
@@ -2870,20 +2864,20 @@ The standard method for solving these equations is to
 A successful numerical project relies on us having expertise in several scientific and
 engineering disciplines. We need a thourough understanding of the relevant scientific
 domain to ask the right questions and interpret the results, but the tools we
-use requires a proficiency in mathematics to develop models and work out
+use require a proficiency in mathematics to develop models and work out
 analytical results, in numerics to choose the correct algorithms, in computer
 science to understand what can go wrong with our algorithms when the problem is
 discretized and solved on a digital computer, and in software engineering to
 develop and maintain a computer program that solves our problem.
 
 Indenpendent of your scientific background, you are probably also educated in
-mathematics and numerics. Unfortunatly, the computer science and
+mathematics and numerics. Unfortunately, the computer science and
 software engeneering aspects of computing are often neglected and thought of as
 skills you pick up along the way. This is a problem for many reasons. First,
 running a numerical project is very similar to running a
 physical experiment. Your codes are the blueprints the compiler uses to build
 the experiment from the components of the computer. It is unthinkable to publish
-results from a physical experiment without a thourogh understanding of the
+results from a physical experiment without a thorough understanding of the
 experimental
 equipment. Second, the blueprints are not only used to tell the compiler what to
 build, but also by humans to understand what is beeing built, how to fix
@@ -2891,7 +2885,7 @@ it if something goes wrong, and how to improve it. If the blueprints are not
 properly written and readable, human understanding is lost. Last, components of an experiment
 are always tested individually to establish tolerances and that they work
 according to specification. In software engineering, this corresponds to writing
-testable code where you can be confident in the quality of each piece. These are
+testable code where you can be confident of the quality of each piece. These are
 skills many writers of scientific software never learn and as a consequence
 many numerical experiments are not properly understood and are never independently
 verified.
@@ -2914,7 +2908,7 @@ chapter 10 and the Green's function approach of chapter 11.
 \subsection{Validation and verification}
 The single most important thing in a numerical experiment is to get the correct
 answer. A close second is to be confident that the answer is correct and why. A
-lucky coincidence must be distinguisable from a consistently correct result. The
+lucky coincidence must be distinguishable from a consistently correct result. The
 only way to do this is to validate the code by writing and running tests -- lots
 of tests. Ideally, every aspect of a code should be tested and it should be
 possible to run the tests automatically. As most of you have probably
@@ -2940,7 +2934,7 @@ of test called a unit test. This is a very fine-grained test that will typically
 only test a class or a procedure, or even a small part of your code  at a time. This is where you test that a data
 structure has been correctly filled, that an algorithm works appropriately, that
 a file has been read correctly, and basically every other component test you can
-think of. It does take a little more work to setup as testing need to be done
+think of. It does take a little more work to setup as testing needs to be done
 outside of your normal program flow. Typically this involves writing different
 executables that create the necessary dependencies before testing a component.
 The advantages of writing unit tests are many. First, because you know that
@@ -2994,7 +2988,7 @@ machines. Multiple developers can work on the same code at the same time and
 share changes without worrying about losing contributions. It can also become
 the official public repository of your software to enable your peers to verify
 your work. The software discussed in this chapter is available from our GitHub repository 
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/}.
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/}.
 \subsection{Profile-guided optimization}\label{subsec:profiling}
 The aim of this subsection is to discuss in more detail how we can make the
 computations discussed in connection with equations
@@ -3003,9 +2997,9 @@ physical constraints, algorithm improvements, and parallel processing. For
 pedagocical reasons, we will use the MBPT parts of the program due to their
 simplicity while still containing the important elements of a larger, more
 complicated CCD calculation.  The codes can be found at the github link
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/cpp/MBPT/src}.
 We will demonstrate the use of a simple profiler to help
-guide our development efforts. Our starting point are naive implementations of
+guide our development efforts. Our starting points are  naive implementations of
 many-body perturbation theory to second (MBPT2) and third order (MBPT3) in the interaction. For reference, we calculate
 properties of nuclear matter and construct our Hamiltonian in a free-wave basis
 using the Minnesota~\cite{minnesota} potential discussed in section \ref{sec:interaction}. As the model
@@ -3021,8 +3015,8 @@ V\_Minnesota function to calculate the two-body interaction for each set of
 indices. The energy denominators are calculated from the single-particle
 energies stored in the modelspace structure and partial results are accumulated into
 the energy variable.
-This function represents a straightforward implementation of MBPT2. We normally recommend when developing a code to write
-the first implementation in a way which is as close as possible to mathematical expression, here Eq.~\ref{eq:bruteforceMBPT}.
+This function represents a straightforward implementation of MBPT2. We normally recommend, when developing a code, to write
+the first implementation in a way which is as close as possible to the mathematical expressions, in this particular case Eq.~(\ref{eq:bruteforceMBPT}).
 \begin{table}
 \caption{Total runtime for the MBPT2 implementation in Listing 
     \ref{code:mbpt2V06} for different model spaces and particle numbers.}\label{tab:mbpt2V06_runtime}
@@ -3055,15 +3049,15 @@ the first implementation in a way which is as close as possible to mathematical 
 \end{table}
 
 Table \ref{tab:mbpt2V06_runtime} shows the total execution time for this
-application for different sized model spaces and number of particles on a local
+application for different model spaces (defined by the number of single-particle states) and number of particles on a local
 workstation. Your runtimes will be different. Our goals are converged
 calculations of pure neutron matter as well as nuclear matter, where the number
 of states and the number of protons and neutrons goes to infinity. It suffices
-to say that we can't reach our goals with this code.
+to say that we cannot reach our goals with this code.
 
 We want to decrease the run time of this application, but it can be
 difficult to decide where we should spend our time improving this
-code. Our first order of business is to observe what goes on inside
+code. Our first approach is  to observe what goes on inside
 the program. For that we will use one the simplest possible profiling
 tools called
 gprof~(\url{https://sourceware.org/binutils/docs/gprof/}). Alternatively,
@@ -3098,8 +3092,9 @@ is spent in the loops in the actual MBPT2 function. The remaining part
 is spent in the spinExchangeTerm function which is called from the
 potential function.  Even though the application spends most of its time
 generating the potential, we don't want to spend too much time on improving this
-code. We use the Minnesota potential for testing and benchmark purposes only and
-it will not be used for production runs. It is, however, possible to reduce the
+code. We use the Minnesota potential for testing and benchmark purposes only. 
+For more realistic calculations, one should employ the chiral interaction models discussed earlier.
+It is, however, possible to reduce the
 number of times this function is called.  The 4th column in table
 \ref{profile:mbpt2V06} shows that for this particular instance, the potential
 function was called 2.5 billion times. However, due to known symmetries of the
@@ -3208,10 +3203,9 @@ using matrix products by calling the BLAS (Basic Linear Algebra Subprograms) \ci
 dgemm wrappers \verb;RM_dgemm; and
 \verb;RMT_dgemm;. Note that the code has grown more complicated for every new
 optimization we have introduced. This increases the possibility of introducing
-errors significantly. It's a good thing we have tests to make sure that the
+errors significantly. It is a good thing we have tests to make sure that the
 results haven't changed between versions. Table \ref{profile:mbpt3V05} shows the
-profile for this version and we have reduced the number of calls the potential
-function considerably.
+profile for this version and we have reduced considerably the number of calls to the function which sets up the interaction.
     
 \begin{table}[h]
 \caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V05}
@@ -3330,10 +3324,11 @@ In this function we have used the matrix-matrix multiplication function $dgemm$ 
 uwing different number of OpenMP threads on a 16 code node of a Cray XK7.}
 \label{fig:mbpt3_omp}
 \end{figure}
-
+Finally, the above codes can easily be extended upon by including MPI \cite{mpi,openmpi} and/or a mix of OpenMP and MPI commands for distributed memory architectures. We leave this as a challenge to the reader. The coding practices and examples developed in this section, are reused in our development of the  coupled cluster code discussed in the next section. There  we discuss however in more detail how to develop an efficient coupled cluster code for infinite matter, with a focus on validation and verification and simplifications of the equations. 
 
 
 \subsection{Developing a CCD code for infinite matter\label{sec:ccdcode}}
+
   This section focuses on writing a working CCD code from
   scratch. Based on the previous discussion, what follows serves also the scope of outlining how to start a larger numerical project.  
 We will in particular pay attention to possible benchmarks that can be used to validate our codes. 
@@ -3539,7 +3534,7 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   10\delta -g
   \end{bmatrix}
   \]
-  The python program (included for pedagogical purposes only) at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
+  The python program (included for pedagogical purposes only) at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
@@ -4158,7 +4153,7 @@ topics we feel can help in structuring a large computational project.
 Amongst these, the validation and verification of the correctness of
 the employed algorithms and programs are central issues which can
 save you a lot of time when developing a numerical project. In the
-discussions aboe we used repeatedly the simple pairing model of
+discussions above we used repeatedly the simple pairing model of
 problem \ref{problem:pairingmodel}.  This model allows for benchmarks
 against exact results. In addition, it provides analytical answers to
 several approximations, from perturbation theory to specific terms in the solution of the coupled
@@ -4174,7 +4169,7 @@ as symbolic computing and paper and pencil solutions. Furthermore,
 version control is something we strongly recommend. It does not only
 save you time in case you struggle with odd errors in a new version of
 your code. It allows you also to make science reproducible.  Making
-your codes available to a larger audience and provinding proper
+your codes available to a larger audience and providing proper
 benchmarks allows fellow scientists to test what you have developed,
 and perhaps come with considerable improvements and/or find flaws
 or errors you were not aware of. 
@@ -4327,7 +4322,7 @@ in Monte Carlo calculations.
   \langle \mathbf{k}_p \mathbf{k}_q \vert V_{\alpha}\vert
   \mathbf{k}_r\mathbf{k}_s\rangle=\frac{V_{\alpha}}{L^{3}}\left(\frac{\pi}{\alpha}\right)^{3/2}\exp{\frac{-q^{2}}{4\alpha}}\delta_{\vec{k}_{p}+\vec{k}_{q},\vec{k}_{r}+\vec{k}_{s}}.
   \]
-  Write thereafter a function which sets up the full anty-symmetrized
+  Write thereafter a function which sets up the full anti-symmetrized
   matrix elements for the Minnesota potential using the parameters
   listed in Table \ref{tab:minnesotatab}.
   \end{prob}
@@ -4402,7 +4397,7 @@ in Monte Carlo calculations.
   various angles).
 
   Finally, write a program which computes the above energy for pure
-  nuetron matter using the Minnesota potential.
+  neutron matter using the Minnesota potential.
   \end{prob}
 
   \begin{prob}\label{problem:hamiltoniansetup}
@@ -4710,8 +4705,7 @@ Our single-particle space consists of only the four lowest
   define the single-particle basis and the Hamiltonian. Your functions
   that solve the coupled cluster equations will then just need to set
   up variables which point to interaction elements and single-particle
-  states with their pertinent quantum numbers. Use for example the
-  setup discussed in the FCI lectures for the pairing model.
+  states with their pertinent quantum numbers. 
 
   \begin{enumerate}
 
@@ -4734,12 +4728,7 @@ Our single-particle space consists of only the four lowest
   \item[d)] Compare your results with those from the exact
     diagonalization with and without the $4p4h$ excitation. Compare
     also your results to perturbation theory at different orders, in
-    particular to second order. Discuss your results.  If other
-    students are solving the same problem using Green's function
-    theory, you can also compare your results with those obtained from
-    Green's function theory. The aim is to finalize this part during
-    the first week. The codes you will develop can be used as a
-    starting point for the second part of the project.
+    particular to second order. Discuss your results.  
   \end{enumerate}
   \end{prob}
 
@@ -4755,7 +4744,7 @@ Replace the Minnesota interaction model with realistic models for nuclear forces
 replace the Minnesota interaction with the low-order (LO) contribution which includes a contact term and a one-pion exchange
 term only. The expressions are discussed in section  \ref{subsec:forcemodels} and Eq.~(\ref{eq:eq_1PEci}). Reference \cite{ekstromPRX} contains a
 detailed compilation of all terms up to order NNLO, with tabulated values for all constants. 
-When adding realistic interaction models we recommend that you use the many-body perturbation theory codes to second order in the interaction, see the code link at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/MBPT2/src/}. 
+When adding realistic interaction models we recommend that you use the many-body perturbation theory codes to second order in the interaction, see the code link at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/cpp/MBPT2/src/}. 
 \end{prob}
 
   \section{Solutions to selected exercises}
@@ -4900,7 +4889,7 @@ When adding realistic interaction models we recommend that you use the many-body
   \begin{sol}{problem:spbasissetup}
   The following python code sets up the quantum numbers for both
   infinite nuclear matter and neutron matter employing a cutoff in
-  the value of $n$. The full code can be found at  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/spstatescc.py}.
+  the value of $n$. The full code can be found at  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/python/spstatescc.py}.
   \begin{lstlisting}
 from numpy import *
 
