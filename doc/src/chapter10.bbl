@@ -43,10 +43,6 @@ A.~Gezerlis, I.~Tews, E.~Epelbaum, M.~Freunek, S.~Gandolfi, K.~Hebeler,
 \newblock \doi{10.1103/PhysRevC.90.054323}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.90.054323}
 
-\bibitem{Lynn:2015eu}
-J.E. Lynn, I.~Tews, J.~Carlson, S.~Gandolfi, A.~Gezerlis, K.E. Schmidt,
-  A.~Schwenk,   (2015)
-
 \bibitem{Pastore:2009zr}
 S.~Pastore, L.~Girlanda, R.~Schiavilla, M.~Viviani, R.B. Wiringa, Phys. Rev. C
   \textbf{80}, 034004 (2009).
@@ -105,7 +101,11 @@ A.M. Shirokov, J.P. Vary, A.I. Mazur, T.A. Weber, Physics Letters B
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370269306014158}
 
 \bibitem{Shirokov:2016wo}
-A.M. Shirokov, I.J. Shin, Y.~Kim, M.~Sosonkina, P.~Maris, J.P. Vary,   (2016)
+A.M. Shirokov, I.J. Shin, Y.~Kim, M.~Sosonkina, P.~Maris, J.P. Vary, Physics
+  Letters B \textbf{761}, 87 (2016).
+\newblock \doi{http://dx.doi.org/10.1016/j.physletb.2016.08.006}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370269316304269}
 
 \bibitem{Bogner:2003os}
 S.K. Bogner, T.T.S. Kuo, A.~Schwenk, Phys. Rept. \textbf{386}, 1 (2003).
@@ -194,7 +194,7 @@ G.~Hagen, T.~Papenbrock, M.~Hjorth-Jensen, D.J. Dean, Rept. Prog. Phys.
 \newblock \urlprefix\url{http://stacks.iop.org/0034-4885/77/i=9/a=096302}
 
 \bibitem{Hagen:2016rb}
-G.~Hagen, M.~Hjorth-Jensen, G.R. Jansen, T.~Papenbrock, Physica Scripta
+G.~Hagen, M.~Hjorth-Jensen, G.R. Jansen, T.~Papenbrock, Phys. Scripta
   \textbf{91}(6), 063006 (2016).
 \newblock \urlprefix\url{http://stacks.iop.org/1402-4896/91/i=6/a=063006}
 
@@ -351,7 +351,8 @@ R.~Brockett, Linear Algebra and its Applications \textbf{146}(0), 79  (1991).
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/002437959190021N}
 
 \bibitem{Chu:1994vn}
-M.T. Chu, Fields Institute Communications \textbf{3} (1994)
+M.T. Chu, Fields Institute Communications \textbf{3}, 87 (1994).
+\newblock \urlprefix\url{http://dx.doi.org/10.1090/fic/003}
 
 \bibitem{Chu:1995ys}
 M.T. Chu, Linear Algebra and its Applications \textbf{215}(0), 261  (1995).
@@ -409,6 +410,46 @@ P.N. Brown, A.C. Hindmarsh, Applied Mathematics and Computation \textbf{31}, 40
 \newblock \doi{http://dx.doi.org/10.1016/0096-3003(89)90110-0}.
 \newblock
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0096300389901100}
+
+\bibitem{Lanczos:1950sp}
+C.~Lanczos, J. Res. Nat'l Bur. Std. \textbf{45}, 255 (1950)
+
+\bibitem{Arnoldi:1951kk}
+W.E. Arnoldi, Quarterly of Applied Mathematics \textbf{9}(1), 17 (1951).
+\newblock
+  \urlprefix\url{http://www.jstor.org.proxy1.cl.msu.edu/stable/43633863}
+
+\bibitem{Davidson:1989pi}
+E.R. Davidson, Computer Physics Communications \textbf{53}(1), 49 (1989).
+\newblock \doi{http://dx.doi.org/10.1016/0010-4655(89)90147-1}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0010465589901471}
+
+\bibitem{Yang:2013ly}
+C.~Yang, H.M. Aktulga, P.~Maris, E.~Ng, J.P. Vary, in \emph{Proceedings of
+  International Conference `Nuclear Theory in the Supercomputing Era --- 2013'
+  (NTSE-2013), Ames, IA, USA, May 13--17, 2013.}, ed. by A.M. Shirokov, A.I.
+  Mazur (2013), p. 272
+
+\bibitem{Hergert:2009wh}
+H.~Hergert, R.~Roth, Phys. Lett. B \textbf{682}, 27 (2009).
+\newblock \doi{10.1016/j.physletb.2009.10.100}
+
+\bibitem{Wiringa:1995or}
+R.B. Wiringa, V.G.J. Stoks, R.~Schiavilla, Phys. Rev. C \textbf{51}, 38 (1995)
+
+\bibitem{Carlson:2015lq}
+J.~Carlson, S.~Gandolfi, F.~Pederiva, S.C. Pieper, R.~Schiavilla, K.E. Schmidt,
+  R.B. Wiringa, Rev. Mod. Phys. \textbf{87}, 1067 (2015).
+\newblock \doi{10.1103/RevModPhys.87.1067}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.87.1067}
+
+\bibitem{Lynn:2016ec}
+J.E. Lynn, I.~Tews, J.~Carlson, S.~Gandolfi, A.~Gezerlis, K.E. Schmidt,
+  A.~Schwenk, Phys. Rev. Lett. \textbf{116}, 062501 (2016).
+\newblock \doi{10.1103/PhysRevLett.116.062501}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.116.062501}
 
 \bibitem{Roth:2011kx}
 R.~Roth, J.~Langhammer, A.~Calci, S.~Binder, P.~Navr\'atil, Phys. Rev. Lett.
@@ -474,9 +515,8 @@ K.~Hebeler, Phys. Rev. C \textbf{85}, 021002 (2012).
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.021002}
 
 \bibitem{Griesshammer:2015dp}
-H.W. Griesshammer,  (2015).
-\newblock
-  \urlprefix\url{http://inspirehep.net/record/1402387/files/arXiv:1511.00490.pdf}
+H.W. Griesshammer, in \emph{in proceedings of the "8th International Workshop
+  on Chiral Dynamics"}, vol. PoS(CD15) (2015), vol. PoS(CD15), p. 104
 
 \bibitem{Jurgenson:2011zr}
 E.D. Jurgenson, P.~Navr\'atil, R.J. Furnstahl, Phys. Rev. C \textbf{83}, 034301
@@ -655,10 +695,10 @@ G.~Hagen, M.~Hjorth-Jensen, G.R. Jansen, R.~Machleidt, T.~Papenbrock, Phys.
   \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.108.242501}
 
 \bibitem{Hagen:2015ve}
-G.~Hagen, A.~Ekstrom, C.~Forssen, G.R. Jansen, W.~Nazarewicz, T.~Papenbrock,
-  K.A. Wendt, S.~Bacca, N.~Barnea, B.~Carlsson, C.~Drischler, K.~Hebeler,
-  M.~Hjorth-Jensen, M.~Miorelli, G.~Orlandini, A.~Schwenk, J.~Simonis, Nature
-  Physics \textbf{12}, 186 (2015).
+G.~Hagen, A.~Ekstr\"{o}m, C.~Forss\'{e}n, G.R. Jansen, W.~Nazarewicz,
+  T.~Papenbrock, K.A. Wendt, S.~Bacca, N.~Barnea, B.~Carlsson, C.~Drischler,
+  K.~Hebeler, M.~Hjorth-Jensen, M.~Miorelli, G.~Orlandini, A.~Schwenk,
+  J.~Simonis, Nat. Phys. \textbf{12}, 186 (2015).
 \newblock \urlprefix\url{http://dx.doi.org/10.1038/nphys3529}
 
 \bibitem{Epelbaum:2015fb}
@@ -668,7 +708,10 @@ E.~Epelbaum, H.~Krebs, U.G. Mei{\ss}ner, Eur. Phys. J. A \textbf{51}(5), 1
 \newblock \urlprefix\url{http://dx.doi.org/10.1140/epja/i2015-15053-8}
 
 \bibitem{Entem:2015hl}
-D.R. Entem, N.~Kaiser, R.~Machleidt, Y.~Nosyk,   (2015)
+D.R. Entem, N.~Kaiser, R.~Machleidt, Y.~Nosyk, Phys. Rev. C \textbf{92}, 064001
+  (2015).
+\newblock \doi{10.1103/PhysRevC.92.064001}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.064001}
 
 \bibitem{Piarulli:2015rm}
 M.~Piarulli, L.~Girlanda, R.~Schiavilla, R.N. P\'erez, J.E. Amaro, E.R.
@@ -677,7 +720,8 @@ M.~Piarulli, L.~Girlanda, R.~Schiavilla, R.N. P\'erez, J.E. Amaro, E.R.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.91.024003}
 
 \bibitem{Rowe:1968eq}
-D.J. Rowe, Rev. Mod. Phys. \textbf{40}, 153 (1968)
+D.J. Rowe, Rev. Mod. Phys. \textbf{40}, 153 (1968).
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.40.153}
 
 \bibitem{Brown:2001rg}
 B.A. Brown, Prog. Part. Nucl. Phys. \textbf{47}(2), 517 (2001).
@@ -785,5 +829,13 @@ L.~C\'{a}ceres, A.~Lepailleur, O.~Sorlin, M.~Stanoiu, D.~Sohler,
   C.~Timis, Z.~Vajta, Phys. Rev. C \textbf{92}, 014327 (2015).
 \newblock \doi{10.1103/PhysRevC.92.014327}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.014327}
+
+\bibitem{Bardeen:1957bz}
+J.~Bardeen, L.N. Cooper, J.R. Schrieffer, Phys. Rev. \textbf{108}, 1175 (1957).
+\newblock \doi{10.1103/PhysRev.108.1175}
+
+\bibitem{Bardeen:1957tv}
+J.~Bardeen, L.N. Cooper, J.R. Schrieffer, Phys. Rev. \textbf{106}, 162 (1957).
+\newblock \doi{10.1103/PhysRev.106.162}
 
 \end{thebibliography}
