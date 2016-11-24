@@ -4,8 +4,8 @@
 # imsrg_pairing.py
 #
 # author:   H. Hergert 
-# version:  1.3
-# date:     Oct 18, 2016
+# version:  1.4
+# date:     Nov 3, 2016
 # 
 # tested with Python v2.7
 # 
@@ -18,7 +18,7 @@
 import numpy as np
 from numpy import array, dot, diag, reshape, transpose
 from scipy.linalg import eigvalsh
-from scipy.integrate import odeint
+from scipy.integrate import odeint, ode
 
 
 #-----------------------------------------------------------------------------------
@@ -631,7 +631,8 @@ def get_operator_from_y(y, dim1B, dim2B):
   return zero_body,one_body,two_body
 
 
-def derivative_wrapper(y, t, user_data):
+def derivative_wrapper(t, y, user_data):
+
   dim1B = user_data["dim1B"]
   dim2B = dim1B*dim1B
 
@@ -655,25 +656,19 @@ def derivative_wrapper(y, t, user_data):
 
 
   # calculate the generator
-  # eta1B = eta1B_white(f, Gamma, idx2B, occ1B, occB_2B, occC_2B, holes, particles)
-  # eta2B = eta2B_white(f, Gamma, bas2B, idx2B, holes, particles)
-  # eta1B = eta1B_brillouin(f, Gamma, idx2B, occ1B, occB_2B, occC_2B, holes, particles)
-  # eta2B = eta2B_brillouin(f, Gamma, bas2B, idx2B, holes, particles)
   eta1B, eta2B = calc_eta(f, Gamma, user_data)
 
   # calculate the right-hand side
-  # dE     = imsrg2_dE(eta1B, eta2B, f, Gamma, idx2B, holes, particles)
-  # df     = imsrg2_df(eta1B, eta2B, f, Gamma, idx2B, occB_2B, occC_2B, holes, particles)
-  # dGamma = imsrg2_dGamma(eta1B, eta2B, f, Gamma, bas2B, idx2B, basph2B, idxph2B, occB_2B, occphA_2B, occ1B)
   dE, df, dGamma = calc_rhs(eta1B, eta2B, f, Gamma, user_data)
 
   # convert derivatives into linear array
-  dydt   = np.append([dE], np.append(reshape(df, -1), reshape(dGamma, -1)))
+  dy   = np.append([dE], np.append(reshape(df, -1), reshape(dGamma, -1)))
 
-  # print flow parameter etc. 
-  print "%7.5f   %10.8f   %10.8f"%(t, E , np.linalg.norm(eta1B,ord='fro')+np.linalg.norm(eta2B,ord='fro'))
+  # share data
+  user_data["dE"] = dE
+  user_data["eta_norm"] = np.linalg.norm(eta1B,ord='fro')+np.linalg.norm(eta2B,ord='fro')
   
-  return dydt
+  return dy
 
 #-----------------------------------------------------------------------------------
 # initialize normal-ordered pairing Hamiltonian
@@ -727,6 +722,27 @@ def W0(delta, g, bas3B, idx3B):
   return W
 
 
+#-----------------------------------------------------------------------------------
+# Perturbation theory
+#-----------------------------------------------------------------------------------
+def calc_mbpt2(f, Gamma, user_data):
+  DE2 = 0.0
+
+  particles = user_data["particles"]
+  holes     = user_data["holes"]
+  idx2B     = user_data["idx2B"]
+
+  for i in particles:
+    for j in particles:
+      for k in holes:
+        for l in holes:
+          denom = f[i,i] + f[j,j] - f[k,k] - f[l,l]
+          me    = Gamma[idx2B[(i,j)],idx2B[(k,l)]]
+          DE2 += 0.25*me*me/denom
+
+  return DE2
+
+
 #------------------------------------------------------------------------------
 # Main program
 #------------------------------------------------------------------------------
@@ -773,7 +789,11 @@ def main():
     "occB_2B":    occB_2B,
     "occC_2B":    occC_2B,
     "occphA_2B":  occphA_2B,
-    "calc_eta":   eta_white_mp,         # specify the generator (function object)
+
+    "eta_norm":   0.0,                # variables for sharing data between ODE solver
+    "dE":         0.0,                # and main routine
+    
+    "calc_eta":   eta_white_mp,       # specify the generator (function object)
     "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
   }
 
@@ -787,10 +807,32 @@ def main():
   y0   = np.append([E], np.append(reshape(f, -1), reshape(Gamma, -1)))
 
   # integrate flow equations 
-  ys  = odeint(derivative_wrapper, y0, [0,10], rtol=1.0e-8, atol=1.0e-8, args=(user_data,))
+  solver = ode(derivative_wrapper,jac=None)
+  solver.set_f_params(user_data)
+  solver.set_initial_value(y0, 0.)
+
+  sfinal = 50
+  ds = 0.1
+
+  print "%-8s   %-14s   %-14s   %-14s   %-14s   %-14s"%("s", "E [MeV]" , "DE(2) [MeV]", "E+DE(2) [MeV]", "dE/ds", "||eta||")
+  print "-----------------------------------------------------------------------------------------------------------------"
+
+  while solver.successful() and solver.t < sfinal:
+    ys = solver.integrate(sfinal, step=True)
+    
+    dim2B = dim1B*dim1B
+    E, f, Gamma = get_operator_from_y(ys, dim1B, dim2B)
+
+    DE2 = calc_mbpt2(f, Gamma, user_data)
+
+    print "%8.5f %14.8f   %14.8f   %14.8f   %14.8f   %14.8f"%(solver.t, E , DE2, E+DE2, user_data["dE"], user_data["eta_norm"])
+    if abs(DE2/E) < 10e-8: break
 
 
+#    solver.integrate(solver.t + ds)
 
-# run main routine
+#------------------------------------------------------------------------------
+# make executable
+#------------------------------------------------------------------------------
 if __name__ == "__main__": 
   main()
