@@ -377,8 +377,7 @@ where each index $\alpha,\beta,\delta, \ldots$ has to be unique.
 We will now find it convenient to define a Fermi (F) level and introduce a
 new reference vacuum. The Fermi level is normally  defined in terms of all
 occupied single-particle states below a certain
-single-particle energy.  With the definition of a Fermi level, we can
-in turn define our ansatz for the ground state, represented by a
+single-particle energy.  With the definition of a Fermi level we define our ansatz for the ground state, represented by a
 Slater determinant $\Phi_0$.  We will throughout the rest of this
 text use creation and annihilation operators to represent quantum
 mechanical operators and states.  It means that our compact
@@ -479,7 +478,7 @@ E_{\mathrm{Ref}}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0\rangle =
 \sum_{i\le F} \langle i|\hat{h}_0|i\rangle + \frac{1}{2} \sum_{ij\le
   F}\langle ij|\hat{v}|ij\rangle,
 \]
-and the new normal-ordered Hamiltonian is defined as
+and the new normal-ordered Hamiltonian (all creation operators to the left of the annihilation operators) is defined as
 \begin{equation}\label{eq:Hnormalorder}
 \hat{H}_N = \sum_{pq} \langle p|\hat{h}_0|q\rangle \left\{a^\dagger_p
 a_q\right\}+\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle
@@ -562,9 +561,9 @@ energies below a chosen cutoff are included in the basis. We study
 only the unpolarized spin phase, in which all orbitals are occupied
 with one spin-up and one spin-down fermion (neutrons and protons in
 our case).  With the kinetic energy rewritten in terms of the
-discretized momenta we can set up a list  and obtain (assuming
+discretized momenta we can set up a list (assuming
 identical particles one and including spin up and spin down solutions)
-for energies less than or equal to $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le
+of single-particle energies with momentum quantum numbers such that $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le
 3$, as shown in for example Table \ref{tab:table1}
 \begin{table}
 \begin{center}
@@ -638,8 +637,8 @@ specificied density or Fermi momentum.
 \subsection{Two-body interaction\label{sec:interaction}}
 
 As mentioned above, we will employ a plane wave basis for our
-calculations of infinite matter properties. With a cartesian basis it
-means that we can calculate directly the various matrix elements. 
+calculations of infinite matter properties. With a cartesian basis
+we can calculate directly the various matrix elements. 
 However, a cartesian basis
 represents an approximation to the thermodynamical limit. In order to
 compare the stability of our basis with results from the
@@ -717,10 +716,10 @@ the $nn$ (neutron-neutron) channel.
 
 The nucleon-nucleon force is often derived and analyzed theoretically
 in terms of a partial wave expansion. A state with linear momentum
-$\mathbf{k}$ can be written as
+$\mathbf{k}$ can be written in terms of spherical harmonics $Y_{lm}$ as
 \[
 \vert \mathbf{k} \rangle =
-\sum_{l=0}^{\infty}\sum_{l_l=-l}^{L}\imath^lY_{l}^{m_l}(\hat{k}\vert
+\sum_{l=0}^{\infty}\sum_{m=-l}^{l}\imath^lY_{lm}\langle\hat{k}\vert
 klm_l\rangle.
 \]
 
@@ -801,10 +800,10 @@ work are listed in Table \ref{tab:minnesotatab}.
   \cite{minnesota}.}\label{tab:minnesotatab}
 \begin{center}
   \begin{tabular}{| l | l | l |}
-    \hline $\alpha$ & $V_{\alpha}$ & $\kappa_{\alpha}$ \\ \hline $R$ &
-    200 $\mathrm{MeV}$ & 1.487 $\mathrm{fm}^{-2}$ \\ \hline $T$ & 178
-    $\mathrm{MeV}$ & 0.639 $\mathrm{fm}^{-2}$ \\ \hline $S$ & 91.85
-    $\mathrm{MeV}$ & 0.465 $\mathrm{fm}^{-2}$ \\ \hline
+    \hline $\alpha$ & $V_{\alpha}$ in $\mathrm{MeV}$ & $\kappa_{\alpha}$ in $\mathrm{fm}^{-2}$  \\ \hline $R$ &
+    200  & 1.487 \\ \hline $T$ & 178
+     & 0.639 \\ \hline $S$ & 91.85
+    & 0.465  \\ \hline
   \end{tabular}
 \end{center}
 \end{table}
@@ -1182,7 +1181,7 @@ h_{\alpha\beta}^{HF}=\langle \alpha | h | \beta \rangle+
 \]
 we can rewrite the new equations as
 \begin{equation}
-\sum_{\gamma}h_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}. \label{eq:newhf}
+\sum_{\beta}h_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}. \label{eq:newhf}
 \end{equation}
 The latter is nothing but a standard eigenvalue problem.  Our
 Hartree-Fock matrix is thus
@@ -1332,13 +1331,12 @@ if __name__ == '__main__':
 
 
   We end this section by rewriting the ground state energy by adding
-  and subtracting $\hat{u}^{HF}$
+  and subtracting $\hat{u}^{HF}$. Using anti-symmetrized two-body matrix elements we have
   \[
     E_0^{HF} =\langle \Phi_0 | \hat{H} | \Phi_0\rangle = \sum_{i\le
-      F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| j\rangle+
-    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij
-      |\hat{v}|ij \rangle-\langle
-      ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i
+      F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| i\rangle+
+    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A \langle ij
+      |\hat{v}|ij \rangle-\sum_{i\le F}^A \langle i
     |\hat{u}^{HF}| i\rangle,
   \]
   which results in
@@ -1356,8 +1354,7 @@ if __name__ == '__main__':
   energy
   \[
     E_0^{HF} = \sum_{i\le F}^A \varepsilon_i - \frac{1}{2}\sum_{i\le
-      F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle
-      ij|\hat{v}|ji\rangle\right].
+      F}^A\sum_{j \le F}^A\langle ij |\hat{v}|ij \rangle.
   \]
   This equation demonstrates that the total energy is not given as the
   sum of the individual single-particle energies.
@@ -2365,26 +2362,6 @@ The coupled cluster wavefunction is now given by
   performing a transformation of the Hamiltonian matrix of the
   following type for the six particle problem (with a two-body
   Hamiltonian) discussed in section \ref{sec:chap8fci}
-  \begin{table}
-\caption{Schematic representation of blocks of matrix elements which are set to zero using the CCSD approximation.}
-  \begin{center}
-  \begin{tabular}{cccccccc}
-  \hline \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ $0p-0h$ } &
-  \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } &
-  \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } &
-  \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ }
-  \\ \hline $0p-0h$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0 & 0
-  & 0 & 0 \\ $1p-1h$ & 0 & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0
-  & 0 & 0 \\ $2p-2h$ & 0 & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ & 0 & 0 \\ $3p-3h$ & 0 & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0 \\ $4p-4h$ & 0 & 0 &
-  $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$
-  \\ $5p-5h$ & 0 & 0 & 0 & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ \\ $6p-6h$ & 0 & 0 & 0 & 0 & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ \\ \hline
-  \end{tabular}
-  \end{center}
-  \end{table}
 
   In our configuration interaction theory discussion the correlation energy is defined as (with a two-body Hamiltonian) 
   \[
