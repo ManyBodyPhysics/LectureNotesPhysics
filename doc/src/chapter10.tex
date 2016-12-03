@@ -929,103 +929,6 @@ integrated up to $s=1.0$, despite the non-vanishing off-diagonal matrix elements
 that are visible in the $s=1.0$ snapshot shown in Fig.~\ref{fig:srg_pairing}.
 
 \subsection{Evolution of Nuclear Interactions}
-% \subsubsection{Motivation}
-
-% Interactions generally come with typical scales.
-
-% \newcommand{\Hbare}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(1.0000,1.1000)
-%     \put(0.0,0.0){\includegraphics[height=\unitlength]{\fdir/Hbare.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\Hevol}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(1.000,1.1000)
-%     \put(0.0,0.0){\includegraphics[height=\unitlength]{\fdir/HevolB.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\HbareVA}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/Hbare_pow1_vec.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\HbareVB}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/Hbare_pow2_vec.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\HbareVC}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/Hbare_pow3_vec.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\HevolVA}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/HevolB_pow1_vec.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\HevolVB}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/HevolB_pow2_vec.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\HevolVC}{
-%   \setlength{\unitlength}{0.15\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/HevolB_pow3_vec.png}}
-%   \end{picture}
-% }
-
-% \newcommand{\vecseed}{
-%   \setlength{\unitlength}{0.145\textwidth}
-%   \begin{picture}(0.1000,1.1000)
-%     \put(0.01,0.0){\includegraphics[height=\unitlength]{\fdir/vec.png}}
-%   \end{picture}
-% }
-
-% \begin{equation}
-%   H \ket{\phi} = 
-%   \begin{pmatrix}
-%     \Hbare
-%   \end{pmatrix}
-%   \begin{pmatrix}
-%     \vecseed
-%   \end{pmatrix}
-%   = \begin{pmatrix}
-%     \HbareVA
-%   \end{pmatrix}
-% \end{equation}
-
-% \begin{equation}
-%   H \ket{\phi} = 
-%   \begin{pmatrix}
-%     \Hevol
-%   \end{pmatrix}
-%   \begin{pmatrix}
-%     \vecseed
-%   \end{pmatrix}
-%   = \begin{pmatrix}
-%     \HevolVA
-%   \end{pmatrix}
-% \end{equation}
-
-% \setlength{\unitlength}{0.1\textwidth}
-% \begin{picture}(1.0,1.0)
-%   \put(0.000,0.000){\includegraphics[height=\unitlength]{\fdir/Hbare.png}}
-% \end{picture}
 
 \subsubsection{Matrix and Operator Flows}
 In our discussion of the schematic pairing model in the previous section, we 
@@ -1663,26 +1566,6 @@ where we no longer have to worry about short-range correlations.
 
 
 \subsubsection{\label{sec:srg_induced}Induced Interactions}
-% \begin{equation}
-%   \Hint = \Tint + \VO^{[2]} + \VO^{[3]}\,.
-% \end{equation}
-% \begin{equation}
-%   \Hint = \frac{2}{A}\sum_{i<j}\frac{\pOV_{ij}^2}{2\mu} + \sum_{i<j}\vO^{[2]}_{ij} + \sum_{i<j<k}\vO^{[3]}_{ijk}\,,
-% \end{equation}
-% \begin{align}
-%   \totd{}{s}v^{[2]}_{ij} &= \comm{\eta}{\vO^{[2]}_{ij}}\,, \\
-%   \totd{}{s}v^{[3]}_{ijk} &= \comm{\eta}{\vO^{[3]}_{ijk}}\,.
-% \end{align}
-
-
-% The decoupling of low- and high-lying momenta significantly improves the convergence
-% properties of configuration-space based many-body methods, because it prevents the 
-% Hamiltonian from scattering nucleon pairs from low to high momentum states. Many-body
-% methods like FCI, CC, or the IMSRG discussed in this chapter yield converged results 
-% in much smaller configuration spaces, which in turn makes it possible to
-% apply these methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
-% However, this improvement comes at the cost of inducing many-body interactions, as
-% we will discuss in section \ref{sec:srg_induced}.
 
 As discussed earlier in this section, our motivation for using the SRG to
 decouple the low- and high-lying momentum components of $NN$ interactions 
