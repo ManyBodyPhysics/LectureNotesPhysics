@@ -568,6 +568,11 @@ V.~Som\`a, A.~Cipollone, C.~Barbieri, P.~Navr\'atil, T.~Duguet, Phys. Rev. C
 H.W. Griesshammer, in \emph{in proceedings of the "8th International Workshop
   on Chiral Dynamics"}, vol. PoS(CD15) (2015), vol. PoS(CD15), p. 104
 
+\bibitem{Wang:2012uq}
+M.~Wang, G.~Audi, A.~Wapstra, F.~Kondev, M.~MacCormick, X.~Xu, B.~Pfeiffer,
+  Chin. Phys. C \textbf{36}(12), 1603 (2012).
+\newblock \urlprefix\url{http://stacks.iop.org/1674-1137/36/i=12/a=003}
+
 \bibitem{Jurgenson:2011zr}
 E.D. Jurgenson, P.~Navr\'atil, R.J. Furnstahl, Phys. Rev. C \textbf{83}, 034301
   (2011).
@@ -596,11 +601,6 @@ D.~Gazit, S.~Quaglioni, P.~Navr\'atil, Phys. Rev. Lett. \textbf{103}, 102502
 \newblock \doi{10.1103/PhysRevLett.103.102502}.
 \newblock
   \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.103.102502}
-
-\bibitem{Wang:2012uq}
-M.~Wang, G.~Audi, A.~Wapstra, F.~Kondev, M.~MacCormick, X.~Xu, B.~Pfeiffer,
-  Chin. Phys. C \textbf{36}(12), 1603 (2012).
-\newblock \urlprefix\url{http://stacks.iop.org/1674-1137/36/i=12/a=003}
 
 \bibitem{Morris:2016xp}
 T.D. Morris, Systematic improvements of ab initio in-medium similarity

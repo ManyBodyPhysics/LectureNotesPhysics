@@ -1088,7 +1088,7 @@ Here, $\AO$ should be treated as a particle-number \emph{operator} (see \cite{He
 and $\mu=m/2$ is the reduced nucleon mass (neglecting the proton-neutron mass difference).
 Using Eq.~\eqref{eq:def_Tint_2B} for the present discussion, we can write the intrinsic 
 Hamiltonian as
-\begin{equation}
+\begin{equation}\label{eq:def_Hint_2B}
   \Hint = \frac{2}{A}\sum_{i<j}\frac{\qOV_{ij}^2}{2\mu} + \sum_{i<j}\vO^{[2]}_{ij}\,,
 \end{equation}
 and directly consider the evolution of this operator via the flow equation
@@ -1644,7 +1644,7 @@ an SRG evolution,
     = E_n \UO(\lambda) \ket{\psi_n}\,.
 \end{equation}
 We can interpret this equation as a shift of correlations from the
-wave function into the effective, ``RG-improved'' Hamiltonian. When
+wave function into the effective, \emph{RG-improved} Hamiltonian. When
 we solve the Schr\"odinger equation numerically, we can usually only
 obtain an approximation $\ket{\phi_n}$ of the exact eigenstate. In 
 the ideal case, this is merely due to finite-precision arithmetic on
@@ -1652,13 +1652,13 @@ a computer, but more often, we also have systematic approximations,
 e.g., mesh discretizations, finite basis sizes, many-body truncations 
 (think of the cluster operator in Coupled Cluster, for instance, cf.~
 chapter \ref{chapter:cc}), etc.
-If we use the evolved Hamiltonian $\HO(\lambda)$, we only need to 
+If we use the evolved Hamiltonian $\HO(\lambda)$, we only need 
 to approximate the transformed eigenstate,
 \begin{equation}\label{eq:approx_eigenstate}
   \ket{\phi_n}\approx\UO(\lambda)\ket{\psi_n}\,
 \end{equation}
 instead of $\ket{\psi_n}$, which is often a less demanding task.
-This is certainly true for our deuteron example for $\lambda=2.0\,\fmi$,
+This is certainly true for our deuteron example at $\lambda=2.0\,\fmi$,
 where we no longer have to worry about short-range correlations.
 
 
@@ -1684,65 +1684,45 @@ where we no longer have to worry about short-range correlations.
 % However, this improvement comes at the cost of inducing many-body interactions, as
 % we will discuss in section \ref{sec:srg_induced}.
 
+As discussed earlier in this section, our motivation for using the SRG to
+decouple the low- and high-lying momentum components of $NN$ interactions 
+is to improve the convergence of many-body calculations. The decoupling 
+prevents the Hamiltonian from scattering nucleon pairs from low to high 
+momenta or energies, which in turn allows configuration-space based methods 
+to achieve convergence in much smaller Hilbert spaces than for a ``bare'',
+unevolved interaction. This makes it possible to extend the reach of these
+methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
 
-The decoupling of low- and high-lying momenta significantly improves the convergence
-properties of configuration-space based many-body methods, because it prevents the 
-Hamiltonian from scattering nucleon pairs from low to high momentum states. Methods 
-like the NCSM or the IM-SRG discussed below yield converged results in much smaller 
-many-body Hilbert spaces, which in turn makes it possible to
-apply these methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
- However, this improvement 
-comes at a cost, which is best illustrated by considering the Hamiltonian in a 
-second-quantized form, assuming only a two-nucleon interaction for simplicity:
+In practical applications, we pay a prize for the improved convergence.
+To illustrate the issue, we consider the Hamiltonian in a second-quantized 
+form, assuming only a two-nucleon interaction for simplicity (cf.~Eq.~\eqref{eq:def_Hint_2B}):
 \begin{equation}\label{eq:H}
-  \Hint = \Trel + V = \frac{1}{4}\sum_{pqrs} \matrixe{pq}{\frac{\kOV_{12}^2}{2\mu}+v_{12}}{rs}\aaO_p\aaO_q\aO_s\aO_r\,.
+  \Hint = \frac{1}{4}\sum_{pqrs} \matrixe{pq}{\frac{\qOV^2}{2\mu}+\vO}{rs}\aaO_p\aaO_q\aO_s\aO_r\,.
 \end{equation}
-If we plug $\Trel$ and $V$ into the commutators in equations \eqref{eq:def_srg_generator} and 
-\eqref{eq:opflow}, we obtain
+If we plug the kinetic energy and interaction into the commutators in 
+equations \eqref{eq:def_srg_generator} and \eqref{eq:opflow}, we obtain
 \begin{equation}\label{eq:comm2B_vac}
   \comm{\aaO_i\aaO_j\aO_l\aO_k}{\aaO_p\aaO_q\aO_s\aO_r}=
   \delta_{lp}\aaO_i\aaO_j\aaO_q\aO_s\aO_r\aO_k + \aaO\aaO\aaO\aO\aO\aO
   -\delta_{lp}\delta_{kq}\aaO_i\aaO_j\aO_s\aO_r + \aaO\aaO\aO\aO\,, 
 \end{equation}
-where the terms with suppressed indices schematically stand for additional two- and
-three-body operators. Thus, even if we start from a pure two-body interaction, the SRG 
-flow will induce operators of higher rank, i.e., three-, four-, and in general 
-up to $A$-nucleon interactions. Of course, these induced interactions 
-are only probed if we study an $A$-nucleon system. If we truncate the SRG flow equations
-at the two-body level, we preserve the properties of the two-nucleon system, in particular
-phase shifts and the deuteron binding energy. A truncation at the three-body level 
-ensures the invariance of observables in $A=3$ nuclei, 
-e.g.~$\nuc{H}{3}$ and $\nuc{He}{3}$ ground-state energies, and so on. Truncations in the 
-SRG flow equation cause a violation of unitarity that manifests as
-a (residual) dependence of many-body results on $\lambdaSRG$. By varying this parameter, 
-the size of the missing contributions can be assessed (see, e.g., \cite{Bogner:2010pq,
-Jurgenson:2009bs,Hebeler:2012ly,Roth:2011kx,Hergert:2013mi,Hergert:2013ij,Binder:2014fk,
-Soma:2014eu,Griesshammer:2015dp}).
-
-State-of-the-art SRG evolutions of nuclear interactions are nowadays performed in 
-the three-body system, using relative (Jacobi) harmonic oscillator
-\cite{Jurgenson:2009bs,Jurgenson:2011zr,Jurgenson:2013fk}, relative momentum plane
-wave \cite{Hebeler:2012ly}, or momentum-space hypherspherical harmonics representations 
-\cite{Wendt:2013uq}.
-Figure \ref{fig:vsrg_momentum} shows an example of the latter, the evolution of 
-NN and $3N$ matrix elements of a chiral \NNLO{} interaction by Epelbaum, Gl\"ockle,
-and Mei\ss{}ner \cite{Epelbaum:2002nr,Epelbaum:2006mo}, with cutoffs 550/600 MeV. As discussed for our 
-schematic example, both the $NN$ and $3N$ interactions become band diagonal and the SRG 
-decouples the low- and high-momentum regimes as we evolve to lower values of $\lambdaSRG$. 
-In figure \ref{fig:triton}, the same family 
-of SRG-evolved interactions is used to calculate the ground-state energy of the triton,
-as a function of $\lambdaSRG$. If only the $NN$ part of the chiral interaction is used as 
-input, and the SRG generator and flowing Hamiltonian are truncated at the two-body level 
-(curve ``NN-only''), the SRG evolution is not unitary in the three-body system. The 
-energy exhibits a significant dependence on $\lambdaSRG$, on the order of 5--6\%. If the 
-flow equations are truncated at the three-body level instead, induced $3N$ interactions are
-properly included and the unitarity of the transformation is restored (\emph{$NN\!+\!3N$-induced}): 
-The energy does not change as $\lambdaSRG$ is varied. Finally, the curve \emph{$NN\!+\!3N$-full} 
-shows the result for a calculation with initial $NN$ and $3N$ forces, which are consistently 
-SRG-evolved at the three-body level. The triton ground-state energy is again invariant 
-under the SRG flow, and closely reproduces the experimental value that is used as 
-constraint in the adjustment of the $3N$ force's low-energy constants (see, e.g., 
-\cite{Epelbaum:2009ve,Machleidt:2011bh,Gazit:2009qf}).
+where the terms with suppressed indices schematically stand for additional 
+two- and three-body operators. Even if we start from a pure $NN$
+interaction, the SRG flow will induce operators of higher rank, i.e., 
+$3N$, $4N$, and in general up to $A$-nucleon interactions. Of course, 
+these induced interactions are only probed if we study an $A$-nucleon 
+system. If we truncate the SRG flow equations at the two-body level, 
+the properties of the two-nucleon system are preserved, in particular
+the $NN$ scattering phase shifts and the deuteron binding energy. A 
+truncation at the three-body level ensures the invariance of observables 
+in $A=3$ nuclei, e.g.~$\nuc{H}{3}$ and $\nuc{He}{3}$ ground-state energies, 
+and so on. 
+% Any truncation in the SRG flow equation will lead to a violation 
+% of unitarity that manifests as a (residual) dependence of many-body 
+% results on the resolution scale $\lambdaSRG$. By varying this parameter, 
+% the size of the missing contributions can be assessed (see, e.g., \cite{Bogner:2010pq,
+% Jurgenson:2009bs,Hebeler:2012ly,Roth:2011kx,Hergert:2013mi,Hergert:2013ij,Binder:2014fk,
+% Soma:2014eu,Griesshammer:2015dp}).
 
 
 \begin{figure*}[t]
@@ -1751,25 +1731,65 @@ constraint in the adjustment of the $3N$ force's low-energy constants (see, e.g.
     \includegraphics[width=0.5\unitlength,bb=10 10 600 600,clip]{\fdir/srg_evolution_energy.pdf}
   \end{center}  
   \caption{\label{fig:triton}Ground state energy of $\nuc{H}{3}$ as a function 
-  of the flow parameter $\lambdaSRG$ for different initial \NNLO{} $NN\!+\!3N$ interactions
-  \cite{Epelbaum:2002nr,Epelbaum:2006mo}. $NN$-only means initial and 
+  of the flow parameter $\lambdaSRG$ for chiral \NNLO{} $NN$ and $NN\!+\!3N$ 
+  interactions (see \cite{Hebeler:2012ly} for details). $NN$-only means initial and 
   induced $3N$ interactions are discarded, $NN\!+\!3N$-induced takes only 
   induced $3N$ interactions into account, and $3N$-full contains initial
   $3N$ interactions as well. The black dotted line shows the experimental 
-  binding energy \cite{Wang:2012uq}. Figure courtesy of K.~Hebeler.}
+  binding energy \cite{Wang:2012uq}. Data for the figure courtesy of 
+  K.~Hebeler.}
 \end{figure*}
+
+Nowadays, state-of-the-art SRG evolutions of nuclear interactions are 
+performed in the three-body system \cite{Jurgenson:2009bs,Jurgenson:2011zr,Jurgenson:2013fk, 
+Hebeler:2012ly,Wendt:2013uq}. In figure \ref{fig:triton}, we show 
+$\nuc{H}{3}$ ground-state energies that have been calculated with
+a family of SRG-evolved interactions that is generated from a 
+chiral \NNLO{} $NN$ interaction by Epelbaum, Gl\"ockle, and Mei\ss{}ner 
+\cite{Epelbaum:2002nr,Epelbaum:2006mo},
+and a matching $3N$ interaction (see \cite{Hebeler:2012ly} for
+full details). As mentioned above, the SRG evolution is not unitary in 
+the three-body system if we truncate the evolved interaction and
+the SRG generator at the two-body level (\emph{N$N$-only}). The 
+depends strongly on $\lambdaSRG$, varying by 5--6\% over the 
+typical range that we consider here (cf.~section \ref{sec:srg_nn}). 
+If we truncate the operators at the three-body level instead, induced 
+$3N$ interactions are properly included and the unitarity of the 
+transformation is restored (\emph{$NN\!+\!3N$-induced}): 
+The energy does not change as $\lambdaSRG$ is varied. Finally, the 
+curve \emph{$NN\!+\!3N$-full} shows results of calculations in
+which a $3N$ force was included in the initial Hamiltonian and
+evolved consistently to lower resolution scale as well. Naturally,
+the triton ground-state energy is invariant under the SRG flow, and 
+it closely reproduces the experimental value because the $3N$ interaction's 
+low-energy constants are usually fit to give the correct experimental 
+$\nuc{H}{3}$ ground-state energy (see, e.g., 
+\cite{Epelbaum:2009ve,Machleidt:2011bh,Gazit:2009qf}).
+
+
+Any truncation in the SRG flow equation will lead to a violation 
+of unitarity that manifests as a (residual) dependence of many-body 
+results on the resolution scale $\lambdaSRG$. By varying this parameter, 
+the size of the missing contributions can be assessed (see, e.g., \cite{Bogner:2010pq,
+Jurgenson:2009bs,Hebeler:2012ly,Roth:2011kx,Hergert:2013mi,Hergert:2013ij,Binder:2014fk,
+Soma:2014eu,Griesshammer:2015dp}).
+
+Part of the issue is that we have considered the SRG evolution in
+free space.
+
 
 % Pioneering work on implementing the SRG evolution in the lowest partial 
 % waves of the four-body system has been carried out by A.~Calci and 
 % co-workers \cite{Calci:2014xy}, again working in Jacobi HO representation.
-The SRG flow equations force us to manipulate large sections (or the 
-entirety) of the Hamiltonian's spectrum in order to avoid basis 
-truncation artifacts (also cf.~\cite{Roth:2014fk,Binder:2014fk})
-We may wonder, then, if it is possible to avoid the use of matrix 
-representations entirely by solving the operator flow equation 
-\eqref{eq:opflow} directly in the algebra of operators. This is the 
-strategy that we will explore in the following, which will 
-lead us to the formulation of the In-Medium SRG. 
+
+% The SRG flow equations force us to manipulate large sections (or the 
+% entirety) of the Hamiltonian's spectrum in order to avoid basis 
+% truncation artifacts (also cf.~\cite{Roth:2014fk,Binder:2014fk})
+% We may wonder, then, if it is possible to avoid the use of matrix 
+% representations entirely by solving the operator flow equation 
+% \eqref{eq:opflow} directly in the algebra of operators. This is the 
+% strategy that we will explore in the following, which will 
+% lead us to the formulation of the In-Medium SRG. 
 
 \section{\label{sec:imsrg}The In-Medium SRG approach}
 Naively, one could try to solve the flow equation \eqref{eq:flowEquations} by
