@@ -44,18 +44,18 @@
 \newcommand{\Nmax}{\ensuremath{N_\text{max}}}
 
 %%%%% units
-% \newcommand{\fm}{\ensuremath{\,\text{fm}}}
+\newcommand{\fm}{\ensuremath{\,\text{fm}}}
 \newcommand{\fmi}{\ensuremath{\,\text{fm}^{-1}}}
 \newcommand{\AMeV}{\ensuremath{\,\text{AMeV}}}
 \newcommand{\keV}{\ensuremath{\,\text{keV}}}
-% \newcommand{\MeV}{\ensuremath{\,\text{MeV}}}
+\newcommand{\MeV}{\ensuremath{\,\text{MeV}}}
 \newcommand{\MeVi}{\ensuremath{\,\text{MeV}^{-1}}}
 \newcommand{\eV}{\ensuremath{\,\text{eV}}}
 % \newcommand{\GeV}{\ensuremath{\,\text{GeV}}}
 
 %%%%% states and operators
-% \newcommand{\ket}[1]{\ensuremath{\,|{#1}\rangle}}
-% \newcommand{\braket}[2]{\ensuremath{\langle{#1}|{#2}\rangle}}
+\renewcommand{\ket}[1]{\ensuremath{\,|{#1}\rangle}}
+\renewcommand{\braket}[2]{\ensuremath{\langle{#1}|{#2}\rangle}}
 \newcommand{\expect}[1]{\ensuremath{\langle{#1}\rangle}}
 \newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
 \newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
@@ -70,6 +70,7 @@
 \newcommand{\aO}{\ensuremath{a}}
 \newcommand{\aaO}{\ensuremath{\adj{a}}}
 
+\newcommand{\tO}{\op{t}}
 \newcommand{\vO}{\op{v}}
 
 \newcommand{\AO}{\op{A}}
@@ -123,8 +124,22 @@
 
 \title{In-Medium Similarity Renormalization Group Approach to the Nuclear Many-Body Problem}
 
-\author{Scott K.~Bogner, Heiko Hergert, Justin Lietz, Titus D.~Morris, Sam Novario, Nathan Parzuchowski, and Fei Yuan}
-\institute{Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and Heiko Hergert  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{hergert@nscl.msu.edu}, \and Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and Titus Morris  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{morrist@nscl.msu.edu}, \and Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
+\author{Heiko Hergert, Justin G.~Lietz, Titus D.~Morris, Scott K.~Bogner, Sam Novario, Nathan M.~Parzuchowski, and Fei Yuan}
+\institute{
+Heiko Hergert  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{hergert@nscl.msu.edu}, \and 
+% 
+Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and 
+% 
+Titus Morris \at Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA,
+and Physics Division, Oak Ridge National Laboratory, Oak Ridge, Tennessee, USA, \email{titusmorris@gmail.com}, \and 
+% 
+Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and 
+% 
+Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and 
+% 
+Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and 
+% 
+Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
 \maketitle
 \abstract{We present applications  of the In-Medium Similarity
 Renormalization Group (IM-SRG) method to studies of infinite nuclear matter. 
@@ -753,7 +768,7 @@ provides convenient Python wrappers for the ODEPACK solvers.
 The following source code shows the essential part of our Python implementation of
 the SRG flow for the pairing model. The full program with additional features can 
 be downloaded from 
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_pairing.py}.
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_pairing/srg_pairing.py}.
 
 
 \begin{lstlisting}
@@ -1104,7 +1119,7 @@ by $\OC(n^4)$ matrix elements, as mentioned above. In general, we will then have
 to face the issue of induced many-body forces, as discussed in section 
 \ref{sec:srg_induced}.
 
-\subsubsection{SRG in the Two-Nucleon System}
+\subsubsection{\label{sec:srg_nn}SRG in the Two-Nucleon System}
 
 \begin{figure*}[t]
   \setlength{\unitlength}{\textwidth}
@@ -1114,28 +1129,29 @@ to face the issue of induced many-body forces, as discussed in section
     \put(0.5000,0.2550){\includegraphics[width=0.40\unitlength]{\fdir/av18_srg0000_JLLST10010_meq.pdf}}
     \put(0.5000,0.0000){\includegraphics[width=0.40\unitlength]{\fdir/av18_srg0000_JLLST10210_meq.pdf}}
     \put(0.8700,0.4800){\fbox{\parbox{0.04\unitlength}{\raggedleft\large${}^3S_1$}}}
-    \put(0.7900,0.2400){\fbox{\parbox{0.12\unitlength}{\raggedleft\large${}^3S_1-{}^3D_1$}}}
+    \put(0.7900,0.2400){\fcolorbox{black}{white}{\parbox{0.12\unitlength}{\raggedleft\large${}^3S_1-{}^3D_1$}}}
   \end{picture}
   \end{center}
   \caption{\label{fig:av18}
-    Repulsive core and tensor force of the Argonne
+    Repulsive core  and tensor force of the Argonne
     V18 $NN$ interaction \cite{Wiringa:1995or} in the $(S,T)=(1,0)$
-    channel. In the left panel, the radial dependencies of the central and tensor 
-    components of Argonne V18 are shown, while the right panel shows its momentum 
+    channel. In the left panel, the radial dependencies of the central ($V_C(r)$)  and tensor 
+    components ($V_T(r)$) of Argonne V18 are shown, while the right panel shows its momentum 
     space matrix elements in the deuteron partial waves.
   }
 \end{figure*}
 
-Let us now consider the operator flow of the $NN$ interaction, Eq.~\eqref{eq:opflow_NN} 
-in the two-nucleon system. Since the nuclear Hamiltonian is invariant
+Let us now consider the operator flow of the $NN$ interaction
+in the two-nucleon system, Eq.~\eqref{eq:opflow_NN}. Since the nuclear Hamiltonian is invariant
 under translations and rotations, it is most convenient to work in
 momentum and angular momentum eigenstates of the form
 \begin{equation}
   \ket{q(LS)JMTM_T}\,.
 \end{equation}
 Because of the rotational symmetry, the $NN$ interaction conserves
-total angular momentum $J$, and it is easy to show that the total
-spin $S$ of the nucleon pair is a conserved quantity as well. The
+the total angular momentum quantum number $J$, and it is easy to show 
+that the total spin $S$ of the nucleon pair is a conserved quantity as 
+well. The
 orbital angular momentum is indicated by the quantum number $L$,
 and we remind our readers that $L$ is \emph{not} conserved, because
 the nuclear tensor operator
@@ -1150,9 +1166,9 @@ components of the nuclear Hamiltonian.
 
 
 In figure \ref{fig:av18} we show features of the central 
-and tensor forces of the realistic Argonne V18 (AV18) interaction \cite{Wiringa:1995or}
-in the $(S,T)=(1,0)$ channel, i.e., the channel in which the deuteron
-bound state is located. This interaction belongs to a group of so-called
+and tensor forces of the Argonne V18 (AV18) interaction \cite{Wiringa:1995or}
+in the $(S,T)=(1,0)$ channel, which has the quantum numbers of the deuteron. This 
+interaction belongs to a group of so-called
 realistic interactions that describe nucleon-nucleon scattering data
 with high accuracy, but precede the modern chiral forces (see
 chapter \ref{chapter:cc}, \cite{Epelbaum:2009ve,Machleidt:2011bh}). AV18
@@ -1162,7 +1178,9 @@ Lynn:2016ec}. Because of the required locality, AV18 has a strong repulsive
 core in the central part of the interaction. Like all $NN$ interactions,
 it also has a strong tensor force that results from pion exchange. The
 radial dependencies of these interaction components are shown in the left
-panel of figure \ref{fig:av18}. When we switch to the momentum representation,
+panel of figure \ref{fig:av18}. 
+
+When we switch to the momentum representation,
 we see that the ${}^3S_1$ partial wave\footnote{We use the conventional partial wave
 notation ${}^{2S+1}L_J$, where $L=0,1,2,\ldots$ is indicated by the letters 
 $S,P,D,\ldots$. The isospin channel is fixed by requiring the antisymmetry
@@ -1170,41 +1188,37 @@ of the $NN$ wavefunction, leading to the condition $(-1)^{L+S+T}=-1$.} which
 gives the dominant contribution to the deuteron wave function has strong
 off-diagonal matrix elements, with tails extending over the entire shown
 range and as high as $|\qOV| \sim 20\,\fmi$.
-The matrix elements of the ${}^3S_1-{}^3D_1$ coupled partial wave, which
-are generated exclusively by the tensor force, are sizable as well.
-
-
-
-In figure \ref{fig:schematic}, we show schematic examples of RG evolutions that are applied to
-nucleon-nucleon interactions in momentum-space representation. Figure \ref{fig:schematic}(a) 
-implements the RG as a decimation: The interaction is evolved to decreasing
-cutoff scales $\Lambda_0 > \Lambda_1 > \Lambda_2$, and we end up with a low-momentum interaction
-\Vlowk{} that only has non-zero matrix elements between states with initial and final 
-relative momenta $k,k'\leq\Lambda$ \cite{Bogner:2003os,Bogner:2010pq}. In contrast, 
-figure \ref{fig:schematic}(b) results from a continuous unitary transformation via the flow 
-equation \eqref{eq:opflow}, using a Wegner-type generator built from the relative kinetic 
-energy in the two-nucleon system:
-\begin{equation}\label{eq:def_srg_generator}
-  \eta(\lambda) \equiv \Big[\,\frac{\qOV^2}{2\mu}, v(\lambda)\Big]\,.
-\end{equation}
-Here, $\kOV=\tfrac{1}{2}(\pOV_1-\pOV_2)$, and $\mu$ is the reduced nucleon mass. We have
-parametrized the transformation with $\lambdaSRG=s^{-1/4}$, which has the 
-dimensions of a momentum (in natural units). As suggested by figure \ref{fig:schematic}(b),
-$\lambdaSRG$ is a measure for the ``width'' of the band-diagonal Hamiltonian in momentum 
-space, i.e., it controls the scale of momentum transfers between nucleons. Because  
-\begin{equation}
-  |\qOV' - \qOV|\lesssim \lambdaSRG
-\end{equation}
-low- and high-lying momenta are decoupled in a proper RG sense as $\lambdaSRG$ is 
-decreased.
+The matrix elements of the ${}^3S_1-{}^3D_1$ mixed partial wave, which
+are generated exclusively by the tensor force, are sizable as well. The
+strong coupling between states with low and high relative momenta forces
+us to use large Hilbert spaces in few- and many-body calculations, even
+if we are only interested in the lowest eigenstates. Methods like the 
+Lanczos algorithm (see chapter \ref{chapter:cc} and \cite{Lanczos:1950sp})
+extract eigenvalues and eigenvectors by repeatedly acting with the Hamiltonian
+on an arbitrary starting vector in the many-body space, i.e., by repeated
+matrix-vector products. Even if that vector only has low-momentum or low-energy 
+components in the beginning, an interaction like AV18 will mix in high-momentum 
+components even after a single matrix-vector multiplication, let alone tens 
+or hundreds as in typical many-body calculations. Consequently, the 
+eigenvalues and eigenstates of the nuclear Hamiltonian converge very slowly
+with respect to the basis size of the Hilbert space, see, e.g., 
+\cite{Barrett:2013oq}. To solve this problem, we perform an RG evolution of
+the $NN$ interaction.
 
 \begin{figure*}[t]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{\fdir/rg_evolution_schematic.pdf}
+    \setlength{\unitlength}{\textwidth}
+    \begin{picture}(0.9000,0.4100)
+      \put(0.0000,0.0000){\includegraphics[width=0.9\textwidth]{\fdir/rg_evolution_schematic.pdf}}
+      \put(0.0000,0.2850){\parbox{0.1\unitlength}{\colorbox{white}{\color{red}\large$q'$}}}
+      \put(0.4900,0.2850){\parbox{0.1\unitlength}{\colorbox{white}{\color{red}\large$q'$}}}
+      \put(0.1100,0.3860){\parbox{0.1\unitlength}{\colorbox{white}{\color{red}\large$q$}}}
+      \put(0.6000,0.3860){\parbox{0.1\unitlength}{\colorbox{white}{\color{red}\large$q$}}}
+    \end{picture}
   \end{center}
   \caption{\label{fig:schematic}Schematic illustration of two types of RG evolution 
     for $NN$ potentials in momentum space: (a) \Vlowk{} running in $\Lambda$, and 
-    (b) SRG running in $\lambdaSRG$ (see main text). Here, $k$ and $k'$ denote the 
+    (b) SRG running in $\lambdaSRG$ (see main text). Here, $q$ and $q'$ denote the 
     relative momenta of the initial and final state, respectively. At each $\Lambda_i$ 
     or $\lambdaSRG_i$, the matrix elements outside of the corresponding 
     blocks or bands are negligible, implying that high- and low-momentum 
@@ -1212,42 +1226,349 @@ decreased.
   }
 \end{figure*}
 
-
-The decoupling of low- and high-lying momenta significantly improves the convergence
-properties of configuration-space based many-body methods, because it prevents the 
-Hamiltonian from scattering nucleon pairs from low to high momentum states. Many-body
-methods like FCI, CC, or the IMSRG discussed in this chapter yield converged results 
-in much smaller configuration spaces, which in turn makes it possible to
-apply these methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
-However, this improvement comes at the cost of inducing many-body interactions, as
-we will discuss in section \ref{sec:srg_induced}.
-
-If we wish to solve the above equations for a nuclear interaction in a
-partial wave basis using relative coordinates for the momenta $k$, the explicit equations
-become \cite{Bogner:2007od} (with normalization
-so that $1 = \frac{2}{\pi}\int_0^\infty|q\rangle q^2\,dq \langle q |$
-and in units where $\hbar^2/M = 1$),
-%
-\begin{equation}
-  \frac{d(\langle k \vert \hat{V}(s) \vert k'\rangle)}{ds} =- (k^2 - k'{}^2)^2\langle k \vert \hat{V}(s) \vert k'\rangle
-    + \frac{2}{\pi}\int_0^{\infty}q^2dq
-      (k^2 + k'{}^2 - 2q^2)\langle k \vert \hat{V}(s) \vert q\rangle\langle q \vert \hat{V}(s) \vert k'\rangle).
+In figure \ref{fig:schematic}, we show examples for two types of RG evolution
+that decouple the low- and momentum pieces of $NN$ interactions. The first
+example, figure \ref{fig:schematic}(a), is a so-called  \emph{RG decimation}, 
+in which the interaction is evolved to decreasing cutoff scales $\Lambda_0 > \Lambda_1 > \Lambda_2$, 
+and high-momentum modes are ``integrated out''. This is the so-called \Vlowk{}
+approach, which was first used in nuclear physics in the early 2000s 
+\cite{Bogner:2003os,Bogner:2010pq}. Note that the resulting low-momentum 
+interaction is entirely confined to states with relative momentum $q\leq\Lambda$.
+In contrast, figure \ref{fig:schematic}(b) shows the SRG evolution of the $NN$ interaction
+to a band-diagonal shape via the flow equation \eqref{eq:opflow_NN}, using a 
+generator built from the relative kinetic energy in the two-nucleon system \cite{Bogner:2007od,Bogner:2010pq}:
+\begin{equation}\label{eq:def_srg_generator}
+  \eta(\lambda) \equiv \comm{\frac{\qOV^2}{2\mu}}{v(\lambda)}\,.
 \end{equation}
-By discretizing the relative momentum space on a grid of Gaussian integration points, 
-we obtain a simple (but nonlinear) system of first-order
-coupled differential equations,
-with the boundary condition that $\langle k \vert \hat{V}(s) \vert k'\rangle$ at the initial
-value of $s$ is equal to the initial potential.
+Instead of the flow parameter $s$, we have parameterized the evolution by 
+$\lambdaSRG=s^{-1/4}$, which has the dimensions of a momentum in natural units. 
+Note that the generator \eqref{eq:def_srg_generator} would vanish if the
+interaction were diagonal in momentum space. As suggested by figure 
+\ref{fig:schematic}(b), $\lambdaSRG$ is a measure for the ``width'' of the 
+band in momentum space. Thus, momentum transfers between nucleons are limited 
+according to
+\begin{equation}\label{eq:momentum_transfer}
+  Q\equiv |\qOV' - \qOV| \lesssim \lambdaSRG\,,
+\end{equation} 
+and low- and high-lying momenta are decoupled as $\lambdaSRG$ is decreased. 
 
-Instead of the parameter $s$ which is being evolved to $\infty$, we could define 
-the parameter $\lambda \equiv s^{-1/4}$. This parameter  provides a measure of the
-spread of the off-diagonal strength when $s$ or $\lambda$ are evolved. The replacement of $s$ by $\lambda$ introduces a multiplicative factor 
-of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sniplet and equations. 
+Equation \eqref{eq:momentum_transfer} implies that the spatial resolution scale
+of an SRG-evolved interaction (or a \Vlowk{} if we determine the maximum
+momentum transfer in the low-momentum block) is $\sim 1/Q \geq 1\lambdaSRG$,
+i.e., only long-ranged components of the $NN$ interaction are resolved explicitly
+and short-range components of the interaction can just as well be replaced 
+by contact interactions \cite{Lepage:1997py,Bogner:2003os,Holt:2004ux,Bogner:2010pq}.
+This is the reason why the realistic $NN$ interactions that accurately 
+describe $NN$ scattering data collapse to a universal long-range interaction
+when RG-evolved, namely one-pion exchange (OPE). This universal behavior emerges
+in the range $1.5\,\fmi\leq\lambdaSRG\leq2.5\,\fmi$. Any further evolution to
+lower $\lambdaSRG$ starts to remove pieces of OPE, and eventually generates a 
+pion-less theory that is essentially parameterized in terms of contact 
+interactions. While it is possible to implement such an evolution in
+the two-body system without introducing pathological behavior \cite{Wendt:2011ys},
+such an interaction must be complemented by strong induced many-nucleon
+forces once it is applied in finite nuclei, as discussed in section \ref{sec:srg_induced}.
+For this reason, $NN$ interactions are only ever evolved to the aforementioned
+range of $\lambdaSRG$ values.
+
+Nowadays, SRG evolutions are 
+preferred over \Vlowk{} style decimations in nuclear many-body theory, because 
+they can be readily extended to $3N,\ldots$ interactions and to general 
+observables 
+\cite{Bogner:2010pq,Anderson:2010br,Schuster:2014oq,More:2015bx,Jurgenson:2009bs,Hebeler:2012ly,Wendt:2013ys}. 
+Moreover, we could easily achieve a block decoupling as in 
+figure~\ref{fig:schematic}(a) by using a generator like \cite{Anderson:2008hx}
+\begin{equation}\label{eq:def_srg_generator_PQ}
+  \eta(\lambda) \equiv \comm{\underbrace{P_{\Lambda}H(\lambda)P_{\Lambda}+Q_{\Lambda}H(\lambda)Q_{\Lambda}}_{\equiv H_d(\lambda)}}{H(\lambda)}\,.
+\end{equation}
+where the projection operators $P_\Lambda$ and $Q_\Lambda$ partition the
+relative momentum basis in states with $|\qOV|\leq\Lambda$ and $|\qOV|>\Lambda$,
+respectively. In this case, $\lambda$ is an auxiliary parameter that is eliminated
+by evolving $\lambda\to0$, just like we evolved $s\to\infty$ in sections \ref{sec:srg_toy}
+and \ref{sec:srg_pairing}. 
+
+\subsubsection{\label{sec:srg_nn_flow}Implementation of the Flow Equations}
+We are now ready to implement the flow equations for the $NN$ interaction in
+the momentum-space partial-wave representation. Using basis states that 
+satisfy the orthogonality and completeness relations
+\begin{equation}
+  \braket{qLSJMTM_T}{q'L'S'J'M'T'M'_T} = 
+    \frac{\delta(q-q')}{qq'}\delta_{LL'}\delta_{SS'}\delta_{JJ'}\delta_{MM'}\delta_{TT'}\delta_{M_TM'_T}
+\end{equation}
+and
+\begin{equation}
+  \idO = \sum_{LSJMTM_T}\int_0^\infty dq\,q^2 \ket{qLSJMTM_T}\bra{qLSJMTM_T}\,,
+\end{equation}
+respectively, we obtain \cite{Bogner:2007od,Bogner:2010pq}
+\begin{align}
+  \left(-\frac{\lambda^5}{4}\right)\frac{d\matrixe{qL}{\vO}{q'L'}}{d\lambda} =&- (q^2 - q'^{2})^2
+  \matrixe{qL}{\vO}{q'L'}
+  \notag\\
+    &+ \sum_{\bar{L}}\int_0^{\infty}dp p^2\,
+      (q^2 + q'{}^2 - 2p^2)\matrixe{qL}{\vO}{p\bar{L}}
+      \matrixe{p\bar{L}}{\vO}{q'L'}\,,\label{eq:flow_nn}
+\end{align}
+where we have used scattering units ($\hbar^2/m=1$) and suppressed
+the $\lambda$-dependence of $\vO$ as well as the conserved quantum 
+numbers for brevity. Note that a prefactor $-\lambda^5/4$ 
+appears due or change of variables from $s$ to $\lambda$. 
+
+We can turn this integro-differential equation back into a matrix 
+flow equation by discretizing the relative momentum variable, e.g.,
+on uniform or Gaussian quadrature meshes. The matrix elements of the 
+relative kinetic energy operator are then simply given by
+\begin{equation}
+  \matrixe{q_iL}{\tO}{q_jL'}=q_i^2 \delta_{q_iq_j}\delta_{LL'}\,
+\end{equation}
+(with $\hbar^2/m=1$). The discretization turns the integration
+into a simple summation,
+\begin{equation}
+  \int_0^\infty dq\,q^2\;\rightarrow\;\sum_{i}w_i q^2_i\,,
+\end{equation}
+where the weights $w_i$ depend on our choice of mesh. For a uniform
+mesh, all weights are identical and correspond to the mesh spacing,
+while for Gaussian quadrature rules the mesh points and weights have
+to be determined numerically \cite{Press:2007vn}. For convenience,
+we absorb the weights and $q^2$ factors from the integral measure into 
+the interaction matrix element,
+\begin{equation}
+  \matrixe{q_iL}{\overline{v}}{q_jL'} \equiv \sqrt{w_iw_j}q_i q_j\matrixe{q_iL}{\vO}{q_jL'}\,.
+\end{equation}
+The discretized flow equation then be written as
+\begin{equation}\label{eq:flow_nn_discrete}
+  \totd{}{\lambda} \matrixe{q_iL}{\overline{v}}{q_jL'} = - \frac{4}{\lambda^5}
+    \matrixe{q_i}{\comm{\comm{\tO}{\overline{v}}}{\tO+\overline{v}}}{q_jL'}\,.
+\end{equation}
+
+We can solve Eq.~\eqref{eq:flow_nn_discrete} using a modified version of our 
+Python code for the pairing model, discussed in section \ref{sec:srg_pairing}.
+The Python code and sample inputs can be downloaded from 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_nn}.
+Let us briefly discuss the most important modifications.
+
+First, we have a set of functions that read the momentum mesh
+and the input matrix elements from a file:
+\begin{lstlisting}
+def uniform_weights(momenta):
+  weights = np.ones_like(momenta)
+  weights *= abs(momenta[1]-momenta[0])
+  return weights
+
+def read_mesh(filename):
+  data = np.loadtxt(filename, comments="#")  
+  dim  = data.shape[1]
+  
+  momenta = data[0,:dim]
+
+  return momenta
+  
+def read_interaction(filename):
+  data = np.loadtxt(filename, comments="#")  
+  dim  = data.shape[1]
+  V = data[1:,:dim]
+  return V
+\end{lstlisting}
+
+The matrix element files have the following format:
+\begin{lstlisting}
+# momentum space matrix elements 
+# partial wave J=1, L=0/0, S=1, T=0, MT=0 
+# 
+# momentum grid [fm^-1]
+0.000000 0.050000 0.100000 0.150000 0.200000 0.250000 0.300000 0.350000 0.400000 0.450000 
+0.500000 0.550000 0.600000 0.650000 0.700000 0.750000 0.800000 0.850000 0.900000 0.950000 
+...
+6.300000 6.350000 6.400000 6.450000 6.500000 6.550000 6.600000 6.650000 6.700000 6.750000 
+6.800000 6.850000 6.900000 6.950000 7.000000 
+#
+# matrix elements [MeV fm^3] 
+-36.94918 -36.83554 -36.49896 -35.95649 -35.23306 -34.35875 -33.36536 -32.28337 -31.13985 
+-29.95722 -28.75281 -27.53904 -26.32400 -25.11217 -23.90513 -22.70231 -21.50158 -20.29973 
+...
+0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   
+0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+\end{lstlisting}
+Comments, indicated by the \texttt{\#} character, are ignored. The first set
+of data is a row containing the mesh points. Here, we have $141$ points in total,
+ranging from $0$ to $7\,\fmi$ with a spacing of $0.05\,\fmi$. The range of momenta
+is sufficient for the chiral $NN$ interaction we use in our example, the \NNNLO{} 
+potential by Entem and Machleidt with cutoff $\Lambda=500\,\MeV$ \cite{Entem:2003th,Machleidt:2011bh}, 
+which is considerably softer than the AV18 interaction discussed above. This is followed
+by a simple $141 \times 141$ list of the matrix elements. It is straightforward
+to adapt the format and I/O routines to Gaussian quadrature meshes by including
+mesh points (i.e., the abscissas) and weights in the data file.
+
+The derivative routine is almost unchanged, save for the prefactor due to the
+use of $\lambda$ instead of $s$ to parameterize the flow, and the treatment of
+the kinetic energy operator as explicitly constant:
+\begin{lstlisting}
+def derivative(lam, y, T):
+# def derivative(y, lam, T):
+  dim = T.shape[0]
+
+  # reshape the solution vector into a dim x dim matrix
+  V = reshape(y, (dim, dim))
+
+  # calculate the generator
+  eta = commutator(T, V)
+
+  # dV is the derivative in matrix form 
+  dV  = -4.0/(lam**5) * commutator(eta, T+V)
+
+  # convert dH into a linear array for the ODE solver
+  dydt = reshape(dV, -1)
+    
+  return dydt
+\end{lstlisting}
+
+In the main routine of the program, we first set up the mesh and 
+then proceed to read the interaction matrix elements for the 
+different partial waves.
+We are dealing with a coupled-channel problem because
+the tensor forces connects partial waves with $\Delta L=2$
+in all $S=1$ channels. In our example, we restrict ourselves
+to the partial waves that contribute to the deuteron bound
+state, namely ${}^3S_1$, ${}^3D_1$,
+and ${}^3S_1-{}^3D_1$. Indicating the orbital angular momenta
+of these partial waves by indices, we have
+\begin{equation}
+  \mathbf{T}=
+  \begin{pmatrix} 
+      \;t\; &   \\
+        &  \;t\;
+  \end{pmatrix}\,,
+  \quad
+  \mathbf{V}=
+  \begin{pmatrix} 
+      \;\overline{v}_{00}\;       &  \;\overline{v}_{02}\; \\
+      \;\overline{v}^\dag_{02}\;  &  \;\overline{v}_{22}\;
+  \end{pmatrix}\,,
+\end{equation}
+where 
+\begin{equation}
+  t = \mathrm{diag}\left(q_0^2,\ldots,q_\text{max}^2\right)\,,
+\end{equation}
+since the kinetic energy is independent of $L$. As soon as we pass 
+from the $S-$ into the $D-$ wave in either the
+rows or the columns, the momentum mesh simply starts from the
+lowest mesh point again. We use \texttt{NumPy}'s, \texttt{hstack()} 
+and \texttt{vstack()} functions to assemble the interaction matrix
+from the partial-wave blocks:
+
+\begin{lstlisting}
+def main():
+...
+  
+  # read individual partial waves
+  partial_waves=[]
+  for filename in ["n3lo500_3s1.meq", "n3lo500_3d1.meq", "n3lo500_3sd1.meq"]:
+    partial_waves.append(read_interaction(filename))
+    # print partial_waves[-1].shape
+
+  # assemble coupled channel matrix
+  V = np.vstack((np.hstack((partial_waves[0], partial_waves[2])), 
+                 np.hstack((np.transpose(partial_waves[2]), partial_waves[1]))
+                ))
+
+  # switch to scattering units
+  V = V/hbarm
+...
+\end{lstlisting}
+
+As discussed earlier, we work in scattering units with $\hbar^2/m=1$. Thus,
+we have to divide the input matrix elements by this factor. We also need to
+absorb the weights and explicit momentum factors into the interaction matrix.
+It is convenient to define a conversion matrix for this purpose, which can
+be multiplied element-wise with the entries of $\mathbf{V}$ using the 
+regular \texttt{*} operator (recall that the matrix product is implemented
+by the \texttt{NumPy} function \texttt{dot}).
+
+% \begin{lstlisting}
+% ...
+%   conversion_matrix = np.zeros_like(T)
+%   for i in range(dim):
+%     for j in range(dim):
+%       # Regularize the conversion matrix at zero momentum - set elements
+%       # to machine precision so we can invert the matrix for plots etc.
+%       # Note that momentum values are positive, by construction.
+%       qiqj = max(np.finfo(float).eps, momenta[i]*momenta[j])
+%       conversion_matrix[i,j] = qiqj*sqrt(weights[i]*weights[j])
+% ...
+% \end{lstlisting}
+
+Since we changed variables from $s$ to $\lambda$, we now start the
+integration at $\lambda=\infty$, or $\lambda\gg 1\fmi$ in practice.
+As discussed above, we do not evolve all the way to $\lambda=0\,\fmi$,
+but typically stop before we start integrating out explicit pion
+physics, e.g., at $\lambda=1.5\,\fmi$. For typical $NN$ interactions,
+especially those with a hard core like AV18, the flow equations tend
+to become stiff because they essentially depend on cubic products of
+the kinetic energy and interaction. For this reason, we use \texttt{SciPy}'s
+\texttt{ode()} class, which provides access to a variety of solvers
+and greater control over the parameters of the integration process.
+Specifically, we choose the VODE solver package and its 5th-order 
+Backward Differentiation method \cite{Brown:1989wj}, which is 
+efficient and works robustly for a large variety of input interactions.
+
+\begin{lstlisting}
+...
+  lam_initial = 20.0
+  lam_final = 1.5
+
+  # integrate using scipy.ode instead of scipy.odeint - this gives
+  # us more control over the solver
+  solver = ode(derivative,jac=None)
+
+  # equations may get stiff, so we use VODE and Backward Differentiation
+  solver.set_integrator('vode', method='bdf', order=5, nsteps=1000)
+  solver.set_f_params(T)
+  solver.set_initial_value(y0, lam_initial)
+
+...
+\end{lstlisting}
+
+Finally, we reach the loop that integrates the ODE system. We request
+output from the solver in regular intervals, reducing these intervals
+as we approach the region of greatest practical interest, 
+$1.5\,\fmi\leq \lambda \leq 2.5\,\fmi$: 
+
+\begin{lstlisting}
+...
+  while solver.successful() and solver.t > lam_final:
+    # adjust the step size in different regions of the flow parameter
+    if solver.t >= 6.0:
+      ys = solver.integrate(solver.t-1.0)
+    elif solver.t >= 2.5:
+      ys = solver.integrate(solver.t-0.5)
+    elif solver.t < 2.5 and solver.t >= lam_final:
+      ys = solver.integrate(solver.t-0.1)
+
+    # add evolved interactions to the list
+    flowparams.append(solver.t)
+    Vtmp = reshape(ys,(dim,dim))
+    Vs.append(Vtmp)
+
+    print "%8.5f %14.8f"%(solver.t, eigvalsh((T + Vtmp)*hbarm)[0])
+
+...
+\end{lstlisting}
+
+Of course, the ODE solver will typically take several hundred adaptive 
+steps to propagate the solution with the desired accuracy between successive 
+requested values of $\lambda$. At the end of each external 
+step, we diagonalize the evolved Hamiltonian
+and check whether the lowest eigenvalue, i.e., the deuteron binding
+energy, remains invariant within the numerical tolerances we use for
+the ODE solver. To illustrate the evolution of the $NN$ interaction, 
+the code will also generate a sequence of matrix plots at the
+desired values of $\lambda$, similar to figure \ref{fig:srg_pairing}
+for the pairing Hamiltonian.
+
+\subsubsection{\label{sec:srg_n3lo}Example: Evolution of a Chiral $NN$ Interaction}
 
 
 \begin{figure*}[t]
   \setlength{\unitlength}{\textwidth}
-
   \begin{picture}(1.0000,1.0500)
     \put(0.0000,0.0000){\includegraphics[width=0.5\unitlength]{\fdir/n3lo_srg0625_JLLST10010_meq.pdf}}
     \put(0.5500,0.0000){\includegraphics[width=0.45\unitlength]{\fdir/n3lo_srg0625_deuteron.pdf}}
@@ -1255,11 +1576,90 @@ of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sn
     \put(0.5500,0.3500){\includegraphics[width=0.45\unitlength]{\fdir/n3lo_srg0123_deuteron.pdf}}
     \put(0.0000,0.7000){\includegraphics[width=0.5\unitlength]{\fdir/n3lo_srg0000_JLLST10010_meq.pdf}}
     \put(0.5500,0.7000){\includegraphics[width=0.45\unitlength]{\fdir/n3lo_srg0000_deuteron.pdf}}
+    \put(0.0000,1.0000){\fcolorbox{black}{white}{\parbox{0.15\unitlength}{\centering\large``$\lambda = \infty$''}}}
+    \put(0.0000,0.6500){\fcolorbox{black}{white}{\parbox{0.15\unitlength}{\centering\large$\lambda = 3\,\fmi$}}}
+    \put(0.0000,0.3000){\fcolorbox{black}{white}{\parbox{0.15\unitlength}{\centering\large$\lambda = 2\,\fmi$}}}
   \end{picture}
   \\[10pt]
-  \caption{\label{fig:vsrg_momentum}}
+  \caption{\label{fig:vsrg_momentum}SRG evolution of the chiral \NNNLO{} nucleon-nucleon interaction
+  by Entem and Machleidt, with initial cutoff $\Lambda=500\,\MeV$ \cite{Entem:2003th,Machleidt:2011bh}. 
+  In the left column, we show the
+  momentum-space matrix elements of the interaction in the ${}^3S_1$ partial wave for different values
+  of the SRG resolution scale $\lambdaSRG$. The top-most row shows the initial interaction at $s=0\,\fm^4$\,,
+  i.e., ``$\lambda=\infty$''. In the right column, we show the $S-$ and $D-$wave components
+  of the deuteron wave function that is obtained by solving the Schr\"odinger equation with the corresponding
+  SRG-evolved interaction.}
 \end{figure*}
 
+As an example of a realistic application, we discuss the SRG evolution of the
+chiral \NNNLO{} nucleon-nucleon interaction by Entem and Machleidt with initial 
+cutoff $\Lambda=500\,\MeV$ \cite{Entem:2003th,Machleidt:2011bh}. The momentum-space
+matrix elements of this interaction in the deuteron partial waves are distributed
+with the Python code discussed in the previous section.
+
+In the top row of figure \ref{fig:vsrg_momentum}, we show the matrix elements
+of the initial interaction in the ${}^3S_1$ partial wave; the ${}^3S_1-{}^3D_1$
+and ${}^3D_1$ are not shown to avoid clutter. Comparing the matrix elements to
+those of the AV18 interaction we discussed in section \ref{sec:srg_nn}, shown
+in fig.~\ref{fig:av18}, we note that the chiral interaction has much weaker
+off-diagonal matrix elements to begin with. While the AV18 matrix elements
+extend as high as $|\qOV|\sim 20\,\fmi$, the chiral interaction has no appreciable
+strength in states with $|\qOV|\sim 4.5\,\fmi$. In nuclear physics jargon, 
+AV18 is a much harder interaction than the chiral interaction because of 
+the former's strongly repulsive core. By evolving the initial interaction
+to $3\,\fmi$ and then to $2\,\fmi$, the offdiagonal matrix elements are 
+suppressed, and the interaction is almost entirely contained in a block
+of states with $|\qOV|\sim 2\,\fmi$, except for a weak diagonal ridge.
+
+Next to the matrix elements, we also show the deuteron wave functions
+that we obtain by solving the Schr\"odinger equation with the initial
+and SRG-evolved chiral interactions. For the unevolved $NN$ interaction,
+the $S-$wave ($L=0$) component of the wave function is 
+suppressed at small relative distances, which reflects short-range 
+correlations between the nucleons. (For AV18, the $S-$wave component of 
+the deuteron wave function vanishes at $r=0\,\fm$ due to the hard core.)
+There is also a significant $D-$wave ($L=2$) admixture due to the tensor interaction.
+As we lower the resolution scale, the ``correlation hole'' in the wave
+function is filled in, and all but eliminated once we reach 
+$\lambdaSRG=2.0\,\fmi$. The $D-$wave admixture is reduced significantly,
+as well, because the evolution suppresses the 
+matrix elements in the ${}^3S_1-{}^3D_1$ wave, which are responsible
+for this mixing \cite{Bogner:2010pq}. Focusing just on the $S-$wave,
+the wave function is extremely simple and matches what we would expect
+for two almost independent, uncorrelated nucleons. The Pauli principle
+does not affect the coordinate-space part of the wave function here 
+because the overall antisymmetry of the deuteron wave function is ensured 
+by its spin and isospin parts.
+
+Let us dwell on the removal of short-range correlations from
+the wave function for another moment, and consider the exact eigenstates of
+the initial $NN$ Hamiltonian, 
+\begin{equation}
+  \HO(0) \ket{\psi_n} = E_n \ket{\psi_n}\,.
+\end{equation}
+The eigenvalues are invariant under a unitary transformation, e.g.,
+an SRG evolution,
+\begin{equation}
+  \HO(\lambda)\UO(\lambda)\ket{\psi_n} \equiv \UO(\lambda) \HO(0) \UUO(\lambda) \UO(\lambda)\ket{\psi_n} 
+    = E_n \UO(\lambda) \ket{\psi_n}\,.
+\end{equation}
+We can interpret this equation as a shift of correlations from the
+wave function into the effective, ``RG-improved'' Hamiltonian. When
+we solve the Schr\"odinger equation numerically, we can usually only
+obtain an approximation $\ket{\phi_n}$ of the exact eigenstate. In 
+the ideal case, this is merely due to finite-precision arithmetic on
+a computer, but more often, we also have systematic approximations,
+e.g., mesh discretizations, finite basis sizes, many-body truncations 
+(think of the cluster operator in Coupled Cluster, for instance, cf.~
+chapter \ref{chapter:cc}), etc.
+If we use the evolved Hamiltonian $\HO(\lambda)$, we only need to 
+to approximate the transformed eigenstate,
+\begin{equation}\label{eq:approx_eigenstate}
+  \ket{\phi_n}\approx\UO(\lambda)\ket{\psi_n}\,
+\end{equation}
+instead of $\ket{\psi_n}$, which is often a less demanding task.
+This is certainly true for our deuteron example for $\lambda=2.0\,\fmi$,
+where we no longer have to worry about short-range correlations.
 
 
 \subsubsection{\label{sec:srg_induced}Induced Interactions}
@@ -1273,6 +1673,16 @@ of $-2.0/\lambda^3$ in front of the derivative of $\hat{V}$ in the above code sn
 %   \totd{}{s}v^{[2]}_{ij} &= \comm{\eta}{\vO^{[2]}_{ij}}\,, \\
 %   \totd{}{s}v^{[3]}_{ijk} &= \comm{\eta}{\vO^{[3]}_{ijk}}\,.
 % \end{align}
+
+
+% The decoupling of low- and high-lying momenta significantly improves the convergence
+% properties of configuration-space based many-body methods, because it prevents the 
+% Hamiltonian from scattering nucleon pairs from low to high momentum states. Many-body
+% methods like FCI, CC, or the IMSRG discussed in this chapter yield converged results 
+% in much smaller configuration spaces, which in turn makes it possible to
+% apply these methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
+% However, this improvement comes at the cost of inducing many-body interactions, as
+% we will discuss in section \ref{sec:srg_induced}.
 
 
 The decoupling of low- and high-lying momenta significantly improves the convergence

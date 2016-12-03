@@ -451,6 +451,66 @@ J.E. Lynn, I.~Tews, J.~Carlson, S.~Gandolfi, A.~Gezerlis, K.E. Schmidt,
 \newblock
   \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.116.062501}
 
+\bibitem{Lepage:1997py}
+G.P. Lepage,   (1997)
+
+\bibitem{Holt:2004ux}
+J.D. Holt, T.T.S. Kuo, G.E. Brown, S.K. Bogner, Nucl. Phys. A \textbf{733}, 153
+  (2004)
+
+\bibitem{Wendt:2011ys}
+K.A. Wendt, R.J. Furnstahl, R.J. Perry, Phys. Rev. C \textbf{83}, 034005
+  (2011).
+\newblock \doi{10.1103/PhysRevC.83.034005}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.83.034005}
+
+\bibitem{Anderson:2010br}
+E.R. Anderson, S.K. Bogner, R.J. Furnstahl, R.J. Perry, Phys. Rev. C
+  \textbf{82}(5), 054001 (2010).
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.82.054001}
+
+\bibitem{Schuster:2014oq}
+M.D. Schuster, S.~Quaglioni, C.W. Johnson, E.D. Jurgenson, P.~Navr\'atil, Phys.
+  Rev. C \textbf{90}, 011301 (2014).
+\newblock \doi{10.1103/PhysRevC.90.011301}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.90.011301}
+
+\bibitem{More:2015bx}
+S.N. More, S.~K\"onig, R.J. Furnstahl, K.~Hebeler, Phys. Rev. C \textbf{92},
+  064002 (2015).
+\newblock \doi{10.1103/PhysRevC.92.064002}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.064002}
+
+\bibitem{Jurgenson:2009bs}
+E.D. Jurgenson, P.~Navr\'{a}til, R.J. Furnstahl, Phys. Rev. Lett. \textbf{103},
+  082501 (2009).
+\newblock \doi{10.1103/PhysRevLett.103.082501}
+
+\bibitem{Hebeler:2012ly}
+K.~Hebeler, Phys. Rev. C \textbf{85}, 021002 (2012).
+\newblock \doi{10.1103/PhysRevC.85.021002}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.021002}
+
+\bibitem{Wendt:2013ys}
+K.A. Wendt, Phys. Rev. C \textbf{87}, 061001 (2013).
+\newblock \doi{10.1103/PhysRevC.87.061001}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.87.061001}
+
+\bibitem{Anderson:2008hx}
+E.~Anderson, S.K. Bogner, R.J. Furnstahl, E.D. Jurgenson, R.J. Perry,
+  A.~Schwenk, Phys. Rev. C \textbf{77}, 037001 (2008).
+\newblock \doi{10.1103/PhysRevC.77.037001}
+
+\bibitem{Entem:2003th}
+D.R. Entem, R.~Machleidt, Phys. Rev. C \textbf{68}(4), 041001 (2003).
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.68.041001}
+
+\bibitem{Brown:1989wj}
+P.~Brown, G.~Byrne, A.~Hindmarsh, SIAM Journal on Scientific and Statistical
+  Computing \textbf{10}(5), 1038 (1989).
+\newblock \doi{10.1137/0910062}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1137/0910062}
+
 \bibitem{Roth:2011kx}
 R.~Roth, J.~Langhammer, A.~Calci, S.~Binder, P.~Navr\'atil, Phys. Rev. Lett.
   \textbf{107}, 072501 (2011).
@@ -503,16 +563,6 @@ V.~Som\`a, A.~Cipollone, C.~Barbieri, P.~Navr\'atil, T.~Duguet, Phys. Rev. C
   \textbf{89}, 061301 (2014).
 \newblock \doi{10.1103/PhysRevC.89.061301}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.89.061301}
-
-\bibitem{Jurgenson:2009bs}
-E.D. Jurgenson, P.~Navr\'{a}til, R.J. Furnstahl, Phys. Rev. Lett. \textbf{103},
-  082501 (2009).
-\newblock \doi{10.1103/PhysRevLett.103.082501}
-
-\bibitem{Hebeler:2012ly}
-K.~Hebeler, Phys. Rev. C \textbf{85}, 021002 (2012).
-\newblock \doi{10.1103/PhysRevC.85.021002}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.021002}
 
 \bibitem{Griesshammer:2015dp}
 H.W. Griesshammer, in \emph{in proceedings of the "8th International Workshop
@@ -568,10 +618,6 @@ J.J. Shepherd, G.H. Booth, A.~Alavi, J. Chem. Phys. \textbf{136}(24), 244101
   (2012).
 \newblock
   \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/136/24/10.1063/1.4720076}
-
-\bibitem{Entem:2003th}
-D.R. Entem, R.~Machleidt, Phys. Rev. C \textbf{68}(4), 041001 (2003).
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.68.041001}
 
 \bibitem{Magnus:1954xy}
 W.~Magnus, Comm. Pure Appl. Math. \textbf{7}(4), 649 (1954).

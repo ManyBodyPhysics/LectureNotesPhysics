@@ -206,7 +206,7 @@ def main():
                  np.hstack((np.transpose(partial_waves[2]), partial_waves[1]))
                 ))
 
-  # change to scattering units
+  # switch to scattering units
   V = V/hbarm
   
   # set up conversion matrix for V: this is used to absorb momentum^2 and
