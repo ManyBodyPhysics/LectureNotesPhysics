@@ -564,10 +564,6 @@ V.~Som\`a, A.~Cipollone, C.~Barbieri, P.~Navr\'atil, T.~Duguet, Phys. Rev. C
 \newblock \doi{10.1103/PhysRevC.89.061301}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.89.061301}
 
-\bibitem{Griesshammer:2015dp}
-H.W. Griesshammer, in \emph{in proceedings of the "8th International Workshop
-  on Chiral Dynamics"}, vol. PoS(CD15) (2015), vol. PoS(CD15), p. 104
-
 \bibitem{Wang:2012uq}
 M.~Wang, G.~Audi, A.~Wapstra, F.~Kondev, M.~MacCormick, X.~Xu, B.~Pfeiffer,
   Chin. Phys. C \textbf{36}(12), 1603 (2012).
@@ -602,16 +598,59 @@ D.~Gazit, S.~Quaglioni, P.~Navr\'atil, Phys. Rev. Lett. \textbf{103}, 102502
 \newblock
   \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.103.102502}
 
-\bibitem{Morris:2016xp}
-T.D. Morris, Systematic improvements of ab initio in-medium similarity
-  renormalization group calculations.
-\newblock Ph.D. thesis, Michigan State University (2016).
-\newblock \urlprefix\url{http://etd.lib.msu.edu/islandora/object/etd%3A3864}
+\bibitem{Griesshammer:2015dp}
+H.W. Griesshammer, in \emph{in proceedings of the "8th International Workshop
+  on Chiral Dynamics"}, vol. PoS(CD15) (2015), vol. PoS(CD15), p. 104
+
+\bibitem{Roth:2010vp}
+R.~Roth, T.~Neff, H.~Feldmeier, Prog. Part. Nucl. Phys. \textbf{65}, 50 (2010).
+\newblock \doi{10.1016/j.ppnp.2010.02.003}
+
+\bibitem{Ring:1980bb}
+P.~Ring, P.~Schuck, \emph{The Nuclear Many-Body Problem}, 1st edn. (Springer,
+  1980)
+
+\bibitem{Hagen:2007zc}
+G.~Hagen, T.~Papenbrock, D.J. Dean, A.~Schwenk, A.~Nogga, M.~W\l{}och,
+  P.~Piecuch, Phys. Rev. C \textbf{76}, 034302 (2007).
+\newblock \doi{10.1103/PhysRevC.76.034302}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.76.034302}
+
+\bibitem{Binder:2013fk}
+S.~Binder, P.~Piecuch, A.~Calci, J.~Langhammer, P.~Navr\'atil, R.~Roth, Phys.
+  Rev. C \textbf{88}, 054319 (2013).
+\newblock \doi{10.1103/PhysRevC.88.054319}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.88.054319}
+
+\bibitem{Gebrerufael:2016fe}
+E.~Gebrerufael, A.~Calci, R.~Roth, Phys. Rev. C \textbf{93}, 031301 (2016).
+\newblock \doi{10.1103/PhysRevC.93.031301}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.93.031301}
 
 \bibitem{Tsukiyama:2012fk}
 K.~Tsukiyama, S.K. Bogner, A.~Schwenk, Phys. Rev. C \textbf{85}, 061304 (2012).
 \newblock \doi{10.1103/PhysRevC.85.061304}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.061304}
+
+\bibitem{Day:1967zl}
+B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967).
+\newblock \doi{10.1103/RevModPhys.39.719}
+
+\bibitem{Brandow:1967tg}
+B.H. Brandow, Rev. Mod. Phys. \textbf{39}, 771 (1967).
+\newblock \doi{10.1103/RevModPhys.39.771}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.39.771}
+
+\bibitem{Fetter:2003ve}
+A.~Fetter, J.~Walecka, \emph{Quantum Theory of Many-particle Systems}.
+\newblock Dover Books on Physics (Dover Publications, 2003).
+\newblock \urlprefix\url{http://books.google.com/books?id=0wekf1s83b0C}
+
+\bibitem{Morris:2016xp}
+T.D. Morris, Systematic improvements of ab initio in-medium similarity
+  renormalization group calculations.
+\newblock Ph.D. thesis, Michigan State University (2016).
+\newblock \urlprefix\url{http://etd.lib.msu.edu/islandora/object/etd%3A3864}
 
 \bibitem{Shepherd:2012hl}
 J.J. Shepherd, G.H. Booth, A.~Alavi, J. Chem. Phys. \textbf{136}(24), 244101
@@ -643,10 +682,6 @@ R.E. Peierls, Proc. R. Soc. London A \textbf{333}(1593), 157 (1973).
   perturbation theory in this situation. The method is illustrated by
   application to the problem of the centre-of-mass motion of a nucleus, the
   symmetry being the translational and Galileo invariance.}
-
-\bibitem{Ring:1980bb}
-P.~Ring, P.~Schuck, \emph{The Nuclear Many-Body Problem}, 1st edn. (Springer,
-  1980)
 
 \bibitem{Egido:1982sd}
 J.L. Egido, P.~Ring, Nucl. Phys. A \textbf{383}, 189 (1982)

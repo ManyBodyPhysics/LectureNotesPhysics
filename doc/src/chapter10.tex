@@ -74,6 +74,8 @@
 \newcommand{\vO}{\op{v}}
 
 \newcommand{\AO}{\op{A}}
+\newcommand{\BO}{\op{B}}
+\newcommand{\CO}{\op{C}}
 \newcommand{\HO}{\op{H}}
 \newcommand{\PO}{\op{P}}
 \newcommand{\TO}{\op{T}}
@@ -308,7 +310,17 @@ We apply thereafter the IM-SRG approach to the simplified pairing  model (presen
 to pure neutron matter. We compare our IM-SRG results to those obtained from coupled cluster theory and many-body perturbation theory of  chapter 8 and quantum Monte Carlo of the previous chapter.  In the final section, we present our conclusions and point  to further
 perspectives and research directions.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Similarity Renormalization Group}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Concept}
 The basic idea of the Similarity Renormalization Group (SRG) method is 
 quite general: We want to ``simplify'' our system's Hamiltonian
@@ -438,6 +450,9 @@ nuclear Hamiltonians more suitable for \emph{ab initio} many-body
 calculations \cite{Bogner:2007od,Bogner:2010pq,Morris:2015ve,Hergert:2016jk,Hergert:2016ng}.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:srg_toy}A Two-Dimensional Toy Problem}
 
 In order to get a better understanding of the SRG method, we first consider  
@@ -605,7 +620,14 @@ figure.
   }
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:srg_pairing}The Pairing Model}
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{Preliminaries}
 \begin{table}[t]
   \begin{center}
@@ -680,6 +702,9 @@ block indices)
   \end{pmatrix}\,.
 \end{equation}
 
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{SRG Flow for the Pairing Hamiltonian}
 As in earlier sections, we split the Hamiltonian matrix \eqref{eq:def_h_matrix}
 into diagonal and off-diagonal parts:
@@ -752,6 +777,9 @@ for the generator which are more efficient in achieving the desired diagonalizat
 The RG property will matter in our discussion of SRG-evolved nuclear interactions 
 in the next section.
 
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{Implementation}
 We are now ready to discuss the implementation of the SRG flow for the pairing
 Hamiltonian. The main numerical task is the integration of the flow equations,
@@ -819,33 +847,32 @@ def derivative(y, t, dim):
   return dydt
 
 
-
 #------------------------------------------------------------------------------
 # Main program
 #------------------------------------------------------------------------------
+def main():
+  g     = 0.5
+  delta = 1
 
-g     = 0.5
-delta = 1
+  H0    = Hamiltonian(delta, g)
+  dim   = H0.shape[0]
 
-H0    = Hamiltonian(delta, g)
-dim   = H0.shape[0]
+  # calculate exact eigenvalues
+  eigenvalues = eigvalsh(H0)
 
-# calculate exact eigenvalues
-eigenvalues = eigvalsh(H0)
+  # turn initial Hamiltonian into a linear array
+  y0  = reshape(H0, -1)                 
 
-# turn initial Hamiltonian into a linear array
-y0  = reshape(H0, -1)                 
+  # flow parameters for snapshot images
+  flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
 
-# flow parameters for snapshot images
-flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
+  # integrate flow equations - odeint returns an array of solutions,
+  # which are 1d arrays themselves
+  ys  = odeint(derivative, y0, flowparams, args=(dim,))
 
-# integrate flow equations - odeint returns an array of solutions,
-# which are 1d arrays themselves
-ys  = odeint(derivative, y0, flowparams, args=(dim,))
-
-# reshape individual solution vectors into dim x dim Hamiltonian
-# matrices
-Hs  = reshape(ys, (-1, dim,dim))
+  # reshape individual solution vectors into dim x dim Hamiltonian
+  # matrices
+  Hs  = reshape(ys, (-1, dim,dim))
 \end{lstlisting}
 
 
@@ -864,7 +891,9 @@ the initial Hamiltonian as a one-dimensional array \texttt{y0} as well
 as a list of flow parameters $s$ for which a solution is requested. The 
 routine \texttt{odeint} returns these solutions as a list of arrays.
 
-
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{A Numerical Example}
 \begin{figure*}[t]
   \begin{center}
@@ -928,9 +957,15 @@ are already practically identical to the eigenvalues once we have
 integrated up to $s=1.0$, despite the non-vanishing off-diagonal matrix elements 
 that are visible in the $s=1.0$ snapshot shown in Fig.~\ref{fig:srg_pairing}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Evolution of Nuclear Interactions}
 
-\subsubsection{Matrix and Operator Flows}
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{\label{sec:srg_opflow}Matrix and Operator Flows}
 In our discussion of the schematic pairing model in the previous section, we 
 have used SRG flows to solve the eigenvalue problem arising from a four-body 
 Schr\"odinger equation, so we may want to use the same method for the more 
@@ -981,7 +1016,7 @@ kinetic energy,
 It is straightforward to show that $\Tint$ can be written either as a sum of
 one- and two-body operators,
 \begin{equation}\label{eq:def_Tint_1B2B}
-  \Tint= \left(1-\frac{1}{A}\right)\sum_{i}\frac{\pOV_i^2}{2m} - \frac{1}{\AO}\sum_{i<j}\frac{\pOV_{i}\cdot\pOV_{j}}{m}
+  \Tint= \left(1-\frac{1}{\AO}\right)\sum_{i}\frac{\pOV_i^2}{2m} - \frac{1}{\AO}\sum_{i<j}\frac{\pOV_{i}\cdot\pOV_{j}}{m}
 \end{equation}
 or as a pure two-body operator
 \begin{equation}\label{eq:def_Tint_2B}
@@ -992,7 +1027,7 @@ and $\mu=m/2$ is the reduced nucleon mass (neglecting the proton-neutron mass di
 Using Eq.~\eqref{eq:def_Tint_2B} for the present discussion, we can write the intrinsic 
 Hamiltonian as
 \begin{equation}\label{eq:def_Hint_2B}
-  \Hint = \frac{2}{A}\sum_{i<j}\frac{\qOV_{ij}^2}{2\mu} + \sum_{i<j}\vO^{[2]}_{ij}\,,
+  \Hint = \frac{2}{\AO}\sum_{i<j}\frac{\qOV_{ij}^2}{2\mu} + \sum_{i<j}\vO^{[2]}_{ij}\,,
 \end{equation}
 and directly consider the evolution of this operator via the flow equation
 \eqref{eq:opflow}. It is customary to absorb the flow-parameter dependence 
@@ -1022,6 +1057,9 @@ by $\OC(n^4)$ matrix elements, as mentioned above. In general, we will then have
 to face the issue of induced many-body forces, as discussed in section 
 \ref{sec:srg_induced}.
 
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{\label{sec:srg_nn}SRG in the Two-Nucleon System}
 
 \begin{figure*}[t]
@@ -1190,6 +1228,9 @@ respectively. In this case, $\lambda$ is an auxiliary parameter that is eliminat
 by evolving $\lambda\to0$, just like we evolved $s\to\infty$ in sections \ref{sec:srg_toy}
 and \ref{sec:srg_pairing}. 
 
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{\label{sec:srg_nn_flow}Implementation of the Flow Equations}
 We are now ready to implement the flow equations for the $NN$ interaction in
 the momentum-space partial-wave representation. Using basis states that 
@@ -1467,6 +1508,9 @@ the code will also generate a sequence of matrix plots at the
 desired values of $\lambda$, similar to figure \ref{fig:srg_pairing}
 for the pairing Hamiltonian.
 
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{\label{sec:srg_n3lo}Example: Evolution of a Chiral $NN$ Interaction}
 
 
@@ -1564,7 +1608,9 @@ instead of $\ket{\psi_n}$, which is often a less demanding task.
 This is certainly true for our deuteron example at $\lambda=2.0\,\fmi$,
 where we no longer have to worry about short-range correlations.
 
-
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsubsection{\label{sec:srg_induced}Induced Interactions}
 
 As discussed earlier in this section, our motivation for using the SRG to
@@ -1611,8 +1657,9 @@ and so on.
 \begin{figure*}[t]
   \setlength{\unitlength}{\textwidth}
   \begin{center}
-    \includegraphics[width=0.5\unitlength,bb=10 10 600 600,clip]{\fdir/srg_evolution_energy.pdf}
+    \includegraphics[width=0.55\unitlength,bb=10 10 560 560,clip]{\fdir/srg_evolution_energy.pdf}
   \end{center}  
+  \vspace{-10pt}
   \caption{\label{fig:triton}Ground state energy of $\nuc{H}{3}$ as a function 
   of the flow parameter $\lambdaSRG$ for chiral \NNLO{} $NN$ and $NN\!+\!3N$ 
   interactions (see \cite{Hebeler:2012ly} for details). $NN$-only means initial and 
@@ -1649,32 +1696,438 @@ low-energy constants are usually fit to give the correct experimental
 $\nuc{H}{3}$ ground-state energy (see, e.g., 
 \cite{Epelbaum:2009ve,Machleidt:2011bh,Gazit:2009qf}).
 
+Our example shows that it is important to track induced interactions,
+especially when we want to use evolved nuclear Hamiltonians beyond
+the few-body systems we have focused on here. The nature of the SRG 
+as a continuous evolution works at least somewhat in our favor: As
+discussed above, truncations of the SRG flow equations lead to a 
+violation of unitarity that manifests as a (residual) dependence 
+of our calculated few- and many-body observables on the resolution 
+scale $\lambdaSRG$. We can use this dependence as a tool to assess 
+the size of missing contributions, although one has to take great
+care to disentangle them from the effects of many-body truncations,
+unless one uses quasi-exact methods like the NCSM (see, e.g., 
+\cite{Bogner:2010pq,Jurgenson:2009bs,Hebeler:2012ly,Roth:2011kx,Hergert:2013mi,Hergert:2013ij,Binder:2014fk,
+Soma:2014eu,Griesshammer:2015dp}). If we want more detailed information,
+then we cannot avoid to work with $3N, 4N, \ldots$ or higher many-nucleon 
+forces. The empirical observation that SRG evolutions down to $\lambdaSRG\sim1.5\fmi$
+appear to preserve the natural hierarchy of nuclear forces, i.e.,  
+$NN > 3N > 4N > \ldots$, suggests that we can truncate induced
+forces whose contributions would be smaller than the desired accuracy 
+of our calculations. 
 
-Any truncation in the SRG flow equation will lead to a violation 
-of unitarity that manifests as a (residual) dependence of many-body 
-results on the resolution scale $\lambdaSRG$. By varying this parameter, 
-the size of the missing contributions can be assessed (see, e.g., \cite{Bogner:2010pq,
-Jurgenson:2009bs,Hebeler:2012ly,Roth:2011kx,Hergert:2013mi,Hergert:2013ij,Binder:2014fk,
-Soma:2014eu,Griesshammer:2015dp}).
+While we may not have to go all the way to the treatment of induced
+$A-$nucleon operators, which would be as expensive as implementing 
+the matrix flow in the $A-$body system (cf.~\ref{sec:srg_nn}),
+dealing with induced $3N$ operators is already computationally 
+expensive enough. Treating induced $4N$ forces explicitly is out 
+of the question, except in schematic cases. However, there is a
+way of accounting for effects of induced $3N,\ldots$ forces in
+an implicit manner, by performing SRG evolutions in the nuclear
+medium. 
 
-Part of the issue is that we have considered the SRG evolution in
-free space.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\label{sec:imsrg}The In-Medium SRG}
+\tbd{[Bridge]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\label{sec:nord}Normal Ordering and Wick's Theorem}
 
 
-% Pioneering work on implementing the SRG evolution in the lowest partial 
-% waves of the four-body system has been carried out by A.~Calci and 
-% co-workers \cite{Calci:2014xy}, again working in Jacobi HO representation.
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{\label{sec:nord_ops}Normal-Ordered Operators}
+To construct normal-ordered operators, we start from the usual Fermionic
+creation and annihilation operators, $\aaO_i$ and $\aO_i$, which satisfy
+the canonical anticommutation relations
+\begin{equation}
+  \acomm{\aaO_i}{\aaO_j} = \acomm{\aO_i}{\aO_j} = 0\,,\quad \acomm{\aaO_i}{\aO_j}=\delta_{ij}\,.
+\end{equation}
+The indices are collective labels for the quantum numbers of our single-particle 
+states. Using the creators and annihilators, we can express any given $A$-body 
+operator in second quantization. Moreover, we can construct a complete basis 
+for a many-body Hilbert space by acting with products of $\aaO_i$ on the particle 
+vacuum,
+\begin{equation}\label{eq:vacbasis}
+  \ket{\Phi\{i_1\ldots i_A\}}=\prod_{k=1}^A\aaO_{i_k}\ket{\text{vac}}\,,
+\end{equation}
+and letting the indices $i_1,\ldots,i_A$ run over all single-particle states.
+The states $\ket{\Phi\{i_1\ldots i_A\}}$ are, of course, nothing but 
+antisymmetrized product states, i.e., Slater determinants.
 
-% The SRG flow equations force us to manipulate large sections (or the 
-% entirety) of the Hamiltonian's spectrum in order to avoid basis 
-% truncation artifacts (also cf.~\cite{Roth:2014fk,Binder:2014fk})
-% We may wonder, then, if it is possible to avoid the use of matrix 
-% representations entirely by solving the operator flow equation 
-% \eqref{eq:opflow} directly in the algebra of operators. This is the 
-% strategy that we will explore in the following, which will 
-% lead us to the formulation of the In-Medium SRG. 
+Of course, not all of the Slater determinants in our basis are created equal. 
+We can usually find a Slater determinant that is a fair approximation 
+to the nuclear ground state, and use it as a \emph{reference state} for the 
+construction and organization of our many-body basis. By simple energetics, the 
+ground state and low-lying excitation spectrum of an $A$-body nucleus are usually 
+dominated by excitations of particles in the vicinity of the reference state's 
+Fermi energy. This is especially true for $NN$ interactions that have
+been evolved to a low resolution scale $\lambdaSRG$ (see section 
+\ref{sec:srg_nn}). For such forces, the coupling between basis states whose
+energy expectation values differ by much more than the characteristic energy 
+$\hbar^2\lambda^2/m$ is suppressed. 
 
-\section{\label{sec:imsrg}The In-Medium SRG approach}
+Slater determinants that are variationally optimized through a Hartree-Fock 
+(HF) calculation have proven to be reasonable reference states for interactions 
+with $\lambda\approx2.0\fm^{-1}$ (see, e.g., Refs.~\cite{Bogner:2010pq,Roth:2010vp,Barrett:2013oq,Hagen:2014ve,Hergert:2016jk,Tichai:2016vl} and references therein), allowing post-HF methods like MBPT, 
+CC, or the IMSRG discussed below to converge rapidly to the exact result. 
+Starting from such a HF reference state $\ket{\Phi}$, we can obtain 
+a basis consisting of the state itself and up to $A$-particle, $A$-hole ($ApAh$) 
+excitations:
+\begin{equation}
+  \ket{\Phi},\,\aaO_{p_1}\aO_{h_1}\ket{\Phi},\;\ldots\;,\,\aaO_{p_1}\ldots\aaO_{p_A}\aO_{h_A}\ldots\aO_{h_1}\ket{\Phi}\,.
+\end{equation}
+Here, indices $p_i$ and $h_i$ run over all one-body basis states with energies above 
+(\emph{particle} states) and below the Fermi level (\emph{hole} states), respectively.
+Such bases work best for systems with large gaps in the single-particle 
+spectrum, e.g., closed-shell nuclei. If the gap is small, excited basis 
+states can be nearly degenerate with the reference state, which usually 
+results in spontaneous symmetry breaking and strong configuration mixing.
+
+We can now introduce a one-body operator that is normal-ordered with respect
+to the reference state $\ket{\Phi}$ by defining
+\begin{equation}\label{eq:def_no}
+  \aaO_i\aO_j \equiv \nord{\aaO_i\aO_j} +\, \contraction[1.5ex]{}{\aO}{{}^\dag_i}{\aO}\aaO_i\aO_j\,.
+\end{equation}
+The brace connecting a pair of creation and annihilation operators indicates
+they have been \emph{contracted}. The contraction itself is merely the 
+expectation value of the operator in the reference state $\ket{\Phi}$:
+\begin{equation}\label{eq:def_particle_contraction}
+  \contraction[1.5ex]{}{\aO}{{}^\dag_i}{\aO}\aaO_i\aO_j \equiv \matrixe{\Phi}{\aaO_i\aO_j}{\Phi} \equiv \rho_{ji} \,.
+\end{equation}
+By definition, the contractions are identical to the elements of the one-body 
+density matrix of $\ket{\Phi}$ \cite{Ring:1980bb}. Starting from the one-body
+case, we can define normal-ordered $A$-body operators recursively by evaluating 
+all contractions between creation and annihilation operators, e.g., 
+\begin{align}\label{eq:def_no_nbody}
+   &\aaO_{i_1}\ldots\aaO_{i_A}\aO_{j_A}\ldots\aO_{j_1} \notag\\
+    &\equiv\, \nord{\aaO_{i_1}\ldots\aaO_{i_A}\aO_{j_{A}}\ldots\aO_{j_{1}}} \notag\\
+    &\hphantom{\equiv}
+       + \contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_1}\aO_{j_1} 
+        \nord{\aaO_{i_2}\ldots\aaO_{i_A}\aO_{j_{A}}\ldots\aO_{j_{2}}} 
+      -\; \contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_1}\aO_{j_2} 
+        \nord{\aaO_{i_2}\ldots\aaO_{i_A}\aO_{j_A}\ldots\aO_{j_{3}}\aO_{j_{1}}}
+      + \text{\,singles}\notag\\
+    &\hphantom{\equiv}
+       + \left(
+          \contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_1}\aO_{j_1}
+          \contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_2}\aO_{j_2}
+          -
+          \contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_1}\aO_{j_2}
+          \contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_2}\aO_{j_1}
+        \right) 
+        \nord{\aaO_{i_3}\ldots\aaO_{i_A}\aO_{j_A}\ldots\aO_{j_{3}}} + \text{\,doubles} \notag\\
+    &\hphantom{\equiv}
+  +\,\ldots\,+ \text{\,full contractions}\,.
+\end{align}
+Here, we have followed established quantum chemistry jargon (singles, doubles, 
+etc.) for the number of contractions in a term (cf.~chapter \ref{chapter:cc}).
+Note that the double contraction shown in the next-to-last line is identical
+to the factorization formula for the two-body density matrix of a Slater 
+determinant,
+\begin{equation}
+  \rho_{j_1j_2i_1i_2}
+  \equiv
+  \matrixe{\Phi}{\aaO_{i_1}\aaO_{i_2}\aO_{j_2}\aO_{j_1}}{\Phi}
+  = \rho_{i_1j_1}\rho_{i_2j_2}- \rho_{i_1j_2}\rho_{i_2j_1}\,.
+\end{equation}
+
+From Eq.~\eqref{eq:def_no}, it is evident that $\matrixe{\Phi}{\nord{\aaO_i\aO_j}}{\Phi}$ 
+must vanish, and this is readily generalized to expectation values of 
+arbitrary normal-ordered operators in the reference state $\ket{\Phi}$,
+\begin{equation}
+  \matrixe{\Phi}{\nord{\aaO_{i_1}\ldots\aO_{i_1}}}{\Phi} = 0\,.
+\end{equation}
+This property of normal-ordered operators greatly facilitates calculations 
+that require the evaluation of matrix elements in a space spanned by excitations 
+of $\ket{\Phi}$. 
+
+As an example, we consider an intrinsic nuclear $A$-body Hamiltonian 
+containing both $NN$ and $3N$ interactions,
+\begin{equation}\label{eq:def_Hint}
+  H = \left(1-\frac{1}{\AO}\right)\TO^{[1]} + \frac{1}{\AO}\TO^{[2]} + \VO^{[2]} +\VO^{[3]}\,,
+\end{equation}
+where the one- and two-body kinetic energy terms are
+\begin{align}
+  \TO^{[1]} &\equiv \sum\frac{\pOV^2_i}{2m}\,,\\
+  \TO^{[2]} &\equiv -\frac{1}{m}\sum_{i<j}\pOV_i\cdot\pOV_j
+\end{align}
+(see section \ref{sec:srg_nn} and \cite{Hergert:2009wh}). Choosing a 
+single Slater determinant $\ket{\Phi}$ as the reference state, we can 
+rewrite the Hamiltonian \emph{exactly} in terms of normal-ordered operators,
+\begin{align}\label{eq:Hno}
+  \HO &= E + \sum_{ij}f_{ij}\nord{\aaO_{i}\aO_{j}} + \frac{1}{4}\sum_{ijkl}\Gamma_{ijkl}\nord{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}
+    + \frac{1}{36}\sum_{ijklmn}W_{ijklmn}\nord{\aaO_{i}\aaO_{j}\aaO_{k}\aO_{n}\aO_{m}\aO_{l}}\,,
+\end{align}
+where the labels for the individual contributions have been chosen for 
+historical reasons. For convenience, we will work in the eigenbasis of 
+the one-body density matrix in the following, so that
+\begin{equation}\label{eq:def_natorb}
+  \rho_{ab}=n_{a}\delta_{ab}\,,\quad n_{a}\in\{0,1\}\,.
+\end{equation}
+The individual normal-ordered contributions in Eq.~\eqref{eq:Hno} are then 
+given by
+\begin{align}
+  E &= \left(1-\frac{1}{A}\right)\sum_{a}\matrixe{a}{\tO^{[1]}}{a}n_{a}
+      + \frac{1}{2}\sum_{ab}\matrixe{ab}{\frac{1}{A}\tO^{[2]}\!+\!\vO^{[2]}}{ab}n_{a}n_{b}
+      + \frac{1}{6}\sum_{abc}\matrixe{abc}{\vO^{[3]}}{abc}n_{a}n_{b}n_{c}\,,\label{eq:E0}\\
+%
+  f_{ij} &= \left(1-\frac{1}{A}\right)\matrixe{i}{\tO^{[1]}}{j} 
+      + \sum_{a}\matrixe{ia}{\frac{1}{A}\tO^{[2]}\!+\!\vO^{[2]}}{ja}n_{a}
+      + \frac{1}{2}\sum_{ab}\matrixe{iab}{\vO^{[3]}}{jab}n_{a}n_{b}\,,\label{eq:f}   
+      \\
+% 
+  \Gamma_{ijkl} &= \matrixe{ij}{\frac{1}{A}\tO^{(2)}\!+\!\vO^{[2]}}{kl} + \sum_{a}\matrixe{ija}{\vO^{[3]}}{kla}n_{a}\,,\label{eq:Gamma}\\
+  W_{ijklmn}&=\matrixe{ijk}{\vO^{[3]}}{lmn}\,.
+\end{align}
+Due to the occupation number factors in Eqs.~\eqref{eq:E0}--\eqref{eq:Gamma}, the sums 
+run only over states that are occupied in the reference state. This means that the 
+zero-, one-, and two-body parts of the Hamiltonian all contain in-medium contributions 
+from the free-space 3N interaction.
+
+For low-momentum interactions, it has been shown empirically that the omission 
+of the normal-ordered three-body piece of the Hamiltonian causes a deviation of merely 
+1--2\% in ground-state and (absolute) excited state energies of light and medium-mass 
+nuclei \cite{Hagen:2007zc,Roth:2011kx,Roth:2012qf,Binder:2013fk,Gebrerufael:2016fe}. 
+This \emph{normal-ordered two-body approximation} (NO2B) to the Hamiltonian is
+useful for practical calculations, because it provides an efficient means to 
+account for $3N$ force effects in nuclear many-body calculations without incurring 
+the computational expense of explicitly treating three-body operators. In section 
+\ref{sec:imsrg_flow}, we will see that the NO2B approximation also meshes in a natural 
+way with the framework of the IMSRG, which makes it especially appealing for our 
+purposes.
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Wick's Theorem}
+The normal-ordering formalism has additional benefits for the evaluation
+of products of normal-ordered operators. Wick's theorem (see, e.g., \cite{Shavitt:2009}), 
+which is a direct consequence of Eq.~\eqref{eq:def_no_nbody}, allows us to 
+expand such products in the following way:
+\begin{align}\label{eq:def_wick}
+   & \nord{\aaO_{i_1}\ldots\aaO_{i_N}\aO_{j_{N}}\ldots\aO_{j_{1}}} 
+     \nord{\aaO_{k_1}\ldots\aaO_{k_M}\aO_{l_{M}}\ldots\aO_{l_{1}}}
+   \notag\\
+    &=(-1)^{M\cdot N}  
+     \nord{\aaO_{i_1}\ldots\aaO_{i_N}\aaO_{k_1}\ldots\aaO_{k_M}\aO_{j_{N}}\ldots\aO_{j_{1}}\aO_{l_{M}}\ldots\aO_{l_{1}}} 
+    \notag\\
+    &\hphantom{=}
+       + (-1)^{M\cdot N}\contraction[1.5ex]{}{\aO}{{}^\dag_{i_1}}{\aO}\aaO_{i_1}\aO_{l_1} 
+        \nord{\aaO_{i_2}\ldots\aaO_{k_M}\aO_{j_{N}}\ldots\aO_{l_{2}}} \notag\\
+    &\hphantom{\equiv}
+      + (-1)^{(M-1)(N-1)}\contraction[1.5ex]{}{\aO}{{}^\dag_{j_N}}{\aO}\aO_{j_N}\aaO_{k_1} 
+        \nord{\aaO_{i_1}\ldots\aaO_{k_M}\aO_{j_{N}}\ldots\aO_{j_2}}
+      \notag\\
+    &\hphantom{=}
+      + \text{\,singles}+ \text{\,doubles} + \ldots \,.
+\end{align}
+The phase factors appear because we anti-commute the creators and 
+annihilators until they are grouped in the canonical order, i.e.,
+all $\aaO$ appear to the left of the $\aO$. In the process, we also 
+encounter a new type of contraction,
+\begin{equation}\label{eq:def_hole_contraction}
+  \contraction[1.5ex]{}{\aO}{{}^\dag_{i}}{\aO}\aO_{i}\aaO_{j} 
+  \equiv \matrixe{\Phi}{\aO_{i}\aaO_{j}}{\Phi}
+  = \delta_{ij} - \rho_{ij} \equiv \overline{\rho}_{ij}\,,
+\end{equation}
+as expected from the canonical anti-commutator algebra. $\overline\rho$
+is the so-called \emph{hole density matrix}. 
+
+The defining feature of Eq.~\eqref{eq:def_wick} is that only contractions 
+between one index from each of the two strings of creation and annihilation
+operators appear in the expansion, because contractions between indices 
+within a single operator string have already been subtracted when we normal 
+ordered it initially. In practical calculations, this leads to a substantial 
+reduction of terms. An immediate consequence of Eq.~\eqref{eq:def_wick} is 
+that a product of normal-ordered $M$ and $N$-body operators has the general 
+form
+\begin{equation}\label{eq:wick_product_schematic}
+  \AO^{[M]}\BO^{[N]} = \sum_{k=|M-N|}^{M+N}\CO^{[k]}\,.
+\end{equation}
+Note that zero-body contributions, i.e., plain numbers, can only be generated 
+if both operators have the same particle rank.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\label{sec:imsrg_flow}In-Medium SRG Flow Equations}
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Induced Forces Revisited}
+In section \ref{sec:srg_induced}, we discussed how SRG evolutions naturally
+induce $3N$ and higher many-nucleon forces, because every evaluation of 
+the commutator on the right-hand side of the operator flow equation 
+\eqref{eq:opflow} increases the particle rank of $\HO(s)$, e.g.,
+\begin{equation}\label{eq:induced_3N}
+  \sum_{ijklpqrs}\eta_{ijkl}H_{pqrs}\comm{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}{\aaO_{p}\aaO_{q}\aO_{s}\aO_{r}}
+    = -\sum_{ijkqrs}\eta_{ijkl}H_{kqrs} \aaO_{i}\aaO_{j}\aaO_{q}\aO_{s}\aO_{r}\aO_{l} + \text{3N terms} + \text{2N terms}\,.
+\end{equation}
+Note that there are no induced $4N$ interactions, and that commutators
+involving at least one one-body operator do not change the particle rank
+(see problem \ref{problem:products}). In the free-space evolution, we 
+found that the truncation of $3N$ forces in the flowing Hamiltonian caused
+a significant flow-parameter dependence of observables in $A\geq 3$ systems.
+
+Working in the medium and using normal-ordered operators, we can expand the 
+induced $3N$ operators:
+\begin{align}\label{eq:induced_3N_no}
+  \sum_{ijkqrs}\eta_{ijkl}H_{kqrs} \aaO_{i}\aaO_{j}\aaO_{q}\aO_{s}\aO_{r}\aO_{l}
+  =\sum_{ijkqrs}\eta_{ijkl}H_{kqrs} 
+    \Big(&
+      \nord{\aaO_{i}\aaO_{j}\aaO_{q}\aO_{s}\aO_{r}\aO_{l}} 
+       + n_q\delta_{qs}\nord{\aaO_{i}\aaO_{j}\aO_{r}\aO_{l}} 
+       + n_j n_q\delta_{jr}\delta_{qs}\nord{\aaO_{i}\aO_{l}} \notag\\
+  &
+       + n_in_j n_q\delta_{il}\delta_{jr}\delta_{qs}+ \text{perm.}\,.
+    \Big)
+\end{align}
+If we now truncate operators to the normal-ordered two-body level, we keep
+all the in-medium contributions of the induced $3N$ terms, and retain 
+information that we would have lost in the free-space evolution. These
+in-medium contributions continuously feed into the 0B, 1B, and 2B matrix 
+elements of the flowing Hamiltonian as we integrate Eq.~\eqref{eq:opflow}.
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{IM-SRG(2) Truncation}
+The evolution of the Hamiltonian or any other observable by means of
+the flow equation \eqref{eq:opflow} is a continuous unitary transformation
+in $A-$nucleon space only if we keep up to induced $A$-nucleon 
+forces. Because an explicit treatment of induced contributions up to the 
+$A$-body level is simply not feasible, we have to introduce a truncation 
+to close the system of flow equations.
+
+As explained in the previous subsection, we can make such truncations 
+more robust if we normal order all operators with respect to a reference
+state that is a fair approximation to the ground state of our system
+(or another exact eigenstate we might want to target). Here, we choose
+to truncate operators at the two-body level, to avoid the computational
+expense of treating explicit three-body operators. For low-momentum $NN+3N$
+Hamiltonians, the empirical success of the NO2B approximation mentioned 
+at the end of section \ref{sec:nord_ops} seems to support this truncation: 
+The omission of the normal-ordered $3N$ term in exact calculations causes 
+deviations of only $\sim1\%$ in the oxygen, calcium, and nickel isotopes
+\cite{Roth:2012qf,Binder:2013fk,Binder:2014fk}.
+
+Following this line of reasoning,  we demand that for all values of the
+flow parameter $s$
+\begin{align} 
+  \etaO(s) &\approx\etaO^{(1)}(s)+\etaO^{(2)}(s)\,,\label{eq:imsrg2_eta}\\
+  \HO(s) &\approx E(s) + f(s) + \Gamma(s)\,,\label{eq:imsrg2_H}\\
+  \totd{}{s}\HO(s) &\approx \totd{}{s}E(s) + \totd{}{s}f(s) + \totd{}{s}\Gamma(s)\label{eq:imsrg2_dH}\,.
+\end{align}
+This is the so-called IMSRG(2) truncation, which has been our primary
+workhorse in past applications 
+\cite{Tsukiyama:2011uq,Tsukiyama:2012fk,Hergert:2013mi,Hergert:2013ij,Hergert:2014vn,Morris:2015ve,Hergert:2016jk}. It is the basis for all results that we will discuss in the remainder of this chapter. 
+The IMSRG(2) is a cousin to Coupled Cluster with Singles and Doubles
+(CCSD) and the ADC(3) scheme in Self-Consistent Green's Function Theory 
+(see chapters \ref{chapter:cc} and \ref{chapter:scgf}). Since all three
+methods (roughly) aim to describe the same type and level of many-body 
+correlations, we expect to obtain similar results for observables.
+
+Let us introduce the permutation symbol $P_{ij}$ to interchange the 
+indices of any expression, i.e.,
+\begin{equation}\label{eq:def_Pij}
+  P_{ij} g(\ldots,i,\ldots,j) \equiv g(\ldots,j,\ldots,i)\,,
+\end{equation}
+Plugging equations \eqref{eq:imsrg2_eta}--\eqref{eq:imsrg2_dH} into 
+the operator flow equation \eqref{eq:opflow} and evaluating the 
+commutators with the expressions from the appendix, we obtain the 
+following system of IMSRG(2) flow equations:
+\begin{align}
+  \totd{E}{s}&= \sum_{ab}(n_a-n_b)\eta_{ab} f_{ba} 
+    + \frac{1}{2} \sum_{abcd}\eta_{abcd}\Gamma_{cdab} n_a n_b\bar{n}_c\bar{n}_d
+    \label{eq:imsrg2_m0b}\,,\\[5pt]
+% \end{align}
+% 
+% \begin{align}
+  \totd{f_{12}}{s} &= 
+  \sum_{a}(1+P_{12})\eta_{1a}f_{a2} +\sum_{ab}(n_a-n_b)(\eta_{ab}\Gamma_{b1a2}-f_{ab}\eta_{b1a2}) \notag\\ 
+  &\quad +\frac{1}{2}\sum_{abc}(n_an_b\bar{n}_c+\bar{n}_a\bar{n}_bn_c) (1+P_{12})\eta_{c1ab}\Gamma_{abc2}
+  \label{eq:imsrg2_m1b}\,,\\[5pt]
+% \end{align}
+% 
+% \begin{align}
+  \totd{\Gamma_{1234}}{s}&= 
+  \sum_{a}\left\{ 
+    (1-P_{12})(\eta_{1a}\Gamma_{a234}-f_{1a}\eta_{a234} )
+    -(1-P_{34})(\eta_{a3}\Gamma_{12a4}-f_{a3}\eta_{12a4} )
+    \right\}\notag \\
+  &\quad+ \frac{1}{2}\sum_{ab}(1-n_a-n_b)(\eta_{12ab}\Gamma_{ab34}-\Gamma_{12ab}\eta_{ab34})
+    \notag\\
+  &\quad-\sum_{ab}(n_a-n_b) (1-P_{12})(1-P_{34})\eta_{b2a4}\Gamma_{a1b3}
+    \label{eq:imsrg2_m2b}\,.
+\end{align}
+% \end{widetext}
+Here, $\nn_i=1-n_i$, and the $s$-dependence has been suppressed for brevity. 
+To obtain ground-state energies, we integrate Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b} 
+from $s=0$ to $s\to\infty$, starting from the initial components of the 
+normal-ordered Hamiltonian (Eqs.~\eqref{eq:E0}--\eqref{eq:Gamma}).
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Diagrammatic Representation of the IMSRG(2) Flow Equations}
+
+As we will discuss in more detail in Sec.~\ref{sec:mbpt}, 
+Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b} can easily be translated 
+into Goldstone or Hugenholtz diagrams for the flowing Hamiltonian $H(s)$.
+This provides us with an intuitive understanding of the mechanism through
+which the IM-SRG is non-perturbatively re-summing the many-body expansion. The second
+and third rows of Eq.~\eqref{eq:imsrg2_m2b}, in particular, re-sum $pp/hh$-ladder and $ph$-ring 
+diagrams, respectively. Due to the use of $H(s)$, ladder-ring interference 
+diagrams are generated in the limit $s\to\infty$, and therefore the IM-SRG(2) 
+goes beyond the more traditional Brueckner $G$-matrix or Random-Phase 
+Approximation-type summations \cite{Day:1967zl,Brandow:1967tg,Fetter:2003ve}. 
+Furthermore, the commutator structure of Eq.~\eqref{eq:opflow} ensures that 
+the IM-SRG is size-extensive, and only connected diagrams are generated and
+re-summed by the IM-SRG flow \cite{Brandow:1967tg,Shavitt:2009}. This property
+is preserved even if the commutators are truncated at a given operator rank, as in the IM-SRG(2) case presented here. 
+
+
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Computational Scaling}
+Let us briefly consider the computational scaling of the IMSRG(2) scheme,
+ahead of the discussion of an actual implementation in section \ref{sec:imsrg_implementation}.
+When performing a single integration step, the computational effort is 
+dominated by the two-body flow equation \eqref{eq:imsrg2_m2b}, which 
+naively requires $\OC(N^6)$ operations, where $N$ denotes the size of
+the single-particle basis. This puts the IMSRG(2) in the same category 
+CCSD and ADC(3) (see chapters \ref{chapter:cc} and \ref{chapter:scgf}).
+Fortunately, large portions of the flow equations can be expressed in 
+terms of matrix products, allowing us to use optimized linear algebra 
+libraries provided by high-performance computing vendors. 
+
+Moreover, we can further reduce the computational cost by distinguishing 
+particle and hole states, because the number of hole states $N_h$ is 
+typically much smaller than the number of particle states $N_p\sim N$. 
+The best scaling we can achieve in the IMSRG(2) depends on the choice of 
+generator (see section \ref{sec:imsrg_generator}). If the one- and two-body parts of the 
+generator only consist of $ph$ and $pphhh$ type matrix elements and their 
+Hermitian conjugates, the scaling is reduced to $\OC(N_h^2N_p^4)$, 
+which matches the cost of solving the CCSD amplitude equations.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fluffy}
 Naively, one could try to solve the flow equation \eqref{eq:flowEquations} by
 choosing a suitable basis of the many-body Hilbert space and turning
 Eq.~\eqref{eq:flowEquations} into a matrix differential equation, but such an
@@ -1803,13 +2256,24 @@ v_{pqij}\eta_{ijrs}^{(2)}\right)\notag \\ & -\sum_{ia} \left(1-
 \end{align}
 Note that for brevity, we have skipped the explicit $s$-dependence in the equations.
 
-\subsection{\label{sec:generator}Choice of generator}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\label{sec:imsrg_decoupling}Decoupling}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\label{sec:imsrg_generator}Choice of Generator}
 To determine the specific unitary transformation, one needs to specify
 the generator~$\hat{\eta}$. Through different choices, the SRG flow
 can be adapted to the features of a particular problem.\\
 
-
-\paragraph{Wegner's canonical generator}
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Wegner's canonical generator}
 The original choice, suggested by Wegner \cite{Wegner:1994dk}, reads
 \begin{equation} 
 \hat{\eta} = \left[ \hat{H}^{\rm d}, \hat{H}^{\rm od} \right] = \left[ \hat{H}^{\rm d}, \hat{H}
@@ -1844,7 +2308,10 @@ n_p = \begin{cases} 1, & \mbox{if } p< \epsilon_F \quad(p\;\mbox{is
 \end{cases}.
 \]
 
-\paragraph{White's generator}
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{White's generator}
 Apart from this canonical generator, there exist several other ones in
 literature. One of them is White's choice
 \cite{White:2002fk}, which makes numerical approaches much
@@ -1901,12 +2368,29 @@ results in much better numerical properties.
 % \end{table}
 
 
-\section{Perturbative Analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\label{sec:imsrg_implementation}Implementation}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Pairing Hamiltonian}
 
-\section{In-medium SRG studies of the pairing model and infinite neutron matter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Infinite Neutron Matter}
 
-\section{\label{sec:perspectives}Conclusions and perspectives}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\label{sec:perspectives}Conclusions and Perspectives}
 \begin{itemize}
 \item Magnus
 \item Multi-reference
@@ -1968,6 +2452,9 @@ consistent evolution of operators in the IM-SRG for applications to
 nuclear structure, electroweak transitions, and for key matrix elements
 needed for fundamental symmetry tests.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Technical Advances: Magnus Expansion and Effective Operators}
 \label{sec:magnus}
 
@@ -2203,6 +2690,10 @@ studies of fundamental symmetries in nuclei.
 % in reproducing the experimental ground-state energy for these NN+3N
 % interactions.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{The Multi-Reference IM-SRG}
 \label{sec:mrimsrg}
 
@@ -2351,6 +2842,10 @@ of deformed nuclei, and \emph{(iii)} the integration of MR-IM-SRG and
 Equation-of-Motion methods \cite{Rowe:1968eq} for the spectroscopy of
 medium-mass and heavy neutron-rich nuclei.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Non-Perturbative Shell-Model Interactions}
 \label{sec:shell_model}
 
@@ -2446,7 +2941,13 @@ This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University)
 \tbd{HH startup, NSF?}
 
 
-\section{Problems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exercises and Projects}
+
 \begin{prob}\label{problem:steepest_descent}
   Prove Eq.~\eqref{eq:steepest_descent}.
 \end{prob}
@@ -2463,10 +2964,44 @@ This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University)
   into series around $\expect{\AO}$ by introducing $\Delta\AO=\AO-\expect{\AO}$, 
   and compare the series expansions order by order.
   (A thorough discussion of the issue can be found in \cite{Hergert:2009wh}.)
-
 \end{prob}
 
-\section*{Appendix: Products and Commutators of Normal-Ordered Operators}
+\begin{prob}\label{problem:products}
+  \item[a)] Prove the following schematic expression for products of normal-ordered
+  operators:
+    \begin{equation}
+      \AO^{[M]}\BO^{[N]} = \sum_{k=|M-N|}^{M+N}\CO^{[k]}\,.
+    \end{equation}
+  \item[b)] Show that the following rule applies for commutators of normal-ordered
+    operators:
+    \begin{equation}
+      \comm{\AO^{[M]}}{\BO^{[N]}} = \sum_{k=|M-N|}^{M+N-1}\CO^{[k]}\,.
+    \end{equation}
+    Thus, the largest particle rank appearing in the expansion of the commutator of 
+    normal-ordered $M-$ and $N-$body operators is $M+N-1$.
+  \item[c)] We can view the free-space operators as being normal-ordered with respect
+    to the vacuum state. How are the expansion formulas for products and commutators
+    modified in that case?
+\end{prob}
+
+\begin{prob}
+  Implement 3rd order for the flowing Hamiltonian.
+\end{prob}
+
+\begin{prob}
+  Tensor version of the code.
+\end{prob}
+
+\begin{prob}
+  Tensor version of the code.
+\end{prob}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\label{app:products}Appendix: Products and Commutators of Normal-Ordered Operators}
 \addcontentsline{toc}{section}{Appendix}
 In this appendix, we collect the basic expressions for products and commutators of
 normal-ordered one- and two-body operators. All single-particle indices refer to 
@@ -2491,7 +3026,10 @@ in any expression,
 \end{equation}
 (see section \ref{sec:imsrg} and chapter \ref{chapter:cc}).
 
-\subsection{Operator Products}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Operator Products}
 \begin{align}
   \nord{\aaO_{a}\aO_{b}}\nord{\aaO_{k}\aO_{l}}
   &=\nord{\aaO_{a}\aaO_{k}\aO_{l}\aO_{b}}
@@ -2549,7 +3087,10 @@ in any expression,
     + (1-\PO_{kl})(1-\PO_{mn})n_a n_b \nn_c \nn_d  \delta_{am}\delta_{bn}\delta_{ck}\delta_{dl}
 \end{align}
 
-\subsection{Commutators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Commutators}
 
 \begin{align}
   \comm{\nord{\aaO_{a}\aO_{b}}}{\nord{\aaO_{k}\aO_{l}}}
