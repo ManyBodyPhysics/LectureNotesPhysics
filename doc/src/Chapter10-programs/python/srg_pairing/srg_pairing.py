@@ -85,7 +85,7 @@ def plot_snapshots(Hs, flowparams, delta, g):
                    nrows_ncols=(2, Hs.shape[0]/2),  # creates grid of axes
                    axes_pad=0.25,                 # pad between axes in inch.
                    label_mode='L',                # put labels on left, bottom
-                   cbar_mode='each',            # one color bar (default: right of last image in grid)
+                   cbar_mode='single',            # one color bar (default: right of last image in grid)
                    cbar_pad=0.20,                 # insert space between plots and color bar
                    cbar_size='10%'                # size of colorbar relative to last image
                    )
@@ -190,6 +190,8 @@ def main():
 
   # calculate exact eigenvalues
   eigenvalues = eigvalsh(H0)
+  print eigenvalues
+  exit()
 
   # turn initial Hamiltonian into a linear array
   y0  = reshape(H0, -1)                 
