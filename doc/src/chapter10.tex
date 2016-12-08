@@ -2001,7 +2001,7 @@ elements of the flowing Hamiltonian as we integrate Eq.~\eqref{eq:opflow}.
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsubsection{IM-SRG(2) Truncation}
+\subsubsection{The IM-SRG(2) Scheme}
 The evolution of the Hamiltonian or any other observable by means of
 the flow equation \eqref{eq:opflow} is a continuous unitary transformation
 in $A-$nucleon space only if we keep up to induced $A$-nucleon 
@@ -2053,50 +2053,207 @@ following system of IMSRG(2) flow equations:
 % \end{align}
 % 
 % \begin{align}
-  \totd{f_{12}}{s} &= 
-  \sum_{a}(1+P_{12})\eta_{1a}f_{a2} +\sum_{ab}(n_a-n_b)(\eta_{ab}\Gamma_{b1a2}-f_{ab}\eta_{b1a2}) \notag\\ 
-  &\quad +\frac{1}{2}\sum_{abc}(n_an_b\bar{n}_c+\bar{n}_a\bar{n}_bn_c) (1+P_{12})\eta_{c1ab}\Gamma_{abc2}
+  \totd{f_{ij}}{s} &= 
+  \sum_{a}(1+P_{ij})\eta_{ia}f_{aj} +\sum_{ab}(n_a-n_b)(\eta_{ab}\Gamma_{biaj}-f_{ab}\eta_{biaj}) \notag\\ 
+  &\quad +\frac{1}{2}\sum_{abc}(n_an_b\bar{n}_c+\bar{n}_a\bar{n}_bn_c) (1+P_{ij})\eta_{ciab}\Gamma_{abcj}
   \label{eq:imsrg2_m1b}\,,\\[5pt]
 % \end{align}
 % 
 % \begin{align}
-  \totd{\Gamma_{1234}}{s}&= 
+  \totd{\Gamma_{ijkl}}{s}&= 
   \sum_{a}\left\{ 
-    (1-P_{12})(\eta_{1a}\Gamma_{a234}-f_{1a}\eta_{a234} )
-    -(1-P_{34})(\eta_{a3}\Gamma_{12a4}-f_{a3}\eta_{12a4} )
+    (1-P_{ij})(\eta_{ia}\Gamma_{ajkl}-f_{ia}\eta_{ajkl} )
+    -(1-P_{kl})(\eta_{ak}\Gamma_{ijal}-f_{ak}\eta_{ijal} )
     \right\}\notag \\
-  &\quad+ \frac{1}{2}\sum_{ab}(1-n_a-n_b)(\eta_{12ab}\Gamma_{ab34}-\Gamma_{12ab}\eta_{ab34})
+  &\quad+ \frac{1}{2}\sum_{ab}(1-n_a-n_b)(\eta_{ijab}\Gamma_{abkl}-\Gamma_{ijab}\eta_{abkl})
     \notag\\
-  &\quad-\sum_{ab}(n_a-n_b) (1-P_{12})(1-P_{34})\eta_{b2a4}\Gamma_{a1b3}
+  &\quad+\sum_{ab}(n_a-n_b) (1-P_{ij})(1-P_{kl})\eta_{a1b3}\Gamma_{b2a4}
     \label{eq:imsrg2_m2b}\,.
 \end{align}
 % \end{widetext}
 Here, $\nn_i=1-n_i$, and the $s$-dependence has been suppressed for brevity. 
 To obtain ground-state energies, we integrate Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b} 
 from $s=0$ to $s\to\infty$, starting from the initial components of the 
-normal-ordered Hamiltonian (Eqs.~\eqref{eq:E0}--\eqref{eq:Gamma}).
+normal-ordered Hamiltonian (Eqs.~\eqref{eq:E0}--\eqref{eq:Gamma})
+(see sections \ref{sec:imsrg_pairing} and \ref{sec:imsrg_neutron_matter} 
+for numerical examples).
 
-%
-% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\subsubsection{Diagrammatic Representation of the IMSRG(2) Flow Equations}
+By integrating the flow equations, we absorb many-body correlations into
+the flowing normal-ordered Hamiltonian, summing certain classes of terms 
+in the many-body expansion to all orders \cite{Hergert:2016jk}. We can
+identify specific structures by looking at the occupation-number dependence 
+of the terms in Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}: for 
+instance, $\nn_i$ and $n_i$ restrict summations to particle and hole states, 
+respectively (cf.~equation \eqref{eq:def_natorb}). Typical IMSRG generators 
+(see section \ref{sec:generators}) are proportional to the (offdiagonal) 
+Hamiltonian, which means that the two terms in the zero-body flow equation 
+essentially have the structure of second-order energy corrections, but 
+evaluated for the \emph{flowing} Hamiltonian $\HO(s)$. Thus, we can express
+the equation in terms of Hugenholtz diagrams as
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\diagEa}{
+  \setlength{\unitlength}{0.12\textwidth}
+  \begin{picture}(0.7000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg_0bflow_1b.pdf}}
+  \end{picture}
+}
+\newcommand{\diagEb}{
+  \setlength{\unitlength}{0.12\textwidth}
+  \begin{picture}(0.7000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg_0bflow_2b.pdf}}
+  \end{picture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+  \totd{}{s} E = \vcenter{\hbox{\diagEa}} + \vcenter{\hbox{\diagEb}}\,.
+\end{equation}
+Note that the energy denominators associated with the propagation of the 
+intermediate state are consistently calculated with $\HO(s)$ here. 
 
-As we will discuss in more detail in Sec.~\ref{sec:mbpt}, 
-Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b} can easily be translated 
-into Goldstone or Hugenholtz diagrams for the flowing Hamiltonian $H(s)$.
-This provides us with an intuitive understanding of the mechanism through
-which the IM-SRG is non-perturbatively re-summing the many-body expansion. The second
-and third rows of Eq.~\eqref{eq:imsrg2_m2b}, in particular, re-sum $pp/hh$-ladder and $ph$-ring 
-diagrams, respectively. Due to the use of $H(s)$, ladder-ring interference 
-diagrams are generated in the limit $s\to\infty$, and therefore the IM-SRG(2) 
-goes beyond the more traditional Brueckner $G$-matrix or Random-Phase 
-Approximation-type summations \cite{Day:1967zl,Brandow:1967tg,Fetter:2003ve}. 
-Furthermore, the commutator structure of Eq.~\eqref{eq:opflow} ensures that 
-the IM-SRG is size-extensive, and only connected diagrams are generated and
-re-summed by the IM-SRG flow \cite{Brandow:1967tg,Shavitt:2009}. This property
-is preserved even if the commutators are truncated at a given operator rank, as in the IM-SRG(2) case presented here. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\diagA}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_2ds.pdf}}
+  \end{picture}
+}
+
+\newcommand{\diagB}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_1ds.pdf}}
+  \end{picture}
+}
+\newcommand{\diagBpp}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,1.5000)
+    \put(0.0000,0.0000){\includegraphics[height=1.5\unitlength]{\fdir/imsrg2_2b_1ds_pp.pdf}}
+  \end{picture}
+}
+\newcommand{\diagBhh}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,1.5000)
+    \put(0.0000,0.0000){\includegraphics[height=1.5\unitlength]{\fdir/imsrg2_2b_1ds_hh.pdf}}
+  \end{picture}
+}
+\newcommand{\diagBph}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(1.3000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_1ds_ph.pdf}}
+  \end{picture}
+}
 
 
+\newcommand{\diagC}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_0ds.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCppa}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,1.5000)
+    \put(0.0000,0.0000){\includegraphics[height=1.5\unitlength]{\fdir/imsrg2_2b_0ds_1pp.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCppb}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,2.0000)
+    \put(0.0000,0.0000){\includegraphics[height=2.0\unitlength]{\fdir/imsrg2_2b_0ds_2pp.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCppc}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.7000,2.0000)
+    \put(0.0000,0.0000){\includegraphics[height=2.0\unitlength]{\fdir/imsrg2_2b_0ds_3pp.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCpha}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(1.3000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_0ds_1ph.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCphb}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(1.9000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_0ds_2ph.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCphc}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(2.5000,1.0000)
+    \put(0.0000,0.0000){\includegraphics[height=\unitlength]{\fdir/imsrg2_2b_0ds_3ph.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCpppha}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(1.2000,1.5000)
+    \put(0.0000,0.0000){\includegraphics[height=1.5\unitlength]{\fdir/imsrg2_2b_0ds_pp-ph_A.pdf}}
+  \end{picture}
+}
+\newcommand{\diagCppphb}{
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{picture}(0.9000,1.5000)
+    \put(0.1000,0.0000){\includegraphics[height=1.5\unitlength]{\fdir/imsrg2_2b_0ds_pp-ph_B.pdf}}
+  \end{picture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the flow equation for the two-body vertex $\Gamma$, terms that
+are proportional to 
+\begin{equation}
+  1-n_a-n_b = \nn_a\nn_b - n_a n_b
+\end{equation}
+will build up a summation of particle-particle and hole-hole \emph{ladder 
+diagrams} as we integrate the flow equations $s\to\infty$. Similarly, 
+the terms proportional to 
+\begin{equation}
+  n_a-n_b = n_a \nn_b - \nn_a n_b\,,
+\end{equation}
+will give rise to a summation of \emph{chain diagrams} representing 
+particle-hole terms at all orders. We can illustrate this by expanding 
+the vertex we obtain after two integration steps,
+$\Gamma(2\delta s)$, in terms of the prior vertices $\Gamma(\delta s)$ and
+$\Gamma(0)$. Indicating these vertices by light gray, dark gray, and black
+circles, we schematically have
+\begin{align}\label{eq:vertex_schematic}
+  \vcenter{\hbox{\diagA}} 
+  &= \vcenter{\hbox{\diagB}} + \vcenter{\hbox{\diagBpp}} + 
+      \vcenter{\hbox{\diagBhh}} + \vcenter{\hbox{\diagBph}} + \;\ldots\notag\\
+  &= \vcenter{\hbox{\diagC}} + 
+      \vcenter{\hbox{\diagCppa}} + \vcenter{\hbox{\diagCppb}} + \vcenter{\hbox{\diagCppc}} + \;\ldots\notag\\
+  &\hphantom{=}
+      +\vcenter{\hbox{\diagCpha}} + \vcenter{\hbox{\diagCphb}} + \vcenter{\hbox{\diagCphc}} + \;\ldots\notag\\
+  &\hphantom{=}
+      +\vcenter{\hbox{\diagCpppha}} + \vcenter{\hbox{\diagCppphb}} + \;\ldots
+\end{align}
+In the first line, we see that $\Gamma(2\delta s)$ is given by
+the vertex of the previous step, $\Gamma(\delta s)$, plus second-order
+corrections. As in the energy flow equation, it is assumed that the
+energy denominators associated with the propagation of the intermediate
+states are calculated with $\HO(\delta s)$. For brevity, we have suppressed
+additional permutations of the shown diagrams, as well as the diagrams
+that result from contracting one- and two-body operators in Eq.~\eqref{eq:imsrg2_m2b}.
+
+In the next step, we expand each of the $\Gamma(\delta s)$ vertices in
+terms of $\Gamma(0)$, and assume that energy denominators are now
+expressed in terms of $\HO(0)$. In the second line of Eq.~\eqref{eq:vertex_schematic},
+we explicitly show the ladder-type diagrams with intermediate 
+particle-particle states that are generated by expanding
+the first two diagrams for $\Gamma(\delta s)$, many additional diagrams
+are suppressed. Likewise, the third line illustrates the emergence of 
+the chain summation via the particle-hole diagrams that 
+are generated by expanding the fourth diagram for $\Gamma(\delta s)$.
+In addition to the ladder and chain summations, the IMSRG(2) will also
+sum interference diagrams like the ones shown in the last row of 
+Eq.~\eqref{eq:vertex_schematic}.
+Such terms are not included in traditional summation methods, like
+the $G$-matrix approach for ladders, or the Random Phase Approximation
+(RPA) for chains \cite{Day:1967zl,Brandow:1967tg,Fetter:2003ve}. We
+conclude our discussion at this point, and refer interested readers
+to the much more detailed analysis in Ref.~\cite{Hergert:2016jk}.
 
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2108,7 +2265,7 @@ When performing a single integration step, the computational effort is
 dominated by the two-body flow equation \eqref{eq:imsrg2_m2b}, which 
 naively requires $\OC(N^6)$ operations, where $N$ denotes the size of
 the single-particle basis. This puts the IMSRG(2) in the same category 
-CCSD and ADC(3) (see chapters \ref{chapter:cc} and \ref{chapter:scgf}).
+as CCSD and ADC(3) (see chapters \ref{chapter:cc} and \ref{chapter:scgf}).
 Fortunately, large portions of the flow equations can be expressed in 
 terms of matrix products, allowing us to use optimized linear algebra 
 libraries provided by high-performance computing vendors. 
@@ -2122,139 +2279,6 @@ generator only consist of $ph$ and $pphhh$ type matrix elements and their
 Hermitian conjugates, the scaling is reduced to $\OC(N_h^2N_p^4)$, 
 which matches the cost of solving the CCSD amplitude equations.
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Fluffy}
-Naively, one could try to solve the flow equation \eqref{eq:flowEquations} by
-choosing a suitable basis of the many-body Hilbert space and turning
-Eq.~\eqref{eq:flowEquations} into a matrix differential equation, but such an
-approach would ultimately amount to a diagonalization of the many-body
-Hamiltonian. To make matters worse, implementing the flow means we
-would deal with the Hamiltonian's full spectrum rather than just some
-extremal eigenvalues that can be extracted efficiently in
-state-of-the-art, large-scale large scale diagonalization approaches based on iterative techniques
-\cite{Golub:2013le}.
-
-
-
-Instead of performing SRG in free space, the evolution can be done at
-finite density, that is directly in the $A$-body system
-\cite{Kehrein:2006kx}. This approach has recently been applied very
-successfully in nuclear physics, see the recent review of Bogner, Hergert, Morris and collaborators 
-\cite{Hergert:2016jk,Hergert:2016ng,Morris:2016xp},
-and is called in-medium SRG (IM-SRG). The method allows the evolution
-of $3,...,A$-body operators using only two-body machinery, with the
-simplifications arising from the use of normal-ordering with respect
-to a reference state.
-
-In our case, we assume that the problem can be modelled by a
-Hamiltonian containing maximally two-body interaction, as done in chapters 8 and 9. In
-second-quantized form, we defined in chapter 8 the normal-ordered Hamiltonian as
-\[
-\hat{H}_N = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^\dagger_p
-a_q+\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s a_r+\sum_{pq,i\le F}
-\langle pi|\hat{v}|qi\rangle a^\dagger_p a_q.
-\]
-In chapter 8 we rewrote the normal-ordered Hamiltonian 
-in terms of a new one-body operator and a two-body operator
-\[
-\hat{H}_N=\hat{F}_N+\hat{V}_N,
-\]
-with
-\[
-\hat{F}_N=\sum_{pq} \langle p|\hat{f}|q\rangle a^\dagger_pa_q,
-\]
-where
-\[
-\langle p|\hat{f}|q\rangle= \langle p|\hat{h}_0|q\rangle +\sum_{i\le F}
-\langle pi|\hat{v}|qi\rangle.
-\]
-The last term on the right hand side represents a medium modification
-to the single-particle Hamiltonian due to the two-body interaction.
-Finally, the two-body interaction is given by
-\[
-\hat{V}_N = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s a_r.
-\]
-In the equations below we will use the following shorthand notation for the matrix elements
-\[
-f_{pq}=\langle p|\hat{f}|q\rangle,
-\]
-and 
-\[
-v_{pqrs}= \langle pq|\hat{v}|rs\rangle.
-\]
-As discussed in chapter 8, the indices $i,j,k,...$
-denote hole states below the Fermi level, indices $a,b,c,...$
-particles states above the Fermi level, and indices $ p,q,r,...$ can
-be used for both particle and hole states. As reference state
-$|\Phi_0\rangle$ we choose the ground state of the non-interacting
-system, where all single-particle orbitals below the Fermi level are
-occupied.
-
-Integrating the flow equations~(\ref{eq:flowEquations}), we face one
-of the major challenges of the SRG method, namely the generation of
-higher and higher order interaction terms during the flow. With each
-evaluation of the commutator, the Hamiltonian gains terms of higher
-order, and these induced contributions will in subsequent integration
-steps contribute to terms of lower order. In principle, this continues
-to infinity. 
-To make the method computationally possible, we have to
-close the IM-SRG flow equations, suggesting that we are forced to
-truncate the equations to a certain order. We choose to truncate both
-$\hat{H}_s$ and $\hat{\eta}_s$ at the two-body level, an approach
-which is referred to as IM-SRG(2).  This normal-ordered two-body
-approximation seems to be sufficient in many cases and has yielded
-excellent results for several nuclei
-\cite{Tsukiyama:2011uq,Tsukiyama:2012fk,Hergert:2016jk,Hergert:2016ng}.
-
-The
-commutator in the flow equations (\ref{eq:flowEquations}) guarantees
-that the IM-SRG wave function $U_s^\dagger|\Phi\rangle$ can be
-expanded in terms of linked diagrams only
-\cite{Shavitt:2009,Hergert:2016jk,Hergert:2016ng}, which suggests that IM-SRG
-is size-extensive. Regarding the quality of the SRG results, it means
-that the error introduced by truncating the many-body expansions
-scales linearly with the number of particles~$N$.
-
-With this
-truncation, the generator $\hat{\eta}$ can be written as
-\[
-\hat{\eta} = \sum_{pq} \eta_{pq}^{(1)} a_p^{\dagger}a_q  +
-\frac{1}{4}\sum\limits_{pqrs}\eta_{pqrs}^{(2)} a_p^{\dagger}a_q^{\dagger}a_s
-a_r,
-\]
-where $\eta_{pq}^{(1)}$ and $ \eta_{pqrs}^{(2)}$ are the one- and
-two-body elements, respectively. Making use of the permutation
-operator $ \hat{P}_{pq}f(p,q) = f(q,p)$ defined in chapter 8, the IM-SRG(2) flow equations
-are given by
-\begin{align}
-\frac{d E_0}{ds} &= \sum_{ia}\left( \eta_{ia}^{(1)}f_{ai} -
-\eta_{ai}^{(1)}f_{ia}\right) +
-\frac{1}{2}\sum_{ijab}\eta_{ijab}^{(2)}v_{abij},
-\label{eq:flow1}\\
-\frac{d f_{pq}}{ds}&= \sum_r \left(\eta_{pr}^{(1)}f_{rq} +
-\eta_{qr}^{(1)}f_{rp}\right) + \sum_{ia}\left(1-\hat{P}_{ia}\right)\left(
-\eta_{ia}^{(1)}v_{apiq} - f_{ia}\eta_{apiq}^{(2)} \right)\notag \\ &
-+\frac{1}{2} \sum_{aij} \left(1+\hat{P}_{pq}\right)
-\eta_{apij}^{(2)}v_{ijaq} + \frac{1}{2}\sum_{abi}\left(1+\hat{P}_{pq}\right) \eta_{ipab}^{(2)}v_{abiq},
-\label{eq:flow2}
-\end{align}
-\begin{align}
-\frac{d v_{pqrs}}{ds} &= \sum_t \left(1-\hat{P}_{pq} \right)\left(
-\eta_{pt}^{(1)}v_{tqrs}-f_{pt}\eta_{tqrs}^{(2)}\right)-\sum_t \left(
-1-\hat{P}_{rs} \right)\left(\eta_{tr}^{(1)} v_{pqts} - f_{tr}
-\eta_{pqts}^{(2)}\right)\notag \\ & +\frac{1}{2}\sum_{ab}
-\left(\eta_{pqab}^{(2)} v_{abrs} - v_{pqab}\eta_{abrs}^{(2)}\right)-
-\frac{1}{2}\sum_{ij} \left(\eta_{pqij}^{(2)} v_{ijrs} -
-v_{pqij}\eta_{ijrs}^{(2)}\right)\notag \\ & -\sum_{ia} \left(1-
-\hat{P}_{ia} \right)\left(1-\hat{P}_{pq}\right)\left(1-\hat{P}_{rs} \right)
-\eta_{aqis}^{(2)}v_{ipar}.
-\label{eq:flow3}
-\end{align}
-Note that for brevity, we have skipped the explicit $s$-dependence in the equations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2376,13 +2400,13 @@ results in much better numerical properties.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Pairing Hamiltonian}
+\subsection{\label{sec:imsrg_pairing}The Pairing Hamiltonian}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Infinite Neutron Matter}
+\subsection{\label{sec:imsrg_neutron_matter}Infinite Neutron Matter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
