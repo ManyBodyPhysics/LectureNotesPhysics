@@ -3515,9 +3515,9 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
+while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) do not contribute either if we work in the canonical Hartree-Fock basis.
   In the case of the simple pairing model it is easy to calculate
-  $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
+  $\Delta E_{MBPT2}$ analytically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
 We restate this expression here but restrict the sums over single-particle states
   \[
   \Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij|\hat{v}|ab}
