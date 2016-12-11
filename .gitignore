@@ -23,3 +23,6 @@ doc/src/chapter10.log
 doc/src/Chapter10-figures/srg_evolution_energy.old.pdf
 doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler.agr
 doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler_modified.agr
+srg_diag.py
+doc/src/Chapter10-figures/H_IMSRG_unlabeled-eps-converted-to.pdf
+doc/src/Chapter10-figures/H_init_unlabeled-eps-converted-to.pdf

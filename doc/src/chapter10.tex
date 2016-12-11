@@ -5,6 +5,7 @@
 %%%%%
 \newcommand{\trace}{\mathrm{tr}\,}
 \newcommand{\tr}{\trace}
+\newcommand{\sgn}{\mathrm{sgn}\,}
 
 
 %%%%% calligraphics
@@ -58,6 +59,7 @@
 \renewcommand{\braket}[2]{\ensuremath{\langle{#1}|{#2}\rangle}}
 \newcommand{\expect}[1]{\ensuremath{\langle{#1}\rangle}}
 \newcommand{\matrixe}[3]{\ensuremath{\langle{#1}|\,{#2}\,|{#3}\rangle}}
+\newcommand{\dmatrixe}[2]{\ensuremath{\langle{#1}|\,{#2}\,|{#1}\rangle}}
 \newcommand{\rmatrixe}[3]{\ensuremath{ \abrapar {#1} \big|\big| \,{#2}\, \big|\big| {#3} \aketpar }}
 
 \newcommand{\totd}[2]{\ensuremath{ \frac{d {#1}} {d {#2}} }}
@@ -70,6 +72,9 @@
 \newcommand{\aO}{\ensuremath{a}}
 \newcommand{\aaO}{\ensuremath{\adj{a}}}
 
+\newcommand{\hO}{\ensuremath{h}}
+\newcommand{\hhO}{\ensuremath{\adj{h}}}
+
 \newcommand{\tO}{\op{t}}
 \newcommand{\vO}{\op{v}}
 
@@ -81,12 +86,14 @@
 \newcommand{\TO}{\op{T}}
 \newcommand{\UO}{\op{U}}
 \newcommand{\VO}{\op{V}}
+\newcommand{\ZO}{\op{Z}}
 
 
 \newcommand{\etaO}{\op{\eta}}
 \newcommand{\sigmaO}{\op{\sigma}}
 
 \newcommand{\UUO}{\adj{\op{U}}}
+\newcommand{\ZZO}{\adj{\op{Z}}}
 
 \newcommand{\eetaO}{\adj{\op{\eta}}}
 
@@ -315,7 +322,7 @@ perspectives and research directions.
 % SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Similarity Renormalization Group}
+\section{\label{sec:srg}The Similarity Renormalization Group}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -705,7 +712,7 @@ block indices)
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsubsection{SRG Flow for the Pairing Hamiltonian}
+\subsubsection{\label{sec:srg_pairing_flow}SRG Flow for the Pairing Hamiltonian}
 As in earlier sections, we split the Hamiltonian matrix \eqref{eq:def_h_matrix}
 into diagonal and off-diagonal parts:
 \begin{equation}
@@ -773,14 +780,14 @@ Since we want to diagonalize \eqref{eq:def_h_matrix} in the present example,
 we are only interested in the limit $s\to\infty$, and it does not really matter
 whether the transformation is an RG or not. Indeed, there are alternative choices
 for the generator which are more efficient in achieving the desired diagonalization
-(see section \ref{sec:generator} and Refs.~\cite{Hergert:2016jk,Hergert:2016ng}).
+(see section \ref{sec:imsrg_generator} and Refs.~\cite{Hergert:2016jk,Hergert:2016ng}).
 The RG property will matter in our discussion of SRG-evolved nuclear interactions 
 in the next section.
 
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsubsection{Implementation}
+\subsubsection{\label{sec:srg_pairing_implementation}Implementation}
 We are now ready to discuss the implementation of the SRG flow for the pairing
 Hamiltonian. The main numerical task is the integration of the flow equations,
 a system of first order ODEs. Readers who are interested in learning the 
@@ -1395,8 +1402,8 @@ where
 since the kinetic energy is independent of $L$. As soon as we pass 
 from the $S-$ into the $D-$ wave in either the
 rows or the columns, the momentum mesh simply starts from the
-lowest mesh point again. We use \texttt{NumPy}'s, \texttt{hstack()} 
-and \texttt{vstack()} functions to assemble the interaction matrix
+lowest mesh point again. We use \texttt{NumPy}'s \texttt{hstack} 
+and \texttt{vstack} functions to assemble the interaction matrix
 from the partial-wave blocks:
 
 \begin{lstlisting}
@@ -1448,7 +1455,7 @@ physics, e.g., at $\lambda=1.5\,\fmi$. For typical $NN$ interactions,
 especially those with a hard core like AV18, the flow equations tend
 to become stiff because they essentially depend on cubic products of
 the kinetic energy and interaction. For this reason, we use \texttt{SciPy}'s
-\texttt{ode()} class, which provides access to a variety of solvers
+\texttt{ode} class, which provides access to a variety of solvers
 and greater control over the parameters of the integration process.
 Specifically, we choose the VODE solver package and its 5th-order 
 Backward Differentiation method \cite{Brown:1989wj}, which is 
@@ -1843,12 +1850,17 @@ determinant,
 From Eq.~\eqref{eq:def_no}, it is evident that $\matrixe{\Phi}{\nord{\aaO_i\aO_j}}{\Phi}$ 
 must vanish, and this is readily generalized to expectation values of 
 arbitrary normal-ordered operators in the reference state $\ket{\Phi}$,
-\begin{equation}
+\begin{equation}\label{eq:nord_ex}
   \matrixe{\Phi}{\nord{\aaO_{i_1}\ldots\aO_{i_1}}}{\Phi} = 0\,.
 \end{equation}
 This property of normal-ordered operators greatly facilitates calculations 
 that require the evaluation of matrix elements in a space spanned by excitations 
-of $\ket{\Phi}$. 
+of $\ket{\Phi}$. Another important property is that we can freely anticommute 
+creation and annihilation operators within a normal-ordered string
+(see problem \ref{problem:nord}):
+\begin{equation}\label{eq:nord_acomm}
+  \nord{\ldots\aaO_i\aO_j\ldots} = -\nord{\ldots\aO_j\aaO_i\ldots}\,.
+\end{equation}
 
 As an example, we consider an intrinsic nuclear $A$-body Hamiltonian 
 containing both $NN$ and $3N$ interactions,
@@ -1975,7 +1987,7 @@ the commutator on the right-hand side of the operator flow equation
 \end{equation}
 Note that there are no induced $4N$ interactions, and that commutators
 involving at least one one-body operator do not change the particle rank
-(see problem \ref{problem:products}). In the free-space evolution, we 
+(see problem \ref{problem:nord}). In the free-space evolution, we 
 found that the truncation of $3N$ forces in the flowing Hamiltonian caused
 a significant flow-parameter dependence of observables in $A\geq 3$ systems.
 
@@ -2067,7 +2079,7 @@ following system of IMSRG(2) flow equations:
     \right\}\notag \\
   &\quad+ \frac{1}{2}\sum_{ab}(1-n_a-n_b)(\eta_{ijab}\Gamma_{abkl}-\Gamma_{ijab}\eta_{abkl})
     \notag\\
-  &\quad+\sum_{ab}(n_a-n_b) (1-P_{ij})(1-P_{kl})\eta_{a1b3}\Gamma_{b2a4}
+  &\quad+\sum_{ab}(n_a-n_b) (1-P_{ij})(1-P_{kl})\eta_{aibk}\Gamma_{bjal}
     \label{eq:imsrg2_m2b}\,.
 \end{align}
 % \end{widetext}
@@ -2085,7 +2097,7 @@ identify specific structures by looking at the occupation-number dependence
 of the terms in Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}: for 
 instance, $\nn_i$ and $n_i$ restrict summations to particle and hole states, 
 respectively (cf.~equation \eqref{eq:def_natorb}). Typical IMSRG generators 
-(see section \ref{sec:generators}) are proportional to the (offdiagonal) 
+(see section \ref{sec:imsrg_generators}) are proportional to the (offdiagonal) 
 Hamiltonian, which means that the two terms in the zero-body flow equation 
 essentially have the structure of second-order energy corrections, but 
 evaluated for the \emph{flowing} Hamiltonian $\HO(s)$. Thus, we can express
@@ -2285,93 +2297,518 @@ which matches the cost of solving the CCSD amplitude equations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:imsrg_decoupling}Decoupling}
 
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{The Off-Diagonal Hamiltonian}
+
+\begin{figure}[t]
+  \setlength{\unitlength}{\textwidth}
+  \begin{center}
+  \begin{picture}(0.9000,0.3700)
+    % \put(0.0200,0.0000){\rotatebox{90}{\parbox{0.37\unitlength}{\centering\textbf{Single-Reference IMSRG}}}}
+    \put(0.1100,0.0400){\includegraphics[width=0.3\unitlength]{\fdir/H_init_unlabeled.eps}}
+    \put(0.5500,0.0400){\includegraphics[width=0.3\unitlength]{\fdir/H_IMSRG_unlabeled.eps}}
+    \put(0.1100,0.0200){\parbox{0.3\unitlength}{\centering$\matrixe{i}{\HO(0)}{j}$}}
+    \put(0.5500,0.0200){\parbox{0.3\unitlength}{\centering$\matrixe{i}{\HO(\infty)}{j}$}}
+    \put(0.4300,0.1900){\parbox{0.1\unitlength}{\centering\Large$\stackrel{s\to\infty}{\longrightarrow}$}}
+    \put(0.0800,0.0500){\rotatebox{90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'p''}_{\!hh'\!h''}\!}$}}}
+    \put(0.0800,0.1200){\rotatebox{90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'}_{hh'}}$}}}
+    \put(0.0800,0.1900){\rotatebox{90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{p}_{h}}$}}}
+    \put(0.0800,0.2600){\rotatebox{90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi}$}}}
+    \put(0.1150,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi}$}}
+    \put(0.1850,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{p}_{h}}$}}
+    \put(0.2550,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'}_{hh'}}$}}
+    \put(0.3200,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'p''}_{\!hh'\!h''}\!}$}}
+    \put(0.8450,0.1300){\rotatebox{-90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'p''}_{\!hh'\!h''}\!}$}}}
+    \put(0.8450,0.2000){\rotatebox{-90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'}_{hh'}}$}}}
+    \put(0.8450,0.2700){\rotatebox{-90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{p}_{h}}$}}}
+    \put(0.8450,0.3400){\rotatebox{-90}{\parbox{0.075\unitlength}{\small\centering$\ket{\Phi}$}}}
+    \put(0.5550,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi}$}}
+    \put(0.6250,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{p}_{h}}$}}
+    \put(0.6950,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'}_{hh'}}$}}
+    \put(0.7600,0.3500){\parbox{0.075\unitlength}{\small\centering$\ket{\Phi^{pp'p''}_{\!hh'\!h''}\!}$}}
+  \end{picture}
+  \end{center}
+  \vspace{-10pt}
+  \caption{\label{fig:imsrg}
+  Schematic view of single-reference IMSRG decoupling in a many-body Hilbert space spanned by
+  a Slater determinant reference $\ket{\Phi}$ and its particle-hole excitations $\ket{\Phi^{p\ldots}_{h\ldots}}$.
+  }
+\end{figure}
+
+Having set up the IMSRG flow equations, we now need to specify our decoupling 
+strategy, i.e., how we split the Hamiltonian into diagonal parts we 
+want to keep, and off-diagonal parts we want to suppress (cf.~section 
+\ref{sec:srg}). To this end, we refer to the matrix representation of 
+the Hamiltonian in a basis of $A$-body Slater determinants, but let
+us stress that we never actually construct the Hamiltonian matrix in 
+this representation.
+
+Our Slater determinant basis consists of a reference determinant and 
+all its possible particle-hole excitations (cf.~section \ref{sec:nord}):
+\begin{equation}
+  \ket{\Phi},\,\nord{\aaO_{p}\aO_h}\ket{\Phi},\,\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}\ket{\Phi},\ldots\,.
+\end{equation}
+Note that
+\begin{equation}
+  \nord{\aaO_{p_1}\ldots\aaO_{p_i}\aO_{h_i}\ldots\aO_{h_1}}=\aaO_{p_1}\ldots\aaO_{p_i}\aO_{h_i}\ldots\aO_{h_1}
+\end{equation}
+because contractions of particle and hole indices vanish by construction. 
+Using Wick's theorem, one can show that the particle-hole excited Slater 
+determinants are orthogonal to the reference state as well as each other
+(see problem \ref{problem:ph_orthogonality}).
+In the Hilbert space spanned by this basis, the matrix representation of
+our initial Hamiltonian in the NO2B approximation (cf.~section \ref{sec:nord_ops}) 
+has the structure shown in the left panel of figure \ref{fig:imsrg}, i.e., it is 
+band-diagonal, and can at most couple $npnh$ and $(n\pm2)p(n\pm2)h$ 
+excitations. 
+
+We now have to split the Hamiltonian into appropriate diagonal and off-diagonal 
+parts on the operator level \cite{Kutzelnigg:1982ly,Kutzelnigg:1983ve,Kutzelnigg:1984qf}. 
+Using a broad definition of diagonality is ill-advised because we must 
+avoid to induce strong in-medium $3N, \ldots$ interactions to maintain the
+validity of the IMSRG(2) truncation. For this reason, we choose a so-called 
+\emph{minimal decoupling scheme} that only aims to decouple the one-dimensional 
+block spanned by the reference state from all particle-hole excitations, as
+shown in the right panel of figure \ref{fig:imsrg}. 
+
+If we could implement the minimal decoupling without approximations, 
+we would extract a single eigenvalue and eigenstate of the many-body Hamiltonian
+for the nucleus of interest in the limit $s\to\infty$. The eigenvalue
+would simply be given by the zero-body piece of $H(\infty)$, while the eigenstate
+is obtained by applying the unitary IMSRG transformation to the reference
+state, $\UUO(\infty)\ket{\Phi}$. In practice, truncations cannot be
+avoided, of course, and we only obtain an approximate eigenvalue and 
+mapping. We will explicitly demonstrate in section \ref{sec:imsrg_pairing}
+that the chosen reference state plays an important role in determining
+which eigenvalue and eigenstate of the Hamiltonian we end up extracting
+in our minimal decoupling scheme. An empirical rule of thumb is that the 
+IMSRG flow will connect the reference state to the eigenstate with which 
+it has the highest overlap. In single-reference scenarios, a HF Slater 
+determinant will typically have the highest overlap with the exact 
+ground state because it minimizes both the absolute energy and the 
+correlation energy, which is generated by the mixing between the 
+ground- and excited-state Slater determinants. 
+
+Analyzing the matrix elements between the reference state and its
+excitations with the help of Wick's theorem, we first see that the 
+Hamiltonian couples the $0p0h$ block to $1p1h$ excitations through 
+the matrix elements
+\begin{align}
+\matrixe{\Phi}{\HO\nord{\aaO_{p}\aO_{h}}}{\Phi}
+  &=E\matrixe{\Phi}{\nord{\aaO_{p}\aO_{h}}}{\Phi}
+    +\sum_{ij}f_{ij}\matrixe{\Phi}{\nord{\aaO_{i}\aO_{j}}\nord{\aaO_{p}\aO_{h}}}{\Phi}\notag\\
+  &\hphantom{=}+\frac{1}{4}\sum_{ijkl}\Gamma_{ijkl}
+      \matrixe{\Phi}{\nord{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}\nord{\aaO_{p}\aO_{h}}}{\Phi}\notag\\
+  &=\sum_{ij}f_{ij}\delta_{ih}\delta_{pj}n_i\nn_j = f_{hp} \label{eq:coupl_1p1h}
+\end{align}
+and their Hermitian conjugates. The contributions from the zero-body and 
+two-body pieces of the Hamiltonian vanish because they are expectation
+values of normal-ordered operators in the reference state (cf.~Eq.~\eqref{eq:nord_ex}).
+Likewise, the $0p0h$ and $2p2h$ blocks are coupled by the matrix elements
+\begin{equation}
+\matrixe{\Phi}{\HO\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}}{\Phi} = \Gamma_{hh'pp'}
+\end{equation}
+and their conjugates. It is precisely these two-body matrix elements 
+that couple $npnh$ and $(n\pm2)p(n\pm2)h$ states and generate the
+outermost side diagonals of the Hamiltonian matrix. This suggests that 
+we can transform the Hamiltonian to the shape shown in the top right panel
+of figure \ref{fig:imsrg} by defining its offdiagonal part as
+\begin{equation}
+  \HO_{od} \equiv \sum_{ph}f_{ph}\nord{\aaO_{p}\aO_{h}} + 
+              \frac{1}{4}\sum_{pp'hh'}\Gamma_{pp'hh'}\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}} + \text{H.c.}\,.
+\end{equation}
+In section \ref{sec:imsrg_pairing}, we will show that the IMSRG flow does indeed
+exponentially suppress the matrix elements of $\HO_{od}$ and 
+achieve the desired decoupling in the limit $s\to\infty$. 
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Variational Derivation of Minimal Decoupling}
+Our minimal decoupling scheme is very reminiscent of the strategy 
+followed in Coupled Cluster approaches \cite{Shavitt:2009,Hagen:2014ve}, except 
+that we specifically use a unitary transformation instead of a general 
+similarity transformation. It is also appealing for a different reason: As 
+we will discuss now, it can be derived from a variational approach, tying
+the seemingly unrelated ideas of energy minimization and renormalization 
+in the many-body system together. 
+
+Consider the energy expectation value of the final IMSRG evolved Hamiltonian, 
+\begin{equation}
+  \Hfinal \equiv \HO(\infty)\,,
+\end{equation}
+in the reference state (which is assumed to be normalized):
+\begin{equation}
+  E = \dmatrixe{\Phi}{\Hfinal}\,.
+\end{equation}
+We can introduce a \emph{unitary} variation, which we are free to apply 
+either to the reference state\,,
+\begin{equation}
+  \ket{\Phi}\rightarrow e^{\ZO}\ket{\Phi}\,,\quad\ZZO=-\ZO\,,
+\end{equation}
+or, equivalently, to the Hamiltonian:
+\begin{equation}
+  e^{\ZZO}\Hfinal e^{\ZO} = e^{-\ZO}\Hfinal e^{\ZO}\,.
+\end{equation}
+The variation of the energy is
+\begin{align}
+  \delta E = \dmatrixe{\Phi}{e^{-\ZO}(\Hfinal - E) e^{\ZO}} 
+           = \dmatrixe{\Phi}{\Hfinal-E} + \dmatrixe{\Phi}{\comm{\Hfinal-E}{\ZO}} + O(||\ZO||^2)\,,
+\end{align}
+where $||\cdot||$ is an appropriate operator norm. The first term obviously 
+vanishes, as does the commutator of $\ZO$ with the energy, because the latter
+is a mere number. Thus, the energy is stationary if
+\begin{equation}
+  \delta E = \dmatrixe{\Phi}{\comm{\Hfinal}{\ZO}} = 0\,. 
+\end{equation}
+Expanding 
+\begin{equation}
+  \ZO =\sum_{ph} Z_{ph}\nord{\aaO_{p}\aO_{h}} + \frac{1}{4}\sum_{pp'hh'} Z_{pp'hh'}\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}} 
+        + \text{H.c.} + \ldots\,,
+\end{equation}
+and using the independence of the expansion coefficients (save for the unitarity
+conditions), we obtain the system of equations
+\begin{align}
+  \dmatrixe{\Phi}{\comm{\Hfinal}{\nord{\aaO_{p}\aO_{h}}}} &= 0 \,,\\
+  \dmatrixe{\Phi}{\comm{\Hfinal}{\nord{\aaO_{h}\aO_{p}}}} &= 0 \,,\\
+  \dmatrixe{\Phi}{\comm{\Hfinal}{\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}}} &= 0 \,,\\
+  \dmatrixe{\Phi}{\comm{\Hfinal}{\nord{\aaO_{h}\aaO_{h'}\aO_{p'}\aO_{p}}}} &= 0 \,,\\
+  \ldots\notag
+\end{align}
+which are special cases of the so-called \emph{irreducible Brillouin conditions (IBCs)}
+\cite{Mukherjee:2001uq,Kutzelnigg:2002kx,Kutzelnigg:2004vn,Kutzelnigg:2004ys}. 
+Writing out the commutator in the first equation, we obtain
+\begin{equation}
+  \dmatrixe{\Phi}{\comm{\Hfinal}{\nord{\aaO_{p}\aO_{h}}}} 
+    = \dmatrixe{\Phi}{\Hfinal\nord{\aaO_{p}\aO_{h}}} - \dmatrixe{\Phi}{\nord{\aaO_{p}\aO_{h}}\Hfinal}
+    = \dmatrixe{\Phi}{\Hfinal\nord{\aaO_{p}\aO_{h}}} 
+    = 0\,,
+\end{equation}
+where the second term vanishes because it is proportional to $n_p \nn_h = 0$.
+The remaining equations can be evaluated analogously, and we find that the
+energy is stationary if the IMSRG evolved Hamiltonian $\Hfinal$ no longer 
+couples the reference state and its particle-hole excitations, as discussed 
+above. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:imsrg_generator}Choice of Generator}
-To determine the specific unitary transformation, one needs to specify
-the generator~$\hat{\eta}$. Through different choices, the SRG flow
-can be adapted to the features of a particular problem.\\
+In the previous section, we have identified the matrix elements of the
+Hamiltonian that couple the ground state to excitations, and collected
+them into a definition of the off-diagonal Hamiltonian that we want to 
+suppress with an IMSRG evolution. While we have decided on a decoupling 
+``pattern'' in this way, we have a tremendous amount of freedom in 
+implementing this decoupling. As long as we use the same off-diagonal
+Hamiltonian, many different types of generators will drive the Hamiltonian
+to the desired shape in the limit $s\to\infty$, and some of these generators
+stand out when it comes to numerical efficiency \cite{Hergert:2016jk}. 
 
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsubsection{Wegner's canonical generator}
-The original choice, suggested by Wegner \cite{Wegner:1994dk}, reads
-\begin{equation} 
-\hat{\eta} = \left[ \hat{H}^{\rm d}, \hat{H}^{\rm od} \right] = \left[ \hat{H}^{\rm d}, \hat{H}
-  \right].
-\label{eq:etaWegner}
-\end{equation} 
-As commutator between two Hermitian operators, $\hat{\eta}$
-fulfils the criterion of antihermiticity and can be shown to suppress
-the off-diagonal matrix elements \cite{Kehrein:2006kx}. In general,
-matrix elements far off the diagonal, where the Hamiltonian connects
-states with large energy differences, are suppressed much faster than
-elements closer to the diagonal. 
-
-Evaluating the commutator, we get
-for the one- and two-body elements
-\begin{align*}
-\eta_{pq}^{(1)} = & \sum_{r}\left(f_{pr}^d f_{rq} - f_{pr} f_{rq}^d \right)
-+ f_{pq} v_{qppq}^d \left(n_q - n_p \right)\\ \eta_{pqrs}^{(2)} = & -
-\sum_t \left[ \left(1-\hat{P}_{pq} \right)f_{pt} v_{tqrs}^d - \left(1 -
-\hat{P}_{rs} \right)f_{tr} v_{pqts}^d \right] \notag \\ & + \sum_t
-\left[  \left(1 - \hat{P}_{pq} \right)f_{pt}^d v_{tqrs} - \left(1 -
-\hat{P}_{rs} \right)f_{tr}^d v_{pqts} \right]  \notag \\ & +
-\frac{1}{2} \sum_{tu} (1 - n_t - n_u) \left(v_{pqtu}^d v_{turs} -
-v_{pqtu} v_{turs}^d \right)\notag \\ & + \sum_{tu} \left(n_t - n_u \right)\left(
-1 - \hat{P}_{pq} \right)\left(1 - \hat{P}_{rs} \right)v_{tpur}^d v_{uqts},
-\end{align*}
-where we use the standard notation
-\[
-n_p = \begin{cases} 1, & \mbox{if } p< \epsilon_F \quad(p\;\mbox{is
-    hole state})\\ 0, &\mbox{if } p> \epsilon_F \quad(p\;\mbox{is
-    particle state})\\
-\end{cases}.
-\]
-
-%
-% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\subsubsection{White's generator}
-Apart from this canonical generator, there exist several other ones in
-literature. One of them is White's choice
-\cite{White:2002fk}, which makes numerical approaches much
-more efficient.  The problem with Wegner's generator are the widely
-varying decaying speeds of the elements, removing first terms with
-large energy differences and then subsequently those ones with smaller
-energy separations.  That way the flow equations become a stiff set of
-coupled differential equations, which often gets numerically
-unstable.\\ White takes an alternative approach, which is especially
-suited for problems where one is interested in the ground state of a
-system. Instead of driving all off-diagonal elements of the
-Hamiltonian to zero, he focuses solely on those ones that are
-connected to the reference state $|\Phi_0\rangle$, aiming to decouple
-the reference state from the remaining Hamiltonian. With a suitable
-transformation, the elements get similar decaying speeds, which solves
-the problem of stiffness of the flow equations.  The generator is
-explicitly constructed the following way \cite{White:2002fk}
+\subsubsection{\label{sec:imsrg_generator_general}Construction of Generators for Single-Reference Applications}
+A wide range of suitable generators for the single-reference case
+is covered by the ansatz
+\begin{equation}
+  \eta= \sum_{ph} \eta_{ph}\nord{\aaO_{p}\aO_{h}}
+        +\frac{1}{4}\sum_{pp'hh'} \eta_{pp'hh'}\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}} - \text{H.c.}\,,
+\end{equation}
+constructing the one- and two-body matrix elements directly from those
+of the offdiagonal Hamiltonian and a tensor $G$ that ensures the 
+anti-Hermiticity of $\eta$:
 \begin{align}
-\hat{\eta} &= \sum_{ai} \frac{f_{ai}}{f_a-f_i-v_{aiai}}\lbrace a_a^{\dagger}a_i\rbrace -\text{hc} \notag \\ & + \sum_{abij}
-\frac{v_{abij}}{f_a+f_b-f_i-f_j+A_{abij}}\lbrace a_a^{\dagger}a_b^{\dagger}a_j
-a_i\rbrace - \text{hc},
-\label{eq:WhiteFull}
+  \eta_{ph}     &\equiv G_{ph} f_{ph}\,,\\
+  \eta_{pp'hh'} &\equiv G_{pp'hh'} \Gamma_{pp'hh'}\,.
 \end{align}
-with $f_p \equiv f_{pp}$, 'hc' denoting the Hermitian conjugate, and
-\[
-A_{abij} = v_{abab} + v_{ijij} - v_{aiai} - v_{ajaj} - v_{bibi} -
-v_{bjbj}.
-\label{eq:White7}
-\]
-Compared to Wegner's canonical generator, where the final flow
-equations involve third order powers of the $f$- and $v$-elements,
-these elements contribute only linearly with White's generator, which
-results in much better numerical properties.
+To identify possible options for $G$, we consider the flow
+equations in perturbation theory (see Ref.~\cite{Hergert:2016jk}
+for a detailed discussion). We assume a Hartree-Fock reference state,
+and partition the Hamiltonian as
+\begin{equation}
+  \HO = \HO_0 + \HO_I\,,
+\end{equation}
+with 
+\begin{align}
+  \HO_0 &\equiv E + \sum_{i} f_{ii}\nord{\aaO_{i}\aO_{i}}
+                 + \frac{1}{4} \sum_{ij} \Gamma_{ijij}\nord{\aaO_{i}\aaO_{j}\aO_{j}\aO_{i}}\,,\\
+  \HO_I &\equiv \sum_{ij}^{i\neq j} f_{ij}\nord{\aaO_{i}\aO_{j}} 
+                 + \frac{1}{4} \sum_{ijkl}^{(ij)\neq (kl)} \Gamma_{ijkl}\nord{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}\,.
+\end{align}
+We introduce a power counting in terms of the auxiliary parameter
+$g$, and count the diagonal Hamiltonian $\HO_0$ as unperturbed ($\OC(1)$)
+, while the perturbation $\HO_I$ is counted as $\OC(g)$. In the space of 
+up to $2p2h$ excitations, our partitioning is a second-quantized form of 
+the one used by Epstein and Nesbet \cite{Epstein:1926fp,Nesbet:1955lq}.
 
+We now note that the one-body piece of the initial Hamiltonian is diagonal in 
+the HF orbitals, which implies
+\begin{equation}
+  f_{ph}=0,\quad \eta_{ph}=0\,.
+\end{equation} 
+Inspecting the Eq.~\eqref{eq:imsrg2_m1b}, we see that corrections 
+to $f$ that are induced by the flow are at least of order $\OC(g^2)$, 
+because no diagonal matrix elements of $\Gamma$ appear:
+\begin{align}
+  \left.\totd{}{s}f_{ij}\right|_{s=0} &=
+    \frac{1}{2}\sum_{abc}
+    \left(\eta_{iabc}\Gamma_{bcja}-\Gamma_{iabc}\eta_{bcja}\right)\left(n_{a}\bar{n}_{b}\bar{n}_{c}+\bar{n}_{a}n_{b}n_{c}\right)=\OC(g^2)\,.\label{eq:flow1b_pert}
+\end{align}
+Using this knowledge, the two-body flow equation for the $pphh$ matrix elements 
+of the off-diagonal Hamiltonian reads
+\begin{align}
+  \totd{}{s}\Gamma_{pp'hh'}&=  
+  -\left(f_{pp}+f_{p'p'}-f_{hh}-f_{h'h'}\right)\eta_{pp'hh'}
+  -\left(\Gamma_{hh'hh'}+\Gamma_{pp'pp'}\right)\eta_{pp'hh'}
+  \notag\\
+  &\hphantom{=}
+    +\left(\Gamma_{p'h'p'h'}+\Gamma_{phph}+\Gamma_{ph'ph'}+\Gamma_{p'hp'h}
+     \right)\eta_{pp'hh'} + \OC(g^2)
+  \notag\\
+  &=-\Delta_{pp'hh'}\eta_{pp'hh'} + \OC(g^2)\,.\label{eq:flow2b_pert}
+\end{align}
+Note that $\etaO$, which is of order $\OC(g)$, is multiplied
+by unperturbed, diagonal matrix elements of the Hamiltonian 
+in the leading term. Because of this restriction, the sums
+in the particle-particle and hole-hole ladder terms (line 2 of Eq.~\eqref{eq:imsrg2_m2b})
+collapse, and the pre-factors $\tfrac{1}{2}$ are canceled by 
+factors $2$ from the unrestricted summation over indices, e.g.,
+\begin{equation}
+  \frac{1}{2}\sum_{h_1h_2}\eta_{pp'h_1h_2}\Gamma_{h_1h_2hh'}(1-n_{h_1}-n_{h_2})
+  =-\frac{1}{2}\eta_{pp'hh'}\Gamma_{hh'hh'}-\frac{1}{2}\eta_{pp'h'h}\Gamma_{h'hhh'}
+  =-\eta_{pp'hh'}\Gamma_{hh'hh'}\,.
+\end{equation}
+In equation \eqref{eq:flow2b_pert}, we have introduced the quantity 
+\begin{align}
+  \Delta_{pp'hh'}&\equiv
+    f_{pp}+f_{p'p'}-f_{hh}-f_{h'h'} + \Gamma_{hh'hh'}+\Gamma_{pp'pp'}
+    -\Gamma_{phph}-\Gamma_{p'h'p'h'}-\Gamma_{ph'ph'}-\Gamma_{p'hp'h} \notag\\
+    &=\dmatrixe{\Phi}{\nord{\aaO_{h}\aaO_{h'}\aO_{p'}\aO_{p}}\HO\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}}-\dmatrixe{\Phi}{\HO}\notag\\
+    &=\dmatrixe{\Phi}{\nord{\aaO_{h}\aaO_{h'}\aO_{p'}\aO_{p}}\HO_0\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}}-\dmatrixe{\Phi}{\HO_0}\,,
+    \label{eq:def_epsteinnesbet_2b}
+\end{align}
+i.e., the unperturbed energy difference between the two states
+that are coupled by the matrix element $\Gamma_{pp'hh'}$, namely
+the reference state $\ket{\Phi}$ and the excited state $\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}\ket{\Phi}$.
+Since it is expressed in terms of diagonal matrix elements, $\Delta_{pp'hh'}$
+would appear in precisely this form in appropriate energy denominators
+of Epstein-Nesbet perturbation theory. 
 
-{\bf add more? Magnus discussion ? derivation of the equations?}
+Plugging our ansatz for $\eta$ into equation \eqref{eq:flow2b_pert}, we obtain
+\begin{equation}
+  \totd{}{s}\Gamma_{pp'hh'} 
+  =-\Delta_{pp'hh'}G_{pp'hh'}\Gamma_{pp'hh'} + \OC(g^2)\,,
+\end{equation}
+Neglecting $\OC(g^2)$ terms in the flow equations, the one-body part of $\HO$ 
+remains unchanged, and assuming that $G$ itself is independent of $s$
+at order $\OC(g)$, we can integrate equation \eqref{eq:flow2b_pert}:
+\begin{equation}\label{eq:Gamma_pert}
+  \Gamma_{pp'hh'}(s) = \Gamma_{pp'hh'}(0) e^{-\Delta_{pp'hh'}G_{pp'hh'} s}\,.
+\end{equation}
+Clearly, the offdiagonal matrix elements of the Hamiltonian will be
+suppressed for $s\to\infty$ if the product $\Delta_{pp'hh'} G_{pp'hh'}$ 
+is positive. $G_{pp'hh'}$ also allows us
+to control the details of this suppression, e.g., the decay scales.
+To avoid misconceptions, we stress that we do not impose perturbative
+truncations in practical applications, and treat all matrix elements 
+and derived quantities, including the $\Delta_{pp'hh'}$, as 
+$s$-dependent.
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{\label{sec:imsrg_generator_imtime}The Imaginary-Time Generator}
+Using $G_{pp'hh'}$ to ensure that the energy denominator is always
+positive, we obtain the so-called \emph{imaginary-time generator}
+\cite{Morris:2015ve,Hergert:2014vn,Hergert:2016jk},
+which is inspired by imaginary-time evolution techniques that are 
+frequently used in Quantum Monte Carlo methods, for instance (see
+chapter \ref{chapter:qmc}, \cite{Carlson:2015lq} and references therein). Explicitly 
+indicating the flow parameter dependence of all quantities, we
+define
+\begin{align}
+  \etaO^\text{IT}(s)&\equiv\sum_{ph} \sgn\!\left(\Delta_{ph}(s)\right) f_{ph}(s)\nord{\aaO_{p}\aO_{h}}\notag\\
+  &\hphantom{=}
+   +\frac{1}{4}\sum_{pp'hh'}\sgn\!\left(\Delta_{pp'hh'}(s)\right)\Gamma_{pp'hh'}(s)
+    \nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}-\text{H.c.}\,,\label{eq:eta_imtime}
+\end{align}
+where
+\begin{align}
+  \Delta_{ph}&\equiv
+    f_{pp}-f_{hh} + \Gamma_{phph} 
+    =\dmatrixe{\Phi}{\nord{\aaO_{h}\aO_{p}}\HO\nord{\aaO_{p}\aO_{h}}}-\dmatrixe{\Phi}{\HO}\,.\label{eq:def_epsteinnesbet_1b}
+\end{align}
+
+For this generator, the perturbative analysis of the offdiagonal 
+two-body matrix elements yields
+\begin{equation}
+  \Gamma_{pp'hh'}(s) = \Gamma_{pp'hh'}(0) e^{-|\Delta_{pp'hh'}|s}\,,
+\end{equation}
+ensuring that they are driven to zero by the evolution. We also
+note that the energy difference $\Delta_{pp'hh'}$ controls
+the scales of the decay. Matrix elements between states with large 
+energy differences are suppressed more rapidly than those which
+couple states that are close in energy. This means that $\eta^\text{IT}$ 
+generates a proper renormalization group flow \cite{Kehrein:2006kx,Hergert:2016jk}.
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{\label{sec:imsrg_generator_white}White's Generators}
+A generator that is particularly powerful in numerical applications is inspired
+by the work of White on canonical transformation theory in quantum chemistry 
+\cite{White:2002fk,Tsukiyama:2011uq,Hergert:2016jk}. In the language we have
+set up above, it uses $G_{pp'hh'}$ to \emph{remove} the scale dependence
+of the IMSRG flow. This so-called White generator is defined as
+\begin{align}
+  \etaO^\text{W}(s)
+  &\equiv\sum_{ph}\frac{f_{ph}(s)}{\Delta_{ph}(s)}\nord{\aaO_{p}\aO_{h}}
+  +\frac{1}{4}\sum_{pp'hh'}\frac{\Gamma_{pp'hh'}(s)}{\Delta_{pp'hh'}(s)}
+    \nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}-\;\text{H.c.}\label{eq:eta_white}\,,
+\end{align}
+where the Epstein-Nesbet denominators use the energy differences defined in 
+equations \eqref{eq:def_epsteinnesbet_2b} and \eqref{eq:def_epsteinnesbet_1b}.
+
+For the White generator, we find
+\begin{equation}
+  \Gamma_{pp'hh'}(s) = \Gamma_{pp'hh'}(0) e^{-s}\,,
+\end{equation}
+i.e., \emph{all} off-diagonal matrix 
+elements are suppressed \emph{simultaneously} with a decay scale identical (or close to) 1 
+\cite{Hergert:2016jk}. 
+While this means that $\eta^\text{W}$ does \emph{not} generate a proper RG
+flow, this is inconsequential if we are only interested in the final Hamiltonian 
+$\HO(\infty)$, because all unitary transformations which suppress $\HO_{od}$ 
+must be equivalent up to truncation effects \cite{Hergert:2016jk}.
+
+A benefit of the White generator is that its matrix elements are defined 
+as ratios of energies, and therefore the Hamiltonian only contributes linearly 
+to the magnitude of the right-hand side of the flow equations \eqref{eq:imsrg2_m0b}--
+\eqref{eq:imsrg2_m2b}. This leads to a significant reduction of the 
+ODE system's stiffness compared to the other generators discussed here or in
+Ref.~\cite{Hergert:2016jk}, and greatly reduces the numerical effort for the
+ODE solver. However, the dependence of $\etaO^\text{W}$ on energy denominators
+can also be a drawback if $\Delta_{ph}$ and/or $\Delta_{pp'hh'}$ become
+small, which would cause the generator's matrix elements to diverge. This can be
+mitigated by using an alternative ansatz that is also inspired by White's work 
+\cite{White:2002fk}:
+\begin{align}
+  \etaO^\text{W'}(s)
+  &\equiv\frac{1}{2}\sum_{ph}\arctan\frac{2 f_{ph}(s)}{\Delta_{ph}(s)}\nord{\aaO_{p}\aO_{h}}
+  +\frac{1}{8}\sum_{pp'hh'}\arctan\frac{2\Gamma_{pp'hh'}(s)}{\Delta_{pp'hh'}(s)}
+    \nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}-\;\text{H.c.}\label{eq:eta_whiteatan}\,.
+\end{align}
+This form emphasizes that the unitary transformation can be thought of as an
+abstract rotation of the Hamiltonian. The matrix elements of $\eta^\text{W'}$
+are regularized by the $\arctan$ function, and explicitly limited to the 
+interval $]-\tfrac{\pi}{4},\tfrac{\pi}{4}[$. Expanding the function for 
+small arguments, we recover our initial ansatz for the White generator, 
+equation \eqref{eq:eta_white}. 
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{\label{sec:imsrg_generators_wegner}Wegner's Generator}
+Last but not least, we want to discuss Wegner's original ansatz 
+\cite{Wegner:1994dk}, which we have used in the free-space SRG applications 
+in section \ref{sec:srg}:
+\begin{equation}\label{eq:eta_wegner}
+  \etaO^\text{WE}(s) \equiv \comm{\HO_d(s)}{\HO_{od}(s)}\,.
+\end{equation}
+Truncating $\HO_d(s)$ and $\HO_{od}(s)$ at the two-body level and using
+the commutators from the appendix, it is straightforward to derive the 
+one- and two-body matrix elements of $\etaO(s)$; the operator has no
+zero-body component because of its anti-Hermiticity. We obtain
+\begin{align}
+  \eta_{ij} &= 
+  \sum_{a}(1-P_{ij})f^d_{ia}f^{od}_{aj} +\sum_{ab}(n_a-n_b)(f^d_{ab}\Gamma^{od}_{biaj}-f^{od}_{ab}\Gamma^d_{biaj}) \notag\\ 
+  &\quad +\frac{1}{2} \sum_{abc}(n_an_b\bar{n}_c+\bar{n}_a\bar{n}_bn_c) (1-P_{ij})\Gamma^d_{ciab}\Gamma^{od}_{abcj}
+  \label{eq:eta_wegner_m1b}\,,\\[5pt]
+  % 
+  \eta_{ijkl}&= 
+  \sum_{a}\left\{ 
+    (1-P_{ij})(f^d_{ia}\Gamma^{od}_{ajkl}-f^{od}_{ia}\Gamma^{d}_{ajkl} )
+    -(1-P_{kl})(f^{d}_{ak}\Gamma^{od}_{ijal}-f^{od}_{ak}\Gamma^d_{ijal} )
+    \right\}\notag \\
+  &\quad+ \frac{1}{2}\sum_{ab}(1-n_a-n_b)(\Gamma^d_{ijab}\Gamma^{od}_{abkl}-\Gamma^{od}_{ijab}\Gamma^d_{abkl})\notag\\
+  &\quad+ \sum_{ab}(n_a-n_b) (1-P_{ij})(1-P_{kl})\Gamma^{d}_{aibk}\Gamma^{od}_{bjal}
+    \label{eq:eta_wegner_m2b}\,.
+\end{align}
+Structurally, Eqs.~\eqref{eq:eta_wegner_m1b} and \eqref{eq:eta_wegner_m2b} 
+are identical to the flow IMSRG(2) equations except for signs stemming from 
+the anti-Hermiticity of the generator. 
+
+Superficially, the Wegner generator is quite different from the imaginary-time 
+and White generators, but we can uncover commonalities by carrying out a 
+perturbative analysis along the lines of the previous sections. For a HF 
+Slater determinant, the one-body part of the off-diagonal Hamiltonian vanishes 
+at $s=0$, and corrections that are induced by the flow start at $\OC(g^2)$
+(see Eq. ~\eqref{eq:flow1b_pert}). This means that the one-body part of
+the Wegner generator has the form
+\begin{equation}
+  \eta_{ij} = \frac{1}{2} 
+      \sum_{abc}(n_an_b\bar{n}_c+\bar{n}_a\bar{n}_bn_c) (1-P_{ij})\Gamma^d_{ciab}\Gamma^{od}_{abcj}
+      + \OC(g^2)\,.
+\end{equation}
+In the minimal decoupling scheme, the matrix elements appearing here are
+counted as follows:
+\begin{equation}
+  \Gamma^d_{ijij} = -\Gamma^d_{jiij} = \OC(1), \quad \Gamma^d_{ijkl} = \OC(g)\; \text{for}\; (ij)\neq(kl), 
+  \quad \Gamma^{od}_{ijkl} = \OC(g)\,.
+\end{equation}
+To obtain a $\OC(g)$ contribution to the one-body generator, we need
+either $a=c$ and $b=i$, or $a=i$ and $b=c$, but then the occupation number
+factor becomes
+\begin{equation}
+  n_{i}n_{c}\nn_c + \nn_{i} \nn_{c} n_c = 0\,.
+\end{equation}
+This implies that the leading contributions to $\eta_{ij}$ are of order $\OC(g^2)$.
+
+A similar analysis for the two-body part of $\etaO^\text{WE}$ (see problem
+\ref{problem:wegner_pert}) shows that
+\begin{align}
+  \eta_{ijkl}
+    &=\left(f^d_{ii} + f^d_{jj} - f^d_{kk} + f^d_{ll} + (1-n_i-n_k)\Gamma^d_{ijij} - (1-n_k-n_l)\Gamma^d_{klkl} 
+    \right.\notag\\
+    &\hphantom{=}\left.\quad
+    + (n_i-n_k) \Gamma^d_{ikik} + (n_j-n_k) \Gamma^d_{jkjk} + (n_i-n_l) \Gamma^d_{ilil} + (n_j-n_l) \Gamma^d_{jljl}
+  \right)\Gamma^{od}_{ijkl}
+  +\OC(g^2)\,.
+  \label{eq:wegner2b_pert}
+\end{align}
+Since $\Gamma^{od}_{ijkl}$ is restricted to $pphh$ matrix elements, we immediately
+obtain
+\begin{equation}
+  \eta_{pp'hh'} = \Delta_{pp'hh'}\Gamma_{pp'hh'}\,,
+\end{equation}
+and plugging this into Eq.~\eqref{eq:flow2b_pert}, we have
+\begin{equation}
+    \totd{}{s}\Gamma_{pp'hh'} 
+  =-\left(\Delta_{pp'hh'}\right)^2G_{pp'hh'}\Gamma_{pp'hh'} + \OC(g^2)\,.
+\end{equation}
+Neglecting the $\OC(g^2)$ terms, we can integrate the flow equation
+and find that the Wegner generator suppresses off-diagonal matrix
+elements with a Gaussian exponential function,
+\begin{equation}
+  \Gamma_{pp'hh'}(s) = \Gamma_{pp'hh'}(0) e^{-(\Delta_{pp'hh'})^2s}\,,
+\end{equation}
+and therefore generates a proper RG flow. Note that this result matches 
+our findings for the SRG flows of the 
+$2\times2$ matrix toy model (section \ref{sec:srg_toy}) and the pairing 
+Hamiltonian (section \ref{sec:srg_pairing}), which were using matrix 
+versions of the Wegner generator.
+
+In numerical applications, Wegner generators are less efficient than 
+our other choices. The cost for constructing $\etaO^\text{WE}$ is of 
+order $\OC(N^4_pN^2_h)$, compared to $\OC(N^2_pN^2_h)$ for the White
+and imaginary-time generators. More importantly, $\etaO^\text{WE}$ 
+generates very stiff flow equations because the RHS terms are cubic in 
+the Hamiltonian. This forces us to use ODE solvers that are appropriate
+for stiff systems, which have higher storage requirements and need more
+computing time than solvers for non-stiff systems, which can be used
+for imaginary-time and White IMSRG flows.
 
 
 % \begin{table}[t]
@@ -2396,11 +2833,376 @@ results in much better numerical properties.
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:imsrg_implementation}Implementation}
+Now that we have all the necessary ingredients, it is time to discuss the
+numerical implementation of IMSRG flows. As an example, we use a Python
+code that is designed for solving the pairing Hamiltonian (see section 
+\ref{sec:imsrg_pairing}) but easily adaptable to other problems. The
+IMSRG solver and tools for visualizing the flow can be found at
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/imsrg_pairing}.
+
+\subsubsection*{Basis and Matrix Element Handling}
+The code \texttt{imsrg\_pairing.py} uses \texttt{NumPy} arrays to store
+the one- and two-body matrix elements of the normal-ordered operators.
+The underlying one- and two-nucleon states are indexed as integers and
+pairs of integers, respectively. The complete lists of states are stored
+in the variables \texttt{bas1B} and \texttt{bas2B}, respectively. We
+also define an additional set of two-nucleon states in the list \texttt{basph2B},
+for reasons that will be explained shortly. The lists are all initialized
+at the beginning of the program's main routine:
+\begin{lstlisting}
+def main():
+...
+  particles  = 4
+
+  # setup shared data
+  dim1B     = 8
+
+  # this defines the reference state
+  holes     = [0,1,2,3]
+  particles = [4,5,6,7]
+
+  # basis definitions
+  bas1B     = range(dim1B)
+  bas2B     = construct_basis_2B(holes, particles)
+  basph2B   = construct_basis_ph2B(holes, particles)
+
+  idx2B     = construct_index_2B(bas2B)
+  idxph2B   = construct_index_2B(basph2B)
+
+  ...
+\end{lstlisting}
+Aside from a distinction between occupied (hole) and unoccupied (particle)
+single-particle states, we do not impose any constraints on the one- and
+two-nucleon bases. All permutations of two-body matrix elements $\Gamma_{ijkl}$
+are stored explicitly, and so are the vanishing matrix elements like 
+$\Gamma_{iikl}$ or $\Gamma_{ijkk}$ that are forbidden by the Pauli principle.
+The benefit of using this ``naive'' basis construction is that we do not need
+to worry whether certain combinations of quantum numbers are allowed or 
+forbidden by symmetries. This is relevant for flow equation terms that cannot 
+be expressed as matrix products, i.e., the contractions of one- and two-body 
+operators that appear in Eqs.~\eqref{eq:imsrg2_m1b} and \eqref{eq:imsrg2_m2b}. 
+To implement such terms, we also need to translate pairs of single-particle 
+indices into collective two-nucleon state indices and back, which is achieved 
+with the help of the lookup arrays \texttt{idx2B} and \texttt{idxph2B}.
+
+The state and lookup lists \texttt{basph2B} and \texttt{idxph2B} are used
+to work with matrices in the so-called \emph{particle-hole representation}. 
+This representation allows us to write the particle-hole contributions in
+the third line of Eq.~\eqref{eq:imsrg2_m2b} as matrix products. Superficially,
+these terms look like they require explicit loop summations:
+\begin{equation}\label{eq:imsrg2_m2b_ph}
+  \totd{}{s}\Gamma^{(ph)}_{ijkl}=(1-P_{ij})(1-P_{kl})\sum_{ab}(n_a-n_b)\eta_{aibk}\Gamma_{bjal}\,.
+\end{equation}
+Since we are working with a Slater determinant reference state and therefore
+able to distinguish particle and hole states in the single-particle basis,
+we can also define hole creation and annihilation operators (see, e.g., \cite{Suhonen:2007wo}):
+\begin{equation}
+  \hhO_i \equiv \aO_i\,,\quad \hO_i \equiv \aaO_i\,, 
+\end{equation}
+that satisfy the same anticommutation relations as the regular creators
+and annihilators. In addition, we also have
+\begin{align}
+  \acomm{\hhO_i}{\aO_j}  &= \acomm{\hO_i}{\aaO_j} = 0\,,\notag\\
+  \acomm{\hhO_i}{\aaO_j} &= \acomm{\hO_i}{\aO_j} = \delta_{ij}\,.
+\end{align}
+Using Eq.~\eqref{eq:nord_acomm} for the hole operators, we can rewrite a 
+generic normal-ordered two-body operator in the following way:
+\begin{equation}
+  \AO \equiv \frac{1}{4}\sum_{ijkl}A_{ijkl}\nord{\aaO_{i}\aaO_{j}\aO_{l}\aO_{k}}
+    = \frac{1}{4}\sum_{ijkl}A_{ijkl}\nord{\aaO_{i}\hO_{j}\hhO_{l}\aO_{k}}
+    = -\frac{1}{4}\sum_{ijkl}A_{ijkl}\nord{\aaO_{i}\hhO_{l}\hO_{j}\aO_{k}}\,.
+\end{equation}
+We can also define $\AO$ directly in the particle-hole representation, 
+\begin{equation}
+   \AO \equiv \frac{1}{4}\sum_{ijkl}A_{i\overline{j}k\overline{l}}\nord{\aaO_{i}\hhO_{j}\hO_{l}\aO_{k}}\,,
+\end{equation}
+where we have indicated the hole states by lines over the indices. Thus,
+the operator's matrix elements in the regular particle representation and 
+the particle-hole representation are related by the following expression:
+\begin{equation}
+  A_{i\overline{j}k\overline{l}} = - A_{ilkj}\,.
+\end{equation}
+We see that the switch to particle-hole representation is achieved 
+by a simple rearrangement of matrix elements. The situation is more 
+complicated if one works with angular-momentum coupled states, because 
+then the angular momenta must be recoupled in a different order, giving 
+rise to a so-called \emph{Pandya transformation} 
+\cite{Pandya:1956zv,Suhonen:2007wo,Kuo:1981fk}. 
+
+Using particle-hole matrix elements, the right-hand side of Eq.~\eqref{eq:imsrg2_m2b_ph} 
+can be written as
+\begin{equation}
+  \sum_{ab}(n_a-n_b)\eta_{iabk}\Gamma_{bjla}
+  = \sum_{ab}(n_a-n_b) \eta_{i\overline{k}b\overline{a}}\Gamma_{b\overline{a}l\overline{j}}
+  \equiv M_{i\overline{k}l\overline{j}}\,,
+\end{equation}
+which makes it possible to evaluate the term using matrix product routines,
+treating $(n_a-n_b)$ as a diagonal matrix. The resulting product matrix $M$
+can then be transformed back into the particle representation, where it will 
+be completely antisymmetrized by the permutation symbols in Eq.~\eqref{eq:imsrg2_m2b_ph}. 
+The necessary transformations between the particle and particle-hole 
+representations are implemented in the routines \texttt{ph\_transform\_2B}
+and \texttt{inverse\_ph\_transform\_2B}, respectively.
+
+\subsubsection*{Reference States}
+After the basis initialization, we need to define the reference Slater
+determinant \ket{\Phi} for the subsequent normal ordering. To this end, 
+we simply create lists of the hole (occupied) and particle (unoccupied)
+single-particle states:
+\begin{lstlisting}
+def main():
+...
+  particles  = 4
+
+  # setup shared data
+  dim1B     = 8
+
+  # this defines the reference state
+  holes     = [0,1,2,3]
+  particles = [4,5,6,7]
+
+  # basis definitions
+...
+
+  # occupation number matrices
+  occ1B     = construct_occupation_1B(bas1B, holes, particles)
+  occA_2B   = construct_occupationA_2B(bas2B, occ1B)
+  occB_2B   = construct_occupationB_2B(bas2B, occ1B)
+  occC_2B   = construct_occupationC_2B(bas2B, occ1B)
+
+  occphA_2B = construct_occupationA_2B(basph2B, occ1B)
+
+  ...
+\end{lstlisting}
+In addition to the elementary lists, we set up diagonal matrices for
+the various occupation number factors that appear in the IMSRG(2)
+flow equations \eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b},
+i.e., $(n_a - n_b)$, which is required both in particle and particle-hole
+representation (\texttt{construct\_occupationA\_2B}), $(1-n_a-n_b)$
+(\texttt{construct\_occupationB\_2B}), and $n_a n_b$ (\texttt{construct\_occupationC\_2B}).
+The latter appears when we rewrite the last occupation factor in 
+the one-body flow equation \eqref{eq:imsrg2_m1b}:
+\begin{equation}
+  n_a n_b \nn_c + \nn_a \nn_b n_c = n_a n_b - n_a n_b n_c + (1 - n_a - n_b + n_a n_b) n_c
+  = n_a n_b + (1-n_a - n_b)n_c\,.
+\end{equation}
+
+\subsubsection*{Sharing Data and Settings}
+Since the routines for normal ordering the Hamiltonian and calculating 
+the generator and derivatives need to access the bases, index lookups,
+and occupation number matrices, we store this shared data in a Python
+dictionary:
+
+\begin{lstlisting}
+...
+  user_data  = {
+    "dim1B":      dim1B, 
+    "holes":      holes,
+    "particles":  particles,
+    "bas1B":      bas1B,
+    "bas2B":      bas2B,
+    "basph2B":    basph2B,
+    "idx2B":      idx2B,
+    "idxph2B":    idxph2B,
+    "occ1B":      occ1B,
+    "occA_2B":    occA_2B,
+    "occB_2B":    occB_2B,
+    "occC_2B":    occC_2B,
+    "occphA_2B":  occphA_2B,
+
+    "eta_norm":   0.0,                # variables for sharing data between ODE solver
+    "dE":         0.0,                # and main routine
+    
+    "calc_eta":   eta_white,          # specify the generator (function object)
+    "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
+  }
+...
+\end{lstlisting}
+
+Rather than passing all of the data structures as separate parameters, we
+can then pass \texttt{user\_data} as a parameter. By passing the data as a
+dictionary, we can also avoid the creation of global variables, and make
+it easier to reuse individual routines in other projects.
+
+We also want to direct our readers' attention to the last two entries of
+the dictionary. These are function objects that are used to define which
+generator and flow equation routines the ODE solver will call (see below).
+Through this abstraction, users can easily add additional generators, or
+implement different truncations of the flow equations. The current version
+of \texttt{imsrg\_pairing.py} implements all of the generators discussed
+in section \ref{sec:imsrg_generator}, and the standard IMSRG(2) truncation.
+
+\subsubsection*{Normal Ordering}
+The next task of the main routine is the normal ordering of the initial
+Hamiltonian: 
+\begin{lstlisting}
+def main():
+...
+  # set up initial Hamiltonian
+  H1B, H2B = pairing_hamiltonian(delta, g, user_data)
+
+  E, f, Gamma = normal_order(H1B, H2B, user_data) 
+...
+\end{lstlisting}
+In order to facilitate the reuse of our code, we proceed in two
+steps: First, we set up the Hamiltonian in the vacuum, in this case the
+pairing Hamiltonian \eqref{eq:def_pairing_hamiltonian} with single-particle
+spacing $\delta$ and pairing strength $g$. The one- and two-body matrix
+elements are then passed to a generic routine that performs the normal ordering:
+\begin{lstlisting}
+def normal_order(H1B, H2B, user_data):
+  bas1B     = user_data["bas1B"]
+  bas2B     = user_data["bas2B"]
+  idx2B     = user_data["idx2B"]
+  particles = user_data["particles"]
+  holes     = user_data["holes"]
+
+  # 0B part
+  E = 0.0
+  for i in holes:
+    E += H1B[i,i]
+
+  for i in holes:
+    for j in holes:
+      E += 0.5*H2B[idx2B[(i,j)],idx2B[(i,j)]]  
+
+  # 1B part
+  f = H1B
+  for i in bas1B:
+    for j in bas1B:
+      for h in holes:
+        f[i,j] += H2B[idx2B[(i,h)],idx2B[(j,h)]]  
+
+  # 2B part
+  Gamma = H2B
+
+  return E, f, Gamma
+\end{lstlisting}
+
+\subsubsection*{Integration}
+Once the initial Hamiltonian is set up, we use the \texttt{SciPy}
+\texttt{ode} class to integrate the flow equations, so that we can
+switch between non-stiff and stiff solvers, and give the user as 
+much control over the solver as possible.
+
+The ODE solver calls the following derivative wrapper function:
+\begin{lstlisting}
+def derivative_wrapper(t, y, user_data):
+
+...
+  calc_eta  = user_data["calc_eta"]
+  calc_rhs  = user_data["calc_rhs"]
+
+  # extract operator pieces from solution vector
+  E, f, Gamma = get_operator_from_y(y, dim1B, dim2B)
+
+
+  # calculate the generator
+  eta1B, eta2B = calc_eta(f, Gamma, user_data)
+
+  # calculate the right-hand side
+  dE, df, dGamma = calc_rhs(eta1B, eta2B, f, Gamma, user_data)
+
+  # convert derivatives into linear array
+  dy   = np.append([dE], np.append(reshape(df, -1), reshape(dGamma, -1)))
+
+  # share data
+  user_data["dE"] = dE
+  user_data["eta_norm"] = np.linalg.norm(eta1B,ord='fro')+np.linalg.norm(eta2B,ord='fro')
+  
+  return dy
+\end{lstlisting}
+This routine is very similar to the ones we used in the SRG
+codes in sections \ref{sec:srg_pairing_implementation} and \ref{sec:srg_nn_flow}. It extracts
+$E(s), f(s),$ and $\Gamma(s)$ from the solution vector, and calls 
+appropriate routines to construct the generator and the derivatives.
+This is where the function object entries of the \texttt{user\_data}
+dictionary come into play: We use them as an abstract interface
+to call the routines we assigned to the dictionary in our \texttt{main} 
+routine. This is much more elegant than selecting the generator and
+flow equation truncation scheme via \texttt{if...elif} clauses. Most 
+importantly, we do not need to modify the derivative routine at all 
+if we want to add new generators and truncation schemes, but only
+need to assign the new functions to \texttt{calc\_eta} and 
+\texttt{calc\_rhs}.
+
+In the ODE loop, we do not require output at an externally chosen
+value of $s$, but check and process the intermediate solution after
+each accepted (not attempted!) internal step of the solver. This is
+achieved by setting the option \texttt{step=True}. We extract 
+$E(s), f(s),$ and $\Gamma(s)$, and use it to calculate diagnostic
+quantities like the second- and third-order energy corrections, 
+$\Delta E^{(2)}(s)$ and $\Delta E^{(3)}(s)$, as well as the norms 
+of $f_{od}(s)$ and $\Gamma_{od}(s)$:  
+\begin{lstlisting}
+def main():
+...
+  while solver.successful() and solver.t < sfinal:
+    ys = solver.integrate(sfinal, step=True)
+    
+    dim2B = dim1B*dim1B
+    E, f, Gamma = get_operator_from_y(ys, dim1B, dim2B)
+
+    DE2 = calc_mbpt2(f, Gamma, user_data)
+    DE3 = calc_mbpt3(f, Gamma, user_data)
+
+    norm_fod     = calc_fod_norm(f, user_data)
+    norm_Gammaod = calc_Gammaod_norm(Gamma, user_data)
+
+    print "%8.5f %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f"%(
+      solver.t, E , DE2, DE3, E+DE2+DE3, user_data["dE"], user_data["eta_norm"], norm_fod, norm_Gammaod)
+
+    if abs(DE2/E) < 10e-8: break
+
+\end{lstlisting}
+As discussed in earlier sections, the off-diagonal matrix elements 
+create $1p1h$ and $2p2h$ admixtures to the reference state wave function 
+which give rise to the energy corrections. These admixtures are suppressed
+as we decouple, hence the size of the energy corrections must decrease.
+In the limit $s\to\infty$, we expect them to be completely absorbed into
+the RG-improved Hamiltonian (see section \ref{sec:imsrg_pairing}). It is
+by this reasoning that we use the relative size of the second-order correction
+to the flowing energy, $\Delta E^2(s)/E(s)$, as the stopping criterion for
+the flow. Once this quantity falls below $10^{-8}$, we terminate the evolution.
+
+\subsubsection*{Optimizations}
+The Python implementation of the IMSRG that we describe here can solve
+problems with small single-particle basis sizes in reasonable time. To 
+tackle large-scale calculations, we implement the IMSRG in compiled
+languages like C/C++ or Fortran.
+
+As mentioned in the course of the discussion, we have favored simplicity 
+in the design of the Python code, which leaves significant room for optimization.
+For instance, we can exploit that nucleons are Fermions, and 
+antisymmetrize the two-nucleon basis states. This reduces the storage for
+matrix elements involving identical particles by a factor four, because
+we only need to store one of the antisymmetrized matrix elements 
+\begin{equation}
+  \Gamma_{ijkl} = -\Gamma_{jikl} = - \Gamma_{ijlk} = \Gamma_{jilk}\,.
+\end{equation}
+The storage can be reduced even further if we also exploit the Hermiticity
+and anti-Hermiticity of $\HO$ and $\etaO$, respectively.
+
+Another important tool for optimization are symmetries of the Hamiltonian.
+Nuclear Hamiltonians conserve the total angular momentum, parity, and the 
+isospin projection of quantum states, which implies that $f$ and $\Gamma$ 
+are block-diagonal in the corresponding quantum numbers. Since the generator 
+and the derivatives are constructed from the Hamiltonian, they have the
+same symmetries, and are block-diagonal as well. Exploiting this block
+structure, we can reduce the storage requirements, which are naively $\OC(N^4)$
+for each operator, by about one to two orders of magnitude. We can 
+also explicitly work on the blocks instead of the full matrices when 
+we evaluate the right-hand sides of the IMSRG flow equations.  The complex 
+couplings between blocks prevents us from evolving individual blocks or
+small groups separately, in contrast to the free-space SRG case, where
+this was possible (see section \ref{sec:srg_nn_flow}). 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\label{sec:imsrg_pairing}The Pairing Hamiltonian}
+\subsection{\label{sec:imsrg_pairing}IMSRG Solution of the Pairing Hamiltonian}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2990,26 +3792,60 @@ This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University)
   (A thorough discussion of the issue can be found in \cite{Hergert:2009wh}.)
 \end{prob}
 
-\begin{prob}\label{problem:products}
-  \item[a)] Prove the following schematic expression for products of normal-ordered
+\begin{prob}\label{problem:nord}
+  \item[a)] Prove that the expectation value of a normal-ordered operator in the
+  reference state vanishes (Eq.~\eqref{eq:nord_ex}):
+    \begin{equation}
+      \dmatrixe{\Phi}{\nord{\aaO_{i_1}\ldots\aO_{j_1}}} = 0\,.
+    \end{equation}
+  Start by considering a one-body operator, and extend your result to the general
+  case by induction.
+  \item[b)] Show that $\aaO_i$ and $\aO_j$ anticommute freely in a normal-ordered
+  string (Eq.~\eqref{eq:nord_acomm}). 
+  \begin{equation}
+    \nord{\ldots \aaO_i\aO_j\ldots} = -\nord{\ldots\aO_j\aaO_i\ldots}\,.
+  \end{equation}
+  Consider the one-body case first, as in problem \ref{problem:nord}(a).
+  \item[c)] Prove the following schematic expression for products of normal-ordered
   operators:
     \begin{equation}
       \AO^{[M]}\BO^{[N]} = \sum_{k=|M-N|}^{M+N}\CO^{[k]}\,.
     \end{equation}
-  \item[b)] Show that the following rule applies for commutators of normal-ordered
+  \item[d)] Show that the following rule applies for commutators of normal-ordered
     operators:
     \begin{equation}
       \comm{\AO^{[M]}}{\BO^{[N]}} = \sum_{k=|M-N|}^{M+N-1}\CO^{[k]}\,.
     \end{equation}
     Thus, the largest particle rank appearing in the expansion of the commutator of 
     normal-ordered $M-$ and $N-$body operators is $M+N-1$.
-  \item[c)] We can view the free-space operators as being normal-ordered with respect
+  \item[e)] We can view the free-space operators as being normal-ordered with respect
     to the vacuum state. How are the expansion formulas for products and commutators
     modified in that case?
 \end{prob}
 
-\begin{prob}
-  Implement 3rd order for the flowing Hamiltonian.
+\begin{prob}\label{problem:ph_orthogonality}
+  Use Wick's theorem to show that the basis consisting of a Slater determinant $\ket{\Phi}$ 
+  and its particle-hole excitations, 
+  \begin{equation}
+    \ket{\Phi},\,\nord{\aaO_{p}\aO_h}\ket{\Phi},\,\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}\ket{\Phi},\ldots\,,
+  \end{equation}
+  is orthogonal if the underlying single-particle basis is orthonormal.
+\end{prob}
+
+\begin{prob}\label{problem:wegner_pert}
+  \item[a)]
+    Validate the leading-order perturbative expression for the Wegner generator, Eq.~\eqref{eq:wegner2b_pert}.
+  \item[b)]
+    Let us now assume that we have used a Slater determinant reference state that 
+    has \emph{not} been optimized by performing a Hartree-Fock calculation. Using
+    Epstein-Nesbet partioning, the one-body part of the off-diagonal Hamiltonian
+    is then counted as $f^{od}_{ij}=\OC(g)$ instead of $\OC(g^2)$ during the flow.
+    Show that the one-body part of the Wegner generator has the following perturbative
+    expansion in this case: 
+    \begin{equation}\label{eq:wegner1b_pert}
+      \eta_{ij} = \left(f^d_{ii} - f^d_{jj} - (n_i-n_j)\Gamma^d_{ijij}\right)f^{od}_{ij} + \OC(g^2)\,.
+    \end{equation}
+    Interpret the expression in the parentheses.
 \end{prob}
 
 \begin{prob}
