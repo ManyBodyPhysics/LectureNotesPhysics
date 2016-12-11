@@ -886,8 +886,8 @@ def main():
   ds = 0.1
 
   print "%-8s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s"%(
-    "s", "E [MeV]" , "DE(2) [MeV]", "DE(3) [MeV]", "E+DE [MeV]", "dE/ds", 
-    "||eta||", "||fod|| [MeV]", "||Gammaod|| [MeV]")
+    "s", "E" , "DE(2)", "DE(3)", "E+DE", "dE/ds", 
+    "||eta||", "||fod||", "||Gammaod||")
   # print "-----------------------------------------------------------------------------------------------------------------"
   print "-" * 148
   while solver.successful() and solver.t < sfinal:
