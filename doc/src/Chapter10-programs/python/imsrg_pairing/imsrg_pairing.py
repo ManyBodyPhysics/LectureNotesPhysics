@@ -20,12 +20,7 @@ from numpy import array, dot, diag, reshape, transpose
 from scipy.linalg import eigvalsh
 from scipy.integrate import odeint, ode
 
-
-#-----------------------------------------------------------------------------------
-# commutator of matrices
-#-----------------------------------------------------------------------------------
-def commutator(a,b):
-  return dot(a,b) - dot(b,a)
+from sys import argv
 
 #-----------------------------------------------------------------------------------
 # basis and index functions
@@ -84,6 +79,64 @@ def construct_index_2B(bas2B):
   return index
 
 
+
+#-----------------------------------------------------------------------------------
+# transform matrices to particle-hole representation
+#-----------------------------------------------------------------------------------
+def ph_transform_2B(Gamma, bas2B, idx2B, basph2B, idxph2B):
+  dim = len(basph2B)
+  Gamma_ph = np.zeros((dim, dim))
+
+  for i1, (a,b) in enumerate(basph2B):
+    for i2, (c, d) in enumerate(basph2B):
+      Gamma_ph[i1, i2] -= Gamma[idx2B[(a,d)], idx2B[(c,b)]]
+
+  return Gamma_ph
+
+def inverse_ph_transform_2B(Gamma_ph, bas2B, idx2B, basph2B, idxph2B):
+  dim = len(bas2B)
+  Gamma = np.zeros((dim, dim))
+
+  for i1, (a,b) in enumerate(bas2B):
+    for i2, (c, d) in enumerate(bas2B):
+      Gamma[i1, i2] -= Gamma_ph[idxph2B[(a,d)], idxph2B[(c,b)]]
+  
+  return Gamma
+
+#-----------------------------------------------------------------------------------
+# commutator of matrices
+#-----------------------------------------------------------------------------------
+def commutator(a,b):
+  return dot(a,b) - dot(b,a)
+
+#-----------------------------------------------------------------------------------
+# norms of off-diagonal Hamiltonian pieces
+#-----------------------------------------------------------------------------------
+def calc_fod_norm(f, user_data):
+  particles = user_data["particles"]
+  holes     = user_data["holes"]
+  
+  norm = 0.0
+  for a in particles:
+    for i in holes:
+      norm += f[a,i]**2 + f[i,a]**2
+
+  return np.sqrt(norm)
+
+def calc_Gammaod_norm(Gamma, user_data):
+  particles = user_data["particles"]
+  holes     = user_data["holes"]
+  idx2B     = user_data["idx2B"]
+
+  norm = 0.0
+  for a in particles:    
+    for b in particles:
+      for i in holes:
+        for j in holes:
+          norm += Gamma[idx2B[(a,b)],idx2B[(i,j)]]**2 + Gamma[idx2B[(i,j)],idx2B[(a,b)]]**2
+
+  return np.sqrt(norm)
+
 #-----------------------------------------------------------------------------------
 # occupation number matrices
 #-----------------------------------------------------------------------------------
@@ -128,57 +181,6 @@ def construct_occupationC_2B(bas2B, occ1B):
   return occ
 
 #-----------------------------------------------------------------------------------
-# transform matrices to particle-hole representation
-#-----------------------------------------------------------------------------------
-def ph_transform_2B(Gamma, bas2B, idx2B, basph2B, idxph2B):
-  dim = len(basph2B)
-  Gamma_ph = np.zeros((dim, dim))
-
-  for i1, (a,b) in enumerate(basph2B):
-    for i2, (c, d) in enumerate(basph2B):
-      Gamma_ph[i1, i2] += -1.0 * Gamma[idx2B[(a,d)], idx2B[(c,b)]]
-
-  return Gamma_ph
-
-def inverse_ph_transform_2B(Gamma_ph, bas2B, idx2B, basph2B, idxph2B):
-  dim = len(bas2B)
-  Gamma = np.zeros((dim, dim))
-
-  for i1, (a,b) in enumerate(bas2B):
-    for i2, (c, d) in enumerate(bas2B):
-      Gamma[i1, i2]                     -= Gamma_ph[idxph2B[(a,d)], idxph2B[(c,b)]]
-  
-  return Gamma
-
-#-----------------------------------------------------------------------------------
-# norms of off-diagonal Hamiltonian pieces
-#-----------------------------------------------------------------------------------
-def calc_fod_norm(f, user_data):
-  particles = user_data["particles"]
-  holes     = user_data["holes"]
-  
-  norm = 0.0
-  for a in particles:
-    for i in holes:
-      norm += f[a,i]**2 + f[i,a]**2
-
-  return np.sqrt(norm)
-
-def calc_Gammaod_norm(Gamma, user_data):
-  particles = user_data["particles"]
-  holes     = user_data["holes"]
-  idx2B     = user_data["idx2B"]
-
-  norm = 0.0
-  for a in particles:    
-    for b in particles:
-      for i in holes:
-        for j in holes:
-          norm += Gamma[idx2B[(a,b)],idx2B[(i,j)]]**2 + Gamma[idx2B[(i,j)],idx2B[(a,b)]]**2
-
-  return np.sqrt(norm)
-
-#-----------------------------------------------------------------------------------
 # generators
 #-----------------------------------------------------------------------------------
 def eta_brillouin(f, Gamma, user_data):
@@ -204,6 +206,46 @@ def eta_brillouin(f, Gamma, user_data):
       for i in holes:
         for j in holes:
           val = Gamma[idx2B[(a,b)], idx2B[(i,j)]]
+
+          eta2B[idx2B[(a,b)],idx2B[(i,j)]] = val
+          eta2B[idx2B[(i,j)],idx2B[(a,b)]] = -val
+
+  return eta1B, eta2B
+
+def eta_imtime(f, Gamma, user_data):
+  dim1B     = user_data["dim1B"]
+  particles = user_data["particles"]
+  holes     = user_data["holes"]
+  idx2B     = user_data["idx2B"]
+
+  # one-body part of the generator
+  eta1B  = np.zeros_like(f)
+
+  for a in particles:
+    for i in holes:
+      dE = f[a,a] - f[i,i] + Gamma[idx2B[(a,i)], idx2B[(a,i)]]
+      val = np.sign(dE)*f[a,i]
+      eta1B[a, i] =  val
+      eta1B[i, a] = -val 
+
+  # two-body part of the generator
+  eta2B = np.zeros_like(Gamma)
+
+  for a in particles:
+    for b in particles:
+      for i in holes:
+        for j in holes:
+          dE = ( 
+            f[a,a] + f[b,b] - f[i,i] - f[j,j]  
+            + Gamma[idx2B[(a,b)],idx2B[(a,b)]] 
+            + Gamma[idx2B[(i,j)],idx2B[(i,j)]]
+            - Gamma[idx2B[(a,i)],idx2B[(a,i)]] 
+            - Gamma[idx2B[(a,j)],idx2B[(a,j)]] 
+            - Gamma[idx2B[(b,i)],idx2B[(b,i)]] 
+            - Gamma[idx2B[(b,j)],idx2B[(b,j)]] 
+          )
+
+          val = np.sign(dE)*Gamma[idx2B[(a,b)], idx2B[(i,j)]]
 
           eta2B[idx2B[(a,b)],idx2B[(i,j)]] = val
           eta2B[idx2B[(i,j)],idx2B[(a,b)]] = -val
@@ -716,22 +758,26 @@ def calc_mbpt2(f, Gamma, user_data):
   holes     = user_data["holes"]
   idx2B     = user_data["idx2B"]
 
-  for a in particles:
-    for b in particles:
-      for i in holes:
-        for j in holes:
-          denom = f[a,a] + f[b,b] - f[i,i] - f[j,j]
+  for i in holes:
+    for j in holes:
+      for a in particles:
+        for b in particles:
+          denom = f[i,i] + f[j,j] - f[a,a] - f[b,b]
           me    = Gamma[idx2B[(a,b)],idx2B[(i,j)]]
-          DE2 += 0.25*me*me/denom
+          DE2  += 0.25*me*me/denom
 
   return DE2
 
 def calc_mbpt3(f, Gamma, user_data):
-  DE3 = 0.0
-
   particles = user_data["particles"]
   holes     = user_data["holes"]
   idx2B     = user_data["idx2B"]
+
+  # DE3 = 0.0
+
+  DE3pp = 0.0
+  DE3hh = 0.0
+  DE3ph = 0.0
 
   for a in particles:
     for b in particles:
@@ -741,7 +787,7 @@ def calc_mbpt3(f, Gamma, user_data):
             for j in holes:
               denom = (f[i,i] + f[j,j] - f[a,a] - f[b,b])*(f[i,i] + f[j,j] - f[c,c] - f[d,d])
               me    = Gamma[idx2B[(i,j)],idx2B[(a,b)]]*Gamma[idx2B[(a,b)],idx2B[(c,d)]]*Gamma[idx2B[(c,d)],idx2B[(i,j)]]
-              DE3 += 0.125*me/denom
+              DE3pp += 0.125*me/denom
 
   for i in holes:
     for j in holes:
@@ -751,7 +797,7 @@ def calc_mbpt3(f, Gamma, user_data):
             for b in particles:
               denom = (f[i,i] + f[j,j] - f[a,a] - f[b,b])*(f[k,k] + f[l,l] - f[a,a] - f[b,b])
               me    = Gamma[idx2B[(a,b)],idx2B[(k,l)]]*Gamma[idx2B[(k,l)],idx2B[(i,j)]]*Gamma[idx2B[(i,j)],idx2B[(a,b)]]
-              DE3 += 0.125*me/denom
+              DE3hh += 0.125*me/denom
 
   for i in holes:
     for j in holes:
@@ -761,16 +807,18 @@ def calc_mbpt3(f, Gamma, user_data):
             for c in particles:
               denom = (f[i,i] + f[j,j] - f[a,a] - f[b,b])*(f[k,k] + f[j,j] - f[a,a] - f[c,c])
               me    = Gamma[idx2B[(i,j)],idx2B[(a,b)]]*Gamma[idx2B[(k,b)],idx2B[(i,c)]]*Gamma[idx2B[(a,c)],idx2B[(k,j)]]
-              DE3 -= me/denom
-  return DE3
+              DE3ph -= me/denom
+  return DE3pp+DE3hh+DE3ph
 
 #------------------------------------------------------------------------------
 # Main program
 #------------------------------------------------------------------------------
 
 def main():
-  g          = 0.5
+  # g          = 0.5
+  g          = float(argv[1])
   delta      = 1
+
   particles  = 4
 
   # setup shared data
@@ -788,6 +836,7 @@ def main():
   idx2B     = construct_index_2B(bas2B)
   idxph2B   = construct_index_2B(basph2B)
 
+  # occupation number matrices
   occ1B     = construct_occupation_1B(bas1B, holes, particles)
   occA_2B   = construct_occupationA_2B(bas2B, occ1B)
   occB_2B   = construct_occupationB_2B(bas2B, occ1B)
@@ -815,8 +864,7 @@ def main():
     "eta_norm":   0.0,                # variables for sharing data between ODE solver
     "dE":         0.0,                # and main routine
     
-    # "calc_eta":   eta_white_mp,       # specify the generator (function object)
-    "calc_eta":   eta_wegner,       # specify the generator (function object)
+    "calc_eta":   eta_white,       # specify the generator (function object)
     "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
   }
 
@@ -830,6 +878,7 @@ def main():
 
   # integrate flow equations 
   solver = ode(derivative_wrapper,jac=None)
+  solver.set_integrator('vode', method='bdf', order=5, nsteps=1000)
   solver.set_f_params(user_data)
   solver.set_initial_value(y0, 0.)
 

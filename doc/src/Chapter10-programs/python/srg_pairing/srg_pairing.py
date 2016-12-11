@@ -190,8 +190,6 @@ def main():
 
   # calculate exact eigenvalues
   eigenvalues = eigvalsh(H0)
-  print eigenvalues
-  exit()
 
   # turn initial Hamiltonian into a linear array
   y0  = reshape(H0, -1)                 
