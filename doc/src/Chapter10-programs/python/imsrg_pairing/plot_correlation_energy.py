@@ -11,10 +11,15 @@
 # 
 #------------------------------------------------------------------------------
 
-from   pylab import *
 import matplotlib.pyplot as plt
 import numpy as np
 import glob
+
+from   pylab import *
+from   matplotlib import rc
+
+rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
+rc('text', usetex=True)
 
 def Hamiltonian(delta,g):
 
@@ -118,7 +123,12 @@ for g in glist:
     imtime.append(0.0)
 
 
-# plt.axis([-1,1,-0.5,0.05])
+
+#------------------------------------------------------------------------------
+# Comparison of methods
+#------------------------------------------------------------------------------
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
 
 fig = figure(figsize=(8,6))
 
@@ -126,24 +136,56 @@ fig = figure(figsize=(8,6))
 ax = fig.gca()
 ax.tick_params(axis='both',which='major',width=1.5,length=8)
 ax.tick_params(axis='both',which='minor',width=1.5,length=5)
-ax.tick_params(axis='both',width=2,length=10,labelsize=16)
+ax.tick_params(axis='both',width=2,length=10,labelsize=20)
 ax.minorticks_on()
 for s in ['left', 'right', 'top', 'bottom']:
 	ax.spines[s].set_linewidth(2)
 ax.set_xlim([-1.05,1.05])  
+ax.set_ylim([-0.5,0.06])  
 
 ax.xaxis.set_major_formatter(FuncFormatter(myLabels))
 ax.yaxis.set_major_formatter(FuncFormatter(myLabels))
 
-plt.xlabel('$g\,\mathrm{[a.u.]}$', fontsize=16)
-plt.ylabel('$\Delta E\, \mathrm{[a.u.]}$', fontsize=16)
-pl_exact = plt.plot(glist, exact, marker='s', markersize=8, color='black',linestyle='-',  linewidth = 2.0, label = 'exact')
-pl_mbpt2 = plt.plot(glist, mbpt2, marker='^', markersize=8, color='gold', linestyle='-',  linewidth = 2.0, label = 'MBPT2')
-pl_mbpt3 = plt.plot(glist, mbpt3, marker='v', markersize=8, color='orange', linestyle='-',  linewidth = 2.0, label = 'MBPT3')
-pl_mbpt4 = plt.plot(glist, mbpt4, marker='D', markersize=8, color='red',    linestyle='-',  linewidth = 2.0, label = 'MBPT4')
-pl_ccd   = plt.plot(glist,   ccd, marker='o', markersize=8, color='green',  linestyle='--', linewidth = 2.0, label = 'CCD')
-pl_white = plt.plot(glist, white, marker='o', markersize=8, color='deepskyblue',   linestyle='--', linewidth = 2.0, label = 'IMSRG(2)')
+plt.xlabel('$g\,\mathrm{[a.u.]}$', fontsize=20)
+plt.ylabel('$E_\mathrm{corr}\, \mathrm{[a.u.]}$', fontsize=20)
+pl_exact = plt.plot(glist, exact, color='black',linestyle='-',  linewidth = 2.0, label = 'exact')
+pl_mbpt2 = plt.plot(glist, mbpt2, marker='^', markersize=8, color='gold', linestyle='-',  linewidth = 2.0, label = 'MBPT(2)')
+pl_mbpt3 = plt.plot(glist, mbpt3, marker='v', markersize=8, color='orange', linestyle='-',  linewidth = 2.0, label = 'MBPT(3)')
+pl_mbpt4 = plt.plot(glist, mbpt4, marker='D', markersize=8, color='red',    linestyle='--',  linewidth = 2.0, label = 'MBPT(4)')
+pl_ccd   = plt.plot(glist,   ccd, marker='s', markersize=8, color='green',  dashes=[8,6], linewidth = 2.0, label = 'CCD')
+pl_white = plt.plot(glist, white, marker='o', markersize=8, color='blue',   linestyle='-', linewidth = 2.0, label = 'IMSRG(2)')
 
-# plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.5)
+plt.legend(bbox_to_anchor=(0.35, 0.05), loc=3, borderaxespad=0.5)
 plt.savefig("correlation_energy.pdf", bbox_inches="tight", pad_inches=0.05)
 plt.show()
+plt.close()
+
+#------------------------------------------------------------------------------
+# Comparison of generators
+#------------------------------------------------------------------------------
+fig = figure(figsize=(8,6))
+
+# pl, ax = plt.subplots()
+ax = fig.gca()
+ax.tick_params(axis='both',which='major',width=1.5,length=8)
+ax.tick_params(axis='both',which='minor',width=1.5,length=5)
+ax.tick_params(axis='both',width=2,length=10,labelsize=20)
+ax.minorticks_on()
+for s in ['left', 'right', 'top', 'bottom']:
+  ax.spines[s].set_linewidth(2)
+ax.set_xlim([-1.05,1.05])  
+ax.set_ylim([-0.5,0.02])  
+
+ax.xaxis.set_major_formatter(FuncFormatter(myLabels))
+ax.yaxis.set_major_formatter(FuncFormatter(myLabels))
+
+plt.xlabel('$g\,\mathrm{[a.u.]}$', fontsize=20)
+plt.ylabel('$E_\mathrm{corr}\, \mathrm{[a.u.]}$', fontsize=20)
+pl_exact  = plt.plot(glist, exact, color='black',linestyle='-',  linewidth = 2.0, label = 'exact')
+pl_imtime = plt.plot(glist, imtime, marker='D', markersize=8, color='green', linestyle='solid',  linewidth = 2.0, label = 'imag. time')
+pl_wegner = plt.plot(glist, wegner, marker='s', markersize=8, color='red', dashes=[8,6],  linewidth = 2.0, label = 'Wegner')
+pl_white  = plt.plot(glist, white, marker='o', markersize=8, color='blue', dashes=[2,2,4],linewidth = 2.0, label = 'White')
+
+plt.legend(bbox_to_anchor=(0.05, 0.05), loc=3, borderaxespad=0.5)
+plt.savefig("correlation_energy_generators.pdf", bbox_inches="tight", pad_inches=0.05)
+# plt.show()

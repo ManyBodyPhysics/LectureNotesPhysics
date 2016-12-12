@@ -825,8 +825,17 @@ def main():
   dim1B     = 8
 
   # this defines the reference state
-  holes     = [0,1,2,3]
-  particles = [4,5,6,7]
+  # 1st state
+  # holes     = [0,1,2,3]
+  # particles = [4,5,6,7]
+
+  # 2nd state
+  holes     = [0,1,4,5]
+  particles = [2,3,6,7]
+
+  # 3rd state
+  # holes     = [0,1,6,7]
+  # particles = [2,3,4,5]
 
   # basis definitions
   bas1B     = range(dim1B)
@@ -863,8 +872,10 @@ def main():
 
     "eta_norm":   0.0,                # variables for sharing data between ODE solver
     "dE":         0.0,                # and main routine
-    
-    "calc_eta":   eta_white,       # specify the generator (function object)
+
+
+    "calc_eta":   eta_imtime,          # specify the generator (function object)    
+    # "calc_eta":   eta_white,          # specify the generator (function object)
     "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
   }
 

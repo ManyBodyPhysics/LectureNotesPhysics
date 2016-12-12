@@ -33,12 +33,12 @@ def myLogLabels(x, pos):
 
 # save these settings for use in both following plots
 def myPlotSettings(ax):
+  ax.minorticks_on()
   ax.tick_params(axis='both',which='major',width=1.5,length=8)
   ax.tick_params(axis='both',which='minor',width=1.5,length=5)
   ax.tick_params(axis='both',width=2,length=10,labelsize=20)
   for s in ['left', 'right', 'top', 'bottom']:
     ax.spines[s].set_linewidth(2)
-  ax.set_xlim([0.000006,13])  
   return
 
 #------------------------------------------------------------------------------
@@ -52,33 +52,71 @@ def plot_energies(data, exact, filename):
   plt.semilogx([1.0e-8,1.0e-4,1.0,100], [exact,exact,exact,exact], linewidth=2, 
     color='black', linestyle='dashed', dashes=(10,5))
 
-  plt.semilogx(data[:,0], data[:,1], color='blue', marker='o', markersize=10)
-  plt.semilogx(data[:,0], data[:,1]+data[:,2], color='red', marker='s', markersize=9)
-  plt.semilogx(data[:,0], data[:,1]+data[:,2]+data[:,3], color='green', marker='v', markersize=10)
+  plt.semilogx(data[:,0], data[:,1], color='blue', marker='o', markersize=9, label='$E$')
+  plt.semilogx(data[:,0], data[:,1]+data[:,2], color='red', marker='s', markersize=9, label='$+\Delta E^{(2)}$')
+  plt.semilogx(data[:,0], data[:,1]+data[:,2]+data[:,3], color='green', marker='D', markersize=9,label='$+\Delta E^{(3)}$')
 
   myPlotSettings(ax)
   ax.xaxis.set_major_formatter(FuncFormatter(myLogLabels))
   ax.yaxis.set_major_formatter(FuncFormatter(myLabels))
+  ax.set_xlim([0.00006,13])
+
+  ymin,ymax=ax.get_ylim()
+  ax.set_ylim(ymin-0.005,ymax+0.005)
+
+  plt.xlabel('$s$', fontsize=20)
+  plt.ylabel('$E\,\mathrm{[a.u.]}$', fontsize=20)
+
+  # plt.legend(bbox_to_anchor=(0.35, 0.05), loc=3, borderaxespad=0.5)
+  plt.legend(loc=1, borderaxespad=0.5)
 
   plt.savefig("%s.pdf"%(filename), bbox_inches="tight", pad_inches=0.05)
   plt.show()
+  plt.close()
 
   return
 
-def plot_norms(data, filename):
+def plot_norms_loglog(data, filename):
 
   # diagonals vs. eigenvalues on absolute scale
   fig, ax = plt.subplots()
 
-  plt.loglog(data[:,0], data[:,6], basex=10, color='blue', marker='o', markersize=10)
-  plt.loglog(data[:,0], data[:,8], basex=10, color='red',  marker='s', markersize=9)
+  plt.loglog(data[:,0], data[:,6], basex=10, color='blue', marker='o', markersize=9, label='$||\eta||$')
+  plt.loglog(data[:,0], data[:,8], basex=10, color='red',  marker='s', markersize=9, label='$||\Gamma_{od}||$')
 
   myPlotSettings(ax)
   ax.xaxis.set_major_formatter(FuncFormatter(myLogLabels))
   ax.yaxis.set_major_formatter(FuncFormatter(myLogLabels))
+  plt.xlabel('$s$', fontsize=20)
+  plt.ylabel('$||\eta||, ||\Gamma_{od}||\, [\mathrm{a.u.}]$', fontsize=20)
+
+  plt.legend(bbox_to_anchor=(0.05, 0.05), loc=3, borderaxespad=0.5)
   
   plt.savefig("%s.norms.pdf"%(filename.rsplit(".",1)[0]), bbox_inches="tight", pad_inches=0.05)
   plt.show()
+  plt.close()
+
+  return
+
+def plot_norms_semilog(data, filename):
+
+  # diagonals vs. eigenvalues on absolute scale
+  fig, ax = plt.subplots()
+
+  plt.semilogy(data[:,0], data[:,6], basey=10, color='blue', marker='o', markersize=9, label='$||\eta||$')
+  plt.semilogy(data[:,0], data[:,8], basey=10, color='red',  marker='s', markersize=9, label='$||\Gamma_{od}||$')
+
+  myPlotSettings(ax)
+  ax.xaxis.set_major_formatter(FuncFormatter(myLabels))
+  ax.yaxis.set_major_formatter(FuncFormatter(myLogLabels))
+  plt.xlabel('$s$', fontsize=20)
+  plt.ylabel('$||\eta||, ||\Gamma_{od}||\, [\mathrm{a.u.}]$', fontsize=20)
+
+  plt.legend(bbox_to_anchor=(0.05, 0.05), loc=3, borderaxespad=0.5)
+  
+  plt.savefig("%s.norms.semilog.pdf"%(filename.rsplit(".",1)[0]), bbox_inches="tight", pad_inches=0.05)
+  plt.show()
+  plt.close()
 
   return
 
@@ -94,7 +132,8 @@ def main():
   data = np.loadtxt(filename, skiprows=2)  
 
   plot_energies(data, exact, filename)
-  plot_norms(data,filename)
+  plot_norms_loglog(data,filename)
+  plot_norms_semilog(data,filename)
 
   return
 
