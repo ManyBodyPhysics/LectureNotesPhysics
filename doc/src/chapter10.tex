@@ -3405,13 +3405,7 @@ Waiting for Titus...
 % SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{\label{sec:perspectives}Conclusions and Perspectives}
-\begin{itemize}
-\item Magnus
-\item Multi-reference
-\item TVS-IMSRG
-\end{itemize}
 
 
 In this work, we have presented a comprehensive review of the IM-SRG
@@ -3474,20 +3468,20 @@ needed for fundamental symmetry tests.
 \subsection{Technical Advances: Magnus Expansion and Effective Operators}
 \label{sec:magnus}
 
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=.6\columnwidth]{\fdir/HEG_diffstepsizes}
-\caption{\label{fig:timestep_HEG}
-(Color online) Flowing IM-SRG(2) and Magnus(2) correlation energy for 
-the electron gas, $E_0(s)-E_{\rm HF}$, for Wigner-Seitz radii of a)
-$r_s=5.0$ and b) $r_s=0.5$. The solid black line corresponds to the
-IM-SRG(2) results using an adaptive solver based on the
-Adams-Bashforth method, while the other lines correspond to Magnus(2)
-and IM-SRG(2) results using different Euler step sizes. The red
-circles denote the quasi-exact FCIQMC results of
-Ref.~\cite{Shepherd:2012hl}.}
-\end{center}
-\end{figure}
+% \begin{figure}[t]
+% \begin{center}
+% \includegraphics[width=.6\columnwidth]{\fdir/HEG_diffstepsizes}
+% \caption{\label{fig:timestep_HEG}
+% (Color online) Flowing IM-SRG(2) and Magnus(2) correlation energy for 
+% the electron gas, $E_0(s)-E_{\rm HF}$, for Wigner-Seitz radii of a)
+% $r_s=5.0$ and b) $r_s=0.5$. The solid black line corresponds to the
+% IM-SRG(2) results using an adaptive solver based on the
+% Adams-Bashforth method, while the other lines correspond to Magnus(2)
+% and IM-SRG(2) results using different Euler step sizes. The red
+% circles denote the quasi-exact FCIQMC results of
+% Ref.~\cite{Shepherd:2012hl}.}
+% \end{center}
+% \end{figure}
 
 Despite modest computational scaling and the flexibility to tailor the
 generator to different systems, IM-SRG calculations based on the
@@ -3506,17 +3500,16 @@ stiff.
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=.6\columnwidth]{\fdir/O16_diffstepsizes}
+\includegraphics[width=.6\columnwidth]{\fdir/O16_n2loSAT_eMax8_hw24_ground_state.pdf}
 \caption{\label{fig:timestep_O16}
-(Color online) Flowing IM-SRG(2) and Magnus(2) ground-state energy, 
-$E_0(s)$, for $^{16}$O starting from the N$^3$LO NN interaction of
-Entem and Machleidt~\cite{Entem:2003th,Machleidt:2011bh} evolved by
-the free-space SRG to a) $\lambda=2.7$ fm$^{-1}$ and $\lambda = 2.0$
-fm$^{-1}$. The solid black line corresponds to IM-SRG(2) results using
-an adaptive solver based on the Adams-Bashforth method, while the
-other lines correspond to Magnus(2) and IM-SRG(2) results using
-different Euler step sizes. The calculations were done in an
-$e_{max}=8$ model space, with $\hbar\omega = 24$~MeV for the
+(Color online) IM-SRG(2) and Magnus(2) ground-state energy of $\nuc{O}{16}$, 
+starting from the \NNLOsat{} $NN+3N$ interaction \cite{Ekstrom:2015fk}. The 
+solid black line is the IMSRG(2) flow obtained with
+an adaptive solver based on the Adams-Bashforth method \cite{Radhakrishnan:1993fk}, 
+while the other lines show Magnus(2) and IMSRG(2) flows 
+obtained with a simple Forward Euler method and different 
+fixed step sizes. All calculations were done in an
+$\eMax=8$ model space, with $\hbar\omega = 24$~MeV for the
 underlying harmonic-oscillator basis.}
 \end{center}
 \end{figure}

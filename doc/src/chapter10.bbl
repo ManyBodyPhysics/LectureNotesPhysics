@@ -692,12 +692,6 @@ T.T.S. Kuo, J.~Shurpin, K.C. Tam, E.~Osnes, P.J. Ellis, Ann. Phys.
 \bibitem{Parzuchowski:2016pi}
 N.M. Parzuchowski, T.D. Morris, S.K. Bogner,   (2016)
 
-\bibitem{Shepherd:2012hl}
-J.J. Shepherd, G.H. Booth, A.~Alavi, J. Chem. Phys. \textbf{136}(24), 244101
-  (2012).
-\newblock
-  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/136/24/10.1063/1.4720076}
-
 \bibitem{Magnus:1954xy}
 W.~Magnus, Comm. Pure Appl. Math. \textbf{7}(4), 649 (1954).
 \newblock \doi{10.1002/cpa.3160070404}.
@@ -709,6 +703,12 @@ S.~Blanes, F.~Casas, J.~Oteo, J.~Ros, Phys. Rept. \textbf{470}(5--6), 151
 \newblock \doi{http://dx.doi.org/10.1016/j.physrep.2008.11.001}.
 \newblock
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370157308004092}
+
+\bibitem{Shepherd:2012hl}
+J.J. Shepherd, G.H. Booth, A.~Alavi, J. Chem. Phys. \textbf{136}(24), 244101
+  (2012).
+\newblock
+  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/136/24/10.1063/1.4720076}
 
 \bibitem{Peierls:1973fk}
 R.E. Peierls, Proc. R. Soc. London A \textbf{333}(1593), 157 (1973).
