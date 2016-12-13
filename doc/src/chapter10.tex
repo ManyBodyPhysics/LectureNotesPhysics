@@ -142,11 +142,11 @@ Justin G.~Lietz \at Department of Physics and Astronomy and National Superconduc
 Titus Morris \at Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA,
 and Physics Division, Oak Ridge National Laboratory, Oak Ridge, Tennessee, USA, \email{titusmorris@gmail.com}, \and 
 % 
+Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and 
+% 
 Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and 
 % 
 Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and 
-% 
-Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and 
 % 
 Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
 \maketitle
@@ -3405,7 +3405,7 @@ Waiting for Titus...
 % SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\label{sec:perspectives}Conclusions and Perspectives}
+\section{\label{sec:perspectives}Current Developments}
 
 
 In this work, we have presented a comprehensive review of the IM-SRG
@@ -3465,8 +3465,8 @@ needed for fundamental symmetry tests.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Technical Advances: Magnus Expansion and Effective Operators}
-\label{sec:magnus}
+\subsection{\label{sec:magnus}Magnus Expansion and Effective Operators}
+
 
 % \begin{figure}[t]
 % \begin{center}
@@ -3767,6 +3767,24 @@ nonperturbatively.  Calculations without initial 3N forces
 of ground and excited states for open-shell nuclei may be possible
 with this approach.
 
+\begin{figure}[t]
+  \setlength{\unitlength}{0.3\textwidth}
+  \begin{center}
+  \begin{picture}(1.2000,0.9000)
+    \put(0.1000,0.0000){\includegraphics[width=\unitlength]{\fdir/valence_space.pdf}}
+    \put(0.0000,0.0900){$h$}
+    \put(0.0000,0.3400){$v$}
+    \put(0.0000,0.5900){$q$}
+    \put(1.1200,0.1500){$\varepsilon_F$}
+  \end{picture}
+  \end{center}
+  \caption{\label{fig:valence_space}
+    Separation of the single-particle basis into hole (h), valence particle (v)
+    and non-valence particle (q) states. The Fermi energy of the fully occupied
+    core, $\varepsilon_F$, is indicated by the red dashed line.
+  }
+\end{figure}
+
 The utility of the IM-SRG lies in the freedom to tailor the definition
 of $H^{\rm{od}}$ to a specific problem.  For instance, to construct a
 Shell Model Hamiltonian for a nucleus comprised of $A_v$ valence
@@ -3781,28 +3799,37 @@ addition, we decouple states with $A_v$ particles in the valence
 space, \mbox{$:\!\aaO_{v_1}\ldots\aaO_{v_{A_v}}\!\!:\!\!\ket{\Phi}$},
 from states containing non-valence states.
 
+% \begin{figure}[t]
+% \begin{center}
+% % \minipage{0.335\textwidth}
+% % \includegraphics[width=\linewidth,clip=]{fig/22O_arnps}
+% % \endminipage\hfill
+% % \minipage{0.3\textwidth}
+% % \includegraphics[width=\linewidth,clip=]{fig/23O_arnps}
+% % \endminipage\hfill
+% % \minipage{0.3\textwidth}
+% % \includegraphics[width=\linewidth,clip=]{fig/24O_arnps}
+% % \endminipage
+% \end{center}
+% \caption{Excited-state spectra of $^{22,23,24}$O based on chiral NN+3N
+% interactions and compared with experiment. Figures adapted from
+% Ref.~\cite{Bogner:2014tg}. The MBPT results are performed in an extended
+% $sdf_{7/2}p_{3/2}$ space~\cite{Holt:2013fk} based on low-momentum NN+3N
+% interactions, while the IM-SRG~\cite{Bogner:2014tg} and CC effective
+% interaction (CCEI)~\cite{Jansen:2014qf} results are in the $sd$ shell from
+% the SRG-evolved NN+3N-full Hamiltonian with $\hbar \omega=20$~MeV
+% (CCEI and dotted IM-SRG) and $\hbar \omega=24$~MeV (solid IM-SRG). The
+% dashed lines show the neutron separation energy.
+% Figure taken from Ref.~\cite{Hebeler:2015xq}.\label{fig:Ospectra}}
+% \end{figure}
+
 \begin{figure}[t]
-\begin{center}
-% \minipage{0.335\textwidth}
-% \includegraphics[width=\linewidth,clip=]{fig/22O_arnps}
-% \endminipage\hfill
-% \minipage{0.3\textwidth}
-% \includegraphics[width=\linewidth,clip=]{fig/23O_arnps}
-% \endminipage\hfill
-% \minipage{0.3\textwidth}
-% \includegraphics[width=\linewidth,clip=]{fig/24O_arnps}
-% \endminipage
-\end{center}
-\caption{Excited-state spectra of $^{22,23,24}$O based on chiral NN+3N
-interactions and compared with experiment. Figures adapted from
-Ref.~\cite{Bogner:2014tg}. The MBPT results are performed in an extended
-$sdf_{7/2}p_{3/2}$ space~\cite{Holt:2013fk} based on low-momentum NN+3N
-interactions, while the IM-SRG~\cite{Bogner:2014tg} and CC effective
-interaction (CCEI)~\cite{Jansen:2014qf} results are in the $sd$ shell from
-the SRG-evolved NN+3N-full Hamiltonian with $\hbar \omega=20$~MeV
-(CCEI and dotted IM-SRG) and $\hbar \omega=24$~MeV (solid IM-SRG). The
-dashed lines show the neutron separation energy.
-Figure taken from Ref.~\cite{Hebeler:2015xq}.\label{fig:Ospectra}}
+  \begin{center}
+    \includegraphics[width=0.78\textwidth]{\fdir/valence_decoupling.pdf}
+  \end{center}
+  \caption{\label{fig:valence_decoupling}
+    Schematic view of IMSRG valence-space decoupling for two valence nucleons (p$\,=\,$v,\,q).
+  }
 \end{figure}
 
 After the IM-SRG derivation of the valence-space Hamiltonian, the
@@ -3819,11 +3846,145 @@ island-of-inversion region and potentially the full $sd$-shell (and
 higher) neutron dripline.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+In this chapter, we have presented a pedagogical introduction to the
+SRG and IMSRG, and discussed their applications in the context of the
+nuclear many-body problem. 
 
-\section{Acknowledgements}
-This work was supported by NSF Grant No.~PHY-1404159 (Michigan State University).
-\tbd{HH startup, NSF?}
 
+The RG perspective is a key element that is woven into all of 
+the applications discussed in this review, and the future directions 
+mentioned in our look ahead. In my (admittedly biased) view, this
+is a unique feature of the IMSRG framework that sets it apart
+from the other many-body methods that we touched upon during this
+work. When the comparison with those other methods and experimental
+data is our first and foremost concern, we are primarily interested 
+in the $s\to\infty$ limit of the IMSRG or MR-IMSRG evolution, but
+the flow trajectory offers a wealth of additional insight. By considering
+points along the trajectory, we can gain a new understanding of
+how many-body correlations are reshuffled between the wave function
+and the Hamiltonian, or different pieces of the Hamiltonian, making
+transparent what is only implicitly assumed in other methods. Like 
+in the free-space SRG (or other RG methods), we have the freedom
+to work at intermediate values of $s$ if this is more practical than
+working at $s=0$ (in appropriate units) or in the limit $s\to\infty$,
+especially if we would incur unacceptable numerical errors at either
+of these extremes (see, e.g., \cite{Gebrerufael:2016rp,Li:2015nq,Li:2016rm}). 
+This is the inherent power of a framework that 
+integrates many-body and renormalization group techniques, and the
+reason why the IMSRG is an extremely versatile and valuable
+tool for quantum many-body theory.
+
+
+
+% strived to give a pedagogical
+% introduction to the description of nuclear many-body physics in the 
+% In-Medium SRG framework. The IMSRG belongs to a family of 
+% efficient, systematically extendable many-body approaches that have 
+% extended the reach of \emph{ab initio} nuclear structure theory well
+% into the medium-mass region of the nuclear chart in recent years 
+% (see, e.g., \cite{Binder:2014fk,Hergert:2016jk}). The MR-IMSRG and
+% IMSRG+SM, specifically, are ideally suited to investigate 
+% the properties of open-shell nuclei with a systematic assessment of
+% the theoretical uncertainties. The consistency of the results from
+% these two different approaches that are rooted in the same framework 
+% is highly encouraging, promising many opportunities for cross-validating 
+% and interpreting nuclear structure results in future applications
+% (cf.~sections \ref{sec:groundstate} and \ref{sec:sm}). The capability 
+% to confront nuclear interactions from Chiral EFT with a wealth of 
+% new many-body data will be of great importance in the ongoing effort 
+% of understanding and improving these interactions, which are currently 
+% the dominant source of uncertainty in all \emph{ab initio} many-body 
+% calculations (see section \ref{sec:groundstate}).
+
+% Of course, there is much work to be done. A variety of efforts are 
+% underway to further extend the capabilities of the 
+% MR-IMSRG and IMSRG+SM approaches. The MR-IMSRG allows
+% us to explore both dynamic and static correlations. The
+% former are due to the dynamics of correlated nucleon pairs, triples,
+% etc.~in the nucleus, which is captured well by the (generalized)
+% particle-hole expansion that underlies the MR-IMSRG flow equations.
+% In contrast, static correlations are collective and would require
+% us to treat up to $ApAh$ correlations, in exact and numerically
+% unfeasible IMSRG($A$) or MR-IMSRG($A$) truncation schemes. However, collective
+% correlations can be treated efficiently by breaking and restoring 
+% symmetries of the nuclear wave function, and using the Generator
+% Coordinate Method to mix various projected configurations (see, e.g.,
+% \cite{Ring:1980bb}). We can calculate the density matrices of such
+% many-body wave functions, and use them as reference states for the 
+% MR-IMSRG(2), combining dynamic and static correlation. The use of 
+% PNP reference states in our applications of the MR-IMSRG(2) 
+% to open-shell nuclei (see section \ref{sec:groundstate}) is the 
+% simplest possible example of such a combined approach, and the use
+% of GCM reference states with richer collective structures is being 
+% explored now.
+
+% Another important new development is the successful use of Magnus
+% expansion techniques to explicitly construct the unitary transformation 
+% that is generated by the IMSRG \cite{Morris:2015ve}. This greatly 
+% simplifies the evaluation of general observables,
+% which can be obtained with a simple application of $U(s)$ to the operator
+% of interest rather than
+% a concurrent evolution alongside the Hamiltonian by means of additional
+% sets of flow equations. Moreover, the Magnus methods make it possible
+% to construct systematic approximations to the complete IMSRG(3) flow, 
+% analogous in many-body content and computational efficiency to 
+% non-iterative triples methods in CC \cite{Taube:2008kx,Taube:2008vn,Piecuch:2005dp,Binder:2013fk}.
+% The extension of this approach to the MR-IMSRG is in progress.
+
+% The triples corrections to IMSRG Hamiltonians will also be extremely
+% valuable for the IMSRG+SM approach, allowing us to test the many-body
+% convergence of the valence-space interaction and operators. The
+% construction of valence-space transition operators is now in full 
+% swing, with the prospect of shedding new light on the emergence of
+% the phenomenological effective charges. A new refinement of the 
+% targeted normal ordering procedure was presented in Ref.~\cite{Stroberg:2016th}, 
+% improving once again the agreement between IMSRG+SM and
+% large-scale MR-IMSRG calculations.
+
+% As an alternative to the exact valence-space diagonalization in the
+% IMSRG+SM approach, we are working on combining the IMSRG with 
+% Equation-of-Motion (EoM) methods (cf.~\cite{Shavitt:2009}). The basic
+% framework has been developed and tested for the single-reference
+% case \cite{Parzuchowski:2016pi}, and we aim to generalize it to
+% multireference applications as a next step, incorporating triples
+% corrections to the (MR-)IMSRG evolved Hamiltonian at the same time.
+
+% Last but not least, the IMSRG+SM and IMSRG based EoM approaches
+% are, in essence, established techniques for many-body calculations
+% whose results are (possibly) enhanced through the use of an IMSRG
+% improved effective Hamiltonian. We have begun to explore the use of
+% such IMSRG and MR-IMSRG improved Hamiltonians as input for other
+% methods. A promising combination of MR-IMSRG and NCSM is discussed
+% in \cite{Gebrerufael:2016rp}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{acknowledgement}
+The authors are indebted to a multitude of colleagues for many stimulating 
+discussions of the SRG and IMSRG that are reflected in this work. We are
+particularly grateful to Angelo Calci, Thomas Duguet, Dick Furnstahl, 
+Kai Hebeler, Morten Hjorth-Jensen, Jason Holt, Robert Roth, Achim Schwenk, 
+Ragnar Stroberg, and Kyle Wendt.
+
+The preparation of this chapter was supported in part by NSF Grant No.~PHY-1404159 
+and the NUCLEI SciDAC Collaboration under the U.S.~Department of Energy Grant 
+No.~DE-SC0008511. H.~H. gratefully acknowledges the National Superconducting 
+Cyclotron Laboratory (NSCL)/Facility for Rare Isotope Beams (FRIB) and Michigan 
+State University (MSU) for startup support during the preparation of this work.
+Computing resources were provided by the MSU High-Performance Computing Center 
+(HPCC)/Institute for Cyber-Enabled Research (iCER).
+\end{acknowledgement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

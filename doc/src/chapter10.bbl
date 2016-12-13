@@ -918,26 +918,6 @@ E.~Dikmen, A.F. Lisetskiy, B.R. Barrett, P.~Maris, A.M. Shirokov, J.P. Vary,
 \newblock \doi{10.1103/PhysRevC.91.064301}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.91.064301}
 
-\bibitem{Bogner:2014tg}
-S.K. Bogner, H.~Hergert, J.D. Holt, A.~Schwenk, S.~Binder, A.~Calci,
-  J.~Langhammer, R.~Roth, Phys. Rev. Lett. \textbf{113}, 142501 (2014).
-\newblock \doi{10.1103/PhysRevLett.113.142501}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.113.142501}
-
-\bibitem{Jansen:2014qf}
-G.R. Jansen, J.~Engel, G.~Hagen, P.~Navratil, A.~Signoracci, Phys. Rev. Lett.
-  \textbf{113}, 142502 (2014).
-\newblock \doi{10.1103/PhysRevLett.113.142502}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.113.142502}
-
-\bibitem{Hebeler:2015xq}
-K.~Hebeler, J.D. Holt, J.~Men{\'e}ndez, A.~Schwenk, Annual Review of Nuclear
-  and Particle Science \textbf{65}(1), 457 (2015).
-\newblock \doi{10.1146/annurev-nucl-102313-025446}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1146/annurev-nucl-102313-025446}
-
 \bibitem{Caceres:2015fk}
 L.~C\'{a}ceres, A.~Lepailleur, O.~Sorlin, M.~Stanoiu, D.~Sohler,
   Z.~Dombr\'{a}di, S.K. Bogner, B.A. Brown, H.~Hergert, J.D. Holt, A.~Schwenk,
@@ -950,6 +930,10 @@ L.~C\'{a}ceres, A.~Lepailleur, O.~Sorlin, M.~Stanoiu, D.~Sohler,
   C.~Timis, Z.~Vajta, Phys. Rev. C \textbf{92}, 014327 (2015).
 \newblock \doi{10.1103/PhysRevC.92.014327}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.014327}
+
+\bibitem{Gebrerufael:2016rp}
+E.~Gebrerufael, K.~Vobig, H.~Hergert, R.~Roth,   (2016).
+\newblock \urlprefix\url{https://arxiv.org/abs/1610.05254}
 
 \bibitem{Bardeen:1957bz}
 J.~Bardeen, L.N. Cooper, J.R. Schrieffer, Phys. Rev. \textbf{108}, 1175 (1957).
