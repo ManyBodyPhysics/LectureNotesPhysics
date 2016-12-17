@@ -9,7 +9,9 @@
 
 
 %%%%% calligraphics
+\newcommand{\AC}{\ensuremath{\mathcal{A}}}
 \newcommand{\OC}{\ensuremath{\mathcal{O}}}
+\newcommand{\PC}{\ensuremath{\mathcal{P}}}
 
 %%%%% isotope notation
 \newcommand{\nuc}[2]{\ensuremath{^{#2}\mathrm{#1}}}
@@ -3421,60 +3423,6 @@ of effective Hamiltonians for use in configuration interaction and
 Equation-of-Motion methods, which allows us to tackle excited states 
 (Sec.~\ref{sec:current_hamiltonians}).
 
-% In this work, we have presented a comprehensive review of the IMSRG
-% as a powerful \emph{ab initio} method for nuclei. The IMSRG employs
-% the flow-equation formulation of the SRG to decouple an $A$-body
-% reference state from particle-hole excitations, thus solving the
-% many-body Schr\"odinger equation. Compared to other \emph{ab initio}
-% approaches for medium-mass nuclei, we have shown that the IMSRG is
-% competitive with CC and SCGF calculations, both in terms of accuracy and of
-% computational efficiency.
-
-% In the IMSRG, the Hamiltonian is normal ordered with respect to the
-% reference state and typically truncated at the normal-ordered two-body
-% level. In this way, 3N interactions can be naturally included in a
-% normal-ordered two-body approximation. Due to the many ongoing
-% developments of 3N forces, we have focused in this review on a
-% detailed derivation at the NN level, but discuss highlights of first
-% IMSRG calculation including 3N interactions in Sec.~\ref{sec:3N}.
-
-% Going beyond the closed-shell or single-reference version, the IMSRG
-% has been recently generalized to a multi-reference formulation, as
-% discussed in Sec.~\ref{sec:mrimsrg}. The multi-reference IMSRG (MR-IMSRG) is
-% based on a generalized version of normal-ordering and Wick's
-% theorem. In principle, one can use 
-% arbitrary reference states that are
-% characterized by one-, two- and three-body density matrices. In the
-% first multi-reference applications, particle-number-projected
-% Hartree-Fock-Bogoliubov states were used as reference states for
-% describing the even nuclei throughout semi-magic isotopic chains.
-
-% A great asset of the IMSRG is the flexibility and simplicity of its
-% basic concept. Through different choices of generators and decoupling
-% patterns, the numerical characteristics and efficiency of the methods
-% can be controlled and tailored for specific applications. The
-% in-medium evolved Hamiltonian is directly accessible, Hermitian and readily
-% usable for subsequent nuclear structure calculations.
-
-% As a specific application that exploits this flexibility,
-% nonperturabtive derivations of valence-space Hamiltonians have been
-% achieved. In the IMSRG for open-shell nuclei, states with $A_v$
-% particles in the valence space are additionally decoupled from those
-% containing non-valence admixtures. This gives the energy of the
-% closed-shell core (as in the standard IMSRG), but also valence-space
-% single-particle energies and residual interactions. The resulting
-% valence-space Hamiltonian can then be diagonalized using large-scale
-% shell-model methods. The IMSRG provides for the first time a
-% nonperturbative derivation of effective interactions in the shell
-% model based on nuclear forces without adjustments. This is discussed
-% in Sec.~\ref{sec:shell_model}.
-
-% Finally, we highlight novel technical advances of the Magnus expansion
-% for effective operators in Sec.~\ref{sec:magnus}. This enables a
-% consistent evolution of operators in the IMSRG for applications to
-% nuclear structure, electroweak transitions, and for key matrix elements
-% needed for fundamental symmetry tests.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3596,154 +3544,503 @@ new observables in future studies.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{\label{sec:current_mrimsrg}The Multi-Reference IMSRG}
 
 
-The IMSRG formalism and applications presented so far use a single
-Slater determinant as the reference state, ideally a solution of the
-Hartree-Fock equations (cf.~Sec.~\ref{sec:refstate}). Thus, the
-standard IMSRG belongs to the class of single-reference methods, such
-as finite-order MBPT or CC. In nuclear physics, these approach are
-only appropriate for the description of nuclei around (sub-)shell
-closures.
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Correlated Reference States}
+Many-body bases built from a single Slater determinant and its particle-hole
+excitations work best for systems with large gaps in the single-particle 
+spectrum, e.g., closed-shell nuclei. If the gap is small, particle-hole 
+excited basis states can be near-degenerate with the reference determinant, 
+which results in strong configuration mixing. When the mixing involves 
+configurations in which many nucleons are excited simultaneously, many-body 
+physicists speak of \emph{static} or \emph{collective correlations} in the 
+wave function, as opposed to \emph{dynamic correlations} that are caused by 
+the excitations of a small number of nucleons only. 
 
-In open-shell nuclei, correlations cause the emergence of phenomena
-like nuclear superfluidity or intrinsic deformation. With
-reference-state constructions, one can attempt to capture these
-effects at the mean-field level to some extent, by breaking symmetries
-either spontaneously or explicitly. Pairing correlations can be
-treated in the Hartree-Fock-Bogoliubov (HFB) formalism, which is
-formulated in terms of Slater determinants of fermionic
-quasi-particles that are superpositions of particles and
-holes. Intrinsic deformation will develop if the single-particle basis
-is not symmetry restricted, e.g., in an $m$-scheme formalism, and
-rotational symmetry breaking is energetically favored.
+Important examples are the emergence of nuclear superfluidity \cite{Dean:2003ei}
+or diverse rotational and vibrational bands in open-shell nuclei (see, e.g., \cite{Bohr:1999vn}).
+These phenomena are conveniently described by using the concept of intrinsic
+wave functions that explicitly break appropriate symmetries of the Hamiltonian.
+For instance, nuclear superfluidity can be treated in to leading-order in 
+the self-consistent Hartree-Fock-Bogoliubov (HFB) approach, which is formulated 
+in terms of anti-symmetrized product states of fermionic quasi-particles that 
+are superpositions of particles and holes. Because of this, the intrinsic HFB wave 
+functions are superpositions of states with different particle numbers. The
+broken symmetries must eventually be restored by means of projection methods,
+which have a long history in nuclear many-body theory
+\cite{Peierls:1973fk,Ring:1980bb,Egido:1982sd,Robledo:1994qf,Flocard:1997fx,Sheikh:2000xx,Dobaczewski:2007hh,Bender:2009rv,Duguet:2009ph,Lacroix:2009aj,Lacroix:2012vn,Duguet:2015ye}).
 
-An $m$-scheme IMSRG or CC calculation may be able to converge to a
-solution if the excitation spectrum of the symmetry-broken reference
-state has a sufficiently large gap, i.e., a single dominant
-configuration. If such a solution is found, one must eventually
-restore the broken symmetries through the application of projection
-methods, which have a long track record in nuclear physics (see, e.g.,
-\cite{Peierls:1973fk,Ring:1980bb,Egido:1982sd,Robledo:1994qf,Flocard:1997fx,Sheikh:2000xx,Dobaczewski:2007hh,Bender:2009rv,Duguet:2009ph,Lacroix:2009aj,Lacroix:2012vn,Duguet:2015ye}). At
-this point, one is no longer dealing with a single-reference problem,
-although the projected states retain an imprint of the original
-symmetry-broken (single-)reference states that simplifies practical
-implementations.
+The standard IMSRG framework as described in Sec.~\ref{sec:imsrg} works
+with an uncorrelated reference state, and therefore puts the entire onus
+of describing correlations on the transformation $\UO(s)$. The
+computational cost limits us to the IMSRG(2) scheme, or an eventual
+approximate IMSRG(3) that is roughly analogous to completely renormalized  
+Coupled Cluster schemes with approximate triples \cite{Binder:2013fk}. An 
+IMSRG(4), let alone the complete IMSRG(A) scheme, are not feasible. Thus, 
+the IMSRG, like CC, is best suited to the description of dynamic correlations.
+We can mitigate this shortcoming by extending the IMSRG to work with correlated
+reference states, and building static correlation that would otherwise require
+an IMSRG(4),\ldots scheme directly into the reference state. This leads us to
+the Multi-Reference IMSRG (MR-IMSRG) \cite{Hergert:2013ij,Hergert:2014vn,Hergert:2016ng}, 
+which is constructed using the generalized normal ordering and Wick's
+theorem developed by Kutzelnigg and Mukherjee \cite{Kutzelnigg:1997fk,Mukherjee:1997yg}.
 
-In the domain of exotic neutron-rich nuclei, the single-reference
-paradigm may also break down. The complex interplay of nuclear
-interactions, many-body correlations, and, in the dripline region,
-continuum effects, can cause strong competition between configurations
-with different intrinsic structures. This manifests in phenomena like
-the erosion and emergence of shell closures
-\cite{Wienholtz:2013bh,Holt:2014vn,Soma:2014eu,Hergert:2014vn}, or the
-appearance of the so-called islands of inversion (see, e.g.,
-\cite{Brown:2010xr}). Their description requires a true
-multi-reference treatment.
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Generalized Normal Ordering}
+In Ref.~\cite{Kutzelnigg:1997fk}, Kutzelnigg and Mukherjee developed a 
+generalized normal ordering for arbitrary reference states. In the brief
+discussion that follows, we use the slightly different notation of 
+Kong \emph{et al.}~\cite{Kong:2010kx}.
 
-The Multi-Reference IMSRG (MR-IMSRG) is capable of dealing with the
-aforementioend scenarios
-\cite{Hergert:2013ij,Hergert:2014vn,Hergert:2015qd}. It generalizes
-the IMSRG formalism discussed in this work to arbitrary correlated
-reference states, using the multi-reference normal ordering and Wick's
-theorem developed by Kutzelnigg and Mukherjee
-\cite{Kutzelnigg:1997fk,Mukherjee:1997yg}. The idea of decoupling the
-ground state from excitations readily carries over, except that
-excited states are given by
-\begin{equation*}
-\nord{\aaO_i\aO_j\!}\!\ket{\Phi},\,\nord{\aaO_i\aaO_j\aO_l\aO_k\!}\!\ket{\Phi},\ldots\,,
-\end{equation*}
-and the single-particle states are no longer of pure particle or hole
-character.  The flow equation formulation of the MR-IMSRG makes it
-possible to avoid complications due to the non-orthogonality and
-possible linear dependency of these general excitations (see
-\cite{Hergert:2015qd} for more details).
+First, we introduce a pseudo-tensorial notation for strings of creation 
+and annihilation operators, to facilitate book-keeping and make the formalism
+more compact. A product of $k$ creators and annihilators each is written as
+\begin{equation}
+  \AO^{i_1\ldots i_k}_{j_1\ldots j_k}\equiv
+  \aaO_{i_1}\ldots\aaO_{i_k}\aO_{j_k}\ldots\aO_{j_1}\,.
+\end{equation}
+We do not consider particle-number changing operators in the present work,
+because they cause ambiguities in the contraction and sign rules for the
+$A$ operators that are defined in the following. The anticommutation relations 
+imply
+\begin{equation}\label{eq:def_A_permutations}
+  \AO^{\PC(i_1 \ldots i_k)}_{\PC'(j_1 \ldots j_k)} 
+  = (-1)^{\pi(\PC)+\pi(\PC')} \AO^{i_1\ldots i_k}_{j_1\ldots j_k}\,,
+\end{equation}
+where $\pi(\PC)=\pm1$ indicates the parity (or signature) of a permutation 
+$\PC$. A general $k$-body operator can now be written as
+\begin{equation}
+ O^{(k)} = \frac{1}{(k!)^2}\sum_{\substack{i_1\ldots i_k\\j_1\ldots j_k}}
+  o^{i_1\ldots i_k}_{j_1\ldots j_k}\AO^{i_1\ldots i_k}_{j_1\ldots j_k}\,,
+\end{equation}
+where we assume that the coefficients $o^{i_1\ldots i_k}_{j_1\ldots j_k}$
+are antisymmetrized, and therefore also obey equation \eqref{eq:def_A_permutations}
+under index permutations. 
 
-While only one-body density matrices appear in the contractions of the
-standard Wick's theorem (see Eqs.~\eqref{eq:def_particle_contraction}
-and \eqref{eq:def_hole_contraction}), additional contractions that
-involve two- and higher-body density matrices enter that encode the
-correlation content of the reference state. In the MR-IMSRG
-framework, correlations that are hard to capture as few-body
-excitations of the reference state can be built directly into the
-reference state.
+Next, we introduce \emph{irreducible $k$-body density matrices $\lambda^{(k)}$}. In
+the one-body case, we have the usual density matrix
+\begin{equation}
+  \lambda^{i}_{j} \equiv \matrixe{\Phi}{\AO^{i}_{j}}{\Phi}\,,
+\end{equation}
+and for future use, we also define
+\begin{equation}
+  \xi^{i}_{j} \equiv \lambda^{i}_{j} - \delta^{i}_{j}\,.
+\end{equation}
+Up to a factor $(-1)$ that unifies the sign rules for one-body contractions
+presented below, $\xi^{(1)}$ is simply the generalization of the hole 
+density matrix for a correlated state (cf.~Eq.~\eqref{eq:def_hole_contraction}. 
+In the natural orbital basis, both one-body density matrices are diagonal,
+with fractional occupation numbers $0\leq n_i, \nn_i \leq 1$ as eigenvalues. 
 
-% \begin{figure}[t]
-%   \setlength{\unitlength}{0.7\textwidth}
-%   \begin{center}
-%     % \hspace{-0.05\unitlength}\input{fig/chi2b3b400_srg0800_OXX_methods_new}
-%   \end{center}
-%   \vspace{-30pt}
-%   \caption{\label{fig:mrimsrg_OXX} Ground-state energies of the oxygen isotopes from MR-IMSRG
-%     and other many-body approaches, based on the NN+3N-full interaction with 
-%     $\Lambda_\text{3N}=400\,\MeV$, evolved to the resolution scale $\lambda=1.88\fmi$
-%     ($\lambda=2.0\fmi$ for the Green's Function ADC(3) results, cf.~\cite{Cipollone:2013uq}).
-%     Black bars indicate experimental data \cite{Wang:2012uq}.
-%     See Ref.~\cite{Hergert:2013ij} for additional details. 
-%   }
-% \end{figure}
+For $k\geq 2$, we denote full density matrices by
+\begin{align}
+  \rho^{i_1 \ldots i_k}_{j_1 \ldots j_k} &= 
+    \dmatrixe{\Phi}{\AO^{i_1 \ldots i_k}_{j_1 \ldots j_k}}\,,
+\end{align}
+and define
+\begin{align}
+  \lambda^{ij}_{kl} &\equiv \rho^{ij}_{kl} - \AC\{\lambda^{i}_{k}\lambda^{j}_{l}\}\,, \label{eq:def_Lambda2}\\
+  \lambda^{ijk}_{lmn}&\equiv \rho^{ijk}_{lmn} - \AC\{\lambda^{i}_{l}\lambda^{jk}_{mn}\} -
+                      \AC\{\lambda^{i}_{l}\lambda^{j}_{m}\lambda^{k}_{n}\}\,,\label{eq:def_Lambda3}
+\end{align}
+etc., where $\AC\{\ldots\}$ fully antisymmetrizes the indices of the expression
+within the brackets, e.g.,
+\begin{equation}
+  \AC\{\lambda^{i}_{k}\lambda^{j}_{l}\} = \lambda^{i}_{k}\lambda^{j}_{l} - 
+    \lambda^{i}_{l}\lambda^{j}_{k}\,.
+\end{equation}
+From equation \eqref{eq:def_Lambda2}, it is easy to see that $\lambda^{(2)}$ encodes the
+two-nucleon correlation content of the reference state $\ket{\Phi}$. If 
+the reference state is a Slater determinant, i.e., an independent-particle
+state, the full two-body density matrix factorizes, and $\lambda^{(2)}$
+vanishes:
+\begin{equation}
+  \lambda^{ij}_{kl} = \rho^{ij}_{kl} - \AC\{\lambda^{i}_{k}\lambda^{j}_{l}\}
+  = \lambda^{i}_{k}\lambda^{j}_{l} -  \lambda^{i}_{k}\lambda^{j}_{l} - 
+    \left(\lambda^{i}_{k}\lambda^{j}_{l} -  \lambda^{i}_{k}\lambda^{j}_{l}\right) = 0\,.
+\end{equation}
+Equation \eqref{eq:def_Lambda3} shows that $\lambda^{(3)}$ is constructed
+by subtracting contributions from three independent particles as well as
+two correlated nucleons in the presence of an independent spectator particle
+from the full three-body density matrix, and therefore encodes the genuine
+three-nucleon correlations. This construction and interpretation  
+generalizes to irreducible density matrices of rank $k$.
 
-In a first applications of the MR-IMSRG framework, we have used
-spherical, particle-number projected HFB vacua to compute the
-ground-state energies of the even oxygen isotopes, starting from
-chiral NN+3N forces \cite{Hergert:2013ij}. This work improved on
-previous Shell Model \cite{Otsuka:2010cr,Holt:2013fk} and CC studies
-\cite{Hagen:2012oq}, that included NN+3N interactions in MBPT or for
-the latter with 3N forces in a more phenomenological, nuclear-matter
-based normal ordering.  Based on a Hamiltonian that is entirely fixed
-in the $A=3,4$ system and consistently evolved to lower resolution, we
-found that MR-IMSRG, various CC methods, and the importance-truncated
-NCSM consistently predict the neutron dripline in $\nuc{O}{24}$ if
-chiral 3N forces are included (see Fig.~\ref{fig:mrimsrg_OXX}), as
-pointed out in the context of the Shell Model in
-Ref.~\cite{Otsuka:2010cr}.
+Normal-ordered one-body operators are constructed in the same manner as in
+the standard normal ordering of Sec.~\ref{sec:nord}:
+\begin{equation}
+  \nord{A^{a}_{b}} \equiv A^{a}_{b} - \matrixe{\Phi}{A^{a}_{b}}{\Phi} = A^{a}_{b} - \lambda^{a}_{b}\,.
+\end{equation}
+For a two-body operator, we have the expansion
+\begin{align}
+  A^{ab}_{cd} &= \nord{A^{ab}_{cd}} 
+                  + \lambda^{a}_{c}\nord{A^{b}_{d}} 
+                  - \lambda^{a}_{d}\nord{A^{b}_{c}} 
+                  + \lambda^{b}_{d}\nord{A^{a}_{c}}
+                  - \lambda^{b}_{c}\nord{A^{a}_{d}}
+                  + \lambda^{a}_{c}\lambda^{b}_{d}
+                  - \lambda^{a}_{d}\lambda^{b}_{c}
+                  + \lambda^{ab}_{cd}\,.\label{eq:nord_2B}
+\end{align}
+As a consequence of equation \eqref{eq:def_A_permutations}, the sign of each
+term is determined by the product of the parities of the permutations 
+that map upper and lower indices to their ordering in the initial operator. 
+Except for the last term, this expression looks like the result for the
+regular normal ordering, with pairwise contractions of indices giving
+rise to one-body density matrices. The last term, a contraction
+of four indices, appears because we are dealing with an arbitrary, 
+correlated reference state here. For a three-body operator, we 
+obtain schematically
+\begin{align}
+  A^{abc}_{def} &= \nord{A^{abc}_{def}} 
+                  + \AC\{\lambda^{a}_{d}\nord{A^{bc}_{ef}} \}
+                  + \AC\{\lambda^{a}_{d}\lambda^{b}_{e}\nord{A^{c}_{f}} \}
+                  + \AC\{\lambda^{ab}_{de}\nord{A^{c}_{f}} \} \notag\\
+                &\hphantom{=} + \lambda^{abc}_{def}
+                  + \AC\{\lambda^{a}_{d}\lambda^{bc}_{ef} \}
+                  + \AC\{\lambda^{a}_{d}\lambda^{b}_{e}\lambda^{c}_{f} \}\,,
+\end{align}
+and the procedure can be extended to higher particle rank in an
+analogous fashion.
 
-Encouraged by this success, we moved on to the calcium and nickel
-isotopic chains \cite{Hergert:2014vn}, where importance-truncated NCSM
-calculations are no longer feasible. The same family of chiral NN+3N
-Hamiltonians that successfully reproduce the oxygen ground-state
-energies overestimate the binding energies in these isotopes by
-several hundred keV per nucleon, in MR-IMSRG and CC (also see
-\cite{Roth:2012qf,Binder:2013zr,Binder:2014fk}), as well as the
-second-order Gor'kov Green's Function approach \cite{Soma:2014eu}.
-The revelation of these deficiencies has led to a variety of efforts
-to improve on the chiral interactions
-\cite{Ekstrom:2015fk,Hagen:2015ve,Epelbaum:2015fb,Epelbaum:2015gf,Entem:2015hl,Entem:2015qf,Carlsson:2015fk,Gezerlis:2014zr,Piarulli:2015rm,Lynn:2015eu}.
+When we work with arbitrary reference states, the regular Wick's 
+theorem of Sec.~\ref{sec:nord} is extended with additional contractions:
+{\setlength{\fboxsep}{1pt}
+\begin{align}
+  \nord{A^{a{\fbox{\scriptsize $b$}}}_{cd}}\nord{A^{ij}_{\fbox{\scriptsize $k$}l}} &= - \lambda^{\fbox{\scriptsize $b$}}_{\fbox{\scriptsize $k$}}\nord{A^{aij}_{cdl}}\,,\label{eq:contract_lambda1B}\\ 
+  \nord{A^{ab}_{\fbox{\scriptsize $c$}d}}\nord{A^{i\fbox{\scriptsize $j$}}_{kl}} &= - \xi^{\fbox{\scriptsize $j$}}_{\fbox{\scriptsize $c$}}\nord{A^{bia}_{dkl}}\,,\label{eq:contract_chi1B}\\[10pt]
+  \nord{A^{\fbox{\scriptsize $ab$}}_{cd}}\nord{A^{ij}_{\fbox{\scriptsize $kl$}}} &= + \lambda^{\fbox{\scriptsize $ab$}}_{\fbox{\scriptsize $kl$}}\nord{A^{ij}_{cd}}\,,\label{eq:contract_lambda2Ba}\\ 
+  \nord{A^{a{\fbox{\scriptsize $b$}}}_{cd}}\nord{A^{\fbox{\scriptsize $i$}j}_{\fbox{\scriptsize $kl$}}} &= - \lambda^{\fbox{\scriptsize $ib$}}_{\fbox{\scriptsize $kl$}}\nord{A^{aj}_{cd}}\,,\label{eq:contract_lambda2Bb}\\ 
+  \nord{A^{ab}_{\fbox{\scriptsize $c$}d}}\nord{A^{\fbox{\scriptsize $ij$}}_{\fbox{\scriptsize $k$}l}} &= - \lambda^{\fbox{\scriptsize $ij$}}_{\fbox{\scriptsize $ck$}}\nord{A^{ab}_{dl}}\,,\label{eq:contract_lambda2Bc}\\ 
+  \nord{A^{\fbox{\scriptsize $ab$}}_{c\fbox{\scriptsize$d$}}}\nord{A^{\fbox{\scriptsize $i$}j}_{\fbox{\scriptsize $kl$}}} &= - \lambda^{\fbox{\scriptsize $abi$}}_{\fbox{\scriptsize $dkl$}}\nord{A^{j}_{c}}\,,\label{eq:contract_lambda3B}\\ 
+  \nord{A^{\fbox{\scriptsize $ab$}}_{\fbox{\scriptsize$cd$}}}\nord{A^{\fbox{\scriptsize $ij$}}_{\fbox{\scriptsize $kl$}}} &= +\lambda^{\fbox{\scriptsize $abij$}}_{\fbox{\scriptsize $cdkl$}}\,.\label{eq:contract_lambda4B}
+\end{align}
+}
+The new contractions \eqref{eq:contract_lambda2Ba}--\eqref{eq:contract_lambda4B} 
+increase the number of terms when we expand operator products. Fortunately,
+the overall increase in complexity is manageable.
+
+Applying the generalized normal ordering to the intrinsic nuclear $A$-body 
+Hamiltonian \eqref{eq:def_Hint} we obtain
+\begin{align}\label{eq:Hno}
+  \HO &= E 
+        + \sum_{ij}f^{i}_{j}\nord{A^{i}_{j}} 
+        + \frac{1}{4}\sum_{ijkl}\Gamma^{ij}_{kl}\nord{A^{ij}_{kl}}
+        + \frac{1}{36}\sum_{ijklmn}W^{ijk}_{lmn}\nord{A^{ijk}_{lmn}}\,,
+\end{align}
+with the individual contributions 
+\begin{align}
+  E &\equiv \left(1-\frac{1}{A}\right)\sum_{ab}t^{a}_{b}\lambda^{a}_{b}
+        + \frac{1}{4}\sum_{abcd}\left(\frac{1}{A}t^{ab}_{cd} + v^{ab}_{cd}\right)\rho^{ab}_{cd}
+      + \frac{1}{36}\sum_{abcdef}v^{abc}_{def} \rho^{abc}_{def}\,,
+      \label{eq:def_mr_E0}\\
+%
+  f^{i}_{j} &\equiv \left(1-\frac{1}{A}\right)t^{i}_{j} + \sum_{ab}\left(\frac{1}{A}t^{ia}_{jb} + v^{ia}_{jb}\right)\lambda^{a}_{b}
+  + \frac{1}{4}\sum_{abcd}v^{iab}_{jcd}\rho^{ab}_{cd}\,,\label{eq:def_mr_f}   \\
+% 
+  \Gamma^{ij}_{kl} &\equiv \frac{1}{A}t^{ij}_{kl} + v^{ij}_{kl} + \sum_{ab}v^{ija}_{klb}\lambda^{a}_{b}\,,\label{eq:def_mr_Gamma}\\
+  W^{ijk}_{lmn}&\equiv v^{ijk}_{lmn}\,.
+\end{align}
+Here, we use the full density matrices for compactness, but it is easy to express
+equations \eqref{eq:def_mr_E0}--\eqref{eq:def_mr_Gamma} completely in terms of irreducible density
+matrices by using equations \eqref{eq:def_Lambda2} and \eqref{eq:def_Lambda3}. 
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{MR-IMSRG Flow Equations}
+We evaluate the operator flow equation \eqref{eq:opflow} using the generalized
+Wick's theorem, truncating all operators the two-body level, and obtain the 
+MR-IMSRG(2) flow equations \cite{Hergert:2013ij,Hergert:2014vn,Hergert:2016ng}:
+\begin{align}
+  \totd{E}{s} &=     
+    \sum_{ab}(n_{a}-n_{b})\eta^{a}_{b}f^{b}_{a}
+    +\frac{1}{4}\sum_{abcd}
+        \left(\eta^{ab}_{cd}\Gamma^{cd}_{ab}-\Gamma^{ab}_{cd}\eta^{cd}_{ab}\right)
+        n_{a}n_{b}\bar{n}_{c}\bar{n}_{d}
+    \notag\\
+  &\hphantom{=}
+    +\frac{1}{4}\sum_{abcd}\left(\totd{}{s}\Gamma^{ab}_{cd}\right)\lambda^{ab}_{cd}
+    +\frac{1}{4}\sum_{abcdklm}\left(\eta^{ab}_{cd}\Gamma^{kl}_{am}-\Gamma^{ab}_{cd}\eta^{kl}_{am}\right)\lambda^{bkl}_{cdm}\,,
+    \label{eq:mr_flow_0b_tens}
+  \\[10pt]
+% 
+  \totd{}{s}f^{i}_{j} &=
+    \sum_{a}\left(\eta^{i}_{a}f^{a}_{j}-f^{i}_{a}\eta^{a}_{j}\right)
+    +\sum_{ab}\left(\eta^{a}_{b}\Gamma^{bi}_{aj}-f^{a}_{b}\eta^{bi}_{aj}\right)(n_{a}-n_{b})
+  \notag\\
+  &\hphantom{=}
+  +\frac{1}{2}\sum_{abc}
+    \left(\eta^{ia}_{bc}\Gamma^{bc}_{ja}-\Gamma^{ia}_{bc}\eta^{bc}_{ja}\right)\left(n_{a}\bar{n}_{b}\bar{n}_{c}+\bar{n}_{a}n_{b}n_{c}\right)
+  \notag\\
+  &\hphantom{=}
+      +\frac{1}{4}\sum_{abcde}\left(\eta^{ia}_{bc}\Gamma^{de}_{ja}-\Gamma^{ia}_{bc}\eta^{de}_{ja}\right)\lambda^{de}_{bc} 
+    +\sum_{abcde}\left(\eta^{ia}_{bc}\Gamma^{be}_{jd}-\Gamma^{ia}_{bc}\eta^{be}_{jd}\right)\lambda^{ae}_{cd}
+  \notag\\
+  &\hphantom{=}
+      -\frac{1}{2}\sum_{abcde}\left(\eta^{ia}_{jb}\Gamma^{cd}_{ae}-\Gamma^{ia}_{jb}\eta^{cd}_{ae}\right)\lambda^{cd}_{be}
+    +\frac{1}{2}\sum_{abcde}\left(\eta^{ia}_{jb}\Gamma^{bc}_{de}-\Gamma^{ia}_{jb}\eta^{bc}_{de}\right)\lambda^{ac}_{de}\,,
+  \label{eq:mr_flow_1b_tens}\\[10pt]
+%
+  \totd{}{s}\Gamma^{ij}_{kl}&=  
+  \sum_{a}\left(\eta^{i}_{a}\Gamma^{aj}_{kl}+\eta^{j}_{a}\Gamma^{ia}_{kl}-\eta^{a}_{k}\Gamma^{ij}_{al}-\eta^{a}_{l}\Gamma^{ij}_{ka}
+  -f^{i}_{a}\eta^{aj}_{kl}-f^{j}_{a}\eta^{ia}_{kl}+f^{a}_{k}\eta^{ij}_{al}+f^{a}_{l}\eta^{ij}_{ka}\right)
+  \notag\\
+  &\hphantom{=}
+    +\frac{1}{2}\sum_{ab}\left(\eta^{ij}_{ab}\Gamma^{ab}_{kl}-\Gamma^{ij}_{ab}\eta^{ab}_{kl}\right)
+     \left(1-n_{a}-n_{b}\right)
+  \notag\\
+  &\hphantom{=}
+    +\sum_{ab}(n_{a}-n_{b})\left(\left(\eta^{ia}_{kb}\Gamma^{jb}_{la}-\Gamma^{ia}_{kb}\eta^{jb}_{la}\right)-\left(\eta^{ja}_{kb}\Gamma^{ib}_{la}-\Gamma^{ja}_{kb}\eta^{ib}_{la}\right)\right)\,.
+  \label{eq:mr_flow_2b_tens}
+\end{align}
+All single-particle indices and occupation numbers (cf.~Sec.~\ref{sec:nord}) 
+refer to natural orbitals, and the $s$-dependence has been suppressed for 
+brevity. Because we use general reference states, the MR-IMSRG flow equations 
+also include couplings to correlated pairs and triples of nucleons in that
+state through the irreducible density matrices $\lambda^{(2)}$ and 
+$\lambda^{(3)}$. The single-reference limit 
+(Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}) 
+can be obtained by setting the irreducible density matrices $\lambda^{(2)}$ 
+and $\lambda^{(3)}$ to zero in the previous expressions.
+
+Superficially, the computational cost for the evaluation of the MR-IMSRG(2) 
+flow equations is dominated by the final term of Eq.~\eqref{eq:mr_flow_0b_tens},
+which is of $\OC(N^7)$. However, since storage of the complete $\lambda^{(3)}$ 
+is prohibitive in large-scale calculations, we impose certain constraints on
+the reference state, which in turn restrict the non-zero matrix elements to
+small subsets of the entire matrix. For example, for particle-number projected
+HFB reference states, $\lambda^{(3)}$ is almost diagonal, which reduces the
+effort for the zero-body flow equation to $\OC(N^4)$. We have also explored
+reference states from No-Core Shell Model calculations in a small model space 
+\cite{Gebrerufael:2016rp},
+which limit the indices of $\lambda^{(3)}$ to 5-10 single-particle states
+out of a complete single-particle basis that is one to two orders of magnitude
+larger. In a similar scenario, we have used reference states consisting of 
+a valence space (or active space, in chemistry parlance) on top of an inert
+core, as in the traditional nuclear Shell model (cf.~Sec.~\ref{sec:current_hamiltonians}). 
+In that case, the correlations are restricted to this valence space, and 
+$\lambda^{(3)}$ is only non-zero if all indices refer to valence space
+(active space) single-particle states. Thus, the main driver of the computational
+effort is still the two-body flow equation, at $\OC(N^6)$, just like in the
+regular IMSRG(2). Equation \eqref{eq:mr_flow_2b_tens} actually has exactly
+the same for as its single-reference counterpart, Eq.~\eqref{eq:imsrg2_m2b},
+except that the occupation numbers can now have arbitrary values between 0 and 1.
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Decoupling and Generators}
+In the multi-reference case, we choose a suitable correlated reference 
+state, and construct its excitations by applying all possible one- 
+and two-body operators:
+\begin{equation}
+  \ket{\Phi},\,\nord{\AO^{i}_{j}}\ket{\Phi},\,\nord{\AO^{ij}_{kl}}\ket{\Phi},\ldots\,.
+\end{equation}
+The properties of the normal ordering ensure that the excited states are
+orthogonal to the reference state, but they are in general not orthogonal 
+to each other: for instance,
+\begin{equation}
+  \dmatrixe{\Phi}{\nord{A^{i}_{j}}\nord{A^{k}_{l}}}
+  =-\lambda^{i}_{l}\xi^{k}_{j} + \lambda^{ij}_{kl}
+  =n_i\nn_j \delta^{i}_{l}\delta^{k}_{j} + \lambda^{ij}_{kl}\,,
+\end{equation}
+where $0\leq n_i, \nn_i \leq 1$. Moreover, there can be linear dependencies
+between the excitations of the correlated reference state, so the matrix
+representations of the Hamiltonian and other operators in this basis can 
+be rank deficient. While the rank deficiency poses a major challenge for 
+multi-reference CC methods (see, e.g., \cite{Lyakh:2012zr}), for us it only
+means that we are implementing the MR-IMSRG flow on a matrix that has
+spurious zero eigenvalues that are typically far removed from the low-lying
+part of the spectrum in which we are most interested.
+
+To identify the off-diagonal Hamiltonian, we can proceed like in the
+single-reference IMSRG, and try to satisfy the decoupling conditions
+\begin{align}
+  \matrixe{\Phi}{\HO(\infty)\nord{\AO^{i}_{j}}}{\Phi}&=0\,,\label{eq:mr_decoupling1B}\\
+  \matrixe{\Phi}{\HO(\infty)\nord{\AO^{ij}_{kl}}}{\Phi}&=0\,,\label{eq:mr_decoupling2B}\\
+  \ldots& \notag
+\end{align}
+and corresponding conditions for the conjugate matrix elements. The 
+matrix elements can be evaluated with the generalized Wick's theorem, 
+e.g.,
+\begin{align}
+  \dmatrixe{\Phi}{H\nord{\AO^{i}_{j}}}
+  =\nn_i n_j f^{j}_{i}+\sum_{ab}f^{a}_{b}\lambda^{ai}_{bj}
+   +\frac{1}{2}\sum_{abc} 
+    \left( \nn_i \lambda^{bc}_{ja}\Gamma^{bc}_{ia} - n_j \Gamma^{ja}_{bc} \lambda^{ia}_{bc} \right)
+   +\frac{1}{4}\sum_{abcd}\Gamma^{ab}_{cd}\lambda^{iab}_{jcd}\,.\label{eq:mr_coupling_1b}
+\end{align}
+The first term is merely the generalization of the one-body
+particle-hole matrix element from Sec.~\ref{sec:imsrg_decoupling}: In the 
+single-reference limit, the occupation number prefactor is nonzero if $i$ and
+$j$ are particle and hole indices, respectively. In addition, the matrix
+element depends on the irreducible densities $\lambda^{(2)}$ and $\lambda^{(3)}$
+due to the coupling of the Hamiltonian to correlated pairs and triples of nucleons 
+in the reference state. The coupling condition to two-nucleon excitations, 
+Eq.~\eqref{eq:mr_decoupling2B}, not only has a much more complicated 
+structure than its single-reference counterpart, but even depends
+on $\lambda^{(4)}$ (see \cite{Hergert:2016ng} for details).
+Constructing and storing $\lambda^{(4)}$ is essentially out
+of the question in general MR-IMSRG applications, hence we 
+are forced to introduce truncations in Eqs.~\eqref{eq:mr_coupling_1b} 
+and Eq.~\eqref{eq:mr_coupling_2b} that imply that we will only
+achieve approximate decoupling in general.
+
+In recent applications, we have found the variational perspective
+introduced in Sec.~\ref{sec:imsrg_variational} to be useful. We
+can write the decoupling conditions as
+\begin{align}
+  \dmatrixe{\Phi}{H\nord{\AO^{i}_{j}}} 
+    &= \frac{1}{2}\dmatrixe{\Phi}{\acomm{H}{\nord{\AO^{i}_{j}}}} 
+    + \frac{1}{2}\dmatrixe{\Phi}{\comm{H}{\nord{\AO^{i}_{j}}}}\,,\\
+  \dmatrixe{\Phi}{H\nord{\AO^{ij}_{kl}}} 
+    &= \frac{1}{2}\dmatrixe{\Phi}{\acomm{H}{\nord{\AO^{ij}_{kl}}}} 
+    + \frac{1}{2}\dmatrixe{\Phi}{\comm{H}{\nord{\AO^{ij}_{kl}}}}\,,
+\end{align}
+and at least suppress the second terms in both equations through what 
+amounts to a minimization of the ground-state energy under unitary variation. 
+This means that we aim to satisfy the IBCs introduced in Sec.~\ref{sec:imsrg_variational}, 
+(also see \cite{Mukherjee:2001uq,Kutzelnigg:2002kx,Kutzelnigg:2004vn,Kutzelnigg:2004ys}).
+Evaluating the commutators, we obtain
+\begin{align}
+  \dmatrixe{\Phi}{\comm{H}{\nord{\AO^{i}_{j}}}}
+    &=(n_j-n_i)f^{j}_{i}-\frac{1}{2}\sum_{abc}\left(  
+     \Gamma^{ja}_{bc}\lambda^{ia}_{bc}
+    -\Gamma^{ab}_{ic}\lambda^{ab}_{jc}
+    \right)\,,
+\end{align}
+% 
+\begin{align}
+  \dmatrixe{\Phi}{\comm{H}{\nord{\AO^{ij}_{kl}}}}%\notag\\
+  &=
+    \Gamma^{kl}_{ij}(\nn_i\nn_jn_kn_l - n_in_j\nn_k\nn_l)
+%   \notag\\[3pt]
+% %     
+%   &\hphantom{=}
+  +\sum_{a}
+     \left(
+     (1-P_{ij})f^{a}_{i}\lambda^{aj}_{kl}
+    -(1-P_{kl})f^{k}_{a}\lambda^{ij}_{al}
+    \right)
+    \notag\\[3pt]
+% 
+  &\hphantom{=}
+    +\frac{1}{2}\left(
+      (\lambda\Gamma)^{kl}_{ij}\left(1-n_i-n_j\right)
+      -(\Gamma\lambda)^{kl}_{ij}\left(1-n_k-n_l\right)
+    \right)
+  \notag\\[3pt]
+%
+  &\hphantom{=}
+    +(1-P_{ij})(1-P_{kl})\sum_{ac}
+       \left(n_j-n_k\right)\Gamma^{ak}_{cj}\lambda^{ai}_{cl}
+    \notag\\[3pt]
+% 
+  &\hphantom{=}
+    +\frac{1}{2}\sum_{abc}\left(
+       (1-P_{kl})\Gamma^{ka}_{bc}\lambda^{aij}_{bcl} 
+      -(1-P_{ij})\Gamma^{ab}_{ic}\lambda^{abj}_{ckl} 
+    \right)\,.
+%   
+\end{align}
+Like the MR-IMSRG(2) flow equations \eqref{eq:mr_flow_0b_tens}--\eqref{eq:mr_flow_2b_tens},
+these expressions only depend linearly on $\lambda^{(2)}$ and $\lambda^{(3)}$,
+which makes untruncated implementations feasible.
+
+We use the IBCs to define the so-called Brillouin generator as
+\begin{align}
+  \eta^{i}_{j}&\equiv\dmatrixe{\Phi}{\comm{H}{:\AO^{i}_{j}:}}\\
+  \eta^{ij}_{kl}&\equiv\dmatrixe{\Phi}{\comm{H}{:\AO^{ij}_{kl}:}}
+\end{align}
+Because the matrix elements of $\etaO$ are directly given
+by the residuals of the IBCs, it can be interpreted as the \emph{gradient}
+of the energy with respect to the parameters of the unitary transformation 
+at each step of the flow. At the fixed point of the flow, $\etaO=0$,
+and the flowing zero-body part of the Hamiltonian, $E(\infty)$, will be an extremum 
+of the energy. Indeed, $\etaO$ has behaved in this manner in all 
+numerical applications to date, generating a monotonic flow of the  
+energy towards the converged results \cite{Hergert:2016ng}.
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Example: The Oxygen Isotopic Chain}
+As a sample application of the MR-IMSRG(2), we use spherical,
+particle-number projected HFB vacua (see, e.g., \cite{Ring:1980bb,Hergert:2009zn}
+to compute the ground-state energies and radii of the even oxygen 
+isotopes (odd isotopes have irreducible densities that are non-scalar 
+under rotation, which requires a future extension of our framework) 
+\cite{Hergert:2013ij,Lapoux:2016xu}. Our results are shown in Fig.~
+\ref{fig:OXX}. We use various chiral $NN+3N$ interactions.
 
 \begin{figure}[t]
-  \setlength{\unitlength}{0.72\textwidth}
   \begin{center}
-    % \hspace{-0.07\unitlength}\input{fig/chi2b3bXXX_srgXXXXJ_CaXX_S2N_standalone}
+    \includegraphics[width=\textwidth]{\fdir/chi2b3bXXX_srgXXX_OXX_Eint_Rch.pdf}
   \end{center}
-  \vspace{-30pt}
-  \caption{\label{fig:mrimsrg_CaXX} 
-    MR-IMSRG results for Ca two-neutron separation energies, 
-    for chiral NN+3N interactions 
-    with different cutoffs in the 3N sector, and a range of resolution scales 
-    from $\lambda=1.88\fmi$ (open symbols) to $2.24\fmi$ (solid symbols).
-    Black bars indicate experimental data \cite{Wang:2012uq,Wienholtz:2013bh}.
-    See Ref.~\cite{Hergert:2014vn} for additional details. 
-    }
+  \caption{\label{fig:OXX} MR-IMSRG(2) ground-state energies and charge radii of the oxygen 
+    isotopes for \NNLOsat{} and $NN\!+\!3N(400)$ at $\lambdaSRG=1.88,\ldots,2.24\fmi$ 
+    ($\eMax=14,\EMax=14$, and optimal $\hw$). Black bars indicate experimental 
+    data \cite{Wang:2012uq,Angeli:2013rz}.
+  }
 \end{figure}
 
-Contrary to the ground-state energies, chiral NN+3N forces reproduce
-relative quantities like the two-neutron separation energies quite
-well, aside from the exaggerated $N=20$ shell closure
-(Fig.~\ref{fig:mrimsrg_CaXX}).  In particular, they show signals of
-sub-shell closures in $\nuc{Ca}{52,54}$, in agreement with
-Shell Model calculations based on NN+3N interactions in MBPT
-\cite{Holt:2014vn,Wienholtz:2013bh}. These observations indicate which
-terms in the chiral input Hamiltonian may be deficient, and this
-information can be used in future optimizations.
+The $NN+3N(400)$ Hamiltonian consists of the \NNNLO{} interaction
+by Entem and Machleidt \cite{Entem:2003th,Machleidt:2011zz}, with
+cutoff $\Lambda_{NN}=500\,\MeV$, and a local \NNLO{} interaction
+with a reduced cutoff $\Lambda_{NN}=400\,\MeV$ \cite{Roth:2011kx,Gazit:2009qf}.
+The low-energy constants (LECs), i.e., the parameters of the chiral
+Hamiltonian, are entirely fixed by fitting data in the $A=2,3,4$ systems, 
+and it is evolved to lower resolution scales $\lambdaSRG$ via free-space 
+SRG, as discussed in Sec.~\ref{sec:srg_nn}. In contrast, the LECs of \NNLOsat{} 
+are also optimized with respect to selected many-body data \cite{Ekstrom:2015fk},
+and it is sufficiently soft that we use it as is. 
 
-Ongoing work focuses on three interconnected main directions:
-\emph{(i)} the extension of the MR-IMSRG to the evaluation of general
-observables (see Sec.~\ref{sec:magnus}), \emph{(ii)} the description
-of deformed nuclei, and \emph{(iii)} the integration of MR-IMSRG and
-Equation-of-Motion methods \cite{Rowe:1968eq} for the spectroscopy of
-medium-mass and heavy neutron-rich nuclei.
+While $NN+3N(400)$ gives a good reproduction of the oxygen ground-state
+energies, an issue with the Hamiltonian's saturation properties is revealed
+by inspecting the oxygen charge radii (see figure \ref{fig:OXX}). 
+The theoretical charge radii are about 10\% smaller
+than the experimental charge radius of $\nuc{O}{16}$, $\Rch=2.70\,\fm$ 
+\cite{Angeli:2013rz}, and the sharp increase for $\nuc{O}{18}$ is missing 
+entirely. The variation of $\lambdaSRG$ produces only a 0.2\%
+change in the ground-state energies, but this is the result of
+a fine-tuned cancellation between induced $4N$ forces that are
+generated by the $NN$ and $3N$ pieces of the Hamiltonian, and
+should not be seen as representative for chiral interactions in
+general. The charge radii grows larger as $\lambdaSRG$ decreases,
+which is consistent with a recent study for light nuclei 
+by Schuster \emph{et al.}\cite{Schuster:2014oq}. The authors found 
+that two- and three-body terms that are induced by consistently evolving
+the charge radius operator to lower $\lambdaSRG$ have the opposite
+effect and \emph{reduce} its expectation value. These terms have not 
+been included here, but need to be considered for complete consistency
+in the future.
+
+The MR-IMSRG(2) ground-state energies obtained with \NNLOsat{} are 
+slightly \emph{lower} than those for $NN\!+\!3N(400)$ in the proton-rich
+isotopes $\nuc{O}{12,14}$, and above the $NN\!+\!3N(400)$ energies in 
+$\nuc{O}{16-28}$. From $\nuc{O}{16-22}$, the \NNLOsat{} ground-state energies
+exhibit a parabolic behavior as opposed to the essentially linear trend
+we find for $NN\!+\!3N(400)$. A possible cause is the inclusion of the $\nuc{O}{22,24}$
+ground-state energies in the optimization protocol, which constrains
+the deviation of the energies from experimental data in these nuclei. 
+\NNLOsat{} predicts the drip line at $\nuc{O}{24}$, and the trend for 
+the $\nuc{O}{26,28}$ resonance energies is similar to the $NN\!+\!3N(400)$ 
+case. For \NNLOsat{}, the charge radii for the bound oxygen isotopes are 
+about 10\% larger than for $NN\!+\!3N(400)$, which is expected given 
+the use of the $\nuc{O}{16}$ charge radius in the optimization of 
+the LECs (also see Ref.~\cite{Lapoux:2016xu}). For the resonant states, 
+the increase is even larger, but continuum effects must be considered to 
+make a meaningful comparison. We note that \NNLOsat{} also fails to describe 
+the sharp jump in $\Rch$ at $\nuc{O}{18}$.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3899,6 +4196,12 @@ integrates many-body and renormalization group techniques, and the
 reason why the IMSRG is an extremely versatile and valuable
 tool for quantum many-body theory.
 
+% Ongoing work focuses on three interconnected main directions:
+% \emph{(i)} the extension of the MR-IMSRG to the evaluation of general
+% observables (see Sec.~\ref{sec:magnus}), \emph{(ii)} the description
+% of deformed nuclei, and \emph{(iii)} the integration of MR-IMSRG and
+% Equation-of-Motion methods \cite{Rowe:1968eq} for the spectroscopy of
+% medium-mass and heavy neutron-rich nuclei.
 
 
 % strived to give a pedagogical

@@ -4,7 +4,7 @@ The top-level auxiliary file: chapter10.aux
 The style file: spphys.bst
 Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
 Warning--I didn't find a database entry for "Lynn:2015eu"
-Warning--I didn't find a database entry for "Carlsson:2015fk"
+Warning--I didn't find a database entry for "Machleidt:2011zz"
 Warning--I didn't find a database entry for "Stroberg:2015qr"
 Warning--can't use both author and editor fields in Detmold:2015xw
 Warning--can't use both author and editor fields in Valdemoro:1987zl
@@ -14,45 +14,45 @@ Warning--can't use both author and editor fields in Hindmarsh:1983pd
 Warning--empty journal in Lepage:1997py
 Warning--empty journal in Parzuchowski:2016pi
 Warning--empty journal in Gebrerufael:2016rp
-You've used 171 entries,
+You've used 170 entries,
             2812 wiz_defined-function locations,
-            1927 strings with 46045 characters,
-and the built_in function-call counts, 65261 in all, are:
-= -- 4381
-> -- 2019
+            1923 strings with 45587 characters,
+and the built_in function-call counts, 64636 in all, are:
+= -- 4362
+> -- 1967
 < -- 18
-+ -- 800
-- -- 614
-* -- 4237
-:= -- 7643
-add.period$ -- 261
-call.type$ -- 171
++ -- 782
+- -- 597
+* -- 4193
+:= -- 7555
+add.period$ -- 260
+call.type$ -- 170
 change.case$ -- 11
 chr.to.int$ -- 18
-cite$ -- 179
-duplicate$ -- 6888
-empty$ -- 6449
-format.name$ -- 743
-if$ -- 14725
+cite$ -- 178
+duplicate$ -- 6829
+empty$ -- 6411
+format.name$ -- 728
+if$ -- 14601
 int.to.chr$ -- 0
-int.to.str$ -- 171
-missing$ -- 1802
-newline$ -- 782
-num.names$ -- 172
-pop$ -- 2425
+int.to.str$ -- 170
+missing$ -- 1779
+newline$ -- 778
+num.names$ -- 171
+pop$ -- 2401
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1676
+skip$ -- 1660
 stack$ -- 0
-substring$ -- 2240
-swap$ -- 4424
+substring$ -- 2214
+swap$ -- 4385
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 332
-width$ -- 174
-write$ -- 1885
+while$ -- 329
+width$ -- 173
+write$ -- 1875
 (There were 11 warnings)
