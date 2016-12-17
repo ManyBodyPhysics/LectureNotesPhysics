@@ -815,9 +815,9 @@ def calc_mbpt3(f, Gamma, user_data):
 #------------------------------------------------------------------------------
 
 def main():
-  # g          = 0.5
-  g          = float(argv[1])
-  delta      = 1
+  # grab delta and g from the command line
+  delta      = float(argv[1])
+  g          = float(argv[2])
 
   particles  = 4
 
@@ -826,12 +826,12 @@ def main():
 
   # this defines the reference state
   # 1st state
-  # holes     = [0,1,2,3]
-  # particles = [4,5,6,7]
+  holes     = [0,1,2,3]
+  particles = [4,5,6,7]
 
   # 2nd state
-  holes     = [0,1,4,5]
-  particles = [2,3,6,7]
+  # holes     = [0,1,4,5]
+  # particles = [2,3,6,7]
 
   # 3rd state
   # holes     = [0,1,6,7]
@@ -874,8 +874,7 @@ def main():
     "dE":         0.0,                # and main routine
 
 
-    "calc_eta":   eta_imtime,          # specify the generator (function object)    
-    # "calc_eta":   eta_white,          # specify the generator (function object)
+    "calc_eta":   eta_white,          # specify the generator (function object)
     "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
   }
 
