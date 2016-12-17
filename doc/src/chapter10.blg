@@ -16,37 +16,37 @@ Warning--empty journal in Parzuchowski:2016pi
 Warning--empty journal in Gebrerufael:2016rp
 You've used 171 entries,
             2812 wiz_defined-function locations,
-            1926 strings with 46002 characters,
-and the built_in function-call counts, 65189 in all, are:
+            1927 strings with 46045 characters,
+and the built_in function-call counts, 65261 in all, are:
 = -- 4381
-> -- 2007
+> -- 2019
 < -- 18
-+ -- 796
-- -- 610
-* -- 4230
-:= -- 7631
-add.period$ -- 260
++ -- 800
+- -- 614
+* -- 4237
+:= -- 7643
+add.period$ -- 261
 call.type$ -- 171
 change.case$ -- 11
 chr.to.int$ -- 18
 cite$ -- 179
-duplicate$ -- 6879
-empty$ -- 6447
-format.name$ -- 739
-if$ -- 14714
+duplicate$ -- 6888
+empty$ -- 6449
+format.name$ -- 743
+if$ -- 14725
 int.to.chr$ -- 0
 int.to.str$ -- 171
-missing$ -- 1798
-newline$ -- 781
+missing$ -- 1802
+newline$ -- 782
 num.names$ -- 172
-pop$ -- 2422
+pop$ -- 2425
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1681
+skip$ -- 1676
 stack$ -- 0
-substring$ -- 2249
-swap$ -- 4414
+substring$ -- 2240
+swap$ -- 4424
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
@@ -54,5 +54,5 @@ type$ -- 0
 warning$ -- 8
 while$ -- 332
 width$ -- 174
-write$ -- 1883
+write$ -- 1885
 (There were 11 warnings)

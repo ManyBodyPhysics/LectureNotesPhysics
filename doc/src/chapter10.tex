@@ -82,6 +82,7 @@
 \newcommand{\BO}{\op{B}}
 \newcommand{\CO}{\op{C}}
 \newcommand{\HO}{\op{H}}
+\newcommand{\OO}{\op{O}}
 \newcommand{\PO}{\op{P}}
 \newcommand{\TO}{\op{T}}
 \newcommand{\UO}{\op{U}}
@@ -92,10 +93,13 @@
 \newcommand{\etaO}{\op{\eta}}
 \newcommand{\sigmaO}{\op{\sigma}}
 
+\newcommand{\OmegaO}{\op{\Omega}}
+
 \newcommand{\UUO}{\adj{\op{U}}}
 \newcommand{\ZZO}{\adj{\op{Z}}}
 
 \newcommand{\eetaO}{\adj{\op{\eta}}}
+\newcommand{\OOmegaO}{\adj{\op{\Omega}}}
 
 \newcommand{\idO}{\ensuremath{\op{I}}}
 
@@ -133,31 +137,31 @@
 
 \title{In-Medium Similarity Renormalization Group Approach to the Nuclear Many-Body Problem}
 
-\author{Heiko Hergert, Justin G.~Lietz, Titus D.~Morris, Scott K.~Bogner, Sam Novario, Nathan M.~Parzuchowski, and Fei Yuan}
+\author{Heiko Hergert, Scott K.~Bogner, Justin G.~Lietz, Titus D.~Morris, Samuel Novario, Nathan M.~Parzuchowski, and Fei Yuan}
 \institute{
 Heiko Hergert  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{hergert@nscl.msu.edu}, \and 
+% 
+Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and 
 % 
 Justin G.~Lietz \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{lietz@nscl.msu.edu}, \and 
 % 
 Titus Morris \at Department of Physics and Astronomy, University of Tennessee, Knoxville, Tennessee, USA,
 and Physics Division, Oak Ridge National Laboratory, Oak Ridge, Tennessee, USA, \email{titusmorris@gmail.com}, \and 
 % 
-Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and 
-% 
-Scott Bogner  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{bogner@nscl.msu.edu}, \and 
-% 
 Samuel Novario \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan,  USA, \email{novarios@nscl.msu.edu},\and 
+% 
+Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and 
 % 
 Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
 \maketitle
 \abstract{We present applications  of the In-Medium Similarity
-Renormalization Group (IM-SRG) method to studies of infinite nuclear matter. 
-The IM-SRG method employs a continuous unitary transformation of the
+Renormalization Group (IMSRG) method to studies of infinite nuclear matter. 
+The IMSRG method employs a continuous unitary transformation of the
 many-body Hamiltonian to decouple the ground state from all
 excitations, thereby solving the many-body problem. Starting from a
-pedagogical introduction of the underlying concepts, the IM-SRG flow 
-equations are developed and we study different IM-SRG generators that
-achieve the desired decoupling, and how they affect the details of the IM-SRG results. We compare with the coupled cluster theory results of
+pedagogical introduction of the underlying concepts, the IMSRG flow 
+equations are developed and we study different IMSRG generators that
+achieve the desired decoupling, and how they affect the details of the IMSRG results. We compare with the coupled cluster theory results of
 chapter \ref{chapter:cc}, the Monte Carlo results of chapter \ref{chapter:qmc} and the Green's function results of chapter \ref{chapter:scgf}.}
 
 \section{Introduction}
@@ -218,7 +222,7 @@ From the modern RG perspective, soft- and hard-core interactions emerge
 as representations of low-energy QCD at different resolution scales, 
 and the dialing of the resolution scale necessarily leads to induced
 $3N$ forces, in such a way that observables (including saturation
-properties) remain invariant under the RG flow (see section \ref{sec:srg} 
+properties) remain invariant under the RG flow (see Sec.~\ref{sec:srg} 
 and \cite{Bogner:2010pq,Furnstahl:2013zt}). In conjunction, chiral EFT
 and nuclear RG applications demonstrate that one cannot treat the $NN, 3N, \ldots$
 sectors in isolation from each other.
@@ -248,7 +252,7 @@ calculations. There is no reason why the idea of decoupling energy
 (or momentum) scales should not be useful for the treatment of a
 strongly interacting many-body system like the nucleus as well. This
 consideration, then, leads us to the concept of the In-Medium SRG
-(IM-SRG) \cite{Tsukiyama:2011uq,Hergert:2013mi,Hergert:2016jk}. In a 
+(IMSRG) \cite{Tsukiyama:2011uq,Hergert:2013mi,Hergert:2016jk}. In a 
 nutshell, we want to use SRG-like flow equations to 
 decouple physics at different excitation energy scales of the nucleus, 
 and render the Hamiltonian matrix in configuration space block or 
@@ -257,7 +261,7 @@ of the many-body expansion, in which correlations that are described
 explicitly by the configuration space are absorbed into an 
 \emph{RG-improved} Hamiltonian. With an appropriately chosen decoupling 
 strategy, it is even possible to extract eigenvalues and eigenstates
-of the nuclear Hamiltonian, and therefore, the IM-SRG qualifies as an 
+of the nuclear Hamiltonian, and therefore, the IMSRG qualifies as an 
 \emph{ab initio} method for solving quantum many-body problems.
 
 
@@ -268,39 +272,39 @@ solid-state physics literature, the approach is also known as
 continuous unitary transformation (CUT) theory, see  
 \cite{Heidbrink:2002kx,Drescher:2011kx,Krull:2012bs,Fauseweh:2013zv,Krones:2015ft}.
 When we discuss our decoupling strategies for the nuclear many-body
-problem, it will become evident that the IM-SRG is related to CC 
+problem, it will become evident that the IMSRG is related to CC 
 \cite{Shavitt:2009,Hagen:2014ve}, canonical transformation theory (CT) 
 \cite{White:2002fk,Yanai:2006uq,Yanai:2007kx}, and the Irreducible (or
 Anti-Hermitian) Contracted Schr\"odinger Equation (ICSE) approach 
 \cite{Nakatsuji:1976yq,Valdemoro:1987zl,Mukherjee:2001uq,Kutzelnigg:2002kx,
 Kutzelnigg:2004vn,Kutzelnigg:2004ys,Mazziotti:2006fk}, and there is
-even some overlap with purely variational methods (see section \ref{sec:generators}).
-What sets the IM-SRG apart from these methods is that the Hamiltonian 
+even some overlap with purely variational methods (see Sec.~\ref{sec:generators}).
+What sets the IMSRG apart from these methods is that the Hamiltonian 
 instead of the wave function is at the center of attention, in the
 spirit of RG methodology. This seems to be a trivial distinction, but
 there are practical advantages of this viewpoint, e.g., the simultaneous 
-decoupling of ground and excited states (see section \ref{sec:decoupling}), 
+decoupling of ground and excited states (see Sec.~\ref{sec:decoupling}), 
 the avoidance of $N$-representability issues \cite{Mazziotti:2007qe}, and
-more. Inspired in part by our work on the IM-SRG in nuclear physics, Evangelista 
+more. Inspired in part by our work on the IMSRG in nuclear physics, Evangelista 
 and co-workers have recently presented the Driven SRG for \emph{ab initio}
-calculations in quantum chemistry, which implements IM-SRG transformations 
+calculations in quantum chemistry, which implements IMSRG transformations 
 in terms of inhomogeneous nonlinear equations rather than flow equations 
 \cite{Evangelista:2014rq,Li:2015nq,Li:2016rm,Hannon:2016lp}. 
 
 
 In this work, we will discuss two distinct implementations of the 
-IM-SRG ideas. The first is the so-called Multireference IM-SRG (MR-IM-SRG),
+IMSRG ideas. The first is the so-called Multireference IMSRG (MR-IMSRG),
 which is designed for calculations of the ground-state properties of 
 closed- and open-shell nuclei.  Like most many-body
 approaches, it relies on the organization of the many-body basis
 in terms of a reference state and its excitations. 
 Contrary to approaches like MBPT or FCI, which employ Slater
-determinant reference states, the MR-IM-SRG is built for arbitrary
+determinant reference states, the MR-IMSRG is built for arbitrary
 correlated reference states. This gives us the greatest possible
 flexibility in the description of correlations: Static correlations,
 e.g., due to intrinsic deformation, can be built into the reference
 state, while dynamic correlations due to the excitation of nucleon pairs, 
-triples, etc. are described by the MR-IM-SRG transformation. 
+triples, etc. are described by the MR-IMSRG transformation. 
 
 In the following sections we outline the basic ingredients behind the
 SRG method, with an emphasis on applications to infinite nuclear
@@ -312,9 +316,9 @@ many-body system in terms of coupled ordinary differential equations
 However, compared with standard eigenvalue solvers, this is a less efficient way of finding the full spectrum of a matrix. 
 Moreover, with growing dimensionalities, it becomes quickly impossible to store the matrix elements and solve the coupled ODEs. 
 Introducing a reference vacuum as done in chapters 8 and 9, allows us to find approximate solutions to properties  like the  ground state energy and the correlation energy, or selected excited states. This leads us to the
-to the in-medium SRG (IM-SRG) approach discussed in this chapter. 
-We apply thereafter the IM-SRG approach to the simplified pairing  model (presented in chapter 8) and 
-to pure neutron matter. We compare our IM-SRG results to those obtained from coupled cluster theory and many-body perturbation theory of  chapter 8 and quantum Monte Carlo of the previous chapter.  In the final section, we present our conclusions and point  to further
+to the in-medium SRG (IMSRG) approach discussed in this chapter. 
+We apply thereafter the IMSRG approach to the simplified pairing  model (presented in chapter 8) and 
+to pure neutron matter. We compare our IMSRG results to those obtained from coupled cluster theory and many-body perturbation theory of  chapter 8 and quantum Monte Carlo of the previous chapter.  In the final section, we present our conclusions and point  to further
 perspectives and research directions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -780,7 +784,7 @@ Since we want to diagonalize \eqref{eq:def_h_matrix} in the present example,
 we are only interested in the limit $s\to\infty$, and it does not really matter
 whether the transformation is an RG or not. Indeed, there are alternative choices
 for the generator which are more efficient in achieving the desired diagonalization
-(see section \ref{sec:imsrg_generator} and Refs.~\cite{Hergert:2016jk,Hergert:2016ng}).
+(see Sec.~\ref{sec:imsrg_generator} and Refs.~\cite{Hergert:2016jk,Hergert:2016ng}).
 The RG property will matter in our discussion of SRG-evolved nuclear interactions 
 in the next section.
 
@@ -1003,7 +1007,7 @@ of matrix-vector products. In this way, an explicit construction of the Hamilton
 matrix in the CI basis is avoided, because the matrix-vector product can be
 calculated from the input $NN$ and $3N$ interactions that only require $\OC(n^4)$ 
 and $\OC(n^6)$ storage, respectively, where $n$ is the size of the single-particle
-basis (see section \ref{sec:imsrg}). However, the SRG flow of the previous section 
+basis (see Sec.~\ref{sec:imsrg}). However, the SRG flow of the previous section 
 clearly forces us to construct
 and store the Hamiltonian matrix in its entirety --- at best, we could save some
 storage by resizing the matrix once its off-diagonal elements have been 
@@ -1113,7 +1117,7 @@ which indicates the neutron-neutron, neutron-proton, and proton-proton
 components of the nuclear Hamiltonian. 
 
 
-In figure \ref{fig:av18} we show features of the central 
+In Fig.~\ref{fig:av18} we show features of the central 
 and tensor forces of the Argonne V18 (AV18) interaction \cite{Wiringa:1995or}
 in the $(S,T)=(1,0)$ channel, which has the quantum numbers of the deuteron. This 
 interaction belongs to a group of so-called
@@ -1126,7 +1130,7 @@ Lynn:2016ec}. Because of the required locality, AV18 has a strong repulsive
 core in the central part of the interaction. Like all $NN$ interactions,
 it also has a strong tensor force that results from pion exchange. The
 radial dependencies of these interaction components are shown in the left
-panel of figure \ref{fig:av18}. 
+panel of Fig.~\ref{fig:av18}. 
 
 When we switch to the momentum representation,
 we see that the ${}^3S_1$ partial wave\footnote{We use the conventional partial wave
@@ -1174,15 +1178,15 @@ the $NN$ interaction.
   }
 \end{figure*}
 
-In figure \ref{fig:schematic}, we show examples for two types of RG evolution
+In Fig.~\ref{fig:schematic}, we show examples for two types of RG evolution
 that decouple the low- and momentum pieces of $NN$ interactions. The first
-example, figure \ref{fig:schematic}(a), is a so-called  \emph{RG decimation}, 
+example, Fig.~\ref{fig:schematic}(a), is a so-called  \emph{RG decimation}, 
 in which the interaction is evolved to decreasing cutoff scales $\Lambda_0 > \Lambda_1 > \Lambda_2$, 
 and high-momentum modes are ``integrated out''. This is the so-called \Vlowk{}
 approach, which was first used in nuclear physics in the early 2000s 
 \cite{Bogner:2003os,Bogner:2010pq}. Note that the resulting low-momentum 
 interaction is entirely confined to states with relative momentum $q\leq\Lambda$.
-In contrast, figure \ref{fig:schematic}(b) shows the SRG evolution of the $NN$ interaction
+In contrast, Fig.~\ref{fig:schematic}(b) shows the SRG evolution of the $NN$ interaction
 to a band-diagonal shape via the flow equation \eqref{eq:opflow_NN}, using a 
 generator built from the relative kinetic energy in the two-nucleon system \cite{Bogner:2007od,Bogner:2010pq}:
 \begin{equation}\label{eq:def_srg_generator}
@@ -1191,7 +1195,7 @@ generator built from the relative kinetic energy in the two-nucleon system \cite
 Instead of the flow parameter $s$, we have parameterized the evolution by 
 $\lambdaSRG=s^{-1/4}$, which has the dimensions of a momentum in natural units. 
 Note that the generator \eqref{eq:def_srg_generator} would vanish if the
-interaction were diagonal in momentum space. As suggested by figure 
+interaction were diagonal in momentum space. As suggested by Fig.~
 \ref{fig:schematic}(b), $\lambdaSRG$ is a measure for the ``width'' of the 
 band in momentum space. Thus, momentum transfers between nucleons are limited 
 according to
@@ -1215,7 +1219,7 @@ pion-less theory that is essentially parameterized in terms of contact
 interactions. While it is possible to implement such an evolution in
 the two-body system without introducing pathological behavior \cite{Wendt:2011ys},
 such an interaction must be complemented by strong induced many-nucleon
-forces once it is applied in finite nuclei, as discussed in section \ref{sec:srg_induced}.
+forces once it is applied in finite nuclei, as discussed in Sec.~\ref{sec:srg_induced}.
 For this reason, $NN$ interactions are only ever evolved to the aforementioned
 range of $\lambdaSRG$ values.
 
@@ -1292,7 +1296,7 @@ The discretized flow equation then be written as
 \end{equation}
 
 We can solve Eq.~\eqref{eq:flow_nn_discrete} using a modified version of our 
-Python code for the pairing model, discussed in section \ref{sec:srg_pairing}.
+Python code for the pairing model, discussed in Sec.~\ref{sec:srg_pairing}.
 The Python code and sample inputs can be downloaded from 
 \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_nn}.
 Let us briefly discuss the most important modifications.
@@ -1512,7 +1516,7 @@ and check whether the lowest eigenvalue, i.e., the deuteron binding
 energy, remains invariant within the numerical tolerances we use for
 the ODE solver. To illustrate the evolution of the $NN$ interaction, 
 the code will also generate a sequence of matrix plots at the
-desired values of $\lambda$, similar to figure \ref{fig:srg_pairing}
+desired values of $\lambda$, similar to Fig.~\ref{fig:srg_pairing}
 for the pairing Hamiltonian.
 
 %
@@ -1551,10 +1555,10 @@ cutoff $\Lambda=500\,\MeV$ \cite{Entem:2003th,Machleidt:2011bh}. The momentum-sp
 matrix elements of this interaction in the deuteron partial waves are distributed
 with the Python code discussed in the previous section.
 
-In the top row of figure \ref{fig:vsrg_momentum}, we show the matrix elements
+In the top row of Fig.~\ref{fig:vsrg_momentum}, we show the matrix elements
 of the initial interaction in the ${}^3S_1$ partial wave; the ${}^3S_1-{}^3D_1$
 and ${}^3D_1$ are not shown to avoid clutter. Comparing the matrix elements to
-those of the AV18 interaction we discussed in section \ref{sec:srg_nn}, shown
+those of the AV18 interaction we discussed in Sec.~\ref{sec:srg_nn}, shown
 in fig.~\ref{fig:av18}, we note that the chiral interaction has much weaker
 off-diagonal matrix elements to begin with. While the AV18 matrix elements
 extend as high as $|\qOV|\sim 20\,\fmi$, the chiral interaction has no appreciable
@@ -1679,7 +1683,7 @@ and so on.
 
 Nowadays, state-of-the-art SRG evolutions of nuclear interactions are 
 performed in the three-body system \cite{Jurgenson:2009bs,Jurgenson:2011zr,Jurgenson:2013fk, 
-Hebeler:2012ly,Wendt:2013uq}. In figure \ref{fig:triton}, we show 
+Hebeler:2012ly,Wendt:2013uq}. In Fig.~\ref{fig:triton}, we show 
 $\nuc{H}{3}$ ground-state energies that have been calculated with
 a family of SRG-evolved interactions that is generated from a 
 chiral \NNLO{} $NN$ interaction by Epelbaum, Gl\"ockle, and Mei\ss{}ner 
@@ -1689,7 +1693,7 @@ full details). As mentioned above, the SRG evolution is not unitary in
 the three-body system if we truncate the evolved interaction and
 the SRG generator at the two-body level (\emph{N$N$-only}). The 
 depends strongly on $\lambdaSRG$, varying by 5--6\% over the 
-typical range that we consider here (cf.~section \ref{sec:srg_nn}). 
+typical range that we consider here (cf.~Sec.~\ref{sec:srg_nn}). 
 If we truncate the operators at the three-body level instead, induced 
 $3N$ interactions are properly included and the unitarity of the 
 transformation is restored (\emph{$NN\!+\!3N$-induced}): 
@@ -1872,7 +1876,7 @@ where the one- and two-body kinetic energy terms are
   \TO^{[1]} &\equiv \sum\frac{\pOV^2_i}{2m}\,,\\
   \TO^{[2]} &\equiv -\frac{1}{m}\sum_{i<j}\pOV_i\cdot\pOV_j
 \end{align}
-(see section \ref{sec:srg_nn} and \cite{Hergert:2009wh}). Choosing a 
+(see Sec.~\ref{sec:srg_nn} and \cite{Hergert:2009wh}). Choosing a 
 single Slater determinant $\ket{\Phi}$ as the reference state, we can 
 rewrite the Hamiltonian \emph{exactly} in terms of normal-ordered operators,
 \begin{align}\label{eq:Hno}
@@ -1977,7 +1981,7 @@ if both operators have the same particle rank.
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \subsubsection{Induced Forces Revisited}
-In section \ref{sec:srg_induced}, we discussed how SRG evolutions naturally
+In Sec.~\ref{sec:srg_induced}, we discussed how SRG evolutions naturally
 induce $3N$ and higher many-nucleon forces, because every evaluation of 
 the commutator on the right-hand side of the operator flow equation 
 \eqref{eq:opflow} increases the particle rank of $\HO(s)$, e.g.,
@@ -2013,7 +2017,7 @@ elements of the flowing Hamiltonian as we integrate Eq.~\eqref{eq:opflow}.
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsubsection{The IM-SRG(2) Scheme}
+\subsubsection{The IMSRG(2) Scheme}
 The evolution of the Hamiltonian or any other observable by means of
 the flow equation \eqref{eq:opflow} is a continuous unitary transformation
 in $A-$nucleon space only if we keep up to induced $A$-nucleon 
@@ -2028,7 +2032,7 @@ state that is a fair approximation to the ground state of our system
 to truncate operators at the two-body level, to avoid the computational
 expense of treating explicit three-body operators. For low-momentum $NN+3N$
 Hamiltonians, the empirical success of the NO2B approximation mentioned 
-at the end of section \ref{sec:nord_ops} seems to support this truncation: 
+at the end of Sec.~\ref{sec:nord_ops} seems to support this truncation: 
 The omission of the normal-ordered $3N$ term in exact calculations causes 
 deviations of only $\sim1\%$ in the oxygen, calcium, and nickel isotopes
 \cite{Roth:2012qf,Binder:2013fk,Binder:2014fk}.
@@ -2097,7 +2101,7 @@ identify specific structures by looking at the occupation-number dependence
 of the terms in Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}: for 
 instance, $\nn_i$ and $n_i$ restrict summations to particle and hole states, 
 respectively (cf.~equation \eqref{eq:def_natorb}). Typical IMSRG generators 
-(see section \ref{sec:imsrg_generators}) are proportional to the (offdiagonal) 
+(see Sec.~\ref{sec:imsrg_generators}) are proportional to the (offdiagonal) 
 Hamiltonian, which means that the two terms in the zero-body flow equation 
 essentially have the structure of second-order energy corrections, but 
 evaluated for the \emph{flowing} Hamiltonian $\HO(s)$. Thus, we can express
@@ -2272,7 +2276,7 @@ to the much more detailed analysis in Ref.~\cite{Hergert:2016jk}.
 %
 \subsubsection{Computational Scaling}
 Let us briefly consider the computational scaling of the IMSRG(2) scheme,
-ahead of the discussion of an actual implementation in section \ref{sec:imsrg_implementation}.
+ahead of the discussion of an actual implementation in Sec.~\ref{sec:imsrg_implementation}.
 When performing a single integration step, the computational effort is 
 dominated by the two-body flow equation \eqref{eq:imsrg2_m2b}, which 
 naively requires $\OC(N^6)$ operations, where $N$ denotes the size of
@@ -2286,7 +2290,7 @@ Moreover, we can further reduce the computational cost by distinguishing
 particle and hole states, because the number of hole states $N_h$ is 
 typically much smaller than the number of particle states $N_p\sim N$. 
 The best scaling we can achieve in the IMSRG(2) depends on the choice of 
-generator (see section \ref{sec:imsrg_generator}). If the one- and two-body parts of the 
+generator (see Sec.~\ref{sec:imsrg_generator}). If the one- and two-body parts of the 
 generator only consist of $ph$ and $pphhh$ type matrix elements and their 
 Hermitian conjugates, the scaling is reduced to $\OC(N_h^2N_p^4)$, 
 which matches the cost of solving the CCSD amplitude equations.
@@ -2346,7 +2350,7 @@ us stress that we never actually construct the Hamiltonian matrix in
 this representation.
 
 Our Slater determinant basis consists of a reference determinant and 
-all its possible particle-hole excitations (cf.~section \ref{sec:nord}):
+all its possible particle-hole excitations (cf.~Sec.~\ref{sec:nord}):
 \begin{equation}
   \ket{\Phi},\,\nord{\aaO_{p}\aO_h}\ket{\Phi},\,\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}}\ket{\Phi},\ldots\,.
 \end{equation}
@@ -2359,8 +2363,8 @@ Using Wick's theorem, one can show that the particle-hole excited Slater
 determinants are orthogonal to the reference state as well as each other
 (see problem \ref{problem:ph_orthogonality}).
 In the Hilbert space spanned by this basis, the matrix representation of
-our initial Hamiltonian in the NO2B approximation (cf.~section \ref{sec:nord_ops}) 
-has the structure shown in the left panel of figure \ref{fig:imsrg}, i.e., it is 
+our initial Hamiltonian in the NO2B approximation (cf.~Sec.~\ref{sec:nord_ops}) 
+has the structure shown in the left panel of Fig.~\ref{fig:imsrg}, i.e., it is 
 band-diagonal, and can at most couple $npnh$ and $(n\pm2)p(n\pm2)h$ 
 excitations. 
 
@@ -2371,7 +2375,7 @@ avoid to induce strong in-medium $3N, \ldots$ interactions to maintain the
 validity of the IMSRG(2) truncation. For this reason, we choose a so-called 
 \emph{minimal decoupling scheme} that only aims to decouple the one-dimensional 
 block spanned by the reference state from all particle-hole excitations, as
-shown in the right panel of figure \ref{fig:imsrg}. 
+shown in the right panel of Fig.~\ref{fig:imsrg}. 
 
 If we could implement the minimal decoupling without approximations, 
 we would extract a single eigenvalue and eigenstate of the many-body Hamiltonian
@@ -2380,7 +2384,7 @@ would simply be given by the zero-body piece of $H(\infty)$, while the eigenstat
 is obtained by applying the unitary IMSRG transformation to the reference
 state, $\UUO(\infty)\ket{\Phi}$. In practice, truncations cannot be
 avoided, of course, and we only obtain an approximate eigenvalue and 
-mapping. We will explicitly demonstrate in section \ref{sec:imsrg_pairing}
+mapping. We will explicitly demonstrate in Sec.~\ref{sec:imsrg_pairing}
 that the chosen reference state plays an important role in determining
 which eigenvalue and eigenstate of the Hamiltonian we end up extracting
 in our minimal decoupling scheme. An empirical rule of thumb is that the 
@@ -2412,12 +2416,12 @@ and their conjugates. It is precisely these two-body matrix elements
 that couple $npnh$ and $(n\pm2)p(n\pm2)h$ states and generate the
 outermost side diagonals of the Hamiltonian matrix. This suggests that 
 we can transform the Hamiltonian to the shape shown in the top right panel
-of figure \ref{fig:imsrg} by defining its offdiagonal part as
+of Fig.~\ref{fig:imsrg} by defining its offdiagonal part as
 \begin{equation}
   \HO_{od} \equiv \sum_{ph}f_{ph}\nord{\aaO_{p}\aO_{h}} + 
               \frac{1}{4}\sum_{pp'hh'}\Gamma_{pp'hh'}\nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}} + \text{H.c.}\,.
 \end{equation}
-In section \ref{sec:imsrg_pairing}, we will show that the IMSRG flow does indeed
+In Sec.~\ref{sec:imsrg_pairing}, we will show that the IMSRG flow does indeed
 exponentially suppress the matrix elements of $\HO_{od}$ and 
 achieve the desired decoupling in the limit $s\to\infty$. 
 
@@ -2717,7 +2721,7 @@ generates a proper renormalization group flow \cite{Kehrein:2006kx,Hergert:2016j
 \subsubsection{\label{sec:imsrg_generators_wegner}Wegner's Generator}
 Last but not least, we want to discuss Wegner's original ansatz 
 \cite{Wegner:1994dk}, which we have used in the free-space SRG applications 
-in section \ref{sec:srg}:
+in Sec.~\ref{sec:srg}:
 \begin{equation}\label{eq:eta_wegner}
   \etaO^\text{WE}(s) \equiv \comm{\HO_d(s)}{\HO_{od}(s)}\,.
 \end{equation}
@@ -2800,8 +2804,8 @@ elements with a Gaussian exponential function,
 \end{equation}
 and therefore generates a proper RG flow. Note that this result matches 
 our findings for the SRG flows of the 
-$2\times2$ matrix toy model (section \ref{sec:srg_toy}) and the pairing 
-Hamiltonian (section \ref{sec:srg_pairing}), which were using matrix 
+$2\times2$ matrix toy model (Sec.~\ref{sec:srg_toy}) and the pairing 
+Hamiltonian (Sec.~\ref{sec:srg_pairing}), which were using matrix 
 versions of the Wegner generator.
 
 In numerical applications, Wegner generators are less efficient than 
@@ -3034,7 +3038,7 @@ generator and flow equation routines the ODE solver will call (see below).
 Through this abstraction, users can easily add additional generators, or
 implement different truncations of the flow equations. The current version
 of \texttt{imsrg\_pairing.py} implements all of the generators discussed
-in section \ref{sec:imsrg_generator}, and the standard IMSRG(2) truncation.
+in Sec.\ref{sec:imsrg_generator}, and the standard IMSRG(2) truncation.
 
 \subsubsection*{Normal Ordering}
 The next task of the main routine is the normal ordering of the initial
@@ -3164,7 +3168,7 @@ create $1p1h$ and $2p2h$ admixtures to the reference state wave function
 which give rise to the energy corrections. These admixtures are suppressed
 as we decouple, hence the size of the energy corrections must decrease.
 In the limit $s\to\infty$, we expect them to be completely absorbed into
-the RG-improved Hamiltonian (see section \ref{sec:imsrg_pairing}). It is
+the RG-improved Hamiltonian (see Sec.\ref{sec:imsrg_pairing}). It is
 by this reasoning that we use the relative size of the second-order correction
 to the flowing energy, $\Delta E^2(s)/E(s)$, as the stopping criterion for
 the flow. Once this quantity falls below $10^{-8}$, we terminate the evolution.
@@ -3199,7 +3203,7 @@ also explicitly work on the blocks instead of the full matrices when
 we evaluate the right-hand sides of the IMSRG flow equations.  The complex 
 couplings between blocks prevents us from evolving individual blocks or
 small groups separately, in contrast to the free-space SRG case, where
-this was possible (see section \ref{sec:srg_nn_flow}). 
+this was possible (see Sec.\ref{sec:srg_nn_flow}). 
 
 
 
@@ -3223,7 +3227,7 @@ Hamiltonian \eqref{eq:def_pairing_hamiltonian}.
     \put(0.5000,0.0000){\includegraphics[width=0.49\unitlength]{\fdir/{imsrg-white_d1.0_g+0.5_N4_ev1.norms.semilog}.pdf}}
   \end{picture}
   \caption{\label{fig:imsrg_gs}IMSRG(2) flow for the ground state of the pairing 
-  Hamiltonian with $\delta=1.0, g=0.5$ (cf.~section \ref{sec:srg_pairing_example}).
+  Hamiltonian with $\delta=1.0, g=0.5$ (cf.~Sec.~\ref{sec:srg_pairing_example}).
   Calculations were performed with the White generator, Eq.~\eqref{eq:eta_white}.
   \emph{Left panel:} Flowing ground-state energy $E(s)$ plus perturbative second and
   third-order energy corrections for $\HO(s)$. The exact ground-state energy is 
@@ -3233,8 +3237,8 @@ Hamiltonian \eqref{eq:def_pairing_hamiltonian}.
 
 As a first application, we calculate the ground-state energy for the 
 pairing Hamiltonian with $\delta=1.0$ and $g=0.5$, which we studied
-using SRG matrix flows in section \ref{sec:srg_pairing_example}. In
-the left panel of figure \ref{fig:imsrg_gs}, we show the flowing 
+using SRG matrix flows in Sec.~\ref{sec:srg_pairing_example}. In
+the left panel of Fig.~\ref{fig:imsrg_gs}, we show the flowing 
 ground-state energy $E(s)$. Starting from the energy of the uncorrelated
 reference state, which is $E(0)=2\delta-g=1.5$, we obtain a final 
 energy $E(\infty)=1.4133$, which is slightly below the exact result
@@ -3243,7 +3247,7 @@ $1.4168$.
 The mechanism by which the flowing ground-state energy is absorbing
 correlation energy can be understood by considering the zero-body flow 
 equation \eqref{eq:imsrg2_m0b} in the perturbative approach we introduced 
-in section \ref{sec:imsrg_generator}. We note that
+in Sec.~\ref{sec:imsrg_generator}. We note that
 \begin{align}
   \totd{E}{s} &=     
     \underbrace{\sum_{ab}(n_{a}-n_{b})\eta^{a}_{b}f^{b}_{a}}_{\OC(g^4)}
@@ -3256,7 +3260,7 @@ For the White generator \eqref{eq:eta_white},
     \Gamma^{pp'}_{hh'}(s)=\Gamma^{pp'}_{hh'}(0)e^{-s}\,,\quad 
     \Gamma^{hh'}_{pp'}(s)=\Gamma^{hh'}_{pp'}(0)e^{-s}\,.
 \end{equation}
-As we can see in the left panel of figure \ref{fig:imsrg_gs}, the
+As we can see in the left panel of Fig.~\ref{fig:imsrg_gs}, the
 off-diagonal matrix elements and the generator indeed decay 
 exponentially with a single, state-independent scale. Plugging the matrix
 elements into the energy flow equations to $\OC(g^2)$, we have  
@@ -3272,9 +3276,9 @@ We recognize the second-order energy correction, evaluated with the
 initial Hamiltonian, and see that $E(s)$ will decrease 
 with $s$ (i.e., the binding energy increases). In the limit $s\to\infty$,
 the entire correction is shuffled into the zero-body piece of the evolved 
-Hamiltonian. As discussed in section \ref{sec:imsrg_flow}, the complete 
+Hamiltonian. As discussed in Sec.~\ref{sec:imsrg_flow}, the complete 
 IMSRG(2) flow performs a more complex re-summation of correlations, but we 
-can see from figure \ref{fig:imsrg_gs} that it certainly encompasses the complete 
+can see from Fig.~\ref{fig:imsrg_gs} that it certainly encompasses the complete 
 second order. In fact, we see that the third-order correction is completely 
 absorbed into the final $E(\infty)$ as well. Readers who are interested in
 more details are referred to the extensive discussion in Ref.~\cite{Hergert:2016jk} 
@@ -3296,7 +3300,7 @@ more details are referred to the extensive discussion in Ref.~\cite{Hergert:2016
   }
 \end{figure}
 
-In figure \ref{fig:imsrg_corr}, we show the IMSRG(2) correlation energy
+In Fig.~ \ref{fig:imsrg_corr}, we show the IMSRG(2) correlation energy
 \begin{equation}
   E_\text{corr} = E(\infty) - E_\text{HF}
 \end{equation}
@@ -3327,7 +3331,7 @@ deviation is about $0.1$ at $g=1.0$, where the exact eigenvalue of the pairing
 Hamiltonian is $0.6355$. 
 
 Interestingly, the deviations are much smaller in the opposite case, $g=-1.0$. The 
-right-hand panel of figure \ref{fig:imsrg_corr} sheds further light on this matter.
+right-hand panel of Fig.~ \ref{fig:imsrg_corr} sheds further light on this matter.
 There, we compare the IMSRG(2) correlation energy to results from finite-order
 many-body perturbation theory (MBPT) and Coupled Cluster with Doubles Excitations
 (CCD) --- see chapter \ref{chapter:cc} for details. We see that the correlation
@@ -3355,7 +3359,7 @@ while CCD takes them into account completely
     For Slater determinants with uncorrelated energies $4-g=3.5$
     (\emph{left panel}) and $6-g=5.5$ (\emph{right panel}), the 
     IMSRG(2) flow targets the 2nd and 3rd excited states,
-    see section \ref{sec:srg_pairing_example}.
+    see Sec.~\ref{sec:srg_pairing_example}.
   }
 \end{figure}
 
@@ -3363,23 +3367,23 @@ while CCD takes them into account completely
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \subsubsection{Targeting Excited States}
-In section \ref{sec:imsrg_offidag}, we mentioned that the choice of
+In Sec.~\ref{sec:imsrg_offidag}, we mentioned that the choice of
 reference state will affect which eigenstate of the Hamiltonian the 
-IMSRG evolution is targeting. To illustrate this, figure \ref{fig:imsrg_excited}
+IMSRG evolution is targeting. To illustrate this, Fig.~ \ref{fig:imsrg_excited}
 shows the IMSRG(2) flows starting from uncorrelated states with
 energies $4-g$ (with nucleons occupying the $p=1$ and $p=2$ 
-single-particle states, see table \ref{tab:pairingmodelsp}) and $6-g$
+single-particle states, see table \ref{tab:srg_pairing_sp}) and $6-g$
 (with $p=0$ and $p=2$ occupied), respectively. For $g=0.5$ and $\delta=1.0$,
 the exact eigenvalues are $3.4707$ and $5.5$. 
 
 As we can see in the left panel, the IMSRG(2) flow towards the
 correct energy. Between $s=1$ and $s=3$, it overshoots the exact
-energy. As discussed in section \ref{sec:imsrg_variational}, the
+energy. As discussed in Sec.~\ref{sec:imsrg_variational}, the
 IMSRG(2) is not a variational method, so this is unproblematic. In
 the limit $s\to\infty$, the flow converges to $3.4708$, matching
 the energy of the first excited state. The flow shown in the right
-panel of figure~\ref{fig:imsrg_excited} is particularly interesting.
-Recall from section \ref{sec:srg_pairing_example} that the state with 
+panel of Fig.~\ref{fig:imsrg_excited} is particularly interesting.
+Recall from Sec.~\ref{sec:srg_pairing_example} that the state with 
 energy $5.5$ is already a degenerate eigenstate of the Hamiltonian, and 
 therefore supposed to be invariant under a unitary flow. This is indeed
 the case, at least to the eight digits recorded in the flow data file 
@@ -3405,186 +3409,201 @@ Waiting for Titus...
 % SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\label{sec:perspectives}Current Developments}
+\section{\label{sec:current}Current Developments}
+After covering the essential concepts of the SRG and IMSRG, and discussing
+both the formal and technical aspects of their applications, we want to
+introduce our readers to the three major directions of current IMSRG
+research: These are the use of the so-called Magnus expansion to explicitly 
+construct the IMSRG transformation (Sec.~\ref{sec:current_magnus}), the
+Multireference IMSRG for generalizing the method to correlated 
+reference states (Sec.~\ref{sec:current_mrimsrg}), and the construction
+of effective Hamiltonians for use in configuration interaction and 
+Equation-of-Motion methods, which allows us to tackle excited states 
+(Sec.~\ref{sec:current_hamiltonians}).
 
+% In this work, we have presented a comprehensive review of the IMSRG
+% as a powerful \emph{ab initio} method for nuclei. The IMSRG employs
+% the flow-equation formulation of the SRG to decouple an $A$-body
+% reference state from particle-hole excitations, thus solving the
+% many-body Schr\"odinger equation. Compared to other \emph{ab initio}
+% approaches for medium-mass nuclei, we have shown that the IMSRG is
+% competitive with CC and SCGF calculations, both in terms of accuracy and of
+% computational efficiency.
 
-In this work, we have presented a comprehensive review of the IM-SRG
-as a powerful \emph{ab initio} method for nuclei. The IM-SRG employs
-the flow-equation formulation of the SRG to decouple an $A$-body
-reference state from particle-hole excitations, thus solving the
-many-body Schr\"odinger equation. Compared to other \emph{ab initio}
-approaches for medium-mass nuclei, we have shown that the IM-SRG is
-competitive with CC and SCGF calculations, both in terms of accuracy and of
-computational efficiency.
+% In the IMSRG, the Hamiltonian is normal ordered with respect to the
+% reference state and typically truncated at the normal-ordered two-body
+% level. In this way, 3N interactions can be naturally included in a
+% normal-ordered two-body approximation. Due to the many ongoing
+% developments of 3N forces, we have focused in this review on a
+% detailed derivation at the NN level, but discuss highlights of first
+% IMSRG calculation including 3N interactions in Sec.~\ref{sec:3N}.
 
-In the IM-SRG, the Hamiltonian is normal ordered with respect to the
-reference state and typically truncated at the normal-ordered two-body
-level. In this way, 3N interactions can be naturally included in a
-normal-ordered two-body approximation. Due to the many ongoing
-developments of 3N forces, we have focused in this review on a
-detailed derivation at the NN level, but discuss highlights of first
-IM-SRG calculation including 3N interactions in Sec.~\ref{sec:3N}.
+% Going beyond the closed-shell or single-reference version, the IMSRG
+% has been recently generalized to a multi-reference formulation, as
+% discussed in Sec.~\ref{sec:mrimsrg}. The multi-reference IMSRG (MR-IMSRG) is
+% based on a generalized version of normal-ordering and Wick's
+% theorem. In principle, one can use 
+% arbitrary reference states that are
+% characterized by one-, two- and three-body density matrices. In the
+% first multi-reference applications, particle-number-projected
+% Hartree-Fock-Bogoliubov states were used as reference states for
+% describing the even nuclei throughout semi-magic isotopic chains.
 
-Going beyond the closed-shell or single-reference version, the IM-SRG
-has been recently generalized to a multi-reference formulation, as
-discussed in Sec.~\ref{sec:mrimsrg}. The multi-reference IM-SRG (MR-IM-SRG) is
-based on a generalized version of normal-ordering and Wick's
-theorem. In principle, one can use 
-arbitrary reference states that are
-characterized by one-, two- and three-body density matrices. In the
-first multi-reference applications, particle-number-projected
-Hartree-Fock-Bogoliubov states were used as reference states for
-describing the even nuclei throughout semi-magic isotopic chains.
+% A great asset of the IMSRG is the flexibility and simplicity of its
+% basic concept. Through different choices of generators and decoupling
+% patterns, the numerical characteristics and efficiency of the methods
+% can be controlled and tailored for specific applications. The
+% in-medium evolved Hamiltonian is directly accessible, Hermitian and readily
+% usable for subsequent nuclear structure calculations.
 
-A great asset of the IM-SRG is the flexibility and simplicity of its
-basic concept. Through different choices of generators and decoupling
-patterns, the numerical characteristics and efficiency of the methods
-can be controlled and tailored for specific applications. The
-in-medium evolved Hamiltonian is directly accessible, Hermitian and readily
-usable for subsequent nuclear structure calculations.
+% As a specific application that exploits this flexibility,
+% nonperturabtive derivations of valence-space Hamiltonians have been
+% achieved. In the IMSRG for open-shell nuclei, states with $A_v$
+% particles in the valence space are additionally decoupled from those
+% containing non-valence admixtures. This gives the energy of the
+% closed-shell core (as in the standard IMSRG), but also valence-space
+% single-particle energies and residual interactions. The resulting
+% valence-space Hamiltonian can then be diagonalized using large-scale
+% shell-model methods. The IMSRG provides for the first time a
+% nonperturbative derivation of effective interactions in the shell
+% model based on nuclear forces without adjustments. This is discussed
+% in Sec.~\ref{sec:shell_model}.
 
-As a specific application that exploits this flexibility,
-nonperturabtive derivations of valence-space Hamiltonians have been
-achieved. In the IM-SRG for open-shell nuclei, states with $A_v$
-particles in the valence space are additionally decoupled from those
-containing non-valence admixtures. This gives the energy of the
-closed-shell core (as in the standard IM-SRG), but also valence-space
-single-particle energies and residual interactions. The resulting
-valence-space Hamiltonian can then be diagonalized using large-scale
-shell-model methods. The IM-SRG provides for the first time a
-nonperturbative derivation of effective interactions in the shell
-model based on nuclear forces without adjustments. This is discussed
-in Sec.~\ref{sec:shell_model}.
-
-Finally, we highlight novel technical advances of the Magnus expansion
-for effective operators in Sec.~\ref{sec:magnus}. This enables a
-consistent evolution of operators in the IM-SRG for applications to
-nuclear structure, electroweak transitions, and for key matrix elements
-needed for fundamental symmetry tests.
+% Finally, we highlight novel technical advances of the Magnus expansion
+% for effective operators in Sec.~\ref{sec:magnus}. This enables a
+% consistent evolution of operators in the IMSRG for applications to
+% nuclear structure, electroweak transitions, and for key matrix elements
+% needed for fundamental symmetry tests.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\label{sec:magnus}Magnus Expansion and Effective Operators}
+\subsection{\label{sec:current_magnus}Magnus Formulation of the IMSRG}
 
-
-% \begin{figure}[t]
-% \begin{center}
-% \includegraphics[width=.6\columnwidth]{\fdir/HEG_diffstepsizes}
-% \caption{\label{fig:timestep_HEG}
-% (Color online) Flowing IM-SRG(2) and Magnus(2) correlation energy for 
-% the electron gas, $E_0(s)-E_{\rm HF}$, for Wigner-Seitz radii of a)
-% $r_s=5.0$ and b) $r_s=0.5$. The solid black line corresponds to the
-% IM-SRG(2) results using an adaptive solver based on the
-% Adams-Bashforth method, while the other lines correspond to Magnus(2)
-% and IM-SRG(2) results using different Euler step sizes. The red
-% circles denote the quasi-exact FCIQMC results of
-% Ref.~\cite{Shepherd:2012hl}.}
-% \end{center}
-% \end{figure}
-
-Despite modest computational scaling and the flexibility to tailor the
-generator to different systems, IM-SRG calculations based on the
-direct integration of Eqs.~(\ref{eq:opflow}) and~(\ref{eq:obsflow}) are
-limited by the memory demands of the ODE solver. The use of a
-high-order solver is essential, as the accumulation of time-step
+Despite its modest computational scaling and the flexibility to tailor 
+the generator to different applications, IMSRG calculations based on 
+the direct integration of Eqs.~(\ref{eq:opflow}) are limited by memory 
+demands of the ODE solver in many realistic cases. The use of a
+high-order solver is essential, as the accumulation of integration-step
 errors destroys the unitary equivalence between $H(s)$ and $H(0)$ even
 if no truncations are made in the flow equations. State-of-the-art
 solvers can require the storage of 15-20 copies of the solution vector
-in memory, which is the main computational bottleneck of the method.
-What is worse, the dimensionality of the flow equations roughly
-doubles for each additional observable one wishes to calculate, and
-each operator can evolve with rather different timescales than the
-Hamiltonian, increasing the likelihood of the ODEs becoming
-stiff.
+in memory, which is the main computational bottleneck of the method
+(see, e.g., \cite{Hindmarsh:1983pd,Brown:1989qd,Hindmarsh:2005kl}).
+
+Matters are complicated further if we also want to calculate expectation
+values for observables besides the Hamiltonian. General operators have
+to be evolved consistently using the flow equation 
+\begin{equation} \label{eq:obsflow}
+  \totd{}{s} \OO(s) = \comm{\etaO(s)}{\OO(s)}\,,
+\end{equation}
+but since storage of $\etaO(s)$ at every point of the flow trajectory
+is prohibitively expense, we are forced to solve Eq.~\eqref{eq:obsflow} 
+simultaneously with the flow equation for the Hamiltonian. The evaluation
+of $N$ observables besides the Hamiltonian implies that the dimension of
+the ODE system \eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b} grows by a
+factor $N+1$. In addition, generic operators can evolve with rather different 
+characteristic scales than the Hamiltonian, increasing the likelihood of 
+the ODEs becoming stiff.
+
+We can now overcome these limitations by re-formulating the IMSRG using
+the Magnus expansion from the theory of matrix differential equations
+\cite{Magnus:1954xy,Blanes:2009fk}. Magnus proved that the path-ordered 
+series defining the IMSRG transformation, Eq.~\eqref{eq:def_U_series},
+can be summed into a true exponential expression if the generator $\etaO$
+meets certain conditions:
+\begin{equation} \label{eq:def_U_magnus}
+  \UO(s) \equiv e^{\OmegaO(s)}\,.
+\end{equation}
+This allows us to derive a flow equation for the anti-Hermitian Magnus
+operator $\OmegaO(s)$:
+\begin{equation}\label{eq:magnus_flow}
+  \frac{d\OmegaO}{ds}= \sum_{k=0}^\infty \frac{B_k}{k!} \mathrm{ad}_{\OmegaO}^k\left(\etaO\right)\,,
+\end{equation}
+where $B_k$ are the Bernoulli numbers, and 
+\begin{align}
+  \mathrm{ad}_{\OmegaO}^0\left(\etaO\right)&=\etaO\\
+  \mathrm{ad}_{\OmegaO}^k\left(\etaO\right) &= \comm{\OmegaO}{\mathrm{ad}_{\OmegaO}^{k-1}\left(\etaO\right)}\,.
+\end{align}
+As in the standard IMSRG(2), we truncate $\etaO$ and $\OmegaO$ as well
+as their commutator at the two-body level. We refer to the resulting calculation 
+scheme as the Magnus(2) formulation of the IMSRG. 
+The series of nested commutators generated by $\mathrm{ad}^k_{\OmegaO}$ 
+is evaluated recursively, until satisfactory convergence of the right-hand 
+side of Eq.~\eqref{eq:magnus_flow} is reached \cite{Morris:2015ve}. At each 
+integration step, we use $\UO(s)$ to construct the
+Hamiltonian $\HO(s)$ via the Baker-Campbell-Hausdorff (BCH) formula
+\begin{equation}
+  \HO(s)\equiv e^{\OmegaO(s)}\HO(0) e^{-\OmegaO(s)} = \sum_{k=0}^\infty\frac{1}{k!}\mathrm{ad}^k_{\OmegaO(s)}\left(\HO(0)\right)\,,
+\end{equation}
+(the flow parameter dependence is stated explicitly here for clarity).
+Like $\etaO$ and $\OmegaO$, the Hamiltonian is truncated at the two-body
+level.
+
+A major advantage of the Magnus formulation stems from the fact that the 
+flow equations for $\OmegaO(s)$ can be solved using a simple first-order 
+Euler step method without any loss of accuracy, resulting in substantial 
+memory savings and a modest reduction in CPU time.  While sizable 
+integration-step errors accumulate in $\Omega(s)$ with a first-order method, 
+upon exponentiation the transformation is still unitary, and the transformed 
+$H(s)=\UO(s)H\UUO(s)$ is unitarily equivalent to the initial Hamiltonian aside 
+from the truncations made while evaluating the BCH formula. For further details 
+on the implementation of the Magnus formulation, see Ref.~\cite{Morris:2015ve}.
 
 \begin{figure}[t]
-\begin{center}
-\includegraphics[width=.6\columnwidth]{\fdir/O16_n2loSAT_eMax8_hw24_ground_state.pdf}
-\caption{\label{fig:timestep_O16}
-(Color online) IM-SRG(2) and Magnus(2) ground-state energy of $\nuc{O}{16}$, 
-starting from the \NNLOsat{} $NN+3N$ interaction \cite{Ekstrom:2015fk}. The 
-solid black line is the IMSRG(2) flow obtained with
-an adaptive solver based on the Adams-Bashforth method \cite{Radhakrishnan:1993fk}, 
-while the other lines show Magnus(2) and IMSRG(2) flows 
-obtained with a simple Forward Euler method and different 
-fixed step sizes. All calculations were done in an
-$\eMax=8$ model space, with $\hbar\omega = 24$~MeV for the
-underlying harmonic-oscillator basis.}
-\end{center}
+  \begin{center}
+    \includegraphics[width=.6\textwidth]{\fdir/O16_n2loSAT_eMax8_hw24_ground_state.pdf}
+  \end{center}
+  \caption{\label{fig:timestep_O16}
+    IMSRG(2) and Magnus(2) ground-state energy of $\nuc{O}{16}$, 
+    starting from the \NNLOsat{} $NN+3N$ interaction \cite{Ekstrom:2015fk}. The 
+    solid black line is the IMSRG(2) flow obtained with
+    an adaptive solver based on the Adams-Bashforth method \cite{Radhakrishnan:1993fk}, 
+    while the other lines show Magnus(2) and IMSRG(2) flows 
+    obtained with a simple Forward Euler method and different 
+    fixed step sizes. All calculations were done in an
+    $\eMax=8$ model space, with $\hbar\omega = 24$~MeV for the
+    underlying harmonic-oscillator basis.}
 \end{figure}
 
-To bypass these limitations, an improved formulation of the IM-SRG was
-proposed in Ref.~\cite{Morris:2015ve} that utilizes the Magnus
-expansion from the theory of matrix differential
-equations~\cite{Magnus:1954xy,Blanes:2009fk}.  In essence, the problem
-is recast so that rather than solving flow equations for the
-Hamiltonian and other operators of interest, one solves flow equations
-for the anti-Hermitian operator $\Omega(s)$, where $U(s) =
-e^{\Omega(s)}$. The unitary operator $U(s)$ is then used to transform
-the Hamiltonian and any other operators of interest via the
-Baker-Cambell-Hausdorff (BCH) formula. The advantage of the Magnus
-formulation stems from the fact that the flow equations for
-$\Omega(s)$ can be solved using a simple first-order Euler step method
-without any loss of accuracy, resulting in substantial memory savings
-and a modest reduction in CPU time.  In the conventional approach,
-time-step errors accumulate directly in the evolved $H(s)$,
-necessitating the use of a high-order solver to preserve an acceptable
-level of accuracy.  In the Magnus formulation, even though sizable
-time-step errors accumulate in $\Omega(s)$ with a first-order method, 
-upon exponentiation the transformation is still unitary, and
-the transformed $H(s)=\UO(s)H\UUO(s)$ is unitarily equivalent to
-the initial Hamiltonian modulo any truncations made in evaluating the BCH formula.  For
-further details on the implementation of the Magnus formulation, see
-Ref.~\cite{Morris:2015ve}.
-
-The insensitivity to time-step errors is illustrated in
-Figs.~\ref{fig:timestep_HEG} and~\ref{fig:timestep_O16}, which show
-the 0-body part of the flowing Hamiltonian $H(s)$ versus the flow
-parameter for the electron gas, where we plot $E_0(s)-E_\text{HF}$ as an
-approximation of the correlation energy at large $s$, and for
-$^{16}$O, respectively. The black solid lines denote the results of a
-standard IM-SRG(2) calculation using the predictor-corrector solver of
-Shampine and Gordon, while the other curves denote IM-SRG(2) and
-Magnus(2) calculations using a first-order Euler method with different
-step sizes $\delta s$. For the electron gas, the exact full
-configuration quantum Monte Carlo (FCIQMC)
-results~\cite{Shepherd:2012hl} are shown for
-reference. Unsurprisingly, the IM-SRG(2) calculations using a
-first-order Euler method are very poor, with the various step sizes
+The insensitivity of the Magnus scheme to integration-step errors is illustrated 
+in Fig.~\ref{fig:timestep_O16}, which shows flowing ground-state energy for 
+$^{16}$O, calculated with the chiral \NNLOsat{} $NN+3N$ 
+interaction by Ekstr\"{o}m et al.~\cite{Ekstrom:2015fk}. The black solid line 
+denotes the results of a standard IMSRG(2) calculation using a high-order 
+predictor-corrector solver \cite{Hindmarsh:1983pd,Hindmarsh:2005kl}, while the 
+other curves denote IMSRG(2) and Magnus(2) calculations using a first-order Euler 
+method with different step sizes $\delta s$. Unsurprisingly, the IMSRG(2) calculations 
+using a first-order Euler method are very poor, with different step sizes
 converging to different large-$s$ limits. The Magnus(2) calculations,
 on the other hand, converge to the same large-$s$ limit in excellent
-agreement with the standard IM-SRG(2) and the FCIQMC results.
+agreement with the standard IMSRG(2) results.
 
-The evaluation of general operators poses considerable computational
-challenges in the conventional formulation of the IM-SRG. In the
-Magnus expansion formulation, the evolution of additional operators is
-relatively straightforward since the dimensionality of the flow
-equations is fixed, regardless of how many additional operators are
-being evolved. Proof-of-principle operator evolutions have been
-carried out for for the momentum distribution in the electron gas, and
-the generalized center-of-mass Hamiltonian in $^{16}$O with encouraging
-results~\cite{Morris:2015ve}.  The relative ease of performing
-operator evolution is especially encouraging for shell model
-applications, as it opens up the exciting possibility for consistent,
-nonperturbative calculations of both Shell-Model Hamiltonians and
-effective electroweak operators (e.g., the $0\nu\beta\beta$ matrix
-element, quenching of Gamow-Teller strength, etc.) relevant for
-studies of fundamental symmetries in nuclei.
-
-
+A second major advantage of the Magnus formulation of the IMSRG is that
+we can evaluate arbitrary observables by simply using the final 
+Magnus operator $\OmegaO(\infty)$ to calculate
+\begin{equation}
+  \OO(\infty)\equiv e^{\OmegaO(\infty)}\OO(0) e^{-\OmegaO(\infty)}\,.
+\end{equation}
+This is obviously much more convenient than dealing with observables
+in the direct IMSRG(2) approach, because we do not have to deal with
+the doubling, tripling, \ldots of the already large system of flow
+equations. In contrast to the prohibitive space required to store 
+$\etaO(s)$ for all values of $s$, we can also easily archive the 
+$\Omega(\infty)$ for long-term use, e.g., when we want to look at
+new observables in future studies. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Multi-Reference IM-SRG}
-\label{sec:mrimsrg}
+\subsection{\label{sec:current_mrimsrg}The Multi-Reference IMSRG}
 
-The IM-SRG formalism and applications presented so far use a single
+
+The IMSRG formalism and applications presented so far use a single
 Slater determinant as the reference state, ideally a solution of the
 Hartree-Fock equations (cf.~Sec.~\ref{sec:refstate}). Thus, the
-standard IM-SRG belongs to the class of single-reference methods, such
+standard IMSRG belongs to the class of single-reference methods, such
 as finite-order MBPT or CC. In nuclear physics, these approach are
 only appropriate for the description of nuclei around (sub-)shell
 closures.
@@ -3601,7 +3620,7 @@ holes. Intrinsic deformation will develop if the single-particle basis
 is not symmetry restricted, e.g., in an $m$-scheme formalism, and
 rotational symmetry breaking is energetically favored.
 
-An $m$-scheme IM-SRG or CC calculation may be able to converge to a
+An $m$-scheme IMSRG or CC calculation may be able to converge to a
 solution if the excitation spectrum of the symmetry-broken reference
 state has a sufficiently large gap, i.e., a single dominant
 configuration. If such a solution is found, one must eventually
@@ -3624,10 +3643,10 @@ appearance of the so-called islands of inversion (see, e.g.,
 \cite{Brown:2010xr}). Their description requires a true
 multi-reference treatment.
 
-The Multi-Reference IM-SRG (MR-IM-SRG) is capable of dealing with the
+The Multi-Reference IMSRG (MR-IMSRG) is capable of dealing with the
 aforementioend scenarios
 \cite{Hergert:2013ij,Hergert:2014vn,Hergert:2015qd}. It generalizes
-the IM-SRG formalism discussed in this work to arbitrary correlated
+the IMSRG formalism discussed in this work to arbitrary correlated
 reference states, using the multi-reference normal ordering and Wick's
 theorem developed by Kutzelnigg and Mukherjee
 \cite{Kutzelnigg:1997fk,Mukherjee:1997yg}. The idea of decoupling the
@@ -3637,7 +3656,7 @@ excited states are given by
 \nord{\aaO_i\aO_j\!}\!\ket{\Phi},\,\nord{\aaO_i\aaO_j\aO_l\aO_k\!}\!\ket{\Phi},\ldots\,,
 \end{equation*}
 and the single-particle states are no longer of pure particle or hole
-character.  The flow equation formulation of the MR-IM-SRG makes it
+character.  The flow equation formulation of the MR-IMSRG makes it
 possible to avoid complications due to the non-orthogonality and
 possible linear dependency of these general excitations (see
 \cite{Hergert:2015qd} for more details).
@@ -3646,7 +3665,7 @@ While only one-body density matrices appear in the contractions of the
 standard Wick's theorem (see Eqs.~\eqref{eq:def_particle_contraction}
 and \eqref{eq:def_hole_contraction}), additional contractions that
 involve two- and higher-body density matrices enter that encode the
-correlation content of the reference state. In the MR-IM-SRG
+correlation content of the reference state. In the MR-IMSRG
 framework, correlations that are hard to capture as few-body
 excitations of the reference state can be built directly into the
 reference state.
@@ -3657,7 +3676,7 @@ reference state.
 %     % \hspace{-0.05\unitlength}\input{fig/chi2b3b400_srg0800_OXX_methods_new}
 %   \end{center}
 %   \vspace{-30pt}
-%   \caption{\label{fig:mrimsrg_OXX} Ground-state energies of the oxygen isotopes from MR-IM-SRG
+%   \caption{\label{fig:mrimsrg_OXX} Ground-state energies of the oxygen isotopes from MR-IMSRG
 %     and other many-body approaches, based on the NN+3N-full interaction with 
 %     $\Lambda_\text{3N}=400\,\MeV$, evolved to the resolution scale $\lambda=1.88\fmi$
 %     ($\lambda=2.0\fmi$ for the Green's Function ADC(3) results, cf.~\cite{Cipollone:2013uq}).
@@ -3666,7 +3685,7 @@ reference state.
 %   }
 % \end{figure}
 
-In a first applications of the MR-IM-SRG framework, we have used
+In a first applications of the MR-IMSRG framework, we have used
 spherical, particle-number projected HFB vacua to compute the
 ground-state energies of the even oxygen isotopes, starting from
 chiral NN+3N forces \cite{Hergert:2013ij}. This work improved on
@@ -3675,7 +3694,7 @@ previous Shell Model \cite{Otsuka:2010cr,Holt:2013fk} and CC studies
 the latter with 3N forces in a more phenomenological, nuclear-matter
 based normal ordering.  Based on a Hamiltonian that is entirely fixed
 in the $A=3,4$ system and consistently evolved to lower resolution, we
-found that MR-IM-SRG, various CC methods, and the importance-truncated
+found that MR-IMSRG, various CC methods, and the importance-truncated
 NCSM consistently predict the neutron dripline in $\nuc{O}{24}$ if
 chiral 3N forces are included (see Fig.~\ref{fig:mrimsrg_OXX}), as
 pointed out in the context of the Shell Model in
@@ -3686,7 +3705,7 @@ isotopic chains \cite{Hergert:2014vn}, where importance-truncated NCSM
 calculations are no longer feasible. The same family of chiral NN+3N
 Hamiltonians that successfully reproduce the oxygen ground-state
 energies overestimate the binding energies in these isotopes by
-several hundred keV per nucleon, in MR-IM-SRG and CC (also see
+several hundred keV per nucleon, in MR-IMSRG and CC (also see
 \cite{Roth:2012qf,Binder:2013zr,Binder:2014fk}), as well as the
 second-order Gor'kov Green's Function approach \cite{Soma:2014eu}.
 The revelation of these deficiencies has led to a variety of efforts
@@ -3700,7 +3719,7 @@ to improve on the chiral interactions
   \end{center}
   \vspace{-30pt}
   \caption{\label{fig:mrimsrg_CaXX} 
-    MR-IM-SRG results for Ca two-neutron separation energies, 
+    MR-IMSRG results for Ca two-neutron separation energies, 
     for chiral NN+3N interactions 
     with different cutoffs in the 3N sector, and a range of resolution scales 
     from $\lambda=1.88\fmi$ (open symbols) to $2.24\fmi$ (solid symbols).
@@ -3720,9 +3739,9 @@ terms in the chiral input Hamiltonian may be deficient, and this
 information can be used in future optimizations.
 
 Ongoing work focuses on three interconnected main directions:
-\emph{(i)} the extension of the MR-IM-SRG to the evaluation of general
+\emph{(i)} the extension of the MR-IMSRG to the evaluation of general
 observables (see Sec.~\ref{sec:magnus}), \emph{(ii)} the description
-of deformed nuclei, and \emph{(iii)} the integration of MR-IM-SRG and
+of deformed nuclei, and \emph{(iii)} the integration of MR-IMSRG and
 Equation-of-Motion methods \cite{Rowe:1968eq} for the spectroscopy of
 medium-mass and heavy neutron-rich nuclei.
 
@@ -3730,8 +3749,8 @@ medium-mass and heavy neutron-rich nuclei.
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Non-Perturbative Shell-Model Interactions}
-\label{sec:shell_model}
+\subsection{\label{sec:current_hamiltonians}Non-Perturbative Shell-Model Interactions}
+
 
 For open-shell systems, rather than solving the full $A$-body problem,
 it is profitable to follow the Shell Model paradigm by constructing
@@ -3760,7 +3779,7 @@ address these issues was developed in
 interactions and operators by projecting their full NCSM counterparts
 into a given valence space.
 
-To overcome these limitations in heavier systems, the IM-SRG can be
+To overcome these limitations in heavier systems, the IMSRG can be
 extended to derive effective valence-space Hamiltonians and operators
 nonperturbatively.  Calculations without initial 3N forces
 \cite{Tsukiyama:2012fk} indicated that an \emph{ab initio} description
@@ -3785,7 +3804,7 @@ with this approach.
   }
 \end{figure}
 
-The utility of the IM-SRG lies in the freedom to tailor the definition
+The utility of the IMSRG lies in the freedom to tailor the definition
 of $H^{\rm{od}}$ to a specific problem.  For instance, to construct a
 Shell Model Hamiltonian for a nucleus comprised of $A_v$ valence
 nucleons outside a closed core, we define a HF reference state
@@ -3793,7 +3812,7 @@ $\ket{\Phi}$ for the core with $A_c$ particles, and split the
 single-particle basis into hole ($h$), valence ($v$), and non-valence
 ($q$) particle states.  Treating all $A$ nucleons as active, i.e.,
 without a core approximation, we eliminate matrix elements which
-couple $\ket{\Phi}$ to excitations, just as in IM-SRG ground-state
+couple $\ket{\Phi}$ to excitations, just as in IMSRG ground-state
 calculations \cite{Tsukiyama:2011uq,Hergert:2013mi,Hergert:2013ij}. In
 addition, we decouple states with $A_v$ particles in the valence
 space, \mbox{$:\!\aaO_{v_1}\ldots\aaO_{v_{A_v}}\!\!:\!\!\ket{\Phi}$},
@@ -3815,10 +3834,10 @@ from states containing non-valence states.
 % interactions and compared with experiment. Figures adapted from
 % Ref.~\cite{Bogner:2014tg}. The MBPT results are performed in an extended
 % $sdf_{7/2}p_{3/2}$ space~\cite{Holt:2013fk} based on low-momentum NN+3N
-% interactions, while the IM-SRG~\cite{Bogner:2014tg} and CC effective
+% interactions, while the IMSRG~\cite{Bogner:2014tg} and CC effective
 % interaction (CCEI)~\cite{Jansen:2014qf} results are in the $sd$ shell from
 % the SRG-evolved NN+3N-full Hamiltonian with $\hbar \omega=20$~MeV
-% (CCEI and dotted IM-SRG) and $\hbar \omega=24$~MeV (solid IM-SRG). The
+% (CCEI and dotted IMSRG) and $\hbar \omega=24$~MeV (solid IMSRG). The
 % dashed lines show the neutron separation energy.
 % Figure taken from Ref.~\cite{Hebeler:2015xq}.\label{fig:Ospectra}}
 % \end{figure}
@@ -3832,7 +3851,7 @@ from states containing non-valence states.
   }
 \end{figure}
 
-After the IM-SRG derivation of the valence-space Hamiltonian, the
+After the IMSRG derivation of the valence-space Hamiltonian, the
 $A$-dependent Hamiltonian is diagonalized in the valence space to
 obtain the ground and excited states. For the oxygen isotopes, a good
 description of the experimental spectra is found
@@ -3900,7 +3919,7 @@ tool for quantum many-body theory.
 % new many-body data will be of great importance in the ongoing effort 
 % of understanding and improving these interactions, which are currently 
 % the dominant source of uncertainty in all \emph{ab initio} many-body 
-% calculations (see section \ref{sec:groundstate}).
+% calculations (see Sec.~\ref{sec:groundstate}).
 
 % Of course, there is much work to be done. A variety of efforts are 
 % underway to further extend the capabilities of the 
@@ -3919,7 +3938,7 @@ tool for quantum many-body theory.
 % many-body wave functions, and use them as reference states for the 
 % MR-IMSRG(2), combining dynamic and static correlation. The use of 
 % PNP reference states in our applications of the MR-IMSRG(2) 
-% to open-shell nuclei (see section \ref{sec:groundstate}) is the 
+% to open-shell nuclei (see Sec.~\ref{sec:groundstate}) is the 
 % simplest possible example of such a combined approach, and the use
 % of GCM reference states with richer collective structures is being 
 % explored now.
@@ -4103,7 +4122,7 @@ in any expression,
 \begin{equation}\label{eq:def_Pij}
   \PO_{ij} g(\ldots,i,\ldots,j) \equiv g(\ldots,j,\ldots,i)\,
 \end{equation}
-(see section \ref{sec:imsrg} and chapter \ref{chapter:cc}).
+(see Sec.~\ref{sec:imsrg} and chapter \ref{chapter:cc}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
