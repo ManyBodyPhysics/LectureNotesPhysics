@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter10.aux
 The style file: spphys.bst
-Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
+Database file #1: chapter10.bib
 Warning--I didn't find a database entry for "Lynn:2015eu"
 Warning--can't use both author and editor fields in Detmold:2015xw
 Warning--can't use both author and editor fields in Valdemoro:1987zl
@@ -15,7 +15,7 @@ Warning--empty journal in Gebrerufael:2016rp
 Warning--empty journal in Stroberg:2016th
 You've used 164 entries,
             2812 wiz_defined-function locations,
-            1866 strings with 42614 characters,
+            1865 strings with 42560 characters,
 and the built_in function-call counts, 60092 in all, are:
 = -- 4173
 > -- 1640
