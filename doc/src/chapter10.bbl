@@ -843,6 +843,38 @@ S.K. Bogner, H.~Hergert, J.D. Holt, A.~Schwenk, S.~Binder, A.~Calci,
 D.J. Rowe, Rev. Mod. Phys. \textbf{40}, 153 (1968).
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.40.153}
 
+\bibitem{Morris:2016xp}
+T.D. Morris, Systematic improvements of ab initio in-medium similarity
+  renormalization group calculations.
+\newblock Ph.D. thesis, Michigan State University (2016).
+\newblock \urlprefix\url{http://etd.lib.msu.edu/islandora/object/etd%3A3864}
+
+\bibitem{Taube:2008kx}
+A.G. Taube, R.J. Bartlett, J. Chem. Phys. \textbf{128}(4), 044110 (2008).
+\newblock \doi{10.1063/1.2830236}.
+\newblock \urlprefix\url{http://link.aip.org/link/?JCP/128/044110/1}
+
+\bibitem{Taube:2008vn}
+A.G. Taube, R.J. Bartlett, J. Chem. Phys. \textbf{128}(4), 044111 (2008).
+\newblock \doi{10.1063/1.2830237}.
+\newblock \urlprefix\url{http://link.aip.org/link/?JCP/128/044111/1}
+
+\bibitem{Piecuch:2005dp}
+P.~Piecuch, M.~W\l{}och, J. Chem. Phys. \textbf{123}(22), 224105 (2005).
+\newblock \doi{http://dx.doi.org/10.1063/1.2137318}.
+\newblock
+  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/123/22/10.1063/1.2137318}
+
+\bibitem{Roth:2007fk}
+R.~Roth, P.~Navr\'atil, Phys. Rev. Lett. \textbf{99}, 092501 (2007).
+\newblock \doi{10.1103/PhysRevLett.99.092501}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.99.092501}
+
+\bibitem{Roth:2009eu}
+R.~Roth, Phys. Rev. C \textbf{79}, 064324 (2009).
+\newblock \doi{10.1103/PhysRevC.79.064324}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.79.064324}
+
 \bibitem{Bardeen:1957bz}
 J.~Bardeen, L.N. Cooper, J.R. Schrieffer, Phys. Rev. \textbf{108}, 1175 (1957).
 \newblock \doi{10.1103/PhysRev.108.1175}

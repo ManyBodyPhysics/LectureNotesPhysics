@@ -4439,7 +4439,49 @@ EOM-IMSRG($m$,$n$) is the same as that of the IMSRG($\max{m,n}$), e.g., $\OC(N^6
 for the EOM-IMSRG(2,2) scheme that is the method we primarily use at this point 
 \cite{Parzuchowski:2016pi}. 
 
-\tbd{[Example from Nathan.]}
+\tbd{[Need an example from Nathan.]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Final Remarks}
+Superficially, the discussion in Sec.~\ref{sec:current} focused on 
+three different subject areas, namely Magnus methods, MR-IMSRG, and the 
+construction of effective Hamiltonians, but we expect that our readers
+can already tell that these directions are heavily intertwined. 
+
+The Magnus formulation of the IMSRG will greatly facilitate the evaluation 
+of general observables not just in the regular single-reference version of
+the method, but also in the MR-IMSRG. Magnus methods can also be readily 
+adapted to the construction of effective valence-space operators besides 
+the nuclear interaction, e.g., radii and electroweak transitions. In addition, 
+it allows us to construct systematic and computationally tractable approximations 
+to the full IMSRG(3) \cite{Morris:2016xp,Parzuchowski:2016pi}, similar to 
+the non-iterative treatment of triples in Coupled Cluster methods 
+\cite{Taube:2008kx,Taube:2008vn,Piecuch:2005dp,Binder:2013fk}.
+
+While the current version of our EOM technology is based on the single-reference
+IMSRG, we will formulate a multireference EOM scheme based on final 
+Hamiltonians from the MR-IMSRG evolution next. Such a MR-EOM-IMSRG
+will hold great potential for the description of excitations in 
+deformed or weakly bound nuclei, which would require excessively 
+large valence spaces in traditional CI approaches, and at the same
+time require an explicit treatment of static correlations that the
+uncorrelated reference wave functions used in the IMSRG and EOM-IMSRG
+cannot provide. 
+
+The MR-IMSRG has also recently been used to pre-diagonalize Hamiltonians
+that serve as input for the No-Core Shell Model (NCSM), merging the two 
+approaches into an iterative scheme that we call the In-Medium NCSM (IM-NCSM 
+for short) \cite{Gebrerufael:2016rp}. In this combined approach, we can
+converge NCSM results in model spaces whose dimensions are orders of
+magnitude smaller than those of the regular NCSM or its importance-truncated
+variant \cite{Roth:2007fk,Roth:2009eu,Roth:2014fk}, which should significantly
+expand its range of applicability. A similar idea might be used fruitfully
+in the traditional Shell model with a core as well, where the use of 
+statically correlated reference states and an MR-IMSRG evolution might
+help to overcome shortcomings in the Shell model interactions for specific
+nuclei.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4448,125 +4490,42 @@ for the EOM-IMSRG(2,2) scheme that is the method we primarily use at this point
 \section{Conclusions}
 In this chapter, we have presented a pedagogical introduction to the
 SRG and IMSRG, and discussed their applications in the context of the
-nuclear many-body problem. The former has become one of the most popular
+nuclear many-body problem. The former has become maybe the most popular
 tools for pre-processing nuclear interactions and operators, leading to
 vast improvements in the rate of convergence of many-body calculations,
 and extending the range of nuclei that can be tackled in \emph{ab initio}
 approaches \cite{Barrett:2013oq,Hagen:2014ve,Binder:2014fk,Soma:2014eu,
-Hergert:2016jk,Hergert:2016ng}. The IMSRG is an
+Hergert:2016jk,Hergert:2016ng}. The IMSRG implements SRG concepts directly
+in the $A$-body system, relying on normal-ordering methods to control
+the size of induced operators and make systematic truncations feasible.
+As we have demonstrated through a variety of applications, the IMSRG
+is an extremely versatile and powerful addition to the canon of 
+quantum many-body methods. In Sec.~\ref{sec:current}, we have given
+an overview of the main thrusts of current IMSRG research, and we
+hope that our readers will be inspired to contribute to these developments,
+or find ways in which the IMSRG framework can be useful to their
+own research programs. 
 
-
-The RG perspective is a key element that is woven into all of 
-the applications discussed in this review, and the future directions 
-mentioned in our look ahead. In my (admittedly biased) view, this
-is a unique feature of the IMSRG framework that sets it apart
-from the other many-body methods that we touched upon during this
-work. When the comparison with those other methods and experimental
-data is our first and foremost concern, we are primarily interested 
-in the $s\to\infty$ limit of the IMSRG or MR-IMSRG evolution, but
-the flow trajectory offers a wealth of additional insight. By considering
-points along the trajectory, we can gain a new understanding of
-how many-body correlations are reshuffled between the wave function
-and the Hamiltonian, or different pieces of the Hamiltonian, making
-transparent what is only implicitly assumed in other methods. Like 
-in the free-space SRG (or other RG methods), we have the freedom
-to work at intermediate values of $s$ if this is more practical than
-working at $s=0$ (in appropriate units) or in the limit $s\to\infty$,
-especially if we would incur unacceptable numerical errors at either
-of these extremes (see, e.g., \cite{Gebrerufael:2016rp,Li:2015nq,Li:2016rm}). 
-This is the inherent power of a framework that 
-integrates many-body and renormalization group techniques, and the
-reason why the IMSRG is an extremely versatile and valuable
-tool for quantum many-body theory.
-
-% Ongoing work focuses on three interconnected main directions:
-% \emph{(i)} the extension of the MR-IMSRG to the evaluation of general
-% observables (see Sec.~\ref{sec:magnus}), \emph{(ii)} the description
-% of deformed nuclei, and \emph{(iii)} the integration of MR-IMSRG and
-% Equation-of-Motion methods \cite{Rowe:1968eq} for the spectroscopy of
-% medium-mass and heavy neutron-rich nuclei.
-
-
-% strived to give a pedagogical
-% introduction to the description of nuclear many-body physics in the 
-% In-Medium SRG framework. The IMSRG belongs to a family of 
-% efficient, systematically extendable many-body approaches that have 
-% extended the reach of \emph{ab initio} nuclear structure theory well
-% into the medium-mass region of the nuclear chart in recent years 
-% (see, e.g., \cite{Binder:2014fk,Hergert:2016jk}). The MR-IMSRG and
-% IMSRG+SM, specifically, are ideally suited to investigate 
-% the properties of open-shell nuclei with a systematic assessment of
-% the theoretical uncertainties. The consistency of the results from
-% these two different approaches that are rooted in the same framework 
-% is highly encouraging, promising many opportunities for cross-validating 
-% and interpreting nuclear structure results in future applications
-% (cf.~sections \ref{sec:groundstate} and \ref{sec:sm}). The capability 
-% to confront nuclear interactions from Chiral EFT with a wealth of 
-% new many-body data will be of great importance in the ongoing effort 
-% of understanding and improving these interactions, which are currently 
-% the dominant source of uncertainty in all \emph{ab initio} many-body 
-% calculations (see Sec.~\ref{sec:groundstate}).
-
-% Of course, there is much work to be done. A variety of efforts are 
-% underway to further extend the capabilities of the 
-% MR-IMSRG and IMSRG+SM approaches. The MR-IMSRG allows
-% us to explore both dynamic and static correlations. The
-% former are due to the dynamics of correlated nucleon pairs, triples,
-% etc.~in the nucleus, which is captured well by the (generalized)
-% particle-hole expansion that underlies the MR-IMSRG flow equations.
-% In contrast, static correlations are collective and would require
-% us to treat up to $ApAh$ correlations, in exact and numerically
-% unfeasible IMSRG($A$) or MR-IMSRG($A$) truncation schemes. However, collective
-% correlations can be treated efficiently by breaking and restoring 
-% symmetries of the nuclear wave function, and using the Generator
-% Coordinate Method to mix various projected configurations (see, e.g.,
-% \cite{Ring:1980bb}). We can calculate the density matrices of such
-% many-body wave functions, and use them as reference states for the 
-% MR-IMSRG(2), combining dynamic and static correlation. The use of 
-% PNP reference states in our applications of the MR-IMSRG(2) 
-% to open-shell nuclei (see Sec.~\ref{sec:groundstate}) is the 
-% simplest possible example of such a combined approach, and the use
-% of GCM reference states with richer collective structures is being 
-% explored now.
-
-% Another important new development is the successful use of Magnus
-% expansion techniques to explicitly construct the unitary transformation 
-% that is generated by the IMSRG \cite{Morris:2015ve}. This greatly 
-% simplifies the evaluation of general observables,
-% which can be obtained with a simple application of $U(s)$ to the operator
-% of interest rather than
-% a concurrent evolution alongside the Hamiltonian by means of additional
-% sets of flow equations. Moreover, the Magnus methods make it possible
-% to construct systematic approximations to the complete IMSRG(3) flow, 
-% analogous in many-body content and computational efficiency to 
-% non-iterative triples methods in CC \cite{Taube:2008kx,Taube:2008vn,Piecuch:2005dp,Binder:2013fk}.
-% The extension of this approach to the MR-IMSRG is in progress.
-
-% The triples corrections to IMSRG Hamiltonians will also be extremely
-% valuable for the IMSRG+SM approach, allowing us to test the many-body
-% convergence of the valence-space interaction and operators. The
-% construction of valence-space transition operators is now in full 
-% swing, with the prospect of shedding new light on the emergence of
-% the phenomenological effective charges. A new refinement of the 
-% targeted normal ordering procedure was presented in Ref.~\cite{Stroberg:2016th}, 
-% improving once again the agreement between IMSRG+SM and
-% large-scale MR-IMSRG calculations.
-
-% As an alternative to the exact valence-space diagonalization in the
-% IMSRG+SM approach, we are working on combining the IMSRG with 
-% Equation-of-Motion (EoM) methods (cf.~\cite{Shavitt:2009}). The basic
-% framework has been developed and tested for the single-reference
-% case \cite{Parzuchowski:2016pi}, and we aim to generalize it to
-% multireference applications as a next step, incorporating triples
-% corrections to the (MR-)IMSRG evolved Hamiltonian at the same time.
-
-% Last but not least, the IMSRG+SM and IMSRG based EoM approaches
-% are, in essence, established techniques for many-body calculations
-% whose results are (possibly) enhanced through the use of an IMSRG
-% improved effective Hamiltonian. We have begun to explore the use of
-% such IMSRG and MR-IMSRG improved Hamiltonians as input for other
-% methods. A promising combination of MR-IMSRG and NCSM is discussed
-% in \cite{Gebrerufael:2016rp}. 
+The explicit RG aspect of the IMSRG framework is a unique feature
+that sets it apart from most other many-body methods on the market. 
+When the comparison with 
+those other methods and experimental data is our first and foremost 
+concern, we are primarily interested in the $s\to\infty$ limit of the 
+IMSRG or MR-IMSRG evolution, but the flow trajectory is an enormous 
+source of additional insight. By studying the flows, not just the
+final fixed points, we can gain a new understanding of how many-body 
+correlations are reshuffled between the wave function and the Hamiltonian, 
+or different pieces of 
+the Hamiltonian, making transparent what is only implicitly assumed 
+in other methods. Like in the free-space SRG (or other RG methods), we 
+have the freedom to work at intermediate values of $s$ if this is more 
+practical than working at $s=0$ or in the limit 
+$s\to\infty$, especially if either of these extremes would lead to the 
+accrual of unacceptable numerical errors in our results (see, e.g., 
+\cite{Gebrerufael:2016rp,Li:2015nq,Li:2016rm}). 
+This is the inherent power of a framework that integrates many-body and 
+renormalization group techniques, and the reason why consider the IMSRG 
+to be an extremely valuable tool for quantum many-body theory.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

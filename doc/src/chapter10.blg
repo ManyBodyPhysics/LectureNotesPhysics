@@ -13,45 +13,45 @@ Warning--empty journal in Lepage:1997py
 Warning--empty journal in Parzuchowski:2016pi
 Warning--empty journal in Gebrerufael:2016rp
 Warning--empty journal in Stroberg:2016th
-You've used 158 entries,
+You've used 164 entries,
             2812 wiz_defined-function locations,
-            1824 strings with 41346 characters,
-and the built_in function-call counts, 58193 in all, are:
-= -- 4032
-> -- 1604
+            1866 strings with 42614 characters,
+and the built_in function-call counts, 60092 in all, are:
+= -- 4173
+> -- 1640
 < -- 18
-+ -- 653
-- -- 480
-* -- 3714
-:= -- 6766
-add.period$ -- 237
-call.type$ -- 158
-change.case$ -- 11
++ -- 669
+- -- 490
+* -- 3833
+:= -- 6995
+add.period$ -- 249
+call.type$ -- 164
+change.case$ -- 12
 chr.to.int$ -- 18
-cite$ -- 167
-duplicate$ -- 6194
-empty$ -- 5864
-format.name$ -- 600
-if$ -- 13209
+cite$ -- 173
+duplicate$ -- 6404
+empty$ -- 6063
+format.name$ -- 614
+if$ -- 13640
 int.to.chr$ -- 0
-int.to.str$ -- 158
-missing$ -- 1576
-newline$ -- 719
-num.names$ -- 159
-pop$ -- 2180
+int.to.str$ -- 164
+missing$ -- 1626
+newline$ -- 749
+num.names$ -- 165
+pop$ -- 2242
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1537
+skip$ -- 1581
 stack$ -- 0
-substring$ -- 2006
-swap$ -- 3915
+substring$ -- 2063
+swap$ -- 4042
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 304
-width$ -- 161
-write$ -- 1731
+while$ -- 313
+width$ -- 167
+write$ -- 1803
 (There were 10 warnings)
