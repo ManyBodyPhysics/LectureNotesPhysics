@@ -4,8 +4,6 @@ The top-level auxiliary file: chapter10.aux
 The style file: spphys.bst
 Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
 Warning--I didn't find a database entry for "Lynn:2015eu"
-Warning--I didn't find a database entry for "Machleidt:2011zz"
-Warning--I didn't find a database entry for "Stroberg:2015qr"
 Warning--can't use both author and editor fields in Detmold:2015xw
 Warning--can't use both author and editor fields in Valdemoro:1987zl
 Warning--can't use both author and editor fields in Mazziotti:2007qe
@@ -14,45 +12,46 @@ Warning--can't use both author and editor fields in Hindmarsh:1983pd
 Warning--empty journal in Lepage:1997py
 Warning--empty journal in Parzuchowski:2016pi
 Warning--empty journal in Gebrerufael:2016rp
-You've used 170 entries,
+Warning--empty journal in Stroberg:2016th
+You've used 158 entries,
             2812 wiz_defined-function locations,
-            1923 strings with 45587 characters,
-and the built_in function-call counts, 64636 in all, are:
-= -- 4362
-> -- 1967
+            1824 strings with 41346 characters,
+and the built_in function-call counts, 58193 in all, are:
+= -- 4032
+> -- 1604
 < -- 18
-+ -- 782
-- -- 597
-* -- 4193
-:= -- 7555
-add.period$ -- 260
-call.type$ -- 170
++ -- 653
+- -- 480
+* -- 3714
+:= -- 6766
+add.period$ -- 237
+call.type$ -- 158
 change.case$ -- 11
 chr.to.int$ -- 18
-cite$ -- 178
-duplicate$ -- 6829
-empty$ -- 6411
-format.name$ -- 728
-if$ -- 14601
+cite$ -- 167
+duplicate$ -- 6194
+empty$ -- 5864
+format.name$ -- 600
+if$ -- 13209
 int.to.chr$ -- 0
-int.to.str$ -- 170
-missing$ -- 1779
-newline$ -- 778
-num.names$ -- 171
-pop$ -- 2401
+int.to.str$ -- 158
+missing$ -- 1576
+newline$ -- 719
+num.names$ -- 159
+pop$ -- 2180
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1660
+skip$ -- 1537
 stack$ -- 0
-substring$ -- 2214
-swap$ -- 4385
+substring$ -- 2006
+swap$ -- 3915
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 8
-while$ -- 329
-width$ -- 173
-write$ -- 1875
-(There were 11 warnings)
+warning$ -- 9
+while$ -- 304
+width$ -- 161
+write$ -- 1731
+(There were 10 warnings)

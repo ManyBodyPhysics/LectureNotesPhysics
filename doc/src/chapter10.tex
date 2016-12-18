@@ -86,9 +86,11 @@
 \newcommand{\HO}{\op{H}}
 \newcommand{\OO}{\op{O}}
 \newcommand{\PO}{\op{P}}
+\newcommand{\QO}{\op{Q}}
 \newcommand{\TO}{\op{T}}
 \newcommand{\UO}{\op{U}}
 \newcommand{\VO}{\op{V}}
+\newcommand{\XO}{\op{X}}
 \newcommand{\ZO}{\op{Z}}
 
 
@@ -97,6 +99,8 @@
 
 \newcommand{\OmegaO}{\op{\Omega}}
 
+\newcommand{\QQO}{\adj{\op{Q}}}
+\newcommand{\XXO}{\adj{\op{X}}}
 \newcommand{\UUO}{\adj{\op{U}}}
 \newcommand{\ZZO}{\adj{\op{Z}}}
 
@@ -3992,7 +3996,7 @@ under rotation, which requires a future extension of our framework)
 \end{figure}
 
 The $NN+3N(400)$ Hamiltonian consists of the \NNNLO{} interaction
-by Entem and Machleidt \cite{Entem:2003th,Machleidt:2011zz}, with
+by Entem and Machleidt \cite{Entem:2003th,Machleidt:2011bh}, with
 cutoff $\Lambda_{NN}=500\,\MeV$, and a local \NNLO{} interaction
 with a reduced cutoff $\Lambda_{NN}=400\,\MeV$ \cite{Roth:2011kx,Gazit:2009qf}.
 The low-energy constants (LECs), i.e., the parameters of the chiral
@@ -4040,48 +4044,68 @@ the increase is even larger, but continuum effects must be considered to
 make a meaningful comparison. We note that \NNLOsat{} also fails to describe 
 the sharp jump in $\Rch$ at $\nuc{O}{18}$.
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{\label{sec:current_hamiltonians}Non-Perturbative Shell-Model Interactions}
+\subsection{\label{sec:current_hamiltonians}Effective Hamiltonians}
 
+A recurring theme of this chapter has been the transformation of 
+nuclear Hamiltonians to a shape that facilitates their subsequent application
+in many-body calculations. We have stressed this point in our discussion
+of the free-space SRG, in particular (see Sec.~\ref{sec:srg_nn}), but 
+it applies to the IMSRG (or the MR-IMSRG) as well. Recall our application 
+of the IMSRG to the pairing Hamiltonian in Sec.~\ref{sec:imsrg_pairing},
+where we primarily focused on how correlations that are usually probed by 
+perturbative corrections are shuffled into the flowing ground-state energy 
+$E(s)$ in the limit $s\to\infty$ (see Fig.~\ref{fig:imsrg_mbpt}). 
+We can also interpret the results shown in this figure in a slightly different way: At 
+any given value of $s$, $E(s)$ would result from a simple HF
+calculation with the Hamiltonian $\HO(s)$, which has absorbed correlations
+because of an RG improvement. The result of the simple HF calculation approaches
+the exact result as we evolve, aside from truncation errors, of course.
+The same is true for the MBPT(2) and MBPT(3) calculations, summing $E(s)$ 
+plus perturbative corrections through the indicated order. Of course, these
+approaches are already closer to the exact result in the first place. 
 
-For open-shell systems, rather than solving the full $A$-body problem,
-it is profitable to follow the Shell Model paradigm by constructing
-and diagonalizing an effective Hamiltonian in which the active degrees
-of freedom are $A_v$ valence nucleons confined to a few orbitals near
-the Fermi level. Both phenomenological and microscopic
-implementations of the Shell Model have been used with success to
-understand and predict the evolution of shell structure, properties of
-ground and excited states, and electroweak transitions
-\cite{Brown:2001rg,Caurier:2005qf,Otsuka:2013vn}.
+\begin{figure}[t]
+  \setlength{\unitlength}{0.5\textwidth}
+  \begin{center}
+  \begin{picture}(1.0000,0.8000)
+    \put(0.0000,0.0000){\includegraphics[width=\unitlength]{\fdir/{imsrg-white_d1.0_g+0.5_N4_ev1.flow}.pdf}}
+  \end{picture}
+  \end{center}
+  \vspace{-5pt}
+  \caption{\label{fig:imsrg_mbpt}IMSRG(2) flow for the ground state of the pairing 
+  Hamiltonian with $\delta=1.0, g=0.5$ (cf.~Sec.~\ref{sec:srg_pairing_example}).
+  Calculations were performed with the White generator, Eq.~\eqref{eq:eta_white}.
+  The figures shows the flowing ground-state energy $E(s)$ plus perturbative second and
+  third-order energy corrections for $\HO(s)$. The exact ground-state energy is 
+  indicated by the dashed line. }
+\end{figure}
 
-Recent microscopic Shell-Model studies have revealed the impact of 3N
-forces in predicting ground- and excited-state properties in neutron-
-and proton-rich nuclei
-\cite{Otsuka:2010cr,Holt:2012fk,Holt:2013fk,Holt:2013hc,Holt:2013cr,Gallant:2012kx,Wienholtz:2013bh,Holt:2014vn}.
-Despite the novel insights gained from these studies, they make
-approximations that are difficult to benchmark. The microscopic
-derivation of the effective valence-space Hamiltonian relies on MBPT
-\cite{Hjorth-Jensen:1995ys}, where order-by-order convergence is unclear. Even with
-efforts to calculate particular classes of diagrams nonperturbatively
-\cite{Holt:2005mi}, results are sensitive to the HO frequency $\hw$ (due
-to the core), and the choice of valence space
-\cite{Holt:2012fk,Holt:2013fk,Holt:2013hc}. A nonperturbative method to
-address these issues was developed in
-\cite{Lisetskiy:2008fk,Lisetskiy:2009uq,Dikmen:2015fk}, which generates valence-space
-interactions and operators by projecting their full NCSM counterparts
-into a given valence space.
+This example illustrates the potential benefits of using Hamiltonians that
+have been improved through IMSRG evolution as input for other many-body 
+methods. In this section, we will briefly discuss applications in the 
+traditional nuclear Shell model, which will give us access to a wealth 
+of spectroscopic observables like excitation energies and transition rates. 
+We will also look at the use of IMSRG Hamiltonians in Equation-of-Motion 
+methods, which are an alternative approach to the computation of excited-state 
+properties.
 
-To overcome these limitations in heavier systems, the IMSRG can be
-extended to derive effective valence-space Hamiltonians and operators
-nonperturbatively.  Calculations without initial 3N forces
-\cite{Tsukiyama:2012fk} indicated that an \emph{ab initio} description
-of ground and excited states for open-shell nuclei may be possible
-with this approach.
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Non-Empirical Interactions for the Nuclear Shell Model}
+In IMSRG ground-state applications, we use the RG flows to decouple a 
+suitable reference state from $npnh$ excitations (see Sec.~\ref{sec:imsrg_decoupling}). 
+From a more general perspective, we can view this as a decoupling of
+different \emph{sectors} of the many-body Hilbert space by driving the 
+couplings of these sectors to zero. We are not forced to restrict the
+decoupling to a single state, but could target multiple states at once
+\cite{Tsukiyama:2012fk,Parzuchowski:2016pi,Hergert:2016ng} --- all we
+need to do is tailor our definition of the off-diagonal Hamiltonian
+to the problem, as in all SRG and IMSRG applications!
 
 \begin{figure}[t]
   \setlength{\unitlength}{0.3\textwidth}
@@ -4101,43 +4125,39 @@ with this approach.
   }
 \end{figure}
 
-The utility of the IMSRG lies in the freedom to tailor the definition
-of $H^{\rm{od}}$ to a specific problem.  For instance, to construct a
-Shell Model Hamiltonian for a nucleus comprised of $A_v$ valence
-nucleons outside a closed core, we define a HF reference state
-$\ket{\Phi}$ for the core with $A_c$ particles, and split the
-single-particle basis into hole ($h$), valence ($v$), and non-valence
-($q$) particle states.  Treating all $A$ nucleons as active, i.e.,
-without a core approximation, we eliminate matrix elements which
-couple $\ket{\Phi}$ to excitations, just as in IMSRG ground-state
-calculations \cite{Tsukiyama:2011uq,Hergert:2013mi,Hergert:2013ij}. In
-addition, we decouple states with $A_v$ particles in the valence
-space, \mbox{$:\!\aaO_{v_1}\ldots\aaO_{v_{A_v}}\!\!:\!\!\ket{\Phi}$},
-from states containing non-valence states.
-
-% \begin{figure}[t]
-% \begin{center}
-% % \minipage{0.335\textwidth}
-% % \includegraphics[width=\linewidth,clip=]{fig/22O_arnps}
-% % \endminipage\hfill
-% % \minipage{0.3\textwidth}
-% % \includegraphics[width=\linewidth,clip=]{fig/23O_arnps}
-% % \endminipage\hfill
-% % \minipage{0.3\textwidth}
-% % \includegraphics[width=\linewidth,clip=]{fig/24O_arnps}
-% % \endminipage
-% \end{center}
-% \caption{Excited-state spectra of $^{22,23,24}$O based on chiral NN+3N
-% interactions and compared with experiment. Figures adapted from
-% Ref.~\cite{Bogner:2014tg}. The MBPT results are performed in an extended
-% $sdf_{7/2}p_{3/2}$ space~\cite{Holt:2013fk} based on low-momentum NN+3N
-% interactions, while the IMSRG~\cite{Bogner:2014tg} and CC effective
-% interaction (CCEI)~\cite{Jansen:2014qf} results are in the $sd$ shell from
-% the SRG-evolved NN+3N-full Hamiltonian with $\hbar \omega=20$~MeV
-% (CCEI and dotted IMSRG) and $\hbar \omega=24$~MeV (solid IMSRG). The
-% dashed lines show the neutron separation energy.
-% Figure taken from Ref.~\cite{Hebeler:2015xq}.\label{fig:Ospectra}}
-% \end{figure}
+In the nuclear Shell model, we split the single-particle basis in our 
+calculation into core or hole ($h$), valence particle ($v$) and non-valence 
+particle ($q$) orbitals (see figure \ref{fig:valence_space})\footnote{In
+quantum chemistry, what we call a valence space is usually refereed to as
+the \emph{active space}.}. The actual many-body calculation for a nucleus
+with $A$ nucleons is an exact diagonalization of the Hamiltonian matrix in a 
+subspace of the Hilbert space that is spanned by configurations 
+of the form
+\begin{equation}\label{eq:def_configurations}
+  \ket{\aaO_{v_1}\ldots\aaO_{v_{A_v}}} \equiv \aaO_{v_1}\ldots\aaO_{v_{A_v}}\ket{\Phi}\,,
+\end{equation}
+where $\ket{\Phi}$ is the wave function for a suitable core with $A_c$
+nucleons, and the $A_v$ valence nucleons are distributed over the valence
+orbitals $v_i$ in all possible ways. Since the core is assumed to be inert, 
+it can be viewed as a vacuum state for the valence configurations. The matrix 
+representation of the Hamiltonian in the space spanned by these configurations 
+is
+\begin{equation}
+  \matrixe{v'_{1}\ldots v'_{A_v}}{\HO}{v_{1}\ldots v_{A_v}}
+  = \matrixe{\Phi}{\aO_{v'_{A_v}}\ldots\aO_{v'_1}\HO\aaO_{v_1}\ldots\aaO_{v_{A_v}}}{\Phi}\,.
+\end{equation}
+This expression suggests that we normal order the Hamiltonian and other 
+operators with respect to the core wave function $\ket{\Phi}$, which can
+be obtained from a simple spherical HF calculation. The state $\ket{\Phi}$
+takes on the role of the reference state for the IMSRG flow, but recent
+studies have shown that choosing either individual configurations for the 
+target nucleus or ensembles of configurations as references will reduce 
+truncation errors due to omitted induced terms, see 
+\cite{Stroberg:2016fk,Stroberg:2016th}. When the resulting valence-space
+interactions are used to calculate nuclear ground-state energies, we find
+excellent agreement with direct IMSRG ground-state calculations, which 
+indicates that the introduction of the inert core is justified, at least
+for the used $NN+3N$ forces with low resolution scales $\lambdaSRG$.
 
 \begin{figure}[t]
   \begin{center}
@@ -4148,20 +4168,278 @@ from states containing non-valence states.
   }
 \end{figure}
 
-After the IMSRG derivation of the valence-space Hamiltonian, the
-$A$-dependent Hamiltonian is diagonalized in the valence space to
-obtain the ground and excited states. For the oxygen isotopes, a good
-description of the experimental spectra is found
-(Fig.~\ref{fig:Ospectra}).  Recently, these calculations were extended
-to nearby F, Ne, and Mg isotopes showing excellent agreement with new
-measurements in $^{24}$F~\cite{Caceres:2015fk} and that deformation
-can emerge from these \emph{ab initio}
-calculations~\cite{Stroberg:2015qr}. Future directions include
-extending the valence space, which will give access to the
-island-of-inversion region and potentially the full $sd$-shell (and
-higher) neutron dripline.
+
+We want to use the IMSRG evolution to decouple the configurations
+\eqref{eq:def_configurations} from states that involve excitations 
+of the core, just as in the ground-state calculations. In addition, 
+we need to decouple them from states containing nucleons in non-valence 
+particle states (see Fig.~\ref{fig:valence_decoupling}). Working in 
+IMSRG(2) truncation, i.e., assuming up to two-body terms in $\HO(s)$, 
+we can identify the matrix elements that couple pairs of valence-space 
+particles to $1q1v$, $2q$, $3p1h$, and $4p2h$ excitations, respectively, 
+where $p=v,q$. For each type of matrix element, we show the antisymmetrized 
+Goldstone diagrams \cite{Shavitt:2009} that represent the excitation process. 
+Additional diagrams due to permutations of the nucleons or Hermitian 
+adjoints are suppressed for brevity.
+
+Diagrams (I) and (II) are eliminated if matrix elements of $f$ and 
+$\Gamma$ that contain at least one q index are chosen to be off-diagonal. 
+Diagrams (III) and (V) are eliminated by decoupling the reference-state, i.e.,
+the core, which requires $f^{p}_{h}$ and $\Gamma^{pp'}_{hh'}$ to be off-diagonal 
+(cf.~section \ref{sec:imsrg_decoupling}). This only leaves diagram (IV), 
+which vanishes if matrix elements of the type $\Gamma^{pp'}_{vh}$ 
+vanish. Thus, we define \cite{Tsukiyama:2012fk,Hergert:2016ng}
+\begin{equation}\label{eq:def_Hod}
+  H_{od} \equiv \sum_{i\neq i'}f^{i}_{i'}\nord{\AO^{i}_{i'}}
+           + \frac{1}{4}\left(\sum_{pp'hh'}\Gamma^{pp'}_{hh'}\nord{\AO^{pp'}_{hh'}}
+           + \sum_{pp'vh}\Gamma^{pp'}_{vh}\nord{\AO^{pp'}_{vh}}
+           + \sum_{pqvv'}\Gamma^{pq}_{vv'}\nord{\AO^{pq}_{vv'}}\right)
+           + \text{H.c.}\,.
+\end{equation}
+This definition of the off-diagonal Hamiltonian holds for an arbitrary
+number of valence particles $A_v$. For $A_v=1$, diagram (II) vanishes, 
+while diagrams (I) and (III)-(V) have the same topology, but one 
+less spectator nucleons. Analogously, diagrams (I)-(V) merely contain 
+additional spectator nucleons for $A_v>2$.
 
 
+\begin{table*}[t]
+  \setlength{\unitlength}{0.1\textwidth}
+  \begin{tabular*}{\textwidth}{lm{0.16\textwidth}m{0.2\textwidth}m{0.45\textwidth}}
+    \hline\hline
+     no. & type & diagram & energy difference $\Delta$ \\
+    \hline\\[-5pt]
+     I & $\matrixe{2p}{\HO}{2p}$ & 
+    \begin{picture}(2.0000,1.3000)
+      \put(0.0000,0.1500){\includegraphics[height=\unitlength]{\fdir/ags_fme_2p2p.pdf}}
+      \put(0.3750,1.2000){\footnotesize$p$}
+      \put(0.3750,0.0000){\footnotesize$p'$}
+    \end{picture}
+    & 
+    $f^{p}_{p} - f^{p'}_{p'}$\\
+    II & $\matrixe{2p}{\HO}{2p}$ & 
+    \begin{picture}(2.0000,1.4000)
+      \put(0.0000,0.1500){\includegraphics[height=\unitlength]{\fdir/ags_Gme_2p2p.pdf}}
+      \put(0.0150,1.2000){\footnotesize$p$}
+      \put(0.7400,1.2000){\footnotesize$p'$}
+      \put(0.0150,0.0000){\footnotesize$p''$}
+      \put(0.7400,0.0000){\footnotesize$p'''$}
+    \end{picture}
+     & 
+    $f^{p}_{p} + f^{p'}_{p'} - f^{p''}_{p''} - f^{p'''}_{p'''} + \Gamma^{pp'}_{pp'} - \Gamma^{p''p'''}_{p''p'''}$\\
+    III & $\matrixe{3p1h}{\HO}{2p}$ &
+    \begin{picture}(2.0000,1.4000)
+      \put(0.0000,0.1500){\includegraphics[height=\unitlength]{\fdir/ags_fme_3p1h-2p.pdf}}
+      \put(0.7400,1.2000){\footnotesize$p$}
+      \put(0.9600,1.2000){\footnotesize$h$}
+  \end{picture}
+    & 
+    $f^{p}_{p} - f^{h}_{h} - \Gamma^{ph}_{ph}$
+    \\
+    IV & $\matrixe{3p1h}{\HO}{2p}$ &
+    \begin{picture}(2.000,1.4000)
+      \put(0.0000,0.1500){\includegraphics[height=\unitlength]{\fdir/ags_Gme_3p1h-2p.pdf}}
+      \put(0.3750,1.2000){\footnotesize$p$}
+      \put(0.7400,1.2000){\footnotesize$p'$}
+      \put(0.9600,1.2000){\footnotesize$h$}
+      \put(0.3750,0.0000){\footnotesize$p''$}
+    \end{picture}
+    & 
+    $f^{p}_{p} + f^{p'}_{p'} - f^{p''}_{p''}-f^{h}_{h} + \Gamma^{pp'}_{pp'}-\Gamma^{ph}_{ph}-\Gamma^{p'h}_{p'h}$ 
+    \\
+    V & $\matrixe{4p2h}{\HO}{2p}$ &
+    \begin{picture}(2.000,1.4000)
+      \put(0.0000,0.1500){\includegraphics[height=\unitlength]{\fdir/ags_Gme_4p2h-2p.pdf}}
+      \put(0.7400,1.2000){\footnotesize$p$}
+      \put(0.9600,1.2000){\footnotesize$h$}
+      \put(1.4800,1.2000){\footnotesize$p'$}
+      \put(1.7000,1.2000){\footnotesize$h'$}
+    \end{picture}
+    &
+    $f^{p}_{p} + f^{p'}_{p'} - f^{h}_{h} - f^{h'}_{h'} 
+    + \Gamma^{pp'}_{pp'} + \Gamma^{hh'}_{hh'} - \Gamma^{ph}_{ph} 
+    - \Gamma^{p'h'}_{p'h'} - \Gamma^{ph'}_{ph'}-\Gamma^{p'h}_{p'h}$
+    \\ 
+    \hline\hline
+  \end{tabular*}
+  \caption{\label{tab:diagrams} 
+    Classification of matrix elements of the many-body Hamiltonian 
+    in the many-body Hilbert space spanned by $(n+2)$p$n$h excitations 
+    of the reference state (cf.~\ref{fig:valence_decoupling}). For 
+    each matrix element, we show the corresponding antisymmetrized 
+    Goldstone diagrams \cite{Shavitt:2009} involving the one- and 
+    two-body parts of $\HO$ (permutations involving spectator particles 
+    which are required by antisymmetry are implied), as well as the 
+    energy differences appearing in the matrix elements for $\eta(s)$ 
+    in each case (see text).
+  }
+\end{table*}
+
+Using $\HO_{od}$ in the construction of generators, we evolve the 
+Hamiltonian by solving the IMSRG(2) flow equations \eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}. 
+The evolved Hamiltonian is given by
+\begin{equation}
+ \HO(\infty) = E + \sum_{v}f^{v}_{v}\nord{\AO^{v}_{v}} + \frac{1}{4}\sum_{v_i,v_j,v_k,v_l}
+  \Gamma^{v_iv_j}_{v_kv_l}\nord{\AO^{v_iv_j}_{v_kv_l}} + \ldots\,,
+\end{equation}
+where the explicitly shown terms are the core energy, single-particle
+energies, and two-body matrix elements that are used as input for 
+a subsequent Shell model diagonalization. 
+
+A possible subtlety is associated with the treatment of the mass-number 
+dependence of the intrinsic Hamiltonian \eqref{eq:def_Hint}. We interpret 
+it as a dependence on the mass-number \emph{operator} $\AO$, which acts 
+on the many-body states on which we are operating, i.e., configurations 
+in the \emph{target} nucleus, and therefore the mass number of the target
+should be used in the intrinsic Hamiltonian at all stages of a calculation
+\cite{Hergert:2009wh,Stroberg:2016fk,Stroberg:2016th}. This is appropriate 
+because the combined IMSRG + Shell model calculation is supposed to approximate 
+the results of an exact diagonalization for that particular nucleus.
+
+The naive computational scaling for the valence-decoupling procedure 
+described here is $\OC(N^6)$, just like that of IMSRG(2) ground-state 
+calculations. On 2015/16 computing hardware, typical evolutions require
+about 100-1000 core hours, assuming a single major shell as the valence
+space. The Shell model calculation is typically less expensive in that
+case. However, it will start to dominate the computational scaling as 
+soon as we have to consider extended valence spaces consisting of two
+or more major shells, because of the factorial growth of 
+the Shell model basis (cf.~Sec.~\ref{sec:srg_pairing}).
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=0.98\textwidth]{\fdir/chi2b3b400_srg0800_OXX_spectra.pdf}
+  \end{center}
+\caption{Excited-state spectra of $^{22,23,24}$O based on the chiral
+$NN+3N(400)$ interaction with $\lambdaSRG=1.88\,\fmi$, compared to 
+results with the phenomenological USDB interaction \cite{Brown:2006fk}
+and experimental data, see \cite{Bogner:2014tg,Hergert:2016ng} for 
+full details. Dotted and solid lines are results for $\hbar \omega=20\,\MeV$
+and $\hbar \omega=24\,\MeV$, respectively, which are shown as an indicator
+of convergence. \label{fig:Ospectra}}
+\end{figure}
+
+As an example, Fig.~\ref{fig:Ospectra} shows the low-lying excitation 
+spectra of $\nuc{O}{22-24}$ from Shell model calculations with IMSRG-derived
+valence-space interactions. These interactions were generated from an 
+underlying chiral $NN+3N$ Hamiltonian consisting of the
+\NNNLO{} $NN$ interaction by Entem and Machleidt with $\Lambda_{NN}=500\,\MeV$,
+and an \NNLO{} $3N$ interaction with $\Lambda_{3N}=400\,\MeV$, which has
+been evolved to $\lambdaSRG=1.88\,\fmi$ \cite{Entem:2003th,Machleidt:2011bh,Gazit:2009qf,Roth:2011kx}
+(also cf.~Secs.~\ref{sec:srg_nn},\ref{sec:current_mrimsrg}). We compare
+our results to the gold-standard phenomenological USDB interaction by
+Brown and Richter, which describes more than 600
+ground-state and excitation energies in $sd-$shell ($8\leq Z,N\leq 20$) 
+nuclei with an rms deviation of merely $\sim130\,\keV$ \cite{Brown:2006fk},
+and to experimental data. In the nuclei shown, the agreement is quite
+satisfactory given that the chiral input Hamiltonian is entirely fixed
+by $A\leq4$ data. The IMSRG interactions turn out to perform quite well 
+in the entire lower $sd-$shell, achieving an rms deviation of $\sim580\,\keV$
+in about 150 states \cite{Stroberg:2016fk,Hergert:2016ng}. The chiral 
+$3N$ interactions are found to be of crucial importance for the correct
+reproduction of level orderings and spacings. 
+
+%
+% SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsubsection{Equation-of-Motion Methods}
+
+Equation-of-Motion (EOM) methods \cite{Rowe:1968eq} are a useful alternative
+to the Shell model when it comes to the calculation of excited states,
+in particular when extended valence spaces lead to prohibitively large
+Shell model basis dimensions. In these approaches, the Schr\"odinger
+equation is rewritten in terms of ladder operators
+that create excited eigenstates from the exact ground state:
+\begin{equation}\label{eq:schroedinger_eom}
+  \HO\ket{\Psi_n} = E_n\ket{\Psi} \qquad\longrightarrow\qquad \HO\XXO_n\ket{\Psi_0} = E_n\XXO_n\ket{\Psi_0}\,.
+\end{equation}
+Formally, $\QQO_n$ is given by the dyadic product $\ket{\Psi_n}\bra{\Psi_0}$,
+and by thinking of the exact eigenstates in a CI sense, it is easy to see that 
+they can be expresed as a linear combination of up to $A$-body excitation and 
+de-excitation operators acting on the ground state. We can further rewrite
+Eq.~\eqref{eq:schroedinger_eom} as the Equation of Motion
+\begin{equation}\label{eq:eom}
+  \comm{\HO}{\XXO_n}\ket{\Psi_0} = (E_n-E_0)\XXO_n\ket{\Psi_0} \equiv \omega_n \XXO_n\ket{\Psi_0}\,,
+\end{equation}
+and introduce systematic approximations to the $\XXO_n$ and the ground-state 
+$\ket{\Psi_0}$. For example, by replacing $\ket{\Psi_0}$ with a simple Slater 
+determinant and using the ansatz 
+\begin{equation}
+  \XXO_n = \sum_k X_{nk}\aaO_k\,, 
+\end{equation}
+we obtain Hartree-Fock theory, for
+\begin{equation}
+  \XXO_n = \sum_{ph} X^{(n)}_{ph}\aaO_p\aO_h\,, 
+\end{equation}
+we have the Tamm-Dancoff Approximation (TDA) for excited states, and
+\begin{equation}\label{eq:rpa_ladder}
+  \XXO_n = \sum_{ph} X^{(n)}_{ph}\aaO_p\aO_h - Y^{(n)}_{ph}\aaO_h\aO_p\,, 
+\end{equation}
+yields the Random Phase Approximation (RPA) in quasi-boson approximation
+\cite{Ring:1980bb,Suhonen:2007wo}. Plugging the Slater determinant reference
+state and the ansatz for the ladder operators into the Eq.~ 
+\eqref{eq:eom}, we end up with a regular or a generalized eigenvalue problem, 
+which we solve for the amplitudes appearing in the $\XXO_n$ operators. Since 
+the computed amplitudes can be used to improve the ground-state ansatz, it is
+usually possible to construct self-consistent solutions of the EoM \eqref{eq:eom}
+a given truncation.
+
+Since we have casually referred to the approximate ground state as a 
+reference state already, it will not come as a surprise to our readers
+that we can quite naturally combine EOM methods with the IMSRG. Per construction,
+the reference state $\ket{\Phi_0}$ will be the ground state of the final IMSRG Hamiltonian 
+\begin{equation}
+  \Hfinal\equiv\UO(\infty)\HO(0)\UUO(\infty)
+\end{equation}. Multiplying Eq.~\ref{eq:eom} by $\UO(\infty)$ and recalling that 
+\begin{equation}
+  \UO(\infty)\ket{\Psi_0} = \ket{\Phi_0}\,,
+\end{equation}
+we obtain the unitarily transformed EOM
+\begin{equation}\label{eq:eom}
+  \comm{\Hfinal}{\overline{X}^\dag_n}\ket{\Phi_0} = \omega_n \overline{X}^\dag_n\ket{\Phi_0}\,.
+\end{equation}
+The solutions $\overline{X}^\dag_n$ can be used to obtain the eigenstates 
+of the unevolved Hamiltonian via
+\begin{equation}
+  \ket{\Psi_n} = \UUO(\infty)\overline{X}^\dag_n\ket{\Phi_0}\,.
+\end{equation}
+
+In current applications, we include up to $2p2h$ excitations in the ladder 
+operator \cite{Parzuchowski:2016pi}:
+\begin{equation}\label{eq:eom_imsrg}
+  \overline{X}^\dagger_n = \sum_{ph} \bar{X}^{(n)}_{ph} \nord{\aaO_{p}\aO_{h}} + \frac{1}{4}\sum_{pp'hh'} \bar{X}^{(n)}_{pp'hh'} \nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}} \,.
+\end{equation}
+Note that the operator only contains excitation operators because de-excitation 
+operators annihilate the reference state $\ket{\Phi_0}$ and therefore do not 
+contribute in the EOM:
+\begin{equation}
+   \comm{\nord{\aaO_{h}\aaO_{h'}\aO_{p'}\aO_{p}}}{\overline{H}}\ket{\Phi_0}
+   = (\overline{H} - E)\nord{\aaO_{h}\aaO_{h'}\aO_{p'}\aO_{p}}\ket{\Phi_0} = 0\,.
+\end{equation}
+The ladder operator $\overline{X}^\dag$ can be systematically improved by including higher
+particle-hole excitations, until we reach the $ApAh$ level which would amount 
+to an exact diagonalization of $\Hfinal$. Denoting the operator rank of the 
+ladder operator by $m$ and the IMSRG truncation by $n$, we refer to a specific
+combined scheme as EOM-IMSRG($m$,$n$). 
+% The examples discussed below are obtained in the EOM-IMSRG($2$,$2$) scheme.
+
+Like TDA and RPA, the EOM \eqref{eq:eom_imsrg} can be implemented as an eigenvalue 
+problem that can be tackled with the Lanczos-Arnoldi or Davidson algorithms 
+\cite{Lanczos:1950sp,Arnoldi:1951kk,Davidson:1989pi} that are also used in CI
+approaches. As mentioned throughout this chapter, these algorithms only require
+knowledge of matrix-vector products. In the EOM-IMSRG, the required product is
+identified once we realize that the commutator in Eq.~\eqref{eq:eom_imsrg} can
+be rewritten as the connected product of $\Hfinal$ and $\overline{X}^\dag$:
+\begin{equation}\label{eq:mat_vec_prod}
+  \comm{\Hfinal}{\overline{X}^\dag_n} = \{\Hfinal\overline{X}^\dag_n\}_C\,.
+\end{equation}
+Thus, the matrix-vector product can be computed with the same commutator routines 
+that are used in the evaluation of the IMSRG flow equations. Thus, the scaling of
+EOM-IMSRG($m$,$n$) is the same as that of the IMSRG($\max{m,n}$), e.g., $\OC(N^6)$
+for the EOM-IMSRG(2,2) scheme that is the method we primarily use at this point 
+\cite{Parzuchowski:2016pi}. 
+
+\tbd{[Example from Nathan.]}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4170,7 +4448,12 @@ higher) neutron dripline.
 \section{Conclusions}
 In this chapter, we have presented a pedagogical introduction to the
 SRG and IMSRG, and discussed their applications in the context of the
-nuclear many-body problem. 
+nuclear many-body problem. The former has become one of the most popular
+tools for pre-processing nuclear interactions and operators, leading to
+vast improvements in the rate of convergence of many-body calculations,
+and extending the range of nuclei that can be tackled in \emph{ab initio}
+approaches \cite{Barrett:2013oq,Hagen:2014ve,Binder:2014fk,Soma:2014eu,
+Hergert:2016jk,Hergert:2016ng}. The IMSRG is an
 
 
 The RG perspective is a key element that is woven into all of 
@@ -4316,7 +4599,7 @@ Computing resources were provided by the MSU High-Performance Computing Center
 \section{Exercises and Projects}
 
 \begin{prob}\label{problem:steepest_descent}
-  Prove Eq.~\eqref{eq:steepest_descent}.
+  Prove Eq.~\eqref{eq:steepest_descent}. \tbd{[Build in fixes from Fei.]}
 \end{prob}
 
 \begin{prob}\label{problem:tint}
