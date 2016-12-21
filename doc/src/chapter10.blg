@@ -13,43 +13,43 @@ Warning--empty journal in Gebrerufael:2016rp
 Warning--empty journal in Stroberg:2016th
 You've used 173 entries,
             2812 wiz_defined-function locations,
-            1639 strings with 32862 characters,
-and the built_in function-call counts, 57111 in all, are:
-= -- 3479
+            1928 strings with 43925 characters,
+and the built_in function-call counts, 62308 in all, are:
+= -- 4290
 > -- 1666
-< -- 17
-+ -- 668
+< -- 18
++ -- 677
 - -- 495
-* -- 3329
-:= -- 6611
-add.period$ -- 7
+* -- 3984
+:= -- 7301
+add.period$ -- 263
 call.type$ -- 173
-change.case$ -- 15
+change.case$ -- 14
 chr.to.int$ -- 24
 cite$ -- 181
-duplicate$ -- 6264
-empty$ -- 6078
+duplicate$ -- 6623
+empty$ -- 6350
 format.name$ -- 622
-if$ -- 13086
+if$ -- 14175
 int.to.chr$ -- 0
 int.to.str$ -- 173
 missing$ -- 1693
-newline$ -- 534
+newline$ -- 790
 num.names$ -- 174
-pop$ -- 2691
+pop$ -- 2306
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1642
+skip$ -- 1603
 stack$ -- 0
-substring$ -- 2061
-swap$ -- 3519
-text.length$ -- 9
+substring$ -- 2158
+swap$ -- 4127
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 325
+while$ -- 331
 width$ -- 176
-write$ -- 1390
+write$ -- 1902
 (There were 8 warnings)
