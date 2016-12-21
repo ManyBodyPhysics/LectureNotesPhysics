@@ -6,11 +6,31 @@
   \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
+\bibitem{Jackson:1999yg}
+J.D. Jackson, \emph{Classical electrodynamics}, 3rd edn. (Wiley, New York,
+  {NY}, 1999).
+\newblock \urlprefix\url{http://cdsweb.cern.ch/record/490457}
+
+\bibitem{Fermi:1934eu}
+E.~Fermi, Zeitschrift f{\"u}r Physik \textbf{88}(3), 161 (1934).
+\newblock \doi{10.1007/BF01351864}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/BF01351864}
+
 \bibitem{Detmold:2015xw}
 W.~Detmold, \emph{Nuclear Physics from Lattice QCD} (Springer International
   Publishing, Cham, 2015), pp. 153--194.
 \newblock \doi{10.1007/978-3-319-08022-2{\_}5}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1007/978-3-319-08022-2_5}
+
+\bibitem{Gross:1973pd}
+D.J. Gross, F.~Wilczek, Phys. Rev. Lett. \textbf{30}, 1343 (1973).
+\newblock \doi{10.1103/PhysRevLett.30.1343}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.30.1343}
+
+\bibitem{Politzer:1973lq}
+H.D. Politzer, Phys. Rev. Lett. \textbf{30}, 1346 (1973).
+\newblock \doi{10.1103/PhysRevLett.30.1346}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.30.1346}
 
 \bibitem{Epelbaum:2009ve}
 E.~Epelbaum, H.W. Hammer, U.G. Mei\ss{}ner, Rev. Mod. Phys. \textbf{81}, 1773
@@ -42,6 +62,13 @@ A.~Gezerlis, I.~Tews, E.~Epelbaum, M.~Freunek, S.~Gandolfi, K.~Hebeler,
   A.~Nogga, A.~Schwenk, Phys. Rev. C \textbf{90}, 054323 (2014).
 \newblock \doi{10.1103/PhysRevC.90.054323}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.90.054323}
+
+\bibitem{Lynn:2016ec}
+J.E. Lynn, I.~Tews, J.~Carlson, S.~Gandolfi, A.~Gezerlis, K.E. Schmidt,
+  A.~Schwenk, Phys. Rev. Lett. \textbf{116}, 062501 (2016).
+\newblock \doi{10.1103/PhysRevLett.116.062501}.
+\newblock
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.116.062501}
 
 \bibitem{Pastore:2009zr}
 S.~Pastore, L.~Girlanda, R.~Schiavilla, M.~Viviani, R.B. Wiringa, Phys. Rev. C
@@ -80,32 +107,18 @@ A.~Ekstr\"om, G.R. Jansen, K.A. Wendt, G.~Hagen, T.~Papenbrock, B.D. Carlsson,
 \newblock \doi{10.1103/PhysRevC.91.051301}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.91.051301}
 
-\bibitem{Shirokov:2004fe}
-A.M. Shirokov, A.I. Mazur, S.A. Zaytsev, J.P. Vary, T.A. Weber, Phys. Rev. C
-  \textbf{70}, 044005 (2004).
-\newblock \doi{10.1103/PhysRevC.70.044005}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.70.044005}
-
-\bibitem{Shirokov:2005bv}
-A.M. Shirokov, J.P. Vary, A.I. Mazur, S.A. Zaytsev, T.A. Weber, Physics Letters
-  B \textbf{621}(1--2), 96 (2005).
-\newblock \doi{http://dx.doi.org/10.1016/j.physletb.2005.06.043}.
-\newblock
-  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370269305008518}
-
-\bibitem{Shirokov:2007by}
-A.M. Shirokov, J.P. Vary, A.I. Mazur, T.A. Weber, Physics Letters B
-  \textbf{644}(1), 33 (2007).
-\newblock \doi{http://dx.doi.org/10.1016/j.physletb.2006.10.066}.
-\newblock
-  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370269306014158}
-
 \bibitem{Shirokov:2016wo}
 A.M. Shirokov, I.J. Shin, Y.~Kim, M.~Sosonkina, P.~Maris, J.P. Vary, Physics
   Letters B \textbf{761}, 87 (2016).
 \newblock \doi{http://dx.doi.org/10.1016/j.physletb.2016.08.006}.
 \newblock
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370269316304269}
+
+\bibitem{Lepage:1989hf}
+G.P. Lepage,   (1989)
+
+\bibitem{Lepage:1997py}
+G.P. Lepage,   (1997)
 
 \bibitem{Bogner:2003os}
 S.K. Bogner, T.T.S. Kuo, A.~Schwenk, Phys. Rept. \textbf{386}, 1 (2003).
@@ -135,6 +148,79 @@ W.~Polyzou, W.~Gl{\"o}ckle, Few-Body Systems \textbf{9}(2-3), 97 (1990).
 \newblock \doi{10.1007/BF01091701}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1007/BF01091701}
 
+\bibitem{Brueckner:1954qf}
+K.A. Brueckner, C.A. Levinson, H.M. Mahmoud, Phys. Rev. \textbf{95}, 217
+  (1954).
+\newblock \doi{10.1103/PhysRev.95.217}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRev.95.217}
+
+\bibitem{Brueckner:1955rw}
+K.A. Brueckner, C.A. Levinson, Phys. Rev. \textbf{97}, 1344 (1955).
+\newblock \doi{10.1103/PhysRev.97.1344}
+
+\bibitem{Bethe:1957qv}
+H.A. Bethe, J.~Goldstone, Proceedings of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences \textbf{238}(1215), 551
+  (1957).
+\newblock \doi{10.1098/rspa.1957.0017}.
+\newblock
+  \urlprefix\url{http://rspa.royalsocietypublishing.org/content/238/1215/551}
+
+\bibitem{Goldstone:1957zz}
+J.~Goldstone, Proc. Roy. Soc. Lond. A Math. Phys. Eng. Sci. \textbf{239}, 267
+  (1957).
+\newblock \doi{10.1098/rspa.1957.0037}
+
+\bibitem{Day:1967zl}
+B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967).
+\newblock \doi{10.1103/RevModPhys.39.719}
+
+\bibitem{Brandow:1967tg}
+B.H. Brandow, Rev. Mod. Phys. \textbf{39}, 771 (1967).
+\newblock \doi{10.1103/RevModPhys.39.771}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.39.771}
+
+\bibitem{Barrett:1970jl}
+B.R. Barrett, M.W. Kirson, Nuclear Physics A \textbf{148}(1), 145  (1970).
+\newblock \doi{http://dx.doi.org/10.1016/0375-9474(70)90617-2}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0375947470906172}
+
+\bibitem{Kirson:1971la}
+M.W. Kirson, Annals of Physics \textbf{66}(2), 624 (1971).
+\newblock \doi{http://dx.doi.org/10.1016/0003-4916(71)90072-8}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0003491671900728}
+
+\bibitem{Barrett:1972bs}
+B.R. Barrett, Physics Letters B \textbf{38}(6), 371 (1972).
+\newblock \doi{http://dx.doi.org/10.1016/0370-2693(72)90159-1}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0370269372901591}
+
+\bibitem{Kirson:1974oq}
+M.W. Kirson, Annals of Physics \textbf{82}(2), 345  (1974).
+\newblock \doi{http://dx.doi.org/10.1016/0003-4916(74)90117-1}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0003491674901171}
+
+\bibitem{Goode:1974pi}
+P.~Goode, M.W. Kirson, Physics Letters B \textbf{51}(3), 221 (1974).
+\newblock \doi{http://dx.doi.org/10.1016/0370-2693(74)90278-0}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/0370269374902780}
+
+\bibitem{Vary:1973dn}
+J.P. Vary, P.U. Sauer, C.W. Wong, Phys. Rev. C \textbf{7}, 1776 (1973).
+\newblock \doi{10.1103/PhysRevC.7.1776}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.7.1776}
+
+\bibitem{Glazek:1993il}
+S.D. Glazek, K.G. Wilson, Phys. Rev. D \textbf{48}, 5863 (1993)
+
+\bibitem{Wegner:1994dk}
+F.~Wegner, Ann. Phys. (Leipzig) \textbf{3}, 77 (1994)
+
 \bibitem{Bogner:2006qf}
 S.K. Bogner, R.J. Furnstahl, S.~Ramanan, A.~Schwenk, Nucl. Phys. A
   \textbf{773}(3-4), 203 (2006).
@@ -142,18 +228,18 @@ S.K. Bogner, R.J. Furnstahl, S.~Ramanan, A.~Schwenk, Nucl. Phys. A
 \newblock
   \urlprefix\url{http://www.sciencedirect.com/science/article/B6TVB-4K4WG34-2/2/218ed5e2e993065d0432f1ffeafdc50e}
 
+\bibitem{Roth:2010ys}
+R.~Roth, J.~Langhammer, Phys. Lett. B \textbf{683}, 272  (2010).
+\newblock \doi{10.1016/j.physletb.2009.12.046}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S037026930901507X}
+
 \bibitem{Tichai:2016vl}
 A.~Tichai, J.~Langhammer, S.~Binder, R.~Roth, Physics Letters B \textbf{756},
   283 (2016).
 \newblock \doi{http://dx.doi.org/10.1016/j.physletb.2016.03.029}.
 \newblock
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370269316002008}
-
-\bibitem{Roth:2010ys}
-R.~Roth, J.~Langhammer, Phys. Lett. B \textbf{683}, 272  (2010).
-\newblock \doi{10.1016/j.physletb.2009.12.046}.
-\newblock
-  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S037026930901507X}
 
 \bibitem{Barrett:2013oq}
 B.R. Barrett, P.~Navr\'{a}til, J.P. Vary, Prog. Part. Nucl. Phys.
@@ -216,9 +302,6 @@ H.~Hergert, S.K. Bogner, T.D. Morris, A.~Schwenk, K.~Tsukiyama, Physics Reports
 \newblock
   \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0370157315005414}
 
-\bibitem{Wegner:1994dk}
-F.~Wegner, Ann. Phys. (Leipzig) \textbf{3}, 77 (1994)
-
 \bibitem{Kehrein:2006kx}
 S.~Kehrein, \emph{The Flow Equation Approach to Many-Particle Systems},
   \emph{Springer Tracts in Modern Physics}, vol. 237 (Springer Berlin /
@@ -258,11 +341,6 @@ S.R. White, J. Chem. Phys. \textbf{117}(16), 7472 (2002).
 \newblock \doi{DOI:10.1063/1.1508370}.
 \newblock \urlprefix\url{http://dx.doi.org/doi/10.1063/1.1508370}
 
-\bibitem{Yanai:2006uq}
-T.~Yanai, G.K.L. Chan, J. Chem. Phys. \textbf{124}(19), 194106 (2006).
-\newblock \doi{10.1063/1.2196410}.
-\newblock \urlprefix\url{http://link.aip.org/link/?JCP/124/194106/1}
-
 \bibitem{Yanai:2007kx}
 T.~Yanai, G.K.L. Chan, J. Chem. Phys. \textbf{127}(10), 104107 (2007).
 \newblock \doi{10.1063/1.2761870}.
@@ -273,66 +351,21 @@ H.~Nakatsuji, Phys. Rev. A \textbf{14}, 41 (1976).
 \newblock \doi{10.1103/PhysRevA.14.41}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevA.14.41}
 
-\bibitem{Valdemoro:1987zl}
-C.~Valdemoro, \emph{Theory and Practice of the Spin-Adapted Reduced
-  Hamiltonians (SRH)} (Springer Netherlands, Dordrecht, 1987), pp. 275--288.
-\newblock \doi{10.1007/978-94-009-3855-7{\_}14}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1007/978-94-009-3855-7_14}
-
 \bibitem{Mukherjee:2001uq}
 D.~Mukherjee, W.~Kutzelnigg, J. Chem. Phys. \textbf{114}(5), 2047 (2001).
 \newblock \doi{10.1063/1.1337058}.
 \newblock \urlprefix\url{http://link.aip.org/link/?JCP/114/2047/1}
-
-\bibitem{Kutzelnigg:2002kx}
-W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{116}(12), 4787 (2002).
-\newblock \doi{10.1063/1.1448827}.
-\newblock \urlprefix\url{http://link.aip.org/link/?JCP/116/4787/1}
-
-\bibitem{Kutzelnigg:2004vn}
-W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{120}(16), 7340 (2004).
-\newblock \doi{10.1063/1.1652465}.
-\newblock \urlprefix\url{http://link.aip.org/link/?JCP/120/7340/1}
-
-\bibitem{Kutzelnigg:2004ys}
-W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{120}(16), 7350 (2004).
-\newblock \doi{10.1063/1.1652490}.
-\newblock \urlprefix\url{http://link.aip.org/link/?JCP/120/7350/1}
 
 \bibitem{Mazziotti:2006fk}
 D.A. Mazziotti, Phys. Rev. Lett. \textbf{97}, 143002 (2006).
 \newblock \doi{10.1103/PhysRevLett.97.143002}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.97.143002}
 
-\bibitem{Mazziotti:2007qe}
-D.A. Mazziotti, \emph{Reduced-Density-Matrix Mechanics: With Applications to
-  Many-Electron Atoms and Molecules}, \emph{Advances in Chemical Physics}, vol.
-  134 (Wiley, 2007)
-
 \bibitem{Evangelista:2014rq}
 F.A. Evangelista, J. Chem. Phys. \textbf{141}(5), 054109 (2014).
 \newblock \doi{http://dx.doi.org/10.1063/1.4890660}.
 \newblock
   \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/141/5/10.1063/1.4890660}
-
-\bibitem{Li:2015nq}
-C.~Li, F.A. Evangelista, J. Chem. Theory Comput. \textbf{11}(5), 2097 (2015).
-\newblock \doi{10.1021/acs.jctc.5b00134}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1021/acs.jctc.5b00134}
-
-\bibitem{Li:2016rm}
-C.~Li, F.A. Evangelista, The Journal of Chemical Physics \textbf{144}(16),
-  164114 (2016).
-\newblock \doi{http://dx.doi.org/10.1063/1.4947218}.
-\newblock
-  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/144/16/10.1063/1.4947218}
-
-\bibitem{Hannon:2016lp}
-K.P. Hannon, C.~Li, F.A. Evangelista, The Journal of Chemical Physics
-  \textbf{144}(20), 204111 (2016).
-\newblock \doi{http://dx.doi.org/10.1063/1.4951684}.
-\newblock
-  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/144/20/10.1063/1.4951684}
 
 \bibitem{Bach:2010zr}
 V.~Bach, J.B. Bru, Journal of Evolution Equations \textbf{10}, 425 (2010).
@@ -366,8 +399,9 @@ T.D. Morris, N.M. Parzuchowski, S.K. Bogner, Phys. Rev. C \textbf{92}, 034331
 \newblock \doi{10.1103/PhysRevC.92.034331}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.92.034331}
 
-\bibitem{Hergert:2016ng}
-H.~{Hergert}, ArXiv e-prints  (2016)
+\bibitem{Hergert:2017kx}
+H.~Hergert, Phys. Scripta \textbf{92}(2), 023002 (2017).
+\newblock \urlprefix\url{http://stacks.iop.org/1402-4896/92/i=2/a=023002}
 
 \bibitem{Golub:2013le}
 G.~Golub, C.~Van~Loan, \emph{Matrix Computations}.
@@ -443,16 +477,6 @@ J.~Carlson, S.~Gandolfi, F.~Pederiva, S.C. Pieper, R.~Schiavilla, K.E. Schmidt,
   R.B. Wiringa, Rev. Mod. Phys. \textbf{87}, 1067 (2015).
 \newblock \doi{10.1103/RevModPhys.87.1067}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.87.1067}
-
-\bibitem{Lynn:2016ec}
-J.E. Lynn, I.~Tews, J.~Carlson, S.~Gandolfi, A.~Gezerlis, K.E. Schmidt,
-  A.~Schwenk, Phys. Rev. Lett. \textbf{116}, 062501 (2016).
-\newblock \doi{10.1103/PhysRevLett.116.062501}.
-\newblock
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.116.062501}
-
-\bibitem{Lepage:1997py}
-G.P. Lepage,   (1997)
 
 \bibitem{Holt:2004ux}
 J.D. Holt, T.T.S. Kuo, G.E. Brown, S.K. Bogner, Nucl. Phys. A \textbf{733}, 153
@@ -632,15 +656,6 @@ K.~Tsukiyama, S.K. Bogner, A.~Schwenk, Phys. Rev. C \textbf{85}, 061304 (2012).
 \newblock \doi{10.1103/PhysRevC.85.061304}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.85.061304}
 
-\bibitem{Day:1967zl}
-B.D. Day, Rev. Mod. Phys. \textbf{39}, 719 (1967).
-\newblock \doi{10.1103/RevModPhys.39.719}
-
-\bibitem{Brandow:1967tg}
-B.H. Brandow, Rev. Mod. Phys. \textbf{39}, 771 (1967).
-\newblock \doi{10.1103/RevModPhys.39.771}.
-\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/RevModPhys.39.771}
-
 \bibitem{Fetter:2003ve}
 A.~Fetter, J.~Walecka, \emph{Quantum Theory of Many-particle Systems}.
 \newblock Dover Books on Physics (Dover Publications, 2003).
@@ -660,6 +675,21 @@ W.~Kutzelnigg, S.~Koch, J. Chem. Phys. \textbf{79}(9), 4315 (1983).
 W.~Kutzelnigg, J. Chem. Phys. \textbf{80}(2), 822 (1984).
 \newblock \doi{10.1063/1.446736}.
 \newblock \urlprefix\url{http://link.aip.org/link/?JCP/80/822/1}
+
+\bibitem{Kutzelnigg:2002kx}
+W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{116}(12), 4787 (2002).
+\newblock \doi{10.1063/1.1448827}.
+\newblock \urlprefix\url{http://link.aip.org/link/?JCP/116/4787/1}
+
+\bibitem{Kutzelnigg:2004vn}
+W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{120}(16), 7340 (2004).
+\newblock \doi{10.1063/1.1652465}.
+\newblock \urlprefix\url{http://link.aip.org/link/?JCP/120/7340/1}
+
+\bibitem{Kutzelnigg:2004ys}
+W.~Kutzelnigg, D.~Mukherjee, J. Chem. Phys. \textbf{120}(16), 7350 (2004).
+\newblock \doi{10.1063/1.1652490}.
+\newblock \urlprefix\url{http://link.aip.org/link/?JCP/120/7350/1}
 
 \bibitem{Epstein:1926fp}
 P.S. Epstein, Phys. Rev. \textbf{28}, 695 (1926).
@@ -874,6 +904,18 @@ R.~Roth, P.~Navr\'atil, Phys. Rev. Lett. \textbf{99}, 092501 (2007).
 R.~Roth, Phys. Rev. C \textbf{79}, 064324 (2009).
 \newblock \doi{10.1103/PhysRevC.79.064324}.
 \newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevC.79.064324}
+
+\bibitem{Li:2015nq}
+C.~Li, F.A. Evangelista, J. Chem. Theory Comput. \textbf{11}(5), 2097 (2015).
+\newblock \doi{10.1021/acs.jctc.5b00134}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1021/acs.jctc.5b00134}
+
+\bibitem{Li:2016rm}
+C.~Li, F.A. Evangelista, The Journal of Chemical Physics \textbf{144}(16),
+  164114 (2016).
+\newblock \doi{http://dx.doi.org/10.1063/1.4947218}.
+\newblock
+  \urlprefix\url{http://scitation.aip.org/content/aip/journal/jcp/144/16/10.1063/1.4947218}
 
 \bibitem{Bardeen:1957bz}
 J.~Bardeen, L.N. Cooper, J.R. Schrieffer, Phys. Rev. \textbf{108}, 1175 (1957).

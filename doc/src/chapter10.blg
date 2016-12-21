@@ -2,56 +2,54 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter10.aux
 The style file: spphys.bst
-Database file #1: chapter10.bib
-Warning--I didn't find a database entry for "Lynn:2015eu"
+Database file #1: /Users/hergert/Library/texmf/bibtex/bib/master_bibdesk.bib
 Warning--can't use both author and editor fields in Detmold:2015xw
-Warning--can't use both author and editor fields in Valdemoro:1987zl
-Warning--can't use both author and editor fields in Mazziotti:2007qe
+Warning--empty journal in Lepage:1989hf
+Warning--empty journal in Lepage:1997py
 Warning--empty note in Hjorth-Jensen:2015mz
 Warning--can't use both author and editor fields in Hindmarsh:1983pd
-Warning--empty journal in Lepage:1997py
 Warning--empty journal in Parzuchowski:2016pi
 Warning--empty journal in Gebrerufael:2016rp
 Warning--empty journal in Stroberg:2016th
-You've used 164 entries,
+You've used 173 entries,
             2812 wiz_defined-function locations,
-            1865 strings with 42560 characters,
-and the built_in function-call counts, 60092 in all, are:
-= -- 4173
-> -- 1640
+            1929 strings with 43979 characters,
+and the built_in function-call counts, 62308 in all, are:
+= -- 4290
+> -- 1666
 < -- 18
-+ -- 669
-- -- 490
-* -- 3833
-:= -- 6995
-add.period$ -- 249
-call.type$ -- 164
-change.case$ -- 12
-chr.to.int$ -- 18
-cite$ -- 173
-duplicate$ -- 6404
-empty$ -- 6063
-format.name$ -- 614
-if$ -- 13640
++ -- 677
+- -- 495
+* -- 3984
+:= -- 7301
+add.period$ -- 263
+call.type$ -- 173
+change.case$ -- 14
+chr.to.int$ -- 24
+cite$ -- 181
+duplicate$ -- 6623
+empty$ -- 6350
+format.name$ -- 622
+if$ -- 14175
 int.to.chr$ -- 0
-int.to.str$ -- 164
-missing$ -- 1626
-newline$ -- 749
-num.names$ -- 165
-pop$ -- 2242
+int.to.str$ -- 173
+missing$ -- 1693
+newline$ -- 790
+num.names$ -- 174
+pop$ -- 2306
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1581
+skip$ -- 1603
 stack$ -- 0
-substring$ -- 2063
-swap$ -- 4042
-text.length$ -- 12
+substring$ -- 2158
+swap$ -- 4127
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 9
-while$ -- 313
-width$ -- 167
-write$ -- 1803
-(There were 10 warnings)
+warning$ -- 8
+while$ -- 331
+width$ -- 176
+write$ -- 1902
+(There were 8 warnings)
