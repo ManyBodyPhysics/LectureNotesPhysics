@@ -8,14 +8,14 @@ data = np.loadtxt("data.txt")
 ga = data[:,0]
 exact = data[:,2]
 corrCCD = data[:,8]
-corr4 = data[:,7]
+corr4 = data[:,6]
 
 
 plt.axis([-1,1,-0.5,0.05])
 plt.xlabel(r'Interaction strength, $g$', fontsize=16)
 plt.ylabel(r'Correlation energy', fontsize=16)
 exact = plt.plot(ga, exact,'b-*',linewidth = 2.0, label = 'Exact')
-mbpt4 = plt.plot(ga, corr4,'r:.', linewidth = 2.0, label = 'MBPT4')
+mbpt4 = plt.plot(ga, corr4,'r:.', linewidth = 2.0, label = 'MBPT3')
 ccd = plt.plot(ga, corrCCD, 'm:v',linewidth = 2.0, label = 'CCD')
 plt.legend()
 plt.savefig('CCDMBPT4theory.pdf', format='pdf')
