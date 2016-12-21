@@ -16,6 +16,15 @@ def h0(p,q):
     else:
         return 0
 
+def h(p,q):
+    if p == q:
+        s = h0(p,p)
+        for i in below_fermi:
+            s += assym(p,i,p,i)
+        return s
+    else:
+        return 0
+
 def f(p,q):
     if p == q:
         return 0
@@ -42,12 +51,10 @@ def assym(p,q,r,s):
 
 def eps(holes, particles):
     E = 0
-    for h in holes:
-        p, s = states[h]
-        E += (p-1)
-    for p in particles:
-        p, s = states[p]
-        E -= (p-1)
+    for i in holes:
+        E += h(i,i)
+    for a in particles:
+        E -= h(a,a)
     return E
 
 
@@ -58,6 +65,7 @@ for a in above_fermi:
         for i in below_fermi:
             for j in below_fermi:
                 s1 += 0.25*assym(a,b,i,j)*assym(i,j,a,b)/eps((i,j),(a,b))
+                print i,j,a,b,eps((i,j),(a,b)), s1
 
 
 # Diagram 3
@@ -108,18 +116,11 @@ for a in above_fermi:
                 for j in below_fermi:
                     s9 += 0.5*assym(i,j,a,b)*assym(a,c,i,j)*f(b,c)/eps((i,j),(a,b))/eps((i,j),(a,c))
 
-s_5 =  -0.0291521990740741*g**4
-s14 =  -0.0308883101851853*g**4
-s34 =  0.0163049768518519*g**4
-s36 =  -0.0145760995370371*g**4
-s38 =  -0.0201099537037037*g**4
-s39 =  0.0176938657407407*g**4
-
 
 ga = linspace(-1,1,5)
 e1 = []
 corrCCD = [-0.21895, -0.06306, 0.0, -0.08336, -0.36956]
-corr4 = []
+corr3 = []
 
 for g_val in ga:
     H1 = matrix([[2-g_val , -g_val/2.,  -g_val/2., -g_val/2., -g_val/2.,     0],
@@ -131,7 +132,7 @@ for g_val in ga:
 
     u1, v1 = linalg.eig(H1)
     e1.append(min(u1))
-    corr4.append((s1+s4+s5+2*s_5+2*s14+2*s34+2*s36+s38+2*s39).subs(g,g_val))
+    corr3.append((s1+s3+s4+s5).subs(g,g_val))
 
 exact = e1 - (2-ga)
 
@@ -139,11 +140,9 @@ plt.axis([-1,1,-0.5,0.05])
 plt.xlabel(r'Interaction strength, $g$', fontsize=16)
 plt.ylabel(r'Correlation energy', fontsize=16)
 exact = plt.plot(ga, exact,'b-*',linewidth = 2.0, label = 'Exact')
-mbpt4 = plt.plot(ga, corr4,'r:.', linewidth = 2.0, label = 'MBPT4')
+mbpt3 = plt.plot(ga, corr3,'r:.', linewidth = 2.0, label = 'MBPT3')
 ccd = plt.plot(ga, corrCCD, 'm:v',linewidth = 2.0, label = 'CCD')
 plt.legend()
 plt.savefig('CCDMBPT4theory.pdf', format='pdf')
 plt.show()
-
-
 

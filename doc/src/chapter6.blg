@@ -1,0 +1,142 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter6.aux
+The style file: spphys.bst
+Database file #1: lnp.bib
+I was expecting a `,' or a `}'---line 3555 of file lnp.bib
+ :   
+ :   archiveprefix            = {arXiv},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 3798 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3807 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3854 of file lnp.bib
+ : @article{Bedaque:2002mn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3864 of file lnp.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4300 of file lnp.bib
+ : @article{Carlson:2014vla
+ :                         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4343 of file lnp.bib
+ :   
+ :   Address = {New Jersey, USA}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4582 of file lnp.bib
+ :     
+ :     Address = {Cambridge, USA},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 7207 of file lnp.bib
+ : 
+ : @book{TinkhamBook,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 8624 of file lnp.bib
+ : @article{Lee:2008fa
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8654 of file lnp.bib
+ : @article{Borasoy:2006qn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8734 of file lnp.bib
+ : @article{Lahde:2013uqa
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8844 of file lnp.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8902 of file lnp.bib
+ : @article{Epelbaum:2013paa
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8919 of file lnp.bib
+ : @article{Epelbaum:2009pd
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8951 of file lnp.bib
+ : @article{Epelbaum:2011md
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10194 of file lnp.bib
+ : @article{Luscher:1986pf
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10244 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10256 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10568 of file lnp.bib
+ : @article{Epelbaum:2012qn
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10583 of file lnp.bib
+ : @article{Epelbaum:2012iu
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10634 of file lnp.bib
+ : @article{Borasoy:2007vy
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Elhatisari:2016owd
+Warning--empty journal in Lu:2015riz
+Warning--empty journal in Rokash:2015hra
+You've used 52 entries,
+            2812 wiz_defined-function locations,
+            922 strings with 12269 characters,
+and the built_in function-call counts, 17558 in all, are:
+= -- 1036
+> -- 568
+< -- 0
++ -- 224
+- -- 172
+* -- 1056
+:= -- 2061
+add.period$ -- 2
+call.type$ -- 52
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 55
+duplicate$ -- 1939
+empty$ -- 1815
+format.name$ -- 213
+if$ -- 3963
+int.to.chr$ -- 0
+int.to.str$ -- 52
+missing$ -- 530
+newline$ -- 166
+num.names$ -- 52
+pop$ -- 787
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 494
+stack$ -- 0
+substring$ -- 618
+swap$ -- 1124
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 100
+width$ -- 54
+write$ -- 421
+(There were 22 error messages)

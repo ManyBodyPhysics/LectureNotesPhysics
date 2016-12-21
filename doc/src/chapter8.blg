@@ -1,0 +1,105 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter8.aux
+The style file: spphys.bst
+Database file #1: lnp.bib
+I was expecting a `,' or a `}'---line 3555 of file lnp.bib
+ :   
+ :   archiveprefix            = {arXiv},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 3798 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3807 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4343 of file lnp.bib
+ :   
+ :   Address = {New Jersey, USA}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 4559 of file lnp.bib
+ : @article{baran2008
+ :                   ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4582 of file lnp.bib
+ :     
+ :     Address = {Cambridge, USA},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 4875 of file lnp.bib
+ : @article{coester1958
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4885 of file lnp.bib
+ : @article{coester1960
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5117 of file lnp.bib
+ : @article{gros1992
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5133 of file lnp.bib
+ : @article{gros1996
+ :                  ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 7207 of file lnp.bib
+ : 
+ : @book{TinkhamBook,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 10244 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10256 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--empty author in blas
+Warning--empty year in openmp
+You've used 85 entries,
+            2812 wiz_defined-function locations,
+            1048 strings with 17112 characters,
+and the built_in function-call counts, 29397 in all, are:
+= -- 1732
+> -- 981
+< -- 4
++ -- 383
+- -- 298
+* -- 1745
+:= -- 3409
+add.period$ -- 1
+call.type$ -- 85
+change.case$ -- 6
+chr.to.int$ -- 6
+cite$ -- 87
+duplicate$ -- 3162
+empty$ -- 3088
+format.name$ -- 361
+if$ -- 6722
+int.to.chr$ -- 0
+int.to.str$ -- 85
+missing$ -- 881
+newline$ -- 264
+num.names$ -- 84
+pop$ -- 1350
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 860
+stack$ -- 0
+substring$ -- 1054
+swap$ -- 1818
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 160
+width$ -- 87
+write$ -- 679
+(There were 13 error messages)

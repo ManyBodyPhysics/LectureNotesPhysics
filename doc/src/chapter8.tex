@@ -7,7 +7,8 @@
 
 \title{Computational Nuclear Physics and Post Hartree-Fock Methods}
 \author{Justin G.~Lietz, Samuel Novario, Gustav R.~Jansen, Gaute
-  Hagen, and Morten Hjorth-Jensen,} \institute{Justin G.~Lietz \at
+  Hagen, and Morten Hjorth-Jensen} 
+\institute{Justin G.~Lietz \at
   Department of Physics and Astronomy and National Superconducting
   Cyclotron Laboratory, Michigan State University, East Lansing,
   Michigan, USA, \email{lietz@nscl.msu.edu}, \and Samuel Novario \at
@@ -21,8 +22,7 @@
   \email{hageng@ornl.gov}, \and Morten Hjorth-Jensen \at Department of
   Physics and Astronomy and National Superconducting Cyclotron
   Laboratory, Michigan State University, East Lansing, Michigan, USA
-  and Department of Physics, University of Oslo, Oslo, Norway,
-\email{hjensen@msu.edu}}
+  and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}}
 
 \maketitle 
 \abstract{We present a computational approach to infinite
@@ -39,6 +39,7 @@
   code to present and planned high-performance computing facilities. }
 
 
+\label{chapter:cc}
 %\maketile
 
 \section{Introduction}\label{sec:chap8intro}
@@ -64,9 +65,9 @@ explosions.
 The determination and our understanding of the EoS for dense nuclear
 matter is intimately linked with our capability to solve the nuclear
 many-body problem. In particular, to be able to provide precise
-constraints on the role of correlations beyond the mean field, is
-crucial for improved and controlled calculations of the EoS of
-nucleonic matter.  In recent years, there has been a considerable
+constraints on the role of correlations beyond the mean field is
+crucial for improved and controlled calculations of the EoS.  
+In recent years, there has been a considerable
 algorithmic development of first principle (or {\em ab initio})
 methods for solving the nuclear many-body problem. Linked with a
 similar progress in the derivation of nuclear forces based on
@@ -118,7 +119,7 @@ single-particle basis, in terms of plane waves, is unchanged under
 Hartree-Fock calculations.
 
 Neutron star matter at densities of 0.1 fm$^{-3}$ and greater, is
-often assumed to be made of mainly neutrons, protons, electrons and
+often assumed to consist mainly neutrons, protons, electrons and
 muons in beta equilibrium. However, other baryons like various
 hyperons may exist, as well as possible mesonic condensates and
 transitions to quark degrees of freedom at higher densities
@@ -173,11 +174,10 @@ is composed of various baryons and leptons in chemical and charge
 equilibrium.  The equilibrium conditions are governed by the weak
 processes (normally referred to as the processes for
 $\beta$-equilibrium)
-\begin{equation} 
+\begin{equation*} 
       b_1 \rightarrow b_2 + l +\bar{\nu}_l \hspace{1cm} b_2 +l
       \rightarrow b_1 +\nu_l,
-      \label{eq:betadecay}
-\end{equation}
+\end{equation*}
 where $b_1$ and $b_2$ refer to different types of baryons, for example
 a neutron and a proton.  The symbol $l$ is either an electron or a
 muon and $\bar{\nu}_l $ and $\nu_l$ their respective anti-neutrinos
@@ -270,16 +270,16 @@ chapter and the three subsequent ones.  We will assume that the
 interacting part of the Hamiltonian can be approximated by a two-body
 interaction.  This means that our Hamiltonian is written as the sum of
 a one-body part and a two-body part
-\begin{equation}
+\begin{equation*}
     \hat{H} = \hat{H}_0 + \hat{H}_I = \sum_{i=1}^A \hat{h}_0(x_i) +
     \sum_{i < j}^A \hat{v}(r_{ij}),
 \label{Hnuclei}
-\end{equation}
+\end{equation*}
 with
-\begin{equation}
+\begin{equation*}
   \hat{H}_0=\sum_{i=1}^A \hat{h}_0(x_i), 
 \label{hinuclei}
-\end{equation}
+\end{equation*}
 being the so-called unperturbed part of the Hamiltonian defined by the one-body operator
 \[
 \hat{h}_0(x_i)=\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i),
@@ -303,7 +303,7 @@ Our Hamiltonian is invariant under the permutation (interchange) of
 two particles.  Since we deal with fermions however, the total wave
 function is anti-symmetric and we assume that we can approximate the exact eigenfunction
 for say the ground state with a Slater determinant
-\begin{equation}
+\begin{equation*}
    \Phi_0(x_1, x_2,\dots ,x_A,\alpha,\beta,\dots,
    \sigma)=\frac{1}{\sqrt{A!}}  \left| \begin{array}{ccccc}
      \psi_{\alpha}(x_1)& \psi_{\alpha}(x_2)& \dots & \dots &
@@ -311,8 +311,8 @@ for say the ground state with a Slater determinant
      \dots & \psi_{\beta}(x_A)\\ \dots & \dots & \dots & \dots & \dots
      \\ \dots & \dots & \dots & \dots & \dots
      \\ \psi_{\sigma}(x_1)&\psi_{\sigma}(x_2)& \dots & \dots &
-     \psi_{\sigma}(x_A)\end{array} \right|, \label{eq:HartreeFockDet}
-\end{equation}
+     \psi_{\sigma}(x_A)\end{array} \right|,
+\end{equation*}
 where $x_i$ stand for the coordinates and spin values of particle
 $i$ and $\alpha,\beta,\dots, \gamma$ are quantum numbers needed to
 describe remaining quantum numbers.
@@ -378,8 +378,7 @@ where each index $\alpha,\beta,\delta, \ldots$ has to be unique.
 We will now find it convenient to define a Fermi (F) level and introduce a
 new reference vacuum. The Fermi level is normally  defined in terms of all
 occupied single-particle states below a certain
-single-particle energy.  With the definition of a Fermi level, we can
-in turn define our ansatz for the ground state, represented by a
+single-particle energy.  With the definition of a Fermi level we define our ansatz for the ground state, represented by a
 Slater determinant $\Phi_0$.  We will throughout the rest of this
 text use creation and annihilation operators to represent quantum
 mechanical operators and states.  It means that our compact
@@ -411,7 +410,7 @@ We can rewrite the ansatz for the ground state as
 where we have introduced the shorthand labels for states below the
 Fermi level $F$ as $i,j,\ldots \leq F$. For single-particle states
 above the Fermi level we reserve the labels $a,b,\ldots > F$, while
-the labels $p,q, \ldots$ represent any possible single particle state.
+the labels $p,q, \ldots$ represent any possible single-particle state.
 
 
 Since our focus is on infinite systems, the one-body part of the
@@ -439,14 +438,14 @@ pqr|\hat{v}_3|stu\rangle_{AS} a_p^\dagger a_q^\dagger a_r^\dagger a_u
 a_t a_s,
 \]
 with the anti-symmetrized matrix element
-\begin{align}
+\begin{align*}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle
             pqr|\hat{v}_3|stu\rangle + \langle
             pqr|\hat{v}_3|tus\rangle + \langle
             pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle
             - \langle pqr|\hat{v}_3|tsu\rangle - \langle
             pqr|\hat{v}_3|uts\rangle.
-\end{align}
+\end{align*}
 In this and the forthcoming chapters we will limit ourselves to
 two-body interactions at most.  Throughout this chapter and the subsequent three we will drop the subscript $AS$ and use only anti-symmetrized matrix elements.
 
@@ -480,7 +479,7 @@ E_{\mathrm{Ref}}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0\rangle =
 \sum_{i\le F} \langle i|\hat{h}_0|i\rangle + \frac{1}{2} \sum_{ij\le
   F}\langle ij|\hat{v}|ij\rangle,
 \]
-and the new normal-ordered Hamiltonian is defined as
+and the new normal-ordered Hamiltonian (all creation operators to the left of the annihilation operators) is defined as
 \begin{equation}\label{eq:Hnormalorder}
 \hat{H}_N = \sum_{pq} \langle p|\hat{h}_0|q\rangle \left\{a^\dagger_p
 a_q\right\}+\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle
@@ -506,10 +505,10 @@ where
 The last term on the right hand side represents a medium modification
 to the single-particle Hamiltonian due to the two-body interaction.
 Finally, the two-body interaction is given by
-\begin{equation}\label{eq:hvn}	     
+\begin{equation*}
 \hat{V}_N = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle
 \left\{a^\dagger_p a^\dagger_q a_s a_r\right\}.
-\end{equation}	     
+\end{equation*}	     
 
 \subsection{Single-particle basis for infinite matter}
 
@@ -546,27 +545,27 @@ The operator for the kinetic energy can be written as
 When using periodic boundary conditions, the discrete-momentum
 single-particle basis functions (excluding spin and/or isospin degrees
 of freedom) result in the following single-particle energy
-\begin{align}
+\begin{align*}
   \varepsilon_{n_{x}, n_{y}, n_{z}} = \frac{\hbar^{2}}{2m} \left(
   \frac{2\pi }{L}\right)^{2} \left( n_{x}^{2} + n_{y}^{2} +
   n_{z}^{2}\right)=\frac{\hbar^2}{2m}\left(k_{n_x}^2+k_{n_y}^2+k_{n_z}^2\right),
-\end{align} 
+\end{align*} 
 for a three-dimensional system with
 \[
-k_{n_i}=\frac{2\pi n_i}{L} \hspace{0.1cm} n_i = 0, \pm 1, \pm 2,
+k_{n_i}=\frac{2\pi n_i}{L}, \hspace{0.2cm} n_i = 0, \pm 1, \pm 2,
 \dots,
 \]
 We will select the single-particle basis such that both the occupied
-and unoccupied single-particle spaces have a closed-shell
+and unoccupied single-particle states have a closed-shell
 structure. This means that all single-particle states corresponding to
 energies below a chosen cutoff are included in the basis. We study
 only the unpolarized spin phase, in which all orbitals are occupied
 with one spin-up and one spin-down fermion (neutrons and protons in
 our case).  With the kinetic energy rewritten in terms of the
-discretized momenta we can set up a similar table and obtain (assuming
+discretized momenta we can set up a list (assuming
 identical particles one and including spin up and spin down solutions)
-for energies less than or equal to $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le
-3$, as shown in Table \ref{tab:table1}
+of single-particle energies with momentum quantum numbers such that $n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\le
+3$, as shown in for example Table \ref{tab:table1}
 \begin{table}
 \begin{center}
 \caption{Total number of particle filling $N_{\uparrow \downarrow }$
@@ -639,9 +638,9 @@ specificied density or Fermi momentum.
 \subsection{Two-body interaction\label{sec:interaction}}
 
 As mentioned above, we will employ a plane wave basis for our
-calculations of infinite matter properties. With a cartesian basis it
-means that we can calculate directly the various matrix elements, as
-discussed in the previous subsection. However, a cartesian basis
+calculations of infinite matter properties. With a cartesian basis
+we can calculate directly the various matrix elements. 
+However, a cartesian basis
 represents an approximation to the thermodynamical limit. In order to
 compare the stability of our basis with results from the
 thermodynamical limit, it is convenient to rewrite the nucleon-nucleon
@@ -718,32 +717,32 @@ the $nn$ (neutron-neutron) channel.
 
 The nucleon-nucleon force is often derived and analyzed theoretically
 in terms of a partial wave expansion. A state with linear momentum
-$\mathbf{k}$ can be written as
+$\mathbf{k}$ can be written in terms of spherical harmonics $Y_{lm}$ as
 \[
 \vert \mathbf{k} \rangle =
-\sum_{l=0}^{\infty}\sum_{l_l=-l}^{L}\imath^lY_{l}^{m_l}(\hat{k}\vert
+\sum_{l=0}^{\infty}\sum_{m=-l}^{l}\imath^lY_{lm}\langle\hat{k}\vert
 klm_l\rangle.
 \]
 
 In terms of the relative and center-of-mass momenta $\mathbf{k}$ and
 $\mathbf{K}$, the potential in momentum space is related to the
 nonlocal operator $V(\mathbf{r},\mathbf{r}')$ by
-\begin{equation}
+\begin{equation*}
       \langle \mathbf{k'K'}\vert \hat{v} \vert \mathbf{k'K} \rangle=
       \int d\mathbf{r}d \mathbf{r'} e^{-\imath
         \mathbf{k'r'}}V(\mathbf{r'},\mathbf{r}) e^{\imath \mathbf{kr}}
       \delta(\mathbf{K},\mathbf{K'}).
-\end{equation}
+\end{equation*}
 We will assume that the interaction is spherically symmetric and use
 the partial wave expansion of the plane waves in terms of spherical
 harmonics.  This means that we can separate the radial part of the
 wave function from its angular dependence. The wave function of the
 relative motion is described in terms of plane waves as
-\begin{equation}
+\begin{equation*}
        e^{\imath \mathbf{kr}} = \langle\mathbf{r}\vert
        \mathbf{k}\rangle = 4\pi \sum_{lm} \imath ^{l} j_{l} (kr)
        Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{lm}(\mathbf{\hat{r}}),
-\end{equation}
+\end{equation*}
 where $j_l$ is a spherical Bessel function and $Y_{lm}$ the spherical
 harmonic.  This partial wave basis is useful for defining the operator
 for the nucleon-nucleon interaction, which is symmetric with respect
@@ -752,39 +751,34 @@ imply that the interaction is diagonal with respect to the quantum
 numbers of total angular momentum $J$, spin $S$ and isospin $T$. Using
 the above plane wave expansion, and coupling to final $J$, $S$ and $T$
 we get
-\begin{equation}
+\begin{equation*}
       \langle \mathbf{k'}\vert V \vert \mathbf{k}\rangle = (4\pi)^2
       \sum_{JM}\sum_{lm}\sum_{l'm'} \imath ^{l+l'}
       Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{l'm'}(\mathbf{\hat{k}'}) {\cal
         C}_{m'M_SM}^{l'SJ}{\cal C}_{mM_SM}^{lSJ} \langle k'l'STJM
       \vert V \vert klSTJM \rangle,
-\label{eq:vpartial}
-\end{equation}
+\end{equation*}
 where we have defined
-\begin{equation}
+\begin{equation*}
     \langle k'l'STJM\vert V \vert klSTJM\rangle = \int
     j_{l'}(k'r')\langle l'STJM\vert V(r',r)\vert lSTJM \rangle j_l(kr)
     {r'}^2 dr' r^2 dr.
-\end{equation}
+\end{equation*}
 We have omitted the momentum of the center-of-mass motion $\mathbf{K}$
 and the corresponding orbital momentum $L$, since the interaction is
-diagonal in these variables. The potentials we will employ in this
-work, like those of the Bonn group, are all non-local potentials
-defined in momentum space, and we will therefore not need the last
-equation.
-
+diagonal in these variables. 
 
 The interaction we will use for these calculations is a semirealistic
 nucleon-nucleon potential known as the Minnesota potential
 \cite{minnesota} which has the form, $V_{\alpha}\left(
 r\right)=V_{\alpha}\exp{(-\alpha r^{2})}$. The spin and isospin
 dependence of the Minnesota potential is given by,
-\begin{equation}
+\begin{equation*}
 V\left( r\right)=\frac{1}{2}\left( V_{R}+\frac{1}{2}\left(
 1+P_{12}^{\sigma}\right) V_{T}+\frac{1}{2}\left(
 1-P_{12}^{\sigma}\right) V_{S}\right)\left(
 1-P_{12}^{\sigma}P_{12}^{\tau}\right),
-\end{equation}
+\end{equation*}
 where $P_{12}^{\sigma}=\frac{1}{2}\left(
 1+\sigma_{1}\cdot\sigma_{2}\right)$ and
 $P_{12}^{\tau}=\frac{1}{2}\left( 1+\tau_{1}\cdot\tau_{2}\right)$ are
@@ -796,10 +790,10 @@ thereby the relative momentum
 $\vec{q}=\frac{1}{2}\left(\vec{k}_{p}-\vec{k}_{q}-\vec{k}_{r}+\vec{k}_{s}\right)$. Omitting
 spin and isospin dependencies, the momentum space version of the
 interaction reads
-\begin{equation}
+\begin{equation*}
 \langle \mathbf{k}_p \mathbf{k}_q \vert V_{\alpha}\vert
 \mathbf{k}_r\mathbf{k}_s\rangle=\frac{V_{\alpha}}{L^{3}}\left(\frac{\pi}{\alpha}\right)^{3/2}\exp{(\frac{-q^{2}}{4\alpha})}\delta_{\vec{k}_{p}+\vec{k}_{q},\vec{k}_{r}+\vec{k}_{s}}
-\end{equation}
+\end{equation*}
 The various parameters defining the interaction model used in this
 work are listed in Table \ref{tab:minnesotatab}.
 \begin{table}
@@ -807,10 +801,10 @@ work are listed in Table \ref{tab:minnesotatab}.
   \cite{minnesota}.}\label{tab:minnesotatab}
 \begin{center}
   \begin{tabular}{| l | l | l |}
-    \hline $\alpha$ & $V_{\alpha}$ & $\kappa_{\alpha}$ \\ \hline $R$ &
-    200 $\mathrm{MeV}$ & 1.487 $\mathrm{fm}^{-2}$ \\ \hline $T$ & 178
-    $\mathrm{MeV}$ & 0.639 $\mathrm{fm}^{-2}$ \\ \hline $S$ & 91.85
-    $\mathrm{MeV}$ & 0.465 $\mathrm{fm}^{-2}$ \\ \hline
+    \hline $\alpha$ & $V_{\alpha}$ in $\mathrm{MeV}$ & $\kappa_{\alpha}$ in $\mathrm{fm}^{-2}$  \\ \hline $R$ &
+    200  & 1.487 \\ \hline $T$ & 178
+     & 0.639 \\ \hline $S$ & 91.85
+    & 0.465  \\ \hline
   \end{tabular}
 \end{center}
 \end{table}
@@ -846,17 +840,17 @@ nucleons is given in terms of naive dimensional analysis by:
 \label{eq_nu} 
 \end{equation}
 with
-\begin{equation}
+\begin{equation*}
 \Delta_i \equiv d_i + \frac{n_i}{2} - 2 \, ,
-\label{eq_Deltai}
-\end{equation}
+\end{equation*}
 where $A$ labels the number of nucleons, $C$ denotes the number of separately connected pieces and $L$
 the number of loops in the diagram; $d_i$ is the number of derivatives
 or pion-mass insertions and $n_i$ the number of nucleon fields
 (nucleon legs) involved in vertex $i$; the sum runs over all vertices
 contained in the diagram under consideration.  Note that $\Delta_i
-\geq 0$ for all interactions allowed by chiral symmetry.  In this work
-we will focus on optimized two- and three-nucleon forces at order
+\geq 0$ for all interactions allowed by chiral symmetry.  In this work we will focus on the 
+simple Minnesota model discussed above. It is however possible, see also the exercises, to
+include two- and three-nucleon forces at order
 NNLO, as indicated in Fig.~\ref{fig_diagNNLO}.  
 
 Below we revisit briefly the formalism and results presented in
@@ -875,23 +869,22 @@ Refs.~\cite{machleidt2011,epelbaum2009,ekstrom2013,Ekstrom:2015rta,ekstromPRX}
 \end{figure}
 For an irreducible $NN$ diagram (``two-nucleon potential'', $A=2$,
 $C=1$), Eq.~(\ref{eq_nu}) collapses to
-\begin{equation} 
+\begin{equation*} 
 \nu = 2L + \sum_i \Delta_i \, .
-\label{eq_nunn} 
-\end{equation}
+\end{equation*}
 Thus, in terms of naive dimensional analysis or ``Weinberg counting''
 \cite{weinberg1990}, the various orders of the
 irreducible graphs which define the chiral $NN$ potential are given by
 (see Fig.~\ref{fig_diagNNLO})
-\begin{eqnarray}
+\begin{eqnarray*}
 V_{\rm LO} & = & V_{\rm ct}^{(0)} + V_{1\pi}^{(0)}
 \label{eq_VLO}
 \\ V_{\rm NLO} & = & V_{\rm LO} + V_{\rm ct}^{(2)} + V_{1\pi}^{(2)} +
 V_{2\pi}^{(2)}
-\label{eq_VNLO}
+\label{eq_VNLO*}
 \\ V_{\rm NNLO} & = & V_{\rm NLO} + V_{1\pi}^{(3)} + V_{2\pi}^{(3)}
-\label{eq_VNNLO}
-\end{eqnarray}
+\label{eq_VNNLO*}
+\end{eqnarray*}
 where the superscript denotes the order $\nu$ of the low-momentum
 expansion, LO stands for leading order, NLO for next-to-leading order
 and NNLO stands for next-to-next-to leading order.  Contact potentials
@@ -945,36 +938,35 @@ leading-order, next-to-leading order and NNLO, we refer the reader to
 Refs.~\cite{machleidt2011,ekstromPRX}.  The final interaction at
 order NNLO is multiplied with the following factors
 \cite{machleidt2011},
-\begin{equation}
+\begin{equation*}
 \widehat{V}({\vec k}~',{\vec k}) \equiv \frac{1}{(2\pi)^3}
 \sqrt{\frac{M_N}{E_{p'}}}\: {V}({\vec p}~',{\vec p})\:
 \sqrt{\frac{M_N}{E_{p}}}
-\label{eq_minrel1}
-\end{equation}
+\end{equation*}
 with $E_p=\sqrt{M_N^2+p^2}$ and where the factor $1/(2\pi)^3$ is just
 added for convenience.  The potential $\widehat{V}$ satisfies the
 nonrelativistic Lippmann-Schwinger (LS) equation, see Ref.~\cite{machleidt2011} for discussions,
-\begin{equation}
+\begin{equation*}
  \widehat{T}({\vec k}~',{\vec k})= \widehat{V}({\vec k}~',{\vec k})+
  \int d^3p''\: \widehat{V}({\vec k}~',{\vec k}~'')\: \frac{M_N} {{
      k}^{2}-{k''}^{2}+i\epsilon}\: \widehat{T}({\vec k}~'',{\vec k})
  \, .
 \label{eq_LS}
-\end{equation}
+\end{equation*}
 In $pp$ scattering, we use $M_N=M_p=938.2720$ MeV, and in $nn$
 scattering, $M_N=M_n=939.5653$ MeV.  Moreover, the on-shell momentum
 is simply
-\begin{equation}
+\begin{equation*}
 p^2 = \frac12 M_N T_{\rm lab} \,,
-\end{equation}
+\end{equation*}
 where $T_{\rm lab}$ denotes the kinetic energy of the incident nucleon
 in the laboratory system (``Lab.\ Energy'').  For $np$ scattering, we
 have the relations
-\begin{eqnarray}
+\begin{eqnarray*}
 M_N &=& \frac{2M_pM_n}{M_p+M_n} = 938.9182 \mbox{ MeV, and} \\ p^2 & =
 & \frac{M_p^2 T_{\rm lab} (T_{\rm lab} + 2M_n)} {(M_p + M_n)^2 +
   2T_{\rm lab} M_p} \,,
-\end{eqnarray}
+\end{eqnarray*}
 which are based upon relativistic kinematics.
 
 Iteration of $\widehat V$ in the Lippman-Schwinger equation, Eq.~(\ref{eq_LS}),
@@ -983,16 +975,16 @@ infinities.  This is consistent with the fact that ChPT is a
 low-momentum expansion which is valid only for momenta $Q \ll
 \Lambda_\chi \approx 1$ GeV.  Therefore, the potential $\widehat V$ is
 multiplied with the regulator function $f(k',k)$,
-\begin{equation}
+\begin{equation*}
 {\widehat V}(\vec{ k}~',{\vec k}) \longmapsto {\widehat V}(\vec{
   k}~',{\vec k}) \, f(k',k)
-\end{equation}
+\end{equation*}
 with
-\begin{equation}
-f(p',p) = \exp[-(p'/\Lambda)^{2n}-(p/\Lambda)^{2n}] \,.
+\begin{equation*}
+f(p',p) = \exp[-(p'/\Lambda)^{2n}-(p/\Lambda)^{2n}],
 \label{eq:eq_f}
-\end{equation}
-
+\end{equation*}
+as a possible example.
 
 Up to NNLO in chiral perturbation theory there are, in addition to the
 two-body interaction diagrams discussed above, also a few three-body
@@ -1006,8 +998,8 @@ the NNLO three-nucleon force (3NF); $c_1,c_3,$ and $c_4$ are
 associated with the three-body two-pion-exchange (2PE) diagram, $c_D$
 and $c_E$ determine the strength of the one-pion-exchange plus contact
 (1PE) diagram and the pure contact (CNT) diagram,
-respectively. The work of Refs.~\cite{epelbaum2002,epelbaum2009} 
-gives an extensive discussions of these terms and we refer the reader to these references for further details.
+respectively. References ~\cite{epelbaum2002,epelbaum2009} 
+give an extensive discussions of these terms.
 
 \section{Hartree-Fock theory}\label{sec:chap8hf}
 
@@ -1024,13 +1016,13 @@ with the Hartree-Fock Hamiltonian defined as
 \]
 
 The term $\hat{u}^{\mathrm{HF}}$ is a single-particle potential to be
-determined by the HF algorithm. The HF algorithm means to choose
+determined by the HF algorithm. The HF algorithm means to select
 $\hat{u}^{\mathrm{HF}}$ in order to have
 \[ \langle \hat{H} \rangle = E^{\mathrm{HF}}= \langle \Phi_0^{HF} | \hat{H}|\Phi_0^{HF} \rangle,
 \]
 as a local minimum with a Slater determinant
 $\Phi_0^{HF}$ being the ansatz for the ground state.  The variational
-principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ the representing the exact
+principle ensures that $E^{\mathrm{HF}} \ge E_0$, with $E_0$ representing the exact
 ground state energy.
 
 We will show that the Hartree-Fock Hamiltonian $\hat{h}^{\mathrm{HF}}$
@@ -1190,7 +1182,7 @@ h_{\alpha\beta}^{HF}=\langle \alpha | h | \beta \rangle+
 \]
 we can rewrite the new equations as
 \begin{equation}
-\sum_{\gamma}h_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}. \label{eq:newhf}
+\sum_{\beta}h_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}. \label{eq:newhf}
 \end{equation}
 The latter is nothing but a standard eigenvalue problem.  Our
 Hartree-Fock matrix is thus
@@ -1267,8 +1259,10 @@ energies and $m$ is the number of single-particle states.
 \end{svgraybox}
 The following simple Python program implements the above algorithm using the density matrix formalism outlined above.
 We have omitted the functions that set up the single-particle basis and the anti-symmetrized two-body interaction matrix elements.
-These have to be provided, see \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/hfnuclei.py}
+These have to be provided, see \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/python/hfnuclei.py}
 for full code and matrix elements.
+
+https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs
 \begin{lstlisting}
 # We skip here functions that set up the one- and two-body parts of the Hamiltonian 
 # These functions need to be defined by the user. The two-body interaction below is
@@ -1338,13 +1332,12 @@ if __name__ == '__main__':
 
 
   We end this section by rewriting the ground state energy by adding
-  and subtracting $\hat{u}^{HF}$
+  and subtracting $\hat{u}^{HF}$. Using anti-symmetrized two-body matrix elements we have
   \[
     E_0^{HF} =\langle \Phi_0 | \hat{H} | \Phi_0\rangle = \sum_{i\le
-      F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| j\rangle+
-    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A\left[\langle ij
-      |\hat{v}|ij \rangle-\langle
-      ij|\hat{v}|ji\rangle\right]-\sum_{i\le F}^A \langle i
+      F}^A \langle i | \hat{h}_0 +\hat{u}^{HF}| i\rangle+
+    \frac{1}{2}\sum_{i\le F}^A\sum_{j \le F}^A \langle ij
+      |\hat{v}|ij \rangle-\sum_{i\le F}^A \langle i
     |\hat{u}^{HF}| i\rangle,
   \]
   which results in
@@ -1362,8 +1355,7 @@ if __name__ == '__main__':
   energy
   \[
     E_0^{HF} = \sum_{i\le F}^A \varepsilon_i - \frac{1}{2}\sum_{i\le
-      F}^A\sum_{j \le F}^A\left[\langle ij |\hat{v}|ij \rangle-\langle
-      ij|\hat{v}|ji\rangle\right].
+      F}^A\sum_{j \le F}^A\langle ij |\hat{v}|ij \rangle.
   \]
   This equation demonstrates that the total energy is not given as the
   sum of the individual single-particle energies.
@@ -2086,7 +2078,7 @@ We assume the reader is familiar
 with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{shavittbartlett2009}.
 \begin{figure}[hbtp]
     \includegraphics[width=0.7\linewidth,angle=90]{Chapter8-figures/mbpt.pdf}
-      \caption{Diagrams which enter the definition of the ground-state
+      \caption{Linked anti-symmetrized Goldstone diagrams which enter the definition of the ground-state
       correlation energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
       \label{fig:goldstone}
 \end{figure}
@@ -2266,9 +2258,9 @@ theory in the late 1950s. The correlated wave function
 of a many-body system $\mid\Psi\rangle$
 can be formulated as an exponential of correlation
 operators $T$ acting on a reference state $\mid\Phi\rangle$,
-\begin{equation}
-\mid\Psi\rangle = \exp\left(\hat{T}\right)\mid\Phi\rangle,
-\end{equation}
+\begin{equation*}
+\mid\Psi\rangle = \exp\left(\hat{T}\right)\mid\Phi\rangle.
+\end{equation*}
 We will discuss how to define the operators later in this work. This simple
 ansatz carries enormous power. It leads to a non-perturbative many-body
 theory that includes summation of ladder diagrams \cite{brueckner1955}, ring
@@ -2293,32 +2285,32 @@ Refs.~\cite{binder2013,jansen2016}.
 \subsection{A quick tour of Coupled Cluster theory}
 
   The ansatz for the ground state  is given by
-  \begin{equation}
+  \begin{equation*}
      \vert \Psi_0\rangle = \vert \Psi_{CC}\rangle = e^{\hat{T}} \vert
      \Phi_0\rangle = \left( \sum_{n=1}^{A} \frac{1}{n!} \hat{T}^n
      \right) \vert \Phi_0\rangle,
-  \end{equation}
+  \end{equation*}
   where $A$ represents the maximum number of particle-hole excitations
   and $\hat{T}$ is the cluster operator defined as
-  \begin{align}
+  \begin{align*}
               \hat{T} &= \hat{T}_1 + \hat{T}_2 + \ldots + \hat{T}_A
               \\ \hat{T}_n &= \left(\frac{1}{n!}\right)^2
               \sum_{\substack{ i_1,i_2,\ldots i_n \\ a_1,a_2,\ldots
                   a_n}} t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}
               a_{a_1}^\dagger a_{a_2}^\dagger \ldots a_{a_n}^\dagger
               a_{i_n} \ldots a_{i_2} a_{i_1}.
-          \end{align}
+          \end{align*}
       The energy is given by
-      \begin{equation}
+      \begin{equation*}
           E_{\mathrm{CC}} = \langle\Phi_0\vert \overline{H}\vert
           \Phi_0\rangle,
-      \end{equation}
+      \end{equation*}
       where $\overline{H}$ is a similarity transformed Hamiltonian
-      \begin{align}
+      \begin{align*}
           \overline{H}&= e^{-\hat{T}} \hat{H}_N e^{\hat{T}}
           \\ \hat{H}_N &= \hat{H} - \langle\Phi_0\vert \hat{H} \vert
           \Phi_0\rangle.
-      \end{align}
+      \end{align*}
 
       The coupled cluster energy is a function of the unknown cluster
       amplitudes $t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}$, given by
@@ -2338,11 +2330,11 @@ the similarity transformed Hamiltonian $\overline{H}$ is expanded
             \right] +\dots
       \end{equation}
   and simplified using the connected cluster theorem \cite{shavittbartlett2009}
-      \begin{equation}
+      \begin{equation*}
           \overline{H}= \hat{H}_N + \left( \hat{H}_N \hat{T}\right)_c
           + \frac{1}{2} \left( \hat{H}_N \hat{T}^2\right)_c + \dots +
           \frac{1}{n!} \left( \hat{H}_N \hat{T}^n\right)_c +\dots
-      \end{equation}
+      \end{equation*}
 We will discuss parts of the the derivation below.
 For the full derivation of these expressions, see for example Ref.~\cite{shavittbartlett2009}. 
 
@@ -2351,10 +2343,10 @@ $\hat{T}$ at the $n=2$ level. This defines the so-called singles and
 doubles approximation to the coupled cluster state function, normally
 shortened to CCSD.
 The coupled cluster wavefunction is now given by
-  \begin{equation}
+  \begin{equation*}
               \vert \Psi_{CC}\rangle = e^{\hat{T}_1 + \hat{T}_2} \vert
               \Phi_0\rangle
-  \end{equation}
+  \end{equation*}
   where
           \begin{align*}
               \hat{T}_1 &= \sum_{ia} t_{i}^{a} a_{a}^\dagger a_i
@@ -2371,26 +2363,6 @@ The coupled cluster wavefunction is now given by
   performing a transformation of the Hamiltonian matrix of the
   following type for the six particle problem (with a two-body
   Hamiltonian) discussed in section \ref{sec:chap8fci}
-  \begin{table}
-\caption{Schematic representation of blocks of matrix elements which are set to zero using the CCSD approximation.}
-  \begin{center}
-  \begin{tabular}{cccccccc}
-  \hline \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ $0p-0h$ } &
-  \multicolumn{1}{c}{ $1p-1h$ } & \multicolumn{1}{c}{ $2p-2h$ } &
-  \multicolumn{1}{c}{ $3p-3h$ } & \multicolumn{1}{c}{ $4p-4h$ } &
-  \multicolumn{1}{c}{ $5p-5h$ } & \multicolumn{1}{c}{ $6p-6h$ }
-  \\ \hline $0p-0h$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0 & 0
-  & 0 & 0 \\ $1p-1h$ & 0 & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0
-  & 0 & 0 \\ $2p-2h$ & 0 & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ & 0 & 0 \\ $3p-3h$ & 0 & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & 0 \\ $4p-4h$ & 0 & 0 &
-  $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$
-  \\ $5p-5h$ & 0 & 0 & 0 & $\tilde{x}$ & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ \\ $6p-6h$ & 0 & 0 & 0 & 0 & $\tilde{x}$ & $\tilde{x}$ &
-  $\tilde{x}$ \\ \hline
-  \end{tabular}
-  \end{center}
-  \end{table}
 
   In our configuration interaction theory discussion the correlation energy is defined as (with a two-body Hamiltonian) 
   \[
@@ -2400,23 +2372,23 @@ The coupled cluster wavefunction is now given by
 We can obtain a similar expression for the correlation energy using coupled cluster theory. 
 Using Eq.~(\ref{eq:bch}) we can write the expression for the coupled cluster  ground state energy as an infinite sum over nested commutators
         \begin{align*}
-            E_{CC} &= \bra{\Psi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
+            E_{CC} &= \bra{\Phi_0}\Bigl( \hat{H}_N + \left[ \hat{H}_N, \hat{T} \right] +
                 \frac{1}{2} \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right] \\
                 & \qquad + \frac{1}{3!} \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right] \\
-                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] +... \Bigr) \ket{\Psi_0}. \\
+                & \qquad + \frac{1}{4!} \left[ \left[ \left[\left[ \hat{H}_N, \hat{T} \right], \hat{T}\right], \hat{T} \right], \hat{T} \right] +... \Bigr) \ket{\Phi_0}. \\
         \end{align*}
 One can show that this infinite series truncates naturally at a given order of nested commutators \cite{shavittbartlett2009}. 
 Let us demonstrate briefly how we can construct the expressions for the correlation 
 energy by approximating $\hat{T}$ at the CCSD level, that is $\hat{T}\approx \hat{T}_1+\hat{T}_2$.
         The first term is zero by construction
         \begin{equation*}
-            \bra{\Psi_0} \hat{H}_N \ket{\Psi_0} = 0.
+            \bra{\Phi_0} \hat{H}_N \ket{\Phi_0} = 0.
         \end{equation*}       
      The second term can be split into the following contributions
         \begin{align*}
-        \bra{\Psi_0}\left[ \hat{H}_N, \hat{T} \right]\ket{\Psi_0} & = 
-            \bra{\Psi_0} \Bigl(\left[ \hat{F}_N, \hat{T}_1 \right] + \left[ \hat{F}_N, \hat{T}_2 \right]
-            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Psi_0}.
+        \bra{\Phi_0}\left[ \hat{H}_N, \hat{T} \right]\ket{\Phi_0} & = 
+            \bra{\Phi_0} \Bigl(\left[ \hat{F}_N, \hat{T}_1 \right] + \left[ \hat{F}_N, \hat{T}_2 \right]
+            + \left[ \hat{V}_N, \hat{T}_1 \right] + \left[ \hat{V}_N, \hat{T}_2 \right] \Bigr) \ket{\Phi_0}.
     \end{align*}
 Let us start with $\left[ \hat{F}_N, \hat{T}_1 \right]$, where the one-body operator $\hat{F}_N$ is defined in Eq.~(\ref{eq:hfn}). 
 In the equations below we employ the shorthand $f^p_q = \langle p\vert \hat{f} \vert q\rangle$.  
@@ -2663,8 +2635,8 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   possible in standard FCI calculations. Typical FCI calculations for
   light nuclei $A\le 16$ can be performed in at most some few harmonic
   oscillator shells. For heavier nuclei, at most two major shells can
-  be included due to too large dimensionalities.  However, Coupled
-  Cluster theory is non-variational and if we want to find properties
+  be included due to too large dimensionalities.  However, coupled
+  cluster theory is non-variational and if we want to find properties
   of excited states, additional calculations via for example equation
   of motion methods are needed \cite{shavittbartlett2009,Hagen:2015yea}.
   If correlations are strong, a single-reference ansatz may not be the
@@ -2702,7 +2674,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   we obtain that the energy can be written as
   \[
   \langle \Phi_0 \vert
-  \exp{-\left(\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
+  \exp{\left(-\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
   \Phi_0\rangle = \langle \Phi_0 \vert \hat{H}_N(1+\hat{T}_2)\vert
   \Phi_0\rangle = E_{CCD}.
   \]
@@ -2744,6 +2716,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   \[
   \hat{P}(ij\vert ab) = (1-\hat{P}_{ij})(1-\hat{P}_{ab}).
   \]
+  The single-particle energies $\epsilon_p$ are normally taken to be Hartree-Fock single-particle energies.
   Recall also that the unknown amplitudes $t_{ij}^{ab}$ represent
   anti-symmetrized matrix elements, meaning that they obey the same
   symmetry relations as the two-body interaction, that is
@@ -2772,14 +2745,15 @@ The standard method for solving these equations is to
   theory to first order in the interaction.  This means that we define
   the zeroth approximation to the amplitudes as
   \[
-  t^{(0)}=\frac{\langle ab \vert \hat{v} \vert ij
+  (t_{ij}^{ab})^{(0)}=\frac{\langle ab \vert \hat{v} \vert ij
     \rangle}{\left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)},
   \]
   leading to our first approximation for the correlation energy at the
   CCD level to be equal to second-order perturbation theory without
   $1p-1h$ excitations, namely
   \[
-  \Delta E_{\mathrm{CCD}}^{(0)}=\frac{1}{4}\sum_{abij} \frac{\langle
+  \Delta E_{\mathrm{CCD}}^{(0)}=\frac{1}{4}\sum_{abij}\langle
+    ij \vert \hat{v} \vert ab \rangle(t_{ij}^{ab})^{(0)}=\frac{1}{4}\sum_{abij} \frac{\langle
     ij \vert \hat{v} \vert ab \rangle \langle ab \vert \hat{v} \vert
     ij
     \rangle}{\left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)}.
@@ -2798,7 +2772,7 @@ The standard method for solving these equations is to
   \langle ab \vert \hat{v} \vert cd \rangle t_{ij}^{cd}.
   \label{eq:ccd1}
   \end{equation}
-
+In the above and following equations we have dropped the subscript which indicates the number of iterations. 
   Setting the single-particle energies for the hole states equal to an
   energy variable $\omega = \epsilon_i+\epsilon_j$,
   Eq.~(\ref{eq:ccd1}) reduces to the well-known equations for the
@@ -2823,7 +2797,7 @@ The standard method for solving these equations is to
   \]
   where we have inserted an explicit energy dependence via the parameter $\omega$. This
   equation, transforming a two-particle configuration into a single
-  index, can be rewritten as  a matrix inversion problem.  Solving
+  index, can be rewritten as  a matrix inversion problem.  Alternatively, the same equation can be solved by iteration. Solving
   the equations for a fixed energy $\omega$ allows us to compare
   directly with results from Green's function theory when only
   two-particle intermediate states are included.
@@ -2833,7 +2807,7 @@ The standard method for solving these equations is to
   first order in perturbation theory, leading to a zeroth-order
   approximation for the correlation energy given by second-order perturbation
   theory.  A simple approach to the
-  solution of Eq.~(\ref{eq:ccd1}), is to thus to
+  solution of Eq.~(\ref{eq:ccd1}), is thus to
   \begin{enumerate}
   \item Start with a guess for the amplitudes and compute the zeroth
     approximation to the correlation energy
@@ -2870,28 +2844,28 @@ The standard method for solving these equations is to
 A successful numerical project relies on us having expertise in several scientific and
 engineering disciplines. We need a thourough understanding of the relevant scientific
 domain to ask the right questions and interpret the results, but the tools we
-use requires a proficiency in mathematics to develop models and work out
+use require a proficiency in mathematics to develop models and work out
 analytical results, in numerics to choose the correct algorithms, in computer
 science to understand what can go wrong with our algorithms when the problem is
 discretized and solved on a digital computer, and in software engineering to
 develop and maintain a computer program that solves our problem.
 
-Indenpendent of your scientific background, you are probably also educated in
-mathematics and numerics. Unfortunatly, the computer science and
+Independent of your scientific background, you are probably also educated in
+mathematics and numerics. Unfortunately, the computer science and
 software engeneering aspects of computing are often neglected and thought of as
 skills you pick up along the way. This is a problem for many reasons. First,
 running a numerical project is very similar to running a
-physical experiment. Your codes are the blueprints the compiler uses to build
+physical experiment. The codes we develop are the blueprints the compiler uses to build
 the experiment from the components of the computer. It is unthinkable to publish
-results from a physical experiment without a thourogh understanding of the
+results from a physical experiment without a thorough understanding of the
 experimental
 equipment. Second, the blueprints are not only used to tell the compiler what to
-build, but also by humans to understand what is beeing built, how to fix
+build, but also by humans to understand what is being built, how to fix
 it if something goes wrong, and how to improve it. If the blueprints are not
 properly written and readable, human understanding is lost. Last, components of an experiment
 are always tested individually to establish tolerances and that they work
 according to specification. In software engineering, this corresponds to writing
-testable code where you can be confident in the quality of each piece. These are
+testable code where you can be confident of the quality of each piece. These are
 skills many writers of scientific software never learn and as a consequence
 many numerical experiments are not properly understood and are never independently
 verified.
@@ -2899,7 +2873,7 @@ verified.
 In this section we will focus on some key tools and strategies that we feel are
 important for developing and running a numerical experiment. Our main concerns
 are that our results can be validated, independently verified, and run
-efficiently. In addition, we will discuss tools that makes the whole process somewhat easier. We will
+efficiently. In addition, we will discuss tools that make the whole process somewhat easier. We will
 cover testing, tracking changes with version control software, public code
 repositories, and touch upon simple profiling tools to guide the optimization
 process. Finally we will present a numerical project where we have developed a
@@ -2914,7 +2888,7 @@ chapter 10 and the Green's function approach of chapter 11.
 \subsection{Validation and verification}
 The single most important thing in a numerical experiment is to get the correct
 answer. A close second is to be confident that the answer is correct and why. A
-lucky coincidence must be distinguisable from a consistently correct result. The
+lucky coincidence must be distinguishable from a consistently correct result. The
 only way to do this is to validate the code by writing and running tests -- lots
 of tests. Ideally, every aspect of a code should be tested and it should be
 possible to run the tests automatically. As most of you have probably
@@ -2929,7 +2903,7 @@ the same rigourous process to our software, we can achieve the same level of
 confidence in our code as we have for the rest of our work. We advocate testing
 at three distinct levels. Let's start with discussing validation tests, as this
 is the type of test you are probably most familiar with. In a validation test,
-you application is run as in production and the test fails if it cannot
+your application is run as in production mode and the test fails if it cannot
 reproduce a known result. The known result could be a published benchmark, a
 simplified model where analytical results are available, an approximate result
 from a different method, or even an earlier result from the same code. We will
@@ -2937,30 +2911,30 @@ discuss this type of testing further in section \ref{sec:ccdcode}.
 
 Analogous to testing individual components in a physical experiment, is a type
 of test called a unit test. This is a very fine-grained test that will typically
-only test a class or a procedure at a time. This is where you test that a data
-structure has been correctly filled, that an algorithm works appropriatly, that
+only test a class or a procedure, or even a small part of your code  at a time. This is where you test that a data
+structure has been correctly filled, that an algorithm works appropriately, that
 a file has been read correctly, and basically every other component test you can
-think of. It does take a little more work to setup as testing need to be done
+think of. It does take a little more work to setup as testing needs to be done
 outside of your normal program flow. Typically this involves writing different
-executables that creates the necessary dependencies before testing a component.
-The advantages of writing unit tests are manifold. First, because you know that
+executables that create the necessary dependencies before testing a component.
+The advantages of writing unit tests are many. First, because you know that
 the individual pieces of your code work independently, you will achieve a higher
 degree of confidence in your results. Second, you will develop a programming
 style that favors highly decoupled units because such units are easier to test.
 This allows talking about the code at a higher level of abstraction, which helps
 understanding. Last, your tests become the documentation of how your code is
 supposed to be used. This might not seem important while your are actively
-working on a project, but it will be invaluable down the line when you want add
-new features after some time away. Also, when you share your code as part of the
+working on a project, but it will be invaluable down the line when you want to add
+new features. Also, when you share your code as part of the
 scientific process, these tests will be the way your peers will start to
-understand your work.
+understand your work.  This means that your final production code will also include various tests.
 
 While validation tests test your code at the coursest level, and unit tests test
 your code at the finest level, integration tests test how your components work
 together. If, for example, your program solves differential equations as parts
 of a larger problem, the components that make up your differential-equation
 solver can be tested alone. If your solver can solve a set of representative
-problems that either has an anlytical solution or can be worked out using some
+problems that either have anlytical solutions or can be worked out using some
 other tool, you can be more confident that it will work on your specific
 problem.  Moreover, writing integration tests pushes you to develop more general
 components. Instead of writing a routine that only solves the differential
@@ -2974,13 +2948,13 @@ we should strive to apply the same level of rigour to our software as we do to
 every other aspect of our work. On a more pragmatic level, you can either spend
 your time writing tests and make sure your components work, or you can spend
 your time debugging when something goes wrong and worry that your results are
-not valid.
+not valid. We definitely prefer, from own and other people's experience, the first approach.
 
 \subsection{Tracking changes}
 If you're not using a tool to track the changes you make to your code, now is
 the time to start. There are several tools available, but the
 authors are using git~(\url{https://git-scm.com/}), an open-source version-control system
-that can run on Linux, OSX, and Windows. By tracking changes, it's easier to
+that can run on Linux, OSX, and Windows. By tracking changes, it is easier to
 correct a mistake when it inevitably creeps into the code. It is possible to go
 back to a previously validated version and by using branches, you can work on
 different versions of the code simultaneously. For example, you can create a
@@ -2988,25 +2962,25 @@ production branch where everything is validated and ready to run, and you can
 create a development branch to implement new features.  There are also code
 repositories where you can store a copy of your code for free, without worrying
 about things getting lost. The source codes discussed in this book are hosted on
-GitLab~(\url{https://about.gitlab.com/}), which uses git to track all changes to the code. By
+for example GitHub~(\url{https://github.com/}), which uses git to track all changes to the code. By
 using a service like this, it is easier to synchronize code between multiple
 machines. Multiple developers can work on the same code at the same time and
 share changes without worrying about losing contributions. It can also become
 the official public repository of your software to enable your peers to verify
-your work.
-
-\subsection{Profile-guided optimization}
+your work. The software discussed in this chapter is available from our GitHub repository 
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/}.
+\subsection{Profile-guided optimization}\label{subsec:profiling}
 The aim of this subsection is to discuss in more detail how we can make the
 computations discussed in connection with equations
 Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient using
 physical constraints, algorithm improvements, and parallel processing. For
 pedagocical reasons, we will use the MBPT parts of the program due to their
 simplicity while still containing the important elements of a larger, more
-complicated calculation.  The codes can be found at the github link
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
+complicated CCD calculation.  The codes can be found at the github link
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/cpp/MBPT/src}.
 We will demonstrate the use of a simple profiler to help
-guide our development efforts. Our starting point are naiive implementations of
-MBPT2 and MBPT3 diagrams that take too long to run. For reference, we calculate
+guide our development efforts. Our starting points are  naive implementations of
+many-body perturbation theory to second (MBPT2) and third order (MBPT3) in the interaction. For reference, we calculate
 properties of nuclear matter and construct our Hamiltonian in a free-wave basis
 using the Minnesota~\cite{minnesota} potential discussed in section \ref{sec:interaction}. As the model
 is not as important as the performance in this section, we postpone a discussion of
@@ -3014,15 +2988,15 @@ the model to section \ref{sec:ccdcode}.
 
 \lstinputlisting[language=c++,numbers=left,firstline=14,lastline=34,
 caption=Trivial implementation of a MBPT2 diagram. \label{code:mbpt2V06}]
-{Chapter8-programs/cpp/MBPT/mbpt2V06.cpp}
+{Chapter8-programs/cpp/MBPT/mbpt2V00.cpp}
 
-Listing \ref{code:mbpt2V06} shows a possible early implementation to solve eq.
-\ref{eq:bruteforceMBPT} from MBPT2. This function has a loop over all single-particle indices and calls the
-V\_Minnesota function to calculate the two-body interaction for each set of
+Listing \ref{code:mbpt2V06} shows a possible early implementation to solve Eq.~\ref{eq:bruteforceMBPT} from MBPT2. This function has a loop over all single-particle indices and calls the
+V\_Minnesota function via the get\_element function to calculate the two-body interaction for each set of
 indices. The energy denominators are calculated from the single-particle
 energies stored in the modelspace structure and partial results are accumulated into
 the energy variable.
-
+This function represents a straightforward implementation of MBPT2. We normally recommend, when developing a code, to write
+the first implementation in a way which is as close as possible to the mathematical expressions, in this particular case Eq.~(\ref{eq:bruteforceMBPT}).
 \begin{table}
 \caption{Total runtime for the MBPT2 implementation in Listing 
     \ref{code:mbpt2V06} for different model spaces and particle numbers.}\label{tab:mbpt2V06_runtime}
@@ -3055,16 +3029,23 @@ the energy variable.
 \end{table}
 
 Table \ref{tab:mbpt2V06_runtime} shows the total execution time for this
-application for different sized model spaces and number of particles on a local
+application for different model spaces (defined by the number of single-particle states) and number of particles on a local
 workstation. Your runtimes will be different. Our goals are converged
 calculations of pure neutron matter as well as nuclear matter, where the number
 of states and the number of protons and neutrons goes to infinity. It suffices
-to say that we can't reach our goals with this code.
+to say that we cannot reach our goals with this code.
 
-We want to decrease the run time of this application, but it can be difficult to
-decide where we should spend our time improving this code. Our first order of
-business is to observe what goes on inside the program. For that we will use a
-profiling tool called gprof~(\url{https://sourceware.org/binutils/docs/gprof/})
+We want to decrease the run time of this application, but it can be
+difficult to decide where we should spend our time improving this
+code. Our first approach is  to observe what goes on inside
+the program. For that we will use one the simplest possible profiling
+tools called
+gprof~(\url{https://sourceware.org/binutils/docs/gprof/}). Alternatively,
+software like Valgrind is also highly recommended
+\url{http://valgrind.org}.  If you are using integrated development
+environments (IDEs) like Qt \url{https://www.qt.io/}, performance and
+debugging tools are integrated with the IDE.
+
 To use gprof the code must first be compiled and linked with the -pg flag. This flag enables
 the collection of runtime information so that a call graph and a profile can be
 constructed when your program is run.
@@ -3079,25 +3060,26 @@ Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  ms/call  ms/call  name    
  58.01     26.26    26.26 2523524846     0.00     0.00  V_Minnesota(...)
- 39.64     44.21    17.95                             mbpt2V06::getEnergy()
+ 39.64     44.21    17.95                             mbpt2V00::getEnergy()
   2.35     45.27     1.07                             spinExchangeTerm(...)
 \end{verbatim}
 \end{table}
 Table \ref{profile:mbpt2V06} shows the top few lines of the flat profile
 generated for MBPT2 version in Listing \ref{code:mbpt2V06}. The leftmost column
 shows the percentage of run time spent in the different functions and it shows
-that about 58 \% of the time is spent calculating the potential while about 40
-\% is spent in the loops in the actual MBPT2 function. The remaining couple of
-percent is spent in the spinExchangeTerm function which is called from the
+that about $58\%$ of the time is spent calculating the potential while about $40\%$ 
+is spent in the loops in the actual MBPT2 function. The remaining part 
+is spent in the spinExchangeTerm function which is called from the
 potential function.  Even though the application spends most of its time
 generating the potential, we don't want to spend too much time on improving this
-code. We use the Minnesota potential for testing and benchmark purposes only and
-it will not be used for production runs. It is, however, possible to reduce the
+code. We use the Minnesota potential for testing and benchmark purposes only. 
+For more realistic calculations, one should employ the chiral interaction models discussed earlier.
+It is, however, possible to reduce the
 number of times this function is called.  The 4th column in table
 \ref{profile:mbpt2V06} shows that for this particular instance, the potential
 function was called 2.5 billion times. However, due to known symmetries of the
-nuclear interaction we know that most of these calls result in a matrix element
-of zero. If we can exploit this structure to reduce the number of calls to the
+nuclear interaction we know that most of these calls result in matrix elements that
+are zero. If we can exploit this structure to reduce the number of calls to the
 potential function we will greatly reduce the total run time of this program.
 The details of how this is done is presented in section \ref{sec:ccdcode}.
 
@@ -3106,14 +3088,14 @@ caption=Block-sparse implementation of a MBPT2 diagram. \label{code:mbpt2V02}]
 {Chapter8-programs/cpp/MBPT/mbpt2V02.cpp}
 
 Listing \ref{code:mbpt2V02} shows a version of this code where the potential function is
-not called when we know ithe matrix element is zero. This code loops over
+not called when we know that the matrix element is zero. This code loops over
 channels, which are the dense blocks of the full interaction. We have
 pre-computed the two-body configurations allowed in each channel and store them
 in the channels structure. The potential is computed in the same way as before,
 but for fewer combinations of indices.
 
 \begin{table}
-\caption{Flat profile for the MBPT2 implmentation in Listing \ref{code:mbpt2V02}
+\caption{Flat profile for the MBPT2 implementation in Listing \ref{code:mbpt2V02}
 using 1598 states calculating pure neutron matter with 54 neutrons}\label{profile:mbpt2V02}
 \begin{verbatim}
 Flat profile:
@@ -3197,13 +3179,13 @@ in memory. \label{code:mbpt3V05}]
 
 Listing \ref{code:mbpt3V05} shows the new version of the code that stores matrix
 elements of the interaction. The explicit summation to calculate the energy can now be done by
-using matrix products by calling the blas dgemm wrappers \verb;RM_dgemm; and
+using matrix products by calling the BLAS (Basic Linear Algebra Subprograms) \cite{blas}
+dgemm wrappers \verb;RM_dgemm; and
 \verb;RMT_dgemm;. Note that the code has grown more complicated for every new
 optimization we have introduced. This increases the possibility of introducing
-errors significantly. It's a good thing we have tests to make sure that the
+errors significantly. It is a good thing we have tests to make sure that the
 results haven't changed between versions. Table \ref{profile:mbpt3V05} shows the
-profile for this version and we have reduced the number of calls the potential
-function considerably.
+profile for this version and we have reduced considerably the number of calls to the function which sets up the interaction.
     
 \begin{table}[h]
 \caption{Flat profile for the MBPT3 implmentation in Listing \ref{code:mbpt3V05}
@@ -3279,13 +3261,13 @@ Each sample counts as 0.01 seconds.
 \end{verbatim}
 \end{table}
 
-The profile is now alot more busy and it shows a longer runtime
+The profile is now a lot more busy and it shows a longer runtime
 than the previous profile. This is because gprof doesn't sample time spent
 in dynamically linked libraries. The total runtime in this profile
-corresponds better with Table \ref{tab:mbpt3V02_runtime}, but it's also more
+corresponds better with Table \ref{tab:mbpt3V02_runtime}, but it is also more
 difficult to read. What is clear is that the call to the function labelled
-\verb;__ieee754_exp_avx; takes up almost 70 \% of the run time. This is the
-calls to the exponential function in the potential code. If we can reduce the
+\verb;__ieee754_exp_avx; takes up almost $70\%$ of the total run time. This function represents
+the calls to the exponential function in the potential code. If we can reduce the
 number of evaluations of the exponential function, we can further reduce the run
 time of this application. We leave that as an exercise to the reader.
 
@@ -3306,32 +3288,39 @@ different number of cores compared to the best run times we could have gotten
 with this approach if our parallel regions scaled perfectly with the number of
 cores. In reality this never happens. In this particular case, we could have
 made the potential function more cache friendly. With this version the different
-cores are fighting eachother for access to memory and cache, which reduces
-performance somewhat. Any further optimization of this code would yield
-diminishing returns
+cores are fighting each other for access to memory and cache. This reduces
+performance somewhat. 
+%Any further optimization of this code would yield
+%diminishing returns
         
 \lstinputlisting[language=c++,numbers=left,firstline=16,lastline=69,
 caption=Block-sparse implementation of a MBPT3 diagram with interaction stored
 in memory and openmp directives. \label{code:mbpt3V04}]
 {Chapter8-programs/cpp/MBPT/mbpt3V04.cpp}
-
+In this function we have used the matrix-matrix multiplication function $dgemm$ of BLAS \cite{blas}. 
 \begin{figure}
 \includegraphics[width=\linewidth]{Chapter8-figures/omp_scaling.pdf}
 \caption{Total runtime for the mbpt3 code in in Listing \ref{code:mbpt3V04}
 uwing different number of OpenMP threads on a 16 code node of a Cray XK7.}
 \label{fig:mbpt3_omp}
 \end{figure}
+Finally, the above codes can easily be extended upon by including MPI \cite{mpi,openmpi} and/or a mix of OpenMP and MPI commands for distributed memory architectures. We leave this as a challenge to the reader. The coding practices and examples developed in this section, are reused in our development of the  coupled cluster code discussed in the next section. There  we discuss however in more detail how to develop an efficient coupled cluster code for infinite matter, with a focus on validation and verification and simplifications of the equations. 
+
 
 \subsection{Developing a CCD code for infinite matter\label{sec:ccdcode}}
+
   This section focuses on writing a working CCD code from
-  scratch. What follows serves also the scope of outlining how to start a numerical project.  We will assume that you have 
+  scratch. Based on the previous discussion, what follows serves also the scope of outlining how to start a larger numerical project.  
+We will in particular pay attention to possible benchmarks that can be used to validate our codes. 
+
+We will assume that you have 
 opted for a specific mathematical method for solving Schr\"odinger's equation. Here the mathematics is  given by the CCD equations.  
 Our basic steps can then be split up as follows 
   \begin{itemize}
 \item Write a first version of the CCD  code which is as close as possible to the mathematics of your equations. In this stage we will not 
-focus on high-performance computing aspects and code efficiency.
+focus on high-performance computing aspects and code efficiency. This will mimick our discussion of many-body perturbation theory, in particular the calculation of the correlation energy to second order discussed above. 
 \item Try to find possible benchmarks you can test your code against. In our case, the pairing model serves as an excellent testcase. 
-\item With a functioning code that reproduces possible analytical and/or numerical results, we can start to analyze our code. In particular, if there are mathematical operations which can be simplified and/or can be represented in simpler ways etc etc. The modified code can hopefully reduce memory needs and time spent on computations.
+\item With a functioning code that reproduces possible analytical and/or numerical results, we can start to analyze our code. In particular, if there are mathematical operations which can be simplified and/or can be represented in simpler ways etc etc. The modified code can hopefully reduce memory needs and time spent on computations.  The usage of specific symmetries of the interaction will turn out particularly useful. 
 \end{itemize}
 In this specific section, we will try to follow the above three steps,
 with less attention on speed and numerical efficiency.  Our aim is to
@@ -3340,7 +3329,8 @@ and verified.  If you are familiar with high-performance computing
 topics, you are obviously not limited to follow the basic steps
 outlined here.  However, when developing a numerical project we have
 often found it easier and less error-prone to start with the basic
-mathematical expressions. In the subsequent section we will however
+mathematical expressions. 
+With a first functioning code, we will 
 delve into high-performance computing topics. A good read on developing numerical projects and clear code is Martin's recent text \cite{martin2015}.
 We recommend it highly and have borrowed many ideas and coding philosophies therefrom. 
 
@@ -3437,7 +3427,7 @@ We start with implementing the CCD equations as they stand here
   automatically zero. This means that we need to discuss more efficient storage
   strategies later. Notice also that we are looping over all
   indices $i,j,a,b$, rather than the restricted indices. This means that we
-  are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow. 
+  are doing redundant work. The reason for presenting the equations this way is merely pedagogical. When developing a program, we would recommend to write a code which is as close as possible to the mathematical expressions. The first version of our code will then often be slow, as discussed in subsection \ref{subsec:profiling}.  
 Below we will however unrestrict these indices in order to achieve a better speed up of our code. 
 
    The goal of our code is to calculate the correlation energy,
@@ -3475,7 +3465,7 @@ which results in the correlation energy
   \begin{equation}
   \Delta E_{CCD}^{(1)} = \frac{1}{4} \sum_{ijab}\frac{\langle ij \vert \hat{v} \vert ab \rangle\langle ab \vert \hat{v} \vert ij \rangle}{\epsilon^{ab}_{ij}}.
   \end{equation}
-  This is our familiar result from many-body perturbation theory to second order (MBPT2).  This is a very useful result, as one iteration
+  This is the familiar result from many-body perturbation theory to second order (MBPT2).  It is a very useful result, as one iteration
   of the CCD equations can be ran, and checked against MBPT2 to give
   some confidence that everything is working correctly. Additionally, running a program using a minimal test case is another useful way to make sure that a program is working correctly. For this purpose, we turn our attention to the simple pairing model Hamiltonian of problem \ref{problem:pairingmodel},
   \begin{equation}
@@ -3524,13 +3514,13 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   10\delta -g
   \end{bmatrix}
   \]
-  The python program (included for pedagogical purposes only) at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
+  The python program (included for pedagogical purposes only) at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/python/mbpt.py} diagonalizes the above Hamiltonian
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
+while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) do not contribute either if we work with a canonical Hartree-Fock basis.
   In the case of the simple pairing model it is easy to calculate
-  $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
+  $\Delta E_{MBPT2}$ analytically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
 We restate this expression here but restrict the sums over single-particle states
   \[
   \Delta E_{MBPT2} = \frac{1}{4} \sum_{abij} \frac{\braket{ij|\hat{v}|ab}
@@ -3554,15 +3544,16 @@ which translates into
 Figure \ref{fig:diagpairing} shows the resulting correlation energies for the exact case, MBPT2 and MBPT3.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/perturbationtheory.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
+    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values. A canonical Hartree-Fock basis has been employed in all MBPT calculations.}
     \label{fig:diagpairing}
   \end{figure}
 We note from the above program that we have coded the expressions for
 the various diagrams following strictly the mathematical expressions
 of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5}).  This means
 that for every diagram we loop explicitely over every single-particle
-state. As we will see later, this is extremely inefficient from a
-computational point of view. In our discussions below, we will rewrite
+state. The python program linked to above is included mainly for pedagogical reasons. As 
+we have already seen, this approach is extremely inefficient from a
+computational point of view. In our discussions of MBPT, as well as for CCD code, we rewrite
 the computations of most diagrams in terms of efficient matrix-matrix
 multiplications or matrix-vector multiplications.  Figure
 \ref{fig:diagpairing} shows us that the approximation to both second
@@ -3576,9 +3567,9 @@ guarantee that higher orders in many-body perturbation theory may
 reduce the relative error in a systematic way.  Adding fourth order
 contributions as shown in Fig.~\ref{fig:pairingccmbpt4} for negative
 interaction strengths gives a better result than second and third
-order, while for $g>0$ the relative error is worse.  The fourth order
-contributions (not shown in the above figure) include also
-four-particle-four-hole correaltions.  However, the disagreement for
+order.  The fourth order
+contributions include also
+four-particle-four-hole correlations.  However, the disagreement for
 stronger interaction values hints at the possibility that many-body
 perturbation theory may not converge order by order.  Perturbative
 studies of nuclear systems may thus be questionable, unless selected
@@ -3589,15 +3580,13 @@ theory either overshooting or undershooting the true ground state
 correlation energy.  The coupled cluster results are included in
 Fig.~\ref{fig:pairingccmbpt4} where we display the difference between
 the exact correlation energy and the correlation energy obtained with
-many-body perturbation theory to fourth order.  The MBPT4 results show
-a better agreement with the exact solution, but here as well for
-larger positive values of the interaction, we see clear signs of
-deviations. Coupled cluster theory with doubles only shows a very good
+many-body perturbation theory to third order.  
+Coupled cluster theory with doubles only shows a very good
 agreement with the exact results. For larger values of $g$ one will
 however observe larger discrepancies.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/CCDMBPT4theory.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to fourth order (MBPT4) for a range of interaction values.}
+    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to third  (MBPT3) and fourth order (MBPT4) for a range of interaction values.}
     \label{fig:pairingccmbpt4}
   \end{figure}
 In Table \ref{tab:selectedbenchmarks} we list for the sake of completeness also our coupled cluster results at the CCD level for the same system.
@@ -3738,7 +3727,7 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
   \begin{equation}
   C_{ij} = \sum_{k} A_{ik} \times B_{kj}.
   \end{equation}
-  We obeserve then  that equation (\ref{eq:mtxEx}) can be written as
+  We see then  that equation (\ref{eq:mtxEx}) can be written as
   \[
   \braket{K| \chi |I} = \braket{K|v|I} + \frac{1}{2} \sum_{C}
   \braket{K|v|C} \braket{C|t|I}
@@ -3747,7 +3736,7 @@ for different values of the interaction strength $g$.} \label{tab:selectedbenchm
 like a matrix-matrix multiplication. This is
   useful because there are packages like BLAS (Basic Linear Algebra
   Subprograms) \cite{blas} which have extremely fast implementations of
-  matrix-matrix multiplication.
+  matrix-matrix multiplication, as discussed in connection with the listing \label{code:mbpt3V04}.
   The simplest example to consider is the expression for the correlation energy from MBPT2. We rewrite 
   \begin{equation}\label{eq:bruteforceMBPT}
   \Delta E_{MBPT2} = \frac{1}{4}\sum_{abij} \frac{\braket{ij|\hat{v}|ab}\braket{ab|\hat{v}|ij}}{ \epsilon_{ij}^{ab}},
@@ -3778,8 +3767,8 @@ example, we have in total $2713$ single-particle states.  Using the
 smarter algorithm the final calculation time is $2.4$ s (this is the
 average time from ten numerical experiments).  The total time using
 the brute force summation over single-particle indices is $100.6$ s
-(again the average of ten numerical experiments), resulting in a speed
-up of 42. It is useful to dissect the final time in terms of different
+(again the average of ten numerical experiments), resulting in a considerable speed up.
+It is useful to dissect the final time in terms of different
 operations.  For the smarter algorithm most of the time is spent
 setting up the matrix elements for the two-body channels and to load
 the matrix elements. The final matrix-matrix multiplication takes only
@@ -3788,14 +3777,13 @@ multiplication and summation over the various single-particle states
 takes almost half of the total time. Here we have deliberately only
 focused on the difference between the two ways of computing
 Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}). We have, on
-purpose, not performed a proper timing analysis. In this section we
+purpose, not performed a proper timing analysis since this was done in the previous subsection. 
+In this section we
 have chosen to focus on the development of a program which produces
-the correct results.  The true elephant in the room, in terms of
+the correct results.  As mentioned above, the true elephant in the room, in terms of
 computational time, is our computation of the matrix elements of the
 nucleon-nucleon potential. We have deliberately omitted the time spent on setting up the interactions here.
-We will come back to a proper performance
-analysis and high-performance computing issues in the next
-section. For the rest of this section we wil focus on various physics
+For the rest of this section we wil focus on various physics
 applications of our newly developed CCD code.
 
 With the definition of the intermediates and appropriate matrix-matrix
@@ -3806,13 +3794,10 @@ Hamiltonian,
   \begin{equation}
   \frac{-\hbar^2}{2m}\nabla^2\mathop{\phi(\vec{x})}=\epsilon\mathop{\phi(\vec{x})}.
   \end{equation}
-  For a finite basis, we approximate the problem by constructing a box
+  For a finite basis, as discussed earlier, we approximate the problem by constructing a box
   with sides of length $L$, which quantizes the momentum, and impose
-  periodic boundary conditions in each direction.
-  \begin{align}
-  \mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)}
-  \\ \mathop{\phi_{\vec{k}}(\vec{x})}=\frac{1}{\sqrt{L^{3}}}e^{i\vec{k}\cdot\vec{x}},\hspace{0.5cm}\vec{k}=\frac{2\pi\vec{n}}{L}
-  \end{align}
+  periodic boundary conditions in each direction by requiring 
+  $\mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)}$.
 
   The first step in calculating infinite matter is to construct a
   model space by finding every single-particle state relevant to a
@@ -3988,8 +3973,8 @@ a fixed number of neutrons $N=114$.
       model space sizes with $\mathrm{A=114}$.}
     \label{fig:fig2}
   \end{figure}
-We see from the last figure that at the CCD level and neutron matter only there is a good convergence with  $\mathrm{N_{max}=25}$.
-This results depends however on the type of interaction and many-body approximation. 
+We see from Fig.~\ref{fig:fig2} that at the CCD level and neutron matter only there is a good convergence with  $\mathrm{N_{max}=25}$.
+These results depends however on the type of interaction and many-body approximation. 
 
 In these calculations we
 approximated our problem with periodic boundary conditions,
@@ -4036,7 +4021,7 @@ approximated our problem with periodic boundary conditions,
   number, but requires a full calculation for each set of twist
   angles, which can grow very quickly. For example, using 10 twist
   angles in each direction requires 1000 calculations. To see the
-  effects of twist averaging, it's easy to calculate the kinetic
+  effects of twist averaging, it is easy to calculate the kinetic
   energy per particle and the Hartree-Fock energy per particle, which
   avoids the full CCD calculation. These calculations can be compared
   to the exact values for infinite matter, which are calculated by
@@ -4111,7 +4096,7 @@ interaction models from effective field theory.  With the inclusion of
 proton correlations as well as other potential models we may expect 
 larger differences between
 different methods and interactions.  In chapters 9, 10 and 11 we compare the above results with 
-those obtained wit Monte Carlo methods, the in-medium renormalization group approach and Green's function theory.
+those obtained with Monte Carlo methods, the in-medium renormalization group approach and Green's function theory.
 
 The discussions hitherto have focused on the
 development of an efficient and flexible many-body code. The codes have been structured 
@@ -4120,12 +4105,12 @@ spanning from the simple pairing model to quantum dots and infinite
 nuclear matter. Structuring the codes in for a example an abstract
 system class and a solver class allows an eventual user to study
 different physical systems and add new many-body solvers without
-having to write a totally new program. As demonstrated in chapter 11, 
+having to write a totally new program. As demonstrated in chapter 10, 
 with few additions one can add 
-the widely popular similarity renormalization group method. We discuss this in more detail in chapter 11. 
+the widely popular similarity renormalization group method. 
 
 Till now we have limited our discussion to the construction of a
-many-body code following the undrlying mathematical expressions, 
+many-body code following the underlying mathematical expressions, 
 including elements like how to structure a code in
 terms of functions, how to modularize the code, how to develop classes
 and how to verify and validate our computations (our checks provided
@@ -4133,416 +4118,46 @@ by the simple pairing model and many-body perturbation theory to
 second order) against known results.  With the rewriting of our
 equations in terms of efficient matrix and vector operations we have
 also shown how to make our code more efficient.  Matrix and vector
-operations can easily be parallelized. Such algorithmic improvements
+operations can easily be parallelized, as demonstrated in our discussion of many-body perturbation theory to second and third order. Such algorithmic improvements
 are necessary in order to be able to study complicated physical
 systems.  Our codes can also be easily parallelized in order to run on
 shared memory architectures using either OpenMP \cite{openmp} and/or
-MPI/OpenMPI \cite{mpi,openmpi}.  However, we have till now not touched
-upon topics like parallelization and an efficient utilization of
-exisiting and future high-performance facility and possible
-improvements and bottlenecks which our codes can face. We end thus
-this chapter with a discussion of high-performance computing topics of
-relevance for wave function based methods. 
+MPI/OpenMPI \cite{mpi,openmpi}. 
+
+We conclude this section by summarizing and emphasizing some
+topics we feel can help in structuring a large computational project.
+Amongst these, the validation and verification of the correctness of
+the employed algorithms and programs are central issues which can
+save you a lot of time when developing a numerical project. In the
+discussions above we used repeatedly the simple pairing model of
+problem \ref{problem:pairingmodel}.  This model allows for benchmarks
+against exact results. In addition, it provides analytical answers to
+several approximations, from perturbation theory to specific terms in the solution of the coupled
+cluster equations, the in-medium similarity renormalization group
+approach of chapter 10 and the Green's function approach of chapter
+11. 
+
+It is also important to develop an understanding of how our
+algorithms can go wrong and how they can be implemented in order to
+run as efficiently as possible. When working on a numerical project it
+is important to keep in mind that computing covers numerical as well
+as symbolic computing and paper and pencil solutions. Furthermore,
+version control is something we strongly recommend. It does not only
+save you time in case you struggle with odd errors in a new version of
+your code. It allows you also to make science reproducible.  Making
+your codes available to a larger audience and providing proper
+benchmarks allows fellow scientists to test what you have developed,
+and perhaps come with considerable improvements and/or find flaws
+or errors you were not aware of. 
+Sharing your codes using for example modern version control
+software makes thus your science reproducible and adds in a natural
+way a sound ethical scientific element to what you develop.
+In this chapter we have thus provided several code examples, hoping they can serve as good examples.
 
 
-\subsection{High-performance computing and analysis of the MBPT program}
-The aim of this subsection is to discuss in more detail how we can make the computations discussed in connection with equations 
-Eqs.~(\ref{eq:bruteforceMBPT}) and (\ref{eq:smartMBPT}) more efficient using physical constraints, algorithm improvements, and parallel processing. For pedagocical reasons, we will use the MBPT parts of the program due to their simplicity while still containing the important elements of a larger, more complicated calculation. 
-The codes can be found at the github link 
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src/Chapter8-programs/cpp/MBPT/src}.
-We start by discussing the basic structure of these codes by looking at the MBPT2 functions in MBPTfunctions.cpp.
-All of the functions with MBPT2 in their name calculate Eq.~(\ref{eq:bruteforceMBPT}), but each iteration utilizes additional techniques to minimize its runtime. The results in this subsection were obtained with a quad-core 3.4GHz Intel(R) Core(TM) i5-3750 processor and 4GB of memory.
 
-The first function is the most simple way to calculate the sum over $ijab$ with four nested loops. When all hole states are indexed below all particle states, the loops over $ab$ can be restricted above the number of holes while the loops over $ij$ can be restricted under the number of hole states. This function scales as $h^2p^2$, where $h$ is the number of hole states and $p$ is the number of particle states.
 
-\lstset{language=c++}
-\begin{lstlisting}
-  void MBPT2_0(const Input_Parameters &Parameters, const Model_Space &Space)
-  {
-    double energy0;
-    double energy = 0.0;
-    for(int i = 0; i < Space.indhol; ++i){
-      for(int j = 0; j < Space.indhol; ++j){
-        if(i == j){ continue; }
-        for(int a = Space.indhol; a < Space.indtot; ++a){
-	  for(int b = Space.indhol; b < Space.indtot; ++b){
-	    if(a == b){ continue; }
-	    energy0 = V_Minnesota(Space, i, j, a, b);
-	    energy0 *= energy0;
-	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	    energy += energy0;
-	  }
-        }
-      }
-    }
-    energy *= 0.25;
-  }
-\end{lstlisting}
 
-The second function improves upon the first by splitting the top loop over $a$ into different processing elements so the inner loops can be computed simultaneously. At this point it's important to think about which variables will only be used on a certain thread and which will be shared. In this case, each thread has a private variable named ``energy0'' and share the ``energy'' variable, which is subject to the specified reduction operation at the end of each parallel section. In this case, the reduction operation adds contributions from different threads at the end of a parallel region. Naively, this should improve the calculation time by a factor equal to the number of processing threads, which in the case of these calculations is four. However, there is some overhead processing that occurs to split and recombine the threads which slows the overall time. In addition, because each team of threads can only proceed when the slowest member finishes, there is overhead in unbalanced threads and in optimizing their order. Fortunately, the nested loops over $bij$ are all equivalent, so each thread is balanced and declaring ``schedule(static)'' tells the thread scheduler not to spend time optimizing them.
-
-\begin{lstlisting}
-  void MBPT2_1(const Input_Parameters &Parameters, const Model_Space &Space)
-  {
-    double energy = 0.0;
-    double energy0;
-    #pragma omp parallel private(energy0)
-    {
-      #pragma omp for schedule(static) reduction(+:energy)
-      for(int i = 0; i < Space.indhol; ++i){
-        for(int j = 0; j < Space.indhol; ++j){
-	  if(i == j){ continue; }
-	  for(int a = Space.indhol; a < Space.indtot; ++a){
-	    for(int b = Space.indhol; b < Space.indtot; ++b){
-	      if(a == b){ continue; }
-	      energy0 = V_Minnesota(Space, i, j, a, b);
-	      energy0 *= energy0;
-	      energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	      energy += energy0;
-	    }
-	  }
-        }
-      }
-    }
-    energy *= 0.25;
-  }
-\end{lstlisting}
-
-The rest of the functions begin by exploiting the symmetries of the interaction to split the single-particle states into symmetry channels. This essentially removes all of the zeros that break the symmetry. The function that sets up these channels uses an index function that maps the summed quantum numbers of two states onto a unique channel index. Then, because the MBPT term uses only pairs of holes and pairs of particles, the function constructs lists of these indicies within each symmetry channel, ``hhvec'' and ``ppvec''. Now, instead of four nested loops over all holes and particles, the sum is obtained by looping over hhvec and ppvec inside each channel.
-
-\begin{lstlisting}
-  void MBPT2_2(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
-  {
-    double energy = 0.0;
-    double energy0;
-    int nhh, npp, i, j, a, b;
-    for(int chan = 0; chan < Chan.size; ++chan){
-      nhh = Chan.nhh[chan];
-      npp = Chan.npp[chan];
-      if(nhh*npp == 0){ continue; }
-      
-      for(int hh = 0; hh < nhh; ++hh){
-        i = Chan.hhvec[chan][2*hh];
-        j = Chan.hhvec[chan][2*hh + 1];
-        for(int pp = 0; pp < npp; ++pp){
-	  a = Chan.ppvec[chan][2*pp];
-	  b = Chan.ppvec[chan][2*pp + 1];
-	  energy0 = V_Minnesota(Space, i, j, a, b);
-	  energy0 *= energy0;
-	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	  energy += energy0;
-        }
-      }
-    }
-    energy *= 0.25;
-  }
-\end{lstlisting}
-
-The next function is exactly like the last except that it is parallelized like the improvement from the first to the second function. However, there are some obvious differences. Because the sizes of hhvec and ppvec for each channel can be wildly different, splitting the loop over channels into a team of threads could be massively unbalanced. An easy way to balance the threads and use a static scheduler is to parallelize the loops over ppvec inside each channel because each nested loop over ''hhvec'' is equivalent.
-
-\begin{lstlisting}
-  void MBPT2_3(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
-  {
-    double energy = 0.0;
-    double energy0;
-    int nhh, npp, i, j, a, b;
-    for(int chan = 0; chan < Chan.size; ++chan){
-      nhh = Chan.nhh[chan];
-      npp = Chan.npp[chan];
-      if(nhh*npp == 0){ continue; }
-      
-      #pragma omp parallel private(i, j, a, b, energy0)
-      {
-        #pragma omp for schedule(static) reduction(+:energy)
-        for(int hh = 0; hh < nhh; ++hh){
-	  i = Chan.hhvec[chan][2*hh];
-	  j = Chan.hhvec[chan][2*hh + 1];
-	  for(int pp = 0; pp < npp; ++pp){
-	    a = Chan.ppvec[chan][2*pp];
-	    b = Chan.ppvec[chan][2*pp + 1];
-	    energy0 = V_Minnesota(Space, i, j, a, b);
-	    energy0 *= energy0;
-	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	    energy += energy0;
-	  }
-        }
-      }
-    }
-    energy *= 0.25;
-  }
-\end{lstlisting}
-
-The last MBPT2 function uses the ``hhvec'' and ``ppvec'' lists from the channel function to make matrices of the relevant interaction matrix elements and energy denominators. Then it uses a matrix-matrix multiplication function from \cite{blas} to sum the elements together like equation Eq.~(\ref{eq:smartMBPT}). The benefit to this strategy is that this function is optimized to compute the matrix-matrix multiplication faster than an equivalent loop structure. The detriment is the memory required to hold the different matrix elements.
-
-\begin{lstlisting}
-  void MBPT2_4(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
-  {
-    double energy = 0.0;
-    double *V1, *V2, *S1;
-    char N = 'N';
-    double fac0 = 0.0;
-    double fac1 = 1.0;
-    int nhh, npp, i, j, a, b, idx;
-    double energy0;
-    for(int chan = 0; chan < Chan.size; ++chan){
-      nhh = Chan.nhh[chan];
-      npp = Chan.npp[chan];
-      if(nhh*npp == 0){ continue; }
-      
-      V1 = new double[nhh * npp];
-      V2 = new double[npp * nhh];
-      S1 = new double[nhh * nhh];
-      #pragma omp parallel shared(V1, V2) private(i, j, a, b, idx, energy0)
-      {
-        #pragma omp for schedule(static)
-        for(int hh = 0; hh < nhh; ++hh){
-	  i = Chan.hhvec[chan][2*hh];
-	  j = Chan.hhvec[chan][2*hh + 1];
-	  for(int pp = 0; pp < npp; ++pp){
-	    a = Chan.ppvec[chan][2*pp];
-	    b = Chan.ppvec[chan][2*pp + 1];
-	    idx = hh * npp + pp;
-	    energy0 = V_Minnesota(Space, i, j, a, b);
-	    V1[idx] = energy0 / (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	    idx = pp * nhh + hh;
-	    V2[idx] = energy0;
-	  }
-        }
-      } 
-      RM_dgemm(V1, V2, S1, &nhh, &nhh, &npp, &fac1, &fac0, &N, &N);
-      delete V1; delete V2;
-      
-      for(int hh = 0; hh < nhh; ++hh){ energy += S1[nhh*hh + hh]; }
-      delete S1;
-    }
-  }
-\end{lstlisting}
-
-\begin{figure}
-  \includegraphics[width=\linewidth]{Chapter8-figures/MBPT2fig.pdf}
-  \caption{Computation times of the MBPT2 energy correction for different algorithms and the time to construct symmetry channels. These calculations use the Minnesota potential with a density of $\mathrm{\rho=0.08\ fm^{-3}}$ and $\mathrm{14}$ neutrons.}
-  \label{fig:fig5}
-\end{figure}
-
-Figure~(\ref{fig:fig5}) shows the computation times from these MBPT2 functions and the channel setup function for up to 28 major shells with 14 neutrons at a density 0f $0.08 fm^{-3}$. There is a clear improvement from the first to the second function and the third to the fourth, except in very small cases where the overhead from parallelization is overwhelming. It's also clear that there is an order of magnitude by first computing the symmetry channels. However, there are two aspects of these improvements that aren't clear. First, the time it takes to setup the channels begins to overcome the MBPT2 sums for large cases due to its higher scaling. Second, the matrix-matrix multiplication in the fifth function doesn't improve on the previous function because the same loops are needed to fill the matrices in the first place.
-
-To more clearly see the power of matrix-matrix multiplication and why the scaling of the channel function becomes insignificant, we move to the particle-particle term in the MBPT3 energy term which is shown in diagram 4 of fig. 8.2 and in eqn. 8.65. This sum should naively scale as $h^2p^4$ which for larger model spaces dramatically increase the computation time. The first four functions for MBPT3 mirror very closely those for MBPT2 with additional loop(s) for the additional two particle indices.
-
-\begin{lstlisting}
-  void MBPT3_0(const Input_Parameters &Parameters, const Model_Space &Space)
-  {
-    double energy0, energy1;
-    double energy = 0.0;
-    for(int i = 0; i < Space.indhol; ++i){
-      for(int j = 0; j < Space.indhol; ++j){
-        if(i == j){ continue; }
-        for(int a = Space.indhol; a < Space.indtot; ++a){
-	  for(int b = Space.indhol; b < Space.indtot; ++b){
-	    if(a == b){ continue; }
-	    energy0 = V_Minnesota(Space, i, j, a, b);
-	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	    for(int c = Space.indhol; c < Space.indtot; ++c){
-	      for(int d = Space.indhol; d < Space.indtot; ++d){
-	        if(c == d){ continue; }
-	        energy1 = V_Minnesota(Space, a, b, c, d);
-	        energy1 *= V_Minnesota(Space, c, d, i, j);
-	        energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
-	        energy += energy0 * energy1;
-	      }
-	    }
-	  }
-        }
-      }
-    }
-    energy *= 0.125;
-  }
-\end{lstlisting}
-
-\begin{lstlisting}
-  void MBPT3_1(const Input_Parameters &Parameters, const Model_Space &Space)
-  {
-    double energy = 0.0;
-    double energy0, energy1;
-    #pragma omp parallel private(energy0, energy1)
-    {
-      #pragma omp for schedule(static) reduction(+:energy)
-      for(int i = 0; i < Space.indhol; ++i){
-        for(int j = 0; j < Space.indhol; ++j){
-	  if(i == j){ continue; }
-	  for(int a = Space.indhol; a < Space.indtot; ++a){
-	    for(int b = Space.indhol; b < Space.indtot; ++b){
-	      if(a == b){ continue; }
-	      energy0 = V_Minnesota(Space, i, j, a, b);
-	      energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	      for(int c = Space.indhol; c < Space.indtot; ++c){
-	        for(int d = Space.indhol; d < Space.indtot; ++d){
-		  if(c == d){ continue; }
-		  energy1 = V_Minnesota(Space, a, b, c, d);
-		  energy1 *= V_Minnesota(Space, c, d, i, j);
-		  energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
-		  energy += energy0 * energy1;
-	        }
-	      }
-	    }
-	  }
-        }
-      }
-    }
-    energy *= 0.125;
-  }
-\end{lstlisting}
-
-\begin{lstlisting}
-  void MBPT3_2(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
-  {
-    double energy = 0.0;
-    double energy0, energy1;
-    int nhh, npp, i, j, a, b, c, d;
-    for(int chan = 0; chan < Chan.size; ++chan){
-      nhh = Chan.nhh[chan];
-      npp = Chan.npp[chan];
-      if(nhh*npp == 0){ continue; }
-      
-      for(int hh = 0; hh < nhh; ++hh){
-        i = Chan.hhvec[chan][2*hh];
-        j = Chan.hhvec[chan][2*hh + 1];
-        for(int pp0 = 0; pp0 < npp; ++pp0){
-	  a = Chan.ppvec[chan][2*pp0];
-	  b = Chan.ppvec[chan][2*pp0 + 1];
-	  energy0 = V_Minnesota(Space, i, j, a, b);
-	  energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	  for(int pp1 = 0; pp1 < npp; ++pp1){
-	    c = Chan.ppvec[chan][2*pp1];
-	    d = Chan.ppvec[chan][2*pp1 + 1];
-	    energy1 = V_Minnesota(Space, a, b, c, d);
-	    energy1 *= V_Minnesota(Space, c, d, i, j);
-	    energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
-	    energy += energy0 * energy1;
-	  }
-        }
-      }
-    }
-    energy *= 0.125;
-  }
-\end{lstlisting}
-
-\begin{lstlisting}
-  void MBPT3_3(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
-  {
-    double energy = 0.0;
-    double energy0, energy1;
-    int nhh, npp, i, j, a, b, c, d;
-    for(int chan = 0; chan < Chan.size; ++chan){
-      nhh = Chan.nhh[chan];
-      npp = Chan.npp[chan];
-      if(nhh*npp == 0){ continue; }
-      
-      #pragma omp parallel private(i, j, a, b, c, d, energy0, energy1)
-      {
-        #pragma omp for schedule(static) reduction(+:energy)
-        for(int hh = 0; hh < nhh; ++hh){
-	  i = Chan.hhvec[chan][2*hh];
-	  j = Chan.hhvec[chan][2*hh + 1];
-	  for(int pp0 = 0; pp0 < npp; ++pp0){
-	    a = Chan.ppvec[chan][2*pp0];
-	    b = Chan.ppvec[chan][2*pp0 + 1];
-	    energy0 = V_Minnesota(Space, i, j, a, b);
-	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	    for(int pp1 = 0; pp1 < npp; ++pp1){
-	      c = Chan.ppvec[chan][2*pp1];
-	      d = Chan.ppvec[chan][2*pp1 + 1];
-	      energy1 = V_Minnesota(Space, a, b, c, d);
-	      energy1 *= V_Minnesota(Space, c, d, i, j);
-	      energy1 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[c].energy - Space.qnums[d].energy);
-	      energy += energy0 * energy1;
-	    }
-	  }
-        }
-      }
-    }
-    energy *= 0.125;
-  }
-\end{lstlisting}
-
-The last function is slightly different from its MBPT2 counterpart where loops over $ijab$ were needed to fill the matrices. In this function, the matrices are filled by looping over $ijab$ and $abcd$, respectively, instead of $ijabcd$. Then, the matrix-matrix multiplications take care of the sum over $ab$ between the two structures into an intermediate matrix. This essentially allows the function to scale as the dominant loop, $p^4$, naively improving the computation time by a factor of $h^2$.
-
-\begin{lstlisting}
-  void MBPT3_4(const Input_Parameters &Parameters, const Model_Space &Space, const Channels &Chan)
-  {
-    double energy = 0.0;
-    double *V1, *S1, *V2, *S2;
-    char N = 'N';
-    char T = 'T';
-    double fac0 = 0.0;
-    double fac1 = 1.0;
-    int nhh, npp, i, j, a, b, c, d, idx;
-    double energy0;
-    for(int chan = 0; chan < Chan.size; ++chan){
-      nhh = Chan.nhh[chan];
-      npp = Chan.npp[chan];
-      if(nhh*npp == 0){ continue; }
-      
-      V1 = new double[nhh * npp];
-      S1 = new double[nhh * npp];
-      V2 = new double[npp * npp];
-      S2 = new double[nhh * nhh];
-      #pragma omp parallel shared(V1, V2) private(i, j, a, b, c, d, idx, energy0)
-      {
-        #pragma omp for schedule(static)
-        for(int pp0 = 0; pp0 < npp; ++pp0){
-	  a = Chan.ppvec[chan][2*pp0];
-	  b = Chan.ppvec[chan][2*pp0 + 1];
-	  for(int hh = 0; hh < nhh; ++hh){
-	    i = Chan.hhvec[chan][2*hh];
-	    j = Chan.hhvec[chan][2*hh + 1];
-	    idx = hh * npp + pp0;
-	    energy0 = V_Minnesota(Space, i, j, a, b);
-	    energy0 /= (Space.qnums[i].energy + Space.qnums[j].energy - Space.qnums[a].energy - Space.qnums[b].energy);
-	    V1[idx] = energy0;
-	  }
-	  for(int pp1 = 0; pp1 < npp; ++pp1){
-	    c = Chan.ppvec[chan][2*pp1];
-	    d = Chan.ppvec[chan][2*pp1 + 1];
-	    idx = pp0 * npp + pp1;
-	    V2[idx] = V_Minnesota(Space, a, b, c, d);
-	  }
-        }
-      }
-      
-      RM_dgemm(V1, V2, S1, &nhh, &npp, &npp, &fac1, &fac0, &N, &N);
-      RMT_dgemm(S1, V1, S2, &nhh, &nhh, &npp, &fac1, &fac0, &N, &T);
-      delete V1; delete V2; delete S1;
-      for(int hh = 0; hh < nhh; ++hh){
-        energy += S2[nhh*hh + hh];
-      }
-      delete S2;
-    }
-    energy *= 0.125;
-  }
-\end{lstlisting}
-
-\begin{figure}
-  \includegraphics[width=\linewidth]{Chapter8-figures/MBPT3fig.pdf}
-  \caption{Computation times of the MBPT3 particle-particle energy correction for different algorithms and the time to construct symmetry channels. These calculations use the Minnesota potential with a density of $\mathrm{\rho=0.08\ fm^{-3}}$ and $\mathrm{14}$ neutrons. The dotted extensions for functions MBPT3$_0$ and MBPT3$_1$ are extrapolations.}
-  \label{fig:fig6}
-\end{figure}
-
-Figure \ref{fig:fig6} shows the run times from the MBPT3 functions and
-the channel setup function up to 28 major shells with 14 neutrons at a
-density 0f $0.08 fm^{-3}$. The obvious difference between MBPT2 and
-MBPT3 is the massive increase in computation time. For example, the
-largest case with the first function would take approximately eight
-months to compute. Because of this, the first two functions had to be
-extrapolated for the larger cases. Again, there is a clear improvement
-from the first to the second function, from the third to the fourth,
-and by first computing the symmetry channels. In this case, however,
-the scaling of the channel function is dwarfed by the $h^2p^4$ scaling
-of the sum. In addition, the optimized matrix-matrix multiplication
-improves the computation time by another order of magnitude by using
-an intermediate matrix. Because all many-body methods include similar
-sums to MBPT and also utilize interactions that benefit from
-exploiting its symmetries, all of these strategies can be used to make
-computation times managable for many methods.
 
 \section{Conclusions}
 In this chapter we have presented many of the basic ingredients that
@@ -4683,7 +4298,7 @@ in Monte Carlo calculations.
   \langle \mathbf{k}_p \mathbf{k}_q \vert V_{\alpha}\vert
   \mathbf{k}_r\mathbf{k}_s\rangle=\frac{V_{\alpha}}{L^{3}}\left(\frac{\pi}{\alpha}\right)^{3/2}\exp{\frac{-q^{2}}{4\alpha}}\delta_{\vec{k}_{p}+\vec{k}_{q},\vec{k}_{r}+\vec{k}_{s}}.
   \]
-  Write thereafter a function which sets up the full anty-symmetrized
+  Write thereafter a function which sets up the full anti-symmetrized
   matrix elements for the Minnesota potential using the parameters
   listed in Table \ref{tab:minnesotatab}.
   \end{prob}
@@ -4758,7 +4373,7 @@ in Monte Carlo calculations.
   various angles).
 
   Finally, write a program which computes the above energy for pure
-  nuetron matter using the Minnesota potential.
+  neutron matter using the Minnesota potential.
   \end{prob}
 
   \begin{prob}\label{problem:hamiltoniansetup}
@@ -5066,8 +4681,7 @@ Our single-particle space consists of only the four lowest
   define the single-particle basis and the Hamiltonian. Your functions
   that solve the coupled cluster equations will then just need to set
   up variables which point to interaction elements and single-particle
-  states with their pertinent quantum numbers. Use for example the
-  setup discussed in the FCI lectures for the pairing model.
+  states with their pertinent quantum numbers. 
 
   \begin{enumerate}
 
@@ -5090,12 +4704,7 @@ Our single-particle space consists of only the four lowest
   \item[d)] Compare your results with those from the exact
     diagonalization with and without the $4p4h$ excitation. Compare
     also your results to perturbation theory at different orders, in
-    particular to second order. Discuss your results.  If other
-    students are solving the same problem using Green's function
-    theory, you can also compare your results with those obtained from
-    Green's function theory. The aim is to finalize this part during
-    the first week. The codes you will develop can be used as a
-    starting point for the second part of the project.
+    particular to second order. Discuss your results.  
   \end{enumerate}
   \end{prob}
 
@@ -5111,7 +4720,7 @@ Replace the Minnesota interaction model with realistic models for nuclear forces
 replace the Minnesota interaction with the low-order (LO) contribution which includes a contact term and a one-pion exchange
 term only. The expressions are discussed in section  \ref{subsec:forcemodels} and Eq.~(\ref{eq:eq_1PEci}). Reference \cite{ekstromPRX} contains a
 detailed compilation of all terms up to order NNLO, with tabulated values for all constants. 
-When adding realistic interaction models we recommend that you use the many-body perturbation theory codes to second order in the interaction, see the code link at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/cpp/MBPT2/src/}. 
+When adding realistic interaction models we recommend that you use the many-body perturbation theory codes to second order in the interaction, see the code link at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/cpp/MBPT2/src/}. 
 \end{prob}
 
   \section{Solutions to selected exercises}
@@ -5256,7 +4865,7 @@ When adding realistic interaction models we recommend that you use the many-body
   \begin{sol}{problem:spbasissetup}
   The following python code sets up the quantum numbers for both
   infinite nuclear matter and neutron matter employing a cutoff in
-  the value of $n$. The full code can be found at  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/Chapter8-programs/python/spstatescc.py}.
+  the value of $n$. The full code can be found at  \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter8-programs/python/spstatescc.py}.
   \begin{lstlisting}
 from numpy import *
 
@@ -5444,7 +5053,29 @@ for n in range(nshell):
   many-body theory.  Computational resources were provided by
   Michigan State University and the Research Council of Norway via the
   Notur project (Supercomputing grant NN2977K).  This work was
-  supported by NSF Grant No.~PHY-1404159 (Michigan State University).
+  supported by NSF Grant No.~PHY-1404159 (Michigan State University), 
+  by the Oce of Nuclear Physics, U.S. Department of Energy,
+under grants DE-FG02-96ER40963, DE-SC0008499 (NUCLEI SciDAC collaboration), and
+the Field Work Proposal ERKBP57 at Oak Ridge National Laboratory (ORNL) and the Research Council of Norway under contract ISP-Fysikk/216699.
+
+This research used also resources of the Oak Ridge Leadership
+Computing Facility located at ORNL, which is supported
+by the Office of Science of the Department of Energy under
+Contract No. DE-AC05-00OR22725.
+
+This manuscript has been authored by UT-Battelle, LLC
+under Contract No. DE-AC05-00OR22725 with the U.S.
+Department of Energy. The U.S. Government retains a
+nonexclusive, paid-up, irrevocable, world-wide license to
+publish or reproduce the published form of this manuscript,
+or allow others to do so, for U.S. Government purposes.
+The views and conclusions contained herein are those of
+the authors and should not be interpreted as necessarily
+representing the official policies or endorsements, either
+expressed or implied, of the U.S. Government or any U.S.
+Government agency. The Department of Energy will
+provide public access to these results of federally sponsored
+research in accordance with the DOE Public Access Plan.
   \end{acknowledgement}
 
 

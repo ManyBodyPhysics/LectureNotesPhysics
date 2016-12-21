@@ -1,6 +1,6 @@
 \title{Motivation and overarching aims}
 \author{Morten Hjorth-Jensen, Maria Paola Lombardo, and Ubirajara van Kolck}
-\institute{Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan, USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}, \and Maria Paola Lombardo \at INFN, Laboratori Nazionali di Frascati, Frascati, Italy, \email{mariapaola.lombardo@lnf.infn.it}, \and Ubirajara van Kolck \at Department of Physics, University of Arizona, Tucson, Arizona, USA and Institut de Physique Nucleaire, Orsay, France, \email{vankolck@ipno.in2p3.fr}}
+\institute{Morten Hjorth-Jensen  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan, USA and Department of Physics, University of Oslo, Oslo, Norway, \email{hjensen@msu.edu}, \and Maria Paola Lombardo \at INFN, Laboratori Nazionali di Frascati, Frascati, Italy, \email{mariapaola.lombardo@lnf.infn.it}, \and Ubirajara van Kolck \at Institut de Physique Nucleaire, Orsay, France and Department of Physics, University of Arizona, Tucson, Arizona, USA, \email{vankolck@ipno.in2p3.fr}}
 \maketitle
 
 
@@ -103,41 +103,74 @@ for a better understanding of the links between QCD and effective
 field theories with say nucleons and pions only. The latter provide
 the necessary degrees of freedom and inputs for defining the nuclear
 Hamiltonians that enter the solution of the various nuclear many-body
-methods discussed in chapters 7 through 11. Chapter 4 by Hans-Werner Hammer and Sebastian K\"onig
-presents the general theoretical aspects of nuclear effective field
-theories. In the two subsequent chapters by Amy Nicholson and Dean
-Lee, the authors apply lattice techniques to nuclear effective field
-theories involving nucleons and pions as the basic degrees of freedom. These
-authors give a detailed exposure, with exercises and numerical codes,
-of lattice techniques applied to effective field theory, explaining
-the theory and algorithms relevant to lattice simulations of nuclear
-few- and many-body systems.  
+methods discussed in chapters 7 through 11. Chapter 4 by Hans-Werner
+Hammer and Sebastian K\"onig presents the general theoretical aspects
+of nuclear effective field theories. In the two subsequent chapters by
+Amy Nicholson and Dean Lee, the authors apply lattice techniques to
+nuclear effective field theories involving nucleons and pions as the
+basic degrees of freedom. These authors give a detailed exposure, with
+exercises and numerical codes, of lattice techniques applied to
+effective field theory, explaining the theory and algorithms relevant
+to lattice simulations of nuclear few- and many-body systems.  Chapter
+7 by Giuseppina Orlandini gives an overview of several {\it ab initio}
+approaches currently used to study nuclear structure properties and
+reactions. Chapter 8 by Justin Lietz, Sam Novario {\em et al}
+introduces a computational approach to infinite nuclear matter
+employing Hartree-Fock theory, many-body perturbation theory and
+coupled cluster theory, with an extensive discussion of computational
+topics. Many of these basic ingredients are used in the next three
+chapters. Chapter 9 by Francesco Pederiva, Alessandro Roggero and
+Kevin Schmidt reviews Quantum Monte Carlo methods for solving the
+many-body Schr\"odinger equation for an arbitrary Hamiltonian ending
+the discussion with the newly developed Configuration Interaction
+Monte Carlo algorithm. Comparisons are made  with coupled cluster theory for
+the equation of state of infinite neutron star matter from chapter 8. Chapter 10 by
+Heiko Hergert {\em et al} presents applications of the In-Medium
+Similaritay Renormalization Group method to studies of infinite nuclear
+matter. Finally chapter 11, by Carlo Barbieri and Arianna Carbone,
+presents the fundamental techniques and working equations of many-body
+Green's function theory for calculating ground state properties and
+the spectral strength, with applications to infinite neutron star
+matter and comparisons with the results from chapters 8-10.
 
-The first five chapters are thus meant to
-expose the reader to the most recent developments in our understanding
-of the strong interaction, linking QCD with effective field
-theories. With the pertinent effective degrees of freedom we can in
-turn define various effective non-relativistic Hamiltonians and embark
-on our studies of widely used methods for solving the non-relativistic
-Schr\"odinger equation. Spanning from Monte Carlo methods to various
-wave function based methods like full configuration interaction
-theory, coupled cluster theory, similarity renormalization group
-approaches and Green's function theory, chapters 7 through 11 aim at
-exposing these methods to the reader, with applications to infinite neutron star
-matter. The latter is studied with a simplified model for the nuclear
-forces. However, the formalism and codes we present can easily be
-extended to include interaction models based on effective field
-theories.  The various chapters propose exercises meant to deepen the
-exposed theory as well as actual numerical software.  The latter is
-meant to enable the reader to build upon these and develop her/his own
-insights about these methods, as well as using these codes for
-developing her/his own programs for tackling complicated many-body
-problems.  Proper benchmarks for the various programs are also
-provided, allowing thereby potential readers and users to check the
-correctness, installation and compilation of the various programs. All
-codes are properly linked in the various chapters and available via
-the github
-link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics}.
+
+The first five chapters are thus meant to expose the reader to the
+most recent developments in our understanding of the strong
+interaction, linking QCD with effective field theories. With the
+pertinent effective degrees of freedom we can in turn define various
+effective non-relativistic Hamiltonians and embark on our studies of
+widely used methods for solving the non-relativistic Schr\"odinger
+equation. Spanning from Monte Carlo methods to various wave function
+based methods like full configuration interaction theory, coupled
+cluster theory, similarity renormalization group approaches and
+Green's function theory, chapters 7 through 11 aim at exposing these
+methods to the reader, with applications to infinite nuclear matter in
+chapters 8 through 11. Studies of infinite matter play a central role
+in nuclear physics. The determination of for example the equation of
+state (EoS), which is intimately linked with our capability to solve
+the nuclear many-body problem, has important consequences for neutron
+star properties like the mass range, the mass-radius relationship, the
+thickness of the crust and the rate by which a neutron star cools down
+over time. The EoS is also an important ingredient in studies of the
+energy release in supernova explosions. Infinite matter offers also
+several technical simplifications to the many-body problem compared
+with finite nuclei, as discussed in chapter 8-11. In these chapters we
+provide benchmark calculations and compare different many-body methods
+using a simplified model for the nuclear forces. However, the
+formalism and codes we present can easily be extended to include
+interaction models based on effective field theories, as well as other
+systems, spanning from the homogeneous electron gas in two and three
+dimensions to finite systems like nuclei.  The various chapters
+propose exercises meant to deepen the exposed theoretical concepts.
+Actual numerical software allows the reader to build upon the
+theoretical concepts and develop her/his own insights about these
+methods. These codes can serve as a starting point for developing
+one's own programs for tackling complicated many-body problems.
+Proper benchmarks for the various programs are also provided, allowing
+thereby potential readers and users to check the correctness,
+installation and compilation of the various programs. All codes are
+properly linked and available via the github
+link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs}.
 
 
 \begin{acknowledgement}
@@ -146,6 +179,17 @@ and Related Areas (ECT*) in Trento, Italy, from April 13 to May 22, 2015, the Nu
 The support for organizing these series of lectures from the ECT*, GANIL and the University of Basse Normadie at Caen, North Carolina State University, Los Alamos National Laboratory and Michigan State University is greatly acknowledged.   Some of the lectures (chapters 8 and 10) are co-authored by graduate students (from Michigan State University) who  attended the abovementioned Nuclear Talent courses.
 
 
-The work of MHJ is supported by NSF Grant No.~PHY-1404159 (Michigan State University). 
+The work of MHJ is supported by NSF Grant No.~PHY-1404159 (Michigan
+State University) and the Research Council of Norway under contract
+ISP-Fysikk/216699.
+
+The work of UvK is supported in part by the European Union Research
+and Innovation program Horizon 2020 under grant number 654002 and by
+the DOE, Office of Science, Office of Nuclear Physics, under award
+number DE-FG02-04ER41338.
+
 \end{acknowledgement}
+
+
+
 

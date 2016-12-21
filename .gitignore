@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+doc/src/lnp.fdb_latexmk
+doc/src/lnp.fls
+doc/src/lnp.log
+doc/src/lnp.out
+doc/src/lnp.pdf
+doc/src/lnp.synctex.gz
+doc/src/lnp.toc
+doc/src/chapter11.aux
+doc/src/chapter8.aux
+doc/src/chapter9.aux
+chapter10.aux
+doc/src/lnp.idx
+doc/src/lnp.ilg
+doc/src/lnp.ind
+doc/src/Chapter10-programs/f95/a.out
+doc/src/Chapter10-programs/f95/constants.mod
+doc/src/Chapter10-programs/f95/inifile.mod
+doc/src/Chapter10-programs/f95/run_test.dat
+srg_toy_flow-eps-converted-to.pdf
+doc/src/chapter10.fdb_latexmk
+doc/src/chapter10.fls
+doc/src/chapter10.log
+doc/src/Chapter10-figures/srg_evolution_energy.old.pdf
+doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler.agr
+doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler_modified.agr
+srg_diag.py
+doc/src/Chapter10-figures/H_IMSRG_unlabeled-eps-converted-to.pdf
+doc/src/Chapter10-figures/H_init_unlabeled-eps-converted-to.pdf
+=======
 # compiled files:
 *.o
 *.so
@@ -33,3 +63,6 @@ temp*
 Trash
 # doconce:
 .*_html_file_collection
+
+*.exe
+>>>>>>> master

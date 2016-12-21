@@ -1,0 +1,179 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter5.aux
+The style file: spphys.bst
+Database file #1: lnp.bib
+I was expecting a `,' or a `}'---line 3555 of file lnp.bib
+ :   
+ :   archiveprefix            = {arXiv},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 3798 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3807 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3864 of file lnp.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4343 of file lnp.bib
+ :   
+ :   Address = {New Jersey, USA}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4582 of file lnp.bib
+ :     
+ :     Address = {Cambridge, USA},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 7207 of file lnp.bib
+ : 
+ : @book{TinkhamBook,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 8624 of file lnp.bib
+ : @article{Lee:2008fa
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8638 of file lnp.bib
+ : @article{Braaten:2004rn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8654 of file lnp.bib
+ : @article{Borasoy:2006qn
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8734 of file lnp.bib
+ : @article{Lahde:2013uqa
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8749 of file lnp.bib
+ : @article{Kaplan:1996xu
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8766 of file lnp.bib
+ : @article{Kaplan:1998tg
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8782 of file lnp.bib
+ : @article{Kaplan:1998we
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8797 of file lnp.bib
+ : @article{Bedaque:1998kg
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8813 of file lnp.bib
+ : @article{Bedaque:1998km
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8828 of file lnp.bib
+ : @article{Fleming:1999ee
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8844 of file lnp.bib
+ : @article{Epelbaum:2008ga
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8860 of file lnp.bib
+ : @article{Machleidt:2011zz
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8902 of file lnp.bib
+ : @article{Epelbaum:2013paa
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8919 of file lnp.bib
+ : @article{Epelbaum:2009pd
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8951 of file lnp.bib
+ : @article{Epelbaum:2011md
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10194 of file lnp.bib
+ : @article{Luscher:1986pf
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10244 of file lnp.bib
+ : @article{Weinberg:1990rz
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10256 of file lnp.bib
+ : @article{Weinberg:1991um
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10394 of file lnp.bib
+ : @article{Beane:2003da
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10568 of file lnp.bib
+ : @article{Epelbaum:2012qn
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10583 of file lnp.bib
+ : @article{Epelbaum:2012iu
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 10702 of file lnp.bib
+ : @inproceedings{Kaplan:2005es
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Berkowitz:2015eaa
+Warning--empty journal in Kurth:2015cvl
+Warning--empty booktitle in Epelbaum:2010nr
+Warning--empty journal in Nicholson:2012xt
+Warning--empty journal in Briceno:2012yi
+Warning--empty journal in Briceno:2015tza
+Warning--empty journal in Wilson:2014cna
+Warning--empty journal in Wilson:2015dqa
+Warning--empty journal in Bolton:2015psa
+Warning--empty journal in Briceno:2016kkp
+Warning--empty journal in Detmold:2015qwf
+Warning--empty journal in Lahde:2013kma
+You've used 158 entries,
+            2812 wiz_defined-function locations,
+            1498 strings with 30560 characters,
+and the built_in function-call counts, 54619 in all, are:
+= -- 3164
+> -- 1892
+< -- 0
++ -- 736
+- -- 578
+* -- 3309
+:= -- 6396
+add.period$ -- 6
+call.type$ -- 158
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 170
+duplicate$ -- 5938
+empty$ -- 5604
+format.name$ -- 711
+if$ -- 12325
+int.to.chr$ -- 0
+int.to.str$ -- 158
+missing$ -- 1657
+newline$ -- 488
+num.names$ -- 158
+pop$ -- 2545
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1532
+stack$ -- 0
+substring$ -- 1972
+swap$ -- 3396
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 12
+while$ -- 294
+width$ -- 161
+write$ -- 1251
+(There were 29 error messages)
