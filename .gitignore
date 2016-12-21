@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 doc/src/lnp.fdb_latexmk
 doc/src/lnp.fls
 doc/src/lnp.log
@@ -26,3 +27,42 @@ doc/src/Chapter10-figures/Triton_N2LO_by_KHebeler_modified.agr
 srg_diag.py
 doc/src/Chapter10-figures/H_IMSRG_unlabeled-eps-converted-to.pdf
 doc/src/Chapter10-figures/H_init_unlabeled-eps-converted-to.pdf
+=======
+# compiled files:
+*.o
+*.so
+*.a
+# temporary files:
+*.pyc
+*.bak
+*.swp
+*~
+.*~
+*.old
+tmp*
+temp*
+.#*
+\#*
+# tex files:
+*.log
+*.dvi
+*.aux
+*.blg
+*.idx
+*.nav
+*.out
+*.toc
+*.snm
+*.vrb
+*.bbl
+# eclipse files:
+*.cproject
+*.project
+# misc:
+.DS_Store
+Trash
+# doconce:
+.*_html_file_collection
+
+*.exe
+>>>>>>> master

@@ -91,7 +91,7 @@ The quark mass matrix in the flavor space ($u, d, s, \cdots$) is denoted by $m$ 
 D_{\mu}^{\alpha \beta} = \partial_{\mu} \delta^{\alpha \beta} + ig A_{\mu}^{\alpha \beta}, 
 \eeq
 with  $x_{\mu}= (\tau, \mathbf{x})$,  $\partial_{\mu} = (\partial_{\tau}, \nabla )$ and the $3 \times 3$ matrix field, $A_{\mu} = A_{\mu}^b t^b$. 
-The explicit form of the color SU(3) generators $t^{a=1, \cdots, 8}$ is given in the Appendix [SU$(N)$ algebra]. 
+The explicit form of the color SU(3) generators $t^{b=1, \cdots, 8}$ is given in the Appendix [SU$(N)$ algebra]. 
 The field strength tensor is $G_{\mu \nu}=G_{\mu \nu}^b t^b$ with
  $G_{\mu \nu}^b= \partial_{\mu}A_{\nu}^b - \partial_{\nu} A_{\mu}^b -g f_{bcd} A_{\mu}^c A_{\nu}^d$.
  The arbitrary external fields (such as the external source of the quarks and gluons,
@@ -169,7 +169,7 @@ U_P(x,y;A) & = &
  \eeq
  where   
  $\lambda_{\mu} = dz_{\mu}/ds$. The path ordered symbol ${\rm P}$ is 
-  necessary because $A_{\mu} = A_{\mu}^a t^a$ is a 
+  necessary because $A_{\mu} = A_{\mu}^b t^b$ is a 
   matrix in the color space.   
  
   The Wilson line has the following  properties
@@ -941,20 +941,15 @@ in each spatial (temporal) direction. Then
  for a moderate lattice size  $N_{\rm s} = N_{\tau} =32$ reads
 \beq
 \label{eq:5.lattice-size}
- ( N_{\rm s}^3 \times N_{\tau} \times 4 )_{\rm links} \times 8_{\rm color} 
- \sim 3 \times 10^7 .
- \eeq
- This is 
- hopelessly a large number  
-  for standard methods of numerical integration。
-   In this case,  the  Monte Carlo (MC) integration,
-   which is a
-  statistical way to evaluate the integral, plays a 
-   powerful role. For rapidly varying integrand,
-  the MC integration should be supplemented by the 
- importance sampling 
-   to have better accuracy, in which the rapidly varying
-   part is sampled more than the slowly varying part.
+ ( N_{\rm s}^3 \times N_{\tau} \times 4 )_{\rm links} \times 8_{\rm
+ color} \sim 3 \times 10^7 .  
+\eeq 
+This is hopelessly a large number for standard methods of numerical
+integration.  In this case, the Monte Carlo (MC) integration, which is
+a statistical way to evaluate the integral, plays a powerful role. For
+rapidly varying integrand, the MC integration should be supplemented
+by the importance sampling to have better accuracy, in which the
+rapidly varying part is sampled more than the slowly varying part.
      
      
  %==========================
@@ -1164,21 +1159,23 @@ P_{\rm H}(\Phi \rightarrow \Phi')  = \delta (\Phi' - \Phi(s)),
 \eeq
  on the phase space trajectories, $\Phi = \Phi(0) \rightarrow \Phi(s)$. 
  
-If we do not introduce the MD before the Metropolis test $P_{\rm A}$, the procedure is essentially the MCMC
-with the Metropolis test.  It becomes, however,
- very slow for non-local action such as Eq.(\ref{eq:Seff})
-where $S_{\rm G}(U)$ is local in spacetime while ${\rm Ln Det} F(U)$ is non-local.
-The MD is a nice way to evolve the whole variables on the lattice at once.
- The  computer time $s$ needs to be discretized with a step size $\varepsilon$,  which brings 
- inevitable numerical error in MD. However,   the Metropolis test in Step 4 eliminates such error so that
-no extrapolation to $\epsilon$ is required in HMC.
+If we do not introduce the MD before the Metropolis test $P_{\rm A}$,
+the procedure is essentially the MCMC with the Metropolis test.  It
+becomes, however, very slow for non-local action such as
+Eq.(\ref{eq:Seff}) where $S_{\rm G}(U)$ is local in spacetime while
+${\rm Ln Det} F(U)$ is non-local.  The MD is a nice way to evolve the
+whole variables on the lattice at once.  The computer time $s$ needs
+to be discretized with a step size $\varepsilon$, which brings
+inevitable numerical error in MD. However, the Metropolis test in Step
+4 eliminates such error so that no extrapolation to $\epsilon=0$ is
+required in HMC.
 
- There are numerical algorithms in MD  to satisfy the reversibility and preserve the phase space area 
- exactly for finite $\varepsilon$.   The
-  {\it leapfrog integrator} is one of such algorithms widely used in LQCD 
-  (see Appendix [Leapfrog integrator in molecular dynamics]).
- Since this  conserves the Hamiltonian with $0(\varepsilon^2$) accuracy, the acceptance rate
- in Step 4 can be kept high.
+ There are numerical algorithms in MD to satisfy the reversibility and
+ preserve the phase space area exactly for finite $\varepsilon$.  The
+ {\it leapfrog integrator} is one of such algorithms widely used in
+ LQCD (see Appendix [Leapfrog integrator in molecular dynamics]).
+ Since this conserves the Hamiltonian with $0(\varepsilon^2$)
+ accuracy, the acceptance rate in Step 4 can be kept high.
 
 
  In LQCD simulations, we need to treat the unitary matrices $U_{\mu}(n)$ as dynamical variables, i.e.
@@ -1319,56 +1316,61 @@ $[V(R)-V(R_0)]\times R_0$
 \subsection{Masses of light hadrons}
 %============================
 
- Meson masses and baryon masses can be 
- calculated with high accuracy by LQCD simulations
-  with dynamical quarks.  The starting point is the hadronic 
-  correlation functions $C_{\rm H=M,B} (n,n')$ in Eqs.(\ref{eq:correlation-M},\ref{eq:correlation-B}) 
-  integrated over the spatial coordinates, $\mathbf{n}$ and $\mathbf{n}'$,   
- \beq
- \label{eq:5.D-tau}
- C_{\rm H}(\tau) = \sum_{\mathbf{n}, \mathbf{n}'} C_{\rm H} (n,n') 
- \xrightarrow[\tau \rightarrow \infty]
-   \ |Z_{\rm H}|^2 {\rm e}^{-M_{\rm H} \tau}   ,
- \eeq   
-where $\tau= (n_4-n_4')a$ is the temporal distance between the source at $n'$ and the sink at $n$,
- and  $M_{\rm H}$ ($Z_{\rm H}$) corresponds to the mass (the pole residue) 
- of a lightest bound state in each channel.
- If   the temporal extent of the 
-  lattice is infinite, one can extract the 
-   hadron mass from the formula,
-  $M_{\rm H}= -(1/\tau) \ln C_{\rm H}(\tau)|_{\tau \rightarrow \infty} $.
-  In practice, the {\it effective mass}  defined below is more useful,
- \beq
-aM_{\rm H}^{\rm eff}(\tau) = \ln \left( \frac{C_{\rm H}(\tau)}{C_{\rm H}(\tau+a) } \right) .
+ Meson masses and baryon masses can be calculated with high accuracy
+ by LQCD simulations with dynamical quarks.  The starting point is the
+ hadronic correlation functions $C_{\rm H=M,B} (n,n')$ in
+ Eqs.(\ref{eq:correlation-M},\ref{eq:correlation-B}) integrated over
+ the spatial coordinates, $\mathbf{n}$ and
+ $\mathbf{n}'$, 
+\beq \label{eq:5.D-tau} C_{\rm H}(\tau)
+ = \sum_{\mathbf{n}, \mathbf{n}'} C_{\rm H}
+ (n,n') \xrightarrow[\tau \rightarrow \infty] \ |Z_{\rm H}|^2 {\rm
+ e}^{-M_{\rm H} \tau} , 
+\eeq 
+where $\tau= (n_4-n_4')a$ is the temporal
+ distance between the source at $n'$ and the sink at $n$, and $M_{\rm
+ H}$ ($Z_{\rm H}$) corresponds to the mass (the pole residue) of a
+ lightest bound state in each channel.  If the temporal extent of the
+ lattice is infinite, one can extract the hadron mass from the
+ formula, $M_{\rm H}= -(1/\tau) \ln C_{\rm
+ H}(\tau)|_{\tau \rightarrow \infty} $.  In practice, the {\it
+ effective mass} defined below is more useful, \beq aM_{\rm H}^{\rm
+ eff}(\tau) = \ln \left( \frac{C_{\rm H}(\tau)}{C_{\rm H}(\tau+a)
+ } \right) .
 \eeq
-The asymptotic plateau of the effective mass at large $\tau$ corresponds to the hadron mass.
-     In actual simulations,  the temporal extent is limited ($0 \le \tau/a \le N_{\tau}$), so that 
-    the exponential damping 
-    of  Eq.(\ref{eq:5.D-tau}) is replaced by
-     $C_{\rm H} \rightarrow \exp[-M_{\rm H} \tau ] \pm  \exp [-M_{\rm H} (N_{\tau} a - \tau)]$
-    where $+ (-)$ for the periodic (anti-periodic) boundary condition.
+The asymptotic plateau of the effective mass at large $\tau$
+     corresponds to the hadron mass.  In actual simulations, the
+     temporal extent is limited ($0 \le \tau/a \le N_{\tau}$), so that
+     the exponential damping of Eq.(\ref{eq:5.D-tau}) is replaced by
+     $C_{\rm H} \rightarrow \exp[-M_{\rm H} \tau ] \pm \exp [-M_{\rm
+     H} (N_{\tau} a - \tau)]$ where $+ (-)$ for the periodic
+     (anti-periodic) boundary condition.
      
- Shown in the left panel of Fig.\ref{fig:hadron-mass} is the 
- dimensionless effective masses  ($a M_{\rm H}^{\rm eff}$)  against
- $\tau/a=(n_4-n_4')$ \cite{Durr:2008zz}.
-  Data points are the effective masses for the pion $(\pi)$, the kaon $(K)$, the nucleon ($N$), the cascade baryon ($\Xi$) and 
-  the omega baryon $(\Omega$)  calculated on the lattice with $a \simeq 0.085$ fm and 
-  the pion mass $M_{\pi} \simeq 190$ MeV.  Reasonable plateau above $\tau/a > 9$ can
-  be seen within the error bars.
+ Shown in the left panel of Fig.\ref{fig:hadron-mass} is the
+ dimensionless effective masses ($a M_{\rm H}^{\rm eff}$) against
+ $\tau/a=(n_4-n_4')$ \cite{Durr:2008zz}.  Data points are the
+ effective masses for the pion $(\pi)$, the kaon $(K)$, the nucleon
+ ($N$), the cascade baryon ($\Xi$) and the omega baryon $(\Omega$)
+ calculated on the lattice with $a \simeq 0.085$ fm and the pion mass
+ $M_{\pi} \simeq 190$ MeV.  Reasonable plateau above $\tau/a > 9$ can
+ be seen within the error bars.
  
- Shown in the right panel of Fig.\ref{fig:hadron-mass} is the 
- $M_{\pi}^2$-dependence of the $N$ and $\Omega$ masses for three different values of 
-  $a$ \cite{Durr:2008zz}.
- The crosses are the values extrapolated to the continuum limit and to the physical pion mass.
- The $N$ and $\Omega$ masses predicted from LQCD and corresponding experimental numbers
- are 
+ Shown in the right panel of Fig.\ref{fig:hadron-mass} is the
+ $M_{\pi}^2$-dependence of the $N$ and $\Omega$ masses for three
+ different values of $a$ \cite{Durr:2008zz}.  The crosses are the
+ values extrapolated to the continuum limit and to the physical pion
+ mass.  The $N$ and $\Omega$ masses predicted from LQCD and
+ corresponding experimental numbers are
 \beq
 \label{eq:mass-LQCD}
-M_N^{\rm LQCD} &=& 0.936(25)(22)  \ {\rm GeV}, \ \ \ M_\Omega^{\rm LQCD} =1.676(20)(15)\ {\rm  GeV}, \\
-M_N^{\rm exp.} &=& 0.939 \ {\rm  GeV}, \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \  M_\Omega^{\rm exp.} =1.672 \ {\rm  GeV}.
+M_N^{\rm LQCD} &=& 0.936(25)(22) \ {\rm GeV}, \ \ \ M_\Omega^{\rm
+LQCD} =1.676(20)(15)\ {\rm GeV}, \\ M_N^{\rm exp.} &=& 0.939 \ {\rm
+GeV}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M_\Omega^{\rm exp.} =1.672 \
+{\rm GeV}.
 \eeq
-  Note that the numbers in the first (second) parenthesis  in Eq.(\ref{eq:mass-LQCD}) 
- represent the statistical (systematic) errors on the last digits.
+  Note that the numbers in the first (second) parenthesis in
+ Eq.(\ref{eq:mass-LQCD}) represent the statistical (systematic) errors
+ on the last digits.
 
 % FIG %%%%%%%%%%%%%%%%%%%%%%%%%%   
 \begin{figure}[t]
@@ -1387,14 +1389,14 @@ The figures are taken from \cite{Durr:2008zz}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Shown in Fig.\ref{fig:pn-mass} are the high precision numerical results of the 
- hadron mass splittings obtained by the 
- QCD+QED  lattice simulations with dynamical  $u,d,s,c$ quarks \cite{Borsanyi:2014jba}.
- The horizontal lines are the
-experimental values and the grey shaded regions represent the experimental errors.
-Red dots are the lattice results with their uncertainties denoted by the vertical error bars.
-The neutron-proton mass differences from numerical simulations 
-and the corresponding experimental numbers are
+Shown in Fig.\ref{fig:pn-mass} are the high precision numerical
+ results of the hadron mass splittings obtained by the QCD+QED lattice
+ simulations with dynamical $u,d,s,c$ quarks \cite{Borsanyi:2014jba}.
+ The horizontal lines are the experimental values and the grey shaded
+ regions represent the experimental errors.  Red dots are the lattice
+ results with their uncertainties denoted by the vertical error bars.
+ The neutron-proton mass differences from numerical simulations and
+ the corresponding experimental numbers are
 \beq
 (M_n-M_p)^{\rm LQCD+QED} &=&\Delta N = 1.51(16)(23)\   {\rm MeV}, \\
 (M_n-M_p)^{\rm exp.} &=& 1.29\   {\rm MeV}. 
@@ -1420,97 +1422,106 @@ The figure is taken from
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Since all hadrons are composite particles of quarks and gluons,
-there are numerous excited states  \cite{RPP}.  To extract the properties of the
-excited hadrons from LQCD,  only looking at the asymptotic form as shown in Eq.(\ref{eq:5.D-tau}) is not
- sufficient, and more sophisticated methods such as  
- the maximal entropy method (MEM)  and  the variational method  are required.
- Interested readers should consult the reviews \cite{Asakawa:2000tr,Fodor:2012gf} and references there in.
+Since all hadrons are composite particles of quarks and gluons, there
+are numerous excited states \cite{RPP}.  To extract the properties of
+the excited hadrons from LQCD, only looking at the asymptotic form as
+shown in Eq.(\ref{eq:5.D-tau}) is not sufficient, and more
+sophisticated methods such as the maximal entropy method (MEM) and the
+variational method are required.  Interested readers should consult
+the reviews \cite{Asakawa:2000tr,Fodor:2012gf} and references there
+in.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lattice QCD and nuclear force}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-Understanding of  the nuclear force from QCD
- is one of the most challenging problems in nuclear physics.
- Below the pion production threshold,
-  the notion of the $NN$ potential (either in the coordinate space or in
-  the  momentum space) has been known to be  useful, since it can be 
-   used not only to describe the two-body system but also to 
-   study  nuclear many-body problems through ab-initio calculations \cite{this_book}.
-  Several high precision phenomenological $NN$ forces 
-  have been constructed to reproduce
-  the   neutron-proton and proton-proton scattering data (about 4500 data points)
-   with a $\chi^2/{\rm dof} \sim 1$. However, 
-     they have typically 20-40 fitting parameters:
-   e.g. the CD Bonn potential, AV18 potential and N$^3$LO chiral effective field 
-   theory have 38, 40, and 24 parameters, respectively \cite{Machleidt:2007ms}.
-  If one tries to extend these to hyperon-nucleon and hyperon-hyperon interactions,
-  the task becomes extremely tough since  the number of parameters 
-   increases and the scattering data are scarce.
+Understanding of the nuclear force from QCD is one of the most
+ challenging problems in nuclear physics.  Below the pion production
+ threshold, the notion of the $NN$ potential (either in the coordinate
+ space or in the momentum space) has been known to be useful, since it
+ can be used not only to describe the two-body system but also to
+ study nuclear many-body problems through ab-initio
+ calculations \cite{this_book}.
+
+  Several high precision phenomenological $NN$ forces have been
+  constructed to reproduce the neutron-proton and proton-proton
+  scattering data (about 4500 data points) with a $\chi^2/{\rm
+  dof} \sim 1$. However, they have typically 20-40 fitting parameters:
+  e.g. the CD Bonn potential, AV18 potential and N$^3$LO chiral
+  effective field theory have 38, 40, and 24 parameters,
+  respectively \cite{Machleidt:2007ms}.  If one tries to extend these
+  to hyperon-nucleon and hyperon-hyperon interactions, the task
+  becomes extremely tough since the number of parameters increases and
+  the scattering data are scarce.
  
-    Under this situation, it is highly desirable to
-  study  baryon-baryon interactions from  first principle
-  LQCD simulations, where  all the hadronic interactions are
-   controlled only by the QCD coupling $g$  and 
-    the quark mass $m$  whose values are
-    pretty well determined at present by the precision QCD simulations \cite{Aoki:2013ldr}.
+  Under this situation, it is highly desirable to study
+  baryon-baryon interactions from first principle LQCD simulations,
+  where all the hadronic interactions are controlled only by the QCD
+  coupling $g$ and the quark mass $m$ whose values are pretty well
+  determined at present by the precision QCD
+  simulations \cite{Aoki:2013ldr}.
  
- The finite volume method (FVM), a
-  theoretical framework to study hadron-hadron interactions
-  from LQCD, was first  proposed 
-  by L\"{u}scher \cite{luescher}: For two hadrons in a finite
-  box with a spatial size $L^3$,  
-  an exact relation between  the energy spectra in the box
-  and the elastic scattering phase shift can be 
-   derived.  If the range of the hadronic interaction $R_{\rm QCD}$  is sufficiently
-  smaller than the size of the box $R_{\rm QCD}<L/2$, the behavior of the 
-  the equal-time Bethe-Salpeter amplitude (or more precisely 
-  the Nambu-Bethe-Salpeter (NBS) amplitude)
-     $\psi (\mathbf{r})$ in the interval $R_{\rm QCD} < | \mathbf{r} | < L/2 $
-    has sufficient information to relate the phase shift and the 
-  energy shift $\Delta E =M_{\rm HH}-2M_{\rm H}$.
+ The finite volume method (FVM), a theoretical framework to study
+  hadron-hadron interactions from LQCD, was first proposed by
+  L\"{u}scher \cite{luescher}: For two hadrons in a finite box with a
+  spatial size $L^3$, an exact relation between the energy spectra in
+  the box and the elastic scattering phase shift can be derived.  If
+  the range of the hadronic interaction $R_{\rm QCD}$ is sufficiently
+  smaller than the size of the box $R_{\rm QCD}<L/2$, the behavior of
+  the the equal-time Bethe-Salpeter amplitude (or more precisely the
+  Nambu-Bethe-Salpeter (NBS) amplitude) $\psi (\mathbf{r})$ in the
+  interval $R_{\rm QCD} < | \mathbf{r} | < L/2 $ has sufficient
+  information to relate the phase shift and the energy shift 
+$\Delta E=M_{\rm HH}-2M_{\rm H}$.
   
-   The HAL QCD method was proposed as another theoretical framework to study the hadron-hadron interactions from LQCD
- by Ishii, Aoki and Hatsuda \cite{Ishii:2006ec}
-  and was further developed by  HAL QCD Collaboration \cite{HALQCD:2012aa}.
-    The starting point is the same equal-time NBS amplitude  $\psi (\mathbf{r})$: 
-  Instead of looking at the amplitude 
-  outside the range of the interaction,
-   the internal region $ |\mathbf{r} | < R_{\rm QCD}$ is considered and
-  an energy-independent  non-local potential $U(\mathbf{r}, \mathbf{r}')$  is deduced from  $\psi (\mathbf{r})$.
-    Since $U(\mathbf{r}, \mathbf{r}')$ in QCD
-   is spatially  localized due to the confinement
-   of quarks and gluons, it is affected  only weakly
-   by the finite lattice volume. Physical quantities such 
- as the scattering phase shifts, bound state spectra,  and resonance energies
-  can be calculated by solving  the
-  integro-differential differential equation satisfied by $\psi (\mathbf{r})$ with $U(\mathbf{r}, \mathbf{r}')$.
+The HAL QCD method was proposed as another theoretical framework to
+ study the hadron-hadron interactions from LQCD by Ishii, Aoki and
+ Hatsuda \cite{Ishii:2006ec} and was further developed by HAL QCD
+ Collaboration \cite{HALQCD:2012aa}.  The starting point is the same
+ equal-time NBS amplitude $\psi (\mathbf{r})$: Instead of looking at
+ the amplitude outside the range of the interaction, the internal
+ region $ |\mathbf{r} | < R_{\rm QCD}$ is considered and an
+ energy-independent non-local potential $U(\mathbf{r}, \mathbf{r}')$
+ is deduced from $\psi (\mathbf{r})$.  Since
+ $U(\mathbf{r}, \mathbf{r}')$ in QCD is spatially localized due to the
+ confinement of quarks and gluons, it is affected only weakly by the
+ finite lattice volume. Physical quantities such as the scattering
+ phase shifts, bound state spectra, and resonance energies can be
+ calculated by solving the integro-differential differential equation
+ satisfied by $\psi (\mathbf{r})$ with $U(\mathbf{r}, \mathbf{r}')$.
    
-  Recently, a detailed comparison between the FVM and the HAL QCD method has been carried out:
-  Although they agree with each other quite accurately for non-resonant pion-pion scattering,
-   large signal to noise ratio  inherent in the effective mass $\Delta E^{\rm eff}(\tau)$  for 
-    baryon-baryon scatterings prevents FVM to extract scattering observables   \cite{Iritani:2015dhu}.
-   Therefore, we will focus on  the HAL QCD method below.
+  Recently, a detailed comparison between the FVM and the HAL QCD
+  method has been carried out: Although they agree with each other
+  quite accurately for non-resonant pion-pion scattering, large signal
+  to noise ratio inherent in the effective mass $\Delta E^{\rm
+  eff}(\tau)$ for baryon-baryon scatterings prevents FVM to extract
+  scattering observables \cite{Iritani:2015dhu}.  Therefore, we will
+  focus on the HAL QCD method below.
   
 %=============================================     
 \subsection{Master equation for baryon-baryon interaction}
 %=============================================  
   
-Let us consider  the baryon-baryon correlation in Fig.\ref{fig:correlation}(c) and 
-define the equal-time NBS amplitude $\psi_{\ell}(\mathbf{r},\tau)$  from its large $\tau$ behavior:
- \beq
- C_{\rm BB}(\mathbf{r}, \tau) 
- =\sum_{\mathbf{n}',\mathbf{m}'}   \left. C_{\rm BB}(n,m,n',m') \right|_{n_4=m_4,n_4'=m_4'} 
- \rightarrow \sum_{\ell} a_{\ell}  \psi_{\ell} (\mathbf{r},\tau)  e^{-E_{\ell} \tau}   ,
- \eeq 
- where $\mathbf{r}=(\mathbf{n}-\mathbf{m}) a$, $\tau=(n_4-n_4')$, and $\psi_{\ell} (\mathbf{r},\tau)$ being the 
-  NBS wave function for $\ell$-th scattering state on the lattice. 
-  For large lattice size, $E_{\ell}$ is very dense, so that it is impossible to identify each level.  
- This causes a fatal problem in FVM as mentioned above.  On the other hand,
- if we define  $ C_{\rm BB}(\mathbf{r};\tau)= {\cal R}(\mathbf{r},\tau) e^{-2M_{\rm B} \tau}$, 
-  the following  integro-differential equation can be derived below the inelastic threshold ($\tau > M_{\pi}^{-1}$),
+Let us consider the baryon-baryon correlation in
+Fig.\ref{fig:correlation}(c) and define the equal-time NBS amplitude
+$\psi_{\ell}(\mathbf{r},\tau)$ from its large $\tau$ behavior: 
+\beq
+C_{\rm BB}(\mathbf{r}, \tau)
+=\sum_{\mathbf{n}',\mathbf{m}'} \left. C_{\rm
+BB}(n,m,n',m') \right|_{n_4=m_4,n_4'=m_4'} \rightarrow \sum_{\ell}
+a_{\ell} \psi_{\ell} (\mathbf{r},\tau) e^{-E_{\ell} \tau} , 
+\eeq 
+where
+$\mathbf{r}=(\mathbf{n}-\mathbf{m}) a$, $\tau=(n_4-n_4')a$, and
+$\psi_{\ell} (\mathbf{r},\tau)$ being the NBS wave function for
+$\ell$-th scattering state on the lattice.  For large lattice size,
+$E_{\ell}$ is very dense, so that it is impossible to identify each
+level.  This causes a fatal problem in FVM as mentioned above.  On the
+other hand, if we define $ C_{\rm BB}(\mathbf{r};\tau)= {\cal
+R}(\mathbf{r},\tau) e^{-2M_{\rm B} \tau}$, the following
+integro-differential equation can be derived below the inelastic
+threshold ($\tau > M_{\pi}^{-1}$),
 \beq
   \left\{
   \frac1{4M_{\rm B}}\frac{\partial^2}{\partial \tau^2} 

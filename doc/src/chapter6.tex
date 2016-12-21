@@ -1,11 +1,11 @@
 \title{Lattice methods and the nuclear few- and many-body problem}
 \author{Dean Lee}
 \institute{Dean Lee \at  Department of Physics, 
-North Carolina State University, Raleigh, NC 27695,  USA, \email{dean\_lee@nscu.edu}}
+North Carolina State University, Raleigh, NC 27695,  USA, \email{dean\_lee@ncsu.edu}}
 \maketitle
 
 \abstract{This chapter builds upon the review of lattice methods and effective
-field theory of the previous chapter. We begin with a brief overview of lattice calculations using chiral effective field theory.  We then describe several methods for computing scattering on the lattice.  After that we focus on the main goal, explaining the theory and algorithms
+field theory of the previous chapter. We begin with a brief overview of lattice calculations using chiral effective field theory and some recent applications.  We then describe several methods for computing scattering on the lattice.  After that we focus on the main goal, explaining the theory and algorithms
 relevant to lattice simulations of nuclear
 few- and many-body systems.  We discuss the exact equivalence
 of four different lattice formalisms, the Grassmann path integral, transfer matrix operator, Grassmann path
@@ -13,8 +13,12 @@ integral with auxiliary fields, and transfer matrix operator with auxiliary
 fields.  Along with our analysis we include several coding examples and a number of exercises for the calculations of few- and many-body systems at leading order in chiral effective field theory.}
 
 
-
 \section{Introduction}
+This chapter builds upon the general overview of lattice methods for effective field theory of the previous chapter. We discuss the theory and algorithms used in lattice simulations of nuclear
+few and many body systems.  We show the exact equivalence of the Grassmann path integral, transfer matrix operator, Grassmann path
+integral with auxiliary fields, and transfer matrix operator with auxiliary
+fields.  Along with our analysis we include several coding examples and a number of exercises for the calculations of few- and many-body systems at leading order in chiral effective field theory.
+
 
 Effective field theory (EFT) provides a theoretical framework for organizing low-energy
 interactions in powers of particle
@@ -50,6 +54,62 @@ study light nuclei in pionless EFT \cite{Borasoy:2005yc} and chiral EFT at
 leading order \cite{Borasoy:2006qn}. There have been further studies of neutron matter 
 \cite{Borasoy:2007vi,Borasoy:2007vk,Wlazlowski:2014jna} and light nuclei \cite{Epelbaum:2009zs,Epelbaum:2009pd}, and there have been several applications to nuclear structure and nuclear clustering \cite{Epelbaum:2011md,Epelbaum:2012qn,Epelbaum:2012iu,Lahde:2013uqa,Epelbaum:2013paa,Elhatisari:2016owd} as well as recent work on nuclear scattering and reactions~\cite{Rupak:2013aue,Rupak:2014xza,Elhatisari:2015iga}.
 
+\section{Recent Applications}
+
+
+We review here several recent applications of lattice effective field theory to nuclear systems. In Ref.~\cite{Epelbaum:2013paa},
+the first {\it ab initio} evidence is presented for a tetrahedral alpha-cluster structure
+of the ground state of $^{16}$O. The first excited $0^+$ state of $^{16}$O is found to be a planar or square arrangement of alpha clusters.  The evidence for these geometric arrangements come from the strong overlap between nuclear states and initial state configurations with these alpha-cluster geometries. 
+
+
+In Table~\ref{oxygen1} we presented the energies of the low-lying even parity states of oxygen-16.  The columns labeled ``LO(2N)'' and ``NNLO(2N)'' show
+the energies at each order using the two-nucleon force only. The column labeled
+``+3N'' also includes the 3NF, which first appears 
+at NNLO. The column ``+4N$_\mathrm{eff}$'' includes an ``effective''
+4N force, and the column ``Exp'' gives
+the empirical energies.  This ``effective'' 4N force was introduced in Ref.~\cite{Lahde:2013uqa} as a proxy  measure of unknown systematic errors responsible for overbinding in lattice chiral effective field theory calculations with increasing numbers of nucleons.  This tendency towards overbinding has also been noted in other nuclear structure calculations \cite{Ekstrom:2015rta,Hagen:2015yea}. 
+\begin{table}[h]
+\centering
+\caption{Lattice results and experimental energies for the lowest even-parity
+states of $^{16}$O in MeV. 
+The errors include statistical
+Monte Carlo errors and 
+uncertainties due to the extrapolation to infinite Euclidean time. 
+\label{oxygen1}}
+\vspace{.5cm}
+\begin{tabular}{c | r | r r r | r}
+$J_n^p$ & \multicolumn{1}{c |}{LO (2N)} & \multicolumn{1}{c}{NNLO (2N)} 
+& \multicolumn{1}{c}{+3N} & \multicolumn{1}{c |}{+4N$_\mathrm{eff}$} & \multicolumn{1}{c}{Exp}
+  \\ \hline\hline
+$0^+_1$ & $-147.3(5)$ & $-121.4(5)$ & $-138.8(5)$ & $-131.3(5)$ & $-127.62$
+\\
+$0^+_2$ & $-145(2)$ & $-116(2)$ & $-136(2)$ & $-123(2)$ & $-121.57$ \\
+$2^+_1$ & $-145(2)$ & $-116(2)$ & $-136(2)$ & $-123(2)$ & $-120.70$
+\end{tabular}
+\end{table}
+
+In order to understand the source of this overbinding, the problem was revisited again in Ref.~\cite{Elhatisari:2016owd}.  In that work numerical evidence from {\it ab initio} lattice simulations showed that the problem appears related to the fact that the nuclear forces reside near a quantum phase transition. Using lattice effective field theory, Monte Carlo simulations were performed for systems with up to twenty nucleons. For even and equal numbers of protons and neutrons, a first-order transition was found at zero temperature from a Bose-condensed gas of alpha particles to a nuclear liquid. Whether one has an alpha-particle gas or nuclear liquid is determined by the strength of the alpha-alpha interactions, and the alpha-alpha interactions depend on the strength and locality of the nucleon-nucleon interactions. This insight is useful in improving calculations of nuclear structure and important astrophysical reactions involving alpha capture on nuclei.  These findings also provide a tool to probe the structure of alpha cluster states such as the Hoyle state responsible for the production of carbon in red giant stars and point to a connection between nuclear states and the universal physics of bosons at large scattering length.
+
+Processes such as the scattering of alpha particles,
+the triple-alpha reaction, and
+alpha capture play an important role in stellar nucleosynthesis.  In
+particular, alpha capture on carbon determines the ratio of carbon to oxygen
+during helium burning and impacts the following carbon, neon, oxygen,
+and silicon burning stages.  In these
+reactions the elastic scattering of alpha particles
+and alpha-like nuclei (nuclei with even and equal numbers of protons
+and neutrons) are important for understanding background and resonant
+scattering contributions.  In Ref.~\cite{Elhatisari:2015iga}
+the first {\it ab initio}
+calculations of the scattering of two alpha particles were performed using a technique called the adiabatic projection method.  These
+calculations represent a significant algorithmic improvement since the calculations presented in
+ Ref.~\cite{Elhatisari:2015iga}
+scale roughly quadratically with the number of nucleons and opens a gateway to scattering and reactions involving heavier nuclei. \\ 
+
+
+
+
+
 \section{Scattering on the lattice}
 
 At any given order in the chiral EFT expansion, there will be short-range interaction coefficients which depend on the chosen regularization of the large-momentum divergences.  On the lattice this regularization is provided by the lattice spacing, unless some additional regularization
@@ -79,7 +139,7 @@ and spherical Bessel functions,\begin{equation}
 Y_{\ell,\ell_{z}}(\theta,\phi). \label{wavefunction}%
 \end{equation}
 Here $k$ is the relative momentum between the scattering particles,
-and $\delta_{\ell}$ is the phase shift for partial wave $L$. \ We can extract
+and $\delta_{\ell}$ is the phase shift for partial wave $\ell$. \ We can extract
 $k$ from the energy of the standing wave, and the phase shift $\delta_{\ell}$
 is determined by setting the wave function in Eq.~(\ref{wavefunction}) to
 zero at the wall boundary.
@@ -98,12 +158,11 @@ $Y_{\ell,\ell_z}$ with angular momentum quantum numbers $\ell,\ell_z$.  In this 
 \begin{equation}
 |r\rangle^{\ell,\ell_z} = \sum_{{\bf r'}}Y_{\ell,\ell_z}({\bf\hat{r}'})\delta_{r,|{\bf r'}|}|{\bf r'} \rangle.
 \end{equation} We require that $r$ is less than half the box length $L/2$.
- Using this technique we are essentially constructing a radial lattice Hamiltonian for each partial wave. 
+ Using this technique we are essentially constructing a radial position basis for each partial wave. 
 
 It is also useful to introduce auxiliary potentials in the region lying just in front
-of the spherical wall boundary \cite{Lu:2015riz}.  We use the auxiliary potential
-to tune the energy of the scattering wave. This auxiliary potential
-is a spherical attractive well positioned in front
+of the spherical wall boundary \cite{Lu:2015riz}. The auxiliary potential
+is a spherical attractive well that is positioned in front
 of the spherical wall boundary.  We can tune to any scattering energy by
 adjusting the depth of the well. For systems with partial wave mixing due
 to spin-orbit coupling, we also include a Hermitian but imaginary off-diagonal
@@ -134,7 +193,7 @@ total momentum equal to zero. We bin the initial cluster states together
 according to radial distance and angular momentum. In this manner, we form
 radial 
 position states with projected angular momentum quantum numbers, which we
-label $|R\rangle^{J,J_z}$. 
+label $|R\rangle^{\ell,\ell_z}$. 
 
 The next step is to multiply by powers of the transfer matrix in order to
 form ``dressed'' cluster
@@ -143,15 +202,15 @@ states in our periodic box. We discuss the transfer matrix formalism in detail l
 states 
 %
 \begin{equation}
-\vert R\rangle^{J,J_z}_{n_t} = M^{n_t}|R\rangle^{J,J_z}.
+\vert R\rangle^{\ell,\ell_z}_{n_t} = M^{n_t}|R\rangle^{\ell,\ell_z}.
 \end{equation}
 %
 These dressed cluster states are then used to compute matrix
 elements of the transfer matrix $M$,
 %
 \begin{equation}
-\left[M_{n_t}\right]^{J,J_z}_{R',R} =\ ^{J,J_z}_{\!\!\!\!\!\quad{n_t}}\langle
-R'\vert M \vert R\rangle^{J,J_z}_{n_t}.
+\left[M_{n_t}\right]^{\ell,\ell_z}_{R',R} =\ ^{\ell,\ell_z}_{\!\!\!\!\!\quad{n_t}}\langle
+R'\vert M \vert R\rangle^{\ell,\ell_z}_{n_t}.
 \label{Hmatrix}
 \end{equation}
 %
@@ -159,17 +218,17 @@ Since such states are not orthogonal, we also compute a norm
 matrix
 % 
 \begin{equation}
-\left[N_{n_t}\right]^{J,J_z}_{R',R} =\ ^{J,J_z}_{\!\!\!\!\!\quad{n_t}}\langle
-R'\vert R\rangle^{J,J_z}_{n_t}. 
+\left[N_{n_t}\right]^{\ell,\ell_z}_{R',R} =\ ^{\ell,\ell_z}_{\!\!\!\!\!\quad{n_t}}\langle
+R'\vert R\rangle^{\ell,\ell_z}_{n_t}. 
 \label{eqn:norm}
 \end{equation}
 %
 The ``radial adiabatic transfer matrix'' is defined as the matrix product
 %
 \begin{equation}
-\left[ {M^a_{n_t}} \right]^{J,J_z}_{R',R} = 
+\left[ {M^a_{n_t}} \right]^{\ell,\ell_z}_{R',R} = 
 \left[N_{n_t}^{-\frac{1}{2}}M_{n_t}
-N_{n_t}^{-\frac{1}{2}} \right]^{J,J_z}_{R',R},
+N_{n_t}^{-\frac{1}{2}} \right]^{\ell,\ell_z}_{R',R},
 \label{eqn:Adiabatic-Hamiltonian}
 \end{equation}
 %
@@ -185,15 +244,15 @@ appropriate power of the spatial lattice spacing $a$. In our notation the
 three-component integer vector ${\bf n}$ labels the lattice sites of a
 three-dimensional periodic lattice with dimensions $L^{3}$. The spatial
 lattice unit vectors are denoted 
-%$\boldsymbol{\hat{\bf l}}$ = $\boldsymbol{\hat{1}}$,
-%$\boldsymbol{\hat{2}}$, $\boldsymbol{\hat{3}}$.
+$\mathbf{\hat{l}}$ = $\mathbf{\hat{1}}$,
+$\mathbf{\hat{2}}$, $\mathbf{\hat{3}}$.
 We use $n_t$ to label lattice steps in the temporal direction, and $L_{t}$
 denotes the total number of lattice time steps. \ The temporal lattice spacing
 is given by $a_{t}$, and $\alpha_{t}=a_{t}/a$ is the ratio of the temporal
 to
 spatial lattice spacing. \ We also define $h=\alpha_{t}/(2m)$, where $m$
 is
-the nucleon mass in lattice units.  In Fig.~\ref{formalism} we show a diagram
+the nucleon mass in lattice units. In Fig.~\ref{formalism} we show a diagram
 of the four different but exactly equivalent lattice formulations that we
 discuss, the Grassmann path integral, transfer matrix operator, Grassmann
 path integral with auxiliary fields, and transfer matrix operator with auxiliary
@@ -279,7 +338,7 @@ of the squared momentum,
 P^2({\bf p})=2\sum_{k=0,1,2,\cdots}\sum_{l=1,2,3}%
 (-1)^{k}w_{k}\cos\left(kp_{l}\right).
 \end{align}
-The hopping coefficients can be chosen to match the continuum  relation 
+The hopping coefficients are chosen to match the continuum  relation 
 \begin{align}
 P^2({\bf p})={\bf p}^2,
 \end{align}
@@ -358,7 +417,7 @@ definition of the transfer matrix is the normal-ordered exponential as defined
 in Eq.~(\ref{transfer_noaux}).
 
 In this transfer matrix formalism, one can do simulations of nucleons using Monte Carlo, and this would essentially be a lattice version of diffusion or Green's function Monte Carlo \cite{Carlson:2014vla}.  Visually one can view the nucleons as interacting with each other while diffusing in space with each time step, as indicated in Fig.~\ref{worldlines}.  At leading order in chiral effective field theory, the
-interactions include two independent S-wave contact interactions and the exchange of pions.  We discuss these interactions in detail in the following.
+interactions include two independent $S$-wave contact interactions and the exchange of pions.  We discuss these interactions in detail in the following.
 \begin{figure}[ptb]%
 \centering
 \sidecaption
@@ -375,13 +434,13 @@ interactions and the exchange of pions.}%
 
 \subsection{Grassmann path integral with auxiliary field}
 
-We now assume that there exists an integral relation that allows us to write
+We assume that there exists an integral relation that allows us to write
 $\exp\left[-S_{\rm int}(c^*,c)\right]$ as an integral over auxiliary fields.
  The purpose of the auxiliary field transformation is to decouple the interactions
 among the nucleons.  Instead the interactions will be between the nucleons
 and the auxiliary fields.  
 
-We now illustrate using the interactions that appear at leading order in
+We illustrate using the interactions that appear at leading order in
 chiral effective field theory.  For pedagogical purposes we discuss the simplest possible implementation of the leading order action on the lattice.  We first consider a zero-range contact interaction
 which is independent of
 nucleon spin and isospin.
@@ -483,7 +542,7 @@ in Table~\ref{hopping_coeff_2}.
 
 \begin{tabular}{p{2cm}p{3cm}p{3cm}p{3cm}}
 \hline\noalign{\smallskip}
-coefficent& standard & $O(a^{2})$-improved & $O(a^{4})$-improved \\
+coefficient& standard & $O(a^{2})$-improved & $O(a^{4})$-improved \\
 \noalign{\smallskip}\svhline\noalign{\smallskip}
 $o_{1}$ & $1$ & $4/3$ & $3/2$\\
 $o_{2}$ & $0$ & $1/6$ & $3/10$\\
@@ -612,55 +671,119 @@ auxiliary fields.}%
 \label{hsworldlines}%
 \end{figure}
 
-In Fig.~\ref{getzvecs}, we show a sample code which calculates the 
+In the following we show sample code \ref{label_1} in the Fortran programming language which calculates the 
 auxiliary-field transfer matrix multiplications on the left starting from the 
-single-nucleon initial states.  We only show the terms which arise from 
-the free-nucleon transfer matrix and the auxiliary field $s$.  Similarly, in Fig.~\ref{getzdualvecs}, we show a sample code which calculates 
+single-nucleon initial states.  We show only the terms which arise from 
+the free-nucleon transfer matrix and the auxiliary field $s$.  
+
+\begin{lstlisting}[language=Fortran,caption=Sample code calculating 
+the auxiliary-field transfer matrix multiplications on the left starting from the single-nucleon initial states,label={label_1}]
+DO nt = nt1+1, nt2     
+  DO np = 0,num-1        
+    DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1; DO ni = 0,1; DO ns = 0,1
+              
+     zvecs(nx,ny,nz,nt,ns,ni,np) = zvecs(nx,ny,nz,nt-1,ns,ni,np) &
+        * (1.D0-6.D0*w0_N*h+CDSQRT(-c0*atovera*(1.D0,0.D0))*s(nx,ny,nz,nt-1))
+              
+      zvecs(nx,ny,nz,nt,ns,ni,np) = zvecs(nx,ny,nz,nt,ns,ni,np) &
+        + w1_N*h*zvecs(MOD(nx+1,L),ny,nz,nt-1,ns,ni,np) &
+        + w1_N*h*zvecs(MOD(nx-1+L,L),ny,nz,nt-1,ns,ni,np) &
+        + w1_N*h*zvecs(nx,MOD(ny+1,L),nz,nt-1,ns,ni,np) &
+        + w1_N*h*zvecs(nx,MOD(ny-1+L,L),nz,nt-1,ns,ni,np) &
+        + w1_N*h*zvecs(nx,ny,MOD(nz+1,L),nt-1,ns,ni,np) &
+        + w1_N*h*zvecs(nx,ny,MOD(nz-1+L,L),nt-1,ns,ni,np)
+              
+      IF (improveN >= 1) THEN                 
+        zvecs(nx,ny,nz,nt,ns,ni,np) = zvecs(nx,ny,nz,nt,ns,ni,np) & 
+          - w2_N*h*zvecs(MOD(nx+2,L),ny,nz,nt-1,ns,ni,np) &
+          - w2_N*h*zvecs(MOD(nx-2+L,L),ny,nz,nt-1,ns,ni,np) &
+          - w2_N*h*zvecs(nx,MOD(ny+2,L),nz,nt-1,ns,ni,np) &
+          - w2_N*h*zvecs(nx,MOD(ny-2+L,L),nz,nt-1,ns,ni,np) &
+          - w2_N*h*zvecs(nx,ny,MOD(nz+2,L),nt-1,ns,ni,np) &
+          - w2_N*h*zvecs(nx,ny,MOD(nz-2+L,L),nt-1,ns,ni,np)
+      END IF
+              
+      IF (improveN == 2) THEN
+        zvecs(nx,ny,nz,nt,ns,ni,np) = zvecs(nx,ny,nz,nt,ns,ni,np) &
+          + w3_N*h*zvecs(MOD(nx+3,L),ny,nz,nt-1,ns,ni,np) &
+          + w3_N*h*zvecs(MOD(nx-3+L,L),ny,nz,nt-1,ns,ni,np) &
+          + w3_N*h*zvecs(nx,MOD(ny+3,L),nz,nt-1,ns,ni,np) &
+          + w3_N*h*zvecs(nx,MOD(ny-3+L,L),nz,nt-1,ns,ni,np) &           
+          + w3_N*h*zvecs(nx,ny,MOD(nz+3,L),nt-1,ns,ni,np) &
+          + w3_N*h*zvecs(nx,ny,MOD(nz-3+L,L),nt-1,ns,ni,np)
+      END IF
+              
+    END DO; END DO; END DO; END DO; END DO
+  END DO
+END DO
+
+\end{lstlisting}
+
+
+Similarly, we now show sample code \ref{label_2} which calculates 
 the auxiliary-field transfer matrix multiplications on the right starting from 
-the single-nucleon final states.  Again we present only the terms arising from the free-nucleon transfer matrix and the auxiliary field $s$.  In Fig.~\ref{call_getzvecs} we show how these transfer matrix product multiplications are implemented as functions or subroutines (specific to Fortran as programming language) 
-and used to compute the determinant and inverse of the matrix of single-nucleon amplitudes {\bf M}.   
-\begin{figure}[ptb]%
-\centering
-\sidecaption
-\includegraphics[
-height=13.00cm
-]
-{Chapter6-figures/getzvecs.png}%
-\caption{Sample code which calculates the 
-auxiliary-field transfer matrix multiplications on the left starting from the 
-single-nucleon initial states.  We only show the terms which arise from 
-the free-nucleon transfer matrix and the auxiliary field $s$.}%
-\label{getzvecs}%
-\end{figure}
+the single-nucleon final states.  Again we present only the terms arising from the free-nucleon transfer matrix and the auxiliary field $s$.  
 
-\begin{figure}[ptb]%
-\centering
-\sidecaption
-\includegraphics[
-height=13.00cm
-]
-{Chapter6-figures/getzdualvecs.png}%
-\caption{Sample code which calculates 
-auxiliary-field transfer matrix multiplications on the right starting from 
-the single-nucleon final states.  We only show terms involving the 
-free-nucleon transfer
-matrix and the auxiliary field $s$.}%
-\label{getzdualvecs}%
-\end{figure}
+\begin{lstlisting}[language=Fortran,caption=Sample code calculating 
+the auxiliary-field transfer matrix multiplications on the right starting
+from the single-nucleon final states,label={label_2}]
+DO nt = nt2,nt1+1,-1
+  DO np = 0,num-1   
+    DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1; DO ni = 0,1; DO ns = 0,1
+               
+      zdualvecs(nx,ny,nz,nt-1,ns,ni,np) &
+        = zdualvecs(nx,ny,nz,nt,ns,ni,np) &
+        * (1.D0-6.D0*w0_N*h+CDSQRT(-c0*atovera*(1.D0,0.D0))*s(nx,ny,nz,nt-1))
+               
+      zdualvecs(nx,ny,nz,nt-1,ns,ni,np) &
+        = zdualvecs(nx,ny,nz,nt-1,ns,ni,np) & 
+        + w1_N*h*zdualvecs(MOD(nx+1,L),ny,nz,nt,ns,ni,np) &
+        + w1_N*h*zdualvecs(MOD(nx-1+L,L),ny,nz,nt,ns,ni,np) &
+        + w1_N*h*zdualvecs(nx,MOD(ny+1,L),nz,nt,ns,ni,np) &
+        + w1_N*h*zdualvecs(nx,MOD(ny-1+L,L),nz,nt,ns,ni,np) &
+        + w1_N*h*zdualvecs(nx,ny,MOD(nz+1,L),nt,ns,ni,np) &
+        + w1_N*h*zdualvecs(nx,ny,MOD(nz-1+L,L),nt,ns,ni,np) 
+               
+      IF (improveN >= 1) THEN
+        zdualvecs(nx,ny,nz,nt-1,ns,ni,np) &
+          = zdualvecs(nx,ny,nz,nt-1,ns,ni,np) &
+          - w2_N*h*zdualvecs(MOD(nx+2,L),ny,nz,nt,ns,ni,np) &
+          - w2_N*h*zdualvecs(MOD(nx-2+L,L),ny,nz,nt,ns,ni,np) &
+          - w2_N*h*zdualvecs(nx,MOD(ny+2,L),nz,nt,ns,ni,np) &
+          - w2_N*h*zdualvecs(nx,MOD(ny-2+L,L),nz,nt,ns,ni,np) &
+          - w2_N*h*zdualvecs(nx,ny,MOD(nz+2,L),nt,ns,ni,np) &
+          - w2_N*h*zdualvecs(nx,ny,MOD(nz-2+L,L),nt,ns,ni,np) 
+      END IF
+               
+      IF (improveN == 2) THEN
+        zdualvecs(nx,ny,nz,nt-1,ns,ni,np) &
+        = zdualvecs(nx,ny,nz,nt-1,ns,ni,np) &
+        + w3_N*h*zdualvecs(MOD(nx+3,L),ny,nz,nt,ns,ni,np) &
+        + w3_N*h*zdualvecs(MOD(nx-3+L,L),ny,nz,nt,ns,ni,np) &
+        + w3_N*h*zdualvecs(nx,MOD(ny+3,L),nz,nt,ns,ni,np) &
+        + w3_N*h*zdualvecs(nx,MOD(ny-3+L,L),nz,nt,ns,ni,np) &
+        + w3_N*h*zdualvecs(nx,ny,MOD(nz+3,L),nt,ns,ni,np) &
+        + w3_N*h*zdualvecs(nx,ny,MOD(nz-3+L,L),nt,ns,ni,np) 
+      END IF
+               
+    END DO; END DO
+  END DO; END DO; END DO
+END DO
 
-\begin{figure}[ptb]%
-\centering
-\sidecaption
-\includegraphics[
-height=3.20cm
-]
-{Chapter6-figures/call_getzvecs.png}%
-\caption{Sample code showing how the transfer matrix product 
-multiplications are called as functions or subroutines and used to 
-compute the determinant and inverse of the matrix of single-nucleon
-amplitudes.}%
-\label{call_getzvecs}%
-\end{figure}
+\end{lstlisting}
+
+In the following we show sample code \ref{label_3} where these transfer matrix product multiplications are called as subroutines and used to compute the determinant and inverse of the matrix of single-nucleon amplitudes {\bf M}.  
+
+\begin{lstlisting}[language=Fortran,caption=Sample code where transfer matrix product multiplications are called and used to compute the determinant and inverse of the matrix of single-nucleon
+amplitudes.,label={label_3}]
+CALL getzvecs(s,sI,zvecs,zwave,Lt,0,pion,ztau2x2,n_f)            
+CALL getzdualvecs(s,sI,zdualvecs,zdualwave,Lt,0,pion,ztau2x2,n_f)
+CALL getinvcorr(zvecs,zdualvecs,zldeter,zcorrmatrix,zcorrinv,Lt)
+
+aldeterabs = DBLE(zldeter)
+zdeterphase = CDEXP((0.D0,1.D0)*DIMAG(zldeter))
+act = bose - aldeterabs
+\end{lstlisting}
 
 \section{Importance sampling}
 
@@ -696,8 +819,8 @@ Given an arbitrary initial configuration $s^{0}({{\bf n},n_t})$, the
 conjugate momentum is chosen from a random Gaussian distribution according
 to
 \begin{equation}
-P[p_s^{0}({\bf n},n_t)]\propto\exp\left\{  -\frac{1}{2}\left[  p_s^{0}(\vec
-{n},n_t)\right]  ^{2}\right\}  , \label{Gdistr}%
+P[p_s^{0}({\bf n},n_t)]\propto\exp\left\{  -\frac{1}{2}\left[  p_s^{0}({\bf
+n},n_t)\right]  ^{2}\right\}  , \label{Gdistr}%
 \end{equation}
 after which the Hamiltonian equations of motion are integrated numerically
 with a small but nonzero step size $\varepsilon_{\mathrm{step}}$.  This method begins
@@ -724,8 +847,8 @@ p_s^{N_{\mathrm{step}}}({\bf n},n_t)=\tilde{p}_s^{N_{\mathrm{step}}}(\vec
 V(s)}{\partial s({\bf n},n_t)}\right]  _{s=s^{0}}.
 \end{equation}
 
-The length of such an MD \textquotedblleft trajectory\textquotedblright%
-\ should be taken large enough to ensure significant decorrelation between
+For algorithmic efficiency the length of such an MD \textquotedblleft trajectory\textquotedblright%
+\ should be taken large enough to ensure decorrelation between
 successive configurations of the auxiliary field. The evolved configuration
 is
 then subjected to a \textquotedblleft Metropolis test\textquotedblright%
@@ -765,7 +888,7 @@ _{kl}}\frac{\partial  \mathbf{M}_{kl}}{\partial s(\vec
 _{kl}}{\partial s({\bf n},n_t)} \right].
 \end{align}
 
-In Fig.~\ref{bose_sum} we show a sample code calculating the
+In the following we show sample code \ref{label_4} calculating the
 quadratic part of the action due to the auxiliary fields and pion fields,
 \begin{equation}
 \frac{1}{2}\sum_{{\bf n},n_t}\left[p_s({{\bf n},n_t})\right]^{2}+\frac{1}{2}\sum_{{\bf n},n_t,I}\left[  p_{s_I}({{\bf n},n_t})\right]^{2}+\frac{1}{2}\sum_{{\bf n},n_t,I}\left[p_{\pi_I}({{\bf n},n_t})\right]^{2}+S_{ss}(s) + S_{s_Is_I}(s_I) + S_{\pi_I\pi_I}(\pi_I).
@@ -774,17 +897,38 @@ In the code we have found it convenient to rescale the pion field by a factor of
 \begin{equation}
 q_{\pi}=\alpha_{t} \left( m_{\pi}^2 + 6w_0 \right).
 \end{equation}
-\begin{figure}[ptb]%
-\centering
-\sidecaption
-\includegraphics[
-height=8.0cm
-]
-{Chapter6-figures/bose_sum.png}%
-\caption{Sample code calculating the
-quadratic part of the action due to the auxiliary fields and pion fields.}%
-\label{bose_sum}
-\end{figure}In Fig.~\ref{dVds} we show a sample code which calculates 
+
+\begin{lstlisting}[language=Fortran,caption=Sample code calculating the
+quadratic part of the action due to the auxiliary fields and pion fields.,label={label_4}]
+bose = 0.D0
+DO nt = 0,Lt-1
+  DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1
+    bose = bose &
+      + s(nx,ny,nz,nt)**2.D0/2.D0 &
+      + p_s(nx,ny,nz,nt)**2.D0/2.D0
+    DO iso = 1,3
+      bose = bose &
+        + sI(nx,ny,nz,nt,iso)**2.D0/2.D0 &
+        + p_sI(nx,ny,nz,nt,iso)**2.D0/2.D0 &
+        + pion(nx,ny,nz,nt,iso)**2.D0/2.D0 &
+        + atovera/qpi3*pion(nx,ny,nz,nt,iso)*( &
+        - w1_P*pion(MOD(nx+1,L),ny,nz,nt,iso) &
+        - w1_P*pion(nx,MOD(ny+1,L),nz,nt,iso) &
+        - w1_P*pion(nx,ny,MOD(nz+1,L),nt,iso) &
+        + w2_P*pion(MOD(nx+2,L),ny,nz,nt,iso) &
+        + w2_P*pion(nx,MOD(ny+2,L),nz,nt,iso) &
+        + w2_P*pion(nx,ny,MOD(nz+2,L),nt,iso) &
+        - w3_P*pion(MOD(nx+3,L),ny,nz,nt,iso) &
+        - w3_P*pion(nx,MOD(ny+3,L),nz,nt,iso) &
+        - w3_P*pion(nx,ny,MOD(nz+3,L),nt,iso)) &
+        + p_pion(nx,ny,nz,nt,iso)**2.D0/2.D0
+    END DO
+  END DO; END DO; END DO
+END DO
+
+\end{lstlisting}     
+
+In following we show sample code \ref{label_5} which calculates 
 \begin{equation}
 \left[  \frac{\partial V(s)}{\partial s({\bf n},n_t%
 )}\right]  _{s=s^{0}}
@@ -797,43 +941,75 @@ momentum,
 _{\mathrm{step}}}{2}\left[  \frac{\partial V(s)}{\partial s({\bf n},n_t%
 )}\right]  _{s=s^{0}}.
 \end{equation}
-\begin{figure}[ptb]%
-\centering
-\sidecaption
-\includegraphics[
-height=6.4cm
-]
-{Chapter6-figures/dVds.png}%
-\caption{Sample code which computes the derivative of the potential $V(s)$ with respect to the auxiliary field $s({\bf n},n_t)$ and uses it to compute the
- half-step\ forward in the conjugate
-momentum.}%
-\label{dVds}%
-\end{figure}In Fig.~\ref{accept} we show an example code which performs  the Metropolis test%
+
+\begin{lstlisting}[language=Fortran,caption=Sample code computing derivative with respect to the auxiliary field and half-step forward in the conjugate momentum.,label={label_5}]
+
+DO npart1 = 0,n_f-1; DO npart2 = 0,n_f-1
+  zdcorrmatrix(npart2,npart1) = 0.D0
+  DO ni = 0,1; DO ns = 0,1
+    zdcorrmatrix(npart2,npart1) = &
+      zdcorrmatrix(npart2,npart1) + &
+      zdualvecs(nx,ny,nz,nt+1,ns,ni,npart2) &
+      *zvecs(nx,ny,nz,nt,ns,ni,npart1) &
+      *CDSQRT(-c0*atovera*(1.D0,0.D0))/L**3
+  END DO; END DO
+END DO; END DO
+           
+dVds(nx,ny,nz,nt) = s(nx,ny,nz,nt) 
+
+DO npart1 = 0,n_f-1; DO npart2 = 0,n_f-1
+  dVds(nx,ny,nz,nt) = dVds(nx,ny,nz,nt) &
+    - DBLE(zdcorrmatrix(npart2,npart1) &
+    *zcorrinv(npart1,npart2))
+END DO; END DO
+                 
+p_sHMC(nx,ny,nz,nt,0) = &
+  p_s(nx,ny,nz,nt) - 0.5D0*eHMC*dVds(nx,ny,nz,nt)
+  
+\end{lstlisting}
+
+In following code \ref{label_6} we show an example code which performs  the Metropolis test%
 \ against a random number $r\in\lbrack0,1)$, with the new configuration being accepted if
 \begin{equation}
 r<\exp\left[  -H(s^{N_{\mathrm{step}}},p^{N_{\rm step }}_s)+H(s^{0}%
 ,p_s^{0})\right].
 \end{equation}
-Although importance sampling uses only the absolute volume, the complex phase of the determinant is treated as an observable and is collected  with each configuration of the auxiliary and pion fields.
 
-\begin{figure}[ptb]%
-\centering
-\sidecaption
-\includegraphics[
-height=6.4cm
-]
-{Chapter6-figures/accept.png}%
-\caption{Sample code showing the Metropolis 
-condition used to determine whether the 
-new configuration is accepted or rejected.}%
-\label{accept}%
-\end{figure}
+\begin{lstlisting}[language=Fortran,caption=Sample code which performs  the Metropolis acceptance test,label={label_6}]
+IF (ntrial .eq. 1 .or. grnd() .lt. DEXP(-actnew+act)) THEN
+
+  accept = accept + 1.
+
+  DO nt = 0,Lt-1
+    DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1      
+      s(nx,ny,nz,nt) = snew(nx,ny,nz,nt)
+    END DO; END DO; END DO
+  END DO
+  
+  DO nt = 0,Lt-1
+    DO nz = 0,L-1; DO ny = 0,L-1; DO nx = 0,L-1      
+      DO iso = 1,3
+        sI(nx,ny,nz,nt,iso) = sInew(nx,ny,nz,nt,iso)
+        pion(nx,ny,nz,nt,iso) = pionnew(nx,ny,nz,nt,iso)
+      END DO
+    END DO; END DO; END DO
+  END DO
+  
+  aldeterabs = aldeternewabs
+  zdeterphase = zdeternewphase
+            
+END IF
+\end{lstlisting}
+
+Although the Monte Carlo importance sampling uses only the absolute value of the amplitude, the complex phase
+of the amplitude is treated as an observable and is collected  with each
+configuration of the auxiliary and pion fields.
 
 \section{Exercises}
 
 \begin{prob}
 \label{prob6.1}
-Write a lattice hybrid Monte Carlo code involving only the quadratic part of the action due to the auxiliary fields and pions,
+Write a lattice hybrid Monte Carlo code which performs updates of the lattice action according to only the quadratic part of the action due to the auxiliary fields and pions,
 \begin{equation}
 \frac{1}{2}\sum_{{\bf n},n_t}\left[p_s({{\bf n},n_t})\right]^{2}+\frac{1}{2}\sum_{{\bf
 n},n_t,I}\left[  p_{s_I}({{\bf n},n_t})\right]^{2}+\frac{1}{2}\sum_{{\bf
@@ -845,48 +1021,148 @@ Verify that the change in the action produced by the hybrid Monte Carlo update i
 
 \begin{prob}
 \label{prob6.2}
-Write a function (subroutine) that generates the single-nucleon states on the lattice corresponding to the Slater-determinant state of four nucleons --- proton spin-up, proton spin-down, neutron spin-up, and neutron spin-down --- each with zero momentum.\end{prob} 
+Write a function or subroutine that generates initial/final single-nucleon states on the lattice corresponding to a Slater-determinant state with one neutron spin-up and one neutron spin-down, both with zero momentum. \end{prob} 
 
 \begin{prob}
 \label{prob6.3}
-Write a (function) subroutine that extends the sample code in Fig.~\ref{getzvecs}  to repeatedly multiply the auxiliary-field transfer matrix on the left starting from some initial single-nucleon wave functions.  Include the contributions from the auxiliary fields $s$ and $s_I$ as well as the pion
+Write a function or subroutine that generates initial/final single-nucleon
+states on the lattice corresponding to a Slater-determinant state with one proton spin-up and one neutron spin-up, both with zero momentum.\end{prob}
+
+\begin{prob}
+\label{prob6.4}
+Write a function or subroutine that generates initial/final single-nucleon
+states on the lattice corresponding to a Slater-determinant state of four
+nucleons --- proton spin-up, proton spin-down, neutron spin-up, and neutron
+spin-down --- each with zero momentum. \end{prob}
+
+\begin{prob}
+\label{prob6.5}
+Write a function or subroutine that extends the sample code \ref{label_1}  to repeatedly multiply the auxiliary-field transfer matrix on the left starting from the initial single-nucleon wave functions.  Include the contributions from the auxiliary fields $s$ and $s_I$ as well as the pion
  field $\pi_I$.  
 \end{prob}
 
 \begin{prob}
-\label{prob6.4}
-Write a function (subroutine) that extends the sample code in Fig.~\ref{getzdualvecs}  to
-repeatedly multiply the auxiliary-field transfer matrix on the right starting from some final
+\label{prob6.6}
+Write a function or subroutine that extends the sample code \ref{label_2}  to
+repeatedly multiply the auxiliary-field transfer matrix on the right starting from the final
 single-nucleon wave functions.  Include the contributions from the auxiliary
 fields $s$ and $s_I$ as well as the pion
  field $\pi_I$.  
 \end{prob}
 
 \begin{prob}
-\label{prob6.5}
-Use the Slater-determinant state constructed in Prob.~\ref{prob6.2} as the initial and final states.  Apply the functions (subroutines) written in Prob.~\ref{prob6.3} and Prob.~\ref{prob6.4} with all coupling constants set to zero.  Verify that this state is the ground state of the non-interacting system with energy equal to zero.
-\end{prob}
-
-\begin{prob}
-\label{prob6.6}
-Use the Slater-determinant state constructed in Prob.~\ref{prob6.2} as the initial and final
-states.  Then implement the functions (subroutines) written in Prob.~\ref{prob6.3} and Prob.~\ref{prob6.4}
-and extend the sample code in Fig.~\ref{dVds} to compute the derivatives of $V(s)$ with respect to $s({\bf n},n_t)$, $s_I({\bf n},n_t)$, and $\pi_I({\bf n},n_t)$.
-\end{prob}
-
-\begin{prob}
 \label{prob6.7}
-Take the code you have written for Prob.~\ref{prob6.6} and complete the remaining steps needed to do hybrid Monte Carlo updates for $s$, $s_I$, and $\pi_I$. Verify that the change in the action produced by the hybrid Monte Carlo update
+Use the Slater-determinant states constructed in Probs.~\ref{prob6.2}, \ref{prob6.3}, \ref{prob6.4} as initial and final states.  In each case apply the functions or subroutines written in Prob.~\ref{prob6.5} and Prob.~\ref{prob6.6} with all coupling constants set to zero.  Verify that in each case the initial/final state is the ground state of the non-interacting system with energy equal to zero.
+\end{prob}
+
+\begin{prob}
+\label{prob6.8}
+Use the Slater-determinant states constructed in Probs.~\ref{prob6.2}, \ref{prob6.3},
+\ref{prob6.4} as initial and final states.  Using the functions or subroutines written in Prob.~\ref{prob6.5} and Prob.~\ref{prob6.6}, extend the sample code  \ref{label_5} to compute the derivatives of $V(s)$ with respect to $s({\bf n},n_t)$, $s_I({\bf n},n_t)$, and $\pi_I({\bf n},n_t)$.
+\end{prob}
+
+\begin{prob}
+\label{prob6.9}
+Take the code you have written for Prob.~\ref{prob6.8} and complete the remaining steps needed to do hybrid Monte Carlo updates for $s$, $s_I$, and $\pi_I$. Verify that the change in the action produced by the hybrid Monte Carlo update
 is scaling quadratically in $\varepsilon_{\mathrm{step}}$ in the limit
 $\varepsilon_{\mathrm{step}} \rightarrow 0$ with $N_{\rm step}\varepsilon_{\mathrm{step}}$
 held fixed.
 \end{prob}   
 
 \begin{prob}
-\label{prob6.8}
-Take the code you have written for Prob.~\ref{prob6.7} and complete the remaining
-steps needed to calculate the energy of the four-nucleon ground state by computing the ratio of the amplitudes $Z(L_t)/Z(L_t-1)$.
+\label{prob6.10}
+Take the code you have written for Prob.~\ref{prob6.9} and complete the remaining
+steps needed to calculate the energy of the ground state by computing the ratio of the amplitudes $Z(L_t)/Z(L_t-1)$.
 \end{prob}
+
+\section{Codes and Benchmarks}
+
+Complete verisons of the codes discussed in this chapter and developed in the exercises can be found online via \href{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter6-programs}{this link}.  In order to run the codes, one must first copy the corresponding initial/final wavefunctions (waveinit\_1S0.f90, waveinit\_3S1.f90, or waveinit\_He4.f90) into the file waveinit.f90 used by the main program nuclei.f90. The number of nucleons is controlled by the parameter n\_f in input.f90 and must correspond to the number of nucleons in waveinit.f90.  
+
+As an example we show the beginning of the input file input.f90 for a two nucleon state with spatial lattice spacing $a = 1/(100\;{\rm MeV})$, temporal lattice spacing $a_t = 1/(150\;{\rm MeV})$, box size $L = 4a$, and Euclidean time extent $L_t = 6a_t$.  We use an $O(a^{4})$-improved lattice action for the nucleon hopping coefficients, $O(a^{0})$-improved lattice action for the pion hopping coefficients, and $O(a^{0})$-improved lattice action for the pion-nucleon coupling. The coefficient of the $^1S_0$ contact interaction is tuned to the physical $^1S_0$ $n-p$ scattering length and is $-5.615\times 10^{-5}\;{\rm MeV}^{-2}$.  The coefficient of the $^3S_1$ contact interaction is tuned to the deuteron binding energy at infinite volume and is $-6.543\times 10^{-5}\;{\rm MeV}^{-2}$.
+
+\begin{lstlisting}[language=Fortran,caption=Parameter declarations at the beginning of the file input.f90.]
+  parameter(n_f = 2)
+  parameter(L = 4)
+  parameter(Lt = 6)
+  parameter(cutoff = 100.D0, temporalcutoff = 150.D0)
+  parameter(improveN = 2)
+  parameter(improveP = 0)
+  parameter(improveD = 0)
+  parameter(c1S0_phys = -5.615D-5)
+  parameter(c3S1_phys = -6.543D-5)
+ 
+\end{lstlisting}
+
+Using these values for the parameters of the lattice action, we now present some benchmark values which can be used to test the nuclear lattice simulations in the two-nucleon system.  The values presented in these benchmarks are computed using exact calculations of the two-nucleon transfer matrix.  They provide a useful independent check that there are no errors in the Monte Carlo simulations.  In Table~\ref{1S0} we show the energies for the $^1S_0$ spin combination
+of two nucleons.  The initial state is one
+neutron spin-up and one neutron spin-down, both at zero momentum, for $L=4a$
+and various values of
+$L_t$.  The energies are extracted by computing the
+ratio of amplitudes $Z(L_t)/Z(L_t-1)$ and setting equal to $\exp(-E\alpha_t)$.  
+
+\begin{table}[tbh]
+\caption{Benchmark energies for the $^1S_0$ spin combination
+of two nucleons.  The initial state is one
+neutron spin-up and one neutron spin-down, both at zero momentum, for $L=4a$
+and various values of $L_t$.}%
+\begin{center}
+\begin{tabular}{p{1.5cm}p{1.5cm}}
+\hline\noalign{\smallskip}
+$L_t$ & ${\rm energy (MeV)}$ \\
+\noalign{\smallskip}\svhline\noalign{\smallskip}
+$2$ & $-1.0915$  \\
+$4$ & $-1.3987$  \\
+$6$ & $-1.6209$  \\
+$8$ & $-1.7929$  \\ 
+$10$ & $-1.9296$  \\
+$12$ & $-2.0398$   \\
+$14$ & $-2.1291$   \\
+$16$ & $-2.2018$   \\
+$18$ & $-2.2610$  \\
+$20$ & $-2.3094$ \\
+\noalign{\smallskip}
+\hline\noalign{\smallskip}
+\end{tabular}
+\end{center}
+\label{1S0}%
+\end{table}
+
+We show the energies for the $^3S_1$ spin combination
+of two nucleons in Table~\ref{3S1}.  The initial state is one
+proton spin-up and one neutron spin-up, both at zero momentum, for $L=4a$
+and various values of
+$L_t$.  The energies are extracted by computing the
+ratio of amplitudes $Z(L_t)/Z(L_t-1)$ and setting equal to $\exp(-E\alpha_t)$. 
+
+
+\begin{table}[tbh]
+\caption{Benchmark energies for the $^3S_1$ spin combination
+of two nucleons.  The initial state is one
+proton spin-up and one neutron spin-up, both at zero momentum, for $L=4a$
+and various values of
+$L_t$.}%
+\begin{center}
+\begin{tabular}{p{1.5cm}p{1.5cm}}
+\hline\noalign{\smallskip}
+$L_t$ & ${\rm energy (MeV)}$ \\
+\noalign{\smallskip}\svhline\noalign{\smallskip}
+$2$ & $-1.4446 $  \\
+$4$ & $-2.0400$  \\
+$6$ & $-2.4774$  \\
+$8$ & $-2.8331$  \\ 
+$10$ & $-3.1341$  \\
+$12$ & $-3.3925$   \\
+$14$ & $-3.6151$   \\
+$16$ & $-3.8069 $   \\
+$18$ & $-3.9718$  \\
+$20$ & $-4.1132$ \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\end{tabular}
+\end{center}
+\label{3S1}%
+\end{table}
+
 
 \begin{acknowledgement}
 The author is grateful for discussions with Amy Nicholson and Morten
@@ -899,10 +1175,5 @@ financial support provided by the U.S. Department of Energy
 J\"{u}lich Supercomputing Centre.
 \end{acknowledgement}
 
-\bibliographystyle{spphys}
+\bibliographystyle{spphys} 
 \bibliography{lnp}
-
-
-
-
-

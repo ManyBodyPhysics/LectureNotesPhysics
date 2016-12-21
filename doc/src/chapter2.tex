@@ -96,9 +96,11 @@ the euclidean partition function
   S_E=\int_0^{\beta} d\tau\, \left(
    \frac{1}{4}\dot{x}^4+(x^2-\eta^2)^2 \right),
 \ee
-where $\beta=1/T$ is the inverse temperature. To see that equ.~(\ref{z})
-we can use equ.~(\ref{pathint}) to show that $Z(T)$ can be expressed in 
-terms of the eigenvalues of the Hamiltonian, $Z(T)=\sum_n\exp(-E_n/T)$. 
+where $\beta=1/T$ is the inverse temperature and we assume periodic 
+boundary conditions $x(0)=x(\beta)$. To see that equ.~(\ref{z})
+is indeed the partition function we can use equ.~(\ref{pathint}) to 
+express the path integral in terms of the eigenvalues of the Hamiltonian, 
+$Z(T)=\sum_n\exp(-E_n/T)$. 
 In the following I will describe numerical simulations using a discretized 
 version of the euclidean action. For this purpose I discretize the euclidean 
 time coordinate $\tau_j=ja,\,i=1,\ldots n$ where $a=\beta/n$ is the length 
@@ -231,7 +233,7 @@ of the Hamiltonian, but it can be used to compute imaginary time correlation
 functions
 \be
 \label{qm_cor}
- \Pi_n^E(\tau)=\langle x(\tau_1)\ldots x(\tau_n)\rangle.
+ \Pi_n^E(\tau_1,\ldots,\tau_n)=\langle x(\tau_1)\ldots x(\tau_n)\rangle.
 \ee
 Note that the average is carried out with respect to the partition 
 function in equ.~(\ref{z}). In the limit $\beta\to\infty$ this 
@@ -258,7 +260,7 @@ are known. The inverse problem is well defined in principle, but numerically
 much more difficult. The excitation energy of the first excited state 
 $\Delta E_1 = E_1-E_0$ is easy to extract from the exponential decay of the 
 two-point functions, but higher states are more difficult to compute. A 
-technique that can be used on order determine the spectral function from 
+technique for determining the spectral function from 
 euclidean correlation functions is the maximum entropy image reconstruction 
 method, see \cite{Jarrell:1996rrw,Asakawa:2000tr}.
 
@@ -291,13 +293,13 @@ looks like, and that it can explore a very complicated configuration space.
 On the other hand, in the case of one-dimensional quantum mechanics, the 
 Metropolis method is very inefficient. Using direct diagonalization in a 
 finite basis it is not difficult to compute the energies of the first 
-several states in the potential in equ.~\ref{H_dw} with a very high accuracy, 
+several states in the potential in equ.~(\ref{H_dw}) with very high accuracy, 
 $\Delta E/E_0 \sim O(10^{-6})$ or better. On the other hand, using the 
 Monte Carlo method, it is quite difficult to achieve an accuracy of 
 $O(10^{-2})$ for observable other than $(E_1-E_0)/E_0$. The advantage of the 
-Monte Carlo method is that it scales much better towards high dimensional
-systems, such as quantum mechanics of many particles, or quantum field
-theory.
+Monte Carlo method is that the computational cost scales much more 
+favorably in high dimensional systems, such as quantum mechanics of 
+many particles, or quantum field theory.
 
  The Monte Carlo method also does not directly provide the ground state
 energy, or the partition function and free energy at finite temperature.
@@ -318,11 +320,12 @@ I write the action as
 \be 
 S_\alpha=S_0+\alpha\Delta S\, , 
 \ee
-where $S$ is the full action, $S_0$ is the action of the reference system, 
-$\Delta S$ is defined by $\Delta S=S-S_0$, and $\alpha$ is a coupling 
-constant. The action $S_\alpha$ interpolates between the physical system
-and the reference system. Integrating the relation $\partial 
-\log Z(\alpha)/(\partial\alpha)=-\langle \Delta S \rangle_\alpha$ I find
+where $S_0$ is the action of the reference system, $\Delta S$ is defined 
+by $\Delta S=S-S_0$ where $S$ is the full action, and $\alpha$ can be viewed 
+as a coupling constant. The action $S_\alpha$ interpolates between the 
+physical system for $\alpha=1$ and the reference system for $\alpha=0$. 
+Integrating the relation $\partial \log Z(\alpha)/(\partial\alpha)=
+-\langle \Delta S \rangle_\alpha$ I find
 \be
 \label{adiab}
  \log(Z(\alpha\!=\!1))=\log(Z(\alpha\!=\!0)) 
@@ -330,18 +333,19 @@ and the reference system. Integrating the relation $\partial
 \ee
 where $\langle .\rangle_\alpha$ is computed using the action $S_\alpha$. In 
 the case of the anharmonic oscillator it is natural to use the harmonic 
-oscillator as a reference system. In that case
+oscillator as a reference system. In that case the reference partition
+function is 
 \be 
  Z(\alpha\!=\!0) = \sum_n \exp(-\beta E_n^0) 
   = \frac{\exp(-\beta\omega_0/2)}{1-\exp(-\beta\omega_0)},
 \ee
 where $\omega_0$ is the oscillator constant. Note that the free energy 
-of the anharmonic oscillator should be independent of the reference 
-frequency $\omega_0$. The integral over the coupling constant $\alpha$ 
-can be calculated in a Monte Carlo simulation by slowly changing $\alpha$ 
-from 0 to 1 during the simulation. Free energy calculations of this type 
-play an important role in quantum chemistry, and more efficient methods
-for determining $\Delta F$ have been developed \cite{Jarzynski:1997}.
+$F=T\log(Z)$ of the anharmonic oscillator should be independent of the 
+reference frequency $\omega_0$. The integral over the coupling constant 
+$\alpha$ can be calculated in a Monte Carlo simulation by slowly changing 
+$\alpha$ from 0 to 1 during the simulation. Free energy calculations of 
+this type play an important role in quantum chemistry, and more efficient 
+methods for determining $\Delta F$ have been developed \cite{Jarzynski:1997}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -379,7 +383,7 @@ derivative on the quark fields is
  i D_\mu q =  \left(
  i\partial_\mu + g A_\mu^a \frac{\lambda^a}{2}\right) q\, ,
 \ee
-where $m_f$ is the mass of the quarks. The terms in equ.~(\ref{l_qcd}) 
+and $m_f$ is the mass of the quarks. The terms in equ.~(\ref{l_qcd}) 
 describe the interaction between quarks and gluons, as well as nonlinear 
 three and four-gluon interactions. Note that, except for the number 
 of flavors and their masses, the structure of the QCD Lagrangian is
@@ -535,7 +539,8 @@ breaking. Here, $M={\rm diag}(m_u,m_d,m_s)$ is the quark mass matrix
 and $B$ is a low energy constant that I will fix below. 
 
  First, I will show that the parameter $f_\pi$ controls the pion decay 
-amplitude. For this purpose I have to gauge the non-linear sigma model. 
+amplitude. For this purpose I have to gauge the weak $SU(2)_L$ symmetry
+of the non-linear sigma model. 
 As usual, this is achieved by promoting the derivative to a gauge covariant 
 operator $\nabla_\mu\Sigma = \partial_\mu\Sigma+ig_w W_\mu\Sigma$ where 
 $W_\mu$ is the charged weak gauge boson and $g_w$ is the weak coupling 
@@ -544,11 +549,13 @@ interaction
 \be 
 {\mathcal L}=g_w f_\pi W^\pm_\mu \partial^\mu \pi^\mp\, .
 \ee 
-This term contributes to the amplitude for the decay $\pi^\pm\to 
-W^\pm\to e^\pm\nu_e$. We get ${\cal A}=g_wf_\pi q_\mu$, where $q_\mu$ is 
-the momentum of the pion. This result agrees with the definition of 
-$f_\pi$ in terms of the weak axial current matrix element of the pion, 
-$\langle 0|A_\mu^a|\pi^b\rangle = f_\pi q_\mu\delta^{ab}$. 
+This term contributes to the amplitude ${\cal A}$ for the decay $\pi^\pm\to 
+W^\pm\to e^\pm\nu_e$. I get ${\cal A}=g_wf_\pi q_\mu$, where $q_\mu$ is 
+the momentum of the pion. This result can be compared to the standard
+definition of $f_\pi$ in terms of the weak axial current matrix element 
+of the pion, $\langle 0|A_\mu^a|\pi^b\rangle = f_\pi q_\mu\delta^{ab}$. 
+This comparison shows that the coefficient of the kinetic term in the
+non-linear sigma model is indeed the weak decay constant of the pion.
 
  In the ground state $\Sigma=1$ and the ground state energy is $E_{vac}=
 -2B{\rm Tr}[M]$. Using the relation $\langle\bar{q}q\rangle = \partial 
@@ -732,8 +739,8 @@ establish general features of the QCD phase diagram, but quantitative
 results can only be obtained using numerical calculations based on 
 lattice QCD. The same is true for the masses of hadrons, their properties, 
 and interactions. Lattice QCD is based on the euclidean path integral 
-representation of the partition function, see
-\cite{Creutz:1983,Montvay:1994,Smit:2002,Gattringer:2009,Lin:2014} for 
+representation of the partition function, see the contribution by Hatsuda
+and \cite{Creutz:1983,Montvay:1994,Smit:2002,Gattringer:2009,Lin:2014} for 
 introductions. More detailed reviews of the lattice field theory approach 
 to hot and dense QCD can be found in \cite{Fodor:2009ax,Ding:2015ona}. 
 
@@ -808,7 +815,12 @@ In particular, the path integral in pure gauge QCD takes the form
 \label{Z_Wilson}
  Z = \int \prod_{n,\mu} dU_\mu(n)\, \exp(-S_W)\, ,
 \ee
-where $dU$ is the Haar measure on $SU(N_c)$. Using equ.~(\ref{link_var})
+where $dU$ is the Haar measure on $SU(N_c)$. The Haar measure describes
+the correct integration measure for the gauge group. Some group integrals
+are discussed by Hatsuda, but part of the beauty of the Metropolis method
+is that we never have to explicitly construct $dU_\mu(n)$. 
+
+Using equ.~(\ref{link_var})
 we can check that the Wilson action reduces to continuum pure gauge
 theory in the limit $a\to 0$. We note that the gauge invariance of QCD 
 is maintained exactly, even on a finite lattice, but that Lorentz invariance 
@@ -860,17 +872,19 @@ where $R\times T$ is the area of a rectangular loop ${\cal C}$.
 \item Tune to the continuum limit $a\to 0$ by adjusting the coupling 
 constant according to the asymptotic freedom formula equ.~(\ref{g_1l}). 
 Note that the Lambda parameter for the lattice regulator is quite small, 
-$\Lambda_{\it lat} = 28.8 \Lambda_{\bar{MS}}$ \cite{Hasenfratz:1980kn}. Note 
-that we have to increase $N_\sigma,N_\tau$ to keep the physical volume 
-constant. Indeed, we have to study the infinite volume limit $V\to
-\infty$. This is more difficult than it appears, because $a\to 0$ 
-($g\to 0$) is a critical point, and simulations exhibit critical 
+$\Lambda_{\it lat} = \Lambda_{\bar{MS}}/28.8$ \cite{Hasenfratz:1980kn}. 
+Also observe that we have to increase $N_\sigma,N_\tau$ to keep the 
+physical volume constant as $a\to 0$. Indeed, once the continuum limit
+$a\to 0$ is reached we have to study the infinite volume (thermodynamic)
+limit $V\to \infty$. This is more difficult than it appears, because 
+$a\to 0$, corresponding to $g\to 0$, is a critical point of the 
+partition function (\ref{Z_Wilson}), and simulations exhibit critical 
 slowing down. 
 
 \end{itemize}
 
 Metropolis simulations with the pure gauge Wilson action are very simple 
-and robust. As an illustration we provide a simple $Z_2$ lattice gauge 
+and robust. As an illustration I provide a simple $Z_2$ lattice gauge 
 theory code written by M.~Creutz in the appendix. Reasonable results for the 
 heavy quark potential can be obtained on fairly coarse lattices, for example 
 an $8^4$ lattice with a spacing $a\simeq 0.25$ fm \cite{Lepage:1998dt}.
@@ -921,7 +935,7 @@ property called $\gamma_5$-hermiticity, $\gamma_5 D\gamma_5=D^\dagger$,
 which implies that $\det(D)$ is real. The determinant of a two-flavor 
 theory is then real and positive. This allows us to rewrite the 
 fermion determinant as a path integral over a bosonic field with a 
-non-local action but positive action
+non-local but positive action
 \be 
 \det(D_u)\det(D_d) = 
 \det(DD^\dagger) = \int {\cal D}\phi{\cal D}\phi^\dagger\, 
@@ -1123,8 +1137,8 @@ that satisfy the Ginsparg-Wilson relation \cite{Ginsparg:1981bj}
 \ee
 where $a$ is the lattice spacing. In the continuum limit we recover
 the expected relation $ D\gamma_5 + \gamma_5 D =0$ for the massless
-Dirac operator. The important observation is that even on a discrete
-lattice
+Dirac operator. The important observation is that the fermionic 
+topological density
 \be 
 \label{q_ferm}
 q_f(n) = \frac{1}{2a^3}\, {\rm tr}_{CD}\left[ \gamma_5 D(n,n)\right] \, ,
@@ -1132,8 +1146,9 @@ q_f(n) = \frac{1}{2a^3}\, {\rm tr}_{CD}\left[ \gamma_5 D(n,n)\right] \, ,
 where ${\rm tr}_{CD}$ is a color-Dirac trace, satisfies the index
 theorem 
 \be 
- Q_{\it top}=a^4\sum_n \; q_f(n)\, . 
+ Q_{\it top}=a^4\sum_n \; q_f(n)\,  
 \ee
+on a discrete lattice. 
 Fig.~\ref{fig_top} shows the absolute square of $q_f(x)$ constructed 
 from lying eigenmodes of the Dirac operator. We observe that 
 fermionic operators can indeed be used to probe the topological content 
@@ -1187,9 +1202,9 @@ satisfy non-thermal (twisted) boundary conditions \cite{Cherman:2016hcd}.
  In section \ref{sec_fermions} I discussed some of the difficulties 
 that appear when we discretize the Dirac operator.  A separate, more 
 serious, issue with fermions is that for $\mu\neq 0$ the Dirac
-operator does not satisfy $\gamma_5$-hermiticity, the fermion 
-determinant is no longer real, and that standard importance sampling 
-methods fail. This is the ``sign'' problem already mentioned in 
+operator does not satisfy $\gamma_5$-hermiticity. This implies that  
+the fermion determinant is no longer real, and that standard importance 
+sampling methods fail. This is the ``sign'' problem already mentioned in 
 Sect.~\ref{sec_qcd_T}. To understand the severity of the problem 
 consider a generic expectation value 
 \be
@@ -1224,7 +1239,8 @@ and that the ratio equ.~(\ref{O_pq}) is very difficult to compute.
 
 As a specific example consider QCD with two degenerate flavors, up and
 down, and a baryon chemical potential $\mu_u=\mu_d=\mu_B/3$. Then 
-$\det(D)=\det(D_u)\det(D_d)$ and $|\det(D)|=\det(D_u)\det(D_d)^*$, and
+$\det(D)=\det(D_u)\det(D_d)$ and $|\det(D)|=\det(D_u)\det(D_d)^*$.
+The phase quenched partition function 
 $Z_{pq}$ can be interpreted as the partition function of QCD with a
 non-zero isospin chemical potential $\mu_u=-\mu_d=\mu_I/2$. The small
 $\mu$ behavior of both the isospin and baryon number theories at $T=0$
@@ -1258,9 +1274,18 @@ of an $A$ nucleon correlation function is
 \be 
  \frac{\cal S}{\cal N} \sim \exp(-A(m_p -3m_\pi/2)\tau) \, . 
 \ee
-In order to resolve nuclear binding effects we have to go to distances
-of order $\tau\sim 1/B\sim 10$ fm. It may be possible to improve on this
-by using variationally improved sources, but even for $\tau\simeq 2$ fm the 
+In order to resolve the ground state with a given $A$ we have to 
+make $\tau$ sufficiently large so that excited states with the same
+$A$ are suppressed. For $A=1$ there is a $\pi N$ continuum starting 
+an excitation energy $\Delta E=m_\pi$, and the first resonance at 
+$\Delta E=m_\Delta-m_N\simeq 300$ MeV. This means that we have to 
+consider $\tau\gsim 1$ fm. For multi-nucleon states the situation
+is more complicated, because there are many closely spaced multi-nucleon
+states in a finite volume. The problem is studied, for example, in 
+\cite{Beane:2003da}. The conclusion is that different bound and 
+scattering states are separated by 10s of MeV, requiring $\tau\gsim
+4$ fm. It may be possible to improve on this estimate by using 
+variationally improved sources, but even for $\tau\simeq 2$ fm the 
 signal to noise is extremely poor for $A\gsim 4$. This shows that in 
 simulations with fixed $A$ the sign problem manifests itself as a 
 noise problem. This is not surprising. One way to think about the 
@@ -1316,7 +1341,7 @@ at least in the elastic regime. This is discussed in some of the later
 chapters of this book. Here, I will concentrate on the calculation
 of real time response functions. The prototypical example is the 
 calculation of the shear viscosity of a QCD plasma using the retarded 
-correlation function of the stress tensor $T_{xy}$, 
+correlation function of the stress tensor $T^{xy}$, 
 \be
 \label{G_ret}
 G^{xy,xy}_R(\omega,\vec{k}) = -i\int dt\int d^3x\, 
@@ -1325,10 +1350,13 @@ G^{xy,xy}_R(\omega,\vec{k}) = -i\int dt\int d^3x\,
 \ee
 The associated spectral function is defined by $\rho(\omega,\vec{k})
 =-\,{\rm Im}\,G_R(\omega,\vec{k})$. The imaginary part of the retarded 
-correlator is a measure of dissipation. Fluid dynamics is an effective
-theory of the response function in the low energy, small momentum
-limit \cite{Schafer:2009dj,Schaefer:2014awa}. The static response is
-determined by the pressure of the fluid, and the leading energy and
+correlator is a measure of dissipation. This relation can be made 
+more precise using fluid dynamics, which is an effective theory of 
+the response function in the low energy, small momentum limit 
+\cite{Schafer:2009dj,Schaefer:2014awa}. 
+
+ Linearized fluid dynamics shows that the static response function is
+determined by the pressure of the fluid, and that the leading energy and
 momentum dependence is governed by transport coefficients. These
 relations can be used to derive Kubo formulas, expressions for the 
 transport coefficients in terms of retarded correlation functions. 
@@ -1385,8 +1413,9 @@ optimize the contribution from the transport peak by measuring
 the correlation functions of conserved charges, such as energy and 
 momentum density, at non-zero spatial momentum 
 \cite{Aarts:2006wt,Meyer:2008gt}. A possible issue with lattice 
-calculations is that effects of poor resolution tend to favor small 
-values of $\eta/s$. The finite temperature spectral function satisfies 
+calculations is that effects of poor resolution tend to bias the result
+towards small values of $\eta/s$, where $s$ is the entropy density. 
+The finite temperature spectral function satisfies 
 the sum rule \cite{Romatschke:2009ng}
 \be 
 \frac{2}{\pi} \int d\omega\, 
@@ -1394,8 +1423,9 @@ the sum rule \cite{Romatschke:2009ng}
   \frac{3}{10}\, sT\, , 
 \ee
 where $\eta(\omega) = \rho(\omega)/\omega$. On the lattice it is 
-difficult to resolve sharp features in the spectral function. I will
-therefore assume that the $T\neq 0$ spectral function is a Lorentzian
+difficult to resolve sharp features in the spectral function. Roughly,
+the resolution is limited by the lowest Matsubara frequency $\pi T$. I 
+will therefore assume that the $T\neq 0$ spectral function is a Lorentzian
 with width $\pi T$
 \be
 \eta(\omega) -\eta_{T\!=\!0}(\omega) \simeq
@@ -1403,9 +1433,9 @@ with width $\pi T$
 \ee
 Then the integral on the lhs is equal to $\eta(0)\pi T$, and the sum
 rule predicts $\eta/s\sim 3/(10\pi)$, quite close to $\eta/s=1/(4\pi)$. 
-The lesson is that it is easier to obtain small values of $\eta/s$, 
-suggested by holography, and much more difficult to obtain large
-values of $\eta/s$, predicted by perturbative QCD \cite{Arnold:2000dr}. 
+The lesson is that it is easy to obtain small values of $\eta/s$, and 
+much more difficult to obtain large values of $\eta/s$, predicted by 
+perturbative QCD \cite{Arnold:2000dr}. 
 
  The first calculation of the shear viscosity on the lattice was 
 performed by Karsch and Wyld \cite{Karsch:1986cq}. More recently, the 
@@ -1598,7 +1628,7 @@ fluid.
 
 The fluid dynamic equations form a set of partial differential 
 equations (PDEs) that can be solved in a variety of ways. I will 
-focus here on grid based methods. The main difficulties that numerical 
+focus here on grid based methods. The main difficulties that a numerical 
 method needs to address are: i) The existence of surfaces of 
 discontinuity (shocks), ii) the need to implement global conservation
 laws exactly, even on a coarse lattice, iii) the existence of 
@@ -1741,6 +1771,24 @@ the development of the anisotropic hydrodynamics method
 \cite{Florkowski:2010cf,Martinez:2010sc,Bluhm:2015raa,Bluhm:2015bzi}, 
 and applications of the lattice Boltzmann method to problems in nuclear 
 and atomic physics \cite{Romatschke:2011hm,Brewer:2015hua}.
+
+ In the relativistic regime recent progress includes the development of 
+stable and causal viscous fluid dynamics codes 
+\cite{Romatschke:2009im,Jeon:2015dfa}. The problem with a naive 
+implementation of the relativistic Navier-Stokes equation derived
+by Landau is that viscous stresses are determined by the instantaneous
+value of the shear strain $\nabla_i u_j$. This leads to acausal
+propagation of shear waves and possible instabilities. This is not 
+a fundamental problem with fluid dynamics. Acausal behavior occurs 
+in the regime of high wave numbers in which fluid dynamics is not 
+expected to be reliable. However, high wave number instabilities 
+prohibit numerical implementations. The solution is to go to next order
+in the gradient expansion, which includes the finite relaxation time 
+of viscous stresses. In practice, second order fluid dynamics codes
+are usually based on the idea of transient fluid dynamics. In this
+method, the shear stresses $\delta\Pi_{ij}$ are promoted to fluid
+dynamic variables, which satisfy separate fluid dynamic equations, 
+see \cite{Romatschke:2009im,Jeon:2015dfa}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Kinetic theory}
@@ -2205,8 +2253,8 @@ of $\delta g_x^y$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
 \begin{center}
-\includegraphics*[width=6.5cm]{Chapter2-figures/AdS5_Schwarz_eta_w_txt.eps}
-\includegraphics*[width=6.5cm]{Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.eps}
+\includegraphics*[width=6.5cm]{Chapter2-figures/AdS5_Schwarz_eta_w_txt.pdf}
+\includegraphics*[width=6.5cm]{Chapter2-figures/AdS5_Schwarz_eta_w_subtr_txt.pdf}
 \end{center}
 \caption{\label{fig_ads_spec_fct}
 Viscosity spectral function in a ${\cal N}=4$ SUSY Yang Mills plasma. 
@@ -2361,7 +2409,7 @@ many problems that are of great interest to mathematicians. Both the
 Yang-Mills existence and mass gap as well as the Navier-Stokes existence 
 and smoothness problems are among the Clay Millenium Prize problems
 \cite{Clay-YM,Clay-NS}. Interesting work on the Boltzmann equation was 
-recently recognized with a Field medal \cite{Villani:2009}, and gradient 
+recently recognized with a Fields medal \cite{Villani:2009}, and gradient 
 flow plays an important role in the proof of the Poincare conjecture
 \cite{Perelman}. 
 
