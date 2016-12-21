@@ -3,60 +3,75 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter11.aux
 The style file: spphys.bst
 Database file #1: lnp.bib
-I was expecting a `,' or a `}'---line 3539 of file lnp.bib
+I was expecting a `,' or a `}'---line 3555 of file lnp.bib
  :   
  :   archiveprefix            = {arXiv},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 6227 of file lnp.bib
+I was expecting a `,' or a `}'---line 4343 of file lnp.bib
+ :   
+ :   Address = {New Jersey, USA}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4582 of file lnp.bib
+ :     
+ :     Address = {Cambridge, USA},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 7207 of file lnp.bib
  : 
  : @book{TinkhamBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "Schirmar9?"
-Warning--I didn't find a database entry for "Som14a"
-Warning--I didn't find a database entry for "RingSchuck"
-Warning--empty title in Raimondi_inprep
-You've used 25 entries,
+Warning--I didn't find a database entry for "Frick2003"
+Warning--I didn't find a database entry for "Frick2005"
+Warning--I didn't find a database entry for "Rios2006C74"
+Warning--I didn't find a database entry for "Rios2008"
+Warning--I didn't find a database entry for "Rios2009"
+Warning--I didn't find a database entry for "Soma2006"
+Warning--I didn't find a database entry for "Soma2008"
+Warning--I didn't find a database entry for "Soma2009"
+Warning--empty title in ch11_Raimondi_inprep
+Warning--empty title in ch11_Barb_unp
+You've used 69 entries,
             2812 wiz_defined-function locations,
-            778 strings with 7944 characters,
-and the built_in function-call counts, 8414 in all, are:
-= -- 536
-> -- 219
+            1060 strings with 15663 characters,
+and the built_in function-call counts, 22404 in all, are:
+= -- 1417
+> -- 584
 < -- 2
-+ -- 89
-- -- 64
-* -- 498
-:= -- 969
-add.period$ -- 1
-call.type$ -- 25
-change.case$ -- 5
++ -- 240
+- -- 171
+* -- 1306
+:= -- 2582
+add.period$ -- 6
+call.type$ -- 69
+change.case$ -- 10
 chr.to.int$ -- 6
-cite$ -- 26
-duplicate$ -- 892
-empty$ -- 897
-format.name$ -- 85
-if$ -- 1941
+cite$ -- 71
+duplicate$ -- 2435
+empty$ -- 2410
+format.name$ -- 225
+if$ -- 5153
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 236
-newline$ -- 84
-num.names$ -- 25
-pop$ -- 374
+int.to.str$ -- 69
+missing$ -- 640
+newline$ -- 221
+num.names$ -- 69
+pop$ -- 1021
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 260
+skip$ -- 658
 stack$ -- 0
-substring$ -- 370
-swap$ -- 500
+substring$ -- 900
+swap$ -- 1372
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 49
-width$ -- 27
-write$ -- 207
-(There were 2 error messages)
+warning$ -- 2
+while$ -- 129
+width$ -- 71
+write$ -- 564
+(There were 4 error messages)
