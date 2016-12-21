@@ -998,8 +998,8 @@ the NNLO three-nucleon force (3NF); $c_1,c_3,$ and $c_4$ are
 associated with the three-body two-pion-exchange (2PE) diagram, $c_D$
 and $c_E$ determine the strength of the one-pion-exchange plus contact
 (1PE) diagram and the pure contact (CNT) diagram,
-respectively. The work of Refs.~\cite{epelbaum2002,epelbaum2009} 
-gives an extensive discussions of these terms and we refer the reader to these references for further details.
+respectively. References ~\cite{epelbaum2002,epelbaum2009} 
+give an extensive discussions of these terms.
 
 \section{Hartree-Fock theory}\label{sec:chap8hf}
 
@@ -3518,11 +3518,7 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-<<<<<<< HEAD
-while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model. With a canonical Hartree-Fock basis, as studied in the examples below, all diagrams with so-called Hartree-Fock insertions disappear. The MBPT calculations, as well as the CCD calculations have all been done with a canonical Hartree-Fock basis. For the pairing model the single-particle energies implify to those in Table \ref{tab:pairingmodelsp}. 
-=======
-while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) do not contribute either if we work in the canonical Hartree-Fock basis.
->>>>>>> origin/master
+while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) do not contribute either if we work with a canonical Hartree-Fock basis.
   In the case of the simple pairing model it is easy to calculate
   $\Delta E_{MBPT2}$ analytically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
 We restate this expression here but restrict the sums over single-particle states
@@ -3571,8 +3567,8 @@ guarantee that higher orders in many-body perturbation theory may
 reduce the relative error in a systematic way.  Adding fourth order
 contributions as shown in Fig.~\ref{fig:pairingccmbpt4} for negative
 interaction strengths gives a better result than second and third
-order, while for $g>0$ the relative error is worse.  The fourth order
-contributions (not shown in the above figure) include also
+order.  The fourth order
+contributions include also
 four-particle-four-hole correlations.  However, the disagreement for
 stronger interaction values hints at the possibility that many-body
 perturbation theory may not converge order by order.  Perturbative
@@ -3590,7 +3586,7 @@ agreement with the exact results. For larger values of $g$ one will
 however observe larger discrepancies.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/CCDMBPT4theory.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to third order (MBPT3) for a range of interaction values.}
+    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to third  (MBPT3) and fourth order (MBPT4) for a range of interaction values.}
     \label{fig:pairingccmbpt4}
   \end{figure}
 In Table \ref{tab:selectedbenchmarks} we list for the sake of completeness also our coupled cluster results at the CCD level for the same system.
