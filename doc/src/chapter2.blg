@@ -3,57 +3,71 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter2.aux
 The style file: spphys.bst
 Database file #1: lnp.bib
-I was expecting a `,' or a `}'---line 3539 of file lnp.bib
+I was expecting a `,' or a `}'---line 3555 of file lnp.bib
  :   
  :   archiveprefix            = {arXiv},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 6227 of file lnp.bib
+I was expecting a `,' or a `}'---line 4343 of file lnp.bib
+ :   
+ :   Address = {New Jersey, USA}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4582 of file lnp.bib
+ :     
+ :     Address = {Cambridge, USA},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 7207 of file lnp.bib
  : 
  : @book{TinkhamBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Repeated entry---line 10394 of file lnp.bib
+ : @article{Beane:2003da
+ :                      ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in Mrowczynski:2016etf
 Warning--empty journal in CasalderreySolana:2011us
-You've used 135 entries,
+You've used 136 entries,
             2812 wiz_defined-function locations,
-            1427 strings with 24898 characters,
-and the built_in function-call counts, 42320 in all, are:
-= -- 2683
-> -- 1107
+            1432 strings with 25017 characters,
+and the built_in function-call counts, 42668 in all, are:
+= -- 2703
+> -- 1120
 < -- 2
-+ -- 459
-- -- 324
-* -- 2386
-:= -- 4911
++ -- 464
+- -- 328
+* -- 2407
+:= -- 4952
 add.period$ -- 17
-call.type$ -- 135
+call.type$ -- 136
 change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 137
-duplicate$ -- 4718
-empty$ -- 4572
-format.name$ -- 423
-if$ -- 9721
+cite$ -- 138
+duplicate$ -- 4757
+empty$ -- 4607
+format.name$ -- 428
+if$ -- 9799
 int.to.chr$ -- 0
-int.to.str$ -- 135
-missing$ -- 1242
-newline$ -- 430
-num.names$ -- 135
-pop$ -- 1924
+int.to.str$ -- 136
+missing$ -- 1253
+newline$ -- 433
+num.names$ -- 136
+pop$ -- 1940
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1247
+skip$ -- 1256
 stack$ -- 0
-substring$ -- 1488
-swap$ -- 2605
+substring$ -- 1498
+swap$ -- 2628
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 252
-width$ -- 138
-write$ -- 1101
-(There were 2 error messages)
+while$ -- 254
+width$ -- 139
+write$ -- 1109
+(There were 5 error messages)
