@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter11.aux
+The style file: spphys.bst
+Database file #1: lnp.bib
+I was expecting a `,' or a `}'---line 3539 of file lnp.bib
+ :   
+ :   archiveprefix            = {arXiv},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6227 of file lnp.bib
+ : 
+ : @book{TinkhamBook,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Schirmar9?"
+Warning--I didn't find a database entry for "Som14a"
+Warning--I didn't find a database entry for "RingSchuck"
+Warning--empty title in Raimondi_inprep
+You've used 25 entries,
+            2812 wiz_defined-function locations,
+            778 strings with 7944 characters,
+and the built_in function-call counts, 8414 in all, are:
+= -- 536
+> -- 219
+< -- 2
++ -- 89
+- -- 64
+* -- 498
+:= -- 969
+add.period$ -- 1
+call.type$ -- 25
+change.case$ -- 5
+chr.to.int$ -- 6
+cite$ -- 26
+duplicate$ -- 892
+empty$ -- 897
+format.name$ -- 85
+if$ -- 1941
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 236
+newline$ -- 84
+num.names$ -- 25
+pop$ -- 374
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 260
+stack$ -- 0
+substring$ -- 370
+swap$ -- 500
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 49
+width$ -- 27
+write$ -- 207
+(There were 2 error messages)
