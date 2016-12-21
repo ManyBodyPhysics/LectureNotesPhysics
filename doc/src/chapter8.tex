@@ -2077,7 +2077,7 @@ We assume the reader is familiar
 with the standard rules for deriving and setting up the analytical expressions for various Feymann-Goldstone diagrams \cite{shavittbartlett2009}.
 \begin{figure}[hbtp]
     \includegraphics[width=0.7\linewidth,angle=90]{Chapter8-figures/mbpt.pdf}
-      \caption{Diagrams which enter the definition of the ground-state
+      \caption{Linked anti-symmetrized Goldstone diagrams which enter the definition of the ground-state
       correlation energy $\Delta E_0$ to third order in the interaction. We have not included the first-order contribution.}
       \label{fig:goldstone}
 \end{figure}
@@ -2673,7 +2673,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   we obtain that the energy can be written as
   \[
   \langle \Phi_0 \vert
-  \exp{-\left(\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
+  \exp{\left(-\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert
   \Phi_0\rangle = \langle \Phi_0 \vert \hat{H}_N(1+\hat{T}_2)\vert
   \Phi_0\rangle = E_{CCD}.
   \]
@@ -2715,6 +2715,7 @@ We leave it as a challenge to the reader to derive the corresponding equations f
   \[
   \hat{P}(ij\vert ab) = (1-\hat{P}_{ij})(1-\hat{P}_{ab}).
   \]
+  The single-particle energies $\epsilon_p$ are normally taken to be Hartree-Fock single-particle energies.
   Recall also that the unknown amplitudes $t_{ij}^{ab}$ represent
   anti-symmetrized matrix elements, meaning that they obey the same
   symmetry relations as the two-body interaction, that is
@@ -2743,14 +2744,15 @@ The standard method for solving these equations is to
   theory to first order in the interaction.  This means that we define
   the zeroth approximation to the amplitudes as
   \[
-  t^{(0)}=\frac{\langle ab \vert \hat{v} \vert ij
+  (t_{ij}^{ab})^{(0)}=\frac{\langle ab \vert \hat{v} \vert ij
     \rangle}{\left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)},
   \]
   leading to our first approximation for the correlation energy at the
   CCD level to be equal to second-order perturbation theory without
   $1p-1h$ excitations, namely
   \[
-  \Delta E_{\mathrm{CCD}}^{(0)}=\frac{1}{4}\sum_{abij} \frac{\langle
+  \Delta E_{\mathrm{CCD}}^{(0)}=\frac{1}{4}\sum_{abij}\langle
+    ij \vert \hat{v} \vert ab \rangle(t_{ij}^{ab})^{(0)}=\frac{1}{4}\sum_{abij} \frac{\langle
     ij \vert \hat{v} \vert ab \rangle \langle ab \vert \hat{v} \vert
     ij
     \rangle}{\left(\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b\right)}.
@@ -2769,7 +2771,7 @@ The standard method for solving these equations is to
   \langle ab \vert \hat{v} \vert cd \rangle t_{ij}^{cd}.
   \label{eq:ccd1}
   \end{equation}
-
+In the above and following equations we have dropped the subscript which indicates the number of iterations. 
   Setting the single-particle energies for the hole states equal to an
   energy variable $\omega = \epsilon_i+\epsilon_j$,
   Eq.~(\ref{eq:ccd1}) reduces to the well-known equations for the
@@ -2794,7 +2796,7 @@ The standard method for solving these equations is to
   \]
   where we have inserted an explicit energy dependence via the parameter $\omega$. This
   equation, transforming a two-particle configuration into a single
-  index, can be rewritten as  a matrix inversion problem.  Solving
+  index, can be rewritten as  a matrix inversion problem.  Alternatively, the same equation can be solved by iteration. Solving
   the equations for a fixed energy $\omega$ allows us to compare
   directly with results from Green's function theory when only
   two-particle intermediate states are included.
@@ -2804,7 +2806,7 @@ The standard method for solving these equations is to
   first order in perturbation theory, leading to a zeroth-order
   approximation for the correlation energy given by second-order perturbation
   theory.  A simple approach to the
-  solution of Eq.~(\ref{eq:ccd1}), is to thus to
+  solution of Eq.~(\ref{eq:ccd1}), is thus to
   \begin{enumerate}
   \item Start with a guess for the amplitudes and compute the zeroth
     approximation to the correlation energy
@@ -2847,17 +2849,17 @@ science to understand what can go wrong with our algorithms when the problem is
 discretized and solved on a digital computer, and in software engineering to
 develop and maintain a computer program that solves our problem.
 
-Indenpendent of your scientific background, you are probably also educated in
+Independent of your scientific background, you are probably also educated in
 mathematics and numerics. Unfortunately, the computer science and
 software engeneering aspects of computing are often neglected and thought of as
 skills you pick up along the way. This is a problem for many reasons. First,
 running a numerical project is very similar to running a
-physical experiment. Your codes are the blueprints the compiler uses to build
+physical experiment. The codes we develop are the blueprints the compiler uses to build
 the experiment from the components of the computer. It is unthinkable to publish
 results from a physical experiment without a thorough understanding of the
 experimental
 equipment. Second, the blueprints are not only used to tell the compiler what to
-build, but also by humans to understand what is beeing built, how to fix
+build, but also by humans to understand what is being built, how to fix
 it if something goes wrong, and how to improve it. If the blueprints are not
 properly written and readable, human understanding is lost. Last, components of an experiment
 are always tested individually to establish tolerances and that they work
@@ -2988,7 +2990,7 @@ caption=Trivial implementation of a MBPT2 diagram. \label{code:mbpt2V06}]
 {Chapter8-programs/cpp/MBPT/mbpt2V00.cpp}
 
 Listing \ref{code:mbpt2V06} shows a possible early implementation to solve Eq.~\ref{eq:bruteforceMBPT} from MBPT2. This function has a loop over all single-particle indices and calls the
-V\_Minnesota function to calculate the two-body interaction for each set of
+V\_Minnesota function via the get\_element function to calculate the two-body interaction for each set of
 indices. The energy denominators are calculated from the single-particle
 energies stored in the modelspace structure and partial results are accumulated into
 the energy variable.
@@ -3315,7 +3317,7 @@ opted for a specific mathematical method for solving Schr\"odinger's equation. H
 Our basic steps can then be split up as follows 
   \begin{itemize}
 \item Write a first version of the CCD  code which is as close as possible to the mathematics of your equations. In this stage we will not 
-focus on high-performance computing aspects and code efficiency.
+focus on high-performance computing aspects and code efficiency. This will mimick our discussion of many-body perturbation theory, in particular the calculation of the correlation energy to second order discussed above. 
 \item Try to find possible benchmarks you can test your code against. In our case, the pairing model serves as an excellent testcase. 
 \item With a functioning code that reproduces possible analytical and/or numerical results, we can start to analyze our code. In particular, if there are mathematical operations which can be simplified and/or can be represented in simpler ways etc etc. The modified code can hopefully reduce memory needs and time spent on computations.  The usage of specific symmetries of the interaction will turn out particularly useful. 
 \end{itemize}
@@ -3515,7 +3517,7 @@ one representing the ground state and zero-particle-zero-hole excitations $0p-0h
   matrix for a given span of interaction strength values, performing
   a full configuration interaction calculation. It plots the correlation energy, that is the difference between the ground state energy and the reference energy. Furthermore, for the pairing model we have added results from perturbation theory to second order (MBPT2)
 and third order in the interaction MBPT3. Second order perturbation theory includes diagram (2) of Fig.~\ref{fig:goldstone}
-while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model and that diagrams (8) and (9) contribute as well with a canonical Hartree-Fock basis. 
+while MBPT3 includes diagrams (3), (4), (5), (8) and (9) as well. Note that diagram (3) is zero for the pairing model. With a canonical Hartree-Fock basis, as studied in the examples below, all diagrams with so-called Hartree-Fock insertions disappear. The MBPT calculations, as well as the CCD calculations have all been done with a canonical Hartree-Fock basis. For the pairing model the single-particle energies implify to those in Table \ref{tab:pairingmodelsp}. 
   In the case of the simple pairing model it is easy to calculate
   $\Delta E_{MBPT2}$ anyltically. This is a very useful  check of our codes since this analytical expression  can  also be used to check our first CCD iteration.
 We restate this expression here but restrict the sums over single-particle states
@@ -3541,15 +3543,16 @@ which translates into
 Figure \ref{fig:diagpairing} shows the resulting correlation energies for the exact case, MBPT2 and MBPT3.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/perturbationtheory.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values.}
+    \caption{Correlation energy for the pairing model with exact diagonalization, MBPT2 and perturbation theory to third order MBPT3 for a range of interaction values. A canonical Hartree-Fock basis has been employed in all MBPT calculations.}
     \label{fig:diagpairing}
   \end{figure}
 We note from the above program that we have coded the expressions for
 the various diagrams following strictly the mathematical expressions
 of for example Eqs.~(\ref{eq:diag3})-(\ref{eq:diag5}).  This means
 that for every diagram we loop explicitely over every single-particle
-state. As we will see later, this is extremely inefficient from a
-computational point of view. In our discussions below, we will rewrite
+state. The python program linked to above is included mainly for pedagogical reasons. As 
+we have already seen, this approach is extremely inefficient from a
+computational point of view. In our discussions of MBPT, as well as for CCD code, we rewrite
 the computations of most diagrams in terms of efficient matrix-matrix
 multiplications or matrix-vector multiplications.  Figure
 \ref{fig:diagpairing} shows us that the approximation to both second
@@ -3565,7 +3568,7 @@ contributions as shown in Fig.~\ref{fig:pairingccmbpt4} for negative
 interaction strengths gives a better result than second and third
 order, while for $g>0$ the relative error is worse.  The fourth order
 contributions (not shown in the above figure) include also
-four-particle-four-hole correaltions.  However, the disagreement for
+four-particle-four-hole correlations.  However, the disagreement for
 stronger interaction values hints at the possibility that many-body
 perturbation theory may not converge order by order.  Perturbative
 studies of nuclear systems may thus be questionable, unless selected
@@ -3576,15 +3579,13 @@ theory either overshooting or undershooting the true ground state
 correlation energy.  The coupled cluster results are included in
 Fig.~\ref{fig:pairingccmbpt4} where we display the difference between
 the exact correlation energy and the correlation energy obtained with
-many-body perturbation theory to fourth order.  The MBPT4 results show
-a better agreement with the exact solution, but here as well for
-larger positive values of the interaction, we see clear signs of
-deviations. Coupled cluster theory with doubles only shows a very good
+many-body perturbation theory to third order.  
+Coupled cluster theory with doubles only shows a very good
 agreement with the exact results. For larger values of $g$ one will
 however observe larger discrepancies.
   \begin{figure}
     \includegraphics[width=\linewidth]{Chapter8-figures/CCDMBPT4theory.pdf}
-    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to fourth order (MBPT4) for a range of interaction values.}
+    \caption{Correlation energy for the pairing model with exact diagonalization, CCD and perturbation theory to third order (MBPT3) for a range of interaction values.}
     \label{fig:pairingccmbpt4}
   \end{figure}
 In Table \ref{tab:selectedbenchmarks} we list for the sake of completeness also our coupled cluster results at the CCD level for the same system.
@@ -3765,8 +3766,8 @@ example, we have in total $2713$ single-particle states.  Using the
 smarter algorithm the final calculation time is $2.4$ s (this is the
 average time from ten numerical experiments).  The total time using
 the brute force summation over single-particle indices is $100.6$ s
-(again the average of ten numerical experiments), resulting in a speed
-up of 42. It is useful to dissect the final time in terms of different
+(again the average of ten numerical experiments), resulting in a considerable speed up.
+It is useful to dissect the final time in terms of different
 operations.  For the smarter algorithm most of the time is spent
 setting up the matrix elements for the two-body channels and to load
 the matrix elements. The final matrix-matrix multiplication takes only
@@ -3792,13 +3793,10 @@ Hamiltonian,
   \begin{equation}
   \frac{-\hbar^2}{2m}\nabla^2\mathop{\phi(\vec{x})}=\epsilon\mathop{\phi(\vec{x})}.
   \end{equation}
-  For a finite basis, we approximate the problem by constructing a box
+  For a finite basis, as discussed earlier, we approximate the problem by constructing a box
   with sides of length $L$, which quantizes the momentum, and impose
-  periodic boundary conditions in each direction.
-  \begin{align}
-  \mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)}
-  \\ \mathop{\phi_{\vec{k}}(\vec{x})}=\frac{1}{\sqrt{L^{3}}}e^{i\vec{k}\cdot\vec{x}},\hspace{0.5cm}\vec{k}=\frac{2\pi\vec{n}}{L}
-  \end{align}
+  periodic boundary conditions in each direction by requiring 
+  $\mathop{\phi(x_{i})}=\mathop{\phi(x_{i}+L)}$.
 
   The first step in calculating infinite matter is to construct a
   model space by finding every single-particle state relevant to a
@@ -3974,8 +3972,8 @@ a fixed number of neutrons $N=114$.
       model space sizes with $\mathrm{A=114}$.}
     \label{fig:fig2}
   \end{figure}
-We see from the last figure that at the CCD level and neutron matter only there is a good convergence with  $\mathrm{N_{max}=25}$.
-This results depends however on the type of interaction and many-body approximation. 
+We see from Fig.~\ref{fig:fig2} that at the CCD level and neutron matter only there is a good convergence with  $\mathrm{N_{max}=25}$.
+These results depends however on the type of interaction and many-body approximation. 
 
 In these calculations we
 approximated our problem with periodic boundary conditions,
