@@ -4466,7 +4466,40 @@ EOM-IMSRG($m$,$n$) is the same as that of the IMSRG($\max{m,n}$), e.g., $\OC(N^6
 for the EOM-IMSRG(2,2) scheme that is the method we primarily use at this point 
 \cite{Parzuchowski:2016pi}. 
 
-\tbd{[Need an example from Nathan.]}
+\begin{figure}[t]
+  \setlength{\unitlength}{\textwidth}
+  \begin{picture}(1.0000,0.5000)
+    \put(0.1500,0.0000){\includegraphics[height=0.51\unitlength]{\fdir/C14_spec.pdf}}
+    \put(0.5000,0.0000){\includegraphics[height=0.51\unitlength]{\fdir/O22_spec.pdf}}
+  \end{picture}
+  \caption{\label{fig:eom}EOM-IMSRG(2,2) excitation spectra of $\nuc{C}{14}$ and $\nuc{O}{22}$,
+  calculated with the chiral $NN+3N(400)$ Hamiltonian for $\lambdaSRG=1.88\,\fmi$ (
+  cf.~Fig.~\ref{fig:Ospectra}), compared with experimental data.}
+\end{figure}
+
+In Fig.~\ref{fig:eom}, we show sample spectra of $\nuc{C}{14}$ and $\nuc{O}{22}$
+from EOM-IMSRG(2,2) calculations with the chiral $NN+3N(400)$ Hamiltonian 
+($\lambdaSRG=1.88\,\fmi$). We see that certain levels seem to be reproduced
+quite well, while experimentally observed states below $8\,\MeV$ are either 
+missing in the calculation in the case of $\nuc{C}{14}$), or found at higher 
+excitation theoretical excitation energy in the case of $\nuc{O}{22}$. In the
+latter case, we can compare the EOM-IMSRG(2,2) calculation to the IMSRG+SM
+spectrum shown in Fig.~\ref{fig:Ospectra}, in which the group of $2^+,3^+,4^+$
+states is found much closer to their experimental counterparts. This suggests that
+the overestimation of the excitation energy in the EOM approach is caused by the
+truncation of the ladder operator at the $2p2h$ level, while the Shell model
+contains all allowed $npnh$ excitations in the valence space. Conversely, we can
+conclude that the states that the EOM-IMSRG(2,2) is reproducing well are dominated
+by $1p1h$ and $2p2h$ excitations \cite{Parzuchowski:2016pi}. 
+
+An advantage of the EOM-IMSRG(2,2) over the IMSRG+SM is that
+it allows us to compute negative parity states, to the level of accuracy
+that the truncation allows. In the Shell model, the description of such
+states requires a valence space consisting of two major shells, which 
+usually makes the exact diagonalization prohibitively expensive, especially
+in $sd-$shell nuclei and beyond.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
