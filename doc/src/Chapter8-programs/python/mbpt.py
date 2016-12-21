@@ -16,6 +16,15 @@ def h0(p,q):
     else:
         return 0
 
+def h(p,q):
+    if p == q:
+        s = h0(p,p)
+        for i in below_fermi:
+            s += assym(p,i,p,i)
+        return s
+    else:
+        return 0
+
 def f(p,q):
     if p == q:
         return 0
@@ -42,12 +51,10 @@ def assym(p,q,r,s):
 
 def eps(holes, particles):
     E = 0
-    for h in holes:
-        p, s = states[h]
-        E += (p-1)
-    for p in particles:
-        p, s = states[p]
-        E -= (p-1)
+    for i in holes:
+        E += h(i,i)
+    for a in particles:
+        E -= h(a,a)
     return E
 
 
@@ -58,6 +65,7 @@ for a in above_fermi:
         for i in below_fermi:
             for j in below_fermi:
                 s1 += 0.25*assym(a,b,i,j)*assym(i,j,a,b)/eps((i,j),(a,b))
+                print i,j,a,b,eps((i,j),(a,b)), s1
 
 
 # Diagram 3
@@ -113,6 +121,10 @@ e1 = []
 corr2 = []
 corr3 = []
 
+
+print s1
+print s1+s3+s4+s5
+
 for g_val in ga:
     H1 = matrix([[2-g_val , -g_val/2.,  -g_val/2., -g_val/2., -g_val/2.,     0],
                          [-g_val/2.,   4-g_val,  -g_val/2., -g_val/2.,    0., -g_val/2.],
@@ -120,6 +132,8 @@ for g_val in ga:
                  [-g_val/2., -g_val/2.,      0,   6-g_val, -g_val/2., -g_val/2.],
                  [-g_val/2.,     0,  -g_val/2., -g_val/2.,   8-g_val, -g_val/2.],
                  [0    , -g_val/2.,  -g_val/2., -g_val/2., -g_val/2.,  10-g_val]])
+
+    print (s1).subs(g,g_val),(s1+s3+s4+s5).subs(g,g_val)
 
     u1, v1 = linalg.eig(H1)
     e1.append(min(u1))
