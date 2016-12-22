@@ -23,19 +23,11 @@ I was expecting a `,' or a `}'---line 7207 of file lnp.bib
  : @book{TinkhamBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Frick2003"
-Warning--I didn't find a database entry for "Frick2005"
-Warning--I didn't find a database entry for "Rios2006C74"
-Warning--I didn't find a database entry for "Rios2008"
-Warning--I didn't find a database entry for "Rios2009"
-Warning--I didn't find a database entry for "Soma2006"
-Warning--I didn't find a database entry for "Soma2008"
-Warning--I didn't find a database entry for "Soma2009"
 Warning--empty title in ch11_Raimondi_inprep
 Warning--empty title in ch11_Barb_unp
 You've used 69 entries,
             2812 wiz_defined-function locations,
-            1060 strings with 15663 characters,
+            1044 strings with 15525 characters,
 and the built_in function-call counts, 22404 in all, are:
 = -- 1417
 > -- 584
