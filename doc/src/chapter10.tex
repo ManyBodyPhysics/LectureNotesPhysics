@@ -3450,6 +3450,22 @@ Hamiltonian here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:imsrg_neutron_matter}Infinite Neutron Matter}
 
+After discussing the pairing Hamiltonian, we now want to apply the IMSRG(2) 
+to a large-scale problem, namely the calculation of the equation of state
+for pure neutron matter. A suitable C/C++ code will be made available at 
+in the future, Python scripts and data are available at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/imsrg_pnm}.
+
+We work in a basis of plane wave states, which is
+set up just like in the CC case discussed in Sec.~\ref{sec:chap8numproject}.
+We work in a spherical periodic cell $L=(N/\rho)^{1/3}$, where $N$ is the number 
+of neutrons in the cell, and $\rho$ the neutron matter density. Because of 
+the periodic boundary conditions, the momenta $p_x,p_y,p_z$ are discretized,
+and we can write the single-particle states as $\ket{n_x,n_y,n_z,s_z}$ 
+($s_z$ is the spin projection of the neutron). We impose the truncation
+\begin{equation}
+  n_x^2 + n_y^2 + n_z^2 \leq \Nmax\,.
+\end{equation}
+
 \begin{figure}[t]
   \setlength{\unitlength}{\textwidth}
   \begin{picture}(1.0000,0.4000)
@@ -3462,9 +3478,46 @@ Hamiltonian here.
     The left panel shows the energy per particle obtained with IMSRG(2), CCD (
     Chap.~\ref{chapter:cc}), CIMC (Chap.~\ref{chapter:qmc}), and the ADC(3) 
     Self-Consistent Green's Function scheme (Chap.~\ref{chapter:scgf}), the
-    right panel only the correlation energy per particle from the same methods.
+    right panel the correlation energy per particle from the same methods.
   }
 \end{figure}
+
+In Fig.~\ref{fig:imsrg_pnm}, we show the IMSRG(2) results for neutron matter
+for the semi-realistic Minnesota $NN$ potential \cite{Thompson:1977fk},
+using $N=66$ neutrons in an $\Nmax=36$ basis. The left panel shows the 
+IMSRG(2) equation of state (EOS) which is essentially the same as that of 
+methods with comparable correlation content, namely CCD, the Configuration 
+Interaction Monte Carlo based on CCD wave functions (CIMC, see Sec.~\ref{sec:cimc}) 
+and the Self-Consistent Green's Functions in the ADC(3) scheme 
+(Sec.~\ref{sec:scgf_adc}). We also include the MBPT(2) EOS, which
+is in very good agreement with the more sophisticated methods.
+This shows that pure neutron matter is only weakly correlated, and
+the many-body expansion is clearly converging rapidly. The IMSRG(2)
+(and other methods) gain an additional 10\% additional energy compared
+to the uncorrelated HF EOS, all the way from dilute matter at $\rho=0.05\fm^{-3}$
+to $\rho=0.2\,\fm^3$, which is more than twice the neutron density of 
+typical stable nuclei. 
+
+In the right panel of Fig.~\ref{fig:imsrg_pnm}, we show the correlation 
+energy per particle, which reveals some differences between the various
+methods. As the neutron matter density comes and correlations are expected
+to become increasingly important, MBPT(2) gains the highest amount of
+correlation energy, just as in our results for the pairing Hamiltonian
+(cf.~Fig.~\ref{fig:imsrg_corr}). Curiously, CCD gives the most binding
+of all methods in dilute neutron matter, but eventually, the CCD correlation
+energy is very similar to that of CIMC and ADC(3), which should be superior
+approximations to the exact ground state (see Chaps.~\ref{chapter:qmc} and
+\ref{chapter:scgf}). As the density increases the IMSRG(2) starts to gain
+more binding from correlations than CCD, its closest cousin among the 
+considered methods, but not as much additional binding energy as MBPT(2).
+This reflects or findings for the pairing Hamiltonian, where we 
+observed the same phenomenon (see Fig.~\ref{fig:imsrg_corr}). As explained
+in Sec.~\ref{sec:imsrg_pairing}, the reason for this energy gain compared
+to CCD is the under-counting of certain repulsive fourth-order diagrams
+in the IMSRG(2), see \cite{Hergert:2016jk}.  
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
