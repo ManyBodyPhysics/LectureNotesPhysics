@@ -3,7 +3,7 @@
 %\usepackage{calrsfs}
 %\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
 
-\title{Self-consistent Green's function approaches} 
+\title{Self-consistent Green's function approaches}
 \author{Carlo~Barbieri and Arianna Carbone}
 \institute{
 Carlo Barbieri  \at 1 Department of Physics, University of Surrey, Guildford GU2 7XH, UK \email{C.Barbieri@surrey.ac.uk},
@@ -19,9 +19,10 @@ We present the fundamental techniques and working equations of many-body Green's
 %We then focus on calculations matter at finite temperature which do not require a discretisation of the Hilbert space. 
 The self-consistency feature is essential to guarantee thermodynamic consistency.
 The  pairing and neutron matter models introduced in previous chapters are solved and compared with the other methods in this book.}
-\label{chapter:scgf}
+
 \allowdisplaybreaks[1]
 
+\label{chapter:scgf}
 
 \section{Introduction}
 
@@ -799,7 +800,7 @@ It can be shown that the summation implicit in Eq.~\eqref{eq:pp_ladder} is equiv
 {\bf Exercise 11.3.}  Complete  the calculation of Eq.~\eqref{eq:LaddEg1} and derive the remaining corrections to the 2h1p interaction $D^{(ld)}$  and the 1h-2h1p coupling term  $N^{(2,ld)}$.
 
 
-\subsection{The ADC($n$) approach and working equations at third-order}
+\subsection{The \texorpdfstring{ADC($n$)}{ADC(n)} approach and working equations at third-order}
 
  The  procedure discussed above to devise reliable approximations for the self-energy is at the heart of the
  ADC method, originally introduced by J.~Schirmer and collaborators~\cite{ch11_Schirmer1982ADC2,ch11_Schirmer1983ADCn}.
@@ -1257,7 +1258,7 @@ to Sec.~\ref{sec:scgf_comp_results}.
 
 
 
-\subsection{Computational details for ADC($n$)}
+\subsection{Computational details for \texorpdfstring{ADC($n$)}{ADC(n)}}
 \label{sec:scgf_comp_code}
 
 The first fundamental step  to set up a SCGF computation is the choice of the model space. For
@@ -1820,7 +1821,11 @@ In the following we want to concentrate on the study of an infinite system at fi
 
 We will show in this section how to calculate the self-consistent propagator in the ladder approximation, a specific approximation for the self-energy $\Sigma^\star(\omega)$ where particle-particle and hole-hole intermediate scattering states are resummed to all orders in the so called in-medium T-matrix. We will be working with the effective Hamiltonian of Eq.~\eqref{eq:Heff}, considering the two-body averaged three-body force that enters $\widetilde U$ as given in Eq.~\eqref{eq:ueff_3b_first}, and disregarding all irreducible three-body terms. The Koltun sum rule of Eq.~\eqref{eq:Koltun_hW} will then be used to obtain the total energy of the many-body system. The great advantage of working at finite temperature is that the appearance of pairing when considering hole-hole intermediate states is washed out by the thermal effects~\cite{ch11_Alm1996}. Recently an improved treatment of pairing in the SCGF method when going to zero temperature has been presented by the Authors of Ref.~\cite{ch11_ding2016}. Within the Luttinger-Ward formalism, the entropy can then be calculated via the knowledge of the self-consistent propagator, and from the entropy all other thermodynamical quantities are accessible. We will not treat here the calculation of the entropy, for a detailed description we refer the reader to Chapter 3 of Ref.~\cite{ch11_Rios2007PhD}.
 
+
+We will show how to calculate the self-consistent propagator in the ladder approximation, where particle-particle and hole-hole intermediate scattering states are resummed in the in-medium T-matrix, and then use the Koltun sumrule to obtain the total energy of the many-body system. Via the Luttinger-Ward formalism, the entropy can be calculated via the knowledge of the self-consistent propagator, and from the entropy all other thermodynamical quantities are accessible. We will first give a few hints on the theoretical formalism and then sketch the working equations necessary to perform the numerical calculation in the following section. The full self-consistent numerical calculation considering the complete off-shell properties of the system and considering fully microscopic potentials was performed by the T\"ubingen/Barcelona group~\cite{Frick2003,Frick2005,Rios2006C74,Rios2008,Rios2009} and from the Cracow group~\cite{Soma2006,Soma2008,Soma2009}.
+
 In the next section, we will give a few hints on the theoretical formalism and then sketch in the following section the working equations necessary to perform the numerical implementation. The full self-consistent numerical calculation considering the complete off-shell properties of the system and considering fully microscopic potentials was performed by the T\"ubingen/Barcelona group~\cite{ch11_Frick2003,ch11_Frick2004PhD,ch11_Frick2005,ch11_Rios2006C74,ch11_Rios2008,ch11_Rios2009} and from the Cracow group~\cite{ch11_Soma2006,ch11_Soma2008,ch11_Soma2009,ch11_Soma2009phd}.
+
 
 \subsection{Finite-temperature Green's function formalism}
 In a similar way done in Sec.~\ref{sec:scgf_defs}, we start by defining the one-body Green's function, however this time as a statistical average in the grand-canonical ensemble:
@@ -2454,13 +2459,13 @@ We have introduced the functions $\Gamma_0(k), \Gamma_1(k), \Gamma_2(k), \Gamma_
 \frac{\Gamma_0(k)}{(2\pi)^2}&=& \qquad \int\frac{{\mathrm d}{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
 \frac{1}{[{\bf k}\pm{\bf p}_3]^2 + M_\pi^2}f(k,p_3)\,;
 \\ \label{eq:gamma1}
-\frac{\Gamma_1(k)}{(2\pi)^2}&=&\frac{1}{k^2}\int\frac{\d{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
+\frac{\Gamma_1(k)}{(2\pi)^2}&=&\frac{1}{k^2}\int\frac{{\mathrm d}{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
 \frac{\pm{\bf k}\cdot{\bf p_3}}{[{\bf k}\pm{\bf p}_3]^2 + M_\pi^2}f(k,p_3)\,;
 \\ \label{eq:gamma2}
-\frac{\Gamma_2(k)}{(2\pi)^2}&=&\frac{1}{2k^2}\int\frac{\d{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
+\frac{\Gamma_2(k)}{(2\pi)^2}&=&\frac{1}{2k^2}\int\frac{{\mathrm d}{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
 \frac{p_3^2k^2-({\bf k}\cdot{\bf p_3})^2}{[{\bf k}\pm{\bf p}_3]^2 + M_\pi^2}f(k,p_3)\,;
 \\ \label{eq:gamma3}
-\frac{\Gamma_3(k)}{(2\pi)^2}&=&\frac{1}{2k^4}\int\frac{\d{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
+\frac{\Gamma_3(k)}{(2\pi)^2}&=&\frac{1}{2k^4}\int\frac{{\mathrm d}{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
 \frac{3({\bf k}\cdot{\bf p_3})^2-p_3^2k^2}{[{\bf k}\pm{\bf p}_3]^2 + M_\pi^2}f(k,p_3)\,;
 \\ \label{eq:i_integral}
 \frac{{\pazocal I}(k)}{(2\pi)^2}&=& \qquad  \int \frac{{\mathrm d}{\bf p}_3}{(2\pi)^3}n({\bf p}_3)
