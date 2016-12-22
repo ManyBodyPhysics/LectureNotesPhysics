@@ -158,17 +158,22 @@ Samuel Novario \at Department of Physics and Astronomy and National Superconduct
 % 
 Nathan Parzuchowski  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{parzuchowski@frib.msu.edu}, \and 
 % 
-Fei Yuan  \at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, Michigan USA, \email{yuan@nscl.msu.edu}}
+Fei Yuan \at Department of Physics and Astronomy and National
+Superconducting Cyclotron Laboratory, Michigan State University, East
+Lansing, Michigan USA, \email{yuan@nscl.msu.edu}} 
 \maketitle
-\abstract{We present applications  of the In-Medium Similarity
-Renormalization Group (IMSRG) method to studies of infinite nuclear matter. 
-The IMSRG method employs a continuous unitary transformation of the
-many-body Hamiltonian to decouple the ground state from all
-excitations, thereby solving the many-body problem. Starting from a
-pedagogical introduction of the underlying concepts, the IMSRG flow 
-equations are developed and we study different IMSRG generators that
-achieve the desired decoupling, and how they affect the details of the IMSRG results. We compare with the coupled cluster theory results of
-chapter \ref{chapter:cc}, the Monte Carlo results of chapter \ref{chapter:qmc} and the Green's function results of chapter \ref{chapter:scgf}.}
+\abstract{We present applications of the In-Medium Similarity
+  Renormalization Group (IMSRG) method to studies of infinite nuclear
+  matter.  The IMSRG method employs a continuous unitary
+  transformation of the many-body Hamiltonian to decouple the ground
+  state from all excitations, thereby solving the many-body
+  problem. Starting from a pedagogical introduction of the underlying
+  concepts, the IMSRG flow equations are developed and we study
+  different IMSRG generators that achieve the desired decoupling, and
+  how they affect the details of the IMSRG results. We compare with
+  the coupled cluster theory results of chapter \ref{chapter:cc}, the
+  Monte Carlo results of chapter \ref{chapter:qmc} and the Green's
+  function results of chapter \ref{chapter:scgf}.}
 
 \section{Introduction}
 Effective Field Theory (EFT) and Renormalization Group (RG) methods
@@ -176,7 +181,7 @@ have become important tools of modern (nuclear) many-body theory ---
 one need only look at the table of contents of this book to see the
 veracity of this claim.
 
-EFTs allow us to systematically take into account the separation of
+Effective Field Theories allow us to systematically take into account the separation of
 scales when we construct theories to describe natural phenomena. One
 of the earliest examples that every physics student encounters is the 
 effective force law of gravity near the surface of the Earth: For a
@@ -196,30 +201,34 @@ mediate weak processes for small momenta $q\ll M_W=80\,\GeV$ (in units
 where $\hbar=c=1$).
 
 The strong-interaction sector of the Standard Model is provided by
-Quantum Chromodynamics (QCD), but the description of nuclear observables
-on the level of quarks and gluons is not feasible, except in the lightest
-few-nucleon systems (see, e.g., \cite{Detmold:2015xw} and the chapters on
-Lattice QCD in this book). The main issue is that QCD is an asymptotically
-free theory \cite{Gross:1973pd,Politzer:1973lq}, i.e., it is weak and amenable 
-to perturbative methods from Quantum Field Theory at large momentum transfer, 
-but highly non-perturbative in the low-momentum regime which is relevant for 
-nuclear structure physics. A consequence of the latter property is that 
-quarks are confined in baryons and mesons at low momentum or energy scales,
-which makes those confined particles suitable degrees of freedom for an
-EFT approach. Chiral EFT, in particular, is constructed in terms of 
-nucleon and pion fields, with some attention now also being given to the
-lowest excitation mode of the nucleon, namely the $\Delta$ resonance.
-It provides provides a constructive framework and organizational hierarchy
-for $NN$, $3N$, and higher many-nucleon forces, as well as consistent
-electroweak operators (see, e.g., \cite{Epelbaum:2009ve,Machleidt:2011bh,Epelbaum:2015gf,Entem:2015qf,Gezerlis:2014zr,Lynn:2016ec,Pastore:2009zr,Pastore:2011dq,Piarulli:2013vn,Kolling:2009yq,Kolling:2011bh}).
-Since Chiral EFT is a low-momentum expansion, high-momentum (short-range)
-physics is not explicitly resolved by the theory, but parametrized
-by the so-called low-energy constants (LECs). 
-In principle, the LECs can be determined by matching calculations of
-the same observables in chiral EFT and (Lattice) QCD in the overlap
-region of the two theories. Since such a calculation is currently not 
-feasible, they are fit to experimental data for low-energy QCD observables, 
-typically in the $\pi{}N$, $NN$, and $3N$ sectors \cite{Epelbaum:2009ve,Machleidt:2011bh,Ekstrom:2015fk,Shirokov:2016wo}.
+Quantum Chromodynamics (QCD), but the description of nuclear
+observables on the level of quarks and gluons is not feasible, except
+in the lightest few-nucleon systems (see, e.g., \cite{Detmold:2015xw}
+and the chapters on Lattice QCD in this book). The main issue is that
+QCD is an asymptotically free theory
+\cite{Gross:1973pd,Politzer:1973lq}, i.e., it is weak and amenable to
+perturbative methods from Quantum Field Theory at large momentum
+transfer, but highly non-perturbative in the low-momentum regime which
+is relevant for nuclear structure physics. A consequence of the latter
+property is that quarks are confined in baryons and mesons at low
+momentum or energy scales, which makes those confined particles
+suitable degrees of freedom for an EFT approach. Chiral EFT, in
+particular, is constructed in terms of nucleon and pion fields, with
+some attention now also being given to the lowest excitation mode of
+the nucleon, namely the $\Delta$ resonance.  It provides provides a
+constructive framework and organizational hierarchy for $NN$, $3N$,
+and higher many-nucleon forces, as well as consistent electroweak
+operators (see, e.g.,
+\cite{Epelbaum:2009ve,Machleidt:2011bh,Epelbaum:2015gf,Entem:2015qf,Gezerlis:2014zr,Lynn:2016ec,Pastore:2009zr,Pastore:2011dq,Piarulli:2013vn,Kolling:2009yq,Kolling:2011bh}).
+Since Chiral EFT is a low-momentum expansion, high-momentum
+(short-range) physics is not explicitly resolved by the theory, but
+parametrized by the so-called low-energy constants (LECs).  In
+principle, the LECs can be determined by matching calculations of the
+same observables in chiral EFT and (Lattice) QCD in the overlap region
+of the two theories. Since such a calculation is currently not
+feasible, they are fit to experimental data for low-energy QCD
+observables, typically in the $\pi{}N$, $NN$, and $3N$ sectors
+\cite{Epelbaum:2009ve,Machleidt:2011bh,Ekstrom:2015fk,Shirokov:2016wo}.
 
 RG methods are natural companions for
 EFTs, because smoothly connect theories with different resolution scales 
@@ -294,7 +303,7 @@ solid-state physics literature, the approach is also known as
 continuous unitary transformation theory  
 \cite{Heidbrink:2002kx,Drescher:2011kx,Krull:2012bs,Fauseweh:2013zv,Krones:2015ft}.
 When we discuss our decoupling strategies for the nuclear many-body
-problem, it will become evident that the IMSRG is related to CC 
+problem, it will become evident that the IMSRG is related to coupled cluster theory (CC), see also chapter 8,  
 and a variety of other many-body methods that are used heavily in 
 quantum chemistry (see, e.g., \cite{Shavitt:2009,Hagen:2014ve,White:2002fk,
 Yanai:2007kx,Nakatsuji:1976yq,Mukherjee:2001uq,Mazziotti:2006fk,Evangelista:2014rq}).
@@ -333,17 +342,21 @@ equation-of-state in the IMSRG(2) truncation scheme, and compare our result
 to that of corresponding Coupled Cluster, Quantum Monte Carlo, and Self-Consistent 
 Green's Function results with the same interaction. 
 
-Section \ref{sec:current} introduces the three major directions of current
-research: First, we present the Magnus formulation of the IMSRG (Sec.~\ref{sec:current_magnus}),
-which is the key to the efficient computation of observables and the construction
-of approximate version of the IMSRG(3). Second, we give an overview of the multireference
-IMSRG (MR-IMSRG), which generalizes our framework to arbitrary reference
-states, and gives us new freedom to manipulate the correlation content of 
-our many-body calculations \ref{sec:current_mrimsrg}.  Third, we will discuss
-applications of IMSRG-evolved, RG-improved Hamiltonians as input to many-body 
-calculations, in particular for the nuclear (interacting) Shell model and 
-Equation-of-Motion (EOM) methods (Sec.~\ref{sec:current_hamiltonians}). An outlook on how these three research
-thrusts interweave concludes the section (Sec.~\ref{sec:current_remarks}).
+Section \ref{sec:current} introduces the three major directions of
+current research: First, we present the Magnus formulation of the
+IMSRG (Sec.~\ref{sec:current_magnus}), which is the key to the
+efficient computation of observables and the construction of
+approximate version of the IMSRG(3). Second, we give an overview of
+the multireference IMSRG (MR-IMSRG), which generalizes our framework
+to arbitrary reference states, and gives us new freedom to manipulate
+the correlation content of our many-body calculations
+\ref{sec:current_mrimsrg}.  Third, we will discuss applications of
+IMSRG-evolved, RG-improved Hamiltonians as input to many-body
+calculations, in particular for the nuclear (interacting) Shell model
+and Equation-of-Motion (EOM) methods
+(Sec.~\ref{sec:current_hamiltonians}). An outlook on how these three
+research thrusts interweave concludes the section
+(Sec.~\ref{sec:current_remarks}).
 
 In Sec.~\ref{sec:conclusions}, we make some final remarks and close the main 
 body of the chapter in Sec.~\ref{sec:conclusions}.
@@ -393,7 +406,7 @@ Eq.~\eqref{eq:cut} with respect to $s$ to obtain
   \totd{\HO(s)}{s} = \totd{\UO(s)}{s}\HO(0)\UUO(s) + \UO(s)\HO(0)\totd{\UUO(s)}{s}
                    = \totd{\UO(s)}{s}\UUO(s)\HO(s) + \HO(s)\UO(s)\totd{\UUO(s)}{s}\,.
 \end{equation}
-Since $\UO(s)$ is supposed to be unitary, we also have
+Since $\UO(s)$ is  unitary, we also have
 \begin{equation}
   \totd{}{s}\left(\UO(s)\UUO(s)\right) = \totd{}{s} \left(\idO\right) = 0 \quad \Longrightarrow 
   \quad \totd{\UO(s)}{s}\UUO(s) = - \UO(s)\totd{\UUO(s)}{s}\,.
@@ -416,7 +429,7 @@ spectrum that is part discrete, part continuous (see, e.g., \cite{Bach:2010zr,Bo
 to work with approximate, finite-dimensional matrix representations of $\HO(s)$
 in any case.}. Thus, the SRG is related to so-called isospectral flows, a class 
 of transformations that has been studied extensively in the mathematics literature 
-(see, e.g., \cite{Brockett:1991kx,Chu:1994vn,Chu:1995ys,Bach:2010zr,Boutin:2016ef}).
+(see for example Refs.~\cite{Brockett:1991kx,Chu:1994vn,Chu:1995ys,Bach:2010zr,Boutin:2016ef}).
 
 The flow equation \eqref{eq:opflow} is the most practical way of implementing
 an SRG evolution: We can obtain $\HO(s)$ by integrating Eq.~\eqref{eq:opflow} 
@@ -613,7 +626,7 @@ Bringing $\sin\theta$ to the left-hand side and using
 \begin{equation}
   \totd{}{x}\ln\tan\frac{x}{2}=\frac{1}{\sin x}\,,
 \end{equation}
-we can integrate the ODE and obtain
+we can integrate the ordinary differential equation (ODE) and obtain
 \begin{equation}\label{eq:srg_toy_theta}
   \tan\frac{\theta(s)}{2} = \tan\frac{\theta(0)}{2} e^{-4\Omega^2 s}\,.
 \end{equation}
@@ -731,9 +744,10 @@ projection, it does not break pairs of particles that occupy such
 states --- in other words, the number of particle pairs is another
 conserved quantity, which allows us to decompose the $S_z$ blocks
 into even smaller sub blocks. As in chapter 8, we consider the $S_z=0$
-sub block with two particle pairs, which is six-dimensional. In this
-block, the Hamiltonian is represented by the matrix (suppressing
-block indices)
+sub block with two particle pairs, leading to a Hamiltonian matrix which is six-dimensional. 
+In this
+block, the Hamiltonian matrix (suppressing
+block indices) is 
 \begin{equation}\label{eq:def_h_matrix}
   H = \begin{pmatrix}
   2\delta -g  &      -g/2  &       -g/2 &      -g/2 &      -g/2 &        0 \\ 
@@ -831,7 +845,7 @@ nuts-and-bolts details of implementing an ODE solver are referred to the excelle
 discussion in \cite{Press:2007vn}, while higher-level discussions of the algorithms
 can be found, e.g., in \cite{Shampine:1975qq,Landau:2012zr,Hjorth-Jensen:2015mz}.
 A number of powerful ODE solvers have been developed over the past decades and 
-integrated into readily available libraries, and we choose to rely one of these 
+integrated into readily available libraries, and we choose to rely on one of these 
 here, namely ODEPACK (see \url{www.netlib.org/odepack} and 
 \cite{Hindmarsh:1983pd,Radhakrishnan:1993fk,Brown:1989qd}). The SciPy package
 provides convenient Python wrappers for the ODEPACK solvers.
@@ -839,7 +853,7 @@ provides convenient Python wrappers for the ODEPACK solvers.
 The following source code shows the essential part of our Python implementation of
 the SRG flow for the pairing model. The full program with additional features can 
 be downloaded from 
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_pairing/srg_pairing.py}.
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter10-programs/python/srg_pairing}.
 
 
 \begin{lstlisting}
@@ -3367,7 +3381,7 @@ right-hand panel of Fig.~ \ref{fig:imsrg_corr} sheds further light on this matte
 There, we compare the IMSRG(2) correlation energy to results from finite-order
 many-body perturbation theory (MBPT) and Coupled Cluster with Doubles Excitations
 (CCD) --- see chapter \ref{chapter:cc} for details. We see that the correlation
-energies from finite-order MBPT alternative in sign for a repulsive interaction,
+energies from finite-order MBPT alternate in sign for a repulsive interaction,
 which suggests that the agreement between the exact solution, IMSRG(2), and CCD
 is due to cancellations at all orders that these methods take into account.
 Looking back at the attractive pairing force for $g\sim1.0$, we observe that 
