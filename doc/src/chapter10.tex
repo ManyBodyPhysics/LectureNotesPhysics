@@ -1,8 +1,13 @@
+%!TEX root = lnp.tex
 %%%%%
 %%%%% Commands for chapter 
 %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{ % open scope for chapter commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\trace}{\mathrm{tr}\,}
-\newcommand{\tr}{\trace}
+\renewcommand{\tr}{\trace}
 \newcommand{\sgn}{\mathrm{sgn}\,}
 
 
@@ -45,15 +50,11 @@
 \newcommand{\Nmax}{\ensuremath{N_\text{max}}}
 
 %%%%% units
-\newcommand{\fm}{\ensuremath{\,\text{fm}}}
+\renewcommand{\fm}{\ensuremath{\,\text{fm}}}
 \newcommand{\fmi}{\ensuremath{\,\text{fm}^{-1}}}
-\newcommand{\AMeV}{\ensuremath{\,\text{AMeV}}}
 \newcommand{\keV}{\ensuremath{\,\text{keV}}}
-\newcommand{\MeV}{\ensuremath{\,\text{MeV}}}
-\newcommand{\GeV}{\ensuremath{\,\text{GeV}}}
-\newcommand{\MeVi}{\ensuremath{\,\text{MeV}^{-1}}}
-\newcommand{\eV}{\ensuremath{\,\text{eV}}}
-\newcommand{\GeV}{\ensuremath{\,\text{GeV}}}
+\renewcommand{\MeV}{\ensuremath{\,\text{MeV}}}
+\renewcommand{\GeV}{\ensuremath{\,\text{GeV}}}
 
 %%%%% states and operators
 \renewcommand{\ket}[1]{\ensuremath{\,|{#1}\rangle}}
@@ -68,7 +69,7 @@
 
 \newcommand{\op}[1]{\ensuremath{\hat{#1}}}
 \newcommand{\adj}[1]{\ensuremath{#1}^\dag}
-% \newcommand{\vec}[1]{\enusremath{\mathbf{#1}}}
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
 
 \newcommand{\aO}{\ensuremath{a}}
 \newcommand{\aaO}{\ensuremath{\adj{a}}}
@@ -83,7 +84,7 @@
 \newcommand{\BO}{\op{B}}
 \newcommand{\CO}{\op{C}}
 \newcommand{\HO}{\op{H}}
-\newcommand{\OO}{\op{O}}
+\renewcommand{\OO}{\op{O}}
 \newcommand{\PO}{\op{P}}
 \newcommand{\QO}{\op{Q}}
 \newcommand{\TO}{\op{T}}
@@ -122,8 +123,8 @@
 
 
 %%%%% commutator
-\newcommand{\comm}[2]{\ensuremath{[{#1},{#2}]}}
-\newcommand{\acomm}[2]{\ensuremath{ \big\{ {#1}, {#2} \big\} }}
+\renewcommand{\comm}[2]{\ensuremath{[{#1},{#2}]}}
+\renewcommand{\acomm}[2]{\ensuremath{ \big\{ {#1}, {#2} \big\} }}
 
 %%%%% editorial
 \newcommand{\tbd}[1]{{\color{red}#1}}
@@ -1058,7 +1059,7 @@ kinetic energy,
 It is straightforward to show that $\Tint$ can be written either as a sum of
 one- and two-body operators,
 \begin{equation}\label{eq:def_Tint_1B2B}
-  \Tint= \left(1-\frac{1}{\AO}\right)\sum_{i}\frac{\pOV_i^2}{2m} - \frac{1}{\AO}\sum_{i<j}\frac{\pOV_{i}\cdot\pOV_{j}}{m}
+  \Tint= \left(1-\frac{1}{\AO}\right)\sum_{i}\frac{\pOV_i^2}{2m} - \frac{1}{\AO}\sum_{i<j}\frac{\pOV_{i}\cdot \pOV_{j}}{m}
 \end{equation}
 or as a pure two-body operator
 \begin{equation}\label{eq:def_Tint_2B}
@@ -1667,11 +1668,11 @@ methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth
 In practical applications, we pay a prize for the improved convergence.
 To illustrate the issue, we consider the Hamiltonian in a second-quantized 
 form, assuming only a two-nucleon interaction for simplicity (cf.~Eq.~\eqref{eq:def_Hint_2B}):
-\begin{equation}\label{eq:H}
+\begin{equation}
   \Hint = \frac{1}{4}\sum_{pqrs} \matrixe{pq}{\frac{\qOV^2}{2\mu}+\vO}{rs}\aaO_p\aaO_q\aO_s\aO_r\,.
 \end{equation}
 If we plug the kinetic energy and interaction into the commutators in 
-equations \eqref{eq:def_srg_generator} and \eqref{eq:opflow}, we obtain
+Eqs.~\eqref{eq:def_srg_generator} and \eqref{eq:opflow}, we obtain
 \begin{equation}\label{eq:comm2B_vac}
   \comm{\aaO_i\aaO_j\aO_l\aO_k}{\aaO_p\aaO_q\aO_s\aO_r}=
   \delta_{lp}\aaO_i\aaO_j\aaO_q\aO_s\aO_r\aO_k + \aaO\aaO\aaO\aO\aO\aO
@@ -1699,7 +1700,7 @@ and so on.
 \begin{figure*}[t]
   \setlength{\unitlength}{\textwidth}
   \begin{center}
-    \includegraphics[width=0.55\unitlength,bb=10 10 560 560,clip]{\fdir/srg_evolution_energy.pdf}
+    \includegraphics[width=0.55\unitlength]{\fdir/srg_evolution_energy.pdf}
   \end{center}  
   \vspace{-10pt}
   \caption{\label{fig:triton}Ground state energy of $\nuc{H}{3}$ as a function 
@@ -2132,7 +2133,7 @@ identify specific structures by looking at the occupation-number dependence
 of the terms in Eqs.~\eqref{eq:imsrg2_m0b}--\eqref{eq:imsrg2_m2b}: for 
 instance, $\nn_i$ and $n_i$ restrict summations to particle and hole states, 
 respectively (cf.~equation \eqref{eq:def_natorb}). Typical IMSRG generators 
-(see Sec.~\ref{sec:imsrg_generators}) are proportional to the (offdiagonal) 
+(see Sec.~\ref{sec:imsrg_generator}) are proportional to the (offdiagonal) 
 Hamiltonian, which means that the two terms in the zero-body flow equation 
 essentially have the structure of second-order energy corrections, but 
 evaluated for the \emph{flowing} Hamiltonian $\HO(s)$. Thus, we can express
@@ -2749,7 +2750,7 @@ generates a proper renormalization group flow \cite{Kehrein:2006kx,Hergert:2016j
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsubsection{\label{sec:imsrg_generators_wegner}Wegner's Generator}
+\subsubsection{\label{sec:imsrg_generator_wegner}Wegner's Generator}
 Last but not least, we want to discuss Wegner's original ansatz 
 \cite{Wegner:1994dk}, which we have used in the free-space SRG applications 
 in Sec.~\ref{sec:srg}:
@@ -3757,7 +3758,7 @@ the overall increase in complexity is manageable.
 
 Applying the generalized normal ordering to the intrinsic nuclear $A$-body 
 Hamiltonian \eqref{eq:def_Hint} we obtain
-\begin{align}\label{eq:Hno}
+\begin{align}
   \HO &= E 
         + \sum_{ij}f^{i}_{j}\nord{A^{i}_{j}} 
         + \frac{1}{4}\sum_{ijkl}\Gamma^{ij}_{kl}\nord{A^{ij}_{kl}}
@@ -3918,8 +3919,8 @@ structure than its single-reference counterpart, but even depends
 on $\lambda^{(4)}$ (see \cite{Hergert:2017kx} for details).
 Constructing and storing $\lambda^{(4)}$ is essentially out
 of the question in general MR-IMSRG applications, hence we 
-are forced to introduce truncations in Eqs.~\eqref{eq:mr_coupling_1b} 
-and Eq.~\eqref{eq:mr_coupling_2b} that imply that we will only
+are forced to introduce truncations to evaluate Eq.~\eqref{eq:mr_coupling_1b} 
+and similar matrix elements. This implies that we can only
 achieve approximate decoupling in general.
 
 In recent applications, we have found the variational perspective
@@ -4420,7 +4421,7 @@ the reference state $\ket{\Phi_0}$ will be the ground state of the final IMSRG H
   \UO(\infty)\ket{\Psi_0} = \ket{\Phi_0}\,,
 \end{equation}
 we obtain the unitarily transformed EOM
-\begin{equation}\label{eq:eom}
+\begin{equation}\label{eq:eom_imsrg}
   \comm{\Hfinal}{\overline{X}^\dag_n}\ket{\Phi_0} = \omega_n \overline{X}^\dag_n\ket{\Phi_0}\,.
 \end{equation}
 The solutions $\overline{X}^\dag_n$ can be used to obtain the eigenstates 
@@ -4431,7 +4432,7 @@ of the unevolved Hamiltonian via
 
 In current applications, we include up to $2p2h$ excitations in the ladder 
 operator \cite{Parzuchowski:2016pi}:
-\begin{equation}\label{eq:eom_imsrg}
+\begin{equation}\label{eq:eom_imsrg_ladder}
   \overline{X}^\dagger_n = \sum_{ph} \bar{X}^{(n)}_{ph} \nord{\aaO_{p}\aO_{h}} + \frac{1}{4}\sum_{pp'hh'} \bar{X}^{(n)}_{pp'hh'} \nord{\aaO_{p}\aaO_{p'}\aO_{h'}\aO_{h}} \,.
 \end{equation}
 Note that the operator only contains excitation operators because de-excitation 
@@ -4496,7 +4497,6 @@ that the truncation allows. In the Shell model, the description of such
 states requires a valence space consisting of two major shells, which 
 usually makes the exact diagonalization prohibitively expensive, especially
 in $sd-$shell nuclei and beyond.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4722,7 +4722,7 @@ whose eigenvalues are
 i.e., 0 for occupied and 1 for unoccupied single-particle states. Finally, 
 we will again use the permutation symbol $\PO_{ij}$ to interchange the indices 
 in any expression, 
-\begin{equation}\label{eq:def_Pij}
+\begin{equation}
   \PO_{ij} g(\ldots,i,\ldots,j) \equiv g(\ldots,j,\ldots,i)\,
 \end{equation}
 (see Sec.~\ref{sec:imsrg} and chapter \ref{chapter:cc}).
@@ -4847,4 +4847,9 @@ in any expression,
 \bibliographystyle{spphys}
 % \bibliography{/Users/hergert/Library/texmf/bibtex/bib/master_bibdesk}
 \bibliography{chapter10}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+} 
+% end scope of Chapter 10 commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

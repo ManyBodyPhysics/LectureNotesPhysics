@@ -163,7 +163,7 @@ U_P(x,y;A) & = &
   \nonumber \\
   &  & \! \! \! \! \!  
   \! \! \! \! \! \! \! \! \! \! \! \! \! \! = \sum_{n=0}^{\infty} 
- {(ig)^n \over n!} \int_0^1 ds_1 \int_0^1 ds_2 \cdot \cdot \cdot \int_0^1 ds_n \ 
+ \frac{(ig)^n }{n!} \int_0^1 ds_1 \int_0^1 ds_2 \cdot \cdot \cdot \int_0^1 ds_n \ 
  {\rm P}[\lambda \cdot A(s_1)\ \cdot \cdot \cdot \
   \lambda \cdot A(s_n)],
  \eeq
@@ -183,7 +183,7 @@ U_P(x,y;A) = U_{P_2}(x,z(s);A) U_{P_1}(z(s),y;A).
 \item[(ii)] It satisfies a differential equation,
 \beq
 \label{eq:5.wilson-line-ii}
-{d \over ds} U_P(z(s),y;A)= 
+\frac{d}{ds} U_P(z(s),y;A)= 
  \left[ ig \lambda(s)\cdot  A(z(s)) \right] \ U_P(z(s),y;A).
 \eeq
 \item[(iii)] Under the local gauge transformation  
@@ -280,7 +280,7 @@ a  gluon action on the lattice, which reduces to the Yang-Mills
  S_{\rm G}  &=& \beta \sum_{\rm Pl} \left[ 1 - \frac{1}{N_c} {\rm Re} \ {\rm tr} \ U_{\mu \nu}(n) \right] \\
  &=& \beta  a^4 \sum_n \sum_{\mu < \nu} \left[ 1 - \frac{1}{2N_c} {\rm tr}  \left( U_{\mu \nu}(n) +  U_{\mu \nu}^{\dagger}(n) \right) \right] \nonumber \\
  & = & \frac{1}{g^2} \sum_n \sum_{\mu \neq \nu} {\rm tr} \left[ 1 -U_{\mu \nu} (n) \right] 
-  \ \ \ \ \xrightarrow{a\rightarrow 0}   \ {1 \over 4} \int d^4x  \ G_{\mu \nu}^b (x)^2 , \nonumber
+  \ \ \ \ \xrightarrow{a\rightarrow 0}   \frac{1}{4}\int d^4x  \ G_{\mu \nu}^b (x)^2 , \nonumber
  \eeq
 where $\sum_{\rm Pl} $ is a sum over all non-oriented {\it plaquettes} (minimum square tile on the lattice with the area $a^2$). 
 Note that  $\beta \equiv \frac{2N_c}{g^2}$ with $N_c$ being the number of colors ($N_c=3$ for QCD) 
@@ -642,7 +642,7 @@ $\exp (-S_{\rm G}) = 1 - S_{\rm G}+ S_{\rm G}^2 /2 + \cdots $
  and finds (Exercise \ref{prob:7})
 \beq
 \label{eq:5.wilson-strong}
-\langle W(C) \rangle = {1 \over {\cal Z}}
+\langle W(C) \rangle = \frac{1}{\cal Z}
  \int [dU] \ {\rm tr} \prod_{{\rm link}\in C} U_{\mu}(n) \  
  \sum_{\ell =0}^{\infty} \frac{1}{\ell !} (-S_{\rm G})^{\ell}.
 \eeq
@@ -760,17 +760,17 @@ V(R) = K R \ \ {\rm with} \ \ K = \frac{1}{a^2} \ln (N_c g^2).
  function of $g$.  The $a$-independence of the observable implies
  \beq
 \label{eq:5.O-RG}
- a{d{\cal O} \over da} 
+ a\frac{d{\cal O}}{da} 
   =  
   \left( a \frac{\partial}{\partial a} 
  - \beta_{_{\rm LAT}}  \frac{\partial}{\partial g} \right) {\cal O}(g(a), a)  = 0 , 
-\ \   \beta_{_{\rm LAT}}(g) =  -a {dg(a) \over da} .
+\ \   \beta_{_{\rm LAT}}(g) =  -a \frac{dg(a)}{da} .
 \eeq
 By integrating the first equation in Eq.(\ref{eq:5.O-RG}),  we find
 \beq
 \label{eq:5.lat-F}
  X(g) = 
- \exp \left( -d \int^g {dg' \over \beta_{_{\rm LAT}}(g')} \right) .
+ \exp \left( -d \int^g \frac{dg'} {\beta_{_{\rm LAT}}(g')} \right) .
  \eeq
 Suppose that 
  the beta-function can be expanded in terms of $g$ for small $a$:
@@ -809,15 +809,15 @@ $\beta_{_{\rm LAT}}(g)$, one finds
 \label{eq:5.a-vs-L}
  a = \Lambda_{_{\rm LAT}}^{-1} \cdot  
  \exp  \left( -\frac{1}{2\beta_0 g^2}  \right)  \cdot
-  (\beta_0 g^2)^{-{\beta_1 \over 2 \beta_0^2}} 
+  (\beta_0 g^2)^{-\frac{\beta_1}{2 \beta_0^2}} 
  \cdot (1 + O(g^2)).
  \eeq
 Here  $ \Lambda_{_{\rm LAT}}$ is called the scale parameter on the lattice, and  
    $g(a)$ can be expressed in terms of $a$ and $ \Lambda_{_{\rm LAT}}$ ((Exercise \ref{prob:8}),
  \beq
 \label{eq:5.lat-running-g}
-{1 \over g^2(a)} = \beta_0 \ln \left( 1 \over a^2  \Lambda_{_{\rm LAT}}^2 \right)
-+ {\beta_1 \over \beta_0} \ln \ln \left( 1 \over a^2  \Lambda_{_{\rm LAT}}^2 \right)
+\frac{1}{g^2(a)} = \beta_0 \ln \left( \frac{1} {a^2  \Lambda_{_{\rm LAT}}^2} \right)
++ \frac{\beta_1}{\beta_0} \ln \ln \left( \frac{1}{a^2  \Lambda_{_{\rm LAT}}^2} \right)
 + \cdot \cdot \cdot .
 \eeq
  This is the asymptotic freedom
@@ -833,7 +833,7 @@ Direct way to extract the actual value of $ \Lambda_{_{\rm LAT}}$  is to
  two ($d=2$) should  behave as
 \beq
 \label{eq:5.lat-K}
-K a^2 = C_K \exp \left( - {1 \over \beta_0 g^2} \right) 
+K a^2 = C_K \exp \left( - \frac{1}{\beta_0 g^2} \right) 
 (\beta_0 g^2)^{-\beta_1 /\beta_0^2} = C_K  \Lambda_{_{\rm LAT}}^2 ,
 \eeq
 with $C_K$ being a dimensionless numerical constant independent
@@ -973,7 +973,7 @@ with $\phi^{(n)}$  being arranged to appear with
  \beq
 \label{eq:5.obs-average}
 \langle {\cal O} \rangle = \frac{1}{N}\sum_{n=1}^N {\cal O}^{(n)}
-\pm \sqrt{{\sigma^2 \over N}}, \ \ \ \ \ 
+\pm \sqrt{\frac{\sigma^2}{N}}, \ \ \ \ \ 
 \sigma^2 =  \frac{1}{N-1} \sum_{n=1}^N \langle {\cal O}^{(n)} - \langle {\cal O} \rangle \rangle^2 ,
 \eeq
 with ${\cal O}^{(n)}={\cal O}(\phi^{(n)})$.
