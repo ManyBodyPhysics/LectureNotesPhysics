@@ -4776,12 +4776,47 @@ Computing resources were provided by the MSU High-Performance Computing Center
     Interpret the expression in the parentheses.
 \end{prob}
 
-\begin{prob}
-  \tbd{Code project: optimizations, tensor version.}
+\begin{prob}\textbf{Project: Optimization of the IMSRG(2) Code} \\
+  In Sec.~\ref{sec:imsrg_implementation}, we mention several ways of optimizing 
+  the performance of the Python code, like taking into account antisymmetry of
+  two-body (and three-body) states, or exploiting symmetries and the resulting
+  block structures.
+
+  \item[a)] Optimize the storage requirements and speed of the Python code by taking 
+  the antisymmetry of states as well as the Hermiticity (anti-Hermiticity) of $\HO$ ($\eta$) 
+  into account.
+
+  \item[b)] Identify the symmetries of the pairing Hamiltonian, and construct a
+  variant of \texttt{imsrg\_pairing.py} that is explicitly block diagonal in
+  the irreducible representations of the corresponding symmetry group.
+
+  \item[c)] A significant portion of the code \texttt{imsrg\_pairing.py} consists of
+  infrastructure routines that are used to convert between one- and two-body bases.
+  We could avoid this inversion if we treat $\Gamma$ and the two-body part of the 
+  generator as \emph{rank-four tensors} instead of matrices. \texttt{NumPy}
+  offers tensor routines that can be used to evaluate tensor contractions and
+  products, in particular \texttt{numpy.tensordot()}. Rewrite \texttt{imsrg\_pairing.py}
+  in terms of tensors, and compare the performance of your new code to the
+  original version.
 \end{prob}
 
 \begin{prob}
-  \tbd{IMSRG(3) for the pairing Hamiltonian.}
+  \textbf{Project: IMSRG(3) for the Pairing Hamiltonian} \\
+  Throughout this chapter, we used a single-particle basis consisting of only 
+  8 states in our discussions of the pairing Hamiltonian. For such a small basis 
+  size, it is possible to implement to include explicit 3N operators in the IMSRG
+  evoltion, that is, to work in the IMSRG(3) scheme.
+
+  \item[a)] Derive the IMSRG(3) flow equations. (Note: compare your results with
+  Ref.~\cite{Hergert:2016jk}).
+
+  \item[b)] Implement the IMSRG(3). The Python code discussed in Sec.~\ref{sec:imsrg_implementation}
+  provides a good foundation, but you may find it necessary to switch to a 
+  language like C/C++ or Fortran for performance reasons. 
+
+  \item[c)] ``Interpolate'' between IMSRG(2) and IMSRG(3) by selectively activating
+  flow equation terms, and document the impact of these intermediate steps.
+
 \end{prob}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
