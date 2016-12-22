@@ -181,7 +181,7 @@
 %
 \DeclareOption{graybox}{%
 \AtEndOfClass{% Loading color package
-\RequirePackage{color}%
+\RequirePackage{xcolor}%
 % defining values of gray
 \definecolor{shadecolor}{gray}{.85}%
 \definecolor{tintedcolor}{gray}{.80}%

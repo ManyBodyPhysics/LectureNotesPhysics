@@ -9,6 +9,7 @@ the stochastic integration theory are first presented, followed by the implement
 variational solution of the quantum many-body problem. Projection algorithms are then introduced, beginning with a formulation in coordinate space for central potentials, in order to illustrate
 the fundamental ideas. The extension to Hamiltonians with an explicit dependence on the spin-isospin degrees of freedom is then presented by making use of auxiliary fields (Auxiliary Field Diffusion Monte Carlo, AFDMC). Finally, we present the Configuration Interaction Monte Carlo algorithm (CIMC) a method to compute the ground state of general, local or non-local, Hamiltonians based on the configuration space sampling.}
 
+\label{chapter:qmc}
 %\maketile
 
 
@@ -268,7 +269,6 @@ The quantities on the r.h.s. of Eq. (\ref{detb2}) are all known. The configurati
 If we interpret the $A$ values to be probabilities to actually keep the transition, then maximizing the possible $A$ values leads to the slightly modified version of Eq. (\ref{detb2}):
 \begin{equation}
 A(R'\leftarrow R)=\min\left(\frac{P(R')}{P(R)}\frac{\bar{T}(R\leftarrow R')}{\bar{T}(R'\leftarrow R)},1\right).
-\label{detb2}
 \end{equation} 
 This expression is often called the {\it acceptance ratio}. In practice, it represents the probability according
 to which we have to {\it accept} the new configuration as the new member of the Markov chain, rather than
@@ -284,7 +284,6 @@ There is a case in which the Eq. (\ref{detb2}) further simplifies. If the transi
 be symmetric in the arguments $R$ and $R'$, the ratio becomes unity, and one is left with:
 \begin{equation}
 A(R'\leftarrow R)=\min\left(\frac{P(R')}{P(R)},1\right).
-\label{detb2}
 \end{equation} 
 At this point we have all the ingredients to describe an algorithm that performs a Monte Carlo evaluation
 of an integral such that of Eq. (\ref{eq911}). In the following we will describe the simplest version,
@@ -505,7 +504,6 @@ We can sum Eq.(\ref{T_PB}) and Eq. (\ref{T_JF1}), and divide by 2 in order to ob
 		\includegraphics[scale=0.5]{Chapter9-figures/jas.eps}
 	\end{center}
 	\caption{The central channel of the Minnesota potential (dashed-dotted line), and the corresponding numerical Jastrow function (solid line) evaluated for $h=3.1$, $q=1.4$, and $b=1$.}
-	\label{fig.var}
 \end{figure}
 This is the {\it Jackson-Feenberg} kinetic energy estimator. It is easy to see that configuration by configuration the value of the integrand of $T$ and $T_{JF}$ are different. However, they have to be the same on average (i.e. always within the current statistical error). The equivalence of the two estimators checks the integration procedure, the correctness of the implementation of the boundary conditions, and the computation of derivatives. If any of these quantities are wrong, the two estimates of the kinetic energy will differ. This is an extremely useful consistency check, and should always be used in a variational calculation.
 
@@ -949,7 +947,7 @@ This can be combined with the Gaussian factor in $G_0$, and by completing the sq
 \end{equation}
 The same expansion can be performed to compute the {\it change in normalization} of the propagated density after a time step. The change in normalization is given by:
 \begin{equation}
-{\cal N}=\int dR \tilde{G}(R,R',\tau),\label{norm}
+{\cal N}=\int dR \tilde{G}(R,R',\tau),\label{eq:norm}
 \end{equation}
 i.e. the total weight of the final points $R$ that can be reached starting from $R'$.
 Once more we can expand the ratio of the guiding functions in the propagator, but this time up to second order:
@@ -957,7 +955,7 @@ Once more we can expand the ratio of the guiding functions in the propagator, bu
 \tilde{G}(R,R',\Delta\tau)\simeq G_0(R,R',\tau)\left[1+\frac{\nabla\Psi_G(R')}{\Psi_G(R')}(R-R')+\frac{1}{2}\frac{\partial_{i\alpha}
 \partial_{j\beta}\Psi_G(R')(R-R')_{i\alpha}(R-R')_{j\beta}}{\Psi_G(R')}+\cdots\right]
 \end{equation}
-Inserting the previous equation in Eq.(\ref{norm}) we can see that after integrating over $R$ the terms containing odd powers of $(R-R')$ disappear by parity. We are therefore left with:
+Inserting the previous equation in Eq.(\ref{eq:norm}) we can see that after integrating over $R$ the terms containing odd powers of $(R-R')$ disappear by parity. We are therefore left with:
 \begin{equation}
 {\cal N}=e^{-\Delta\tau[V(R')-E_0]}\left[1+\frac{1}{2}\frac{\nabla^2\Psi_G(R')}{\Psi_G(R')}\frac{\hbar^2}{m}\Delta\tau+\cdots\right]
 \end{equation}
@@ -1840,7 +1838,7 @@ V_\Omega(R)=\left\{
  The best break up will be the one which optimizes the accuracy and variance
  of the results for a given amount of computational resources.
  
- \subsection{AFDMC with the $v_6'$ potential for nuclear matter}
+ \subsection{AFDMC with the \texorpdfstring{$v_6'$}{v\textsixinferior'} potential for nuclear matter}
  The Argonne $v_6'$ potential includes central, spin and isospin exchange,
  and tensor interactions. Writing out the components, the Hamiltonian is
  \begin{eqnarray}
@@ -2358,7 +2356,7 @@ arbitrarily large. We leave the discussion of its details in Sec.~\ref{sec:exppr
 In our discussion so far we have assumed that the matrix elements on the projector that defines $p(\mathbf{m},\mathbf{n})$ in Eq.~(\eqref{eq:CIMC_prob}) are
 actually positive definite. Under general circumstances however this is not the case. This clearly prevents the interpretation 
 of $p({\bf m},{\bf n})$ as a probability distribution invalidating the naive approach employed above. In order to circumvent the problem we can use the same idea behind the
-fixed node (phase) approximation introduced in Sec.~\label{sec:fn}
+fixed node (phase) approximation introduced in Sec.~\ref{sec:fn}
 
 Before continuing it is worth to mention that in principle one can still produce a stochastic evolution by absorbing the signs into the weight factor $g(\mathbf{n})$
 while sampling off-diagonal moves using $\left \vert \langle \mathbf{m} \lvert P \rvert \mathbf{n} \rangle \right\vert$. However as briefly explained in Sec.~\ref{sec:fn} 
