@@ -149,10 +149,10 @@
 \newcommand{\acommbig}[2]{\big\{#1,#2\big\}}
 
 % custom environments and boxes
-\NewEnviron{subalign}[1][]{%
+\NewEnviron{subalign}{%
 \begin{subequations}\begin{align}
   \BODY
-\end{align}\label{#1}\end{subequations}
+\end{align}\end{subequations}
 }
 
 \NewEnviron{spliteq}{%
@@ -3543,7 +3543,6 @@ given by
 \begin{equation}
  \LL_\mathrm{mag} = \frac{e}{2\MN} N^\dagger
  (\kappa_0 + \kappa_1\tau^3)\,\skvec{\sigma}\cdot\vec{B}\,N \,.
-\label{eq:L-mag}
 \end{equation}
 %
 where $\kappa_0$ and $\kappa_1$ are the isoscalar and isovector nucleon 
