@@ -9,7 +9,7 @@ rc('font',**{'size':14, 'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
 
 def myLabels(x, pos):
-  return '$%s$'%x
+	return '$%s$'%x
 
 
 fig = figure(figsize=(9,6))

@@ -882,58 +882,59 @@ def Hamiltonian(delta,g):
 
 # commutator of matrices
 def commutator(a,b):
-  return dot(a,b) - dot(b,a)
+    
+    return dot(a,b) - dot(b,a)
 
-# derivative / right-hand side of the flow equation
+# right-hand side of the flow equation
 def derivative(y, t, dim):
 
-  # reshape the solution vector into a dim x dim matrix
-  H = reshape(y, (dim, dim))
+    # reshape the solution vector into a dim x dim matrix
+    H = reshape(y, (dim, dim))
 
-  # extract diagonal Hamiltonian...
-  Hd  = diag(diag(H))
+    # extract diagonal Hamiltonian...
+    Hd  = diag(diag(H))
 
-  # ... and construct off-diagonal the Hamiltonian
-  Hod = H-Hd
+    # ... and construct off-diagonal the Hamiltonian
+    Hod = H-Hd
 
-  # calculate the generator
-  eta = commutator(Hd, Hod)
+    # calculate the generator
+    eta = commutator(Hd, Hod)
 
-  # dH is the derivative in matrix form 
-  dH  = commutator(eta, H)
+    # dHdt is the derivative in matrix form 
+    dH  = commutator(eta, H)
 
-  # convert dH into a linear array for the ODE solver
-  dydt = reshape(dH, -1)
-    
-  return dydt
+    # convert dH into a linear array for the ODE solver
+    dy = reshape(dH, -1)
+      
+    return dy
 
 
 #------------------------------------------------------------------------------
 # Main program
 #------------------------------------------------------------------------------
 def main():
-  g     = 0.5
-  delta = 1
+    g     = 0.5
+    delta = 1
 
-  H0    = Hamiltonian(delta, g)
-  dim   = H0.shape[0]
+    H0    = Hamiltonian(delta, g)
+    dim   = H0.shape[0]
 
-  # calculate exact eigenvalues
-  eigenvalues = eigvalsh(H0)
+    # calculate exact eigenvalues
+    eigenvalues = eigvalsh(H0)
 
-  # turn initial Hamiltonian into a linear array
-  y0  = reshape(H0, -1)                 
+    # turn initial Hamiltonian into a linear array
+    y0  = reshape(H0, -1)                 
 
-  # flow parameters for snapshot images
-  flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
+    # flow parameters for snapshot images
+    flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
 
-  # integrate flow equations - odeint returns an array of solutions,
-  # which are 1d arrays themselves
-  ys  = odeint(derivative, y0, flowparams, args=(dim,))
+    # integrate flow equations - odeint returns an array of solutions,
+    # which are 1d arrays themselves
+    ys  = odeint(derivative, y0, flowparams, args=(dim,))
 
-  # reshape individual solution vectors into dim x dim Hamiltonian
-  # matrices
-  Hs  = reshape(ys, (-1, dim,dim))
+    # reshape individual solution vectors into dim x dim Hamiltonian
+    # matrices
+    Hs  = reshape(ys, (-1, dim,dim))
 \end{lstlisting}
 
 
@@ -1040,10 +1041,11 @@ naively have
 \begin{equation}
  d(\nuc{O}{16}) = \begin{pmatrix} 50 \\ 8\end{pmatrix} \times 
            \begin{pmatrix} 50 \\ 8\end{pmatrix}
-                = 2.88\times10^{17}
+                \approx 2.88\times10^{17}
 \end{equation}
-configurations, i.e., we would need about 3 exabytes (EB) to store all the coefficients
-of just one eigenvector in memory, and $7\times10^{17}$ EB if we were to construct
+configurations, i.e., we would need about 2 exabytes (EB) of memory to store all 
+the coefficients of just one eigenvector (assuming double precision floating-point 
+numbers), and $7\times10^{17}$ EB to construct
 the complete Hamiltonian matrix! State-of-the-art methods for large-scale 
 diagonalization are able to reduce the memory requirements and computational
 effort significantly by exploiting matrix sparseness, and using modern versions of
@@ -1355,23 +1357,23 @@ First, we have a set of functions that read the momentum mesh
 and the input matrix elements from a file:
 \begin{lstlisting}
 def uniform_weights(momenta):
-  weights = np.ones_like(momenta)
-  weights *= abs(momenta[1]-momenta[0])
-  return weights
+    weights = np.ones_like(momenta)
+    weights *= abs(momenta[1]-momenta[0])
+    return weights
 
 def read_mesh(filename):
-  data = np.loadtxt(filename, comments="#")  
-  dim  = data.shape[1]
-  
-  momenta = data[0,:dim]
+    data = np.loadtxt(filename, comments="#")  
+    dim  = data.shape[1]
+    
+    momenta = data[0,:dim]
 
-  return momenta
+    return momenta
   
 def read_interaction(filename):
-  data = np.loadtxt(filename, comments="#")  
-  dim  = data.shape[1]
-  V = data[1:,:dim]
-  return V
+    data = np.loadtxt(filename, comments="#")  
+    dim  = data.shape[1]
+    V = data[1:,:dim]
+    return V
 \end{lstlisting}
 
 The matrix element files have the following format:
@@ -1408,22 +1410,21 @@ use of $\lambda$ instead of $s$ to parameterize the flow, and the treatment of
 the kinetic energy operator as explicitly constant:
 \begin{lstlisting}
 def derivative(lam, y, T):
-# def derivative(y, lam, T):
-  dim = T.shape[0]
+    dim = T.shape[0]
 
-  # reshape the solution vector into a dim x dim matrix
-  V = reshape(y, (dim, dim))
+    # reshape the solution vector into a dim x dim matrix
+    V = reshape(y, (dim, dim))
 
-  # calculate the generator
-  eta = commutator(T, V)
+    # calculate the generator
+    eta = commutator(T, V)
 
-  # dV is the derivative in matrix form 
-  dV  = -4.0/(lam**5) * commutator(eta, T+V)
+    # dV is the derivative in matrix form 
+    dV  = -4.0/(lam**5) * commutator(eta, T+V)
 
-  # convert dH into a linear array for the ODE solver
-  dydt = reshape(dV, -1)
-    
-  return dydt
+    # convert dH into a linear array for the ODE solver
+    dy = reshape(dV, -1)
+      
+    return dy
 \end{lstlisting}
 
 In the main routine of the program, we first set up the mesh and 
@@ -1462,21 +1463,22 @@ from the partial-wave blocks:
 
 \begin{lstlisting}
 def main():
-...
-  
-  # read individual partial waves
-  partial_waves=[]
-  for filename in ["n3lo500_3s1.meq", "n3lo500_3d1.meq", "n3lo500_3sd1.meq"]:
-    partial_waves.append(read_interaction(filename))
-    # print partial_waves[-1].shape
+...  
 
-  # assemble coupled channel matrix
-  V = np.vstack((np.hstack((partial_waves[0], partial_waves[2])), 
-                 np.hstack((np.transpose(partial_waves[2]), partial_waves[1]))
-                ))
+    # read individual partial waves
+    partial_waves=[]
+    for filename in ["n3lo500_3s1.meq", "n3lo500_3d1.meq", "n3lo500_3sd1.meq"]:
+      partial_waves.append(read_interaction(filename))
+      # print partial_waves[-1].shape
 
-  # switch to scattering units
-  V = V/hbarm
+    # assemble coupled channel matrix
+    V = np.vstack((np.hstack((partial_waves[0], partial_waves[2])), 
+                   np.hstack((np.transpose(partial_waves[2]), partial_waves[1]))
+                  ))
+
+    # switch to scattering units
+    V = V/hbarm
+
 ...
 \end{lstlisting}
 
@@ -1517,17 +1519,18 @@ efficient and works robustly for a large variety of input interactions.
 
 \begin{lstlisting}
 ...
-  lam_initial = 20.0
-  lam_final = 1.5
 
-  # integrate using scipy.ode instead of scipy.odeint - this gives
-  # us more control over the solver
-  solver = ode(derivative,jac=None)
+    lam_initial = 20.0
+    lam_final = 1.5
 
-  # equations may get stiff, so we use VODE and Backward Differentiation
-  solver.set_integrator('vode', method='bdf', order=5, nsteps=1000)
-  solver.set_f_params(T)
-  solver.set_initial_value(y0, lam_initial)
+    # integrate using scipy.ode instead of scipy.odeint - this gives
+    # us more control over the solver
+    solver = ode(derivative,jac=None)
+
+    # equations may get stiff, so we use VODE and Backward Differentiation
+    solver.set_integrator('vode', method='bdf', order=5, nsteps=1000)
+    solver.set_f_params(T)
+    solver.set_initial_value(y0, lam_initial)
 
 ...
 \end{lstlisting}
@@ -1539,21 +1542,22 @@ $1.5\,\fmi\leq \lambda \leq 2.5\,\fmi$:
 
 \begin{lstlisting}
 ...
-  while solver.successful() and solver.t > lam_final:
-    # adjust the step size in different regions of the flow parameter
-    if solver.t >= 6.0:
-      ys = solver.integrate(solver.t-1.0)
-    elif solver.t >= 2.5:
-      ys = solver.integrate(solver.t-0.5)
-    elif solver.t < 2.5 and solver.t >= lam_final:
-      ys = solver.integrate(solver.t-0.1)
 
-    # add evolved interactions to the list
-    flowparams.append(solver.t)
-    Vtmp = reshape(ys,(dim,dim))
-    Vs.append(Vtmp)
+    while solver.successful() and solver.t > lam_final:
+        # adjust the step size in different regions of the flow parameter
+        if solver.t >= 6.0:
+          ys = solver.integrate(solver.t-1.0)
+        elif solver.t < 6.0 and solver.t >= 2.5:
+          ys = solver.integrate(solver.t-0.5)
+        elif solver.t < 2.5 and solver.t >= lam_final:
+          ys = solver.integrate(solver.t-0.1)
 
-    print "%8.5f %14.8f"%(solver.t, eigvalsh((T + Vtmp)*hbarm)[0])
+        # add evolved interactions to the list
+        flowparams.append(solver.t)
+        Vtmp = reshape(ys,(dim,dim))
+        Vs.append(Vtmp)
+
+        print("%8.5f %14.8f"%(solver.t, eigvalsh((T + Vtmp)*hbarm)[0]))
 
 ...
 \end{lstlisting}
@@ -1860,9 +1864,10 @@ results in spontaneous symmetry breaking and strong configuration mixing.
 We can now introduce a one-body operator that is normal-ordered with respect
 to the reference state $\ket{\Phi}$ by defining
 \begin{equation}\label{eq:def_no}
-  \aaO_i\aO_j \equiv \nord{\aaO_i\aO_j} +\, \contraction[1.5ex]{}{\aO}{{}^\dag_i}{\aO}\aaO_i\aO_j\,.
+  \aaO_i\aO_j \equiv \nord{\aaO_i\aO_j} +\, \contraction[1.5ex]{}{\aO}{{}^\dag_i}{\aO}\aaO_i\aO_j\,,
 \end{equation}
-The brace connecting a pair of creation and annihilation operators indicates
+where the brackets $\{\ldots\}$ indicate normal ordering, and the brace 
+over a pair of creation and annihilation operators means that
 they have been \emph{contracted}. The contraction itself is merely the 
 expectation value of the operator in the reference state $\ket{\Phi}$:
 \begin{equation}\label{eq:def_particle_contraction}
@@ -2059,8 +2064,8 @@ induced $3N$ operators:
        + n_q\delta_{qs}\nord{\aaO_{i}\aaO_{j}\aO_{r}\aO_{l}} 
        + n_j n_q\delta_{jr}\delta_{qs}\nord{\aaO_{i}\aO_{l}} \notag\\
   &
-       + n_in_j n_q\delta_{il}\delta_{jr}\delta_{qs}+ \text{perm.}\,.
-    \Big)
+       + n_in_j n_q\delta_{il}\delta_{jr}\delta_{qs}+ \text{permutations}
+    \Big)\,.
 \end{align}
 If we now truncate operators to the normal-ordered two-body level, we keep
 all the in-medium contributions of the induced $3N$ terms, and retain 
@@ -2915,22 +2920,22 @@ at the beginning of the program's main routine:
 \begin{lstlisting}
 def main():
 ...
-  particles  = 4
+    particles  = 4
 
-  # setup shared data
-  dim1B     = 8
+    # setup shared data
+    dim1B     = 8
 
-  # this defines the reference state
-  holes     = [0,1,2,3]
-  particles = [4,5,6,7]
+    # this defines the reference state
+    holes     = [0,1,2,3]
+    particles = [4,5,6,7]
 
-  # basis definitions
-  bas1B     = range(dim1B)
-  bas2B     = construct_basis_2B(holes, particles)
-  basph2B   = construct_basis_ph2B(holes, particles)
+    # basis definitions
+    bas1B     = range(dim1B)
+    bas2B     = construct_basis_2B(holes, particles)
+    basph2B   = construct_basis_ph2B(holes, particles)
 
-  idx2B     = construct_index_2B(bas2B)
-  idxph2B   = construct_index_2B(basph2B)
+    idx2B     = construct_index_2B(bas2B)
+    idxph2B   = construct_index_2B(basph2B)
 
   ...
 \end{lstlisting}
@@ -3015,27 +3020,28 @@ single-particle states:
 \begin{lstlisting}
 def main():
 ...
-  particles  = 4
 
-  # setup shared data
-  dim1B     = 8
+    particles  = 4
 
-  # this defines the reference state
-  holes     = [0,1,2,3]
-  particles = [4,5,6,7]
+    # setup shared data
+    dim1B     = 8
 
-  # basis definitions
+    # this defines the reference state
+    holes     = [0,1,2,3]
+    particles = [4,5,6,7]
+
+    # basis definitions
 ...
 
-  # occupation number matrices
-  occ1B     = construct_occupation_1B(bas1B, holes, particles)
-  occA_2B   = construct_occupationA_2B(bas2B, occ1B)
-  occB_2B   = construct_occupationB_2B(bas2B, occ1B)
-  occC_2B   = construct_occupationC_2B(bas2B, occ1B)
+    # occupation number matrices
+    occ1B     = construct_occupation_1B(bas1B, holes, particles)
+    occA_2B   = construct_occupationA_2B(bas2B, occ1B)
+    occB_2B   = construct_occupationB_2B(bas2B, occ1B)
+    occC_2B   = construct_occupationC_2B(bas2B, occ1B)
 
-  occphA_2B = construct_occupationA_2B(basph2B, occ1B)
+    occphA_2B = construct_occupationA_2B(basph2B, occ1B)
 
-  ...
+...
 \end{lstlisting}
 In addition to the elementary lists, we set up diagonal matrices for
 the various occupation number factors that appear in the IMSRG(2)
@@ -3058,27 +3064,27 @@ dictionary:
 
 \begin{lstlisting}
 ...
-  user_data  = {
-    "dim1B":      dim1B, 
-    "holes":      holes,
-    "particles":  particles,
-    "bas1B":      bas1B,
-    "bas2B":      bas2B,
-    "basph2B":    basph2B,
-    "idx2B":      idx2B,
-    "idxph2B":    idxph2B,
-    "occ1B":      occ1B,
-    "occA_2B":    occA_2B,
-    "occB_2B":    occB_2B,
-    "occC_2B":    occC_2B,
-    "occphA_2B":  occphA_2B,
+    user_data  = {
+      "dim1B":      dim1B, 
+      "holes":      holes,
+      "particles":  particles,
+      "bas1B":      bas1B,
+      "bas2B":      bas2B,
+      "basph2B":    basph2B,
+      "idx2B":      idx2B,
+      "idxph2B":    idxph2B,
+      "occ1B":      occ1B,
+      "occA_2B":    occA_2B,
+      "occB_2B":    occB_2B,
+      "occC_2B":    occC_2B,
+      "occphA_2B":  occphA_2B,
 
-    "eta_norm":   0.0,                # variables for sharing data between ODE solver
-    "dE":         0.0,                # and main routine
-    
-    "calc_eta":   eta_white,          # specify the generator (function object)
-    "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
-  }
+      "eta_norm":   0.0,                # variables for sharing data between ODE solver
+      "dE":         0.0,                # and main routine
+      
+      "calc_eta":   eta_white,          # specify the generator (function object)
+      "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
+    }
 ...
 \end{lstlisting}
 
@@ -3101,10 +3107,10 @@ Hamiltonian:
 \begin{lstlisting}
 def main():
 ...
-  # set up initial Hamiltonian
-  H1B, H2B = pairing_hamiltonian(delta, g, user_data)
+    # set up initial Hamiltonian
+    H1B, H2B = pairing_hamiltonian(delta, g, user_data)
 
-  E, f, Gamma = normal_order(H1B, H2B, user_data) 
+    E, f, Gamma = normal_order(H1B, H2B, user_data) 
 ...
 \end{lstlisting}
 In order to facilitate the reuse of our code, we proceed in two
@@ -3114,32 +3120,32 @@ spacing $\delta$ and pairing strength $g$. The one- and two-body matrix
 elements are then passed to a generic routine that performs the normal ordering:
 \begin{lstlisting}
 def normal_order(H1B, H2B, user_data):
-  bas1B     = user_data["bas1B"]
-  bas2B     = user_data["bas2B"]
-  idx2B     = user_data["idx2B"]
-  particles = user_data["particles"]
-  holes     = user_data["holes"]
+    bas1B     = user_data["bas1B"]
+    bas2B     = user_data["bas2B"]
+    idx2B     = user_data["idx2B"]
+    particles = user_data["particles"]
+    holes     = user_data["holes"]
 
-  # 0B part
-  E = 0.0
-  for i in holes:
-    E += H1B[i,i]
+    # 0B part
+    E = 0.0
+    for i in holes:
+      E += H1B[i,i]
 
-  for i in holes:
-    for j in holes:
-      E += 0.5*H2B[idx2B[(i,j)],idx2B[(i,j)]]  
+    for i in holes:
+      for j in holes:
+        E += 0.5*H2B[idx2B[(i,j)],idx2B[(i,j)]]  
 
-  # 1B part
-  f = H1B
-  for i in bas1B:
-    for j in bas1B:
-      for h in holes:
-        f[i,j] += H2B[idx2B[(i,h)],idx2B[(j,h)]]  
+    # 1B part
+    f = H1B
+    for i in bas1B:
+      for j in bas1B:
+        for h in holes:
+          f[i,j] += H2B[idx2B[(i,h)],idx2B[(j,h)]]  
 
-  # 2B part
-  Gamma = H2B
+    # 2B part
+    Gamma = H2B
 
-  return E, f, Gamma
+    return E, f, Gamma
 \end{lstlisting}
 
 \subsubsection*{Integration}
@@ -3151,29 +3157,28 @@ much control over the solver as possible.
 The ODE solver calls the following derivative wrapper function:
 \begin{lstlisting}
 def derivative_wrapper(t, y, user_data):
-
 ...
-  calc_eta  = user_data["calc_eta"]
-  calc_rhs  = user_data["calc_rhs"]
+    calc_eta  = user_data["calc_eta"]
+    calc_rhs  = user_data["calc_rhs"]
 
-  # extract operator pieces from solution vector
-  E, f, Gamma = get_operator_from_y(y, dim1B, dim2B)
+    # extract operator pieces from solution vector
+    E, f, Gamma = get_operator_from_y(y, dim1B, dim2B)
 
 
-  # calculate the generator
-  eta1B, eta2B = calc_eta(f, Gamma, user_data)
+    # calculate the generator
+    eta1B, eta2B = calc_eta(f, Gamma, user_data)
 
-  # calculate the right-hand side
-  dE, df, dGamma = calc_rhs(eta1B, eta2B, f, Gamma, user_data)
+    # calculate the right-hand side
+    dE, df, dGamma = calc_rhs(eta1B, eta2B, f, Gamma, user_data)
 
-  # convert derivatives into linear array
-  dy   = np.append([dE], np.append(reshape(df, -1), reshape(dGamma, -1)))
+    # convert derivatives into linear array
+    dy   = np.append([dE], np.append(reshape(df, -1), reshape(dGamma, -1)))
 
-  # share data
-  user_data["dE"] = dE
-  user_data["eta_norm"] = np.linalg.norm(eta1B,ord='fro')+np.linalg.norm(eta2B,ord='fro')
-  
-  return dy
+    # share data
+    user_data["dE"]       = dE
+    user_data["eta_norm"] = np.linalg.norm(eta1B,ord='fro')+np.linalg.norm(eta2B,ord='fro')
+    
+    return dy
 \end{lstlisting}
 This routine is very similar to the ones we used in the SRG
 codes in sections \ref{sec:srg_pairing_implementation} and \ref{sec:srg_nn_flow}. It extracts
@@ -3200,22 +3205,22 @@ of $f_{od}(s)$ and $\Gamma_{od}(s)$:
 \begin{lstlisting}
 def main():
 ...
-  while solver.successful() and solver.t < sfinal:
-    ys = solver.integrate(sfinal, step=True)
-    
-    dim2B = dim1B*dim1B
-    E, f, Gamma = get_operator_from_y(ys, dim1B, dim2B)
+    while solver.successful() and solver.t < sfinal:
+        ys = solver.integrate(sfinal, step=True)
+        
+        dim2B = dim1B*dim1B
+        E, f, Gamma = get_operator_from_y(ys, dim1B, dim2B)
 
-    DE2 = calc_mbpt2(f, Gamma, user_data)
-    DE3 = calc_mbpt3(f, Gamma, user_data)
+        DE2 = calc_mbpt2(f, Gamma, user_data)
+        DE3 = calc_mbpt3(f, Gamma, user_data)
 
-    norm_fod     = calc_fod_norm(f, user_data)
-    norm_Gammaod = calc_Gammaod_norm(Gamma, user_data)
+        norm_fod     = calc_fod_norm(f, user_data)
+        norm_Gammaod = calc_Gammaod_norm(Gamma, user_data)
 
-    print "%8.5f %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f"%(
-      solver.t, E , DE2, DE3, E+DE2+DE3, user_data["dE"], user_data["eta_norm"], norm_fod, norm_Gammaod)
+        print("%8.5f %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f"%(
+          solver.t, E , DE2, DE3, E+DE2+DE3, user_data["dE"], user_data["eta_norm"], norm_fod, norm_Gammaod))
 
-    if abs(DE2/E) < 10e-8: break
+        if abs(DE2/E) < 10e-8: break
 
 \end{lstlisting}
 As discussed in earlier sections, the off-diagonal matrix elements 
@@ -3231,14 +3236,14 @@ the flow. Once this quantity falls below $10^{-8}$, we terminate the evolution.
 \subsubsection*{Optimizations}
 The Python implementation of the IMSRG that we describe here can solve
 problems with small single-particle basis sizes in reasonable time. To 
-tackle large-scale calculations, we implement the IMSRG in compiled
-languages like C/C++ or Fortran.
+tackle large-scale calculations, we implement the IMSRG in 
+languages like C/C++ or Fortran that are closer to the hardware.
 
 As mentioned in the course of the discussion, we have favored simplicity 
 in the design of the Python code, which leaves significant room for optimization.
 For instance, we can exploit that nucleons are Fermions, and 
 antisymmetrize the two-nucleon basis states. This reduces the storage for
-matrix elements involving identical particles by a factor four, because
+matrix elements involving identical particles by a factor of four, because
 we only need to store one of the antisymmetrized matrix elements 
 \begin{equation}
   \Gamma_{ijkl} = -\Gamma_{jikl} = - \Gamma_{ijlk} = \Gamma_{jilk}\,.
