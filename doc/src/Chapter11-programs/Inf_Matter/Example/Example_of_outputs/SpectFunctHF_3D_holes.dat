@@ -1,0 +1,22 @@
+#
+#
+#   Lonertzian-smoothed HOLE spectral function (both aprticle and hole) as
+#  function of momentum and energy
+#
+#
+#    k              E               A(k,E)
+
+0    -106.672       0
+0    -106.672       0.265258
+0    -106.672       0
+
+
+0.805283    -83.0545       0
+0.805283    -83.0545       0.265258
+0.805283    -83.0545       0
+
+
+1.13884    -61.7784       0
+1.13884    -61.7784       0.265258
+1.13884    -61.7784       0
+

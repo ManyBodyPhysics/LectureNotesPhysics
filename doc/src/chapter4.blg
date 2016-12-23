@@ -34,101 +34,99 @@ I was expecting a `,' or a `}'---line 4582 of file lnp.bib
  :     Address = {Cambridge, USA},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 7207 of file lnp.bib
+I was expecting a `,' or a `}'---line 6100 of file lnp.bib
  : 
  : @book{TinkhamBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 8638 of file lnp.bib
+Repeated entry---line 7531 of file lnp.bib
  : @article{Braaten:2004rn
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8749 of file lnp.bib
+Repeated entry---line 7642 of file lnp.bib
  : @article{Kaplan:1996xu
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8766 of file lnp.bib
+Repeated entry---line 7659 of file lnp.bib
  : @article{Kaplan:1998tg
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8782 of file lnp.bib
+Repeated entry---line 7675 of file lnp.bib
  : @article{Kaplan:1998we
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8797 of file lnp.bib
+Repeated entry---line 7690 of file lnp.bib
  : @article{Bedaque:1998kg
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8813 of file lnp.bib
+Repeated entry---line 7706 of file lnp.bib
  : @article{Bedaque:1998km
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8828 of file lnp.bib
+Repeated entry---line 7721 of file lnp.bib
  : @article{Fleming:1999ee
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8844 of file lnp.bib
+Repeated entry---line 7737 of file lnp.bib
  : @article{Epelbaum:2008ga
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8860 of file lnp.bib
+Repeated entry---line 7753 of file lnp.bib
  : @article{Machleidt:2011zz
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 10244 of file lnp.bib
+Repeated entry---line 9137 of file lnp.bib
  : @article{Weinberg:1990rz
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 10256 of file lnp.bib
+Repeated entry---line 9149 of file lnp.bib
  : @article{Weinberg:1991um
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 10702 of file lnp.bib
+Repeated entry---line 9595 of file lnp.bib
  : @inproceedings{Kaplan:2005es
  :                             ,
 I'm skipping whatever remains of this entry
-Warning--entry type for "Gardestig:2007mk" isn't style-file defined
---line 11998 of file lnp.bib
 Warning--can't use both author and editor fields in Beane:2000fx
 You've used 44 entries,
             2812 wiz_defined-function locations,
             892 strings with 10159 characters,
-and the built_in function-call counts, 13336 in all, are:
-= -- 846
+and the built_in function-call counts, 13445 in all, are:
+= -- 856
 > -- 338
 < -- 3
 + -- 142
 - -- 98
-* -- 735
-:= -- 1557
-add.period$ -- 7
+* -- 749
+:= -- 1570
+add.period$ -- 6
 call.type$ -- 44
-change.case$ -- 8
+change.case$ -- 7
 chr.to.int$ -- 0
 cite$ -- 45
-duplicate$ -- 1511
-empty$ -- 1455
+duplicate$ -- 1521
+empty$ -- 1462
 format.name$ -- 128
-if$ -- 3057
+if$ -- 3084
 int.to.chr$ -- 0
 int.to.str$ -- 44
-missing$ -- 393
-newline$ -- 147
+missing$ -- 396
+newline$ -- 146
 num.names$ -- 44
-pop$ -- 619
+pop$ -- 615
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 376
+skip$ -- 382
 stack$ -- 0
-substring$ -- 405
-swap$ -- 835
+substring$ -- 424
+swap$ -- 841
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 81
+while$ -- 82
 width$ -- 46
 write$ -- 367
 (There were 20 error messages)
