@@ -1,4 +1,4 @@
-\documentclass[oneside,graybox,envcountchap,sectrefs]{svmult}
+\documentclass[graybox,envcountchap]{svmult}
 
 
 \usepackage{mathptmx}
@@ -31,6 +31,11 @@
 \usepackage{shadow}
 \usepackage[pdfencoding=auto]{hyperref}   % required to deal with math expressions 
                                           % in hyperref / texorpdfstring
+% The bookmark package ameliorates and issue with the PDF file's index being garbled and missing
+% many entries, possibly due to umlauts in the author names. There is still the issue that
+% the author by-line appears in the index in addition to the chapter title, and that the byline
+% instead of the title expand into the toc for the chapter.
+\usepackage{bookmark}                     
 \usepackage{bezier}
 \usepackage{pstricks}
 \setcounter{tocdepth}{2}
@@ -223,8 +228,3 @@ tabsize=2
 
 
 \end{document}
-
-
-
-
-

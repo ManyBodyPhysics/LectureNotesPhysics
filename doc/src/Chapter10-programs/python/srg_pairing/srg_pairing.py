@@ -29,104 +29,108 @@ from scipy.integrate import odeint
 #------------------------------------------------------------------------------
 # plot helpers
 #------------------------------------------------------------------------------
-# format tick labels using LaTeX-like math fonts
 def myLabels(x, pos):
-  return '$%s$'%x
+    '''format tick labels using LaTeX-like math fonts'''
+    return '$%s$'%x
 
-# save these settings for use in both following plots
 def myPlotSettings(ax, formatter):
-  ax.xaxis.set_major_formatter(formatter)
-  ax.yaxis.set_major_formatter(formatter)
-  ax.tick_params(axis='both',which='major',width=1.5,length=8)
-  ax.tick_params(axis='both',which='minor',width=1.5,length=5)
-  ax.tick_params(axis='both',width=2,length=10,labelsize=20)
-  for s in ['left', 'right', 'top', 'bottom']:
-    ax.spines[s].set_linewidth(2)
-  ax.set_xlim([0.0007,13])  
-  return
+    '''save these settings for use in other plots'''
+    ax.xaxis.set_major_formatter(formatter)
+    ax.yaxis.set_major_formatter(formatter)
+    ax.tick_params(axis='both',which='major',width=1.5,length=8)
+    ax.tick_params(axis='both',which='minor',width=1.5,length=5)
+    ax.tick_params(axis='both',width=2,length=10,labelsize=20)
+    for s in ['left', 'right', 'top', 'bottom']:
+        ax.spines[s].set_linewidth(2)
+    ax.set_xlim([0.0007,13])  
+    return
 
 #------------------------------------------------------------------------------
-# plot eigenvalues and diagonals
+# plot routines
 #------------------------------------------------------------------------------
 def plot_diagonals(data, eigenvalues, flowparams, delta, g):
-  dim       = len(data)
-  formatter = FuncFormatter(myLabels)
-  markers   = ['o' for i in range(dim)]
-  cols      = ['blue', 'red', 'purple', 'green', 'orange', 'deepskyblue']
+    '''plot eigenvalues and diagonals'''
+    dim       = len(data)
+    formatter = FuncFormatter(myLabels)
+    markers   = ['o' for i in range(dim)]
+    cols      = ['blue', 'red', 'purple', 'green', 'orange', 'deepskyblue']
 
-  # diagonals vs. eigenvalues on absolute scale
-  fig, ax = plt.subplots()
-  for i in range(dim):
-    plt.semilogx(flowparams, [eigenvalues[i] for e in range(flowparams.shape[0])], color=cols[i], linestyle='solid')
-    plt.semilogx(flowparams, data[i], color=cols[i], linestyle='dashed', marker=markers[i], markersize=10)
+    # diagonals vs. eigenvalues on absolute scale
+    fig, ax = plt.subplots()
+    for i in range(dim):
+        plt.semilogx(flowparams, [eigenvalues[i] for e in range(flowparams.shape[0])], color=cols[i], linestyle='solid')
+        plt.semilogx(flowparams, data[i], color=cols[i], linestyle='dashed', marker=markers[i], markersize=10)
 
-  myPlotSettings(ax, formatter)
+    myPlotSettings(ax, formatter)
 
-  plt.savefig("srg_pairing_diag_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
-  plt.show()
+    plt.savefig("srg_pairing_diag_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
+    plt.show()
 
-  # difference between diagonals and eigenvalues
-  fig, ax = plt.subplots()
-  for i in range(dim):
-    plot_diff = plt.semilogx(flowparams, data[i]-eigenvalues[i], color=cols[i], linestyle='solid', marker=markers[i], markersize=10)
+    # difference between diagonals and eigenvalues
+    fig, ax = plt.subplots()
+    for i in range(dim):
+        plot_diff = plt.semilogx(flowparams, data[i]-eigenvalues[i], color=cols[i], linestyle='solid', marker=markers[i], markersize=10)
 
-  myPlotSettings(ax, formatter)
+    myPlotSettings(ax, formatter)
 
-  plt.savefig("srg_pairing_diag-eval_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
-  plt.show()
-  return
+    plt.savefig("srg_pairing_diag-eval_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
+    plt.show()
+    return
 
 #------------------------------------------------------------------------------
 # plot matrix snapshots
 #------------------------------------------------------------------------------
 def plot_snapshots(Hs, flowparams, delta, g):
-  fig  = plt.figure(1, (10., 5.))
-  grid = AxesGrid(fig, 111,                       # similar to subplot(111)
-                   nrows_ncols=(2, Hs.shape[0]/2),  # creates grid of axes
-                   axes_pad=0.25,                 # pad between axes in inch.
-                   label_mode='L',                # put labels on left, bottom
-                   cbar_mode='single',            # one color bar (default: right of last image in grid)
-                   cbar_pad=0.20,                 # insert space between plots and color bar
-                   cbar_size='10%'                # size of colorbar relative to last image
-                   )
+    fig  = plt.figure(1, (10., 5.))
+    grid = AxesGrid(fig, 111,                       # similar to subplot(111)
+                     nrows_ncols=(2, Hs.shape[0]/2),  # creates grid of axes
+                     axes_pad=0.25,                 # pad between axes in inch.
+                     label_mode='L',                # put labels on left, bottom
+                     cbar_mode='single',            # one color bar (default: right of last image in grid)
+                     cbar_pad=0.20,                 # insert space between plots and color bar
+                     cbar_size='10%'                # size of colorbar relative to last image
+                     )
 
-  # create individual snapshots - figures are still addressed by single index,
-  # despite multi-row grid
-  for s in range(Hs.shape[0]):
-    img = grid[s].imshow(Hs[s], 
-                          cmap=plt.get_cmap('RdBu_r'),                                  # choose color map
-                          interpolation='nearest',       
-                          norm=SymLogNorm(linthresh=1e-10,vmin=-0.5*g,vmax=10*delta),   # normalize 
-                          vmin=-0.5*g,                                                  # min/max values for data
-                          vmax=10*delta
-                          )
+    # create individual snapshots - figures are still addressed by single index,
+    # despite multi-row grid
+    for s in range(Hs.shape[0]):
+        img = grid[s].imshow(Hs[s], 
+                            cmap=plt.get_cmap('RdBu_r'),                                  # choose color map
+                            interpolation='nearest',       
+                            norm=SymLogNorm(linthresh=1e-10,vmin=-0.5*g,vmax=10*delta),   # normalize 
+                            vmin=-0.5*g,                                                  # min/max values for data
+                            vmax=10*delta
+                            )
 
-    # tune plots: switch off tick marks, ensure that plots retain aspect ratio
-    grid[s].set_title('$s=%s$'%flowparams[s])
-    grid[s].tick_params(      
-      bottom='off',      
-      top='off',
-      left='off',      
-      right='off'
-      )
-    grid[s].set_xticks([0,1,2,3,4,5])
-    grid[s].set_yticks([0,1,2,3,4,5])
-    grid[s].set_xticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
-    grid[s].set_yticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
+        # tune plots: switch off tick marks, ensure that plots retain aspect ratio
+        grid[s].set_title('$s=%s$'%flowparams[s])
+        grid[s].tick_params(      
+  
+        bottom='off',      
+        top='off',
+        left='off',      
+        right='off'
+        )
+  
+        grid[s].set_xticks([0,1,2,3,4,5])
+        grid[s].set_yticks([0,1,2,3,4,5])
+        grid[s].set_xticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
+        grid[s].set_yticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
 
-  cbar = grid.cbar_axes[0]
-  plt.colorbar(img, cax=cbar, 
-    ticks=[ -1.0e-1, -1.0e-3, -1.0e-5, -1.0e-7, -1.09e-9 , 0., 
-             1.0e-9, 1.0e-7, 1.0e-5, 1.0e-3, 0.1, 10.0]
-    )
-  cbar.axes.set_yticklabels(['$-10^{-1}$', '$-10^{-3}$', '$-10^{-5}$', '$-10^{-7}$', 
+        cbar = grid.cbar_axes[0]
+        plt.colorbar(img, cax=cbar, 
+          ticks=[ -1.0e-1, -1.0e-3, -1.0e-5, -1.0e-7, -1.09e-9 , 0., 
+                 1.0e-9, 1.0e-7, 1.0e-5, 1.0e-3, 0.1, 10.0]
+        )
+
+        cbar.axes.set_yticklabels(['$-10^{-1}$', '$-10^{-3}$', '$-10^{-5}$', '$-10^{-7}$', 
                              '$-10^{-9}$', '$0.0$', '$10^{-9}$', '$10^{-7}$', '$10^{-5}$', 
                              '$10^{-3}$', '$10^{-1}$', '$10$'])
-  cbar.set_ylabel('$\mathrm{[a. u.]}$') 
+        cbar.set_ylabel('$\mathrm{[a. u.]}$') 
 
 
-  plt.savefig("srg_pairing_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
-  plt.show()
+        plt.savefig("srg_pairing_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
+        plt.show()
 
   return
 

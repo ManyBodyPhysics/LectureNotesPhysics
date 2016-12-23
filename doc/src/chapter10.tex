@@ -162,18 +162,20 @@ Fei Yuan \at Department of Physics and Astronomy and National
 Superconducting Cyclotron Laboratory, Michigan State University, East
 Lansing, Michigan USA, \email{yuan@nscl.msu.edu}} 
 \maketitle
-\abstract{We present applications of the In-Medium Similarity
-  Renormalization Group (IMSRG) method to studies of infinite nuclear
-  matter.  The IMSRG method employs a continuous unitary
-  transformation of the many-body Hamiltonian to decouple the ground
-  state from all excitations, thereby solving the many-body
-  problem. Starting from a pedagogical introduction of the underlying
-  concepts, the IMSRG flow equations are developed and we study
-  different IMSRG generators that achieve the desired decoupling, and
-  how they affect the details of the IMSRG results. We compare with
-  the coupled cluster theory results of chapter \ref{chapter:cc}, the
-  Monte Carlo results of chapter \ref{chapter:qmc} and the Green's
-  function results of chapter \ref{chapter:scgf}.}
+\abstract{
+We present a pedagogical discussion of Similarity Renormalization
+Group (SRG) methods, in particular the In-Medium SRG (IMSRG) approach for 
+solving the nuclear many-body problem. These methods use continuous unitary
+transformations to evolve the nuclear Hamiltonian to a desired shape. The
+IMSRG, in particular, is used to decouple the ground state from all excitations
+and solve the many-body Schr\"odinger equation. We discuss the IMSRG formalism 
+as well as its numerical implementation, and use the method to study the pairing model 
+and infinite neutron matter. We compare our results with those of Coupled cluster 
+theory (chapter \ref{chapter:cc}), Configuration-Interaction Monte Carlo 
+(\ref{chapter:qmc}), and the Self-Consistent Green's Function approach discussed 
+in Chapter \ref{chapter:scgf}. The chapter concludes with an expanded overview of 
+current research directions, and a look ahead at upcoming developments.
+}
 
 \section{Introduction}
 Effective Field Theory (EFT) and Renormalization Group (RG) methods
@@ -303,7 +305,7 @@ solid-state physics literature, the approach is also known as
 continuous unitary transformation theory  
 \cite{Heidbrink:2002kx,Drescher:2011kx,Krull:2012bs,Fauseweh:2013zv,Krones:2015ft}.
 When we discuss our decoupling strategies for the nuclear many-body
-problem, it will become evident that the IMSRG is related to coupled cluster theory (CC), see also chapter 8,  
+problem, it will become evident that the IMSRG is related to Coupled Cluster theory (CC), see also chapter 8,  
 and a variety of other many-body methods that are used heavily in 
 quantum chemistry (see, e.g., \cite{Shavitt:2009,Hagen:2014ve,White:2002fk,
 Yanai:2007kx,Nakatsuji:1976yq,Mukherjee:2001uq,Mazziotti:2006fk,Evangelista:2014rq}).
@@ -406,7 +408,7 @@ Eq.~\eqref{eq:cut} with respect to $s$ to obtain
   \totd{\HO(s)}{s} = \totd{\UO(s)}{s}\HO(0)\UUO(s) + \UO(s)\HO(0)\totd{\UUO(s)}{s}
                    = \totd{\UO(s)}{s}\UUO(s)\HO(s) + \HO(s)\UO(s)\totd{\UUO(s)}{s}\,.
 \end{equation}
-Since $\UO(s)$ is  unitary, we also have
+Since $\UO(s)$ is unitary, we also have
 \begin{equation}
   \totd{}{s}\left(\UO(s)\UUO(s)\right) = \totd{}{s} \left(\idO\right) = 0 \quad \Longrightarrow 
   \quad \totd{\UO(s)}{s}\UUO(s) = - \UO(s)\totd{\UUO(s)}{s}\,.
@@ -443,8 +445,8 @@ exponential
 \begin{align}
   U(s) &= \mathcal{S}\exp \int^s_0 ds'\,\eta(s') \label{eq:def_U_pathexp}\,,
 \end{align}
-because the generator changes dynamically during the flow. This formal expression 
-needs to be evaluated either as a product of infinitesimal unitary transformations,
+because the generator changes dynamically during the flow. This expression
+is defined equivalently either as a product of infinitesimal unitary transformations,
 \begin{align}       \label{eq:def_U_expds}
    U(s) &= \lim_{N\to\infty}\prod^{N}_{i=0} e^{\eta(s_i)\delta s_i}\,,\quad s_{i+1}=s_i+\delta s_i\,,\quad \sum_{i}\delta s_i=s\,,
 \end{align}
@@ -485,8 +487,9 @@ e.g.,
   ||\eta||^2_{HS}\equiv\tr\left(\eetaO\etaO\right)\,.
 \end{equation}
 Since norms are positive semi-definite by construction, Eq.~\eqref{eq:steepest_descent} 
-implies that the norm of $\HO_{od}(s)$ --- and therefore the operator itself --- are monotonously 
-driven to zero as we evolve $s\to\infty$, just as intended \cite{Wegner:1994dk,Kehrein:2006kx}.
+implies that the norm of $\HO_{od}(s)$ --- and therefore the operator itself --- are 
+monotonically driven to zero as we evolve $s\to\infty$, just as intended 
+\cite{Wegner:1994dk,Kehrein:2006kx}.
 
 Going back over the discussion, you may notice that we never specified in
 detail \emph{how} we split the Hamiltonian into diagonal and off-diagonal
@@ -519,7 +522,7 @@ Ref.~\cite{Golub:2013le}).
 
 Let us consider a symmetric matrix $H$, 
 \begin{equation} 
-  H \equiv \begin{pmatrix} H_{11} & H_{12} \\ H_{21} & H_{22}\end{pmatrix}. 
+  H \equiv \begin{pmatrix} H_{11} & H_{12} \\ H_{12} & H_{22}\end{pmatrix}. 
 \end{equation}
 and an orthogonal (i.e., unitary and real) matrix $U$,
 \begin{equation}
@@ -562,7 +565,7 @@ as
 working in the eigenbasis of $H_d(s)$. We can express $H(s)$ in terms of the $2\times2$ 
 identity matrix and the Pauli matrices:
 \begin{equation}
-  H(s) = E_{+}(s) \idO + E_{-}(s))\sigma_3 
+  H(s) = E_{+}(s) \idO + E_{-}(s)\sigma_3 
          + V(s)\sigma_1\,,
 \end{equation}
 where we have introduced
@@ -572,7 +575,7 @@ where we have introduced
 
 The Wegner generator can be determined readily using the algebra of
 the Pauli matrices,
-$\comm{\sigma_i}{\sigma_j}=2i\varepsilon_{ijk}\sigma_k$:
+$\comm{\sigma_j}{\sigma_k}=2i\varepsilon_{jkl}\sigma_l$:
 \begin{equation}
   \eta(s) = \comm{H_d(s)}{H_{od}(s)} = 2 i E_{-}(s) V(s) \sigma_2\,.
 \end{equation}
@@ -648,7 +651,7 @@ $E_{-}(s)$ and $V(s)$. In Fig.~\ref{fig:srg_toy}, we show these quantities as a 
 of $\theta(s)$ over the interval $[0,4\pi]$. We see that the four possible sign 
 combinations correspond to distinct regions in the interval. We can map any set of initial
 values --- or any point of the flow, really --- to a distinct value $\theta(s)$ 
-in this figure, even in limiting cases: For instance, if the diagonal matrix elements of
+in this figure, even in limiting cases: For instance, if the diagonal matrix elements 
 are degenerate, $E_1=E_2$, we have $E_{-}=0$, the angle $\theta$ will approach $\pm\pi$ and 
 $V(s)/\Omega\to\pm 1$. From this point the SRG flow will drive $E_{-}(s)$ and $V(s)$ to 
 the nearest fixed point at a multiple of $2\pi$ according to the trajectory for $\theta(s),
@@ -713,14 +716,15 @@ pairing Hamiltonian is given by
         -\frac{1}{2}g \sum_{pq} a^{\dagger}_{p+}a^{\dagger}_{p-}a_{q-}a_{q+}\,,
 \end{equation}
 where $\delta$ controls the spacing of single-particle levels that are indexed
-by a principal quantum number $p$ and their spin projection $\sigma$ (see 
+by a principal quantum number $p=0,\ldots,3$ and their spin projection $\sigma$ (see 
 Tab.~\ref{tab:srg_pairing_sp}), and $g$ the strength of the pairing interaction. 
 
-We will consider the case of 4 particles in 8 single-particle states. Following
-the Full Configuration Interaction (FCI) approach discussed in chapter \ref{chapter:cc},
-we can construct a many-body basis of Slater determinants by placing
-our 4 particles into the 8 single-particle basis states. Since each
-single-particle state can only be occupied by one particle, there are
+We will consider the case of four particles in eight single-particle states. 
+Following the Full Configuration Interaction (FCI) approach discussed in 
+Chap.~\ref{chapter:cc}, we can construct a many-body basis of Slater 
+determinants by placing our particles into the available single-particle 
+basis states. Since each single-particle state can only be occupied by one 
+particle, there are
 \begin{equation}
   \begin{pmatrix} 8 \\ 4\end{pmatrix} = 70
 \end{equation}
@@ -728,8 +732,8 @@ unique configurations. The specific form of the pairing interaction
 implies that the total spin projection $S_z = \sum_{n=1}^4 s_z^{(n)}$ 
 is conserved, and the Hamiltonian will have a block diagonal structure.
 The possible values for $S_z$ are $-2,-1,0,1,2$, depending on the number
-of particles in states with spin up or spin down. The dimension can be
-calculated via
+of particles in states with spin up ($N_+$) or spin down ($N_-$). The 
+dimension can be calculated via
 \begin{equation}
  d_{S_z} = \begin{pmatrix} 4 \\ N_{+}\end{pmatrix} \times 
            \begin{pmatrix} 4 \\ N_{-}\end{pmatrix}\,,
@@ -743,11 +747,11 @@ states with the same principal quantum number but opposite spin
 projection, it does not break pairs of particles that occupy such 
 states --- in other words, the number of particle pairs is another
 conserved quantity, which allows us to decompose the $S_z$ blocks
-into even smaller sub blocks. As in chapter 8, we consider the $S_z=0$
-sub block with two particle pairs, leading to a Hamiltonian matrix which is six-dimensional. 
-In this
-block, the Hamiltonian matrix (suppressing
-block indices) is 
+into even smaller sub blocks. As in chapter \ref{chapter:cc}, we 
+consider the $S_z=0$
+sub block with two particle pairs. In this block, the Hamiltonian 
+is represented by the six-dimensional matrix (suppressing block 
+indices)
 \begin{equation}\label{eq:def_h_matrix}
   H = \begin{pmatrix}
   2\delta -g  &      -g/2  &       -g/2 &      -g/2 &      -g/2 &        0 \\ 
@@ -816,7 +820,7 @@ matrix elements. We obtain
 \end{equation}
 i.e., the off-diagonal matrix elements are suppressed exponentially, as for the
 $2\times2$ matrix toy problem discussed in the previous section. If the pairing
-strength $g$ is sufficiently small that $\HO^2_{od}(0)\sim \mathcal{O}(g^2)$ can 
+strength $g$ is sufficiently small so that $\HO^2_{od}(0)\sim \mathcal{O}(g^2)$ can 
 be neglected, we expect to see the exponential suppression of the off-diagonal 
 matrix elements from the very onset of the flow. 
 
@@ -865,7 +869,7 @@ from scipy.integrate import odeint
 # Hamiltonian for the pairing model
 def Hamiltonian(delta,g):
 
-  H = array(
+    H = array(
       [[2*delta-g,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g,          0.],
        [   -0.5*g, 4*delta-g,     -0.5*g,     -0.5*g,        0.,     -0.5*g ], 
        [   -0.5*g,    -0.5*g,  6*delta-g,         0.,    -0.5*g,     -0.5*g ], 
@@ -946,7 +950,7 @@ and back again.
 The main routine calls the ODEPACK wrapper \texttt{odeint}, passing 
 the initial Hamiltonian as a one-dimensional array \texttt{y0} as well
 as a list of flow parameters $s$ for which a solution is requested. The 
-routine \texttt{odeint} returns these solutions as a list of arrays.
+routine \texttt{odeint} returns these solutions as a two-dimensional arrays.
 
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1038,7 +1042,7 @@ naively have
            \begin{pmatrix} 50 \\ 8\end{pmatrix}
                 = 2.88\times10^{17}
 \end{equation}
-configurations, i.e., we would need about 3 exabyte (EB) to store all the coefficients
+configurations, i.e., we would need about 3 exabytes (EB) to store all the coefficients
 of just one eigenvector in memory, and $7\times10^{17}$ EB if we were to construct
 the complete Hamiltonian matrix! State-of-the-art methods for large-scale 
 diagonalization are able to reduce the memory requirements and computational
@@ -1199,8 +1203,8 @@ components in the beginning, an interaction like AV18 will mix in high-momentum
 components even after a single matrix-vector multiplication, let alone tens 
 or hundreds as in typical many-body calculations. Consequently, the 
 eigenvalues and eigenstates of the nuclear Hamiltonian converge very slowly
-with respect to the basis size of the Hilbert space, see, e.g., 
-\cite{Barrett:2013oq}. To solve this problem, we perform an RG evolution of
+with respect to the basis size of the Hilbert space (see, e.g., 
+\cite{Barrett:2013oq}). To solve this problem, we perform an RG evolution of
 the $NN$ interaction.
 
 \begin{figure*}[t]
@@ -1225,7 +1229,7 @@ the $NN$ interaction.
 \end{figure*}
 
 In Fig.~\ref{fig:schematic}, we show examples for two types of RG evolution
-that decouple the low- and momentum pieces of $NN$ interactions. The first
+that decouple the low- and high-momentum pieces of $NN$ interactions. The first
 example, Fig.~\ref{fig:schematic}(a), is a so-called  \emph{RG decimation}, 
 in which the interaction is evolved to decreasing cutoff scales $\Lambda_0 > \Lambda_1 > \Lambda_2$, 
 and high-momentum modes are ``integrated out''. This is the so-called \Vlowk{}
@@ -1252,7 +1256,7 @@ and low- and high-lying momenta are decoupled as $\lambdaSRG$ is decreased.
 
 Equation \eqref{eq:momentum_transfer} implies that the spatial resolution scale
 of an SRG-evolved interaction (or a \Vlowk{} if we determine the maximum
-momentum transfer in the low-momentum block) is $\sim 1/Q \geq 1\lambdaSRG$,
+momentum transfer in the low-momentum block) is $\sim 1/Q \geq 1/\lambdaSRG$,
 i.e., only long-ranged components of the $NN$ interaction are resolved explicitly
 and short-range components of the interaction can just as well be replaced 
 by contact interactions \cite{Lepage:1997py,Bogner:2003os,Holt:2004ux,Bogner:2010pq}.
@@ -1312,7 +1316,7 @@ respectively, we obtain \cite{Bogner:2007od,Bogner:2010pq}
 where we have used scattering units ($\hbar^2/m=1$) and suppressed
 the $\lambda$-dependence of $\vO$ as well as the conserved quantum 
 numbers for brevity. Note that a prefactor $-\lambda^5/4$ 
-appears due or change of variables from $s$ to $\lambda$. 
+appears due to our change of variables from $s$ to $\lambda$. 
 
 We can turn this integro-differential equation back into a matrix 
 flow equation by discretizing the relative momentum variable, e.g.,
@@ -1335,10 +1339,10 @@ the interaction matrix element,
 \begin{equation}
   \matrixe{q_iL}{\overline{v}}{q_jL'} \equiv \sqrt{w_iw_j}q_i q_j\matrixe{q_iL}{\vO}{q_jL'}\,.
 \end{equation}
-The discretized flow equation then be written as
+The discretized flow equation can then be written as
 \begin{equation}\label{eq:flow_nn_discrete}
   \totd{}{\lambda} \matrixe{q_iL}{\overline{v}}{q_jL'} = - \frac{4}{\lambda^5}
-    \matrixe{q_i}{\comm{\comm{\tO}{\overline{v}}}{\tO+\overline{v}}}{q_jL'}\,.
+    \matrixe{q_iL}{\comm{\comm{\tO}{\overline{v}}}{\tO+\overline{v}}}{q_jL'}\,.
 \end{equation}
 
 We can solve Eq.~\eqref{eq:flow_nn_discrete} using a modified version of our 
@@ -1395,7 +1399,7 @@ ranging from $0$ to $7\,\fmi$ with a spacing of $0.05\,\fmi$. The range of momen
 is sufficient for the chiral $NN$ interaction we use in our example, the \NNNLO{} 
 potential by Entem and Machleidt with cutoff $\Lambda=500\,\MeV$ \cite{Entem:2003th,Machleidt:2011bh}, 
 which is considerably softer than the AV18 interaction discussed above. This is followed
-by a simple $141 \times 141$ list of the matrix elements. It is straightforward
+by a simple $141 \times 141$ array of matrix elements. It is straightforward
 to adapt the format and I/O routines to Gaussian quadrature meshes by including
 mesh points (i.e., the abscissas) and weights in the data file.
 
@@ -1679,7 +1683,7 @@ to achieve convergence in much smaller Hilbert spaces than for a ``bare'',
 unevolved interaction. This makes it possible to extend the reach of these
 methods to heavier nuclei \cite{Roth:2011kx,Barrett:2013oq,Jurgenson:2013fk,Roth:2014fk,Hergert:2013ij,Hergert:2013mi,Hergert:2014vn,Hergert:2016jk,Hagen:2010uq,Roth:2012qf,Binder:2013zr,Binder:2014fk,Soma:2011vn,Soma:2013ys,Soma:2014fu,Soma:2014eu}.
 
-In practical applications, we pay a prize for the improved convergence.
+In practical applications, we pay a price for the improved convergence.
 To illustrate the issue, we consider the Hamiltonian in a second-quantized 
 form, assuming only a two-nucleon interaction for simplicity (cf.~Eq.~\eqref{eq:def_Hint_2B}):
 \begin{equation}
@@ -1790,13 +1794,17 @@ medium.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{\label{sec:imsrg}The In-Medium SRG}
-\tbd{[Bridge]}
+As discussed in the previous section, we now want to carry out the
+operator evolution \eqref{eq:opflow} in the nuclear medium. The idea
+is to decompose a given $N$-body operator into in-medium contributions
+of lower rank and residual components that can be truncated safely. To
+this end, we first have to lay the groundwork by reviewing the
+essential elements of normal ordering, as well as Wick's theorem.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:nord}Normal Ordering and Wick's Theorem}
-
 
 %
 % SUBSUBSECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2336,8 +2344,9 @@ Moreover, we can further reduce the computational cost by distinguishing
 particle and hole states, because the number of hole states $N_h$ is 
 typically much smaller than the number of particle states $N_p\sim N$. 
 The best scaling we can achieve in the IMSRG(2) depends on the choice of 
-generator (see Sec.~\ref{sec:imsrg_generator}). If the one- and two-body parts of the 
-generator only consist of $ph$ and $pphhh$ type matrix elements and their 
+generator (see Sec.~\ref{sec:imsrg_generator}). If the one- and two-body 
+parts of the 
+generator only consist of $ph$ and $pphh$ type matrix elements and their 
 Hermitian conjugates, the scaling is reduced to $\OC(N_h^2N_p^4)$, 
 which matches the cost of solving the CCSD amplitude equations.
 
@@ -3449,6 +3458,22 @@ Hamiltonian here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\label{sec:imsrg_neutron_matter}Infinite Neutron Matter}
 
+After discussing the pairing Hamiltonian, we now want to apply the IMSRG(2) 
+to a large-scale problem, namely the calculation of the equation of state
+for pure neutron matter. A suitable C/C++ code will be made available at 
+in the future, Python scripts and data are available at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/imsrg_pnm}.
+
+We work in a basis of plane wave states, which is
+set up just like in the CC case discussed in Sec.~\ref{sec:chap8numproject}.
+We work in a spherical periodic cell $L=(N/\rho)^{1/3}$, where $N$ is the number 
+of neutrons in the cell, and $\rho$ the neutron matter density. Because of 
+the periodic boundary conditions, the momenta $p_x,p_y,p_z$ are discretized,
+and we can write the single-particle states as $\ket{n_x,n_y,n_z,s_z}$ 
+($s_z$ is the spin projection of the neutron). We impose the truncation
+\begin{equation}
+  n_x^2 + n_y^2 + n_z^2 \leq \Nmax\,.
+\end{equation}
+
 \begin{figure}[t]
   \setlength{\unitlength}{\textwidth}
   \begin{picture}(1.0000,0.4000)
@@ -3461,9 +3486,46 @@ Hamiltonian here.
     The left panel shows the energy per particle obtained with IMSRG(2), CCD (
     Chap.~\ref{chapter:cc}), CIMC (Chap.~\ref{chapter:qmc}), and the ADC(3) 
     Self-Consistent Green's Function scheme (Chap.~\ref{chapter:scgf}), the
-    right panel only the correlation energy per particle from the same methods.
+    right panel the correlation energy per particle from the same methods.
   }
 \end{figure}
+
+In Fig.~\ref{fig:imsrg_pnm}, we show the IMSRG(2) results for neutron matter
+for the semi-realistic Minnesota $NN$ potential \cite{Thompson:1977fk},
+using $N=66$ neutrons in an $\Nmax=36$ basis. The left panel shows the 
+IMSRG(2) equation of state (EOS) which is essentially the same as that of 
+methods with comparable correlation content, namely CCD, the Configuration 
+Interaction Monte Carlo based on CCD wave functions (CIMC, see Sec.~\ref{sec:cimc}) 
+and the Self-Consistent Green's Functions in the ADC(3) scheme 
+(Sec.~\ref{sec:scgf_adc}). We also include the MBPT(2) EOS, which
+is in very good agreement with the more sophisticated methods.
+This shows that pure neutron matter is only weakly correlated, and
+the many-body expansion is clearly converging rapidly. The IMSRG(2)
+(and other methods) gain an additional 10\% additional energy compared
+to the uncorrelated HF EOS, all the way from dilute matter at $\rho=0.05\fm^{-3}$
+to $\rho=0.2\,\fm^3$, which is more than twice the neutron density of 
+typical stable nuclei. 
+
+In the right panel of Fig.~\ref{fig:imsrg_pnm}, we show the correlation 
+energy per particle, which reveals some differences between the various
+methods. As the neutron matter density comes and correlations are expected
+to become increasingly important, MBPT(2) gains the highest amount of
+correlation energy, just as in our results for the pairing Hamiltonian
+(cf.~Fig.~\ref{fig:imsrg_corr}). Curiously, CCD gives the most binding
+of all methods in dilute neutron matter, but eventually, the CCD correlation
+energy is very similar to that of CIMC and ADC(3), which should be superior
+approximations to the exact ground state (see Chaps.~\ref{chapter:qmc} and
+\ref{chapter:scgf}). As the density increases the IMSRG(2) starts to gain
+more binding from correlations than CCD, its closest cousin among the 
+considered methods, but not as much additional binding energy as MBPT(2).
+This reflects or findings for the pairing Hamiltonian, where we 
+observed the same phenomenon (see Fig.~\ref{fig:imsrg_corr}). As explained
+in Sec.~\ref{sec:imsrg_pairing}, the reason for this energy gain compared
+to CCD is the under-counting of certain repulsive fourth-order diagrams
+in the IMSRG(2), see \cite{Hergert:2016jk}.  
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4718,12 +4780,47 @@ Computing resources were provided by the MSU High-Performance Computing Center
     Interpret the expression in the parentheses.
 \end{prob}
 
-\begin{prob}
-  \tbd{Code project: optimizations, tensor version.}
+\begin{prob}\textbf{Project: Optimization of the IMSRG(2) Code} \\
+  In Sec.~\ref{sec:imsrg_implementation}, we mention several ways of optimizing 
+  the performance of the Python code, like taking into account antisymmetry of
+  two-body (and three-body) states, or exploiting symmetries and the resulting
+  block structures.
+
+  \item[a)] Optimize the storage requirements and speed of the Python code by taking 
+  the antisymmetry of states as well as the Hermiticity (anti-Hermiticity) of $\HO$ ($\eta$) 
+  into account.
+
+  \item[b)] Identify the symmetries of the pairing Hamiltonian, and construct a
+  variant of \texttt{imsrg\_pairing.py} that is explicitly block diagonal in
+  the irreducible representations of the corresponding symmetry group.
+
+  \item[c)] A significant portion of the code \texttt{imsrg\_pairing.py} consists of
+  infrastructure routines that are used to convert between one- and two-body bases.
+  We could avoid this inversion if we treat $\Gamma$ and the two-body part of the 
+  generator as \emph{rank-four tensors} instead of matrices. \texttt{NumPy}
+  offers tensor routines that can be used to evaluate tensor contractions and
+  products, in particular \texttt{numpy.tensordot()}. Rewrite \texttt{imsrg\_pairing.py}
+  in terms of tensors, and compare the performance of your new code to the
+  original version.
 \end{prob}
 
 \begin{prob}
-  \tbd{IMSRG(3) for the pairing Hamiltonian.}
+  \textbf{Project: IMSRG(3) for the Pairing Hamiltonian} \\
+  Throughout this chapter, we used a single-particle basis consisting of only 
+  8 states in our discussions of the pairing Hamiltonian. For such a small basis 
+  size, it is possible to implement to include explicit 3N operators in the IMSRG
+  evoltion, that is, to work in the IMSRG(3) scheme.
+
+  \item[a)] Derive the IMSRG(3) flow equations. (Note: compare your results with
+  Ref.~\cite{Hergert:2016jk}).
+
+  \item[b)] Implement the IMSRG(3). The Python code discussed in Sec.~\ref{sec:imsrg_implementation}
+  provides a good foundation, but you may find it necessary to switch to a 
+  language like C/C++ or Fortran for performance reasons. 
+
+  \item[c)] ``Interpolate'' between IMSRG(2) and IMSRG(3) by selectively activating
+  flow equation terms, and document the impact of these intermediate steps.
+
 \end{prob}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
