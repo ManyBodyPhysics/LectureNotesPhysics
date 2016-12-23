@@ -9,7 +9,7 @@ rc('font',**{'size':14, 'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
 
 def myLabels(x, pos):
-  return '$%s$'%x
+	return '$%s$'%x
 
 
 fig = figure(figsize=(9,6))
@@ -24,15 +24,18 @@ EREF   = [6.987522,8.580410,9.884711, 10.980483,11.909966, 12.699944, 13.369356,
 EADC   = [6.5173, 7.97249, 9.1355, 10.0959, 10.8996, 11.5752, 12.1421, 12.6146, 13.0034]
 EIMSRG = [6.5038401494, 7.9557647416, 9.1161816114, 10.074745431, 10.877348180, 11.552285089, 12.118922813,
 			12.591409488, 12.980552843]
+EMBPT2 = [6.5172371342, 7.9574315615, 9.1030562630, 10.049715997, 10.844923762, 11.516749986, 12.083755412, 
+			12.559201842, 12.953105789]
 
 # plt.axis([0.039,0.205,6.0,15.5])
 plt.xlabel(r'$\rho\, [\mathrm{fm}^{-3}]$', fontsize=18)
 plt.ylabel(r'$E/A\,[\mathrm{MeV}]$', fontsize=18)
+refenergy = plt.plot(density, EREF, color='black' ,linewidth = 2.0, label = 'Reference energy')
+mbpt2 = plt.plot(density, EMBPT2,	color='gray',  linestyle='--',  linewidth = 2.0, label = 'MBPT(2)')
 qmc   = plt.plot(density, ECIMC,	markersize=8, color='orange', marker='v', linestyle='-',  linewidth = 2.0, label = 'CIMC')
 adc   = plt.plot(density, EADC,		markersize=7, color='green', marker='D',  linestyle='--', linewidth = 2.0, label = 'ADC(3)')
 ccd   = plt.plot(density, ECCD,		markersize=8, color='red',  marker='s',   dashes=[8,6],   linewidth = 2.0, label = 'CCD')
 imsrg = plt.plot(density, EIMSRG,	markersize=8, color='blue', marker='o',   linestyle=':',  linewidth = 2.0, label = 'IMSRG(2)')
-refenergy = plt.plot(density, EREF, color='black' ,linewidth = 2.0, label = 'Reference energy')
 
 ax.xaxis.set_major_formatter(FuncFormatter(myLabels))
 ax.yaxis.set_major_formatter(FuncFormatter(myLabels))
@@ -68,6 +71,7 @@ ax.set_ylim([-1.5,-0.4])
 
 plt.xlabel(r'$\rho\, [\mathrm{fm}^{-3}]$', fontsize=18)
 plt.ylabel(r'$E_\mathrm{corr}/A\,[\mathrm{MeV}]$', fontsize=18)
+mbpt2 = plt.plot(density, [a-b for a,b in zip(EMBPT2,  EREF)], color='gray',  linestyle='--',  linewidth = 2.0, label = 'MBPT(2)')
 qmc   = plt.plot(density, [a-b for a,b in zip(ECIMC, EREF)],   markersize=8, color='orange', marker='v',linestyle='-',  linewidth = 2.0, label = 'CIMC')
 adc   = plt.plot(density, [a-b for a,b in zip(EADC,  EREF)],   markersize=7, color='green', marker='D', linestyle='--', linewidth = 2.0, label = 'ADC(3)')
 ccd   = plt.plot(density, [a-b for a,b in zip(ECCD,  EREF)],   markersize=8, color='red',  marker='s',  dashes=[8,6],   linewidth = 2.0, label = 'CCD')

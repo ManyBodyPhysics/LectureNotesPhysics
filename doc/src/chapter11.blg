@@ -18,52 +18,52 @@ I was expecting a `,' or a `}'---line 4582 of file lnp.bib
  :     Address = {Cambridge, USA},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 7207 of file lnp.bib
+I was expecting a `,' or a `}'---line 6100 of file lnp.bib
  : 
  : @book{TinkhamBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty title in ch11_Raimondi_inprep
 Warning--empty title in ch11_Barb_unp
-You've used 69 entries,
+You've used 75 entries,
             2812 wiz_defined-function locations,
-            1044 strings with 15525 characters,
-and the built_in function-call counts, 22404 in all, are:
-= -- 1417
-> -- 584
+            1076 strings with 16416 characters,
+and the built_in function-call counts, 24160 in all, are:
+= -- 1540
+> -- 626
 < -- 2
-+ -- 240
-- -- 171
-* -- 1306
-:= -- 2582
++ -- 258
+- -- 183
+* -- 1388
+:= -- 2801
 add.period$ -- 6
-call.type$ -- 69
+call.type$ -- 75
 change.case$ -- 10
 chr.to.int$ -- 6
-cite$ -- 71
-duplicate$ -- 2435
-empty$ -- 2410
-format.name$ -- 225
-if$ -- 5153
+cite$ -- 77
+duplicate$ -- 2616
+empty$ -- 2591
+format.name$ -- 240
+if$ -- 5568
 int.to.chr$ -- 0
-int.to.str$ -- 69
-missing$ -- 640
-newline$ -- 221
-num.names$ -- 69
-pop$ -- 1021
+int.to.str$ -- 75
+missing$ -- 694
+newline$ -- 239
+num.names$ -- 75
+pop$ -- 1117
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 658
+skip$ -- 719
 stack$ -- 0
-substring$ -- 900
-swap$ -- 1372
+substring$ -- 987
+swap$ -- 1434
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 129
-width$ -- 71
-write$ -- 564
+while$ -- 141
+width$ -- 77
+write$ -- 612
 (There were 4 error messages)

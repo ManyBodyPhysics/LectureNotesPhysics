@@ -1,1 +1,1 @@
-This is a placeholder for a C++ implementation of the IMSRG that will be added at a future time.
+This folder contains the C++ codes for performing in-medium SRG calculations for nuclear matter. The src folder contains the source files while selected benchmark calculations are included in the benchmark folder.
