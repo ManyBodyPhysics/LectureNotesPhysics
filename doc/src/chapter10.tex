@@ -1348,7 +1348,7 @@ The discretized flow equation can then be written as
 We can solve Eq.~\eqref{eq:flow_nn_discrete} using a modified version of our 
 Python code for the pairing model, discussed in Sec.~\ref{sec:srg_pairing}.
 The Python code and sample inputs can be downloaded from 
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/srg_nn}.
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter10-programs/python/srg_nn}.
 Let us briefly discuss the most important modifications.
 
 First, we have a set of functions that read the momentum mesh
@@ -2901,7 +2901,7 @@ numerical implementation of IMSRG flows. As an example, we use a Python
 code that is designed for solving the pairing Hamiltonian (see section 
 \ref{sec:imsrg_pairing}) but easily adaptable to other problems. The
 IMSRG solver and tools for visualizing the flow can be found at
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/imsrg_pairing}.
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter10-programs/python/imsrg_pairing}.
 
 \subsubsection*{Basis and Matrix Element Handling}
 The code \texttt{imsrg\_pairing.py} uses \texttt{NumPy} arrays to store
@@ -3460,8 +3460,7 @@ Hamiltonian here.
 
 After discussing the pairing Hamiltonian, we now want to apply the IMSRG(2) 
 to a large-scale problem, namely the calculation of the equation of state
-for pure neutron matter. A suitable C/C++ code will be made available at 
-in the future, Python scripts and data are available at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/blob/master/doc/src/\pdir/python/imsrg_pnm}.
+for pure neutron matter. Python scripts and data are available at \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter10-programs/python/imsrg_pnm}. The C++ program is available from \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/Programs/Chapter10-programs/cpp/imsrg_pnm}.
 
 We work in a basis of plane wave states, which is
 set up just like in the CC case discussed in Sec.~\ref{sec:chap8numproject}.
