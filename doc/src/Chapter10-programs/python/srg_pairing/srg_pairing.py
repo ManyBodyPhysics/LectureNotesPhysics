@@ -29,12 +29,12 @@ from scipy.integrate import odeint
 #------------------------------------------------------------------------------
 # plot helpers
 #------------------------------------------------------------------------------
+# format tick labels using LaTeX-like math fonts
 def myLabels(x, pos):
-    '''format tick labels using LaTeX-like math fonts'''
     return '$%s$'%x
 
+# save these settings for use in other plots
 def myPlotSettings(ax, formatter):
-    '''save these settings for use in other plots'''
     ax.xaxis.set_major_formatter(formatter)
     ax.yaxis.set_major_formatter(formatter)
     ax.tick_params(axis='both',which='major',width=1.5,length=8)
@@ -48,8 +48,9 @@ def myPlotSettings(ax, formatter):
 #------------------------------------------------------------------------------
 # plot routines
 #------------------------------------------------------------------------------
+# plot eigenvalues and diagonals
 def plot_diagonals(data, eigenvalues, flowparams, delta, g):
-    '''plot eigenvalues and diagonals'''
+
     dim       = len(data)
     formatter = FuncFormatter(myLabels)
     markers   = ['o' for i in range(dim)]
@@ -141,43 +142,43 @@ def plot_snapshots(Hs, flowparams, delta, g):
 # Hamiltonian for the pairing model
 def Hamiltonian(delta,g):
 
-  H = array(
-      [[2*delta-g,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g,          0.],
-       [   -0.5*g, 4*delta-g,     -0.5*g,     -0.5*g,        0.,     -0.5*g ], 
-       [   -0.5*g,    -0.5*g,  6*delta-g,         0.,    -0.5*g,     -0.5*g ], 
-       [   -0.5*g,    -0.5*g,         0.,  6*delta-g,    -0.5*g,     -0.5*g ], 
-       [   -0.5*g,        0.,     -0.5*g,     -0.5*g, 8*delta-g,     -0.5*g ], 
-       [       0.,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g, 10*delta-g ]]
-    )
+    H = array(
+        [[2*delta-g,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g,          0.],
+         [   -0.5*g, 4*delta-g,     -0.5*g,     -0.5*g,        0.,     -0.5*g ], 
+         [   -0.5*g,    -0.5*g,  6*delta-g,         0.,    -0.5*g,     -0.5*g ], 
+         [   -0.5*g,    -0.5*g,         0.,  6*delta-g,    -0.5*g,     -0.5*g ], 
+         [   -0.5*g,        0.,     -0.5*g,     -0.5*g, 8*delta-g,     -0.5*g ], 
+         [       0.,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g, 10*delta-g ]]
+      )
 
-  return H
+    return H
 
 # commutator of matrices
 def commutator(a,b):
-  return dot(a,b) - dot(b,a)
+    return dot(a,b) - dot(b,a)
 
 # derivative / right-hand side of the flow equation
 def derivative(y, t, dim):
 
-  # reshape the solution vector into a dim x dim matrix
-  H = reshape(y, (dim, dim))
+    # reshape the solution vector into a dim x dim matrix
+    H = reshape(y, (dim, dim))
 
-  # extract diagonal Hamiltonian...
-  Hd  = diag(diag(H))
+    # extract diagonal Hamiltonian...
+    Hd  = diag(diag(H))
 
-  # ... and construct off-diagonal the Hamiltonian
-  Hod = H-Hd
+    # ... and construct off-diagonal the Hamiltonian
+    Hod = H-Hd
 
-  # calculate the generator
-  eta = commutator(Hd, Hod)
+    # calculate the generator
+    eta = commutator(Hd, Hod)
 
-  # dH is the derivative in matrix form 
-  dH  = commutator(eta, H)
+    # dH is the derivative in matrix form 
+    dH  = commutator(eta, H)
 
-  # convert dH into a linear array for the ODE solver
-  dydt = reshape(dH, -1)
-    
-  return dydt
+    # convert dH into a linear array for the ODE solver
+    dy = reshape(dH, -1)
+      
+    return dy
 
 
 
@@ -186,42 +187,41 @@ def derivative(y, t, dim):
 #------------------------------------------------------------------------------
 
 def main():
-  g     = 0.5
-  delta = 1
+    g     = 0.5
+    delta = 1
 
-  H0    = Hamiltonian(delta, g)
-  dim   = H0.shape[0]
+    H0    = Hamiltonian(delta, g)
+    dim   = H0.shape[0]
 
-  # calculate exact eigenvalues
-  eigenvalues = eigvalsh(H0)
+    # calculate exact eigenvalues
+    eigenvalues = eigvalsh(H0)
 
-  # turn initial Hamiltonian into a linear array
-  y0  = reshape(H0, -1)                 
+    # turn initial Hamiltonian into a linear array
+    y0  = reshape(H0, -1)                 
 
-  # flow parameters for snapshot images
-  flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
+    # flow parameters for snapshot images
+    flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
 
-  # integrate flow equations - odeint returns an array of solutions,
-  # which are 1d arrays themselves
-  ys  = odeint(derivative, y0, flowparams, args=(dim,))
+    # integrate flow equations - odeint returns an array of solutions,
+    # which are 1d arrays themselves
+    ys  = odeint(derivative, y0, flowparams, args=(dim,))
 
-  # reshape individual solution vectors into dim x dim Hamiltonian
-  # matrices
-  Hs  = reshape(ys, (-1, dim,dim))
+    # reshape individual solution vectors into dim x dim Hamiltonian
+    # matrices
+    Hs  = reshape(ys, (-1, dim,dim))
 
-  # print Hs[-1]
-  # print eigvalsh(Hs[-1])
+    data = []
+    for h in Hs:
+        data.append(diag(h))
+    data = zip(*data)
 
-  data = []
-  for h in Hs:
-    data.append(diag(h))
-  data = zip(*data)
+    plot_diagonals(data, eigenvalues, flowparams, delta, g)
+    plot_snapshots(Hs, flowparams, delta, g)
 
-  plot_diagonals(data, eigenvalues, flowparams, delta, g)
-  plot_snapshots(Hs, flowparams, delta, g)
+    return
 
 #------------------------------------------------------------------------------
 # make executable
 #------------------------------------------------------------------------------
 if __name__ == "__main__": 
-  main()
+    main()
