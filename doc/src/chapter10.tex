@@ -476,20 +476,7 @@ on the so-called double-bracket flow, Wegner \cite{Wegner:1994dk} proposed the g
 A fixed point of the SRG flow is reached when $\etaO(s)$ vanishes. At finite $s$, this 
 can occur if $\HO_d(s)$ and $\HO_{od}(s)$ happen to commute, e.g., due to a degeneracy 
 in the spectrum of $\HO(s)$. A second fixed point at $s\to\infty$ exists if $\HO_{od}(s)$ 
-vanishes as required. For the Wegner generator, we can derive the following relation
-between $\HO_{od}(s)$ and $\etaO(s)$ (see Problem \ref{problem:steepest_descent}):
-\begin{equation} \label{eq:steepest_descent}
-  \totd{}{s}\tr\left(\HO^2_{od}(s)\right) = -2 \tr\left(\etaO^\dag(s)\etaO(s)\right).
-\end{equation}
-The traces are nothing but the squared Hilbert-Schmidt norms of $H_{od}(s)$ and $\etaO(s)$,
-e.g.,
-\begin{equation}
-  ||\eta||^2_{HS}\equiv\tr\left(\eetaO\etaO\right)\,.
-\end{equation}
-Since norms are positive semi-definite by construction, Eq.~\eqref{eq:steepest_descent} 
-implies that the norm of $\HO_{od}(s)$ --- and therefore the operator itself --- are 
-monotonically driven to zero as we evolve $s\to\infty$, just as intended 
-\cite{Wegner:1994dk,Kehrein:2006kx}.
+vanishes as required. 
 
 Going back over the discussion, you may notice that we never specified in
 detail \emph{how} we split the Hamiltonian into diagonal and off-diagonal
@@ -4709,10 +4696,6 @@ Computing resources were provided by the MSU High-Performance Computing Center
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\label{sec:exercises_projects}Exercises and Projects}
-
-\begin{prob}\label{problem:steepest_descent}
-  Prove Eq.~\eqref{eq:steepest_descent}. \tbd{[Build in fixes from Fei.]}
-\end{prob}
 
 \begin{prob}\label{problem:tint}
   \item[a)] Prove that the two forms of the intrinsic kinetic energy operator given in 
