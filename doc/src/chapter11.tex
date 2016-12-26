@@ -1,4 +1,3 @@
-
 \title{Self-consistent Green's function approaches}
 \author{Carlo~Barbieri and Arianna Carbone}
 \institute{
@@ -396,7 +395,7 @@ the non-interacting  $\vert\Phi_0^A\rangle$.
 \begin{center}
 \includegraphics[height=0.28\textwidth]{Chapter11-figures/fig11_3_a.pdf}   \hspace{0.06\textwidth} 
 \includegraphics[height=0.28\textwidth]{Chapter11-figures/fig11_3_b.pdf}
-\caption{Second-order interaction-irreducible contributions to the self-energy arising from both two- and three-nucleon forces. The diagram depending on the effective two-body interactions (left) also shows the indices and labels that are used for calculating its contribution in {\bf Example 11.1}. }
+\caption{Second-order interaction-irreducible contributions to the self-energy arising from both two- and three-nucleon forces. The diagram depending on the effective two-body interactions (left) also shows the indices and labels that are used for calculating its contribution in example 11.1. }
 \label{fig:2ndOrd}
 \end{center}
 \end{figure}
@@ -416,13 +415,18 @@ when just two-body forces are present. In this case there is very little gain in
 However, with three-body interactions, additional effective interaction terms appear in both $\widetilde U$ and $\widetilde V$. 
 %
 From Eq.~\eqref{eq:UeffSig} we see that the perturbative SCGF expansion of the $\widetilde{H}_1$ Hamiltonian has only 
-one (1PI, skeleton and interaction-irreducible)  term at first order.  The first contributions to $\widetilde\Sigma(\omega)$  appear at second order with the two diagrams in Fig.~\ref{fig:2ndOrd}. Expanding with respect to $\widehat{H}_1$, there would have been five diagrams instead of only the two interaction-irreducible ones shown in  Fig.~\ref{fig:2ndOrd}. These diagrams indeed have a proper Lehmann representation (see Example 11.1 and problem  \ref{problem:prob11.2}) and propagate {\em intermediate state configurations} (ISCs) of type 2-particle 1-hole (2p1h), 2h1p, 3p2h, etc...
+one (1PI, skeleton and interaction-irreducible)  term at first order.  The first contributions to $\widetilde\Sigma(\omega)$  appear at second order with the two diagrams in Fig.~\ref{fig:2ndOrd}. Expanding with respect to $\widehat{H}_1$, there would have been five diagrams instead of only the two interaction-irreducible ones shown in  Fig.~\ref{fig:2ndOrd}. These diagrams indeed have a proper Lehmann representation (see example 11.2 below and problem  \ref{problem:prob11.2}) and propagate {\em intermediate state configurations} (ISCs) of type 2-particle 1-hole (2p1h), 2h1p, 3p2h, etc...
 At third order, $\widetilde{H}_1$ generates 17 SCGF diagrams two of which contain only  two-body interactions. The simplest of these, that involve at most 2p1h and 2h1p ISCs, are shown in Fig.~\ref{fig:3rdOrd}.
 %
 All interaction-irreducible contributions to the proper self-energy up to third order in perturbation theory are discussed in details in Ref.~\cite{ch11_Carbone2013Nov}. 
 
+\vskip .3 cm
+\noindent
+{\bf Example 11.1.} Calculate the Feynman-Galitskii propagator, $G^{II,f}(\tau)$, that c\
+orresponds to the propagation of two particles or two holes that do not interact with ea\
+ch other.
 
-
+\vskip 0.2 cm
 This is the lowest order approximation to the two-times and two-body propagator
 which evolves two particle from states $\alpha$ and $\beta$ to  states  $\gamma$ and  $\delta$ after a time $\tau >0$, or two holes  from $\gamma$ and  $\delta$ to $\alpha$ and $\beta$ when $\tau < 0$.  By applying the perturbative expansion equivalent to Eq.~\eqref{gpert} at order $n=0$, we find:
 \begin{eqnarray}
@@ -457,14 +461,20 @@ G^{II,f}_{\alpha \beta, \gamma \delta}(\omega) =
 \end{equation}
 
 
+\begin{prob} \label{problem:prob11.2}
+{\emph Exercise:} Calculate the contribution of the three-body force $\widehat W$ to the  effective one body potential, in the approximation of 
+two dressed but non interacting spectator nucleons.
+\end{prob}
+\subsubsection*{Solution}
+This is the last term in Fig.~\ref{fig:EffOps}a) and Eq.~\eqref{eq:U_eff} but with $G^{II}(\tau)$ approximated by two independent fermion lines, as for the dressed Feynman-Galitskii propagator. Using Eq.~\eqref{eq:2BDM} and re-expressing the second line of~\eqref{eq:FeynGalvsG2} in terms of $g(\tau)$, we arrive at:
+\begin{equation}
+\label{eq:ueff_3b_first}
+ \widetilde{U}^{(W)}_{\alpha\beta} ~=~ \frac{1}{2} \sum_{\mu \nu \gamma \delta}W_{\alpha\mu\nu,\beta\gamma\delta}
+               ~\rho_{\gamma\mu}~\rho_{\delta\nu}  \; .
+\end{equation}
 
 
-
-
-
-
-
-{\bf Example 11.1.} Calculate the expression for the second-order contribution to $\Sigma^\star(\omega)$ from two-nucleon interactions only.
+{\bf Example 11.2.} Calculate the expression for the second-order contribution to $\Sigma^\star(\omega)$ from two-nucleon interactions only.
 
 \vskip 0.2 cm
 This is the  diagram of Fig.~\ref{fig:2ndOrd}a). By applying the Feynman rules of Appendix 1 we have:
@@ -506,8 +516,26 @@ Note that the  integration over $\omega_1$ is exactly the same as in Eq.~\eqref{
 \end{equation}
 where repeated greek indices are summed over implicitly but we show the explicit summation over the poles corresponding to 2p1h and 2h1p ISCs.
 
-
-
+\begin{prob} \label{problem:prob11.3}
+{\emph Exercise:} Calculate the expression for the  other second-order contribution to $\Sigma^\star(\omega)$ arising from three-nucleon interactions (diagram of Fig.~\ref{fig:2ndOrd}b). Show that this contains ISCs of 3p2h and 3h2p.
+\end{prob}
+\subsubsection*{Solution}
+Upon performing the four frequency integrals, one obtains:
+\begin{eqnarray}
+\Sigma^{(2,3N)}_{\alpha\beta}(\omega) &=& \frac{1}{12}  W_{\alpha\gamma\delta, \mu\nu\lambda} \left\{
+   \sum_{\substack{n_1, \, n_2 ,\, n_3 \\  k_4,\, k_5}} 
+       \frac{(\pazocal{X}^{n_1}_\mu   \pazocal{X}^{n_2}_\nu   \pazocal{X}^{n_3}_\lambda    \pazocal{Y}^{k_4}_\gamma  \pazocal{Y}^{k_5}_\delta)^*
+                 \pazocal{X}^{n_1}_{\mu'} \pazocal{X}^{n_2}_{\nu'}  \pazocal{X}^{n_3}_{\lambda'}    \pazocal{Y}^{k_4}_{\gamma'} \pazocal{Y}^{k_5}_{\delta'}}
+                      {\omega  - (\varepsilon^+_{n_1}  + \varepsilon^+_{n_2} + \varepsilon^+_{n_3}- \varepsilon^-_{k_4}- \varepsilon^-_{k_5}) + i\eta} 
+ \right. \nonumber \\
+ &&\qquad \qquad \quad  \left. +
+\sum_{\substack{k_1, \, k_2 ,\, k_3 \\ n_4 ,\, n_5}} 
+         \frac{\pazocal{Y}^{k_1}_\mu     \pazocal{Y}^{k_2}_\nu    \pazocal{Y}^{k_3}_\lambda \pazocal{X}^{n_4}_\gamma \pazocal{X}^{n_5}_\delta \, 
+               (\pazocal{Y}^{k_1}_{\mu'} \pazocal{Y}^{k_2}_{\nu'}     \pazocal{Y}^{k_3}_{\lambda'} \pazocal{X}^{n_4}_{\gamma'} \pazocal{X}^{n_5}_{\delta'} )^*}
+                     {\omega  - (\varepsilon^-_{k_1} + \varepsilon^-_{k_2}+ \varepsilon^-_{k_3}- \varepsilon^+_{n_4}- \varepsilon^+_{n_5}) - i\eta}  
+       \right\}  W_{\mu' \nu' \lambda' , \beta \gamma' \delta'} \, . \qquad \qquad
+\label{eq:Sig_2nd_3b}
+\end{eqnarray}
 
 
 \section{The Algebraic Diagrammatic Construction method}
@@ -747,6 +775,10 @@ which now contains {\em all}  the perturbation theory terms at second~\eqref{eq:
 
 It can be shown that the summation implicit in Eq.~\eqref{eq:pp_ladder} is equivalent to a full resummation of two-particle ladder diagrams in the Tamn-Dancoff approximation (TDA)~\cite{ch11_RingSchuck}. In this sum the remaining quasi hole state appearing in the 2p1h ISC remains uncoupled from the ladder series, as it can be seen in Fig.~\ref{fig:3rdOrd}a), which is the first term in the series.  Likewise, one would find that the remaining backward-going terms in Eq.~\eqref{eq:LaddEg1} would lead to resumming the two-hole TDA ladders within the 2h1p configurations. Instead, diagram in Fig.~\ref{fig:3rdOrd}b) involves a resummation of ph ring diagrams. Extensions of these series to random-phase approximation (RPA) is also possible, this would introduce a larger set of high-order Goldstone diagrams but it would not be required to enforce consistency with perturbation theory at third order.
 
+\begin{prob} \label{problem:prob11.4}
+{\emph Exercise:} Complete  the calculation of Eq.~\eqref{eq:LaddEg1} and derive the remaining corrections to the 2h1p interaction $D^{(ld)}$  and the 1h-2h1p coupling term  $N^{(2,ld)}$.
+\end{prob}
+
 
 \subsection{The \texorpdfstring{ADC($n$)}{ADC(n)} approach and working equations at third order}
 
@@ -948,9 +980,24 @@ generalizes the zeroth approximation to the CC operator~$\hat{T}_2$ (see Sec.~\r
 
 The working equations for the self-energy at the ADC(4) level and beyond are discussed in Ref.~\cite{ch11_Schirmer1983ADCn}.
 
+  \begin{prob} \label{problem:prob11.5}  
+{\emph Exercise:} Calculate the ladder and ring diagrams in Fig.~\ref{fig:3rdOrd}  and prove Eqs.~\eqref{eq:ADC3_MEC} and~\eqref{eq:ADC3_NED} in full.
+[Hint: for the ring diagrams it is simpler to first perform integrations for the free polarization propagator,
+$\Pi^f_{\alpha\beta,\gamma\delta}(\omega)=\int \frac{{\rm d} \, \omega_1}{2\pi i} g_{\alpha\gamma}(\omega+\omega_1)g_{\delta\beta}(\omega_1)$,
+which describes  non interacting particle-hole states.]
+\end{prob}
 
-
-
+  \begin{prob} \label{problem:prob11.6}  
+{\emph Exercise:} In case of a reference propagator that is not fully self-consistent, it is necessary to also include non-skeleton diagrams. For $\widetilde\Sigma(\omega)$ these first appear at third order with the diagrams shown in Fig.~\ref{fig:SEins_3ndOrd}).
+Calculate the expressions for  diagrams in a) and~b), then:
+\begin{itemize}
+\item Deduct the corresponding corrections to Eqs.~\eqref{eq:ADC3_MEC} and~\eqref{eq:ADC3_NED}. These will be the complete ADC(3) working equations.
+\item Show that they cancel out exactly if the reference propagator is of Hartree-Fock type. Hence these corrections do not need to
+be taken into account even tough the Hartree-Fock reference state is {\em not} a dressed---and fully self-consistent---input in this case.
+\end{itemize}
+[Hint: In Hartee-Fock theory, the static self-energy $\Sigma^{(\infty)}$ reduces to the Hartree-Fock potential. The reference state in this case is given by $\widehat{H}_0=\widehat{T}+\widehat{U}^{HF}\equiv\widehat{H}^{HF}$, which is also the Hartree-Fock Hamiltonian. Additionally, in the notation of Eqs.~\eqref{eq:Z_ampl} below,
+the (orthogonal) single particle wave functions are the solutions of $\{T + \Sigma^{HF}\} \pazocal{Z}^i = \varepsilon^i \pazocal{Z}^i$.]
+\end{prob}
 
 
 
@@ -1067,6 +1114,15 @@ The advantage of this approach  is that it linearizes the Dyson equation and yie
 
 Eq.~\eqref{eq:DysMtx} also puts in evidence how the Dyson equation is very closely related to a configuration interaction (CI) approach. For solutions ($\varepsilon^+_n$,$\pazocal{X}^n$) in the single particle spectrum,  the eigenstates of $|\Psi^{A+1}_n\rangle$ are expanded in terms of 1p configurations (from the $\widehat{T} + \Sigma^{(\infty)}$ sector) and 2p1h or larger configurations, which is evident from the matrix $C$, in Eq.~\eqref{eq:ADC3_C}. However, additional 2h1p configurations are included through matrix $D$. This is in spirit very similar to how ground state correlations are included in the random phase approximation approach~\cite{ch11_RingSchuck}. Furthermore,  the  matrices that couples these subspaces are the same as in CI only at first order ($M^{(1)}$ and $N^{(1)}$). The eigenstates of Eq.~\eqref{eq:DysMtx} will approach the exact solution as the approximation of the self-energy is systematically improved. Similarly, the propagation of hole states that correspond to the eigenstates of $|\Psi^{A-1}_k\rangle$ are obtained in a CI fashion.
 Eq.~\eqref{eq:SFnorm2} is then the natural normalization condition for the CI expansion and shows that the spectroscopic amplitudes are the projection of more complex many-body wave functions onto a single-particle space.
+
+\begin{prob} \label{problem:prob11.7} 
+{\emph Exercise:} Perform a Taylor expansion of the propagator $g(\omega)$ at zeroth order around a given pole $\varepsilon_i^\pm$. Then, use this and the
+conjugate Dyson equation~\eqref{eq:Dyson_b} to obtain the normalization condition for spectroscopic factors given in  Eq.~\eqref{eq:SFnorm1}.
+\end{prob}
+
+  \begin{prob} \label{problem:prob11.8} 
+{\emph Exercise:} Based on the definitions of vectors $\pazocal{W}^i$ and $\pazocal{V}^i$, Eqs.~\eqref{eq:defWV}, show that~\eqref{eq:SFnorm1} and~\eqref{eq:SFnorm2} are equivalent.
+\end{prob}
 
 
 
@@ -1946,7 +2002,7 @@ However, these will end up coinciding when self-consistency is reached at the en
 %However, it must be noted that the single-particle spectrum $\varepsilon({\bf p})$ in both $A({\bf p},\omega)$ and $f(\omega,\mu)$ comes from a previous calculation, as also the chemical potential which enters the spectral function in Eq.~(\ref{eq:chempot_micro}), so it has to be kept in mind that in the solution of Eq.~(\ref{eq:chempot_micro}) one is considering two different chemical potentials, but solving just for one; these will end up coinciding at the end of the convergence loop of iterations.
 
 \vskip 0.2 cm
-\noindent{\bf 3.} At this point the imaginary part of the non-interacting two-body Green's function can be computed. The lowest order approximation of the two-body propagator corresponds to the independent propagation of two fully dressed particles and was discussed in {\bf Example 11.1} for the case of zero temperature. This includes two terms, a direct and an exchange one, as depicted diagrammatically in Fig.~\ref{fig:num_impl}. 
+\noindent{\bf 3.} At this point the imaginary part of the non-interacting two-body Green's function can be computed. The lowest order approximation of the two-body propagator corresponds to the independent propagation of two fully dressed particles and was discussed in example 11.1 for the case of zero temperature. This includes two terms, a direct and an exchange one, as depicted diagrammatically in Fig.~\ref{fig:num_impl}. 
 %
 Since we are working with dressed propagators we should refer to Eqs.~\eqref{eq:GIIf_int} and~\eqref{eq:GIIf}, however both the  direct and exchange terms must be included in our $G^{II,f}_{pphh}$. 
 % OLD TEXT [CB Dec 1]:
@@ -2222,85 +2278,21 @@ and by the Alexander von Humboldt Foundation through a Humboldt Research Fellows
 
 %
 
-\section{exercises}
-
-\begin{prob} \label{problem:prob11.1}
-Calculate the Feynman-Galitskii propagator, $G^{II,f}(\tau)$, that corresponds to the propagation of two particles or two holes that do not interact with each other.
-\end{prob}
-
-\begin{prob} \label{problem:prob11.2}
-Calculate the contribution of the three-body force $\widehat W$ to the  effective one body potential, in the approximation of 
-two dressed but non interacting spectator nucleons.
-\end{prob}
-
-\begin{prob} \label{problem:prob11.3}
-Calculate the expression for the  other second-order contribution to $\Sigma^\star(\omega)$ arising from three-nucleon interactions (diagram of Fig.~\ref{fig:2ndOrd}b). Show that this contains ISCs of 3p2h and 3h2p.
-\end{prob}
-
-\begin{prob} \label{problem:prob11.4}
-Complete  the calculation of Eq.~\eqref{eq:LaddEg1} and derive the remaining corrections to the 2h1p interaction $D^{(ld)}$  and the 1h-2h1p coupling term  $N^{(2,ld)}$.
-\end{prob}
-
-  \begin{prob} \label{problem:prob11.5}  Calculate the ladder and ring diagrams in Fig.~\ref{fig:3rdOrd}  and prove Eqs.~\eqref{eq:ADC3_MEC} and~\eqref{eq:ADC3_NED} in full.
-[Hint: for the ring diagrams it is simpler to first perform integrations for the free polarization propagator,
-$\Pi^f_{\alpha\beta,\gamma\delta}(\omega)=\int \frac{{\rm d} \, \omega_1}{2\pi i} g_{\alpha\gamma}(\omega+\omega_1)g_{\delta\beta}(\omega_1)$,
-which describes  non interacting particle-hole states.]
-\end{prob}
-
-  \begin{prob} \label{problem:prob11.6}  In case of a reference propagator that is not fully self-consistent, it is necessary to also include non-skeleton diagrams. For $\widetilde\Sigma(\omega)$ these first appear at third order with the diagrams shown in Fig.~\ref{fig:SEins_3ndOrd}).
-Calculate the expressions for  diagrams in a) and~b), then:
-\begin{itemize}
-\item Deduct the corresponding corrections to Eqs.~\eqref{eq:ADC3_MEC} and~\eqref{eq:ADC3_NED}. These will be the complete ADC(3) working equations.
-\item Show that they cancel out exactly if the reference propagator is of Hartree-Fock type. Hence these corrections do not need to
-be taken into account even tough the Hartree-Fock reference state is {\em not} a dressed---and fully self-consistent---input in this case.
-\end{itemize}
-[Hint: In Hartee-Fock theory, the static self-energy $\Sigma^{(\infty)}$ reduces to the Hartree-Fock potential. The reference state in this case is given by $\widehat{H}_0=\widehat{T}+\widehat{U}^{HF}\equiv\widehat{H}^{HF}$, which is also the Hartree-Fock Hamiltonian. Additionally, in the notation of Eqs.~\eqref{eq:Z_ampl} below,
-the (orthogonal) single particle wave functions are the solutions of $\{T + \Sigma^{HF}\} \pazocal{Z}^i = \varepsilon^i \pazocal{Z}^i$.]
-\end{prob}
-
-\begin{prob} \label{problem:prob11.7} Perform a Taylor expansion of the propagator $g(\omega)$ at zeroth order around a given pole $\varepsilon_i^\pm$. Then, use this and the
-conjugate Dyson equation~\eqref{eq:Dyson_b} to obtain the normalization condition for spectroscopic factors given in  Eq.~\eqref{eq:SFnorm1}.
-\end{prob}
-
-  \begin{prob} \label{problem:prob11.8} Based on the definitions of vectors $\pazocal{W}^i$ and $\pazocal{V}^i$, Eqs.~\eqref{eq:defWV}, show that~\eqref{eq:SFnorm1} and~\eqref{eq:SFnorm2} are equivalent.
-\end{prob}
-
-  \begin{prob} \label{problem:prob11.9} Compute Eq.~(\ref{eq:dd3bf_new}) for the contact term given in Eq.~(\ref{eq:cont}). Demonstrate that it yields a scalar central contribution to the in-medium nucleon-nucleon interaction proportional to $\rho_f$ with formal expression:
-\begin{equation}
-\widetilde V_\mathrm{cont}^\mathrm{3NF}=-\frac{3 c_E\rho_f}{2 F_\pi^4\Lambda_\chi}\,.
-\label{eq:cont_dd}
-\end{equation}
-\end{prob}
 
 
-\section{Solutions to selected exercises}
-\begin{sol}{problem:prob11.2}
-This is the last term in Fig.~\ref{fig:EffOps}a) and Eq.~\eqref{eq:U_eff} but with $G^{II}(\tau)$ approximated by two independent fermion lines, as for the dressed Feynman-Galitskii propagator. Using Eq.~\eqref{eq:2BDM} and re-expressing the second line of~\eqref{eq:FeynGalvsG2} in terms of $g(\tau)$, we arrive at:
-\begin{equation}
-\label{eq:ueff_3b_first}
- \widetilde{U}^{(W)}_{\alpha\beta} ~=~ \frac{1}{2} \sum_{\mu \nu \gamma \delta}W_{\alpha\mu\nu,\beta\gamma\delta}
-               ~\rho_{\gamma\mu}~\rho_{\delta\nu}  \; .
-\end{equation}
-\end{sol}
 
-\begin{sol}{problem:prob11.3}
-Upon performing the four frequency integrals, one obtains:
-\begin{eqnarray}
-\Sigma^{(2,3N)}_{\alpha\beta}(\omega) &=& \frac{1}{12}  W_{\alpha\gamma\delta, \mu\nu\lambda} \left\{
-   \sum_{\substack{n_1, \, n_2 ,\, n_3 \\  k_4,\, k_5}} 
-       \frac{(\pazocal{X}^{n_1}_\mu   \pazocal{X}^{n_2}_\nu   \pazocal{X}^{n_3}_\lambda    \pazocal{Y}^{k_4}_\gamma  \pazocal{Y}^{k_5}_\delta)^*
-                 \pazocal{X}^{n_1}_{\mu'} \pazocal{X}^{n_2}_{\nu'}  \pazocal{X}^{n_3}_{\lambda'}    \pazocal{Y}^{k_4}_{\gamma'} \pazocal{Y}^{k_5}_{\delta'}}
-                      {\omega  - (\varepsilon^+_{n_1}  + \varepsilon^+_{n_2} + \varepsilon^+_{n_3}- \varepsilon^-_{k_4}- \varepsilon^-_{k_5}) + i\eta} 
- \right. \nonumber \\
- &&\qquad \qquad \quad  \left. +
-\sum_{\substack{k_1, \, k_2 ,\, k_3 \\ n_4 ,\, n_5}} 
-         \frac{\pazocal{Y}^{k_1}_\mu     \pazocal{Y}^{k_2}_\nu    \pazocal{Y}^{k_3}_\lambda \pazocal{X}^{n_4}_\gamma \pazocal{X}^{n_5}_\delta \, 
-               (\pazocal{Y}^{k_1}_{\mu'} \pazocal{Y}^{k_2}_{\nu'}     \pazocal{Y}^{k_3}_{\lambda'} \pazocal{X}^{n_4}_{\gamma'} \pazocal{X}^{n_5}_{\delta'} )^*}
-                     {\omega  - (\varepsilon^-_{k_1} + \varepsilon^-_{k_2}+ \varepsilon^-_{k_3}- \varepsilon^+_{n_4}- \varepsilon^+_{n_5}) - i\eta}  
-       \right\}  W_{\mu' \nu' \lambda' , \beta \gamma' \delta'} \, . \qquad \qquad
-\label{eq:Sig_2nd_3b}
-\end{eqnarray}
-\end{sol}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2598,6 +2590,13 @@ As for the $\widetilde V_\mathrm{TPE-1}^\mathrm{3NF}$ term, $\widetilde V_\mathr
 \label{eq:ope_dd_2}
 \end{align}
 
+  \begin{prob} \label{problem:prob11.9} 
+{\emph Exercise:} Compute Eq.~(\ref{eq:dd3bf_new}) for the contact term given in Eq.~(\ref{eq:cont}). Demonstrate that it yields a scalar central contribution to the in-medium nucleon-nucleon interaction proportional to $\rho_f$ with formal expression:
+\begin{equation}
+\widetilde V_\mathrm{cont}^\mathrm{3NF}=-\frac{3 c_E\rho_f}{2 F_\pi^4\Lambda_\chi}\,.
+\label{eq:cont_dd}
+\end{equation}
+\end{prob}
 
 
 %%%%%%%%%%%% neutron matter %%%%%%%%%%%%%%%%%%%%%%
