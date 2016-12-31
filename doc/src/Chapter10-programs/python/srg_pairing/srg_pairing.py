@@ -76,6 +76,7 @@ def plot_diagonals(data, eigenvalues, flowparams, delta, g):
 
     plt.savefig("srg_pairing_diag-eval_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
     plt.show()
+
     return
 
 #------------------------------------------------------------------------------
@@ -118,22 +119,22 @@ def plot_snapshots(Hs, flowparams, delta, g):
         grid[s].set_xticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
         grid[s].set_yticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
 
-        cbar = grid.cbar_axes[0]
-        plt.colorbar(img, cax=cbar, 
-          ticks=[ -1.0e-1, -1.0e-3, -1.0e-5, -1.0e-7, -1.09e-9 , 0., 
-                 1.0e-9, 1.0e-7, 1.0e-5, 1.0e-3, 0.1, 10.0]
-        )
+    cbar = grid.cbar_axes[0]
+    plt.colorbar(img, cax=cbar, 
+      ticks=[ -1.0e-1, -1.0e-3, -1.0e-5, -1.0e-7, -1.09e-9 , 0., 
+             1.0e-9, 1.0e-7, 1.0e-5, 1.0e-3, 0.1, 10.0]
+    )
 
-        cbar.axes.set_yticklabels(['$-10^{-1}$', '$-10^{-3}$', '$-10^{-5}$', '$-10^{-7}$', 
-                             '$-10^{-9}$', '$0.0$', '$10^{-9}$', '$10^{-7}$', '$10^{-5}$', 
-                             '$10^{-3}$', '$10^{-1}$', '$10$'])
-        cbar.set_ylabel('$\mathrm{[a. u.]}$') 
+    cbar.axes.set_yticklabels(['$-10^{-1}$', '$-10^{-3}$', '$-10^{-5}$', '$-10^{-7}$', 
+                         '$-10^{-9}$', '$0.0$', '$10^{-9}$', '$10^{-7}$', '$10^{-5}$', 
+                         '$10^{-3}$', '$10^{-1}$', '$10$'])
+    cbar.set_ylabel('$\mathrm{[a. u.]}$') 
 
 
-        plt.savefig("srg_pairing_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
-        plt.show()
+    plt.savefig("srg_pairing_delta%2.1f_g%2.1f.pdf"%(delta, g), bbox_inches="tight", pad_inches=0.05)
+    plt.show()
 
-  return
+    return
 
 #------------------------------------------------------------------------------
 # SRG 
