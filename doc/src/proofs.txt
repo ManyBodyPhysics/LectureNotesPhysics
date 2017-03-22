@@ -1,0 +1,431 @@
+Dear Editors, 
+here are our responses to your queries and our additional corrections.
+All corrections to the chapters except chapters 3 and 10, are given as plain text here. 
+Chapters 3 and 10 are included with this email  with their pertinent annotations.
+
+Thanks so much for a great volume and a fantastic work,
+best wishes,
+Morten Hjorth-Jensen
+
+
+
+//////    Proofs for vol 936
+
+Right after titlepage, line 60
+Wrong address of editors
+Change Morten Hjorth-Jensen's address to
+
+National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State
+University, East Lansing, Michigan, USA; and Department of Physics, University of Oslo, Oslo, Norway
+
+
+----------
+Preface:
+----------
+
+AQ1: 
+Change
+Oslo, Norway ---->  East Lansing, MI, USA and Oslo, Norway for editor Hjorth-Jensen
+and
+change
+Tucson, AZ, USA  ---> Tucson, AZ, USA and Paris, France for editor van Kolck
+
+----------
+Contributors:
+----------
+
+AQ1: all ok
+
+----------
+Chapter 1: Hjorth-Jensen et al
+----------
+
+AQ1: ok
+
+----------
+Chapter 2: Schaefer
+----------
+
+Fig.2.1:  Change ``green curve'' to ``blue curve''
+
+AQ1:  Correct. 
+
+AQ2: preprint, arXiv:1603.08946, Physics Reports, in press.
+
+No appended file.
+
+----------
+Chapter 3: Hatsuda
+----------
+See appended pdf file chapter3.pdf to this mail.
+
+----------
+Chapter 4: Hammer and Koenig
+---------- 
+
+AQ1:  ok with Hans-Werner Hammer as author
+
+
+----------
+Chapter 5: Nicolson
+----------
+
+AQ1: ok
+
+AQ2: The beginning of the equation should be:
+
+V_{\mbox{\tiny 1PE}}(\vec{r}) = 
+
+AQ3: Ref. [2]: missing publication info: 'Phys. Lett. B765 (2017) 285-292'
+
+Ref. [3]: missing title: 'Proceedings, 33rd International Symposium on Lattice Field Theory (Lattice 2015)'
+
+Ref. [36]: missing eprint: 'arXiv:1001.3229'
+
+Ref. [74]: missing publication info: 'Phys.Rev. D88 (2013) no.9, 094507'
+
+Ref. [78]: missing publication info: 'Phys.Rev. D94 (2016) no.1, 013008'
+
+Ref. [101]: missing publication info: 'Phys.Rev. D91 (2015) no.5, 054008'
+
+Ref. [102]: missing publication info: 'Phys.Rev. D92 (2015) no.9, 094502'
+
+Ref. [112]: missing publication info: 'Phys.Lett. B757 (2016) 50-56'
+
+Ref. [119]: missing publication info: 'Phys.Rev. D93 (2016) no.11, 114508'
+
+Ref. [123]: missing publication info: 'Phys.Rev. D93 (2016) no.11, 114511'
+
+AQ4: The author of the relevant articles is missing from these references. It is 'K. Symanzik' (for both references).
+
+
+----------
+Chapter 6: Dean Lee
+----------
+
+From the author:
+There is one multi-line equation that spans the labels (6.35) and (6.36).  The first of these labels can be removed.
+
+
+AQ1:  corrections to references
+
+Reference 35:
+
+@article{Elhatisari:2016owd,
+      author         = "Elhatisari, Serdar and others",
+      title          = "{Nuclear binding near a quantum phase transition}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "117",
+      year           = "2016",
+      number         = "13",
+      pages          = "132501",
+      doi            = "10.1103/PhysRevLett.117.132501",
+      eprint         = "1602.04539",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1602.04539;%%”
+}
+
+Reference 46:
+
+@article{Lu:2015riz,
+      author         = "Lu, Bing-Nan and L{\”a}hde, Timo A. and Lee, Dean and
+                        Mei{\ss}ner, Ulf-G.",
+      title          = "{Precise determination of lattice phase shifts and mixing
+                        angles}",
+      journal        = "Phys. Lett.",
+      volume         = "B760",
+      year           = "2016",
+      pages          = "309-313",
+      doi            = "10.1016/j.physletb.2016.06.081",
+      eprint         = "1506.05652",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1506.05652;%%”
+}
+
+Reference 49:
+
+@article{Rokash:2015hra,
+      author         = "Rokash, Alexander and Pine, Michelle and Elhatisari,
+                        Serdar and Lee, Dean and Epelbaum, Evgeny and Krebs,
+                        Hermann",
+      title          = "{Scattering cluster wave functions on the lattice using
+                        the adiabatic projection method}",
+      journal        = "Phys. Rev.",
+      volume         = "C92",
+      year           = "2015",
+      number         = "5",
+      pages          = "054612",
+      doi            = "10.1103/PhysRevC.92.054612",
+      eprint         = "1505.02967",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1505.02967;%%"
+
+
+----------
+Chapter 7: Orlandini
+----------
+
+AQ1: The correct reference is now 
+M. Miorelli, S. Bacca, N. Barnea, G. Hagen, G. R. Jansen, G. Orlandini, and T. Papenbrock
+Phys. Rev. C 94, 034317, http://journals.aps.org/prc/abstract/10.1103/PhysRevC.94.034317
+
+
+----------
+Chapter 8: Lietz et al
+----------
+AQ1: Correct
+AQ2: Correct
+AQ3: Remove the Eq (?), that is in  "..in the Lippman-Schwinger equation, Eq (?), requires..." please replace with "..in the Lippman-Schwinger equation discussed above, requires..."
+AQ4: Correct
+AQ5: please remove symbol *, it should not be there
+AQ6: correct
+
+Additional changes by authors:
+1) line 61 change "mainly neutrons" to "mainly of neutrons"
+2) line 725 replace "basis" with "states"
+3) line 1085  delete "theory"
+4) Delete lines 1139, 1140 and 1141, they are not needed.
+5) Line 1183 change "The contribution  from the" to "The contribution  from" to   
+6) Line 1276, missing punctuation at end of sentence.
+7) Line 1284, grammatical error, change "allow" to "allows".
+8) Line 2099, change "for a example" to "for example".
+9) Line 2151, change "..better of understanding  of.." to "..better understanding  of.."
+
+----------
+Chapter 9: Pederiva et al
+----------
+
+AQ1: Correct address: Physics Department, University of Trento, and INFN-TIFPA, via Sommarive 14, 38123, Trento, Italy
+AQ2: Correct address: Institute for Nuclear Theory, University of Washington, Seattle, WA 98195-1550 USA  Also correct the address for K.E. Schmidt: Department of Physics and Astronomy, Arizona State University, Tempe, AZ 85283-1506, USA
+AQ3: the c.a. address is correct
+AQ4: Please change as follows: remove the added reference to fog. 9.2, and on page 419, line 409 add the following sentence.
+“As an example,  the optimized Jastrow function for the central channel of the Minnesota potential is shown in Fig. 9.2."
+AQ5: “noncommutivity” has to be changed into “non-commutativity”
+AQ6: Please remove the a added reference and add at the end of line 1182, page 456 “(see Table 9.1)."
+
+Additional changes by authors:
+Line 1360:
+At the end of the first line of Eq.(9.213)
+
+\mathbf{n}}{\mathfrak{s}(\mathbf{m},\mathbf{n}) > 0}} \mathfrak{s} (\mathbf{m},\mathbf{n})
+
+needs to be replaced by
+
+\mathbf{n}}{\mathfrak{s}(\mathbf{m},\mathbf{n}) > 0}} \langle \mathbf{m} | H | \mathbf{n} \rangle
+
+
+----------
+Chapter 10: Hergert et al
+----------
+
+See appended PDF with annotations
+
+----------
+Chapter 11:  Barbieri and Carbone
+----------
+
+AQ1.  corresponding author is fine.
+
+
+AQ2.  It is correct. however, we think it is better not to mention 'part a and b’ because this is already reflected in the equation numbers and also to be consistent with other figures like Fig. 11.1.  In short we would like it as follows:
+
+"one-body interaction of Eq. (11.17a), top row, and the effective two-body interaction (11.17b), bottom row."
+
+
+AQ3. Change caption of Fig 11.4 as follows: ->”…arising from both two-nucleon [diagram (a)] and three-nucleon forces [diagram (b)].  The diagram (a) that depends on the effective two-body interactions also shows the indices…”  (this way it is consistent with the caption of Fig 11.5; note that ‘(a)’ appears twice, ‘(b)’ appears once and ‘(left)’ is removed)
+
+
+AQ4. F. Raimondi, C. Barbieri, (2016). arXiv:1701.08127 [nucl-th] and in preparation
+
+
+
+Additional changes:
+
+
+1)  We have 8 ‘Exercises’ in chapter 11; these have been called ‘Exercises’ when stated but called ‘Problems’ in the rest of the text. For coherence, we would like to change ‘Problem’->”Exercise” at the following lines (6 changes):
+
+ (i  ) line  355: “Problem 11.1” —> “Exercise 11.2” (update to correct number and link to correct Exercise 11.2 that starts at line 398)
+
+ (ii ) line  542: “Problem 11.5” —> “Exercise 11.5”
+
+ (iii) line  759: “Problem 11.5” —> “Exercise 11.5”
+
+ (iv ) line 1561: “Problem 11.3” —> “Exercise 11.3”
+
+ (v )  Fig. 11.4, end of caption: —> “…in Example 11.2” **and** update the hyperref to the correct Example 11.2 that start at line 386
+
+ (vi ) Caption of Fig 11.6: “Problem 11.5” —> “Exercise 11.5”
+
+
+
+2)  l. 46:  —> “..breaking of particle number symmetry..” (change "on" into "of")
+
+
+
+3)  l. 56:  —> “...already discussed in the previous Chapters.”  (it is 8, 9, and 10 but are already quoted on lines 62-63)
+
+
+
+4)  l. 66: too much space between “as” and "propagators"
+
+
+
+5)  l. 72-73: -> “…be the continuum spaces of momentum or coordinate, or any other discrete set of single particle states.” (move ‘spaces’, add comma and add ‘other’).
+
+
+
+6)  l. 92-93: “...dimensionless units \hbar = c = 1…”  (change word order)
+
+
+
+7)  l. 97:  “(A\pm1)-nucleon” should be all on the same line.
+
+
+
+8)  l. 118: “It can be shown that…” (add "n" to show)
+
+
+
+9)  l. 121-122:  "The Feynman diagrams representations of both forms of the Dyson equation are shown in Fig.11.1“ (change all sentence)
+
+
+
+10)  l. 127:  -> “...the free particle (shown as a single line) by repeated interactions…” (add sentence with parenthesis)
+
+
+
+11)  Fig. 11.1,  end of caption:  “…propagator.” (add full stop). Actually all captions in the chapter lack a final full stop, is that correct?
+
+
+
+12)  l. 143: “..fundamental symmetries and conservation laws..” (no "s" in conservations)
+
+
+
+13)  Fig. 11.2, second line in caption: “..to and from..” (change "form" into "from")
+
+
+
+14)  Eq. 11.6, second line, second term on the right: sum should be on k (change "n" into "k")
+
+
+
+15)  l. 340:  “…can only receive a contribution when…” (add ‘a’)
+
+
+
+16)  l. 350:  -> “…perturbative SCGF expansion with the \tilde{H1} Hamiltonian…“ (change ‘of’ into ‘with’)
+
+
+
+17)  l. 417: “..form for the self-energy operator:” (add "for")
+
+
+
+18)  l. 558: -> “…therefore it can be iterated…”  (change ‘if’ to ‘it’)
+
+
+
+19) Caption of of Fig. 11.6, fourth line:  —> ”…self-energy insertions into the…”  (add ’s’ to insertion)
+
+
+
+20)  l. 609: -> “…(see Sect.8.7.4).”  and link to Sect 8.7.4 (or, better, to line 1803 of Chapter 8)
+
+
+
+21)  l. 614: -> “…resum the 2p2h ISCs)”, remove the hyphen in 2p2h for consistency with 2p1h, 3p2h, etc…
+
+
+
+22)  l. 661: -> “…their coupling to intermediate excitations.” (add ‘to’)
+
+
+
+23)  l. 878: -> ”This will become useful to construct ISCs later on.” (change "becomes" into "will become" and move "later" at the end into "later on").
+
+
+
+24)  l. 1371: "Also in these plots,.."  (change "this" into "these")
+
+
+
+25)  l. 1372: "..which corresponds to using.."  (add "s" to correspond)
+
+
+
+26)  l. 1389:  "shown are general for extended.." (change "to" into "for")
+
+
+
+27)  l. 1415: "..solution of the Dyson equation,.." (change "Dyson's" into "the Dyson")
+
+
+
+28)  l. 1444: add \cite{ch11_Rios2007PhD} in the reference group after "Barcelona", so it looks like [4,13,14,57-60]
+
+
+
+29)  l. 1451: in this line there are 4 daggers, move the third dagger before the parenthesis (x)
+
+
+
+30)  l. 1526: eliminate space in "g( p,z)"
+
+
+
+31)  l. 1559: "..the first two diagrams of this.." (add "s" to "diagram")
+
+
+
+32)  Footnote on page 624, third line: "This is in contrast to.."  (add "is)
+
+
+
+33)  l. 1584: "..by solving the Dyson equation,.." (change "Dyson's" into "the Dyson")
+
+
+
+34)  l. 1589: ".., in this sense Fig.11.14 depicts exactly.." (change "so" into "in this sense")
+
+
+
+35)  l. 1701: "..of the self-energy in the next steps." (change "at" to "in")
+
+
+
+36)  l. 1777: "imesh-1 of Gauss-Legendre.." (add -1 inside the \verb)
+
+
+
+37)  l. 1780-1781: "..through an additional tangential mesh." (change "a" into "an additional")
+
+
+
+38) Remove comma from the following numbers:
+
+  l. 1607: For consistency with other numebers, remove comma in number —>”25000”
+
+  l. 1608: For consistency with other numebers, remove comma in number —>”30000”  (the “30, 000” also has a wrong space)
+
+  l. 1792: For consistency with other numebers, remove comma in number —>”30000”  (the “30, 000” also has a wrong space)
+
+
+
+39)  l. 2024: the tilde above ‘U’ and ‘V’ overlap with the equations on the line above. Moving the ‘the’ from the end of line 2023 to line 2024 could shift everything and solve the problem.
+
+
+
+40)  Eq.11.102: please remove all superscripts (0), there are four in the first line and two in the second line
+
+
+
+
+
+
+
+
+
