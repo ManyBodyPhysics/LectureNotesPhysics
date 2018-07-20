@@ -405,7 +405,7 @@ def eta_wegner(f, Gamma, user_data):
 
 
     #############################        
-    # one-body flow equation  
+    # one-body part of the generator
     eta1B  = np.zeros_like(f)
 
     # 1B - 1B
@@ -429,8 +429,8 @@ def eta_wegner(f, Gamma, user_data):
     for p in range(dim1B):
         for q in range(dim1B):
             for i in holes:
-                eta1B[p,q] += (
-                  0.5*GammaGamma[idx2B[(i,p)], idx2B[(i,q)]] 
+                eta1B[p,q] += 0.5*(
+                  GammaGamma[idx2B[(i,p)], idx2B[(i,q)]] 
                   - transpose(GammaGamma)[idx2B[(i,p)], idx2B[(i,q)]]
                 )
 
@@ -438,8 +438,8 @@ def eta_wegner(f, Gamma, user_data):
     for p in range(dim1B):
         for q in range(dim1B):
             for r in range(dim1B):
-                eta1B[p,q] += (
-                  0.5*GammaGamma[idx2B[(r,p)], idx2B[(r,q)]] 
+                eta1B[p,q] += 0.5*(
+                  GammaGamma[idx2B[(r,p)], idx2B[(r,q)]] 
                   + transpose(GammaGamma)[idx2B[(r,p)], idx2B[(r,q)]] 
                 )
 
@@ -878,7 +878,7 @@ def main():
       "dE":         0.0,                # and main routine
 
 
-      "calc_eta":   eta_white,          # specify the generator (function object)
+      "calc_eta":   eta_white_atan,     # specify the generator (function object)
       "calc_rhs":   flow_imsrg2         # specify the right-hand side and truncation
     }
 
