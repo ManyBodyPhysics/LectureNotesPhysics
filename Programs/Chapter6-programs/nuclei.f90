@@ -63,7 +63,6 @@ PROGRAM nuclei
      
      WRITE(*,*) ' '
      WRITE(*,*) '**********'
-     WRITE(*,'(1X,A,I0)') 'numprocs = ',numprocs
      WRITE(*,'(1X,A,I0)') 'n_f = ',n_f
      WRITE(*,'(1X,A,I0)') 'L = ',L
      WRITE(*,'(2(1X,A,F0.6,T25))') 'cutoff = ',cutoff,'temporalcutoff = ',temporalcutoff
@@ -82,8 +81,6 @@ PROGRAM nuclei
      WRITE(*,'(1X,A,I0)') 'ncheck = ',ncheck
      WRITE(*,'(1X,A,I0)') 'nHMC = ',nHMC
      WRITE(*,'(1X,A,E14.6)') 'eHMC =',eHMC
-     WRITE(*,'(1X,A,E14.6)') 'epsilon =',epsilon
-     WRITE(*,'(1X,A,E14.6)') 'epsprime =',epsprime
      WRITE(*,'(1X,A,F0.6)') 'startspread = ',startspread
      
      WRITE(*,*) ' '

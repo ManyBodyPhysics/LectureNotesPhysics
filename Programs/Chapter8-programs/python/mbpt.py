@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 below_fermi = (0,1,2,3)
 above_fermi = (4,5,6,7)
 states = [(1,1),(1,-1),(2,1),(2,-1),(3,1),(3,-1),(4,1),(4,-1)]
-N = 8
 g = Symbol('g')
+
 
 def h0(p,q):
     if p == q:
@@ -58,6 +58,8 @@ for a in above_fermi:
         for i in below_fermi:
             for j in below_fermi:
                 s1 += 0.25*assym(a,b,i,j)*assym(i,j,a,b)/eps((i,j),(a,b))
+
+
 
 
 # Diagram 3
