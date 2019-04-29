@@ -6,175 +6,16 @@
 !             last upgrade : July 2016
 !
 !
-PROGRAM  pairing
-  USE constants
-  USE inifile
+
+MODULE constants
   IMPLICIT NONE
-  INTEGER :: i, j, pq_confs
-  REAL(dp), ALLOCATABLE, DIMENSION(:,:) :: voper, toper, hoper
-  REAL(dp) :: delta, g
-  CHARACTER (LEN=120) :: infilename, outputfile
-  LOGICAL :: fail
-
-  infilename   = 'pairing.ini'
-  CALL ini_open(infilename, 5, fail, .FALSE.)
-  IF (fail) STOP 'Error opening parameter file, probably wrong file, use pairing.ini as name'
-  !     open the output file
-  outputfile = ini_read_string('output_run')
-  OPEN(unit=6,file=outputfile)
-  pq_confs = Ini_Read_Int('dimension_matrix')
-  delta = Ini_Read_Double('value_delta');   g = Ini_Read_Double('value_g')
-  k_lambda = Ini_Read_Double('value_lambda')
-  start_point = Ini_Read_Double('value_startpoint')
-  ALLOCATE( voper(pq_confs,pq_confs), toper(pq_confs,pq_confs)) 
-
-  WRITE(6,'(7h delta=,f7.3,4h  g=,f7.3)')delta, g
-  !     setup the interaction part of the matrix
-  voper = 0.0d0;   toper = 0.0d0
-  DO i=1,pq_confs
-     voper(i,i) = -g
-     DO  j=i+1, pq_confs
-         voper(i,j) = -g*0.5d0
-     ENDDO 
-  ENDDO
-  ! Setting up by hand zero elements
-  voper(1,6) =0.0d0; voper(2,5) = 0.0d0;  voper(3,4) = 0.0d0; voper(2,5) = 0.0d0;   
-  !     setup lower triangular part of h
-  DO i=1,pq_confs-1
-     DO  j=i+1, pq_confs
-        voper(j,i)=voper(i,j)
-     ENDDO
-  ENDDO
-  !     then the diagonal 3body unperturbed part
-  !     two of the 2p2h excitations are degenerate
-  DO i=1,3
-     toper(i,i) = delta*i*2.d0
-     toper(i+3,i+3)=delta*(i+2)*2.d0
-  ENDDO
-  hoper = toper+voper
-  WRITE(6,*) 'Hamiltonian matrix'
-  DO i = 1, pq_confs
-     WRITE(6,'(6(4X,E12.6))') (hoper(j,i),j = 1, pq_confs) 
-  ENDDO
-  CALL flow_equations(voper,toper, pq_confs)
-  DEALLOCATE(hoper,toper,voper)
-
-END PROGRAM pairing
-
-!
-!           set up the interaction using
-!           a flow renormalization group approach. 
-!
-SUBROUTINE flow_equations(vint, unperturbed, pq_confs)
-  USE constants
-  IMPLICIT NONE
-  INTEGER, INTENT(in) ::  pq_confs
-  INTEGER :: i, j
-  REAL(kind=8), INTENT(in) :: vint(pq_confs,pq_confs), unperturbed(pq_confs,pq_confs)
-  REAL(kind=8), DIMENSION(pq_confs,pq_confs) :: heff
-  WRITE(6,*) 'RENORMALIZATION FLOW METHOD STARTS HERE'
-  heff = 0.d0
-  CALL vsrg(pq_confs,vint,heff,unperturbed)
-  WRITE(6,*) 'Hamiltonian matrix  with the renormalization flow method'
-  DO i = 1, pq_confs
-     WRITE(6,'(6(4X,E12.6))') (heff(j,i)+unperturbed(j,i),j = 1, pq_confs) 
-  ENDDO
-
-END SUBROUTINE flow_equations
-!
-!  
-!
-SUBROUTINE vsrg(nconfs,vzz,heff, unperturbed)
-  USE constants
-  IMPLICIT NONE
-  INTEGER, INTENT(in) :: nconfs
-  REAL(kind=8), DIMENSION(nconfs,nconfs), INTENT(in) :: vzz, unperturbed
-  REAL(kind=8), DIMENSION(nconfs,nconfs), INTENT(inout) :: heff
-  INTEGER(kind=4) :: i, j, n_ode, ij, iflag, i1, j1
-  INTEGER(kind=4), ALLOCATABLE, DIMENSION(:) :: iwork
-  REAL(dp), ALLOCATABLE, DIMENSION(:) :: rg_vec, work
-  REAL(dp) :: relerr, abserr, lambda, END
-  INTERFACE
-     SUBROUTINE derivative(lambda, v, dv)
-       USE constants
-       INTEGER ::  ij, i, j, i1, j2, kk, k
-       REAL(dp) :: sum, v(:), dv(:), k1, k2, p
-       REAL(dp), ALLOCATABLE :: vij(:,:)
-     END SUBROUTINE derivative
-  END INTERFACE
-
-  relerr = 1.0e-8_dp; abserr =  1.0e-8_dp; lambda = k_lambda; END = start_point
-  ! dimension of vectors and matrices
-  n_total = nconfs; n_ode = n_total*(n_total+1)/2
-  ! total dim used by derivatives function
-  ALLOCATE(rg_vec(n_ode)); ALLOCATE( work(100+21*n_ode)); ALLOCATE (iwork(5))
-  ALLOCATE ( onebodyenergy(n_total))
-  rg_vec = 0.0_dp; work = 0.0_dp;  iwork = 0
-  !  transform the matrix -v- to a one-dim vector of dim ntot*(ntot+1)/2
-  !  which is also the number of ordinary differential equations
-  ij = 0  
-  DO i = 1, n_total
-     onebodyenergy(i) = unperturbed(i,i)
-     DO j = i, n_total
-        ij = ij + 1
-        rg_vec(ij) = vzz(j,i)
-     ENDDO
-  ENDDO
-  iflag = 1
-  !   oscillator energy of max space, nlmas typically around 200-300 (2n+l)
-  CALL ode(derivative,n_ode,rg_vec,END,lambda,relerr,abserr,iflag,work,iwork)
-  WRITE(6,*) 'iflag=', iflag
-  IF ( iflag /= 2) WRITE(6,*) 'error in ode, iflag not equal 2'
-  !  now transform back and get final effective interaction
-  ij = 0  
-  DO i = 1, n_total
-     DO j = i, n_total
-        ij = ij + 1
-        heff(j,i) = rg_vec(ij)
-        heff(i,j) = rg_vec(ij)
-     ENDDO
-  ENDDO
-  DEALLOCATE(rg_vec); DEALLOCATE(work); DEALLOCATE(iwork)
-
-  DEALLOCATE(onebodyenergy)
-
-END SUBROUTINE vsrg
-
-SUBROUTINE derivative(lambda, v, dv)
-  USE constants
-  IMPLICIT NONE
-  INTEGER ::  ij, i, j, i1, j2, kk, k, i2
-  REAL(dp) :: sum, lambda, v(:), dv(:), k1, k2, p
-  REAL(dp), ALLOCATABLE :: vij(:,:)
-
-  ALLOCATE(vij(n_total,n_total)) 
-  ij = 0
-  DO j = 1, n_total
-     DO i = j, n_total
-        ij = ij + 1
-        vij(i,j) = v(ij)
-        vij(j,i) = v(ij)
-     ENDDO
-  ENDDO
-  ij = 0
-  DO i = 1, n_total
-     k1 = onebodyenergy(i) 
-     DO j = i, n_total
-        k2 = onebodyenergy(j) 
-        ij = ij + 1
-        sum = 0_dp
-        DO k = 1, n_total
-           p = onebodyenergy(k) 
-           sum = sum +  (k1+k2-2.0_dp*p)*vij(j,k)*vij(k,i) 
-        ENDDO
-        dv(ij) =  sum - (k2-k1)*(k2-k1)*vij(j,i)
-     ENDDO
-  ENDDO
-  dv = -2.0_dp*dv/(lambda**3)
-  DEALLOCATE(vij)
-
-END SUBROUTINE derivative
-
+  PUBLIC
+  INTEGER,  PARAMETER :: dp = KIND(1.0D0)
+  INTEGER, PARAMETER :: dpc = KIND((1.0D0,1.0D0))
+  REAL(dp), PUBLIC :: k_lambda, start_point
+  REAL(DP), PUBLIC, ALLOCATABLE :: onebodyenergy(:)
+  INTEGER , PUBLIC :: n_total
+END MODULE constants
 
 !Module to read in name/value pairs from a file, with each line of the form line 'name = value'
 
@@ -638,6 +479,179 @@ CONTAINS
   END SUBROUTINE ini_savereadvalues_file
 
 END MODULE inifile
+
+
+
+PROGRAM  pairing
+  USE constants
+  USE inifile
+  IMPLICIT NONE
+  INTEGER :: i, j, pq_confs
+  REAL(dp), ALLOCATABLE, DIMENSION(:,:) :: voper, toper, hoper
+  REAL(dp) :: delta, g
+  CHARACTER (LEN=120) :: infilename, outputfile
+  LOGICAL :: fail
+
+  infilename   = 'pairing.ini'
+  CALL ini_open(infilename, 5, fail, .FALSE.)
+  IF (fail) STOP 'Error opening parameter file, probably wrong file, use pairing.ini as name'
+  !     open the output file
+  outputfile = ini_read_string('output_run')
+  OPEN(unit=6,file=outputfile)
+  pq_confs = Ini_Read_Int('dimension_matrix')
+  delta = Ini_Read_Double('value_delta');   g = Ini_Read_Double('value_g')
+  k_lambda = Ini_Read_Double('value_lambda')
+  start_point = Ini_Read_Double('value_startpoint')
+  ALLOCATE( voper(pq_confs,pq_confs), toper(pq_confs,pq_confs)) 
+
+  WRITE(6,'(7h delta=,f7.3,4h  g=,f7.3)')delta, g
+  !     setup the interaction part of the matrix
+  voper = 0.0d0;   toper = 0.0d0
+  DO i=1,pq_confs
+     voper(i,i) = -g
+     DO  j=i+1, pq_confs
+         voper(i,j) = -g*0.5d0
+     ENDDO 
+  ENDDO
+  ! Setting up by hand zero elements
+  voper(1,6) =0.0d0; voper(2,5) = 0.0d0;  voper(3,4) = 0.0d0; voper(2,5) = 0.0d0;   
+  !     setup lower triangular part of h
+  DO i=1,pq_confs-1
+     DO  j=i+1, pq_confs
+        voper(j,i)=voper(i,j)
+     ENDDO
+  ENDDO
+  !     then the diagonal 3body unperturbed part
+  !     two of the 2p2h excitations are degenerate
+  DO i=1,3
+     toper(i,i) = delta*i*2.d0
+     toper(i+3,i+3)=delta*(i+2)*2.d0
+  ENDDO
+  hoper = toper+voper
+  WRITE(6,*) 'Hamiltonian matrix'
+  DO i = 1, pq_confs
+     WRITE(6,'(6(4X,E12.6))') (hoper(j,i),j = 1, pq_confs) 
+  ENDDO
+  CALL flow_equations(voper,toper, pq_confs)
+  DEALLOCATE(hoper,toper,voper)
+
+END PROGRAM pairing
+
+!
+!           set up the interaction using
+!           a flow renormalization group approach. 
+!
+SUBROUTINE flow_equations(vint, unperturbed, pq_confs)
+  USE constants
+  IMPLICIT NONE
+  INTEGER, INTENT(in) ::  pq_confs
+  INTEGER :: i, j
+  REAL(kind=8), INTENT(in) :: vint(pq_confs,pq_confs), unperturbed(pq_confs,pq_confs)
+  REAL(kind=8), DIMENSION(pq_confs,pq_confs) :: heff
+  WRITE(6,*) 'RENORMALIZATION FLOW METHOD STARTS HERE'
+  heff = 0.d0
+  CALL vsrg(pq_confs,vint,heff,unperturbed)
+  WRITE(6,*) 'Hamiltonian matrix  with the renormalization flow method'
+  DO i = 1, pq_confs
+     WRITE(6,'(6(4X,E12.6))') (heff(j,i)+unperturbed(j,i),j = 1, pq_confs) 
+  ENDDO
+
+END SUBROUTINE flow_equations
+!
+!  
+!
+SUBROUTINE vsrg(nconfs,vzz,heff, unperturbed)
+  USE constants
+  IMPLICIT NONE
+  INTEGER, INTENT(in) :: nconfs
+  REAL(kind=8), DIMENSION(nconfs,nconfs), INTENT(in) :: vzz, unperturbed
+  REAL(kind=8), DIMENSION(nconfs,nconfs), INTENT(inout) :: heff
+  INTEGER(kind=4) :: i, j, n_ode, ij, iflag, i1, j1
+  INTEGER(kind=4), ALLOCATABLE, DIMENSION(:) :: iwork
+  REAL(dp), ALLOCATABLE, DIMENSION(:) :: rg_vec, work
+  REAL(dp) :: relerr, abserr, lambda, END
+  INTERFACE
+     SUBROUTINE derivative(lambda, v, dv)
+       USE constants
+       INTEGER ::  ij, i, j, i1, j2, kk, k
+       REAL(dp) :: sum, v(:), dv(:), k1, k2, p
+       REAL(dp), ALLOCATABLE :: vij(:,:)
+     END SUBROUTINE derivative
+  END INTERFACE
+
+  relerr = 1.0e-8_dp; abserr =  1.0e-8_dp; lambda = k_lambda; END = start_point
+  ! dimension of vectors and matrices
+  n_total = nconfs; n_ode = n_total*(n_total+1)/2
+  ! total dim used by derivatives function
+  ALLOCATE(rg_vec(n_ode)); ALLOCATE( work(100+21*n_ode)); ALLOCATE (iwork(5))
+  ALLOCATE ( onebodyenergy(n_total))
+  rg_vec = 0.0_dp; work = 0.0_dp;  iwork = 0
+  !  transform the matrix -v- to a one-dim vector of dim ntot*(ntot+1)/2
+  !  which is also the number of ordinary differential equations
+  ij = 0  
+  DO i = 1, n_total
+     onebodyenergy(i) = unperturbed(i,i)
+     DO j = i, n_total
+        ij = ij + 1
+        rg_vec(ij) = vzz(j,i)
+     ENDDO
+  ENDDO
+  iflag = 1
+  !   oscillator energy of max space, nlmas typically around 200-300 (2n+l)
+  CALL ode(derivative,n_ode,rg_vec,END,lambda,relerr,abserr,iflag,work,iwork)
+  WRITE(6,*) 'iflag=', iflag
+  IF ( iflag /= 2) WRITE(6,*) 'error in ode, iflag not equal 2'
+  !  now transform back and get final effective interaction
+  ij = 0  
+  DO i = 1, n_total
+     DO j = i, n_total
+        ij = ij + 1
+        heff(j,i) = rg_vec(ij)
+        heff(i,j) = rg_vec(ij)
+     ENDDO
+  ENDDO
+  DEALLOCATE(rg_vec); DEALLOCATE(work); DEALLOCATE(iwork)
+
+  DEALLOCATE(onebodyenergy)
+
+END SUBROUTINE vsrg
+
+SUBROUTINE derivative(lambda, v, dv)
+  USE constants
+  IMPLICIT NONE
+  INTEGER ::  ij, i, j, i1, j2, kk, k, i2
+  REAL(dp) :: sum, lambda, v(:), dv(:), k1, k2, p
+  REAL(dp), ALLOCATABLE :: vij(:,:)
+
+  ALLOCATE(vij(n_total,n_total)) 
+  ij = 0
+  DO j = 1, n_total
+     DO i = j, n_total
+        ij = ij + 1
+        vij(i,j) = v(ij)
+        vij(j,i) = v(ij)
+     ENDDO
+  ENDDO
+  ij = 0
+  DO i = 1, n_total
+     k1 = onebodyenergy(i) 
+     DO j = i, n_total
+        k2 = onebodyenergy(j) 
+        ij = ij + 1
+        sum = 0_dp
+        DO k = 1, n_total
+           p = onebodyenergy(k) 
+           sum = sum +  (k1+k2-2.0_dp*p)*vij(j,k)*vij(k,i) 
+        ENDDO
+        dv(ij) =  sum - (k2-k1)*(k2-k1)*vij(j,i)
+     ENDDO
+  ENDDO
+  dv = -2.0_dp*dv/(lambda**3)
+  DEALLOCATE(vij)
+
+END SUBROUTINE derivative
+
+
 
 
 !
@@ -1598,13 +1612,7 @@ END SUBROUTINE  de
 
 
 
-MODULE constants
-  INTEGER,  PARAMETER :: dp = KIND(1.0D0)
-  INTEGER, PARAMETER :: dpc = KIND((1.0D0,1.0D0))
-  REAL(dp), PUBLIC :: k_lambda, start_point
-  REAL(DP), PUBLIC, ALLOCATABLE :: onebodyenergy(:)
-  INTEGER , PUBLIC :: n_total
-END MODULE constants
+
 
 
 
