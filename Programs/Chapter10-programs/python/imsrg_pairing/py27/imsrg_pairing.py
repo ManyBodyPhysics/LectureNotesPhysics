@@ -913,22 +913,14 @@ def main():
   sfinal = 50
   ds = 0.1
 
-  print("%-8s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s"%(
+  print "%-8s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s   %-14s"%(
     "s", "E" , "DE(2)", "DE(3)", "E+DE", "dE/ds", 
-    "||eta||", "||fod||", "||Gammaod||"))
+    "||eta||", "||fod||", "||Gammaod||")
   # print "-----------------------------------------------------------------------------------------------------------------"
-  print("-" * 148)
-  
-  eta_norm0 = 1.0e10
-  failed = False
-
+  print "-" * 148
   while solver.successful() and solver.t < sfinal:
     ys = solver.integrate(sfinal, step=True)
-   
-    if user_data["eta_norm"] > 1.25*eta_norm0: 
-      failed=True
-      break
-   
+    
     dim2B = dim1B*dim1B
     E, f, Gamma = get_operator_from_y(ys, dim1B, dim2B)
 
@@ -938,11 +930,10 @@ def main():
     norm_fod     = calc_fod_norm(f, user_data)
     norm_Gammaod = calc_Gammaod_norm(Gamma, user_data)
 
-    print("%8.5f %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f"%(
-      solver.t, E , DE2, DE3, E+DE2+DE3, user_data["dE"], user_data["eta_norm"], norm_fod, norm_Gammaod))
+    print "%8.5f %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f   %14.8f"%(
+      solver.t, E , DE2, DE3, E+DE2+DE3, user_data["dE"], user_data["eta_norm"], norm_fod, norm_Gammaod)
     if abs(DE2/E) < 10e-8: break
 
-    eta_norm0 = user_data["eta_norm"]
 
 #    solver.integrate(solver.t + ds)
 

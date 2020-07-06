@@ -1,4 +1,18 @@
 #!/usr/bin/env python
+
+#------------------------------------------------------------------------------
+# plot_imsrg_pnm.py
+#
+# author:   H. Hergert 
+# version:  1.0.1
+# date:     Jul 6, 2020
+# 
+# tested with Python v2.7 and v3.7
+# 
+#------------------------------------------------------------------------------
+
+
+
 import matplotlib.pyplot as plt
 
 from sympy import *

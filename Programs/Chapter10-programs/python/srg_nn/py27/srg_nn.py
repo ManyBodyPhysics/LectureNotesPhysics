@@ -67,12 +67,9 @@ def plot_snapshots(Hs, flowparams, momenta, qMax):
     hmax = max(hmax, np.ma.max(h))
     hmin = min(hmin, np.ma.min(h))
 
-  # Get indices of max. momenta; use explicit integer cast in case any of the variables come out
-  # as floats.
-  idx   = find_nearest(momenta, qMax)
-  cmax  = int(idx[0])
-  ccmax = int(idx[1])
-  edge  = int(len(momenta)/2)
+  # get indices of max. momenta
+  cmax, ccmax  = find_nearest(momenta, qMax)
+  edge         = len(momenta)/2
 
   # create individual snapshots - figures are still addressed by single index,
   # despite multi-row grid
@@ -121,8 +118,8 @@ def plot_snapshots(Hs, flowparams, momenta, qMax):
     cbar.set_ylabel("$V(q,q')\,\mathrm{[fm]}$") 
 
   # save figure
-  plt.savefig("srg_n3lo500_p37.pdf", bbox_inches="tight", pad_inches=0.05)
-  plt.savefig("srg_n3lo500_p37.png", bbox_inches="tight", pad_inches=0.05)
+  plt.savefig("srg_n3lo500.pdf", bbox_inches="tight", pad_inches=0.05)
+  plt.savefig("srg_n3lo500.png", bbox_inches="tight", pad_inches=0.05)
   #plt.show()
 
   return
@@ -245,11 +242,11 @@ def main():
   solver.set_initial_value(y0, lam_initial)
 
 
-  print("%-8s   %-14s"%("s", "E_deuteron [MeV]"))
-  print("-----------------------------------------------------------------------------------------------------------------")
+  print "%-8s   %-14s"%("s", "E_deuteron [MeV]")
+  print "-----------------------------------------------------------------------------------------------------------------"
 
   # calculate exact eigenvalues
-  print("%8.5f %14.8f"%(solver.t, eigvalsh((T + V)*hbarm)[0]))
+  print "%8.5f %14.8f"%(solver.t, eigvalsh((T + V)*hbarm)[0])
 
   flowparams=([lam_initial])
   Vs=([V])
@@ -267,7 +264,7 @@ def main():
     Vtmp = reshape(ys,(dim,dim))
     Vs.append(Vtmp)
 
-    print("%8.5f %14.8f"%(solver.t, eigvalsh((T + Vtmp)*hbarm)[0]))
+    print "%8.5f %14.8f"%(solver.t, eigvalsh((T + Vtmp)*hbarm)[0])
   
 
   # generate snapshots of the evolution

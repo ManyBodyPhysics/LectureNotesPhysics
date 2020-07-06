@@ -83,7 +83,7 @@ def plot_diagonals(data, eigenvalues, flowparams, delta, g):
 def plot_snapshots(Hs, flowparams, delta, g):
     fig  = plt.figure(1, (10., 5.))
     grid = AxesGrid(fig, 111,                       # similar to subplot(111)
-                     nrows_ncols=(2, int(Hs.shape[0]/2)),  # creates grid of axes
+                     nrows_ncols=(2, Hs.shape[0]/2),  # creates grid of axes
                      axes_pad=0.25,                 # pad between axes in inch.
                      label_mode='L',                # put labels on left, bottom
                      cbar_mode='single',            # one color bar (default: right of last image in grid)
@@ -93,27 +93,25 @@ def plot_snapshots(Hs, flowparams, delta, g):
 
     # create individual snapshots - figures are still addressed by single index,
     # despite multi-row grid
-    Hmin = -0.5*g
-    Hmax = 10*delta
     for s in range(Hs.shape[0]):
         img = grid[s].imshow(Hs[s], 
                             cmap=plt.get_cmap('RdBu_r'),                                  # choose color map
                             interpolation='nearest',       
-                            norm=SymLogNorm(linthresh=1e-10,vmin=Hmin,vmax=Hmax),   # normalize 
-                            vmin=Hmin,                                                  # min/max values for data
-                            vmax=Hmax
+                            norm=SymLogNorm(linthresh=1e-10,vmin=-0.5*g,vmax=10*delta),   # normalize 
+                            vmin=-0.5*g,                                                  # min/max values for data
+                            vmax=10*delta
                             )
 
         # tune plots: switch off tick marks, ensure that plots retain aspect ratio
         grid[s].set_title('$s=%s$'%flowparams[s])
-        grid[s].tick_params(
-
-        bottom='off',
+        grid[s].tick_params(      
+  
+        bottom='off',      
         top='off',
-        left='off',
+        left='off',      
         right='off'
         )
-
+  
         grid[s].set_xticks([0,1,2,3,4,5])
         grid[s].set_yticks([0,1,2,3,4,5])
         grid[s].set_xticklabels(['$0$','$1$','$2$','$3$','$4$','$5$'])
@@ -136,8 +134,6 @@ def plot_snapshots(Hs, flowparams, delta, g):
 
     return
 
-
-
 #------------------------------------------------------------------------------
 # SRG 
 #------------------------------------------------------------------------------
@@ -145,43 +141,43 @@ def plot_snapshots(Hs, flowparams, delta, g):
 # Hamiltonian for the pairing model
 def Hamiltonian(delta,g):
 
-    H = array(
-        [[2*delta-g,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g,          0.],
-         [   -0.5*g, 4*delta-g,     -0.5*g,     -0.5*g,        0.,     -0.5*g ],
-         [   -0.5*g,    -0.5*g,  6*delta-g,         0.,    -0.5*g,     -0.5*g ],
-         [   -0.5*g,    -0.5*g,         0.,  1*6*delta-g,    -0.5*g,     -0.5*g ],
-         [   -0.5*g,        0.,     -0.5*g,     -0.5*g, 8*delta-g,     -0.5*g ],
-         [       0.,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g, 10*delta-g ]]
-      )
+  H = array(
+      [[2*delta-g,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g,          0.],
+       [   -0.5*g, 4*delta-g,     -0.5*g,     -0.5*g,        0.,     -0.5*g ], 
+       [   -0.5*g,    -0.5*g,  6*delta-g,         0.,    -0.5*g,     -0.5*g ], 
+       [   -0.5*g,    -0.5*g,         0.,  6*delta-g,    -0.5*g,     -0.5*g ], 
+       [   -0.5*g,        0.,     -0.5*g,     -0.5*g, 8*delta-g,     -0.5*g ], 
+       [       0.,    -0.5*g,     -0.5*g,     -0.5*g,    -0.5*g, 10*delta-g ]]
+    )
 
-    return H
+  return H
 
 # commutator of matrices
 def commutator(a,b):
-    return dot(a,b) - dot(b,a)
+  return dot(a,b) - dot(b,a)
 
 # derivative / right-hand side of the flow equation
 def derivative(y, t, dim):
 
-    # reshape the solution vector into a dim x dim matrix
-    H = reshape(y, (dim, dim))
+  # reshape the solution vector into a dim x dim matrix
+  H = reshape(y, (dim, dim))
 
-    # extract diagonal Hamiltonian...
-    Hd  = diag(diag(H))
+  # extract diagonal Hamiltonian...
+  Hd  = diag(diag(H))
 
-    # ... and construct off-diagonal the Hamiltonian
-    Hod = H-Hd
+  # ... and construct off-diagonal the Hamiltonian
+  Hod = H-Hd
 
-    # calculate the generator
-    eta = commutator(Hd, Hod)
+  # calculate the generator
+  eta = commutator(Hd, Hod)
 
-    # dH is the derivative in matrix form
-    dH  = commutator(eta, H)
+  # dH is the derivative in matrix form 
+  dH  = commutator(eta, H)
 
-    # convert dH into a linear array for the ODE solver
-    dy = reshape(dH, -1)
-
-    return dy
+  # convert dH into a linear array for the ODE solver
+  dydt = reshape(dH, -1)
+    
+  return dydt
 
 
 
@@ -190,43 +186,42 @@ def derivative(y, t, dim):
 #------------------------------------------------------------------------------
 
 def main():
-    g     = 1.
-    delta = 2.
+  g     = 0.5
+  delta = 1
 
-    H0    = Hamiltonian(delta, g)
-    dim   = H0.shape[0]
+  H0    = Hamiltonian(delta, g)
+  dim   = H0.shape[0]
 
-    # calculate exact eigenvalues
-    eigenvalues = eigvalsh(H0)
+  # calculate exact eigenvalues
+  eigenvalues = eigvalsh(H0)
 
-    # turn initial Hamiltonian into a linear array
-    y0  = reshape(H0, -1)
+  # turn initial Hamiltonian into a linear array
+  y0  = reshape(H0, -1)                 
 
-    # flow parameters for snapshot images
-    flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
+  # flow parameters for snapshot images
+  flowparams = array([0.,0.001,0.01,0.05,0.1, 1., 5., 10.])
 
-    # integrate flow equations - odeint returns an array of solutions,
-    # which are 1d arrays themselves
-    ys  = odeint(derivative, y0, flowparams, args=(dim,))
+  # integrate flow equations - odeint returns an array of solutions,
+  # which are 1d arrays themselves
+  ys  = odeint(derivative, y0, flowparams, args=(dim,))
 
-    # reshape individual solution vectors into dim x dim Hamiltonian
-    # matrices
-    Hs  = reshape(ys, (-1, dim,dim))
+  # reshape individual solution vectors into dim x dim Hamiltonian
+  # matrices
+  Hs  = reshape(ys, (-1, dim,dim))
 
-    data = []
-    for h in Hs:
-        data.append(diag(h))
-    data = list(zip(*data))
+  # print Hs[-1]
+  # print eigvalsh(Hs[-1])
 
-    print(len(Hs))
+  data = []
+  for h in Hs:
+    data.append(diag(h))
+  data = zip(*data)
 
-    plot_diagonals(data, eigenvalues, flowparams, delta, g)
-    plot_snapshots(Hs, flowparams, delta, g)
-
-    return
+  plot_diagonals(data, eigenvalues, flowparams, delta, g)
+  plot_snapshots(Hs, flowparams, delta, g)
 
 #------------------------------------------------------------------------------
 # make executable
 #------------------------------------------------------------------------------
 if __name__ == "__main__": 
-    main()
+  main()
